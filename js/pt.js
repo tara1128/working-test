@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-20 19:57
+  Latest modified: 2016-09-20 20:30
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -417,16 +417,23 @@
 		},
 		curWebClick: function(obj,items){
 			var self = this;
+      var playbtn = obj.vdPlayBtn;
+      var video = obj.videoElm;
+      var vdDom = video.get(0);
 			if(typeof obj.curPages == 'undefined') return;
 			obj.curPages.on('click', function() {
 				self.initNum = $(this).index() - 1;
 				self.mainRun(obj,'down');
-        if( self.initNum != 2 ){
+        if( self.initNum != 2 ){ // Shut down audios
           for(var i = 0, len = self.cdAudios.length; i < len; i++){
             self.cdAudios[i].pause();
           }
           $('#ptMusicMain img.play').show();
           $('#ptMusicMain img.pause').hide();
+        }
+        if( self.initNum != 1 ){ // Shut down videos
+          playbtn.removeClass('paused').removeClass('replay').addClass('play').fadeIn(200);
+          vdDom.pause();
         }
 			});
 		},
