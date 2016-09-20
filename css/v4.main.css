@@ -1492,6 +1492,9 @@ body {
 .bodyBD #footer {
 	background: none
 }
+.bodyPT #footer, .bodyPT #footer a, .bodyPT #footer span {
+	color: #fff;
+}
 .bodyBD #banner-wrap {
 	background: url(../images/bd/bg.jpg) no-repeat center bottom #21272e
 }
