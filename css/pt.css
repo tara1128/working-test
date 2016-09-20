@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-20 16:42
+  Latest modified: 2016-09-20 18:52
 */
 
 /* main */
@@ -195,6 +195,17 @@
 .pt-music-obja{ width: 32%; top: 0; margin-left: -36%; }
 .pt-music-objb{ width: 32%; top: 50%; margin: -11% 0 0 -33%; }
 .pt-music-objc{ width: 32%; bottom: 0; margin-left: -42%; }
+
+/* Accessaries around the CD: */
+.pt-music-obja s,
+.pt-music-objb s,
+.pt-music-objc s{position:absolute;text-decoration:none;}
+.accessary.litstr{right:20px;bottom:-120px;transform:rotate(12deg);width:214px;height:192px;background:url(../images/pt-stars-around.png) no-repeat;}
+/* Buttons on CD: */
+.pt-cdbtn {position:absolute;left:50%;top:50%;margin:-6% 0 0 -5%;width:12%;height:12%;cursor:pointer;}
+.pt-cdbtn img {position:absolute;left:0;top:0;width:100%;}
+.pt-cdbtn img.pause {display:none;}
+
 
 /* Stage elements in the fifth slide: */
 .players-bg-img{ display:none; width:100%; position:absolute; z-index:2; bottom:0; left:0; }

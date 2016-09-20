@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-20 17:19
+  Latest modified: 2016-09-20 19:57
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -154,6 +154,7 @@
 		initNum: 0,
 		allHeight: 0,
 		offsetArr: [],
+    cdAudios: document.getElementsByTagName('audio'),
 		init: function(pageObj) {
 			var father = this;
 			if (typeof pageObj == 'object' && typeof pageObj != 'undefined') {
@@ -216,13 +217,36 @@
 					isMousewheel = false;
 				}, 600);
 			});
-			var clickMobj = $('#ptMusicMain div');
+			var clickMobj = $('#ptMusicMain div'); // 3 CD
 			clickMobj.on('click',function(e){
 				e.preventDefault();
 				var $this = $(this);
-				clickMobj.removeClass('curMusic');
-				$this.addClass('curMusic');
 				var index = $this.index();
+        var thisAudio = $this.find('audio').get(0);
+        var btnPlay = $this.find('img.play');
+        var btnPause = $this.find('img.pause');
+        if( typeof thisAudio.canPlayType == 'undefined') {
+          return; // when browser does't support audio.
+        }
+        if( $this.hasClass('curMusic') ){
+          $this.removeClass('curMusic');
+          thisAudio.pause();
+          btnPause.fadeOut(200);
+          btnPlay.fadeIn(200);
+        }else{
+          clickMobj.removeClass('curMusic');
+          clickMobj.parent().find('img.pause').hide();
+          clickMobj.parent().find('img.play').show();
+          $this.addClass('curMusic');
+          thisAudio.play();
+          for(var i = 0, len = self.cdAudios.length; i < len; i++){
+            if( i != index ){
+              self.cdAudios[i].pause();
+            }
+          }
+          btnPlay.fadeOut(200);
+          btnPause.fadeIn(200);
+        }
 				if(index == 0){
 					$this.parent().animate({top: '0'}, obj.animateTime);
 				}else if(index == 2){
@@ -230,16 +254,6 @@
 				}else{
 					$this.parent().animate({top: '-25%'}, obj.animateTime);
 				}
-        // Click to play music:
-        var thisAudio = $this.find('audio').get(0);
-        if( typeof thisAudio.canPlayType == 'undefined') { // when browser does't support audio
-          return;
-        }
-        if( thisAudio.paused || thisAudio.ended ){
-          thisAudio.play();
-        }else{
-          thisAudio.pause();
-        }
 			});
 		},
 		keyEvent: function(obj){
@@ -407,6 +421,13 @@
 			obj.curPages.on('click', function() {
 				self.initNum = $(this).index() - 1;
 				self.mainRun(obj,'down');
+        if( self.initNum != 2 ){
+          for(var i = 0, len = self.cdAudios.length; i < len; i++){
+            self.cdAudios[i].pause();
+          }
+          $('#ptMusicMain img.play').show();
+          $('#ptMusicMain img.pause').hide();
+        }
 			});
 		},
     clickToPlayVideo: function(obj) {
