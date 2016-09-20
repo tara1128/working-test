@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-20 14:38
+  Latest modified: 2016-09-20 15:25
 */
 
 /* main */
@@ -128,8 +128,6 @@
 .pt-mdlist li.mdse{ width: 60%; left: 20%; top: 300px; z-index: 5; }
 .pt-mdlist li img{ width: 100%; max-width: 686px; }
 .pt-mdia{ width: 120px; height: 120px; position: absolute; z-index: 6; top: 50%; left: 50%; margin: -110px 0 0 180px; opacity: 0; }
-.players-bg-img{ display: none; width: 100%; position: absolute; z-index: 2; bottom: 0; left: 0; }
-.players-bg-img img{ width: 100%; }
 .pt-mbtitle,
 .pt-mbp,
 .pt-mbvideo,
@@ -194,16 +192,23 @@
 .pt-music-obja{ width: 32%; top: 0; margin-left: -36%; }
 .pt-music-objb{ width: 32%; top: 50%; margin: -11% 0 0 -33%; }
 .pt-music-objc{ width: 32%; bottom: 0; margin-left: -42%; }
-.pt-meimga,
-.pt-meimgb,
-.pt-meimgc,
-.pt-meimgd,
-.pt-meimge{ display: none; position: absolute; z-index: 7; top: 50%; left: 50%; }
-.pt-meimga{ width: 54px; height: 59px; margin: 2% 0 0 -300px; }
-.pt-meimgb{ width: 111px; height: 127px; margin: -2% 0 0 -160px; }
-.pt-meimgc{ width: 181px; height: 91px; margin: 0 0 0 100px; }
-.pt-meimgd{ width: 116px; height: 93px; margin: 0 0 0 -400px; }
-.pt-meimge{ width: 116px; height: 93px; margin: 0 0 0  284px; }
+
+/* Stage elements in the fifth slide: */
+.players-bg-img{ display:none; width:100%; position:absolute; z-index:2; bottom:0; left:0; }
+.pt-stage-elements{ display:none; position:absolute; z-index:7; top:48%; left:50%;
+  -webkit-transition: all ease-in .4s;
+  -moz-transition: all ease-in .4s;
+  -ms-transition: all ease-in .4s;
+  -o-transition: all ease-in .4s;
+  transition: all ease-in .4s;
+}
+.pt-stage-elements.pt-meimga{ width: 54px; height: 59px; margin: 2% 0 0 -300px; }
+.pt-stage-elements.pt-meimgb{ width: 111px; height: 127px; margin: -2% 0 0 -160px; }
+.pt-stage-elements.pt-meimgc{ width: 181px; height: 91px; margin: 0 0 0 100px; }
+.pt-stage-elements.pt-meimgd{ width: 116px; height: 93px; margin: 0 0 0 -400px; }
+.pt-stage-elements.pt-meimge{ width: 116px; height: 93px; margin: 0 0 0  284px; }
+
+
 /* hover */
 .pt-prev:hover,
 .pt-next:hover,
@@ -561,6 +566,7 @@
   .pt-players-wrap{ width: 300px; height: 360px; margin: -180px 0 0 -150px; }
   .pt-next{ margin-left: 30%; }
   .pt-prev{ margin-left: -37%; }
+  .pt-stage-elements{ top: 30%; } 
 }/* /end media */
 @media (min-width: 900px) and (max-width: 1099px) {
   .pt-ms-ia{ left: 10px; }
@@ -652,12 +658,15 @@
   .pt-mdlist li{ width: 100%; height: auto; }
   .pt-mdia{ top: 50%; left: auto; right: 45px; margin: -110px 0 0 0; }
   .pt-mdia img { width: 80%; }
-  .pt-metitle{ top: 0; left: 50%; margin: 30px 0 0 -50%; }
+  .pt-metitle{ top: 0; left: 50%; margin: 80px 0 0 -50%; }
   .pt-metitle img { display: block; width: 80%; margin: 0 auto; }
-  .pt-mep{ width: 80%; top: 0; left: 50%; margin: 120px 0 0 -40%;}
+  .pt-mep{ width: 80%; top: 0; left: 50%; margin: 150px 0 0 -40%;}
   .pt-mftitle{ left: 8%; margin-left: 0px; }
   .pt-fbtn { left: 8%; margin: -60px 0 0 0; }
   .pt-open-gp, .pt-open-as{ background-size: 95%;  }
+}/* /end media */
+@media screen and (min-width: 1599px) {
+  .players-bg-img .pt-stage-elements{ top:58%; }
 }/* /end media */
 
 
