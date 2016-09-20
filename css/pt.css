@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-19 18:57
+  Latest modified: 2016-09-20 13:55
 */
 
 /* main */
@@ -711,8 +711,19 @@
 .pt-pop-cancel{ background: #f4f4f4; border: 1px solid #ddd; color: #333; }
 .pt-pop-cancel:hover{ background: #fff; }
 .pt-pop-confirm:hover{ background: #ff5000; }
+
 @media(max-width: 540px){
 	.pt-pop-main{ left: 10%; width: 80%; margin-left: 0; }
 }
 
-
+/* For customizing this page, public header need to be folded when sliding pages */
+@media (min-width:801px) {
+  .bodyPT #header.foldUp {
+    height: 50px;
+  }
+  .bodyPT #header.foldUp #logo {
+    margin: -15px 0 0 10px;
+    width: 91.8px;
+    height: 30px;
+  }
+}

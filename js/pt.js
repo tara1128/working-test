@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-19 18:57
+  Latest modified: 2016-09-20 13:19
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -233,7 +233,6 @@
         // Click to play music:
         var thisAudio = $this.find('audio').get(0);
         if( typeof thisAudio.canPlayType == 'undefined') { // when browser does't support audio
-          console.log( 'No audio', thisAudio.canPlayType );
           return;
         }
         if( thisAudio.paused || thisAudio.ended ){
@@ -278,6 +277,11 @@
 					obj.pageDiv.eq(self.initNum - 1).addClass('pt-active');
 				}
 			},obj.animateTime);
+      if( self.initNum > 0 ){
+        obj.publicHeader.addClass('foldUp');
+      }else{
+        obj.publicHeader.removeClass('foldUp');
+      }
 			return self.initNum;
 		},
 		animateTop: function(obj){
@@ -635,7 +639,8 @@
     vdPlayBtn: $('#vdPlayBtn'),
     videoElm: $('#Video'),
     vdBgImg: $('#vdBgImg'),
-		curPagesClassName: 'cur-pages'
+		curPagesClassName: 'cur-pages',
+    publicHeader: $('#header')
 	}
 	CMmousewheel.init(pageObj);
   // Click to pop dialog for downloading:
