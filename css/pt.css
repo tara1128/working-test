@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-20 15:25
+  Latest modified: 2016-09-20 16:42
 */
 
 /* main */
@@ -107,15 +107,18 @@
 .pt-players-wrap{ display: none; width: 900px; height: 360px; position: absolute; z-index: 5; top: 50%; left: 50%; margin: -180px 0 0 -450px; overflow: hidden; }
 .pt-players-list{ width: 10000px; height: 360px; position: absolute; z-index: 8; top: 0; left: 0; }
 .pt-players-list li{ width: 282px; height: 360px; margin: 0 8px; background: url(../images/pt-story-dialog.png) no-repeat left top; position: relative; float: left; overflow: hidden; }
-.pt-players-ta{ display: block; width: 242px; height: 234px; line-height: 22px; padding: 20px; font-size: 16px; color: #333; word-wrap: break-word; overflow: hidden; }
+.pt-players-ta{ padding:20px; width:242px; height:234px; overflow:hidden; }
+.pt-players-text{ line-height:22px;font-size:16px;color:#333; word-wrap:break-word; white-space:pre-wrap;}
 .pt-players-icon{ display: block; width: 242px; padding: 0 20px; }
 .pt-players-icon i{ display: inline-block; width: 33px; height: 29px; margin-right: 5px; background: url(../images/pt-crown.png) no-repeat left top; }
 .pt-mftitle{ display: none; position: absolute; z-index: 8; left: 50%; top: 60px; margin-left: -500px; }
 .pt-copy{ width: 100%; position: absolute; z-index: 8; bottom: 0; left: 0; height: 30px; text-align: center; }
 .pt-copy em,
 .pt-copy i{ line-height: 30px; padding: 0 5px; font-size: 14px; color: #fff; }
-.pt-players-ia{ display: block; width: 282px; height: 262px; position: relative; overflow: hidden; }
-.pt-players-ia a{ display: block; width: 94px; height: 94px; background: url(../images/pt-story-dialog-play-btn.png) no-repeat left top; position: absolute; z-index: 2; top: 50%; left: 50%; margin: -47px 0 0 -47px; }
+.pt-players-ia{ display: block; width: 100%; height: 262px; position: relative; overflow: hidden; }
+.pt-players-ia a.ply-btn { display:block; width:94px; height:94px; background:url(../images/pt-story-dialog-play-btn.png) no-repeat; position:absolute; z-index:2; top:50%; left:50%; margin:-47px 0 0 -47px; cursor:pointer; }
+.pt-players-vdtitle { position:absolute; left:0; bottom:32px;padding:0px 15px; line-height:22px;font-size:16px;color:#333; word-wrap:break-word; white-space:pre-wrap; }
+
 .pt-mdtitle,.pt-mdp{ display: none; width: 100%; position: absolute; z-index: 6; top: 50%; left: 0; text-align: center; }
 .pt-mdtitle{ margin: -300px 0 0 0; }
 .pt-mdp{ margin-top: -140px; color: #fff; font-size: 16px; }

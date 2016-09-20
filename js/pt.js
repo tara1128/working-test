@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-20 13:19
+  Latest modified: 2016-09-20 17:19
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -570,14 +570,28 @@
 	function switchPlayers(){
 		this.findLi = $('#ptPlayersList li');
 		this._initNum = 0;
+    this._numShow = 3; // Quantity of items shown at one time.
+    this._limitWidth = 1099; // Only when window width larger than it, can show 3 items one time.
 		this.prevs = $('.pt-prev');
 		this.nexts = $('.pt-next');
 		this.init();
 	};
 	switchPlayers.prototype = {
 		init: function(){
+      var me = this;
 			this.bindEvent();
+      this.confirmNumShow();
+			$(win).on('resize', function(event) {
+        me.confirmNumShow();
+      });
 		},
+    confirmNumShow: function() {
+      if( $(win).width() > this._limitWidth ) {
+        this._numShow = 3;
+      }else{
+        this._numShow = 1;
+      }
+    },
 		_prev: function(){
 			if(this._initNum > 0){
 				this.nexts.show();
@@ -590,12 +604,12 @@
 			}
 		},
 		_next: function(){
-			if(this._initNum < this.findLi.length - 3){
+			if(this._initNum < this.findLi.length - this._numShow){
 				this.nexts.show();
 				this.prevs.show();
 				this._initNum ++;
 				this.animateMain(this._initNum);
-				if(this._initNum == this.findLi.length - 3){
+				if(this._initNum == this.findLi.length - this._numShow){
 					this.nexts.hide();
 				}
 			}
@@ -604,9 +618,9 @@
 			var ptPlayersList = $('#ptPlayersList');
 			var getLiWidth = this.findLi.eq(0).outerWidth();
 			ptPlayersList.animate({left: - items * (getLiWidth + 16) + 'px'},{
-	         	easing: 'easeInOutBack',
-	         	duration: 700,
-	         	complete:function(){}
+        easing: 'easeOutBack',
+        duration: 700,
+        complete:function(){}
 		 	});
 		},
 		bindEvent: function(){
