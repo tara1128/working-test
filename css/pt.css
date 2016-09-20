@@ -1,15 +1,15 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-20 13:55
+  Latest modified: 2016-09-20 14:38
 */
 
 /* main */
+.bodyPT #wrap {min-width:auto!important;}
 .bodyPT { background:#83d8ff url(../images/pt-body-bg.jpg) no-repeat center top; background-attachment: fixed; background-size: 100% auto; overflow: hidden;
   -webkit-transition: background-size .5s ease;
   -moz-transition: background-size .5s ease;
   transition: background-size .5s ease;
 }
-.bodyPT h1{ display: none; }
 .pt-content{ display: none; width: 100%; position: absolute; z-index: 6; left: 0; }
 #pt-cur{ width: 50px; height: 325px; position: absolute; z-index: 9; top: 50%; right: 20px; margin-top: -110px; overflow: hidden;
   -webkit-transition: top .4s ease-in .5s;
@@ -146,7 +146,7 @@
 .pt-game-score{ display: none; width: 306px; height: 87px; margin: 50px 0 0 -500px; }
 .pt-game-score i{ width: 87px; height: 87px; padding-right: 10px; }
 .pt-game-score i img{ opacity: 0; *opacity: 1; opacity: 1\0; }
-.pt-gp-img{ display: none; width: 147px; height: 50px; margin: 210px 0 0 -500px; }
+.pt-gp-img{ display: none; width:147px; height: 50px; margin: 210px 0 0 -500px; }
 .pt-ms-ia,.pt-ms-ib{ display: block; position: absolute; z-index: 5; }
 .pt-mbtitle,
 .pt-mbp,
@@ -543,8 +543,8 @@
 
 /* ======= Responsive Solutions ======= */
 @media screen and (max-width: 599px) {
-  .pt-maimga{ margin: 0 0 0 -50%; top: 5%; }
-  .pt-maimgb{ margin: 0 0 0 -50%; top: calc( 5% + 220px ); }
+  .pt-maimga{ margin: 0 0 0 -50%; top: 70px; }
+  .pt-maimgb{ margin: 0 0 0 -50%; top: 280px; }
   .pt-maimgc{ margin: -150px 0 0 -50%; }
   .pt-maimga img { margin: 0 auto; width: 55%; }
   .pt-maimgb img { margin: 0 auto; width: 70%; }
@@ -553,8 +553,8 @@
   .pt-prev{ margin-left: 0; left: 5%; }
 }/* /end media */
 @media (min-width: 600px) and (max-width: 899px) {
-  .pt-maimga{ margin: 0 0 0 -50%; top: 5%; }
-  .pt-maimgb{ margin: 0 0 0 -50%; top: calc( 5% + 230px ); }
+  .pt-maimga{ margin: 0 0 0 -50%; top: 120px; }
+  .pt-maimgb{ margin: 0 0 0 -50%; top: 350px; }
   .pt-maimgc{ margin: -150px 0 0 -50%; }
   .pt-maimga img { margin: 0 auto; width: 55%; }
   .pt-maimgb img { margin: 0 auto; width: 70%; }
@@ -598,40 +598,40 @@
   .pt-fbtn { left: 8%; margin: -60px 0 0 0; }
 }/* /end media */
 @media (min-width: 460px) and (max-width: 829px) {
-  .pt-mbtitle { top: 0; margin: 40px 0 0 -224px; }
+  .pt-mbtitle { top: 0; margin: 80px 0 0 -224px; }
   .pt-mbtitle img { display: block; width: 90%; margin: 0 auto; }
-  .pt-mbp { top: 0; width: 402px; margin: 190px 0 0 -201px; }
-  .pt-gp-img { top: auto; bottom: 30px; margin: 0 0 0 -196px; }
+  .pt-mbp { top: 0; width: 402px; margin: 250px 0 0 -201px; }
+  .pt-gp-img { top: auto; bottom: 80px; margin: 0 0 0 -196px; }
   .pt-mbvideo{ margin: -125px 0 0 -272px; z-index: 1; }
   .pt-play-video{ margin: -155px 0 0 -47px; }
   .pt-music-obja{ width: 42%; top: 5%; }
   .pt-music-objb{ width: 42%; }
   .pt-music-objc{ width: 42%; bottom: 5%; }
-  .pt-mctitle{ top: 0; margin: 40px 0 0 -233px; }
+  .pt-mctitle{ top: 0; margin: 80px 0 0 -233px; }
   .pt-mctitle img { display: block; width: 90%; margin: 0 auto; }
-  .pt-mcp{ width: 408px; margin: -180px 0 0 -205px; }
-  .pt-bmg-img{ margin: 50px 0 0 -205px; }
-  .pt-mdtitle{ top: 0; left: 50%; margin: 30px 0 0 -50%; width: 100%; }
+  .pt-mcp{ top:0; width:408px; margin:250px 0 0 -205px; }
+  .pt-bmg-img{ top: auto; bottom: 70px; margin: 0 0 0 -205px; }
+  .pt-mdtitle{ top: 0; left: 50%; margin: 80px 0 0 -50%; width: 100%; }
   .pt-mdtitle img { display: block; width: 80%; margin: 0 auto; }
-  .pt-mdp{ width: 80%; top: 0; left: 50%; margin: 210px 0 0 -40%; }
+  .pt-mdp{ width: 70%; top: 0; left: 50%; margin: 290px 0 0 -35%; }
   .pt-mdlist{ width: 100%; height: auto; top: 50%; margin: -80px 0 0 -50%; }
   .pt-mdlist li{ width: 100%; height: auto; }
   .pt-mdia{ top: 50%; left: auto; right: 45px; margin: -110px 0 0 0; }
   .pt-mdia img { width: 80%; }
-  .pt-metitle{ top: 0; left: 50%; margin: 30px 0 0 -50%; }
+  .pt-metitle{ top: 0; left: 50%; margin: 80px 0 0 -50%; }
   .pt-metitle img { display: block; width: 80%; margin: 0 auto; }
-  .pt-mep{ width: 80%; top: 0; left: 50%; margin: 120px 0 0 -40%;}
+  .pt-mep{ width: 80%; top: 0; left: 50%; margin: 200px 0 0 -40%;}
   .pt-mftitle{ left: 8%; margin-left: 0px; }
   .pt-fbtn { left: 8%; margin: -60px 0 0 0; }
   .pt-right-down, .pt-ms-ia, .pt-ms-ib, .pt-game-img, .pt-play-video, .pt-game-score i img { display: none; }
 }/* /end media */
 @media screen and (max-width: 459px) {
-  .pt-mbtitle { top: 0; width: 100%; margin: 30px 0 0 -50%; }
+  .pt-mbtitle { top: 0; width: 100%; margin: 80px 0 0 -50%; }
   .pt-mbtitle img { display: block; width: 80%; margin: 0 auto; }
-  .pt-mbp { top: 0; margin: 180px 0 0 -42%; width: 80%; }
+  .pt-mbp { top: 0; margin: 240px 0 0 -42%; width: 80%; }
+  .pt-gp-img { top: auto; bottom: 70px; margin: 0 0 0 -75px; }
   .pt-game-img,
   .pt-play-video,
-  .pt-gp-img img,
   .pt-ms-ia,
   .pt-ms-ib,
   .pt-game-score i img,
@@ -641,13 +641,13 @@
   .pt-music-obja{ width: 60%; top: 2%; }
   .pt-music-objb{ width: 60%; }
   .pt-music-objc{ width: 60%; bottom: 8%; }
-  .pt-mctitle{ width: 100%; top: 0; margin: 30px 0 0 -50%; }
+  .pt-mctitle{ width: 100%; top: 0; margin: 80px 0 0 -50%; }
   .pt-mctitle img { display: block; width: 90%; margin: 0 auto; }
-  .pt-mcp{ width: 90%; top: 0; margin: 180px 0 0 -45%; }
-  .pt-bmg-img{ top: auto; bottom: 20%; margin: 0 0 0 -45%; width: 90%; }
-  .pt-mdtitle{ top: 0; left: 50%; margin: 30px 0 0 -50%; width: 100%; }
+  .pt-mcp{ width: 90%; top: 0; margin: 240px 0 0 -45%; }
+  .pt-bmg-img{ top: auto; bottom: 60px; margin: 0 0 0 -45%; width: 90%; }
+  .pt-mdtitle{ top: 0; left: 50%; margin: 80px 0 0 -50%; width: 100%; }
   .pt-mdtitle img { display: block; width: 80%; margin: 0 auto; }
-  .pt-mdp{ width: 80%; top: 0; left: 50%; margin: 150px 0 0 -40%; }
+  .pt-mdp{ width: 70%; top: 0; left: 50%; margin: 200px 0 0 -35%; }
   .pt-mdlist{ width: 100%; height: auto; top: 50%; margin: -80px 0 0 -50%; }
   .pt-mdlist li{ width: 100%; height: auto; }
   .pt-mdia{ top: 50%; left: auto; right: 45px; margin: -110px 0 0 0; }
