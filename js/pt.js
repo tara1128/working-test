@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-20 20:30
+  Latest modified: 2016-09-21 15:48
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -426,7 +426,11 @@
 				self.mainRun(obj,'down');
         if( self.initNum != 2 ){ // Shut down audios
           for(var i = 0, len = self.cdAudios.length; i < len; i++){
-            self.cdAudios[i].pause();
+            if( typeof self.cdAudios[i].canPlayType == 'undefined' ){
+              return;
+            }else{
+              self.cdAudios[i].pause();
+            }
           }
           $('#ptMusicMain img.play').show();
           $('#ptMusicMain img.pause').hide();
