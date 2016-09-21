@@ -452,9 +452,9 @@
       }, false);
       document.addEventListener('touchend', function(e){
         if( deltaY < 0 ){ 
-          self.mainRun(obj, 'up');
-        }else{
           self.mainRun(obj, 'down');
+        }else{
+          self.mainRun(obj, 'up');
         }
       }, false);
     },
