@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-21 20:24
+  Latest modified: 2016-09-22 01:01
 */
 
 /* main */
@@ -823,7 +823,8 @@
   .pt-ms-ib,
   .pt-game-score i img,
   .pt-music .accessary,
-  .pt-right-down {display: none; }
+  .pt-right-down,
+  #pt-cur{display: none;}
   .pt-mbvideo{ margin: -125px 0 0 -272px; z-index: 1; }
   .pt-play-video{ margin: -148px 0 0 -47px; }
   .pt-music-obja{ width: 60%; top: 2%; }

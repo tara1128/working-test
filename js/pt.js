@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-21 19:54
+  Latest modified: 2016-09-22 01:02
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -161,6 +161,7 @@
 				father.initDom(pageObj);
 				father.addEvent(pageObj);
 				father.curWebClick(pageObj);
+				father.curPageTouch(pageObj);
 				father.clickNext(pageObj);
         father.clickToPlayVideo(pageObj);
 				father.keyEvent(pageObj);
@@ -434,6 +435,29 @@
         }
 			});
 		},
+    curPageTouch: function(obj, items) {
+      var self = this;
+      var startX, startY, startTime, deltaY;
+      var isMove = false;
+      document.addEventListener('touchstart', function(e){
+        var touch = e.touches[0];
+        startX = touch.pageX;
+        startY = touch.pageY
+        startTime = e.timeStamp;
+        e.preventDefault();
+      },false);
+      document.addEventListener('touchmove', function(e){
+        var touch = e.touches[0];
+        deltaY = touch.pageY - startY;
+      }, false);
+      document.addEventListener('touchend', function(e){
+        if( deltaY < 0 ){ 
+          self.mainRun(obj, 'up');
+        }else{
+          self.mainRun(obj, 'down');
+        }
+      }, false);
+    },
     clickToPlayVideo: function(obj) {
       var self = this;
       var vdWrp = obj.vdWrapper;
