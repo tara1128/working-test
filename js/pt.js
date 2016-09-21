@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-22 01:02
+  Latest modified: 2016-09-22 06:58
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -437,13 +437,12 @@
 		},
     curPageTouch: function(obj, items) {
       var self = this;
-      var startX, startY, startTime, deltaY;
+      var startX, startY, deltaY;
       var isMove = false;
       document.addEventListener('touchstart', function(e){
         var touch = e.touches[0];
         startX = touch.pageX;
         startY = touch.pageY
-        startTime = e.timeStamp;
         e.preventDefault();
       },false);
       document.addEventListener('touchmove', function(e){
@@ -452,9 +451,9 @@
       }, false);
       document.addEventListener('touchend', function(e){
         if( deltaY < 0 ){ 
-          self.mainRun(obj, 'down');
-        }else{
           self.mainRun(obj, 'up');
+        }else{
+          self.mainRun(obj, 'down');
         }
       }, false);
     },
