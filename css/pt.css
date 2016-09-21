@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-21 17:39
+  Latest modified: 2016-09-21 19:54
 */
 
 /* main */
@@ -14,17 +14,46 @@
   overflow:hidden;
   -webkit-transition: background-size .5s ease;
   -moz-transition: background-size .5s ease;
+  -ms-transition: background-size .5s ease;
+  -o-transition: background-size .5s ease;
   transition: background-size .5s ease;
 }
-.pt-content{ display: none; width: 100%; position: absolute; z-index: 6; left: 0; }
-#pt-cur{ width: 50px; height: 325px; position: absolute; z-index: 9; top: 50%; right: 20px; margin-top: -110px; overflow: hidden;
+.pt-content{
+  display:none;
+  position:absolute;
+  left:0;
+  width:100%;
+  z-index:6;
+}
+
+#pt-cur{
+  position:absolute;
+  width:50px;
+  height:325px;
+  z-index:9;
+  top:50%;
+  right:20px;
+  margin-top:-110px;
+  overflow:hidden;
   -webkit-transition: top .4s ease-in .5s;
   -moz-transition: top .4s ease-in .5s;
   -ms-transition: top .4s ease-in .5s;
   -o-transition: top .4s ease-in .5s;
   transition: top .4s ease-in .5s;
 }
-#pt-cur a{ display: block; margin: 10px auto; width: 35px; height: 35px; line-height: 32px; font-size: 14px; color: #fff; text-align: center; overflow: hidden; border-radius:35px;border:2px solid #fff;box-sizing:border-box;
+#pt-cur a {
+  display: block;
+  margin: 10px auto;
+  width: 35px;
+  height: 35px;
+  line-height: 32px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 35px;
+  border:2px solid #fff;
+  box-sizing:border-box;
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -ms-transition: all .5s ease;
@@ -36,8 +65,7 @@
   -o-box-shadow: 1px 3px 7px rgba(0,0,0, .2);
   box-shadow: 1px 3px 7px rgba(0,0,0, .2);
 }
-#pt-cur a.cur-pages,
-#pt-cur a:hover{
+#pt-cur a.cur-pages, #pt-cur a:hover{
   color: #916334;
   border: 2px solid transparent;
   background: #ffea1b;
@@ -48,29 +76,37 @@
   background: -ms-linear-gradient(left top, #ffea1b, #ffd813 ); /* IE10+ */
   background: linear-gradient(to bottom right, #ffea1b, #ffd813 ); /* W3C */
 }
-.pt-footer{ width: 100%; height: 375px; position: absolute; z-index: 7; bottom: -375px; left: 0; overflow: hidden; }
+.pt-footer{
+  position: absolute;
+  z-index: 7;
+  bottom: -375px;
+  left: 0;
+  width: 100%;
+  height: 375px;
+  overflow: hidden;
+}
 .pt-fimga{ display:block; width:100%; height:100%; background: url(../images/pt-pianist-bgimg.png) 50% top no-repeat; background-size: cover; position: absolute; z-index: 5; bottom: 0; left: 0; }
 
 #pt-wrap{ height: 100%; }
 #myCanvas{ width: 100%; height: 100%; position: fixed; top: 0; left: 0; }
-.pt-maimga,
-.pt-maimgb,
-.pt-maimgc { display: none; position: absolute; top: 50%; left: 50%;
+.pt-do-tile,
+.pt-do-text,
+.pt-do-crumb { display: none; position: absolute; top: 50%; left: 50%;
   -webkit-transition: all .4s ease-in;
   -moz-transition: all .4s ease-in;
   -ms-transition: all .4s ease-in;
   -o-transition: all .4s ease-in;
   transition: all .4s ease-in;
 }
-.pt-fbtn, .pt-btna { display: none; position: absolute; top: 50%; left: 50%; }
-.pt-maimga,
-.pt-maimgb,
-.pt-maimgc {
+.pt-fbtn, .pt-do-download-btn { display: none; position: absolute; top: 50%; left: 50%; }
+.pt-do-tile,
+.pt-do-text,
+.pt-do-crumb {
   width: 100%;
 }
-.pt-maimga img,
-.pt-maimgb img,
-.pt-maimgc img {
+.pt-do-tile img,
+.pt-do-text img,
+.pt-do-crumb img {
   display: block;
   width: 100%;
   -webkit-transition: all .4s ease-in;
@@ -79,33 +115,34 @@
   -o-transition: all .4s ease-in;
   transition: all .4s ease-in;
 }
-.pt-maimga img {
+.pt-do-tile img {
   max-width: 374px;
 }
-.pt-maimgb img {
+.pt-do-text img {
   max-width: 544px;
 }
-.pt-maimgc img {
+.pt-do-crumb img {
   margin: 0 auto;
   max-width: 1410px;
 }
 
-.pt-maimga{ margin: -162px 0 0 -440px; z-index: 2; }
-.pt-maimgb{ margin: -252px 0 0 -130px; z-index: 3; }
-.pt-maimgc{ margin: -292px 0 0 -50%; z-index: 4; } 
+.pt-do-tile{ margin: -162px 0 0 -440px; z-index: 2; }
+.pt-do-text{ margin: -252px 0 0 -130px; z-index: 3; }
+.pt-do-crumb{ margin: -292px 0 0 -50%; z-index: 4; }
 
 /* Index download btn */
-.pt-btna{
+.pt-do-download-btn{
+  z-index:5;
   margin:194px 0 0 -164px;
   width:328px;
   height:123px;
   background:url(../images/pt-index-download-btn.png) no-repeat;
   cursor:pointer;
 }
-.pt-btna:hover {
+.pt-do-download-btn:hover {
   background-position: -385px 0;
 }
-.pt-btna:active {
+.pt-do-download-btn:active {
   background-position: -757px 0;
 }
 
@@ -222,19 +259,103 @@
 .pt-music-obja img,
 .pt-music-objb img,
 .pt-music-objc img{ width: 100%; vertical-align: top; }
-.pt-music-obja{ width: 32%; top: 0; margin-left: -36%; }
-.pt-music-objb{ width: 32%; top: 50%; margin: -11% 0 0 -33%; }
-.pt-music-objc{ width: 32%; bottom: 0; margin-left: -42%; }
+.pt-music-obja{ width: 32%; top: 0; margin-left: -30%; }
+.pt-music-objb{ width: 32%; top: 50%; margin: -15% 0 0 -38%; }
+.pt-music-objc{ width: 32%; bottom: 0; margin-left: -60%; }
 
 /* Accessaries around the CD: */
 .pt-music-obja s,
 .pt-music-objb s,
 .pt-music-objc s{position:absolute;text-decoration:none;}
-.accessary.litstr{right:20px;bottom:-120px;transform:rotate(12deg);width:214px;height:192px;background:url(../images/pt-stars-around.png) no-repeat;}
+.accessary.litstr{
+  right:0;
+  bottom:-85px;
+  width:214px;
+  height:192px;
+  background:url(../images/pt-stars-around.png) no-repeat;
+}
+.accessary.topstr{
+  left:5px;
+  top:10px;
+  width:90px;
+  height:90px;
+  background:url(../images/pt-stars-topstar.png) no-repeat;
+}
+.accessary.leftstr{
+  left:-60px;
+  top:235px;
+  width:68px;
+  height:68px;
+  background:url(../images/pt-stars-leftstar.png) no-repeat;
+}
+.accessary.elves{
+  right:-50px;
+  bottom:-30px;
+  width:220px;
+  height:220px;
+  background:url(../images/pt-forest-around.png) no-repeat;
+}
+.accessary.oneleaf{
+  right:0;
+  bottom:350px;
+  width:50px;
+  height:120px;
+  background:url(../images/pt-forest-oneleaf.png) no-repeat;
+}
+.accessary.topleaf{
+  left:0;
+  top:50px;
+  width:60px;
+  height:60px;
+  background:url(../images/pt-forest-topleaf.png) no-repeat;
+}
+.accessary.leftleaf{
+  left:0;
+  top:250px;
+  width:45px;
+  height:55px;
+  background:url(../images/pt-forest-leftleaf.png) no-repeat;
+}
+.accessary.frlp{
+  right:-35px;
+  bottom:-40px;
+  width:200px;
+  height:150px;
+  background:url(../images/pt-freeloop-around.png) no-repeat;
+}
+.accessary.rightmark{
+  right:0;
+  top:50px;
+  width:70px;
+  height:100px;
+  background:url(../images/pt-freeloop-rightmark.png) no-repeat;
+}
+.accessary.yelmark{
+  left:10px;
+  top:50px;
+  width:60px;
+  height:60px;
+  background:url(../images/pt-freeloop-yelmark.png) no-repeat;
+}
+
+
+
 /* Buttons on CD: */
-.pt-cdbtn {position:absolute;left:50%;top:50%;margin:-6% 0 0 -5%;width:12%;height:12%;cursor:pointer;}
-.pt-cdbtn img {position:absolute;left:0;top:0;width:100%;}
-.pt-cdbtn img.pause {display:none;}
+.pt-cdbtn {
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin:-6% 0 0 -5%;
+  width:12%;
+  height:12%;
+  cursor:pointer;
+  background-repeat:no-repeat;
+  background-image: url(../images/pt-cd-btn-play.png);
+  background-size: cover;
+}
+.curMusic .pt-cdbtn{
+  background-image: url(../images/pt-cd-btn-pause.png);
+}
 
 
 /* Stage elements in the fifth slide: */
@@ -291,7 +412,7 @@
 .pt-open-as:hover{ background-color: #e5e5e5; }
 
 /* animations */
-.pt-active .pt-maimga {
+.pt-active .pt-do-tile {
   display: block;
   -webkit-animation: animMaimga .5s ease-in both;
   -moz-animation: animMaimga .5s ease-in both;
@@ -305,7 +426,7 @@
 @-o-keyframes animMaimga      { from { opacity: 0; -o-transform: translate3d(0,-50px,0); } to { opacity: 1; -o-transform: translate3d(0,0,0); } }
 @keyframes animMaimga         { from { opacity: 0; transform: translate3d(0,-50px,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
 
-.pt-active .pt-maimgb {
+.pt-active .pt-do-text {
   display: block;
   -webkit-animation: animMaimgb .5s ease-in both;
   -moz-animation: animMaimgb .5s ease-in both;
@@ -318,7 +439,7 @@
 @-ms-keyframes animMaimgb     { from { opacity: 0; -ms-transform: translate(0,-50px); } to { opacity: 1; -ms-transform: translate(0,0); } } /* -ms- For IE9. */
 @-o-keyframes animMaimgb      { from { opacity: 0; -o-transform: translate3d(0,-50px,0); } to { opacity: 1; -o-transform: translate3d(0,0,0); } }
 @keyframes animMaimgb         { from { opacity: 0; transform: translate3d(0,-50px,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
-.pt-active .pt-maimgc {
+.pt-active .pt-do-crumb {
   display: block;
   -webkit-animation: animMaimgc .8s ease both .2s;
   -moz-animation: animMaimgc .8s ease both .2s;
@@ -332,7 +453,7 @@
 @-o-keyframes animMaimgc      { from { opacity: 0; -o-transform: scale3d(0,0,0); } to { opacity: 1; -o-transform: scale3d(1,1,1); } }
 @keyframes animMaimgc         { from { opacity: 0; transform: scale3d(0,0,0); } to { opacity: 1; transform: scale3d(1,1,1); } }
 
-.pt-active .pt-btna {
+.pt-active .pt-do-download-btn {
   display: block;
   -webkit-animation: animBtna .5s ease both .8s;
   -moz-animation: animBtna .5s ease both .8s;
@@ -542,19 +663,22 @@
 @-o-keyframes csImgAnimate { from { opacity: 0; -o-transform: rotateY(80deg); } to { opacity: 1; -o-transform: rotateY(0deg); } }
 @keyframes csImgAnimate { from { opacity: 0; transform: rotateY(80deg); } to { opacity: 1; transform: rotateY(0deg); } }
 
-.pt-music-obja.curMusic,.pt-music-objb.curMusic,.pt-music-objc.curMusic{
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-.pt-music-obja.curMusic,.pt-music-objb.curMusic,.pt-music-objc.curMusic{
+.pt-music-obja.curMusic .pt-cdbtn,
+.pt-music-obja.curMusic .pt-cdpic,
+.pt-music-objb.curMusic .pt-cdbtn,
+.pt-music-objb.curMusic .pt-cdpic,
+.pt-music-objc.curMusic .pt-cdbtn,
+.pt-music-objc.curMusic .pt-cdpic {
   -webkit-animation: curMusic 60s both;
   -moz-animation: curMusic 60s both;
   -ms-animation: curMusic 60s both;
   -o-animation: curMusic 60s both;
   animation: curMusic 60s both;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 @-webkit-keyframes curMusic {
   from { -webkit-transform: rotate(0deg); } to { -webkit-transform: rotate(360deg); }
@@ -575,27 +699,27 @@
 
 /* ======= Responsive Solutions ======= */
 @media screen and (max-width: 599px) {
-  .pt-maimga{ margin: 0 0 0 -50%; top: 70px; }
-  .pt-maimgb{ margin: 0 0 0 -50%; top: 280px; }
-  .pt-maimgc{ margin: -150px 0 0 -50%; }
-  .pt-maimga img { margin: 0 auto; width: 55%; }
-  .pt-maimgb img { margin: 0 auto; width: 70%; }
+  .pt-do-tile{ margin: 0 0 0 -50%; top: 70px; }
+  .pt-do-text{ margin: 0 0 0 -50%; top: 280px; }
+  .pt-do-crumb{ margin: -150px 0 0 -50%; }
+  .pt-do-tile img { margin: 0 auto; width: 55%; }
+  .pt-do-text img { margin: 0 auto; width: 70%; }
   .pt-players-wrap{ width: 300px; height: 360px; margin:-158px 0 0 -150px; }
   .pt-next{ margin-left: 0; right: 5%; left: auto; }
   .pt-prev{ margin-left: 0; left: 5%; }
-  .pt-btna{ margin:174px 0 0 -164px; }
+  .pt-do-download-btn{ margin:174px 0 0 -164px; }
   .pt-stage-elements {display:none!important;}
 }/* /end media */
 @media (min-width: 600px) and (max-width: 899px) {
-  .pt-maimga{ margin: 0 0 0 -50%; top: 120px; }
-  .pt-maimgb{ margin: 0 0 0 -50%; top: 350px; }
-  .pt-maimgc{ margin: -150px 0 0 -50%; }
-  .pt-maimga img { margin: 0 auto; width: 55%; }
-  .pt-maimgb img { margin: 0 auto; width: 70%; }
+  .pt-do-tile{ margin: 0 0 0 -50%; top: 120px; }
+  .pt-do-text{ margin: 0 0 0 -50%; top: 350px; }
+  .pt-do-crumb{ margin: -150px 0 0 -50%; }
+  .pt-do-tile img { margin: 0 auto; width: 55%; }
+  .pt-do-text img { margin: 0 auto; width: 70%; }
   .pt-players-wrap{ width: 300px; height: 360px; margin: -180px 0 0 -150px; }
   .pt-next{ margin-left: 30%; }
   .pt-prev{ margin-left: -37%; }
-  .pt-stage-elements{ top: 30%; } 
+  .pt-stage-elements{ top: 30%; }
 }/* /end media */
 @media (min-width: 900px) and (max-width: 1099px) {
   .pt-ms-ia{ left: 10px; }
@@ -742,7 +866,7 @@
   -o-transition: transform .4s ease-in-out;
   transition: transform .4s ease-in-out;
 }
-.pt-pop-close:hover{ 
+.pt-pop-close:hover{
   -webkit-transform: rotate(180deg);
  }
 .pt-pop-content{text-align: center; }
