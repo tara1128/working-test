@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-21 15:40
+  Latest modified: 2016-09-21 17:39
 */
 
 /* main */
@@ -466,23 +466,6 @@
 @-o-keyframes animMdsa { from {opacity:0; top:90px;} to {opacity:1; top:0px;} }
 @keyframes animMdsa { from {opacity:0; top:90px;} to {opacity:1; top:0px;} }
 
-.pt-active .pt-mdlist li{
-  /*
-  -webkit-animation: pt-bListla 1.2s forwards;
-  -moz-animation: pt-bListla 1.2s forwards;
-  -ms-animation: pt-bListla 1.2s forwards;
-  -o-animation: pt-bListla 1.2s forwards;
-  animation: pt-bListla 1.2s forwards;
-  */
-}
-
-/*
-@-webkit-keyframes pt-bListla{ from { opacity: 0; -webkit-transform-origin: 0 100%; -webkit-transform: rotate3d(1,0,0,90deg); } to { opacity: 1; -webkit-transform: rotate3d(1,0,0,0deg); } }
-@-moz-keyframes pt-bListla{ from { opacity: 0; -moz-transform-origin: 0 100%; -moz-transform: rotate3d(1,0,0,90deg); } to { opacity: 1; -moz-transform: rotate3d(1,0,0,0deg); } }
-@-ms-keyframes pt-bListla{ from { opacity: 0; -ms-transform-origin: 0 100%; -ms-transform: rotate(90deg); } to { opacity: 1; -ms-transform: rotate(0deg); } } /* -ms- For IE9, which supports 2D, not 3D.
-@-o-keyframes pt-bListla{ from { opacity: 0; -o-transform-origin: 0 100%; -o-transform: rotate3d(1,0,0,90deg); } to { opacity: 1; -o-transform: rotate3d(1,0,0,0deg); } }
-@keyframes pt-bListla{ from { opacity: 0; transform-origin: 0 100%; transform: rotate3d(1,0,0,90deg); } to { opacity: 1; transform: rotate3d(1,0,0,0deg); } }
-*/
 
 .pt-active .pt-mdia.vmddelay{
   -webkit-animation-delay: 1.8s;
@@ -597,9 +580,11 @@
   .pt-maimgc{ margin: -150px 0 0 -50%; }
   .pt-maimga img { margin: 0 auto; width: 55%; }
   .pt-maimgb img { margin: 0 auto; width: 70%; }
-  .pt-players-wrap{ width: 300px; height: 360px; margin: -180px 0 0 -150px; }
+  .pt-players-wrap{ width: 300px; height: 360px; margin:-158px 0 0 -150px; }
   .pt-next{ margin-left: 0; right: 5%; left: auto; }
   .pt-prev{ margin-left: 0; left: 5%; }
+  .pt-btna{ margin:174px 0 0 -164px; }
+  .pt-stage-elements {display:none!important;}
 }/* /end media */
 @media (min-width: 600px) and (max-width: 899px) {
   .pt-maimga{ margin: 0 0 0 -50%; top: 120px; }
@@ -678,13 +663,14 @@
 @media screen and (max-width: 459px) {
   .pt-mbtitle { top: 0; width: 100%; margin: 80px 0 0 -50%; }
   .pt-mbtitle img { display: block; width: 80%; margin: 0 auto; }
-  .pt-mbp { top: 0; margin: 240px 0 0 -42%; width: 80%; }
-  .pt-gp-img { top: auto; bottom: 70px; margin: 0 0 0 -75px; }
+  .pt-mbp { top: 0; margin: 220px 0 0 -40%; width: 80%; }
+  .pt-gp-img { top: auto; bottom:40px; margin:0 0 0 -75px; }
   .pt-game-img,
   .pt-play-video,
   .pt-ms-ia,
   .pt-ms-ib,
   .pt-game-score i img,
+  .pt-music .accessary,
   .pt-right-down {display: none; }
   .pt-mbvideo{ margin: -125px 0 0 -272px; z-index: 1; }
   .pt-play-video{ margin: -148px 0 0 -47px; }
@@ -693,18 +679,18 @@
   .pt-music-objc{ width: 60%; bottom: 8%; }
   .pt-mctitle{ width: 100%; top: 0; margin: 80px 0 0 -50%; }
   .pt-mctitle img { display: block; width: 90%; margin: 0 auto; }
-  .pt-mcp{ width: 90%; top: 0; margin: 240px 0 0 -45%; }
+  .pt-mcp{ width: 90%; top: 0; margin:225px 0 0 -45%; }
   .pt-bmg-img{ top: auto; bottom: 60px; margin: 0 0 0 -45%; width: 90%; }
   .pt-mdtitle{ top: 0; left: 50%; margin: 80px 0 0 -50%; width: 100%; }
   .pt-mdtitle img { display: block; width: 80%; margin: 0 auto; }
-  .pt-mdp{ width: 70%; top: 0; left: 50%; margin: 200px 0 0 -35%; }
-  .pt-mdlist{ width: 100%; height: auto; top: 50%; margin: -80px 0 0 -50%; }
+  .pt-mdp{ width: 70%; top: 0; left: 50%; margin:180px 0 0 -35%; }
+  .pt-mdlist{ width: 100%; height: auto; top: 50%; margin:-70px 0 0 -50%; }
   .pt-mdlist li{ width: 100%; height: auto; }
   .pt-mdia{ top: 50%; left: auto; right: 45px; margin: -110px 0 0 0; }
   .pt-mdia img { width: 80%; }
-  .pt-metitle{ top: 0; left: 50%; margin: 80px 0 0 -50%; }
+  .pt-metitle{ top: 0; left: 50%; margin:60px 0 0 -50%; }
   .pt-metitle img { display: block; width: 80%; margin: 0 auto; }
-  .pt-mep{ width: 80%; top: 0; left: 50%; margin: 150px 0 0 -40%;}
+  .pt-mep{ width: 80%; top: 0; left: 50%; margin:120px 0 0 -40%;}
   .pt-mftitle{ left: 8%; margin-left: 0px; }
   .pt-fbtn { left: 8%; margin: -60px 0 0 0; }
   .pt-open-gp, .pt-open-as{ background-size: 95%;  }
