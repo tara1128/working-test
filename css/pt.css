@@ -1,11 +1,17 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-21 14:11
+  Latest modified: 2016-09-21 15:40
 */
 
 /* main */
-.bodyPT #wrap {min-width:auto!important;}
-.bodyPT { background:#83d8ff url(../images/pt-body-bg.jpg) no-repeat center top; background-attachment: fixed; background-size: 100% auto; overflow: hidden;
+.bodyPT #wrap {
+  min-width:auto!important;
+}
+.bodyPT {
+  background:url(../images/pt-body-bg.jpg) 50% 0 no-repeat #83d8ff;
+  background-attachment:fixed;
+  background-size:100% auto;
+  overflow:hidden;
   -webkit-transition: background-size .5s ease;
   -moz-transition: background-size .5s ease;
   transition: background-size .5s ease;
@@ -87,15 +93,39 @@
 .pt-maimga{ margin: -162px 0 0 -440px; z-index: 2; }
 .pt-maimgb{ margin: -252px 0 0 -130px; z-index: 3; }
 .pt-maimgc{ margin: -292px 0 0 -50%; z-index: 4; } 
-.pt-btna{width:328px;height:123px;z-index:6;margin:194px 0 0 -164px;background:url(../images/pt-index-download-btn.png) no-repeat left top; cursor: pointer; }
-.pt-btna:visited{ background-position: -757px -12px; }
-.pt-btna:hover{ background-position: -384px -8px; }
-.pt-btna:active{ background-position: -757px -12px; }
-.pt-fbtn { width: 200px; height: 74px; z-index: 6; margin: -60px 0 0 -514px; background: url(../images/pt-footer-download-btn.png) no-repeat left top; cursor: pointer; }
-.pt-fbtn:link{ background-position: 0 0; }
-.pt-fbtn:visited{ background-position: -454px -7px; }
-.pt-fbtn:hover{ background-position: -230px -5px; }
-.pt-fbtn:active{ background-position: -454px -7px; }
+
+/* Index download btn */
+.pt-btna{
+  margin:194px 0 0 -164px;
+  width:328px;
+  height:123px;
+  background:url(../images/pt-index-download-btn.png) no-repeat;
+  cursor:pointer;
+}
+.pt-btna:hover {
+  background-position: -385px 0;
+}
+.pt-btna:active {
+  background-position: -757px 0;
+}
+
+/* Footer download btn */
+.pt-fbtn {
+  z-index:6;
+  margin:-60px 0 0 -514px;
+  width:200px;
+  height:74px;
+  background:url(../images/pt-footer-download-btn.png) no-repeat;
+  cursor:pointer;
+}
+.pt-fbtn:hover {
+  background-position:-230px 0;
+}
+.pt-fbtn:active {
+  background-position:-454px 0;
+}
+
+
 .pt-prev,
 .pt-next{ display: none; width: 42px; height: 66px; position: absolute; z-index: 5; top: 50%; left: 50%; background: url(../images/pt-arrows.png); background-repeat: no-repeat; margin-top: -33px; }
 .pt-prev{ background-position: left top; margin-left: -520px; }
