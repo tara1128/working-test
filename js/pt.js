@@ -276,7 +276,7 @@
 			}
       self.adjustRightDown();
 			if(self.initNum != 2){
-				$('#ptMusicMain div').removeClass('curMusic');
+				$('#ptMusicMain .pt-cdobj').removeClass('curMusic');
 			}
 			mainRunClear = setTimeout(function(){
 				obj.pageDiv.removeClass('pt-active');
@@ -426,8 +426,7 @@
               self.cdAudios[i].pause();
             }
           }
-          $('#ptMusicMain img.play').show();
-          $('#ptMusicMain img.pause').hide();
+				  $('#ptMusicMain .pt-cdobj').removeClass('curMusic');
         }
         if( self.initNum != 1 ){ // Shut down videos
           playbtn.removeClass('paused').removeClass('replay').addClass('play').fadeIn(200);

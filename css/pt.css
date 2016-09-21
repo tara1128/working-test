@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-21 19:54
+  Latest modified: 2016-09-21 20:24
 */
 
 /* main */
@@ -18,6 +18,16 @@
   -o-transition: background-size .5s ease;
   transition: background-size .5s ease;
 }
+#pt-wrap{
+  height:100%;
+}
+#myCanvas{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
 .pt-content{
   display:none;
   position:absolute;
@@ -26,6 +36,7 @@
   z-index:6;
 }
 
+/* Five btns at right side */
 #pt-cur{
   position:absolute;
   width:50px;
@@ -51,6 +62,7 @@
   color: #fff;
   text-align: center;
   overflow: hidden;
+  cursor:pointer;
   border-radius: 35px;
   border:2px solid #fff;
   box-sizing:border-box;
@@ -85,35 +97,48 @@
   height: 375px;
   overflow: hidden;
 }
-.pt-fimga{ display:block; width:100%; height:100%; background: url(../images/pt-pianist-bgimg.png) 50% top no-repeat; background-size: cover; position: absolute; z-index: 5; bottom: 0; left: 0; }
+.pt-foot-pianist {
+  display:block;
+  position:absolute;
+  z-index:5;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:url(../images/pt-pianist-bgimg.png) 50% 0 no-repeat;
+  background-size:cover;
+}
 
-#pt-wrap{ height: 100%; }
-#myCanvas{ width: 100%; height: 100%; position: fixed; top: 0; left: 0; }
-.pt-do-tile,
-.pt-do-text,
-.pt-do-crumb { display: none; position: absolute; top: 50%; left: 50%;
+/* Screen 1. Frame of "Do": */
+.pt-do-tile, .pt-do-text, .pt-do-crumb {
+  display:none;
+  position:absolute;
+  top:50%;
+  left:50%;
+  width: 100%;
   -webkit-transition: all .4s ease-in;
   -moz-transition: all .4s ease-in;
   -ms-transition: all .4s ease-in;
   -o-transition: all .4s ease-in;
   transition: all .4s ease-in;
 }
-.pt-fbtn, .pt-do-download-btn { display: none; position: absolute; top: 50%; left: 50%; }
-.pt-do-tile,
-.pt-do-text,
-.pt-do-crumb {
-  width: 100%;
+
+.pt-do-tile{
+  margin:-162px 0 0 -440px;
+  z-index:2;
 }
-.pt-do-tile img,
-.pt-do-text img,
-.pt-do-crumb img {
+.pt-do-text{
+  margin:-252px 0 0 -130px;
+  z-index:3;
+}
+.pt-do-crumb{
+  margin:-292px 0 0 -50%;
+  z-index:4;
+}
+
+.pt-do-tile img, .pt-do-text img, .pt-do-crumb img {
   display: block;
   width: 100%;
-  -webkit-transition: all .4s ease-in;
-  -moz-transition: all .4s ease-in;
-  -ms-transition: all .4s ease-in;
-  -o-transition: all .4s ease-in;
-  transition: all .4s ease-in;
 }
 .pt-do-tile img {
   max-width: 374px;
@@ -126,13 +151,13 @@
   max-width: 1410px;
 }
 
-.pt-do-tile{ margin: -162px 0 0 -440px; z-index: 2; }
-.pt-do-text{ margin: -252px 0 0 -130px; z-index: 3; }
-.pt-do-crumb{ margin: -292px 0 0 -50%; z-index: 4; }
-
 /* Index download btn */
 .pt-do-download-btn{
+  position:absolute;
+  top:50%;
+  left:50%;
   z-index:5;
+  display:none;
   margin:194px 0 0 -164px;
   width:328px;
   height:123px;
@@ -148,6 +173,10 @@
 
 /* Footer download btn */
 .pt-fbtn {
+  display:none;
+  position:absolute; 
+  top:50%;
+  left:50%;
   z-index:6;
   margin:-60px 0 0 -514px;
   width:200px;
@@ -163,8 +192,7 @@
 }
 
 
-.pt-prev,
-.pt-next{ display: none; width: 42px; height: 66px; position: absolute; z-index: 5; top: 50%; left: 50%; background: url(../images/pt-arrows.png); background-repeat: no-repeat; margin-top: -33px; }
+.pt-prev, .pt-next{ display: none; width: 42px; height: 66px; position: absolute; z-index: 5; top: 50%; left: 50%; background: url(../images/pt-arrows.png); background-repeat: no-repeat; margin-top: -33px; }
 .pt-prev{ background-position: left top; margin-left: -520px; }
 .pt-next{ background-position: -131px top; margin-left: 468px; }
 .pt-metitle,
