@@ -1,8 +1,8 @@
 CACHE MANIFEST
-# 2016-09-22 v2.0
+# 2016-09-22 v2.1
 
-#css/pt.css
-#css/v4.main.css
+css/pt.css
+css/v4.main.css
 images/pt-body-bg.jpg
 images/pt-video.mp4
 images/pt-music-forest.mp3
@@ -72,12 +72,25 @@ images/v3/head-bottom-line.png
 images/v3/lang_icons.png
 images/v3/x2/logo-small-2x.png
 images/v3/x2/menu-small-2x.png
-#images/v3/fonts/*.eot
-#images/v3/fonts/*.woff
-#images/v3/fonts/*.woff2
-#images/v3/fonts/*.svg
-#images/v3/fonts/*.css
-#images/v3/fonts/*.ttf
+
+images/v3/fonts/helveticabold.eot
+images/v3/fonts/helveticabold.ttf
+images/v3/fonts/helveticabold.svg
+images/v3/fonts/helveticabold.woff
+images/v3/fonts/helveticaneue-light.eot
+images/v3/fonts/helveticaneue-light.woff
+images/v3/fonts/helveticaneue-light.woff2
+images/v3/fonts/helveticaneue-light.ttf
+images/v3/fonts/helveticaneue-light.svg
+images/v3/fonts/Gotham-Book.eot
+images/v3/fonts/Gotham-Book.ttf
+images/v3/fonts/Gotham-Book.woff
+images/v3/fonts/Gotham-Book.svg
+images/v3/fonts/Gotham-Bold.eot
+images/v3/fonts/Gotham-Bold.woff
+images/v3/fonts/Gotham-Bold.ttf
+images/v3/fonts/Gotham-Bold.svg
+
 js/lang/lang-change.js
 js/common.min.js
 js/jquery.easing.min.js
