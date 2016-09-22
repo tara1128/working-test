@@ -1,13 +1,24 @@
 CACHE MANIFEST
-# 2016-09-22 v1.0.0
+# 2016-09-22 v1.1
 
 css/pt.css
 css/v4.main.css
 
-images/pt-*
+images/pt-*.png
+images/pt-*.jpg
+images/pt-*.mp3
+images/pt-*.mp4
+
 images/v3/*.png
-images/v3/fonts/*
-images/v3/x2/*
+
+images/v3/fonts/*.eot
+images/v3/fonts/*.woff
+images/v3/fonts/*.woff2
+images/v3/fonts/*.svg
+images/v3/fonts/*.css
+images/v3/fonts/*.ttf
+
+images/v3/x2/*.png
 
 js/lang/lang-change.js
 js/common.min.js
