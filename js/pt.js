@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-22 10:27
+  Latest modified: 2016-09-22 11:07
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -300,32 +300,28 @@
 			clearTimeout(animateSetOut);
 			if(self.initNum == self.offsetArr.length){
 				obj.wrapDiv.animate({ top: (parseInt(self.offsetArr[0]) * (self.initNum - 1) - ptVfooter.outerHeight()) + 'px'}, {
-		         	easing: 'easeInQuart',
-		         	duration: obj.animateTime,
-		         	complete:function(){
-					}
+          easing: 'easeInQuart',
+          duration: obj.animateTime,
+          complete:function(){}
 			 	});
 				ptVfooter.animate({bottom: '0'},{
-		         	easing: 'easeInQuart',
-		         	duration: obj.animateTime,
-		         	complete:function(){
-					}
+          easing: 'easeInQuart',
+          duration: obj.animateTime,
+          complete:function(){}
 			 	});
 			 	animateSetOut = setTimeout(function(){
 			 		ptVfooter.addClass('pt-active');
 			 	},obj.animateTime);
 			}else{
 				ptVfooter.animate({bottom: '-' + ptVfooter.outerHeight() + 'px'},{
-		         	easing: 'easeInQuart',
-		         	duration: obj.animateTime,
-		         	complete:function(){
-					}
+          easing: 'easeInQuart',
+          duration: obj.animateTime,
+          complete:function(){}
 			 	});
 				obj.wrapDiv.animate({ top: parseInt(self.offsetArr[0]) * (self.initNum) + 'px' },{
-		         	easing: 'easeInQuart',
-		         	duration: obj.animateTime,
-		         	complete:function(){
-					}
+          easing: 'easeInQuart',
+          duration: obj.animateTime,
+          complete:function(){}
 			 	});
 			 	animateSetOut = setTimeout(function(){
 			 		ptVfooter.removeClass('pt-active');
@@ -438,23 +434,24 @@
     curPageTouch: function(obj, items) {
       var self = this;
       var startX, startY, deltaY;
-      var touchMoveMinDistance = 50;
+      var touchMoveMinDistance = 10;
       document.addEventListener('touchstart', function(e){
         var touch = e.touches[0];
         startX = touch.pageX;
         startY = touch.pageY
-        e.preventDefault();
       },false);
       document.addEventListener('touchmove', function(e){
         var touch = e.touches[0];
         deltaY = touch.pageY - startY;
       }, false);
       document.addEventListener('touchend', function(e){
-        if( Math.abs(deltaY) < touchMoveMinDistance ){ return; }
-        if( deltaY < 0 ){ 
-          self.mainRun(obj, 'up');
-        }else{
-          self.mainRun(obj, 'down');
+        if( deltaY && Math.abs(deltaY) > touchMoveMinDistance ){
+          if( deltaY < 0 ){ 
+            self.mainRun(obj, 'up');
+          }else{
+            self.mainRun(obj, 'down');
+          }
+          deltaY = 0;
         }
       }, false);
     },

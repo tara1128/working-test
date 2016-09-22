@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-22 01:01
+  Latest modified: 2016-09-22 11:21
 */
 
 /* main */
@@ -816,7 +816,7 @@
   .pt-mbtitle { top: 0; width: 100%; margin: 80px 0 0 -50%; }
   .pt-mbtitle img { display: block; width: 80%; margin: 0 auto; }
   .pt-mbp { top: 0; margin: 220px 0 0 -40%; width: 80%; }
-  .pt-gp-img { top: auto; bottom:40px; margin:0 0 0 -75px; }
+  .pt-gp-img,
   .pt-game-img,
   .pt-play-video,
   .pt-ms-ia,
@@ -824,7 +824,10 @@
   .pt-game-score i img,
   .pt-music .accessary,
   .pt-right-down,
-  #pt-cur{display: none;}
+  .pt-bmg-img,
+  .pt-mdp,
+  .pt-mep,
+  #pt-cur{display: none!important;}
   .pt-mbvideo{ margin: -125px 0 0 -272px; z-index: 1; }
   .pt-play-video{ margin: -148px 0 0 -47px; }
   .pt-music-obja{ width: 60%; top: 2%; }
@@ -833,18 +836,18 @@
   .pt-mctitle{ width: 100%; top: 0; margin: 80px 0 0 -50%; }
   .pt-mctitle img { display: block; width: 90%; margin: 0 auto; }
   .pt-mcp{ width: 90%; top: 0; margin:225px 0 0 -45%; }
-  .pt-bmg-img{ top: auto; bottom: 60px; margin: 0 0 0 -45%; width: 90%; }
   .pt-mdtitle{ top: 0; left: 50%; margin: 80px 0 0 -50%; width: 100%; }
   .pt-mdtitle img { display: block; width: 80%; margin: 0 auto; }
-  .pt-mdp{ width: 70%; top: 0; left: 50%; margin:180px 0 0 -35%; }
   .pt-mdlist{ width: 100%; height: auto; top: 50%; margin:-70px 0 0 -50%; }
   .pt-mdlist li{ width: 100%; height: auto; }
   .pt-mdia{ top: 50%; left: auto; right: 45px; margin: -110px 0 0 0; }
   .pt-mdia img { width: 80%; }
-  .pt-metitle{ top: 0; left: 50%; margin:60px 0 0 -50%; }
+  .pt-metitle{ top: 0; left: 50%; margin:90px 0 0 -50%; }
   .pt-metitle img { display: block; width: 80%; margin: 0 auto; }
-  .pt-mep{ width: 80%; top: 0; left: 50%; margin:120px 0 0 -40%;}
-  .pt-mftitle{ left: 8%; margin-left: 0px; }
+  .pt-next{ margin-left: 0; right: 0%; left: auto; }
+  .pt-prev{ margin-left: 0; left: 0%; }
+  .pt-mftitle{ left: 50%; margin-left: -50%; }
+  .pt-mftitle img { display:block; width:90%; margin:0 auto; }
   .pt-fbtn { left: 8%; margin: -60px 0 0 0; }
   .pt-open-gp, .pt-open-as{ background-size: 95%;  }
 }/* /end media */
