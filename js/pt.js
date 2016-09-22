@@ -356,9 +356,9 @@
       $('#ptRightDown').css({opacity: 1, top: rdTop});
     },
 		initDom: function(obj) {
-      self.adjustBgPicture(obj);
-			var curWinHeight = $(win).height();
 			var self = this;
+			var curWinHeight = $(win).height();
+      self.adjustBgPicture(obj);
 			self.allHeight = 0;
 			self.offsetArr = [];
 			var initTop = '';

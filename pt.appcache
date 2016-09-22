@@ -1,9 +1,8 @@
 CACHE MANIFEST
-# 2016-09-22 v1.5
+# 2016-09-22 v1.6
 
 css/pt.css
 css/v4.main.css
-
 images/pt-body-bg.jpg
 images/pt-video.mp4
 images/pt-music-forest.mp3
@@ -73,14 +72,12 @@ images/v3/head-bottom-line.png
 images/v3/lang_icons.png
 images/v3/x2/logo-small-2x.png
 images/v3/x2/menu-small-2x.png
-
 #images/v3/fonts/*.eot
 #images/v3/fonts/*.woff
 #images/v3/fonts/*.woff2
 #images/v3/fonts/*.svg
 #images/v3/fonts/*.css
 #images/v3/fonts/*.ttf
-
 js/lang/lang-change.js
 js/common.min.js
 js/jquery.easing.min.js
