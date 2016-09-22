@@ -1,8 +1,8 @@
 CACHE MANIFEST
-# 2016-09-22 v1.7
+# 2016-09-22 v1.8
 
-css/pt.css
-css/v4.main.css
+#css/pt.css
+#css/v4.main.css
 images/pt-body-bg.jpg
 images/pt-video.mp4
 images/pt-music-forest.mp3
