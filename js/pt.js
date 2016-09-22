@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-22 11:07
+  Latest modified: 2016-09-22 15:22
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -80,11 +80,11 @@
             offsetY    = 0;
         event = $.event.fix(orgEvent);
         event.type = 'mousewheel';
-        if ( 'detail'      in orgEvent ) { deltaY = orgEvent.detail * -1;      }
-        if ( 'wheelDelta'  in orgEvent ) { deltaY = orgEvent.wheelDelta;       }
-        if ( 'wheelDeltaY' in orgEvent ) { deltaY = orgEvent.wheelDeltaY;      }
-        if ( 'wheelDeltaX' in orgEvent ) { deltaX = orgEvent.wheelDeltaX * -1; }
-        if ( 'axis' in orgEvent && orgEvent.axis === orgEvent.HORIZONTAL_AXIS ) {
+        if ('detail'      in orgEvent){deltaY = orgEvent.detail * -1;}
+        if ('wheelDelta'  in orgEvent){deltaY = orgEvent.wheelDelta;}
+        if ('wheelDeltaY' in orgEvent){deltaY = orgEvent.wheelDeltaY;}
+        if ('wheelDeltaX' in orgEvent){deltaX = orgEvent.wheelDeltaX * -1;}
+        if ('axis' in orgEvent && orgEvent.axis === orgEvent.HORIZONTAL_AXIS ) {
             deltaX = deltaY * -1;
             deltaY = 0;
         }
@@ -149,7 +149,7 @@
 }));
 ;(function(win, doc, $, undefined) {
 	var CMmousewheel = {
-		dMent: $(doc) || $(document),
+		_doc: $(doc) || $(document),
 		pageTimeout: null,
 		initNum: 0,
 		allHeight: 0,
@@ -205,10 +205,9 @@
 			var self = this;
 			var isMousewheel = false;
 			clearTimeout(self.pageTimeout);
-			this.dMent.mousewheel(function(e,delta) {
+			this._doc.mousewheel(function(e,delta) {
 				if(isMousewheel == true) return false;
-                isMousewheel = true;
-				var getDirection = (e.originalEvent.wheelDelta && (e.originalEvent.wheelDelta > 0 ? 1 : -1)) || (e.originalEvent.detail && (e.originalEvent.detail > 0 ? -1 : 1));
+        isMousewheel = true;
 				if(delta > 0){
 					self.mainRun(obj,'up');
 				}else{
@@ -216,7 +215,7 @@
 				}
 				self.pageTimeout = setTimeout(function() {
 					isMousewheel = false;
-				}, 600);
+				}, 1600);
 			});
 			var clickMobj = $('#ptMusicMain .pt-cdobj'); // 3 CD
 			clickMobj.on('click',function(e){
