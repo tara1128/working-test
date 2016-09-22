@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-22 06:58
+  Latest modified: 2016-09-22 10:27
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -438,7 +438,7 @@
     curPageTouch: function(obj, items) {
       var self = this;
       var startX, startY, deltaY;
-      var isMove = false;
+      var touchMoveMinDistance = 50;
       document.addEventListener('touchstart', function(e){
         var touch = e.touches[0];
         startX = touch.pageX;
@@ -450,6 +450,7 @@
         deltaY = touch.pageY - startY;
       }, false);
       document.addEventListener('touchend', function(e){
+        if( Math.abs(deltaY) < touchMoveMinDistance ){ return; }
         if( deltaY < 0 ){ 
           self.mainRun(obj, 'up');
         }else{
