@@ -1,8 +1,15 @@
 CACHE MANIFEST
 # 2016-09-22 v1.0.0
-/css
-/images
-/js
+
+css/pt.css
+css/v4.main.css
+
+images/
+
+js/lang/lang-change.js
+js/common.min.js
+js/jquery.easing.min.js
+js/pt.js
 
 NETWORK:
 
