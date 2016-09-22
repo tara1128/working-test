@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2016-09-22 v1.8
+# 2016-09-22 v2.0
 
 #css/pt.css
 #css/v4.main.css
@@ -84,5 +84,7 @@ js/jquery.easing.min.js
 js/pt.js
 
 NETWORK:
+index.html
+
 
 FALLBACK:
