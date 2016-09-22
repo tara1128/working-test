@@ -1,16 +1,78 @@
 CACHE MANIFEST
-# 2016-09-22 v1.1
+# 2016-09-22 v1.2
 
 css/pt.css
 css/v4.main.css
 
 images/pt-body-bg.png
-images/pt-*.png
-images/pt-*.jpg
-images/pt-*.mp3
-images/pt-*.mp4
-
-images/v3/*.png
+images/pt-video.mp4
+images/pt-music-forest.mp3
+images/pt-music-freeloop.mp3
+images/pt-music-littlestar.mp3
+images/pt-arrows.png
+images/pt-crumb.png
+images/pt-popicon-google.png
+images/pt-bass-guy.png
+images/pt-downicon.png
+images/pt-popular-title.png
+images/pt-best-of-2015.png
+images/pt-drum-guy.png
+images/pt-rightdown-logo.png
+images/pt-big-text.png
+images/pt-drum-kit-guys.png
+images/pt-stadium.png
+images/pt-big-tile.png
+images/pt-facebook-icon.png
+images/pt-stars-around.png
+images/pt-floor-left-light.png
+images/pt-stars-leftstar.png
+images/pt-btn-pause.png
+images/pt-floor-right-light.png
+images/pt-stars-topstar.png
+images/pt-btn-play.png
+images/pt-footer-download-btn.png
+images/pt-stories-title.png
+images/pt-btn-replay.png
+images/pt-story-dialog-play-btn.png
+images/pt-forest-around.png
+images/pt-cd-btn-pause.png
+images/pt-forest-leftleaf.png
+images/pt-story-dialog.png
+images/pt-various-sel-title.png
+images/pt-forest-oneleaf.png
+images/pt-cd-btn-play.png
+images/pt-cd-forest.png
+images/pt-forest-topleaf.png
+images/pt-video-bg.png
+images/pt-cd-freeloop.png
+images/pt-freeloop-around.png
+images/pt-video-coins-1.png
+images/pt-cd-littlestar.png
+images/pt-freeloop-rightmark.png
+images/pt-video-coins-2.png
+images/pt-freeloop-yelmark.png
+images/pt-video-coins-3.png
+images/pt-index-download-btn.png
+images/pt-video-left-guy.png
+images/pt-video-right-guy.png
+images/pt-charts-1.png
+images/pt-charts-2.png
+images/pt-charts-3.png
+images/pt-charts-4.png
+images/pt-charts-5.png
+images/pt-charts-6.png
+images/pt-wind-music-bmg.png
+images/pt-pianist-bgimg.png 
+images/pt-with-cat.png
+images/pt-compete-title.png
+images/pt-pianist-title.png
+images/pt-crown.png
+images/v3/icon.png
+images/v3/logo.png
+images/v3/head-bottom-line.png
+images/v3/lang_icons.png
+images/v3/x2/logo-small-2x.png
+images/v3/x2/menu-small-2x.png
 
 #images/v3/fonts/*.eot
 #images/v3/fonts/*.woff
@@ -18,8 +80,6 @@ images/v3/*.png
 #images/v3/fonts/*.svg
 #images/v3/fonts/*.css
 #images/v3/fonts/*.ttf
-
-images/v3/x2/*.png
 
 js/lang/lang-change.js
 js/common.min.js
