@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-22 15:22
+  Latest modified: 2016-09-22 16:25
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -356,6 +356,7 @@
       $('#ptRightDown').css({opacity: 1, top: rdTop});
     },
 		initDom: function(obj) {
+      self.adjustBgPicture(obj);
 			var curWinHeight = $(win).height();
 			var self = this;
 			self.allHeight = 0;
@@ -382,7 +383,6 @@
 			 		ptVfooter.removeClass('pt-active');
 			 	},obj.animateTime);
 			}
-      self.adjustBgPicture(obj);
 			obj.wrapDiv.css({ width: '100%', position: 'absolute', height: self.allHeight + 'px', top: initTop +'px', overflow: 'overflow'});
 		},
     adjustRightBtns: function(obj) {
