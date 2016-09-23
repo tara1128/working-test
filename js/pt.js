@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-22 16:25
+  Latest modified: 2016-09-23 17:45
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -165,7 +165,7 @@
 				father.clickNext(pageObj);
         father.clickToPlayVideo(pageObj);
 				father.keyEvent(pageObj);
-				father.addMousemove();
+				father.addMousemove(pageObj);
 				$(win).on('resize', function(event) {
           father.adjustRightDown();
           father.adjustRightBtns(pageObj);
@@ -174,11 +174,10 @@
 				});
 			}
 		},
-		addMousemove: function(){
+		addMousemove: function(obj){
 			var ismove = false;
 			var getpageY;
-			var ptMusicMain = $('#ptMusicMain');
-			ptMusicMain.on({
+			obj.musicMain.on({
 				mousedown: function(e){
 					e.preventDefault();
 					ismove = true; 
@@ -186,7 +185,7 @@
 				},
 				mousemove: function(e){
 					var moveHeight = parseInt(($(win).height() / 2) - $(win).height());
-					/* $(this).css({ cursor: 'move'}); */
+					$(this).css({ cursor: 'move'});
 					if(ismove){ 
 						var y = e.pageY - getpageY; 
 						if(y >= 0 || y <= moveHeight){
@@ -215,38 +214,38 @@
 				}
 				self.pageTimeout = setTimeout(function() {
 					isMousewheel = false;
-				}, 1600);
+				}, 1600);// Less time would make Chrome on OS X scroll multi times
 			});
-			var clickMobj = $('#ptMusicMain .pt-cdobj'); // 3 CD
-			clickMobj.on('click',function(e){
+			obj.cdObjects.on('click',function(e){ // 3 CD click events
 				e.preventDefault();
-				var $this = $(this);
-				var index = $this.index();
-        var thisAudio = $this.find('audio').get(0);
+				var thisCD = $(this);
+				var index = thisCD.index();
+        var thisAudio = thisCD.find('audio').get(0);
+        var accessaries = thisCD.find('s.accessary');
         if( typeof thisAudio.canPlayType == 'undefined') {
           return; // when browser does't support audio.
         }
-        if( $this.hasClass('curMusic') ){
-          $this.removeClass('curMusic');
+        if( thisCD.hasClass('curMusic') ){
+          thisCD.removeClass('curMusic');
           thisAudio.pause();
+          accessaries.hide();
         }else{
-          clickMobj.removeClass('curMusic');
-          clickMobj.parent().find('img.pause').hide();
-          clickMobj.parent().find('img.play').show();
-          $this.addClass('curMusic');
+          obj.cdObjects.removeClass('curMusic');
+          thisCD.addClass('curMusic');
           thisAudio.play();
+          accessaries.fadeIn(200);
           for(var i = 0, len = self.cdAudios.length; i < len; i++){
-            if( i != index ){
+            if( i != index ){ // One CD playing, pause the others:
               self.cdAudios[i].pause();
             }
           }
         }
 				if(index == 0){
-					$this.parent().animate({top: '0'}, obj.animateTime);
+					thisCD.parent().animate({top: '0'}, obj.animateTime);
 				}else if(index == 2){
-					$this.parent().animate({top: '-50%'}, obj.animateTime);
+					thisCD.parent().animate({top: '-50%'}, obj.animateTime);
 				}else{
-					$this.parent().animate({top: '-25%'}, obj.animateTime);
+					thisCD.parent().animate({top: '-25%'}, obj.animateTime);
 				}
 			});
 		},
@@ -274,10 +273,19 @@
 				self.initNum--;
 				self.animateTop(obj);
 			}
+      if( self.initNum != 2 ){ // Shut down audios
+        for(var i = 0, len = self.cdAudios.length; i < len; i++){
+          if( typeof self.cdAudios[i].canPlayType != 'undefined' ){
+            self.cdAudios[i].pause();
+          }
+        }
+        obj.cdObjects.removeClass('curMusic');
+      }
+      if( self.initNum != 1 ){ // Shut down videos
+        obj.vdPlayBtn.removeClass('paused').removeClass('replay').addClass('play').fadeIn(200);
+        obj.videoElm.get(0).pause();
+      }
       self.adjustRightDown();
-			if(self.initNum != 2){
-				$('#ptMusicMain .pt-cdobj').removeClass('curMusic');
-			}
 			mainRunClear = setTimeout(function(){
 				obj.pageDiv.removeClass('pt-active');
 				obj.pageDiv.eq(self.initNum).addClass('pt-active');
@@ -414,20 +422,6 @@
 			obj.curPages.on('click', function() {
 				self.initNum = $(this).index() - 1;
 				self.mainRun(obj,'down');
-        if( self.initNum != 2 ){ // Shut down audios
-          for(var i = 0, len = self.cdAudios.length; i < len; i++){
-            if( typeof self.cdAudios[i].canPlayType == 'undefined' ){
-              return;
-            }else{
-              self.cdAudios[i].pause();
-            }
-          }
-				  $('#ptMusicMain .pt-cdobj').removeClass('curMusic');
-        }
-        if( self.initNum != 1 ){ // Shut down videos
-          playbtn.removeClass('paused').removeClass('replay').addClass('play').fadeIn(200);
-          vdDom.pause();
-        }
 			});
 		},
     curPageTouch: function(obj, items) {
@@ -698,6 +692,8 @@
     vdPlayBtn: $('#vdPlayBtn'),
     videoElm: $('#Video'),
     vdBgImg: $('#vdBgImg'),
+    musicMain: $('#ptMusicMain'),
+    cdObjects: $('.pt-cdobj'),
 		curPagesClassName: 'cur-pages',
     publicHeader: $('#header')
 	}
@@ -714,6 +710,5 @@
     popClsBtn.on('click', function(){
       $('.pop-elements').remove();
     });
-
 	});
 })(jQuery);

@@ -109,81 +109,86 @@ var startTime = new Date().getTime();
         <s class="btn-body"></s>
         <s class="btn-face"></s>
       </a>
-    </div>
+    </div><!-- pt content -->
 
     <div class="pt-content" id="switch-re">
-      <span class="pt-mbtitle"><img src="images/pt-popular-title.png" alt="The Most Popular Musical Game" /></span>
-      <p class="pt-mbp">Piano Tiles 2 has 600 million players. This world-popular game is now having its biggest update! New pop songs added, with multi-instrumental accompaniment feature. More fun in the music and fantastic experience for you.<br /><br />Tap on the black tiles while listening to music. Avoid the white ones! Hurry now! Have a grand festival day with classic and pop music. Compete with your friends and speed up your fingers!</p>
-      <div class="pt-mbvideo">
-            <div class="pt-game-img">
-              <img class="video-bg-img" id="vdBgImg" src="images/pt-video-bg.png" />
-              <div class="pt-video-wrap" id="vdWrap">
-                <a href="javascript:;" class="pt-play-video play" id="vdPlayBtn"></a>
-                <video id="Video" preload="load" width="406" height="720">
-                  <source src="images/pt-video.mp4" type="video/mp4">
-                </video>
-              </div>
-            </div>
-            <span class="pt-ms-ia"><img src="images/pt-video-left-guy.png" /></span>
-            <span class="pt-ms-ib"><img src="images/pt-video-right-guy.png" /></span>
-        </div>
-        <div class="pt-game-score" id="ptGameScore">
-          <i class="csa"><img src="images/pt-video-coins-1.png" /></i>
-          <i class="csb"><img src="images/pt-video-coins-2.png" /></i>
-          <i class="csc"><img src="images/pt-video-coins-3.png" /></i>
-        </div>
-        <span class="pt-gp-img"><img src="images/pt-best-of-2015.png" /></span>
-    </div>
+      <span class="pt-pulr-title">
+        <img src="images/pt-popular-title.png" alt="The Most Popular Musical Game" />
+      </span>
+      <p class="pt-pulr-intro">Piano Tiles 2 has 600 million players. This world-popular game is now having its biggest update! New pop songs added, with multi-instrumental accompaniment feature. More fun in the music and fantastic experience for you.<br /><br />Tap on the black tiles while listening to music. Avoid the white ones! Hurry now! Have a grand festival day with classic and pop music. Compete with your friends and speed up your fingers!</p>
+      <div class="pt-pulr-video">
+        <div class="pt-vd-box">
+          <img class="pt-video-bg-img" id="vdBgImg" src="images/pt-video-bg.png" />
+          <div class="pt-video-wrap" id="vdWrap">
+            <a href="javascript:;" class="pt-video-btn play" id="vdPlayBtn"></a>
+            <video id="Video" preload="load" width="406" height="720">
+              <source src="images/pt-video.mp4" type="video/mp4">
+            </video>
+          </div><!-- video wrap -->
+        </div><!-- vd box -->
+        <span class="pt-vd-leftguy"><img src="images/pt-video-left-guy.png" /></span>
+        <span class="pt-vd-rightguy"><img src="images/pt-video-right-guy.png" /></span>
+      </div><!-- pulr video -->
+      <div class="pt-pulr-coins" id="ptGameScore">
+        <i class="csa"><img src="images/pt-video-coins-1.png" /></i>
+        <i class="csb"><img src="images/pt-video-coins-2.png" /></i>
+        <i class="csc"><img src="images/pt-video-coins-3.png" /></i>
+      </div>
+      <span class="pt-pulr-honor"><img src="images/pt-best-of-2015.png" /></span>
+    </div><!-- pt content -->
 
     <div class="pt-content" id="switch-me">
-    	<span class="pt-mctitle">
+    	<span class="pt-music-title">
         <img src="images/pt-various-sel-title.png" alt="Various Selections Of Music" />
       </span>
-      <p class="pt-mcp">Piano Tiles 2 has added up more pop songs alongside the classical pieces. Sound quality was greatly-improved to make music more authentic. Specially-designed sound and visual effects contribute to the gaming experience of playing piano. Try out our game by listening to the song samples we prepared for you now!</p>
-        <span class="pt-bmg-img"><em>Cooperate with</em><i><img src="images/pt-wind-music-bmg.png" /></i></span>
-        <div class="pt-music">
-            <div class="pt-music-main" id="ptMusicMain">
-                <div class="pt-music-obja pt-cdobj clearfix">
-                  <img class="pt-cdpic" src="images/pt-cd-freeloop.png" />
-                  <div class="pt-cdbtn"></div>
-                  <audio src="images/pt-music-freeloop.mp3"></audio>
-                  <s class="accessary frlp"></s>
-                  <s class="accessary yelmark"></s>
-                  <s class="accessary rightmark"></s>
-                </div>
-                <div class="pt-music-objb pt-cdobj clearfix">
-                  <img class="pt-cdpic" src="images/pt-cd-littlestar.png" />
-                  <div class="pt-cdbtn"></div>
-                  <audio src="images/pt-music-littlestar.mp3"></audio>
-                  <s class="accessary litstr"></s>
-                  <s class="accessary leftstr"></s>
-                  <s class="accessary topstr"></s>
-                </div>
-                <div class="pt-music-objc pt-cdobj clearfix">
-                  <img class="pt-cdpic" src="images/pt-cd-forest.png" />
-                  <div class="pt-cdbtn"></div>
-                  <audio src="images/pt-music-forest.mp3"></audio>
-                  <s class="accessary elves"></s>
-                  <s class="accessary oneleaf"></s>
-                  <s class="accessary leftleaf"></s>
-                  <s class="accessary topleaf"></s>
-                </div>
-            </div>
-        </div>
-    </div>
+      <p class="pt-music-intro">Piano Tiles 2 has added up more pop songs alongside the classical pieces. Sound quality was greatly-improved to make music more authentic. Specially-designed sound and visual effects contribute to the gaming experience of playing piano. Try out our game by listening to the song samples we prepared for you now!</p>
+      <span class="pt-music-bmg">
+        <em>Cooperate with</em>
+        <i><img src="images/pt-wind-music-bmg.png" /></i>
+      </span>
+      <div class="pt-music-playfield">
+        <div class="pt-music-main" id="ptMusicMain">
+          <div class="pt-music-obja pt-cdobj clearfix">
+            <img class="pt-cdpic" src="images/pt-cd-freeloop.png" />
+            <div class="pt-cdbtn"></div>
+            <audio src="images/pt-music-freeloop.mp3"></audio>
+            <s class="accessary frlp"></s>
+            <s class="accessary yelmark"></s>
+            <s class="accessary rightmark"></s>
+          </div>
+          <div class="pt-music-objb pt-cdobj clearfix">
+            <img class="pt-cdpic" src="images/pt-cd-littlestar.png" />
+            <div class="pt-cdbtn"></div>
+            <audio src="images/pt-music-littlestar.mp3"></audio>
+            <s class="accessary litstr"></s>
+            <s class="accessary leftstr"></s>
+            <s class="accessary topstr"></s>
+          </div>
+          <div class="pt-music-objc pt-cdobj clearfix">
+            <img class="pt-cdpic" src="images/pt-cd-forest.png" />
+            <div class="pt-cdbtn"></div>
+            <audio src="images/pt-music-forest.mp3"></audio>
+            <s class="accessary elves"></s>
+            <s class="accessary oneleaf"></s>
+            <s class="accessary leftleaf"></s>
+            <s class="accessary topleaf"></s>
+          </div>
+        </div><!-- music main -->
+      </div><!-- play field -->
+    </div><!-- pt content -->
 
     <div class="pt-content" id="switch-fa">
     	<div class="pt-comp-title">
         <img src="images/pt-compete-title.png" alt="Compete with Friends and Global Players" />
       </div>
     	<p class="pt-comp-intro">Log in with Facebook and share data on multiple devices. You can beat your friends! </p>
-    	<a class="pt-mdia vmddelay" href="javascript:;" id="ptOpenFacebook"><img src="images/pt-facebook-icon.png" /></a>
+    	<a class="pt-fb-icon"><img src="images/pt-facebook-icon.png" /></a>
     	<ul class="pt-comp-list clearfix" id="ptbList">
-        <li class="mdsa"><img src="images/pt-charts-1.png" /></li>
-        <li class="mdsb"><img src="images/pt-charts-2.png" /></li>
-        <li class="mdsc"><img src="images/pt-charts-3.png" /></li>
-        <li class="mdsd"><img src="images/pt-charts-4.png" /></li>
-        <li class="mdse"><img src="images/pt-charts-5.png" /></li>
+        <li class="comp-1"><img src="images/pt-charts-1.png" /></li>
+        <li class="comp-2"><img src="images/pt-charts-2.png" /></li>
+        <li class="comp-3"><img src="images/pt-charts-3.png" /></li>
+        <li class="comp-4"><img src="images/pt-charts-4.png" /></li>
+        <li class="comp-5"><img src="images/pt-charts-5.png" /></li>
     	</ul>
     </div>
 

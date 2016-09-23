@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-23 14:29
+  Latest modified: 2016-09-23 18:00
 */
 
 /* main */
@@ -394,82 +394,179 @@
   text-align: center;
   opacity: 0;
 }
-.pt-comp-list li.mdsa{ top: 90px; left: 0; z-index: 9; }
-.pt-comp-list li.mdsb{ width: 90%; left: 5%; top: 150px; z-index: 8; }
-.pt-comp-list li.mdsc{ width: 80%; left: 10%; top: 200px; z-index: 7; }
-.pt-comp-list li.mdsd{ width: 70%; left: 15%; top: 250px; z-index: 6; }
-.pt-comp-list li.mdse{ width: 60%; left: 20%; top: 300px; z-index: 5; }
-.pt-comp-list li img{ width: 100%; max-width: 686px; }
-.pt-mdia{ width: 120px; height: 120px; position: absolute; z-index: 6; top: 50%; left: 50%; margin: -110px 0 0 180px; opacity: 0; }
-.pt-mbtitle,
-.pt-mbp,
-.pt-mbvideo,
-.pt-play-video,
-.pt-game-score,
-.pt-gp-img{ display: none; position: absolute; z-index: 4; top: 50%; left: 50%; }
-.pt-mbtitle{ display: none; width: 447px; height: 132px; margin: -340px 0 0 -500px; }
-.pt-mbp{ width: 454px; line-height: 24px; margin: -180px 0 0 -500px; color: #fff; font-size: 16px; }
-.pt-mbvideo{ width: 544px; height: 845px; margin: -422px 0 0 0; }
-.pt-play-video{ display: block; width: 120px; height: 120px; margin: -60px 0 0 -60px; cursor: pointer; }
-.pt-play-video.play   { background: url(../images/pt-btn-play.png) no-repeat; }
-.pt-play-video.paused { background: url(../images/pt-btn-pause.png) no-repeat; }
-.pt-play-video.replay { background: url(../images/pt-btn-replay.png) no-repeat; }
-.pt-game-score{ display: none; width: 306px; height: 87px; margin: 50px 0 0 -500px; }
-.pt-game-score i{ width: 87px; height: 87px; padding-right: 10px; }
-.pt-game-score i img{ opacity: 0; *opacity: 1; opacity: 1\0; }
-.pt-gp-img{ display: none; width:147px; height: 50px; margin: 210px 0 0 -500px; }
-.pt-ms-ia,.pt-ms-ib{ display: block; position: absolute; z-index: 5; }
-.pt-mbtitle,
-.pt-mbp,
-.pt-game-score,
-.pt-gp-img,
-.pt-ms-ia,
-.pt-ms-ib {
+.pt-comp-list li.comp-1 {
+  width: 100%;
+  top: 90px;
+  left: 0;
+  z-index: 9;
+}
+.pt-comp-list li.comp-2 {
+  width: 90%;
+  left: 5%;
+  top: 150px;
+  z-index: 8;
+}
+.pt-comp-list li.comp-3 {
+  width: 80%;
+  left: 10%;
+  top: 200px;
+  z-index: 7;
+}
+.pt-comp-list li.comp-4 {
+  width: 70%;
+  left: 15%;
+  top: 250px;
+  z-index: 6;
+}
+.pt-comp-list li.comp-5 {
+  width: 60%;
+  left: 20%;
+  top: 300px;
+  z-index: 5;
+}
+.pt-comp-list li img {
+  width: 100%;
+  max-width: 686px;
+}
+.pt-fb-icon {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  margin: -110px 0 0 180px;
+  opacity: 0;
+}
+
+
+.pt-pulr-title,
+.pt-pulr-intro,
+.pt-pulr-video,
+.pt-video-btn,
+.pt-pulr-coins,
+.pt-pulr-honor{ display: none; position: absolute; z-index: 4; top: 50%; left: 50%; }
+.pt-pulr-title{ display: none; width: 447px; height: 132px; margin: -340px 0 0 -500px; }
+.pt-pulr-intro{ width: 454px; line-height: 24px; margin: -180px 0 0 -500px; color: #fff; font-size: 16px; }
+.pt-pulr-video{ width: 544px; height: 845px; margin: -422px 0 0 0; }
+.pt-video-btn{ display: block; width: 120px; height: 120px; margin: -60px 0 0 -60px; cursor: pointer; }
+.pt-video-btn.play   { background: url(../images/pt-btn-play.png) no-repeat; }
+.pt-video-btn.paused { background: url(../images/pt-btn-pause.png) no-repeat; }
+.pt-video-btn.replay { background: url(../images/pt-btn-replay.png) no-repeat; }
+.pt-pulr-coins{ display: none; width: 306px; height: 87px; margin: 50px 0 0 -500px; }
+.pt-pulr-coins i{ width: 87px; height: 87px; padding-right: 10px; }
+.pt-pulr-coins i img{ opacity: 0; *opacity: 1; opacity: 1\0; }
+.pt-pulr-honor{ display: none; width:147px; height: 50px; margin: 210px 0 0 -500px; }
+.pt-vd-leftguy,.pt-vd-rightguy{ display: block; position: absolute; z-index: 5; }
+.pt-pulr-title,
+.pt-pulr-intro,
+.pt-pulr-coins,
+.pt-pulr-honor,
+.pt-vd-leftguy,
+.pt-vd-rightguy {
   -webkit-transition: all .4s ease-in;
   -moz-transition: all .4s ease-in;
   -ms-transition: all .4s ease-in;
   -o-transition: all .4s ease-in;
   transition: all .4s ease-in;
 }
-.pt-ms-ia{ width: 187px; height: 162px; left: -100px; bottom: 50px; }
-.pt-ms-ib{ width: 173px; height: 238px; right: -50px; bottom: 30px; }
+.pt-vd-leftguy{ width: 187px; height: 162px; left: -100px; bottom: 50px; }
+.pt-vd-rightguy{ width: 173px; height: 238px; right: -50px; bottom: 30px; }
 
 /* Specified for video */
-.pt-game-img { position: relative; width: 544px; height: 845px; overflow: hidden; }
-.video-bg-img { display: none; }
+.pt-vd-box { position: relative; width: 544px; height: 845px; overflow: hidden; }
+.pt-video-bg-img { display: none; }
 .pt-video-wrap { margin: 60px auto 0; width: 406px; height: 720px; }
 
-.pt-mctitle,
-.pt-mcp,
-.pt-bmg-img{ display: none; position: absolute; z-index: 5; top: 50%; left: 50%; }
-.pt-mctitle{ width: 465px; height: 132px; margin: -340px 0 0 -500px; }
-.pt-mcp{ width: 454px; line-height: 24px; margin: -180px 0 0 -500px; color: #fff; font-size: 16px; }
-.pt-bmg-img{ width: 147px; height: 50px; margin: 80px 0 0 -500px; }
-.pt-bmg-img i,
-.pt-bmg-img em{ display: block; }
-.pt-bmg-img em{ padding-bottom: 10px; font-size: 16px; color: #fff; }
-.pt-music{ width: 100%; height: 100%; position: absolute; z-index: 4; top: 0; left: 50%; margin-left: -220px;}
-.pt-music-main{ display: none; width: 100%; height: 150%; position: absolute; z-index: 5; top: -25%; left: 0; }
-.pt-music-obja,
-.pt-music-objb,
-.pt-music-objc{ position: absolute; z-index: 5; left: 50%; cursor: pointer;
+
+
+/* Frame 3 "Me": */
+.pt-music-title, .pt-music-intro, .pt-music-bmg {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+}
+.pt-music-title {
+  margin: -340px 0 0 -500px;
+  width: 465px;
+  height: 132px;
+}
+.pt-music-intro {
+  margin: -180px 0 0 -500px;
+  width: 454px;
+  line-height: 24px;
+  color: #fff;
+  font-size: 16px;
+}
+.pt-music-bmg {
+  margin: 80px 0 0 -500px;
+  width: 147px;
+  height: 50px;
+}
+.pt-music-bmg i, .pt-music-bmg em {
+  display: block;
+}
+.pt-music-bmg em {
+  padding-bottom: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+.pt-music-playfield {
+  margin-left: -220px;
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+}
+.pt-music-main {
+  display: none;
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  z-index: 5;
+  top: -25%;
+  left: 0;
+}
+.pt-cdobj {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  cursor: pointer;
   -webkit-transition: all .4s ease-in;
   -moz-transition: all .4s ease-in;
   -ms-transition: all .4s ease-in;
   -o-transition: all .4s ease-in;
   transition: all .4s ease-in;
 }
-.pt-music-obja img,
-.pt-music-objb img,
-.pt-music-objc img{ width: 100%; vertical-align: top; }
-.pt-music-obja{ width: 32%; top: 0; margin-left: -30%; }
-.pt-music-objb{ width: 32%; top: 50%; margin: -15% 0 0 -38%; }
-.pt-music-objc{ width: 32%; bottom: 0; margin-left: -60%; }
-
+.pt-cdobj img {
+  width: 100%;
+  vertical-align: top;
+}
+.pt-music-obja {
+  width: 32%;
+  top: 0;
+  margin-left: -30%;
+}
+.pt-music-objb {
+  width: 32%;
+  top: 50%;
+  margin: -15% 0 0 -38%;
+}
+.pt-music-objc {
+  width: 32%;
+  bottom: 0;
+  margin-left: -60%;
+}
 /* Accessaries around the CD: */
-.pt-music-obja s,
-.pt-music-objb s,
-.pt-music-objc s{position:absolute;text-decoration:none;}
+.pt-cdobj s.accessary {
+  position: absolute;
+  text-decoration: none;
+  display: none;
+}
 .accessary.litstr{
   right:0;
   bottom:-85px;
@@ -562,7 +659,14 @@
 
 
 /* Stage elements in the fifth slide: */
-.players-bg-img{ display:none; width:100%; position:absolute; z-index:2; bottom:0; left:0; }
+.players-bg-img {
+  display: none;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+}
 .pt-stage-elements{ display:none; position:absolute; z-index:7; top:48%; left:50%;
   -webkit-transition: all ease-in .4s;
   -moz-transition: all ease-in .4s;
@@ -580,8 +684,8 @@
 /* hover */
 .pt-prev:hover,
 .pt-next:hover,
-.pt-play-video:hover,
-.pt-mdia:hover,
+.pt-video-btn:hover,
+.pt-fb-icon:hover,
 .pt-players-ia:hover{ opacity: .8; filter:alpha(opacity=80); }
 /* right down */
 .pt-right-down{ display: block; width: 92px; height: 148px; position: fixed; _position: absolute; z-index: 9; top: -160px; right: 30px; opacity: 0; filter:alpha(opacity=0);
@@ -676,14 +780,14 @@
 .pt-active .pt-comp-title,
 .pt-active .pt-comp-intro,
 .pt-active .pt-stories-intro,
-.pt-active .pt-mbtitle,
-.pt-active .pt-mbp,
-.pt-active .pt-game-score,
-.pt-active .pt-gp-img,
-.pt-active .pt-mctitle,
-.pt-active .pt-mcp,
-.pt-active .pt-bmg-img,
-.pt-active .pt-mbvideo,
+.pt-active .pt-pulr-title,
+.pt-active .pt-pulr-intro,
+.pt-active .pt-pulr-coins,
+.pt-active .pt-pulr-honor,
+.pt-active .pt-music-title,
+.pt-active .pt-music-intro,
+.pt-active .pt-music-bmg,
+.pt-active .pt-pulr-video,
 .pt-active .pt-meimgd,
 .pt-active .pt-meimge{
   display: block;
@@ -725,35 +829,35 @@
 @-o-keyframes mdab      { from { opacity: 0; -o-transform: translate3d(0,50px,0); } to { opacity: 1; -o-transform: translate3d(0,0,0); } }
 @keyframes mdab         { from { opacity: 0; transform: translate3d(0,50px,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
 
-.pt-active .pt-comp-list li.mdsa{
+.pt-active .pt-comp-list li.comp-1 {
   -webkit-animation: animMdsa .3s linear 1.5s forwards;
   -moz-animation: animMdsa .3s linear 1.5s forwards;
   -ms-animation: animMdsa .3s linear 1.5s forwards;
   -o-animation: animMdsa .3s linear 1.5s forwards;
   animation: animMdsa .3s linear 1.5s forwards;
 }
-.pt-active .pt-comp-list li.mdsb{
+.pt-active .pt-comp-list li.comp-2 {
   -webkit-animation: animMdsb .3s linear 1.2s forwards;
   -moz-animation: animMdsb .3s linear 1.2s forwards;
   -ms-animation: animMdsb .3s linear 1.2s forwards;
   -o-animation: animMdsb .3s linear 1.2s forwards;
   animation: animMdsb .3s linear 1.2s forwards;
 }
-.pt-active .pt-comp-list li.mdsc{
+.pt-active .pt-comp-list li.comp-3 {
   -webkit-animation: animMdsc .3s linear .9s forwards;
   -moz-animation: animMdsc .3s linear .9s forwards;
   -ms-animation: animMdsc .3s linear .9s forwards;
   -o-animation: animMdsc .3s linear .9s forwards;
   animation: animMdsc .3s linear .9s forwards;
 }
-.pt-active .pt-comp-list li.mdsd{
+.pt-active .pt-comp-list li.comp-4 {
   -webkit-animation: animMdsd .3s linear .6s forwards;
   -moz-animation: animMdsd .3s linear .6s forwards;
   -ms-animation: animMdsd .3s linear .6s forwards;
   -o-animation: animMdsd .3s linear .6s forwards;
   animation: animMdsd .3s linear .6s forwards;
 }
-.pt-active .pt-comp-list li.mdse{
+.pt-active .pt-comp-list li.comp-5 {
   -webkit-animation: animMdse .3s linear .3s forwards;
   -moz-animation: animMdse .3s linear .3s forwards;
   -ms-animation: animMdse .3s linear .3s forwards;
@@ -791,19 +895,12 @@
 @keyframes animMdsa { from {opacity:0; top:90px;} to {opacity:1; top:0px;} }
 
 
-.pt-active .pt-mdia.vmddelay{
-  -webkit-animation-delay: 1.8s;
-  -moz-animation-delay: 1.8s;
-  -ms-animation-delay: 1.8s;
-  -o-animation-delay: 1.8s;
-  animation-delay: 1.8s;
-}
-.pt-active .pt-mdia{
-  -webkit-animation: showFB 1.2s forwards;
-  -moz-animation: showFB 1.2s forwards;
-  -ms-animation: showFB 1.2s forwards;
-  -o-animation: showFB 1.2s forwards;
-  animation: showFB 1.2s forwards;
+.pt-active .pt-fb-icon{
+  -webkit-animation: showFB 1.2s forwards 1.8s;
+  -moz-animation: showFB 1.2s forwards 1.8s;
+  -ms-animation: showFB 1.2s forwards 1.8s;
+  -o-animation: showFB 1.2s forwards 1.8s;
+  animation: showFB 1.2s forwards 1.8s;
 }
 @-webkit-keyframes showFB{ from { opacity: 0; -webkit-transform-origin: 50% 50%; -webkit-transform: rotate3d(1,0,0,90deg); } to { opacity: 1; -webkit-transform: rotate3d(1,0,0,0deg); } }
 @-moz-keyframes showFB{ from { opacity: 0; -moz-transform-origin: 50% 50%; -moz-transform: rotate3d(1,0,0,90deg); } to { opacity: 1; -moz-transform: rotate3d(1,0,0,0deg); } }
@@ -832,28 +929,28 @@
 @-o-keyframes scalea      { from { opacity: 0; -o-transform:scale3d(0,0,0); } to { opacity: 1; -o-transform:scale3d(1,1,1); } }
 @keyframes scalea         { from { opacity: 0; transform:scale3d(0,0,0); } to { opacity: 1; transform:scale3d(1,1,1); } }
 
-.pt-active .pt-game-score i.csa img{
+.pt-active .pt-pulr-coins i.csa img{
   -webkit-animation-delay: .4s;
   -moz-animation-delay: .4s;
   -ms-animation-delay: .4s;
   -o-animation-delay: .4s;
   animation-delay: .4s;
 }
-.pt-active .pt-game-score i.csb img{
+.pt-active .pt-pulr-coins i.csb img{
   -webkit-animation-delay: .6s;
   -moz-animation-delay: .6s;
   -ms-animation-delay: .6s;
   -o-animation-delay: .6s;
   animation-delay: .6s;
 }
-.pt-active .pt-game-score i.csc img{
+.pt-active .pt-pulr-coins i.csc img{
   -webkit-animation-delay: .8s;
   -moz-animation-delay: .8s;
   -ms-animation-delay: .8s;
   -o-animation-delay: .8s;
   animation-delay: .8s;
 }
-.pt-active .pt-game-score i img {
+.pt-active .pt-pulr-coins i img {
   -webkit-animation: csImgAnimate .4s forwards;
   -moz-animation: csImgAnimate .4s forwards;
   -ms-animation: csImgAnimate .4s forwards;
@@ -872,16 +969,11 @@
 .pt-music-objb.curMusic .pt-cdpic,
 .pt-music-objc.curMusic .pt-cdbtn,
 .pt-music-objc.curMusic .pt-cdpic {
-  -webkit-animation: curMusic 60s both;
-  -moz-animation: curMusic 60s both;
-  -ms-animation: curMusic 60s both;
-  -o-animation: curMusic 60s both;
-  animation: curMusic 60s both;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+  -webkit-animation: curMusic 60s both infinite;
+  -moz-animation: curMusic 60s both infinite;
+  -ms-animation: curMusic 60s both infinite;
+  -o-animation: curMusic 60s both infinite;
+  animation: curMusic 60s both infinite;
 }
 @-webkit-keyframes curMusic {
   from { -webkit-transform: rotate(0deg); } to { -webkit-transform: rotate(360deg); }
@@ -925,18 +1017,18 @@
   .pt-stage-elements{ top: 30%; }
 }/* /end media */
 @media (min-width: 900px) and (max-width: 1099px) {
-  .pt-ms-ia{ left: 10px; }
-  .pt-ms-ib{ right: 40px; }
-  .pt-mbtitle { margin: -340px 0 0 -428px; }
-  .pt-mbp { margin: -180px 0 0 -428px; }
-  .pt-game-score { margin: 50px 0 0 -420px; }
-  .pt-gp-img{ margin: 210px 0 0 -420px; }
+  .pt-vd-leftguy{ left: 10px; }
+  .pt-vd-rightguy{ right: 40px; }
+  .pt-pulr-title { margin: -340px 0 0 -428px; }
+  .pt-pulr-intro { margin: -180px 0 0 -428px; }
+  .pt-pulr-coins { margin: 50px 0 0 -420px; }
+  .pt-pulr-honor{ margin: 210px 0 0 -420px; }
   .pt-music-obja{ width: 38%; top: 5%; }
   .pt-music-objb{ width: 38%; }
   .pt-music-objc{ width: 38%; bottom: 5%; }
-  .pt-mctitle{ margin: -340px 0 0 -400px; }
-  .pt-mcp{ margin: -180px 0 0 -400px; }
-  .pt-bmg-img{ margin: 50px 0 0 -400px; }
+  .pt-music-title{ margin: -340px 0 0 -400px; }
+  .pt-music-intro{ margin: -180px 0 0 -400px; }
+  .pt-music-bmg{ margin: 50px 0 0 -400px; }
   .pt-players-wrap{ width: 300px; height: 360px; margin: -180px 0 0 -150px; }
   .pt-next{ margin-left: 30%; }
   .pt-prev{ margin-left: -37%; }
@@ -944,79 +1036,79 @@
   .pt-foot-download-btn { left: 8%; margin: -60px 0 0 0; }
 }/* /end media */
 @media (min-width: 830px) and (max-width: 899px) {
-  .pt-ms-ia{ left: -20px; }
-  .pt-ms-ib{ right: 100px; }
-  .pt-mbtitle { margin: -340px 0 0 -408px; }
-  .pt-mbp { margin: -180px 0 0 -408px; }
-  .pt-game-score { margin: 50px 0 0 -400px; }
-  .pt-gp-img { margin: 210px 0 0 -400px; }
+  .pt-vd-leftguy{ left: -20px; }
+  .pt-vd-rightguy{ right: 100px; }
+  .pt-pulr-title { margin: -340px 0 0 -408px; }
+  .pt-pulr-intro { margin: -180px 0 0 -408px; }
+  .pt-pulr-coins { margin: 50px 0 0 -400px; }
+  .pt-pulr-honor { margin: 210px 0 0 -400px; }
   .pt-music-obja{ width: 40%; top: 5%; }
   .pt-music-objb{ width: 40%; }
   .pt-music-objc{ width: 40%; bottom: 5%; }
-  .pt-mctitle{ margin: -340px 0 0 -400px; }
-  .pt-mcp{ margin: -180px 0 0 -400px; }
-  .pt-bmg-img{ margin: 50px 0 0 -400px; }
+  .pt-music-title{ margin: -340px 0 0 -400px; }
+  .pt-music-intro{ margin: -180px 0 0 -400px; }
+  .pt-music-bmg{ margin: 50px 0 0 -400px; }
   .pt-foot-title{ left: 8%; margin-left: 0px; }
   .pt-foot-download-btn { left: 8%; margin: -60px 0 0 0; }
 }/* /end media */
 @media (min-width: 460px) and (max-width: 829px) {
-  .pt-mbtitle { top: 0; margin: 80px 0 0 -224px; }
-  .pt-mbtitle img { display: block; width: 90%; margin: 0 auto; }
-  .pt-mbp { top: 0; width: 402px; margin: 250px 0 0 -201px; }
-  .pt-gp-img { top: auto; bottom: 80px; margin: 0 0 0 -196px; }
-  .pt-mbvideo{ margin: -125px 0 0 -272px; z-index: 1; }
-  .pt-play-video{ margin: -155px 0 0 -47px; }
+  .pt-pulr-title { top: 0; margin: 80px 0 0 -224px; }
+  .pt-pulr-title img { display: block; width: 90%; margin: 0 auto; }
+  .pt-pulr-intro { top: 0; width: 402px; margin: 250px 0 0 -201px; }
+  .pt-pulr-honor { top: auto; bottom: 80px; margin: 0 0 0 -196px; }
+  .pt-pulr-video{ margin: -125px 0 0 -272px; z-index: 1; }
+  .pt-video-btn{ margin: -155px 0 0 -47px; }
   .pt-music-obja{ width: 42%; top: 5%; }
   .pt-music-objb{ width: 42%; }
   .pt-music-objc{ width: 42%; bottom: 5%; }
-  .pt-mctitle{ top: 0; margin: 80px 0 0 -233px; }
-  .pt-mctitle img { display: block; width: 90%; margin: 0 auto; }
-  .pt-mcp{ top:0; width:408px; margin:250px 0 0 -205px; }
-  .pt-bmg-img{ top: auto; bottom: 70px; margin: 0 0 0 -205px; }
+  .pt-music-title{ top: 0; margin: 80px 0 0 -233px; }
+  .pt-music-title img { display: block; width: 90%; margin: 0 auto; }
+  .pt-music-intro{ top:0; width:408px; margin:250px 0 0 -205px; }
+  .pt-music-bmg{ top: auto; bottom: 70px; margin: 0 0 0 -205px; }
   .pt-comp-title{ top: 0; left: 50%; margin: 80px 0 0 -50%; width: 100%; }
   .pt-comp-title img { display: block; width: 80%; margin: 0 auto; }
   .pt-comp-intro{ width: 70%; top: 0; left: 50%; margin: 290px 0 0 -35%; }
   .pt-comp-list{ width: 100%; height: auto; top: 50%; margin: -80px 0 0 -50%; }
   .pt-comp-list li{ width: 100%; height: auto; }
-  .pt-mdia{ top: 50%; left: auto; right: 45px; margin: -110px 0 0 0; }
-  .pt-mdia img { width: 80%; }
+  .pt-fb-icon{ top: 50%; left: auto; right: 45px; margin: -110px 0 0 0; }
+  .pt-fb-icon img { width: 80%; }
   .pt-stories-title{ top: 0; left: 50%; margin: 80px 0 0 -50%; }
   .pt-stories-title img { display: block; width: 80%; margin: 0 auto; }
   .pt-stories-intro{ width: 80%; top: 0; left: 50%; margin: 200px 0 0 -40%;}
   .pt-foot-title{ left: 8%; margin-left: 0px; }
   .pt-foot-download-btn { left: 8%; margin: -60px 0 0 0; }
-  .pt-right-down, .pt-ms-ia, .pt-ms-ib, .pt-game-img, .pt-play-video, .pt-game-score i img { display: none; }
+  .pt-right-down, .pt-vd-leftguy, .pt-vd-rightguy, .pt-vd-box, .pt-video-btn, .pt-pulr-coins i img { display: none; }
 }/* /end media */
 @media screen and (max-width: 459px) {
-  .pt-mbtitle { top: 0; width: 100%; margin: 80px 0 0 -50%; }
-  .pt-mbtitle img { display: block; width: 80%; margin: 0 auto; }
-  .pt-mbp { top: 0; margin: 220px 0 0 -40%; width: 80%; }
-  .pt-gp-img,
-  .pt-game-img,
-  .pt-play-video,
-  .pt-ms-ia,
-  .pt-ms-ib,
-  .pt-game-score i img,
+  .pt-pulr-title { top: 0; width: 100%; margin: 80px 0 0 -50%; }
+  .pt-pulr-title img { display: block; width: 80%; margin: 0 auto; }
+  .pt-pulr-intro { top: 0; margin: 220px 0 0 -40%; width: 80%; }
+  .pt-pulr-honor,
+  .pt-vd-box,
+  .pt-video-btn,
+  .pt-vd-leftguy,
+  .pt-vd-rightguy,
+  .pt-pulr-coins i img,
   .pt-music .accessary,
   .pt-right-down,
-  .pt-bmg-img,
+  .pt-music-bmg,
   .pt-comp-intro,
   .pt-stories-intro,
   #pt-cur{display: none!important;}
-  .pt-mbvideo{ margin: -125px 0 0 -272px; z-index: 1; }
-  .pt-play-video{ margin: -148px 0 0 -47px; }
+  .pt-pulr-video{ margin: -125px 0 0 -272px; z-index: 1; }
+  .pt-video-btn{ margin: -148px 0 0 -47px; }
   .pt-music-obja{ width: 60%; top: 2%; }
   .pt-music-objb{ width: 60%; }
   .pt-music-objc{ width: 60%; bottom: 8%; }
-  .pt-mctitle{ width: 100%; top: 0; margin: 80px 0 0 -50%; }
-  .pt-mctitle img { display: block; width: 90%; margin: 0 auto; }
-  .pt-mcp{ width: 90%; top: 0; margin:225px 0 0 -45%; }
+  .pt-music-title{ width: 100%; top: 0; margin: 80px 0 0 -50%; }
+  .pt-music-title img { display: block; width: 90%; margin: 0 auto; }
+  .pt-music-intro{ width: 90%; top: 0; margin:225px 0 0 -45%; }
   .pt-comp-title{ top: 0; left: 50%; margin: 80px 0 0 -50%; width: 100%; }
   .pt-comp-title img { display: block; width: 80%; margin: 0 auto; }
   .pt-comp-list{ width: 100%; height: auto; top: 50%; margin:-70px 0 0 -50%; }
   .pt-comp-list li{ width: 100%; height: auto; }
-  .pt-mdia{ top: 50%; left: auto; right: 45px; margin: -110px 0 0 0; }
-  .pt-mdia img { width: 80%; }
+  .pt-fb-icon{ top: 50%; left: auto; right: 45px; margin: -110px 0 0 0; }
+  .pt-fb-icon img { width: 80%; }
   .pt-stories-title{ top: 0; left: 50%; margin:90px 0 0 -50%; }
   .pt-stories-title img { display: block; width: 80%; margin: 0 auto; }
   .pt-next{ margin-left: 0; right: 0%; left: auto; }
