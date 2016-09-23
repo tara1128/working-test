@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-23 17:45
+  Latest modified: 2016-09-23 20:20
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -216,27 +216,47 @@
 					isMousewheel = false;
 				}, 1600);// Less time would make Chrome on OS X scroll multi times
 			});
-			obj.cdObjects.on('click',function(e){ // 3 CD click events
+      if( typeof self.cdAudios.item(0).canPlayType == 'undefined') {
+        return; // when browser does't support audio.
+      }
+      var angleInterval = {};
+      var angleContainer = [];
+      var CDObjects = obj.cdObjects;
+      for( var _i = 0; _i < CDObjects.length; _i++ ){ 
+        angleContainer.push({ cdIndex: $(CDObjects[_i]).attr('data'), currentDeg: 0 });//Stored every CD's index and rotate deg.
+        angleInterval[ 'CD_' + _i ] = null;//Object stored every CD's interval.
+      };
+			CDObjects.on('click',function(e){ // 3 CD click events
 				e.preventDefault();
 				var thisCD = $(this);
-				var index = thisCD.index();
+				var index = thisCD.attr('data');
         var thisAudio = thisCD.find('audio').get(0);
         var accessaries = thisCD.find('s.accessary');
-        if( typeof thisAudio.canPlayType == 'undefined') {
-          return; // when browser does't support audio.
-        }
-        if( thisCD.hasClass('curMusic') ){
-          thisCD.removeClass('curMusic');
+        var rotateStuff = thisCD.find('.pt-cd-rotate');
+        // if( thisCD.hasClass('curMusic') ){
+        if( !thisAudio.paused ){
+          // var currentRotateCSS = 'rotate('+ angleContainer[index].currentDeg +'deg)';
+          // rotateStuff.css('transform', currentRotateCSS ).removeClass('playing');
+          rotateStuff.removeClass('playing');
+          clearInterval( angleInterval[ 'CD_' + index ] );
+          // thisCD.removeClass('curMusic');
           thisAudio.pause();
           accessaries.hide();
         }else{
-          obj.cdObjects.removeClass('curMusic');
-          thisCD.addClass('curMusic');
+          // obj.cdObjects.removeClass('curMusic');
+          // thisCD.addClass('curMusic');
+          angleInterval[ 'CD_' + index ] = setInterval(function(){
+            angleContainer[index].currentDeg += 3;
+            rotateStuff.css('transform', 'rotate(' + angleContainer[index].currentDeg + 'deg)').addClass('playing');
+          }, 500); //Rotate 3deg in 500ms
           thisAudio.play();
           accessaries.fadeIn(200);
-          for(var i = 0, len = self.cdAudios.length; i < len; i++){
-            if( i != index ){ // One CD playing, pause the others:
-              self.cdAudios[i].pause();
+          for(var _o = 0; _o < CDObjects.length; _o++ ){
+            if( _o != index ){ // One CD playing, pause the others:
+              clearInterval( angleInterval[ 'CD_' + _o ] );
+              $(CDObjects[_o]).find('audio').get(0).pause();
+              $(CDObjects[_o]).find('s.accessary').fadeOut(200);
+              $(CDObjects[_o]).find('.pt-cd-rotate').css('transform', 'rotate(' + angleContainer[_o].currentDeg + 'deg)').removeClass('playing');
             }
           }
         }

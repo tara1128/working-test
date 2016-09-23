@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-23 18:00
+  Latest modified: 2016-09-23 20:22
 */
 
 /* main */
@@ -535,6 +535,8 @@
   position: absolute;
   z-index: 5;
   left: 50%;
+  width: 566px;
+  height: 566px;
   cursor: pointer;
   -webkit-transition: all .4s ease-in;
   -moz-transition: all .4s ease-in;
@@ -547,17 +549,17 @@
   vertical-align: top;
 }
 .pt-music-obja {
-  width: 32%;
+  /* width: 32%; */
   top: 0;
   margin-left: -30%;
 }
 .pt-music-objb {
-  width: 32%;
+  /* width: 32%; */
   top: 50%;
   margin: -15% 0 0 -38%;
 }
 .pt-music-objc {
-  width: 32%;
+  /* width: 32%; */
   bottom: 0;
   margin-left: -60%;
 }
@@ -645,15 +647,16 @@
   position:absolute;
   left:50%;
   top:50%;
-  margin:-6% 0 0 -5%;
-  width:12%;
-  height:12%;
+  margin: -34px 0 0 -34px;
+  width:68px;
+  height:68px;
   cursor:pointer;
   background-repeat:no-repeat;
   background-image: url(../images/pt-cd-btn-play.png);
-  background-size: cover;
+  /* background-size: cover; */
 }
-.curMusic .pt-cdbtn{
+/* .curMusic .pt-cdbtn{ */
+.pt-cdbtn.playing {
   background-image: url(../images/pt-cd-btn-pause.png);
 }
 
@@ -989,6 +992,11 @@
 }
 @keyframes curMusic {
   from { transform: rotate(0deg); } to { transform: rotate(360deg); }
+}
+
+.pt-cd-rotate {
+  -webkit-transition: transform .5s linear;
+  transition: transform .5s linear;
 }
 
 
