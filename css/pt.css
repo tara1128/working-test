@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-26 11:26
+  Latest modified: 2016-09-26 16:15
 */
 
 /* main */
@@ -105,7 +105,7 @@
   left:0;
   width:100%;
   height:100%;
-  background:url(../images/pt-pianist-bgimg.png) 50% 0 no-repeat;
+  background:url(../images/pt-pianist.png) 50% 0 no-repeat;
   background-size:cover;
 }
 
@@ -535,13 +535,25 @@
   position: absolute;
   z-index: 5;
   left: 50%;
-  width: 566px;
-  height: 566px;
+  width: 570px;
+  height: 570px;
   -webkit-transition: all .4s ease-in;
   -moz-transition: all .4s ease-in;
   -ms-transition: all .4s ease-in;
   -o-transition: all .4s ease-in;
   transition: all .4s ease-in;
+}
+.pt-music-obja {
+  top: 0;
+  margin-left: -30%;
+}
+.pt-music-objb {
+  top: 50%;
+  margin: -15% 0 0 -38%;
+}
+.pt-music-objc {
+  bottom: 0;
+  margin-left: -60%;
 }
 .pt-cd-trigger {
   position: absolute;
@@ -556,21 +568,6 @@
   display: block;
   width: 100%;
   vertical-align: top;
-}
-.pt-music-obja {
-  /* width: 32%; */
-  top: 0;
-  margin-left: -30%;
-}
-.pt-music-objb {
-  /* width: 32%; */
-  top: 50%;
-  margin: -15% 0 0 -38%;
-}
-.pt-music-objc {
-  /* width: 32%; */
-  bottom: 0;
-  margin-left: -60%;
 }
 /* Accessaries around the CD: */
 .pt-cdobj s.accessary {
@@ -652,22 +649,18 @@
 /* Buttons on CD: */
 .pt-cdbtn {
   position:absolute;
-  left:51%;
-  top:50%;
-  margin: -34px 0 0 -34px;
-  width:68px;
-  height:68px;
+  left: 50%;
+  top: 50%;
+  margin: -64px 0 0 -64px;
+  width: 128px;
+  height: 128px;
   cursor:pointer;
   background-repeat:no-repeat;
-  background-image: url(../images/pt-cd-btn-play.png);
-  /* background-size: cover; */
+  background-image: url(../images/pt-cdbtn-play.png);
 }
-/* .curMusic .pt-cdbtn{ */
 .pt-cdbtn.playing {
-  background-image: url(../images/pt-cd-btn-pause.png);
-  left:50%;
+  background-image: url(../images/pt-cdbtn-pause.png);
 }
-
 
 /* Stage elements in the fifth slide: */
 .players-bg-img {
@@ -697,9 +690,23 @@
 .pt-next:hover,
 .pt-video-btn:hover,
 .pt-fb-icon:hover,
-.pt-players-ia:hover{ opacity: .8; filter:alpha(opacity=80); }
-/* right down */
-.pt-right-down{ display: block; width: 92px; height: 148px; position: fixed; _position: absolute; z-index: 9; top: -160px; right: 30px; opacity: 0; filter:alpha(opacity=0);
+.pt-players-ia:hover{
+  opacity: .8;
+  filter: alpha(opacity=80);
+}
+
+/* Button of right down */
+.pt-right-down{
+  display: block;
+  width: 92px;
+  height: 148px;
+  position: fixed;
+  _position: absolute;
+  z-index: 9;
+  top: -160px;
+  right: 30px;
+  opacity: 0;
+  filter: alpha(opacity=0);
   -webkit-transition: all .4s ease;
   -moz-transition: all .4s ease;
   -ms-transition: all .4s ease;
@@ -974,34 +981,6 @@
 @-o-keyframes csImgAnimate { from { opacity: 0; -o-transform: rotateY(80deg); } to { opacity: 1; -o-transform: rotateY(0deg); } }
 @keyframes csImgAnimate { from { opacity: 0; transform: rotateY(80deg); } to { opacity: 1; transform: rotateY(0deg); } }
 
-.pt-music-obja.curMusic .pt-cdbtn,
-.pt-music-obja.curMusic .pt-cdpic,
-.pt-music-objb.curMusic .pt-cdbtn,
-.pt-music-objb.curMusic .pt-cdpic,
-.pt-music-objc.curMusic .pt-cdbtn,
-.pt-music-objc.curMusic .pt-cdpic {
-  -webkit-animation: curMusic 60s both infinite;
-  -moz-animation: curMusic 60s both infinite;
-  -ms-animation: curMusic 60s both infinite;
-  -o-animation: curMusic 60s both infinite;
-  animation: curMusic 60s both infinite;
-}
-@-webkit-keyframes curMusic {
-  from { -webkit-transform: rotate(0deg); } to { -webkit-transform: rotate(360deg); }
-}
-@-moz-keyframes curMusic {
-  from { -moz-transform: rotate(0deg); } to { -moz-transform: rotate(360deg); }
-}
-@-ms-keyframes curMusic {
-  from { -ms-transform: rotate(0deg); } to { -ms-transform: rotate(360deg); }
-}
-@-o-keyframes curMusic {
-  from { -o-transform: rotate(0deg); } to { -o-transform: rotate(360deg); }
-}
-@keyframes curMusic {
-  from { transform: rotate(0deg); } to { transform: rotate(360deg); }
-}
-
 .pt-cd-rotate {
   -webkit-transition: transform .5s linear;
   transition: transform .5s linear;
@@ -1039,9 +1018,9 @@
   .pt-pulr-intro { margin: -180px 0 0 -428px; }
   .pt-pulr-coins { margin: 50px 0 0 -420px; }
   .pt-pulr-honor{ margin: 210px 0 0 -420px; }
-  .pt-music-obja{ width: 38%; top: 5%; }
-  .pt-music-objb{ width: 38%; }
-  .pt-music-objc{ width: 38%; bottom: 5%; }
+  .pt-cdobj {width:500px;height:500px;}
+  .pt-music-obja{ top: 5%; }
+  .pt-music-objc{ bottom: 5%; }
   .pt-music-title{ margin: -340px 0 0 -400px; }
   .pt-music-intro{ margin: -180px 0 0 -400px; }
   .pt-music-bmg{ margin: 50px 0 0 -400px; }
@@ -1058,9 +1037,9 @@
   .pt-pulr-intro { margin: -180px 0 0 -408px; }
   .pt-pulr-coins { margin: 50px 0 0 -400px; }
   .pt-pulr-honor { margin: 210px 0 0 -400px; }
-  .pt-music-obja{ width: 40%; top: 5%; }
-  .pt-music-objb{ width: 40%; }
-  .pt-music-objc{ width: 40%; bottom: 5%; }
+  .pt-cdobj { width: 400px; height: 400px;}
+  .pt-music-obja{ top: 5%; }
+  .pt-music-objc{ bottom: 5%; }
   .pt-music-title{ margin: -340px 0 0 -400px; }
   .pt-music-intro{ margin: -180px 0 0 -400px; }
   .pt-music-bmg{ margin: 50px 0 0 -400px; }
@@ -1074,9 +1053,9 @@
   .pt-pulr-honor { top: auto; bottom: 80px; margin: 0 0 0 -196px; }
   .pt-pulr-video{ margin: -125px 0 0 -272px; z-index: 1; }
   .pt-video-btn{ margin: -155px 0 0 -47px; }
-  .pt-music-obja{ width: 42%; top: 5%; }
-  .pt-music-objb{ width: 42%; }
-  .pt-music-objc{ width: 42%; bottom: 5%; }
+  .pt-cdobj { width: 300px; height: 300px;}
+  .pt-music-obja{ top: 5%; }
+  .pt-music-objc{ bottom: 5%; }
   .pt-music-title{ top: 0; margin: 80px 0 0 -233px; }
   .pt-music-title img { display: block; width: 90%; margin: 0 auto; }
   .pt-music-intro{ top:0; width:408px; margin:250px 0 0 -205px; }
@@ -1113,9 +1092,9 @@
   #pt-cur{display: none!important;}
   .pt-pulr-video{ margin: -125px 0 0 -272px; z-index: 1; }
   .pt-video-btn{ margin: -148px 0 0 -47px; }
-  .pt-music-obja{ width: 60%; top: 2%; }
-  .pt-music-objb{ width: 60%; }
-  .pt-music-objc{ width: 60%; bottom: 8%; }
+  .pt-cdobj { width: 200px; height: 200px;}
+  .pt-music-obja{ top: 2%; }
+  .pt-music-objc{ bottom: 8%; }
   .pt-music-title{ width: 100%; top: 0; margin: 80px 0 0 -50%; }
   .pt-music-title img { display: block; width: 90%; margin: 0 auto; }
   .pt-music-intro{ width: 90%; top: 0; margin:225px 0 0 -45%; }
@@ -1137,7 +1116,6 @@
 @media screen and (min-width: 1599px) {
   .players-bg-img .pt-stage-elements{ top:58%; }
 }/* /end media */
-
 
 /* Popup confirm dialog for PianoTiles */
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; font-size:0; }
