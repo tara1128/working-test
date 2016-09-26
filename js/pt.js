@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-26 14:08
+  Latest modified: 2016-09-26 19:33
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -293,6 +293,7 @@
 		},
 		mainRun: function(obj,isdown) {
 			var self = this;
+      var vdElement = obj.videoElm.get(0);
 			if (isdown == 'down') {
 				if (self.initNum == obj.pageDiv.length) return;
 				self.initNum++;
@@ -307,9 +308,14 @@
           self.pauseCDs(obj, -1);
         }
       }
-      if( self.initNum != 1 ){ // Shut down videos
+      if( self.initNum != 1 && (typeof vdElement.canPlayType != 'undefined') ){ // Shut down videos
         obj.vdPlayBtn.removeClass('paused').removeClass('replay').addClass('play').fadeIn(200);
-        obj.videoElm.get(0).pause();
+        vdElement.pause();
+      }
+      if( self.initNum == 5 ){ // Show footer-wrap
+        obj.publicFooter.addClass('shown');
+      }else{ // Hide footer-wrap
+        obj.publicFooter.removeClass('shown');
       }
       self.adjustRightDown();
 			mainRunClear = setTimeout(function(){
@@ -454,6 +460,7 @@
       var self = this;
       var startX, startY, deltaY;
       var touchMoveMinDistance = 10;
+      if( !document.addEventListener ){ return; }
       document.addEventListener('touchstart', function(e){
         var touch = e.touches[0];
         startX = touch.pageX;
@@ -541,14 +548,14 @@
   if ( canvas.getContext ) {
     var context = canvas.getContext("2d");
   } else {
-    var context = {};
+    return; // When browser doesn't support canvas.
   }
 	var maxWidth = canvas.width;
 	var maxHeight = canvas.height;
 	var colors = ["#fff", "#9db6f9", "#fff", "#9db6f9", "#9db6f9", "#fff", "#9db6f9"];
 	;(function() {
 	    var lastTime = 0;
-	    var vendors = ['webkit', 'moz','ms'];
+	    var vendors = ['webkit', 'moz', 'ms', 'o'];
 	    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
 	        window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
 	        window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || 
@@ -585,6 +592,7 @@
 		this.issize = random(45,130);
 		this.ispeed = random(1,2);
 		this.ispeed2 = random(1,1);
+    this.skewAngle = Math.random().toFixed(2);
 	};
 	cmCanvas.prototype.canvasMain = function(){
 		var self = this;
@@ -611,6 +619,7 @@
 				this.b = true;
 			}
 		}
+    //context.setTransform(1, this.skewAngle, 0, 1, 0, 0);
 		context.fillStyle = this.ballColor.color;
 		context.fillRect(this.vx, this.vy, this.issize,this.issize);
 		context.globalAlpha = this.isopacity / 10;
@@ -721,20 +730,33 @@
     musicMain: $('#ptMusicMain'),
     cdTriggers: $('.cdTrigger'),
 		curPagesClassName: 'cur-pages',
-    publicHeader: $('#header')
+    publicHeader: $('#header'),
+    publicFooter: $('.footerPT')
 	}
 	CMmousewheel.init(pageObj);
   // Click to pop dialog for downloading:
+	var dialogHtml = '<span class="pt-down-qd clearfix">\
+                      <a class="pt-open-gp" href="https://play.google.com/store/apps/details?id=com.cmplay.tiles2" target="_blank"></a>\
+                      <a class="pt-open-as" href="https://itunes.apple.com/us/app/piano-tiles-2-dont-tap-white/id1027688889?mt=8" target="_blank"></a>\
+                    </span>';
+	var popHTML = '<div class="pt-pop-mask popElements" id="popMask"></div>\
+                 <div class="pt-pop-main popElements clearfix" id="popMain">\
+                   <a class="pt-pop-close" id="popClose">×</a>\
+                   <div class="cm-pop-content clearfix">' + dialogHtml + '</div>\
+                 </div>';
 	$('#ptDownLoadBtna, #ptDownLoadBtnb').on('click',function(){
-		var openDownHtml = '<span class="pt-down-qd clearfix"><a class="pt-open-gp" href="https://play.google.com/store/apps/details?id=com.cmplay.tiles2" target="_blank"></a><a class="pt-open-as" href="https://itunes.apple.com/us/app/piano-tiles-2-dont-tap-white/id1027688889?mt=8" target="_blank"></a></span>'
-		var popHTML = '<div class="pt-pop-mask pop-elements"></div><div class="pt-pop-main pop-elements clearfix"><a href="javascript:;" class="pt-pop-close" id="popClose" title="Close">×</a><div class="cm-pop-content clearfix">'+ openDownHtml +'</div></div>';
 		$('body').append(popHTML);
-		$('.pt-pop-mask').css('height', $(window).height() + 'px');
-    var popMain = $('.pt-pop-main');
+    var popMask = $('#popMask');
+    var popMain = $('#popMain');
     var popClsBtn = $('#popClose');
-		popMain.css({marginTop: - popMain.outerHeight() / 2 + 'px'}).addClass('cpshow');
+    var popElems = $('.popElements');
+		popMask.css('height', $(window).height() + 'px').addClass('popShow');
+		popMain.css({marginTop: - popMain.outerHeight() / 2 + 'px'}).addClass('popShow');
     popClsBtn.on('click', function(){
-      $('.pop-elements').remove();
+      popElems.addClass('popClose');
+      setTimeout(function() {
+        popElems.remove();
+      }, 500);
     });
 	});
 })(jQuery);

@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-26 16:20
+  Latest modified: 2016-09-26 19:33
 */
 
 /* main */
@@ -1118,36 +1118,77 @@
 }/* /end media */
 
 /* Popup confirm dialog for PianoTiles */
-.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; font-size:0; }
-.clearfix{ zoom:1; }
-.pt-pop-mask {position:absolute;top:0;left:0;z-index:9999;width:100%;background:rgba(0,0,0,.4);}
-.pt-pop-main{ display: none; width: 412px; position: absolute; z-index: 9122130; top: 50%; left: 50%; margin-left: -206px; border-radius:10px; background: #fff; border: 1px solid #ddd; overflow: hidden; }
-.pt-pop-main.cpshow{
+.clearfix:after {
+  content: ".";
   display: block;
-  -webkit-animation: cpshow .2s linear both;
-  -moz-animation: cpshow .2s linear both;
-  -ms-animation: cpshow .2s linear both;
-  -o-animation: cpshow .2s linear both;
-  animation: cpshow .2s linear both;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
 }
-@-webkit-keyframes cpshow { from { opacity: 0; -webkit-transform:scale(0,0); } to { opacity: 1; -webkit-transform:scale(1,1); } }
-@-moz-keyframes cpshow { from { opacity: 0; -moz-transform:scale(0,0); } to { opacity: 1; -moz-transform:scale(1,1); } }
-@-ms-keyframes cpshow { from { opacity: 0; -ms-transform:scale(0,0); } to { opacity: 1; -ms-transform:scale(1,1); } }
-@-o-keyframes cpshow { from { opacity: 0; -o-transform:scale(0,0); } to { opacity: 1; -o-transform:scale(1,1); } }
-@keyframes cpshow { from { opacity: 0; transform:scale(0,0); } to { opacity: 1; transform:scale(1,1); } }
+.clearfix{ zoom:1; }
+.pt-pop-mask {
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  z-index: 999;
+  width:100%;
+  background:rgba(0,0,0,0);
+  -webkit-transition: background .3s ease;
+  -moz-transition: background .3s ease;
+  -ms-transition: background .3s ease;
+  -o-transition: background .3s ease;
+  transition: background .3s ease;
+}
+.pt-pop-mask.popShow {
+  background:rgba(0,0,0, .3);
+}
 
-.pt-pop-main.cpclose{
-  -webkit-animation: cpclose .2s linear both;
-  -moz-animation: cpclose .2s linear both;
-  -ms-animation: cpclose .2s linear both;
-  -o-animation: cpclose .2s linear both;
-  animation: cpclose .2s linear both;
+.pt-pop-main{
+  display: none;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  z-index: 1000;
+  margin-left: -206px;
+  width: 412px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  overflow: hidden;
 }
-@-webkit-keyframes cpclose { from { opacity: 1; -webkit-transform:scale(1,1); } to { opacity: 0; -webkit-transform:scale(0,0); } }
-@-moz-keyframes cpclose { from { opacity: 1; -moz-transform:scale(1,1); } to { opacity: 0; -moz-transform:scale(0,0); } }
-@-ms-keyframes cpclose { from { opacity: 1; -ms-transform:scale(1,1); } to { opacity: 0; -ms-transform:scale(0,0); } }
-@-o-keyframes cpclose { from { opacity: 1; -o-transform:scale(1,1); } to { opacity: 0; -o-transform:scale(0,0); } }
-@keyframes cpclose { from { opacity: 1; transform:scale(1,1); } to { opacity: 0; transform:scale(0,0); } }
+.pt-pop-main.popShow{
+  display: block;
+  -webkit-animation: popMainShow .3s ease both .3s;
+  -moz-animation: popMainShow .3s ease both .3s;
+  -ms-animation: popMainShow .3s ease both .3s;
+  -o-animation: popMainShow .3s ease both .3s;
+  animation: popMainShow .3s ease both .3s;
+}
+@-webkit-keyframes popMainShow { from { opacity: 0; -webkit-transform: translate(0,-300px); } to { opacity: 1; -webkit-transform: translate(0,0); } }
+@-moz-keyframes popMainShow { from { opacity: 0; -moz-transform: translate(0,-300px); } to { opacity: 1; -moz-transform: translate(0,0); } }
+@-ms-keyframes popMainShow { from { opacity: 0; -ms-transform: translate(0,-300px); } to { opacity: 1; -ms-transform: translate(0,0); } }
+@-o-keyframes popMainShow { from { opacity: 0; -o-transform: translate(0,-300px); } to { opacity: 1; -o-transform: translate(0,0); } }
+@keyframes popMainShow { from { opacity: 0; transform: translate(0,-300px); } to { opacity: 1; transform: translate(0,0); } }
+
+
+.pt-pop-mask.popClose {
+  background:rgba(0,0,0,0);
+}
+.pt-pop-main.popClose{
+  -webkit-animation: popClose .3s ease both;
+  -moz-animation: popClose .3s ease both;
+  -ms-animation: popClose .3s ease both;
+  -o-animation: popClose .3s ease both;
+  animation: popClose .3s ease both;
+}
+@-webkit-keyframes popClose { from { opacity: 1; -webkit-transform:scale(1,1); } to { opacity: 0; -webkit-transform:scale(0,0); } }
+@-moz-keyframes popClose { from { opacity: 1; -moz-transform:scale(1,1); } to { opacity: 0; -moz-transform:scale(0,0); } }
+@-ms-keyframes popClose { from { opacity: 1; -ms-transform:scale(1,1); } to { opacity: 0; -ms-transform:scale(0,0); } }
+@-o-keyframes popClose { from { opacity: 1; -o-transform:scale(1,1); } to { opacity: 0; -o-transform:scale(0,0); } }
+@keyframes popClose { from { opacity: 1; transform:scale(1,1); } to { opacity: 0; transform:scale(0,0); } }
 
 .pt-pop-main h3{ display: none; width: 100%; height: 40px; line-height: 40px; margin: 0; padding: 0; border-bottom: 1px solid #ddd; background: #f4f4f4; text-align: center; }
 .pt-pop-footer{ display: none; padding: 20px; text-align: right; }

@@ -1028,6 +1028,12 @@ body {
 	left: 0;
 	width: 100%
 }
+.bodyPT #footer-wrap {
+  bottom: -35px;
+}
+.bodyPT #footer-wrap.shown {
+  bottom: 0;
+}
 #footer {
 	font-size: 12px;
 	line-height: 20px;
