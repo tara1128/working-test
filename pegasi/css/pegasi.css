@@ -1,0 +1,113 @@
+/*
+  CSS of pegasi
+  Author: Alex
+  Date: 2016-09-26 23:24
+*/
+
+/* Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td { margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent; }
+body { line-height:1; }
+ol,ul { list-style:none; }
+blockquote,q { quotes:none; }
+blockquote:before, blockquote:after, q:before, q:after { content:'';content:none; }
+ins, a, s { text-decoration:none; }
+del { text-decoration:line-through; }
+table { border-collapse:collapse;border-spacing:0; }
+.section:after, ul.nav:after { content:".";display:block;height:0;clear:both;visibility:hidden; }
+.clearfix:after { content:"\0020";display:block;visibility:hidden;clear:both;height:0;overflow:hidden; }
+
+/* Fonts */
+@font-face {
+	font-family: 'HelveticaBold';
+	src: url('../images/fonts/helveticabold.eot');
+	src: url('../images/fonts/helveticabold.eot') format('embedded-opentype'), url('../images/fonts/helveticabold.woff') format('woff'), url('../images/fonts/helveticabold.ttf') format('truetype'), url('../images/fonts/helveticabold.svg#HelveticaBold') format('svg')
+}
+@font-face {
+	font-family: 'HelveticaRegular';
+	src: url('../images/fonts/helvetica.eot');
+	src: url('../images/fonts/helvetica.eot') format('embedded-opentype'), url('../images/fonts/helvetica.woff') format('woff'), url('../images/fonts/helvetica.ttf') format('truetype'), url('../images/fonts/helvetica.svg#HelveticaRegular') format('svg')
+}
+@font-face {
+	font-family: 'helveticaLight';
+	src: url('../images/fonts/helveticaneue-light.eot');
+	src: url('../images/fonts/helveticaneue-light.eot?#iefix') format('embedded-opentype'), url('../images/fonts/helveticalight.woff') format('woff'), url('../images/fonts/helveticalight.woff') format('woff'), url('../images/fonts/HelveticaLight.ttf') format('truetype'), url('../images/fonts/helveticaneue-light.svg#HelveticaLight') format('svg')
+}
+@font-face {
+	font-family: 'Gotham-Book';
+	src: url('../images/fonts/Gotham-Book.eot');
+	src: url('../images/fonts/Gotham-Book.eot') format('embedded-opentype'), url('../images/fonts/Gotham-Book.woff') format('woff'), url('../images/fonts/Gotham-Book.ttf') format('truetype'), url('../images/fonts/Gotham-Book.svg#Gotham-Book') format('svg')
+}
+@font-face {
+	font-family: 'Gotham-Book';
+	font-weight: bold;
+	src: url('../images/fonts/Gotham-Bold.eot');
+	src: url('../images/fonts/Gotham-Bold.eot') format('embedded-opentype'), url('../images/fonts/Gotham-Bold.woff') format('woff'), url('../images/fonts/Gotham-Bold.ttf') format('truetype'), url('../images/fonts/Gotham-Bold.svg#Gotham-Bold') format('svg')
+}
+.bodyPegasi {
+	font-family: helveticaLight, 'HelveticaRegular', Helvetica, HelveticaNeue, 'Droid Sans', Arial, Verdana, serif, 'Heiti SC', Droidsansfallback, 'Microsoft YaHei', '微软雅黑';
+}
+
+/* Specific styles */
+.peg-wrapper {
+  width:100%;
+}
+.peg-sec {
+  width:100%;
+  overflow:hidden;
+}
+
+.peg-billboard {
+  position:relative;
+  height:750px;
+  background:url(../images/peg-top-bg.jpg) 50% 0 no-repeat #193344;
+  background-size:cover;
+}
+
+
+.peg-fourtag {
+  height:440px;
+  background:#fff;
+}
+
+
+
+.peg-stream {
+  height:660px;
+  background:#f8f7f7;
+}
+
+
+.peg-searchkit {
+  height:660px;
+  background:url(../images/peg-searchkit-bg.jpg) 50% 0 no-repeat #152434;
+}
+
+
+
+.peg-monetization {
+  height:660px;
+  background:url(../images/peg-monetization-bg.jpg) 50% 0 no-repeat #fff;
+}
+
+
+
+.peg-workwith {
+  height:280px;
+  background:#f6f6f6;
+}
+
+
+
+
+.peg-footer {
+  height:44px;
+  background:#0a3253;
+}
+
+
+
+
+
+
+
+
