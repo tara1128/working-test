@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-23 20:20
+  Latest modified: 2016-09-26 14:08
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -155,6 +155,8 @@
 		allHeight: 0,
 		offsetArr: [],
     cdAudios: document.getElementsByTagName('audio'),
+    cdRotateInterval: {},
+    cdAngleContainer: [],
 		init: function(pageObj) {
 			var father = this;
 			if (typeof pageObj == 'object' && typeof pageObj != 'undefined') {
@@ -219,56 +221,63 @@
       if( typeof self.cdAudios.item(0).canPlayType == 'undefined') {
         return; // when browser does't support audio.
       }
-      var angleInterval = {};
-      var angleContainer = [];
-      var CDObjects = obj.cdObjects;
-      for( var _i = 0; _i < CDObjects.length; _i++ ){ 
-        angleContainer.push({ cdIndex: $(CDObjects[_i]).attr('data'), currentDeg: 0 });//Stored every CD's index and rotate deg.
-        angleInterval[ 'CD_' + _i ] = null;//Object stored every CD's interval.
+      var CDTriggers = obj.cdTriggers;
+      for( var _i = 0; _i < CDTriggers.length; _i++ ){ 
+        self.cdAngleContainer.push({ cdIndex: $(CDTriggers[_i]).attr('data'), currentDeg: 0 });//Stored every CD's index and rotate deg.
+        self.cdRotateInterval[ 'CD_' + _i ] = null;//Object stored every CD's interval.
       };
-			CDObjects.on('click',function(e){ // 3 CD click events
+			CDTriggers.on('click',function(e){ // Click CD
 				e.preventDefault();
-				var thisCD = $(this);
-				var index = thisCD.attr('data');
-        var thisAudio = thisCD.find('audio').get(0);
-        var accessaries = thisCD.find('s.accessary');
-        var rotateStuff = thisCD.find('.pt-cd-rotate');
-        // if( thisCD.hasClass('curMusic') ){
-        if( !thisAudio.paused ){
-          // var currentRotateCSS = 'rotate('+ angleContainer[index].currentDeg +'deg)';
-          // rotateStuff.css('transform', currentRotateCSS ).removeClass('playing');
-          rotateStuff.removeClass('playing');
-          clearInterval( angleInterval[ 'CD_' + index ] );
-          // thisCD.removeClass('curMusic');
-          thisAudio.pause();
-          accessaries.hide();
-        }else{
-          // obj.cdObjects.removeClass('curMusic');
-          // thisCD.addClass('curMusic');
-          angleInterval[ 'CD_' + index ] = setInterval(function(){
-            angleContainer[index].currentDeg += 3;
-            rotateStuff.css('transform', 'rotate(' + angleContainer[index].currentDeg + 'deg)').addClass('playing');
-          }, 500); //Rotate 3deg in 500ms
-          thisAudio.play();
-          accessaries.fadeIn(200);
-          for(var _o = 0; _o < CDObjects.length; _o++ ){
-            if( _o != index ){ // One CD playing, pause the others:
-              clearInterval( angleInterval[ 'CD_' + _o ] );
-              $(CDObjects[_o]).find('audio').get(0).pause();
-              $(CDObjects[_o]).find('s.accessary').fadeOut(200);
-              $(CDObjects[_o]).find('.pt-cd-rotate').css('transform', 'rotate(' + angleContainer[_o].currentDeg + 'deg)').removeClass('playing');
-            }
-          }
-        }
-				if(index == 0){
-					thisCD.parent().animate({top: '0'}, obj.animateTime);
-				}else if(index == 2){
-					thisCD.parent().animate({top: '-50%'}, obj.animateTime);
-				}else{
-					thisCD.parent().animate({top: '-25%'}, obj.animateTime);
-				}
+        var me = $(this);
+        self.playOneCD( obj, me );
 			});
 		},
+    playOneCD: function(obj, cdTrigger) {
+      var self = this;
+      var thisCD = cdTrigger.parent();
+      var index = cdTrigger.attr('data');
+      var thisAudio = thisCD.find('audio').get(0);
+      var accessaries = thisCD.find('s.accessary');
+      var rotateStuff = thisCD.find('.cdRotate');
+      if( !thisAudio.paused ){
+        rotateStuff.removeClass('playing');
+        clearInterval( self.cdRotateInterval[ 'CD_' + index ] );
+        thisAudio.pause();
+        accessaries.fadeOut(200);
+      }else{
+        self.cdRotateInterval[ 'CD_' + index ] = setInterval(function(){
+          self.cdAngleContainer[index].currentDeg += 3;
+          rotateStuff.css('transform', 'rotate(' + self.cdAngleContainer[index].currentDeg + 'deg)');
+        }, 500); //Rotate 3deg in 500ms
+        rotateStuff.addClass('playing');
+        thisAudio.play();
+        accessaries.fadeIn(200);
+        self.pauseCDs(obj, index);
+      }
+      if(index == 0){
+        obj.musicMain.animate({top: '0', left: '-8%'}, obj.animateTime);
+      }else if(index == 2){
+        obj.musicMain.animate({top: '-50%', left: '8%'}, obj.animateTime);
+      }else{
+        obj.musicMain.animate({top: '-25%', left: '0'}, obj.animateTime);
+      }
+    },
+    pauseCDs: function(obj, i) { // Pause CDs except item(i). Pause all CDs when i is -1.
+      var self = this;
+      var cdTrgs = obj.cdTriggers;
+      for(var _o = 0; _o < cdTrgs.length; _o++ ){
+        var _audioWrap = $(cdTrgs[_o]).parent(),
+            _audioItem = _audioWrap.find('audio').get(0),
+            _audioAccs = _audioWrap.find('s.accessary'),
+            _audioRota = _audioWrap.find('.cdRotate');
+        if( i < 0 || (i > -1 && _o != i) ) { // Pause all the CDs || pause the CDs which are not i
+          clearInterval( self.cdRotateInterval[ 'CD_' + _o ] );
+          _audioRota.css('transform', 'rotate(' + self.cdAngleContainer[_o].currentDeg + 'deg)').removeClass('playing');
+          _audioItem.pause();
+          _audioAccs.fadeOut(200);
+        }
+      }
+    },
 		keyEvent: function(obj){
 			var self = this;
 			$(win).on('keyup',function(e){
@@ -294,12 +303,9 @@
 				self.animateTop(obj);
 			}
       if( self.initNum != 2 ){ // Shut down audios
-        for(var i = 0, len = self.cdAudios.length; i < len; i++){
-          if( typeof self.cdAudios[i].canPlayType != 'undefined' ){
-            self.cdAudios[i].pause();
-          }
+        if( typeof self.cdAudios[0].canPlayType != 'undefined' ){
+          self.pauseCDs(obj, -1);
         }
-        obj.cdObjects.removeClass('curMusic');
       }
       if( self.initNum != 1 ){ // Shut down videos
         obj.vdPlayBtn.removeClass('paused').removeClass('replay').addClass('play').fadeIn(200);
@@ -713,7 +719,7 @@
     videoElm: $('#Video'),
     vdBgImg: $('#vdBgImg'),
     musicMain: $('#ptMusicMain'),
-    cdObjects: $('.pt-cdobj'),
+    cdTriggers: $('.cdTrigger'),
 		curPagesClassName: 'cur-pages',
     publicHeader: $('#header')
 	}

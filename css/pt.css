@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-23 20:22
+  Latest modified: 2016-09-26 11:26
 */
 
 /* main */
@@ -537,14 +537,23 @@
   left: 50%;
   width: 566px;
   height: 566px;
-  cursor: pointer;
   -webkit-transition: all .4s ease-in;
   -moz-transition: all .4s ease-in;
   -ms-transition: all .4s ease-in;
   -o-transition: all .4s ease-in;
   transition: all .4s ease-in;
 }
+.pt-cd-trigger {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -38% 0 0 -38%;
+  width: 76%;
+  height: 76%;
+  cursor: pointer;
+}
 .pt-cdobj img {
+  display: block;
   width: 100%;
   vertical-align: top;
 }
@@ -640,12 +649,10 @@
   background:url(../images/pt-freeloop-yelmark.png) no-repeat;
 }
 
-
-
 /* Buttons on CD: */
 .pt-cdbtn {
   position:absolute;
-  left:50%;
+  left:51%;
   top:50%;
   margin: -34px 0 0 -34px;
   width:68px;
@@ -658,6 +665,7 @@
 /* .curMusic .pt-cdbtn{ */
 .pt-cdbtn.playing {
   background-image: url(../images/pt-cd-btn-pause.png);
+  left:50%;
 }
 
 
