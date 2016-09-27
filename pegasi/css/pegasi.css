@@ -1,7 +1,7 @@
 /*
   CSS of pegasi
   Author: Alex
-  Date: 2016-09-26 23:24
+  Date: 2016-09-27 15:44
 */
 
 /* Reset */
@@ -10,7 +10,7 @@ body { line-height:1; }
 ol,ul { list-style:none; }
 blockquote,q { quotes:none; }
 blockquote:before, blockquote:after, q:before, q:after { content:'';content:none; }
-ins, a, s { text-decoration:none; }
+ins, a, s, a:hover { text-decoration:none; }
 del { text-decoration:line-through; }
 table { border-collapse:collapse;border-spacing:0; }
 .section:after, ul.nav:after { content:".";display:block;height:0;clear:both;visibility:hidden; }
@@ -43,11 +43,11 @@ table { border-collapse:collapse;border-spacing:0; }
 	src: url('../images/fonts/Gotham-Bold.eot');
 	src: url('../images/fonts/Gotham-Bold.eot') format('embedded-opentype'), url('../images/fonts/Gotham-Bold.woff') format('woff'), url('../images/fonts/Gotham-Bold.ttf') format('truetype'), url('../images/fonts/Gotham-Bold.svg#Gotham-Bold') format('svg')
 }
+
+/* Global styles */
 .bodyPegasi {
 	font-family: helveticaLight, 'HelveticaRegular', Helvetica, HelveticaNeue, 'Droid Sans', Arial, Verdana, serif, 'Heiti SC', Droidsansfallback, 'Microsoft YaHei', '微软雅黑';
 }
-
-/* Specific styles */
 .peg-wrapper {
   width:100%;
 }
@@ -55,59 +55,378 @@ table { border-collapse:collapse;border-spacing:0; }
   width:100%;
   overflow:hidden;
 }
+.peg-sec h1, .peg-sec h2 {
+  text-align:center;
+  font-weight:normal;
+}
+.peg-sec h1 {
+	font-family: 'HelveticaBold';
+  font-size:40px;
+}
+.peg-sec h2 {
+  margin:35px 0 60px;
+	font-family: 'helveticaLight';
+  font-size:18px;
+}
+.peg-sec p {
+  font-size:14px;
+  line-height:24px;
+}
+/* Container and container-wider should be responsive to various devices */
+.peg-container {
+  margin:0 auto;
+  width:1000px;
+}
+.peg-container-wider {
+  margin:0 auto;
+  width:1200px;
+}
+/* Triplicate items are in container, each of which has 1/3 of container width */
+.peg-triplicate-item {
+  float:left;
+  width:33%;
+}
+.peg-triplicate-item.right {
+  float:right;
+}
+/* Every icon with this classname is using sprites */
+.peg-has-sprites {
+  display:block;
+  background-image:url(../images/peg-icons-gathering.png);
+  background-repeat:no-repeat;
+  overflow:hidden;
+}
 
+/* Specific styles */
+/* Billboard */
 .peg-billboard {
   position:relative;
   height:750px;
   background:url(../images/peg-top-bg.jpg) 50% 0 no-repeat #193344;
   background-size:cover;
 }
-
-
-.peg-fourtag {
-  height:440px;
+.peg-topmenu {
+  position:absolute;
+  top:25px;
+  left:0;
+  width:100%;
+  height:40px;
+}
+.peg-top-inner {
+  margin:0 auto;
+  width:80%;
+  height:100%;
+  overflow:hidden;
+}
+.peg-logo {
+  float:left;
+  width:116px;
+  height:40px;
+  text-indent:-9999px;
+}
+.peg-logarea {
+  float:right;
+  margin:8px 0 0;
+  width:210px;
+}
+.peg-login-btn, .peg-signup-btn {
+  display:block;
+  width:96px;
+  height:30px;
+  border:1px solid #fff;
+  border-radius:4px;
+  text-align:center;
+  line-height:30px;
+  font-size:14px;
+  color:#fff;
+  background:transparent;
+  -webkit-transition:all .3s ease;
+}
+.peg-login-btn:hover, .peg-signup-btn:hover {
+  color:#273a49;
   background:#fff;
 }
+.peg-login-btn {
+  float:left;
+}
+.peg-signup-btn {
+  float:right;
+}
+.peg-boardmain {
+  padding-top:264px;
+}
+.peg-sec h1.peg-maintitle {
+  font-size:48px;
+  color:#fff;
+}
+.peg-sec h2.peg-mainintro {
+  margin:30px 0 0;
+  font-size:20px;
+  color:#fff;
+}
+.peg-contact-btn {
+  margin:60px auto 0;
+  display:block;
+  width:164px;
+  height:50px;
+  line-height:50px;
+  text-align:center;
+  font-size:18px;
+  border-radius:4px;
+  cursor:pointer;
+  background:#00a7ff;
+  color:#fff;
+  -webkit-transition:all .4s ease;
+}
+.peg-contact-btn:hover {
+  background:#fff;
+  color:#00a7ff;
+}
+.peg-arrowdown {
+  margin:170px auto 0;
+  display:block;
+  width:30px;
+  height:30px;
+  cursor:pointer;
+  text-indent:-9999px;
+  background-position:0 -50px;
+  -webkit-transition:all .3s ease;
+}
+.peg-arrowdown:hover {
+  margin:165px auto 0;
+}
 
 
+/* FourTags */
+.peg-fourtag {
+  padding-top:30px;
+  height:410px;
+  background:#fff;
+}
+.peg-tag-item {
+  margin:60px 0 0;
+  width:420px;
+  height:100px;
+}
+.peg-tag-item.left {
+  float:left;
+}
+.peg-tag-item.right {
+  float:right;
+}
+.peg-tag-text {
+  float:left;
+  padding:10px 0 0 20px;
+  width:290px;
+  color:#333;
+}
+.peg-tag-icon {
+  display:block;
+  float:left;
+  width:100px;
+  height:100px;
+}
+.peg-tag-ad {
+  background-position:0 -100px;
+}
+.peg-tag-tablet {
+  background-position:-200px -100px;
+}
+.peg-tag-graph {
+  background-position:-100px -100px;
+}
+.peg-tag-earth {
+  background-position:-300px -100px;
+}
 
+
+/* Stream Service */
 .peg-stream {
-  height:660px;
+  padding-top:140px;
+  height:460px;
   background:#f8f7f7;
 }
+.peg-stream-title, .peg-stream-intro {
+  color:#333;
+}
+.peg-stream-intro {
+  clear:both;
+}
+.peg-stream-item.left .peg-stream-item-text {
+  padding:20px 16px 0 0;
+}
+.peg-stream-item.mid .peg-stream-item-text {
+  padding:20px 8px 0;
+}
+.peg-stream-item.right .peg-stream-item-text {
+  padding:20px 0 0 16px;
+}
+.peg-stream-item-title {
+  position:relative;
+  padding-left:45px;
+  font-size:18px;
+  color:#333;
+  line-height:30px;
+  font-weight:normal;
+}
+.peg-stream-item-title s {
+  position:absolute;
+  left:0;
+  top:0;
+  width:30px;
+  height:30px;
+}
+.peg-stream-item.mid .peg-stream-item-title {
+  padding-left:53px; /* 45+8 */
+}
+.peg-stream-item.mid .peg-stream-item-title s {
+  left:8px;
+}
+.peg-stream-item.right .peg-stream-item-title {
+  padding-left:61px; /* 45+16 */
+}
+.peg-stream-item.right .peg-stream-item-title s {
+  left:16px;
+}
+.global-coverage s {
+  background-position:0 -250px;
+}
+.rich-content s {
+  background-position:-100px -250px;
+}
+.full-copyright s {
+  background-position:-200px -250px;
+}
 
 
+
+/* Search Kit */
 .peg-searchkit {
-  height:660px;
+  padding-top:160px;
+  height:500px;
   background:url(../images/peg-searchkit-bg.jpg) 50% 0 no-repeat #152434;
+  background-size:cover;
+}
+.peg-searchkit-title, .peg-searchkit-intro {
+  color:#fff;
+}
+.peg-searchkit-intro {
+  clear:both;
+}
+.peg-sk-icon {
+  margin:0 auto;
+  width:95px;
+  height:95px;
+}
+.peg-sk-icon.keyword {
+  background-position:0 -300px;
+}
+.peg-sk-icon.team {
+  background-position:-100px -300px;
+}
+.peg-sk-icon.wide {
+  background-position:-200px -300px;
+}
+.peg-sk-item-title {
+  margin:30px 0 0;
+  font-size:18px;
+  color:#fff;
+  text-align:center;
+  font-weight:normal;
+}
+.peg-sk-item-text {
+  margin:10px 0 0;
+  padding:10px 15px 0;
+  text-align:center;
+  color:#e5e5e5;
 }
 
 
 
+/* Monetization Service */
 .peg-monetization {
-  height:660px;
+  padding-top:160px;
+  height:440px;
   background:url(../images/peg-monetization-bg.jpg) 50% 0 no-repeat #fff;
+  background-size:cover;
+}
+.peg-monetization-title, .peg-monetization-intro {
+  color:#333;
+}
+.peg-monetization-intro {
+  clear:both;
+}
+.peg-mone-item {
+  float:left;
+  margin:0 0 20px;
+  width:50%;
+  height:30px;
+}
+.peg-mone-icon {
+  float:left;
+  margin:0 10px 0 80px;
+  width:30px;
+  height:30px;
+}
+.peg-mone-icon.connect {
+  background-position:0 -400px;
+}
+.peg-mone-icon.excellent {
+  background-position:-200px -400px;
+}
+.peg-mone-icon.customize {
+  background-position:-100px -400px;
+}
+.peg-mone-icon.dedicate {
+  background-position:-300px -400px;
+}
+.peg-mone-item-title {
+  font-size:14px;
+  color:#333;
+  line-height:30px;
+  font-weight:normal;
 }
 
 
 
+/* Reputable Companies */
 .peg-workwith {
-  height:280px;
+  padding-top:60px;
+  height:220px;
   background:#f6f6f6;
 }
+.peg-workwith h1.peg-workwith-title {
+  margin-bottom:20px;
+	font-family: 'helveticaLight';
+  font-size:24px;
+  color:#333;
+  clear:both;
+}
+.peg-work-partner {
+  display:block;
+  float:left;
+  width:120px;
+  height:84px;
+  -webkit-transition:all .3s ease;
+  text-indent:-9999px;
+  background:#000;
+}
 
 
 
 
+/* Footer of pegasi */
 .peg-footer {
   height:44px;
   background:#0a3253;
+  text-align:center;
+  font-size:12px;
+  color:#eee;
+  line-height:44px;
 }
-
-
-
-
-
+.peg-footer-copyright {
+  padding-right:20px;
+}
 
 
 
