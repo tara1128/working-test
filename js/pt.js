@@ -334,11 +334,11 @@
 		},
 		animateTop: function(obj){
 			var self = this;
-			var ptVfooter = $('#ptVfooter');
+			var ptVfooter = obj.ptVfooter;
 			var animateSetOut;
 			clearTimeout(animateSetOut);
-			if(self.initNum == self.offsetArr.length){
-				obj.wrapDiv.animate({ top: (parseInt(self.offsetArr[0]) * (self.initNum - 1) - ptVfooter.outerHeight()) + 'px'}, {
+			if(self.initNum == self.offsetArr.length){ // When showing half-screen pianist foot part:
+				obj.wrapDiv.animate({ top: (parseInt(self.offsetArr[0]) * (self.initNum - 1) - ptVfooter.outerHeight())+2 + 'px'}, {
           easing: 'easeInQuart',
           duration: obj.animateTime,
           complete:function(){}
@@ -351,7 +351,7 @@
 			 	animateSetOut = setTimeout(function(){
 			 		ptVfooter.addClass('pt-active');
 			 	},obj.animateTime);
-			}else{
+			}else{ // When showing full-screen parts:
 				ptVfooter.animate({bottom: '-' + ptVfooter.outerHeight() + 'px'},{
           easing: 'easeInQuart',
           duration: obj.animateTime,
@@ -402,7 +402,7 @@
 			self.allHeight = 0;
 			self.offsetArr = [];
 			var initTop = '';
-			var ptVfooter = $('#ptVfooter');
+			var ptVfooter = obj.ptVfooter;
 			$('body,html').eq(0).css({ width: '100%', height: curWinHeight + 'px', overflow: 'hidden' });
 			obj.pageDiv.eq(0).addClass('pt-active');
 			for(var g = 0; g < obj.pageDiv.length; g++){
@@ -472,7 +472,7 @@
       }, false);
       document.addEventListener('touchend', function(e){
         if( deltaY && Math.abs(deltaY) > touchMoveMinDistance ){
-          if( deltaY < 0 ){ 
+          if( deltaY > 0 ){ 
             self.mainRun(obj, 'up');
           }else{
             self.mainRun(obj, 'down');
@@ -719,7 +719,7 @@
 	var pageObj = {
 		animateTime: 600,
     ptBody: $('.bodyPT'),
-		wrapDiv: $('#pt-wrap'),
+		wrapDiv: $('#ptWrap'),
 		pageDiv: $('.pt-content'),
 		clickNext: $('.click-next'),
 		curPages: $('#pt-cur a'),
@@ -728,6 +728,7 @@
     videoElm: $('#Video'),
     vdBgImg: $('#vdBgImg'),
     musicMain: $('#ptMusicMain'),
+		ptVfooter: $('#ptVfooter'),
     cdTriggers: $('.cdTrigger'),
 		curPagesClassName: 'cur-pages',
     publicHeader: $('#header'),
