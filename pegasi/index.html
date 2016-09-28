@@ -12,7 +12,7 @@
   <meta name="keywords" content="cheetah" />
   <!-- for Twitter -->
   <link rel="stylesheet" href="css/pegasi.css" type="text/css" />
-  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/jquery-1.9.1.min.js"></script>
 </head>
 <body class="bodyPegasi">
 
@@ -64,15 +64,15 @@
         <h1 class="peg-stream-title">Cheetah Stream Service</h1>
         <h2 class="peg-stream-intro">Over 2000 high quality content provider with copyright, provides the most personalized content to boost retention rate</h2>
         <div class="peg-stream-item peg-triplicate-item left">
-          <h3 class="peg-stream-item-title global-coverage"><s class="peg-has-sprites"></s>Global Coverage</h3>
+          <h3 class="peg-stream-item-title pegMakeWhirl global-coverage"><s class="peg-has-sprites"></s>Global Coverage</h3>
           <p class="peg-stream-item-text">Cheetah Stream Service publish the news in 37 languages and 40 distinct country editons with 2000+ media partners.</p>
         </div><!-- stream item global -->
         <div class="peg-stream-item peg-triplicate-item mid">
-          <h3 class="peg-stream-item-title rich-content"><s class="peg-has-sprites"></s>Rich and Smart Content</h3>
+          <h3 class="peg-stream-item-title pegMakeWhirl rich-content"><s class="peg-has-sprites"></s>Rich and Smart Content</h3>
           <p class="peg-stream-item-text">Cheetah Stream Service leverages editorial, algorithmic and community intelligence to offer the sharpest and widest perspective on the world.</p>
         </div><!-- stream item rich -->
         <div class="peg-stream-item peg-triplicate-item right">
-          <h3 class="peg-stream-item-title full-copyright"><s class="peg-has-sprites"></s>Full Copyright</h3>
+          <h3 class="peg-stream-item-title pegMakeWhirl full-copyright"><s class="peg-has-sprites"></s>Full Copyright</h3>
           <p class="peg-stream-item-text">Cheetah Stream Service gurantees that all the contents are authorized by publishers and make sure all the contents are protected by copyright.</p>
         </div><!-- stream item full -->
       </div><!-- peg container -->
@@ -108,19 +108,19 @@
         <h2 class="peg-monetization-intro">The world's most comprehensive native monetization platform for publishers.</h2>
         <div class="peg-mone-item">
           <s class="peg-mone-icon peg-has-sprites connect"></s>
-          <h3 class="peg-mone-item-title">Connecting the world's leading advertisers</h3>
+          <h3 class="peg-mone-item-title pegMakeWhirl">Connecting the world's leading advertisers</h3>
         </div><!-- mone item connect -->
         <div class="peg-mone-item">
           <s class="peg-mone-icon peg-has-sprites excellent"></s>
-          <h3 class="peg-mone-item-title">Excellent fill rate and optimization effect</h3>
+          <h3 class="peg-mone-item-title pegMakeWhirl">Excellent fill rate and optimization effect</h3>
         </div><!-- mone item excellent -->
         <div class="peg-mone-item">
           <s class="peg-mone-icon peg-has-sprites customize"></s>
-          <h3 class="peg-mone-item-title">Customized integration solution</h3>
+          <h3 class="peg-mone-item-title pegMakeWhirl">Customized integration solution</h3>
         </div><!-- mone item customize -->
         <div class="peg-mone-item">
           <s class="peg-mone-icon peg-has-sprites dedicate"></s>
-          <h3 class="peg-mone-item-title">Dedicated resource of globalization services</h3>
+          <h3 class="peg-mone-item-title pegMakeWhirl">Dedicated resource of globalization services</h3>
         </div><!-- mone item dedicate -->
       </div><!-- peg container -->
     </div><!-- #pegMonetization -->
@@ -195,6 +195,13 @@
       $(this).css('transform', 'rotate(0deg)');
     });
 
+    $('.pegMakeWhirl').mouseenter(function(){
+      var icon = $(this).parent().find('s');
+      icon.addClass('whirl');
+    }).mouseleave(function(){
+      var icon = $(this).parent().find('s');
+      icon.removeClass('whirl');
+    });
 
   </script>
 </body>

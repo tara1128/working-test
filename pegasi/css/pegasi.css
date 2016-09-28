@@ -1,7 +1,7 @@
 /*
   CSS of pegasi
   Author: Alex
-  Date: 2016-09-27 20:17
+  Date: 2016-09-28 09:48
 */
 
 /* Reset */
@@ -399,6 +399,22 @@ table { border-collapse:collapse;border-spacing:0; }
   font-weight:normal;
 }
 
+/* Icons to whirl */
+.peg-stream-item-title s, .peg-mone-icon {
+  -webkit-transition:transform .5s ease-out;
+  -moz-transition:transform .5s ease-out;
+  -ms-transition:transform .5s ease-out;
+  -o-transition:transform .5s ease-out;
+  transition:transform .5s ease-out;
+}
+.peg-stream-item-title s.whirl, .peg-mone-icon.whirl {
+  -webkit-transform:rotateY(180deg);
+  -moz-transform:rotateY(180deg);
+  -ms-transform:rotateY(180deg);
+  -o-transform:rotateY(180deg);
+  transform:rotateY(180deg);
+}
+
 
 /* Reputable Companies */
 .peg-workwith {
@@ -514,7 +530,7 @@ table { border-collapse:collapse;border-spacing:0; }
     width:260px;
   }
   .peg-mone-item {
-    margin:0 0 10px;
+    margin:0 0 16px;
   }
   .peg-mone-icon {
     margin:0 10px 0 40px;
