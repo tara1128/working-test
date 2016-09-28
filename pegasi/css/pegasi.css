@@ -1,7 +1,7 @@
 /*
   CSS of pegasi
   Author: Alex
-  Date: 2016-09-28 11:53
+  Date: 2016-09-28 17:44
 */
 
 /* Reset */
@@ -99,7 +99,7 @@ table { border-collapse:collapse;border-spacing:0; }
 /* Every icon with this classname is using sprites */
 .peg-has-sprites {
   display:block;
-  background-image:url(../images/peg-icons-gathering.png);
+  background-image:url(../images/peg-icons-gathering2.png);
   background-repeat:no-repeat;
   overflow:hidden;
 }
@@ -114,6 +114,7 @@ table { border-collapse:collapse;border-spacing:0; }
 }
 .peg-topmenu {
   position:fixed;
+  z-index:100;
   top:0;
   left:0;
   padding-top:10px;
@@ -258,7 +259,7 @@ table { border-collapse:collapse;border-spacing:0; }
 .peg-stream {
   padding-top:160px;
   height:460px;
-  background:url(../images/peg-stream-service-bg.jpg) 50% 0 no-repeat #f8f7f7;
+  background:url(../images/peg-stream-service-bg2.jpg) 50% 0 no-repeat #f1f3f4;
 }
 .peg-stream-title, .peg-stream-intro {
   color:#333;
@@ -317,7 +318,7 @@ table { border-collapse:collapse;border-spacing:0; }
 .peg-searchkit {
   padding-top:160px;
   height:500px;
-  background:url(../images/peg-searchkit-bg.jpg) 50% 0 no-repeat #152434;
+  background:url(../images/peg-search-kit-bg.jpg) 50% 0 no-repeat #626467;
   background-size:cover;
 }
 .peg-searchkit-title, .peg-searchkit-intro {
@@ -363,7 +364,7 @@ table { border-collapse:collapse;border-spacing:0; }
 /* Monetization Service */
 .peg-monetization {
   padding-top:160px;
-  height:440px;
+  height:430px;
   background:url(../images/peg-monetization-bg.jpg) 50% 0 no-repeat #fff;
   background-size:cover;
 }
@@ -497,10 +498,10 @@ table { border-collapse:collapse;border-spacing:0; }
 /* Footer of pegasi */
 .peg-footer {
   height:44px;
-  background:#0a3253;
+  background:#d2d3d4;
   text-align:center;
   font-size:12px;
-  color:#eee;
+  color:#666;
   line-height:44px;
 }
 .peg-footer-copyright {
