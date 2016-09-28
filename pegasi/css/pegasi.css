@@ -1,7 +1,7 @@
 /*
   CSS of pegasi
   Author: Alex
-  Date: 2016-09-28 11:30
+  Date: 2016-09-28 11:53
 */
 
 /* Reset */
@@ -116,11 +116,13 @@ table { border-collapse:collapse;border-spacing:0; }
   position:fixed;
   top:0;
   left:0;
-  padding-top:20px;
+  padding-top:10px;
   width:100%;
-  height:60px;
-  background:rgba(4, 23, 40, .5);
-  border-bottom:1px solid #273a48;
+  height:50px;
+  background:rgba(4, 23, 40, .4);
+  background:rgb(4, 23, 40)\0; /* IE8 Hack */
+  *background:rgb(4, 23, 40); /* IE7 Hack */
+  border-bottom:1px solid #364c5c;
 }
 .peg-top-inner {
   margin:0 auto;
