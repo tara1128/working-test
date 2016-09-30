@@ -1,7 +1,7 @@
 /*
   CSS of pegasi
   Author: Alex
-  Date: 2016-09-28 17:44
+  Date: 2016-09-30 10:57
 */
 
 /* Reset */
@@ -140,11 +140,10 @@ table { border-collapse:collapse;border-spacing:0; }
 .peg-logarea {
   float:right;
   margin:8px 0 0;
-  width:210px;
+  width:230px;
 }
 .peg-login-btn, .peg-signup-btn {
   display:block;
-  width:96px;
   height:30px;
   border:1px solid #fff;
   border-radius:4px;
@@ -160,9 +159,11 @@ table { border-collapse:collapse;border-spacing:0; }
 }
 .peg-login-btn {
   float:left;
+  width:118px;
 }
 .peg-signup-btn {
   float:right;
+  width:88px;
 }
 .peg-boardmain {
   padding-top:264px;
@@ -376,13 +377,13 @@ table { border-collapse:collapse;border-spacing:0; }
 }
 .peg-mone-item {
   float:left;
-  margin:0 0 20px;
+  margin:0 0 30px;
   width:50%;
   height:30px;
 }
 .peg-mone-icon {
+  margin: 2px 0 0;
   float:left;
-  margin:0 10px 0 80px;
   width:30px;
   height:30px;
 }
@@ -399,9 +400,10 @@ table { border-collapse:collapse;border-spacing:0; }
   background-position:-300px -400px;
 }
 .peg-mone-item-title {
+  padding:0 10px 0 40px;
   font-size:14px;
+  line-height:18px;
   color:#333;
-  line-height:30px;
   font-weight:normal;
 }
 
@@ -538,9 +540,6 @@ table { border-collapse:collapse;border-spacing:0; }
   .peg-mone-item {
     margin:0 0 16px;
   }
-  .peg-mone-icon {
-    margin:0 10px 0 40px;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -580,14 +579,15 @@ table { border-collapse:collapse;border-spacing:0; }
     width:90%;
   }
   .peg-logarea {
-    width:150px;
+    width:210px;
   }
   .peg-login-btn, .peg-signup-btn {
-    width:70px;
     height:28px;
-    border-radius:4px;
     line-height:28px;
     font-size:0.9rem;
+  }
+  .peg-signup-btn {
+    width:78px;
   }
   .peg-tag-item {
     margin:30px auto 0;
@@ -638,9 +638,6 @@ table { border-collapse:collapse;border-spacing:0; }
     left:50%;
     top:0;
     margin-left:-15px;
-  }
-  .peg-mone-icon {
-    margin:0 10px;
   }
   .peg-mone-item {
     margin:0 auto 30px;
