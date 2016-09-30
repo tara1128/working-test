@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-30 15:06
+  Latest modified: 2016-09-30 18:50
 */
 
 /* main */
@@ -815,16 +815,14 @@
 }
 
 
-
-
-/* Animations! */
+/* Animations of frame-1: */
 .pt-active .pt-do-tile {
   display: block;
-  -webkit-animation: moveTile .5s ease-out both;
-  -moz-animation: moveTile .5s ease-out both;
-  -ms-animation: moveTile .5s ease-out both;
-  -o-animation: moveTile .5s ease-out both;
-  animation: moveTile .5s ease-out both;
+  -webkit-animation: moveTile .5s ease-in both;
+  -moz-animation: moveTile .5s ease-in both;
+  -ms-animation: moveTile .5s ease-in both;
+  -o-animation: moveTile .5s ease-in both;
+  animation: moveTile .5s ease-in both;
 }
 @-webkit-keyframes moveTile { from { opacity: 0; -webkit-transform: translate3d(0,-150px,0); } to { opacity: 1; -webkit-transform: translate3d(0,0,0); } }
 @-moz-keyframes moveTile    { from { opacity: 0; -moz-transform: translate3d(0,-150px,0); } to { opacity: 1; -moz-transform: translate3d(0,0,0); } }
@@ -834,39 +832,25 @@
 
 .pt-active .pt-do-text {
   display: block;
-  -webkit-animation: moveTitle .5s ease-out both .3s;
-  -moz-animation: moveTitle .5s ease-out both .3s;
-  -ms-animation: moveTitle .5s ease-out both .3s;
-  -o-animation: moveTitle .5s ease-out both .3s;
-  animation: moveTitle .5s ease-out both .3s;
+  -webkit-animation: moveTitle .5s ease-in both .3s;
+  -moz-animation: moveTitle .5s ease-in both .3s;
+  -ms-animation: moveTitle .5s ease-in both .3s;
+  -o-animation: moveTitle .5s ease-in both .3s;
+  animation: moveTitle .5s ease-in both .3s;
 }
 @-webkit-keyframes moveTitle { from { opacity: 0; -webkit-transform: translate3d(0,-150px,0); } to { opacity: 1; -webkit-transform: translate3d(0,0,0); } }
 @-moz-keyframes moveTitle    { from { opacity: 0; -moz-transform: translate3d(0,-150px,0); } to { opacity: 1; -moz-transform: translate3d(0,0,0); } }
-@-ms-keyframes moveTitle     { from { opacity: 0; -ms-transform: translate(0,-150px); } to { opacity: 1; -ms-transform: translate(0,0); } } /* -ms- For IE9. */
+@-ms-keyframes moveTitle     { from { opacity: 0; -ms-transform: translate(0,-150px); } to { opacity: 1; -ms-transform: translate(0,0); } }
 @-o-keyframes moveTitle      { from { opacity: 0; -o-transform: translate3d(0,-150px,0); } to { opacity: 1; -o-transform: translate3d(0,0,0); } }
 @keyframes moveTitle         { from { opacity: 0; transform: translate3d(0,-150px,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
 
-.pt-active .pt-do-crumb {
-  display: block;
-  -webkit-animation: moveCrumb .8s ease both .4s;
-  -moz-animation: moveCrumb .8s ease both .4s;
-  -ms-animation: moveCrumb .8s ease both .4s;
-  -o-animation: moveCrumb .8s ease both .4s;
-  animation: moveCrumb .8s ease both .4s;
-}
-@-webkit-keyframes moveCrumb { from { opacity: 0; -webkit-transform: scale3d(0,0,0); } to { opacity: 1; -webkit-transform: scale3d(1,1,1); } }
-@-moz-keyframes moveCrumb    { from { opacity: 0; -moz-transform: scale3d(0,0,0); } to { opacity: 1; -moz-transform: scale3d(1,1,1); } }
-@-ms-keyframes moveCrumb     { from { opacity: 0; -ms-transform: scale(0,0); } to { opacity: 1; -ms-transform: scale(1,1); } } /* -ms- For IE9, which supports 2D transform, not 3D. */
-@-o-keyframes moveCrumb      { from { opacity: 0; -o-transform: scale3d(0,0,0); } to { opacity: 1; -o-transform: scale3d(1,1,1); } }
-@keyframes moveCrumb         { from { opacity: 0; transform: scale3d(0,0,0); } to { opacity: 1; transform: scale3d(1,1,1); } }
-
 .pt-active .pt-do-download-btn {
   display: block;
-  -webkit-animation: moveDlBtn .5s ease both .9s;
-  -moz-animation: moveDlBtn .5s ease both .9s;
-  -ms-animation: moveDlBtn .5s ease both .9s;
-  -o-animation: moveDlBtn .5s ease both .9s;
-  animation: moveDlBtn .5s ease both .9s;
+  -webkit-animation: moveDlBtn .5s ease-in both .4s;
+  -moz-animation: moveDlBtn .5s ease-in both .4s;
+  -ms-animation: moveDlBtn .5s ease-in both .4s;
+  -o-animation: moveDlBtn .5s ease-in both .4s;
+  animation: moveDlBtn .5s ease-in both .4s;
 }
 @-webkit-keyframes moveDlBtn { from { opacity: 0; -webkit-transform: translate3d(0,50px,0); } to { opacity: 1; -webkit-transform: translate3d(0,0,0); } }
 @-moz-keyframes moveDlBtn    { from { opacity: 0; -moz-transform: translate3d(0,50px,0); } to { opacity: 1; -moz-transform: translate3d(0,0,0); } }
@@ -874,15 +858,30 @@
 @-o-keyframes moveDlBtn      { from { opacity: 0; -o-transform: translate3d(0,50px,0); } to { opacity: 1; -o-transform: translate3d(0,0,0); } }
 @keyframes moveDlBtn         { from { opacity: 0; transform: translate3d(0,50px,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
 
+.pt-active .pt-do-crumb {
+  display: block;
+  -webkit-animation: moveCrumb .6s ease-out both .6s;
+  -moz-animation: moveCrumb .6s ease-out both .6s;
+  -ms-animation: moveCrumb .6s ease-out both .6s;
+  -o-animation: moveCrumb .6s ease-out both .6s;
+  animation: moveCrumb .6s ease-out both .6s;
+}
+@-webkit-keyframes moveCrumb { from { opacity: 0; -webkit-transform: scale3d(0,0,0); } to { opacity: 1; -webkit-transform: scale3d(1,1,1); } }
+@-moz-keyframes moveCrumb    { from { opacity: 0; -moz-transform: scale3d(0,0,0); } to { opacity: 1; -moz-transform: scale3d(1,1,1); } }
+@-ms-keyframes moveCrumb     { from { opacity: 0; -ms-transform: scale(0,0); } to { opacity: 1; -ms-transform: scale(1,1); } } /* -ms- For IE9, which supports 2D transform, not 3D. */
+@-o-keyframes moveCrumb      { from { opacity: 0; -o-transform: scale3d(0,0,0); } to { opacity: 1; -o-transform: scale3d(1,1,1); } }
+@keyframes moveCrumb         { from { opacity: 0; transform: scale3d(0,0,0); } to { opacity: 1; transform: scale3d(1,1,1); } }
+
+
 
 /* Animations of frame-2: */
 .pt-active .pt-pulr-title {
   display: block;
-  -webkit-animation: movePulrTitle .5s ease-out both .2s;
-  -moz-animation: movePulrTitle .5s ease-out both .2s;
-  -ms-animation: movePulrTitle .5s ease-out both .2s;
-  -o-animation: movePulrTitle .5s ease-out both .2s;
-  animation: movePulrTitle .5s ease-out both .2s;
+  -webkit-animation: movePulrTitle .5s ease-out both;
+  -moz-animation: movePulrTitle .5s ease-out both;
+  -ms-animation: movePulrTitle .5s ease-out both;
+  -o-animation: movePulrTitle .5s ease-out both;
+  animation: movePulrTitle .5s ease-out both;
 }
 @-webkit-keyframes movePulrTitle { from { opacity: 0; -webkit-transform: translate3d(0,-150px,0); } to { opacity: 1; -webkit-transform: translate3d(0,0,0); } }
 @-moz-keyframes movePulrTitle { from { opacity: 0; -moz-transform: translate3d(0,-150px,0); } to { opacity: 1; -moz-transform: translate3d(0,0,0); } }
@@ -892,11 +891,11 @@
 
 .pt-active .pt-pulr-intro {
   display: block;
-  -webkit-animation: movePulrIntro .5s ease-out both .4s;
-  -moz-animation: movePulrIntro .5s ease-out both .4s;
-  -ms-animation: movePulrIntro .5s ease-out both .4s;
-  -o-animation: movePulrIntro .5s ease-out both .4s;
-  animation: movePulrIntro .5s ease-out both .4s;
+  -webkit-animation: movePulrIntro .5s ease-out both .2s;
+  -moz-animation: movePulrIntro .5s ease-out both .2s;
+  -ms-animation: movePulrIntro .5s ease-out both .2s;
+  -o-animation: movePulrIntro .5s ease-out both .2s;
+  animation: movePulrIntro .5s ease-out both .2s;
 }
 @-webkit-keyframes movePulrIntro { from { opacity: 0; -webkit-transform: translate3d(0,-150px,0); } to { opacity: 1; -webkit-transform: translate3d(0,0,0); } }
 @-moz-keyframes movePulrIntro { from { opacity: 0; -moz-transform: translate3d(0,-150px,0); } to { opacity: 1; -moz-transform: translate3d(0,0,0); } }
@@ -906,11 +905,11 @@
 
 .pt-active .pt-pulr-coins {
   display: block;
-  -webkit-animation: movePulrCoins .5s ease-out both .6s;
-  -moz-animation: movePulrCoins .5s ease-out both .6s;
-  -ms-animation: movePulrCoins .5s ease-out both .6s;
-  -o-animation: movePulrCoins .5s ease-out both .6s;
-  animation: movePulrCoins .5s ease-out both .6s;
+  -webkit-animation: movePulrCoins .5s ease-out both .4s;
+  -moz-animation: movePulrCoins .5s ease-out both .4s;
+  -ms-animation: movePulrCoins .5s ease-out both .4s;
+  -o-animation: movePulrCoins .5s ease-out both .4s;
+  animation: movePulrCoins .5s ease-out both .4s;
 }
 @-webkit-keyframes movePulrCoins { from { opacity: 0; -webkit-transform: translate3d(0,-150px,0); } to { opacity: 1; -webkit-transform: translate3d(0,0,0); } }
 @-moz-keyframes movePulrCoins { from { opacity: 0; -moz-transform: translate3d(0,-150px,0); } to { opacity: 1; -moz-transform: translate3d(0,0,0); } }
@@ -919,25 +918,25 @@
 @keyframes movePulrCoins { from { opacity: 0; transform: translate3d(0,-150px,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
 
 .pt-active .pt-pulr-coins i.csa img{
-  -webkit-animation-delay: 1.3s;
-  -moz-animation-delay: 1.3s;
-  -ms-animation-delay: 1.3s;
-  -o-animation-delay: 1.3s;
-  animation-delay: 1.3s;
+  -webkit-animation-delay: .9s;
+  -moz-animation-delay: .9s;
+  -ms-animation-delay: .9s;
+  -o-animation-delay: .9s;
+  animation-delay: .9s;
 }
 .pt-active .pt-pulr-coins i.csb img{
-  -webkit-animation-delay: 1.6s;
-  -moz-animation-delay: 1.6s;
-  -ms-animation-delay: 1.6s;
-  -o-animation-delay: 1.6s;
-  animation-delay: 1.6s;
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  -ms-animation-delay: 1.2s;
+  -o-animation-delay: 1.2s;
+  animation-delay: 1.2s;
 }
 .pt-active .pt-pulr-coins i.csc img{
-  -webkit-animation-delay: 1.9s;
-  -moz-animation-delay: 1.9s;
-  -ms-animation-delay: 1.9s;
-  -o-animation-delay: 1.9s;
-  animation-delay: 1.9s;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -ms-animation-delay: 1.5s;
+  -o-animation-delay: 1.5s;
+  animation-delay: 1.5s;
 }
 .pt-active .pt-pulr-coins i img {
   -webkit-animation: rotateCoins .4s forwards;
@@ -948,7 +947,7 @@
 }
 @-webkit-keyframes rotateCoins { from { opacity: 0; -webkit-transform: rotateY(80deg); } to { opacity: 1; -webkit-transform: rotateY(0deg); } }
 @-moz-keyframes rotateCoins { from { opacity: 0; -moz-transform: rotateY(80deg); } to { opacity: 1; -moz-transform: rotateY(0deg); } }
-@-ms-keyframes rotateCoins { from { opacity: 0; -ms-transform: rotate(80deg); } to { opacity: 1; -ms-transform: rotate(0deg); } } /* -ms- For IE9 */
+@-ms-keyframes rotateCoins { from { opacity: 0; -ms-transform: rotate(80deg); } to { opacity: 1; -ms-transform: rotate(0deg); } }
 @-o-keyframes rotateCoins { from { opacity: 0; -o-transform: rotateY(80deg); } to { opacity: 1; -o-transform: rotateY(0deg); } }
 @keyframes rotateCoins { from { opacity: 0; transform: rotateY(80deg); } to { opacity: 1; transform: rotateY(0deg); } }
 
@@ -984,15 +983,15 @@
 /* Animations of frame-3: */
 .pt-active .pt-music-main {
   display: block;
-  -webkit-animation: moveMusicMain .4s ease-out both;
-  -moz-animation: moveMusicMain .4s ease-out both;
-  -ms-animation: moveMusicMain .4s ease-out both;
-  -o-animation: moveMusicMain .4s ease-out both;
-  animation: moveMusicMain .4s ease-out both;
+  -webkit-animation: moveMusicMain .5s ease-out both;
+  -moz-animation: moveMusicMain .5s ease-out both;
+  -ms-animation: moveMusicMain .5s ease-out both;
+  -o-animation: moveMusicMain .5s ease-out both;
+  animation: moveMusicMain .5s ease-out both;
 }
 @-webkit-keyframes moveMusicMain { from { opacity: 0; -webkit-transform: translate3d(0,-25%,0); } to { opacity: 1; -webkit-transform: translate3d(0,0,0); } }
 @-moz-keyframes moveMusicMain    { from { opacity: 0; -moz-transform: translate3d(0,-25%,0); } to { opacity: 1; -moz-transform: translate3d(0,0,0); } }
-@-ms-keyframes moveMusicMain     { from { opacity: 0; -ms-transform: translate(0,-25%); } to { opacity: 1; -ms-transform: translate(0,0); } } /* -ms- For IE9 */
+@-ms-keyframes moveMusicMain     { from { opacity: 0; -ms-transform: translate(0,-25%); } to { opacity: 1; -ms-transform: translate(0,0); } }
 @-o-keyframes moveMusicMain      { from { opacity: 0; -o-transform: translate3d(0,-25%,0); } to { opacity: 1; -o-transform: translate3d(0,0,0); } }
 @keyframes moveMusicMain         { from { opacity: 0; transform: translate3d(0,-25%,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
 
@@ -1012,11 +1011,11 @@
 
 .pt-active .pt-music-intro {
   display: block;
-  -webkit-animation: moveMusicIntro .5s ease-out both .3s;
-  -moz-animation: moveMusicIntro .5s ease-out both .3s;
-  -ms-animation: moveMusicIntro .5s ease-out both .3s;
-  -o-animation: moveMusicIntro .5s ease-out both .3s;
-  animation: moveMusicIntro .5s ease-out both .3s;
+  -webkit-animation: moveMusicIntro .5s ease-out both .2s;
+  -moz-animation: moveMusicIntro .5s ease-out both .2s;
+  -ms-animation: moveMusicIntro .5s ease-out both .2s;
+  -o-animation: moveMusicIntro .5s ease-out both .2s;
+  animation: moveMusicIntro .5s ease-out both .2s;
 }
 @-webkit-keyframes moveMusicIntro { from { opacity: 0; -webkit-transform: translate3d(0,-150px,0); } to { opacity: 1; -webkit-transform: translate3d(0,0,0); } }
 @-moz-keyframes moveMusicIntro { from { opacity: 0; -moz-transform: translate3d(0,-150px,0); } to { opacity: 1; -moz-transform: translate3d(0,0,0); } }
@@ -1026,11 +1025,11 @@
 
 .pt-active .pt-music-bmg {
   display: block;
-  -webkit-animation: moveMusicBmg .5s ease-out both .6s;
-  -moz-animation: moveMusicBmg .5s ease-out both .6s;
-  -ms-animation: moveMusicBmg .5s ease-out both .6s;
-  -o-animation: moveMusicBmg .5s ease-out both .6s;
-  animation: moveMusicBmg .5s ease-out both .6s;
+  -webkit-animation: moveMusicBmg .5s ease-out both .4s;
+  -moz-animation: moveMusicBmg .5s ease-out both .4s;
+  -ms-animation: moveMusicBmg .5s ease-out both .4s;
+  -o-animation: moveMusicBmg .5s ease-out both .4s;
+  animation: moveMusicBmg .5s ease-out both .4s;
 }
 @-webkit-keyframes moveMusicBmg { from { opacity: 0; -webkit-transform: translate3d(0,-150px,0); } to { opacity: 1; -webkit-transform: translate3d(0,0,0); } }
 @-moz-keyframes moveMusicBmg { from { opacity: 0; -moz-transform: translate3d(0,-150px,0); } to { opacity: 1; -moz-transform: translate3d(0,0,0); } }
@@ -1063,11 +1062,11 @@
 
 .pt-active .pt-comp-intro {
   display: block;
-  -webkit-animation: moveCompIntro .5s ease-out both .3s;
-  -moz-animation: moveCompIntro .5s ease-out both .3s;
-  -ms-animation: moveCompIntro .5s ease-out both .3s;
-  -o-animation: moveCompIntro .5s ease-out both .3s;
-  animation: moveCompIntro .5s ease-out both .3s;
+  -webkit-animation: moveCompIntro .5s ease-out both .2s;
+  -moz-animation: moveCompIntro .5s ease-out both .2s;
+  -ms-animation: moveCompIntro .5s ease-out both .2s;
+  -o-animation: moveCompIntro .5s ease-out both .2s;
+  animation: moveCompIntro .5s ease-out both .2s;
 }
 @-webkit-keyframes moveCompIntro { from { opacity: 0; -webkit-transform: translate3d(0,-150px,0); } to { opacity: 1; -webkit-transform: translate3d(0,0,0); } }
 @-moz-keyframes moveCompIntro { from { opacity: 0; -moz-transform: translate3d(0,-150px,0); } to { opacity: 1; -moz-transform: translate3d(0,0,0); } }
@@ -1076,52 +1075,51 @@
 @keyframes moveCompIntro { from { opacity: 0; transform: translate3d(0,-150px,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
 
 .pt-active .pt-comp-list li.comp-1 {
-  -webkit-animation: moveComp_1 .3s linear 1.5s forwards;
-  -moz-animation: moveComp_1 .3s linear 1.5s forwards;
-  -ms-animation: moveComp_1 .3s linear 1.5s forwards;
-  -o-animation: moveComp_1 .3s linear 1.5s forwards;
-  animation: moveComp_1 .3s linear 1.5s forwards;
+  -webkit-animation: moveComp_1 .4s ease-out 1.4s forwards;
+  -moz-animation: moveComp_1 .4s ease-out 1.4s forwards;
+  -ms-animation: moveComp_1 .4s ease-out 1.4s forwards;
+  -o-animation: moveComp_1 .4s ease-out 1.4s forwards;
+  animation: moveComp_1 .4s ease-out 1.4s forwards;
 }
 .pt-active .pt-comp-list li.comp-2 {
-  -webkit-animation: moveComp_2 .3s linear 1.2s forwards;
-  -moz-animation: moveComp_2 .3s linear 1.2s forwards;
-  -ms-animation: moveComp_2 .3s linear 1.2s forwards;
-  -o-animation: moveComp_2 .3s linear 1.2s forwards;
-  animation: moveComp_2 .3s linear 1.2s forwards;
+  -webkit-animation: moveComp_2 .4s ease-out 1.2s forwards;
+  -moz-animation: moveComp_2 .4s ease-out 1.2s forwards;
+  -ms-animation: moveComp_2 .4s ease-out 1.2s forwards;
+  -o-animation: moveComp_2 .4s ease-out 1.2s forwards;
+  animation: moveComp_2 .4s ease-out 1.2s forwards;
 }
 .pt-active .pt-comp-list li.comp-3 {
-  -webkit-animation: moveComp_3 .3s linear .9s forwards;
-  -moz-animation: moveComp_3 .3s linear .9s forwards;
-  -ms-animation: moveComp_3 .3s linear .9s forwards;
-  -o-animation: moveComp_3 .3s linear .9s forwards;
-  animation: moveComp_3 .3s linear .9s forwards;
+  -webkit-animation: moveComp_3 .4s ease-out 1s forwards;
+  -moz-animation: moveComp_3 .4s ease-out 1s forwards;
+  -ms-animation: moveComp_3 .4s ease-out 1s forwards;
+  -o-animation: moveComp_3 .4s ease-out 1s forwards;
+  animation: moveComp_3 .4s ease-out 1s forwards;
 }
 .pt-active .pt-comp-list li.comp-4 {
-  -webkit-animation: moveComp_4 .3s linear .6s forwards;
-  -moz-animation: moveComp_4 .3s linear .6s forwards;
-  -ms-animation: moveComp_4 .3s linear .6s forwards;
-  -o-animation: moveComp_4 .3s linear .6s forwards;
-  animation: moveComp_4 .3s linear .6s forwards;
+  -webkit-animation: moveComp_4 .4s ease-out .8s forwards;
+  -moz-animation: moveComp_4 .4s ease-out .8s forwards;
+  -ms-animation: moveComp_4 .4s ease-out .8s forwards;
+  -o-animation: moveComp_4 .4s ease-out .8s forwards;
+  animation: moveComp_4 .4s ease-out .8s forwards;
 }
 .pt-active .pt-comp-list li.comp-5 {
-  -webkit-animation: moveComp_5 .3s linear .3s forwards;
-  -moz-animation: moveComp_5 .3s linear .3s forwards;
-  -ms-animation: moveComp_5 .3s linear .3s forwards;
-  -o-animation: moveComp_5 .3s linear .3s forwards;
-  animation: moveComp_5 .3s linear .3s forwards;
+  -webkit-animation: moveComp_5 .8s ease-out .2s forwards;
+  -moz-animation: moveComp_5 .8s ease-out .2s forwards;
+  -ms-animation: moveComp_5 .8s ease-out .2s forwards;
+  -o-animation: moveComp_5 .8s ease-out .2s forwards;
+  animation: moveComp_5 .8s ease-out .2s forwards;
 }
-
 @-webkit-keyframes moveComp_1 { from {opacity:0; top:90px;} to {opacity:1; top:0px;} }
 @-moz-keyframes moveComp_1 { from {opacity:0; top:90px;} to {opacity:1; top:0px;} }
 @-ms-keyframes moveComp_1 { from {opacity:0; top:90px;} to {opacity:1; top:0px;} }
 @-o-keyframes moveComp_1 { from {opacity:0; top:90px;} to {opacity:1; top:0px;} }
-@keyframes moveComp_1 { from {opacity:0; top:90px;} to {opacity:1; top:0px;} }
+@keyframes moveComp_1 { from {opacity:0; top:50px;} to {opacity:1; top:0px;} }
 
 @-webkit-keyframes moveComp_2 { from {opacity:0; top:170px;} to {opacity:1; top:100px;} }
 @-moz-keyframes moveComp_2 { from {opacity:0; top:170px;} to {opacity:1; top:100px;} }
 @-ms-keyframes moveComp_2 { from {opacity:0; top:170px;} to {opacity:1; top:100px;} }
 @-o-keyframes moveComp_2 { from {opacity:0; top:170px;} to {opacity:1; top:100px;} }
-@keyframes moveComp_2 { from {opacity:0; top:170px;} to {opacity:1; top:100px;} }
+@keyframes moveComp_2 { from {opacity:0; top:150px;} to {opacity:1; top:100px;} }
 
 @-webkit-keyframes moveComp_3 { from {opacity:0; top:220px;} to {opacity:1; top:170px;} }
 @-moz-keyframes moveComp_3 { from {opacity:0; top:220px;} to {opacity:1; top:170px;} }
@@ -1142,25 +1140,17 @@
 @keyframes moveComp_5 { from {opacity:0; top:340px;} to {opacity:1; top:270px;} }
 
 .pt-active .pt-fb-icon{
-  -webkit-animation: showFB 1s forwards 1.8s;
-  -moz-animation: showFB 1s forwards 1.8s;
-  -ms-animation: showFB 1s forwards 1.8s;
-  -o-animation: showFB 1s forwards 1.8s;
-  animation: showFB 1s forwards 1.8s;
+  -webkit-animation: showFB .8s ease-out forwards 1.5s;
+  -moz-animation: showFB .8s ease-out forwards 1.5s;
+  -ms-animation: showFB .8s ease-out forwards 1.5s;
+  -o-animation: showFB .8s ease-out forwards 1.5s;
+  animation: showFB .8s ease-out forwards 1.5s;
 }
 @-webkit-keyframes showFB{ from { opacity:0; top:60%; } to { opacity:1; top:50%; } }
 @-moz-keyframes showFB{ from { opacity:0; top:60%; } to { opacity:1; top:50%; } }
 @-ms-keyframes showFB{ from { opacity:0; top:60%; } to { opacity:1; top:50%; } }
 @-o-keyframes showFB{ from { opacity:0; top:60%; } to { opacity:1; top:50%; } }
 @keyframes showFB{ from { opacity:0; top:60%; } to { opacity:1; top:50%; } }
-
-/*
-@-webkit-keyframes showFB{ from { opacity: 0; -webkit-transform-origin: 50% 50%; -webkit-transform: rotate3d(1,0,0,90deg); } to { opacity: 1; -webkit-transform: rotate3d(1,0,0,0deg); } }
-@-moz-keyframes showFB{ from { opacity: 0; -moz-transform-origin: 50% 50%; -moz-transform: rotate3d(1,0,0,90deg); } to { opacity: 1; -moz-transform: rotate3d(1,0,0,0deg); } }
-@-ms-keyframes showFB{ from { opacity: 0; -ms-transform-origin: 50% 50%; -ms-transform: rotate(90deg); } to { opacity: 1; -ms-transform: rotate(0deg); } }
-@-o-keyframes showFB{ from { opacity: 0; -o-transform-origin: 50% 50%; -o-transform: rotate3d(1,0,0,90deg); } to { opacity: 1; -o-transform: rotate3d(1,0,0,0deg); } }
-@keyframes showFB{ from { opacity: 0; transform-origin: 50% 50%; transform: rotate3d(1,0,0,90deg); } to { opacity: 1; transform: rotate3d(1,0,0,0deg); } }
-*/
 
 
 /* Animations of frame-5: */
@@ -1180,11 +1170,11 @@
 
 .pt-active .pt-stories-intro {
   display: block;
-  -webkit-animation: moveStoryIntro .5s ease-out both .3s;
-  -moz-animation: moveStoryIntro .5s ease-out both .3s;
-  -ms-animation: moveStoryIntro .5s ease-out both .3s;
-  -o-animation: moveStoryIntro .5s ease-out both .3s;
-  animation: moveStoryIntro .5s ease-out both .3s;
+  -webkit-animation: moveStoryIntro .5s ease-out both .2s;
+  -moz-animation: moveStoryIntro .5s ease-out both .2s;
+  -ms-animation: moveStoryIntro .5s ease-out both .2s;
+  -o-animation: moveStoryIntro .5s ease-out both .2s;
+  animation: moveStoryIntro .5s ease-out both .2s;
 }
 @-webkit-keyframes moveStoryIntro { from { opacity: 0; -webkit-transform: translate3d(0,-150px,0); } to { opacity: 1; -webkit-transform: translate3d(0,0,0); } }
 @-moz-keyframes moveStoryIntro { from { opacity: 0; -moz-transform: translate3d(0,-150px,0); } to { opacity: 1; -moz-transform: translate3d(0,0,0); } }
@@ -1200,33 +1190,34 @@
   -o-animation: movePlayerWrap .5s ease-out both .5s;
   animation: movePlayerWrap .5s ease-out both .5s;
 }
-@-webkit-keyframes movePlayerWrap {from {opacity:0;-webkit-transform:translate(0,-150px); } to {opacity:1;-webkit-transform:translate(0,0);}}
-@-moz-keyframes movePlayerWrap {from {opacity:0;-moz-transform:translate(0,-150px); } to {opacity:1;-moz-transform:translate(0,0);}}
-@-ms-keyframes movePlayerWrap {from {opacity:0;-ms-transform:translate(0,-150px); } to {opacity:1;-ms-transform:translate(0,0);}}
-@-o-keyframes movePlayerWrap {from {opacity:0;-o-transform:translate(0,-150px); } to {opacity:1;-o-transform:translate(0,0);}}
-@keyframes movePlayerWrap {from {opacity:0;transform:translate(0,-150px); } to {opacity:1;transform:translate(0,0);}}
+@-webkit-keyframes movePlayerWrap {from {opacity:0;-webkit-transform:translate(0,-50px); } to {opacity:1;-webkit-transform:translate(0,0);}}
+@-moz-keyframes movePlayerWrap {from {opacity:0;-moz-transform:translate(0,-50px); } to {opacity:1;-moz-transform:translate(0,0);}}
+@-ms-keyframes movePlayerWrap {from {opacity:0;-ms-transform:translate(0,-50px); } to {opacity:1;-ms-transform:translate(0,0);}}
+@-o-keyframes movePlayerWrap {from {opacity:0;-o-transform:translate(0,-50px); } to {opacity:1;-o-transform:translate(0,0);}}
+@keyframes movePlayerWrap {from {opacity:0;transform:translate(0,-50px); } to {opacity:1;transform:translate(0,0);}}
 
 .pt-active .pt-prev, .pt-active .pt-next {
   display: block;
+  opacity: 0;
   -webkit-animation: moveArrowBtn .5s ease-out both .5s;
   -moz-animation: moveArrowBtn .5s ease-out both .5s;
   -ms-animation: moveArrowBtn .5s ease-out both .5s;
   -o-animation: moveArrowBtn .5s ease-out both .5s;
   animation: moveArrowBtn .5s ease-out both .5s;
 }
-@-webkit-keyframes moveArrowBtn {from {opacity:0;-webkit-transform:translate(0,-150px);} to {opacity:1;-webkit-transform:translate(0,0);}}
-@-moz-keyframes moveArrowBtn {from {opacity:0;-moz-transform:translate(0,-150px);} to {opacity:1;-moz-transform:translate(0,0);}}
-@-ms-keyframes moveArrowBtn {from {opacity:0;-ms-transform:translate(0,-150px);} to {opacity:1;-ms-transform:translate(0,0);}}
-@-o-keyframes moveArrowBtn {from {opacity:0;-o-transform:translate(0,-150px);} to {opacity:1;-o-transform:translate(0,0);}}
-@keyframes moveArrowBtn {from {opacity:0;transform:translate(0,-150px);} to {opacity:1;transform:translate(0,0);}}
+@-webkit-keyframes moveArrowBtn {from {opacity:0;-webkit-transform:translate(0,-50px);} to {opacity:1;-webkit-transform:translate(0,0);}}
+@-moz-keyframes moveArrowBtn {from {opacity:0;-moz-transform:translate(0,-50px);} to {opacity:1;-moz-transform:translate(0,0);}}
+@-ms-keyframes moveArrowBtn {from {opacity:0;-ms-transform:translate(0,-50px);} to {opacity:1;-ms-transform:translate(0,0);}}
+@-o-keyframes moveArrowBtn {from {opacity:0;-o-transform:translate(0,-50px);} to {opacity:1;-o-transform:translate(0,0);}}
+@keyframes moveArrowBtn {from {opacity:0;transform:translate(0,-50px);} to {opacity:1;transform:translate(0,0);}}
 
 .pt-active .pt-player-drum-guy {
   display: block;
-  -webkit-animation: moveDrumGuy .5s ease-out both .8s;
-  -moz-animation: moveDrumGuy .5s ease-out both .8s;
-  -ms-animation: moveDrumGuy .5s ease-out both .8s;
-  -o-animation: moveDrumGuy .5s ease-out both .8s;
-  animation: moveDrumGuy .5s ease-out both .8s;
+  -webkit-animation: moveDrumGuy .5s ease-in both .8s;
+  -moz-animation: moveDrumGuy .5s ease-in both .8s;
+  -ms-animation: moveDrumGuy .5s ease-in both .8s;
+  -o-animation: moveDrumGuy .5s ease-in both .8s;
+  animation: moveDrumGuy .5s ease-in both .8s;
 }
 @-webkit-keyframes moveDrumGuy { from {opacity:0;-webkit-transform:translate(0,-150px);} to {opacity:1;-webkit-transform:translate(0,0);}}
 @-moz-keyframes moveDrumGuy { from {opacity:0;-moz-transform:translate(0,-150px);} to {opacity:1;-moz-transform:translate(0,0);}}
@@ -1236,11 +1227,11 @@
 
 .pt-active .pt-player-bass-guy {
   display: block;
-  -webkit-animation: moveBassGuy .5s ease-out both 1s;
-  -moz-animation: moveBassGuy .5s ease-out both 1s;
-  -ms-animation: moveBassGuy .5s ease-out both 1s;
-  -o-animation: moveBassGuy .5s ease-out both 1s;
-  animation: moveBassGuy .5s ease-out both 1s;
+  -webkit-animation: moveBassGuy .5s ease-in both 1s;
+  -moz-animation: moveBassGuy .5s ease-in both 1s;
+  -ms-animation: moveBassGuy .5s ease-in both 1s;
+  -o-animation: moveBassGuy .5s ease-in both 1s;
+  animation: moveBassGuy .5s ease-in both 1s;
 }
 @-webkit-keyframes moveBassGuy { from {opacity:0;-webkit-transform:translate(0,-150px);} to {opacity:1;-webkit-transform:translate(0,0);}}
 @-moz-keyframes moveBassGuy { from {opacity:0;-moz-transform:translate(0,-150px);} to {opacity:1;-moz-transform:translate(0,0);}}
@@ -1250,11 +1241,11 @@
 
 .pt-active .pt-player-drumkit-guys {
   display: block;
-  -webkit-animation: moveDrumkitGuys .5s ease-out both 1.2s;
-  -moz-animation: moveDrumkitGuys .5s ease-out both 1.2s;
-  -ms-animation: moveDrumkitGuys .5s ease-out both 1.2s;
-  -o-animation: moveDrumkitGuys .5s ease-out both 1.2s;
-  animation: moveDrumkitGuys .5s ease-out both 1.2s;
+  -webkit-animation: moveDrumkitGuys .5s ease-in both 1.2s;
+  -moz-animation: moveDrumkitGuys .5s ease-in both 1.2s;
+  -ms-animation: moveDrumkitGuys .5s ease-in both 1.2s;
+  -o-animation: moveDrumkitGuys .5s ease-in both 1.2s;
+  animation: moveDrumkitGuys .5s ease-in both 1.2s;
 }
 @-webkit-keyframes moveDrumkitGuys {from {opacity: 0; -webkit-transform:translate(0,-150px); } to {opacity: 1; -webkit-transform:translate(0, 0); } }
 @-moz-keyframes moveDrumkitGuys {from {opacity:0;-moz-transform:translate(0,-150px);} to {opacity:1; -moz-transform:translate(0,0);}}
@@ -1265,11 +1256,11 @@
 
 .pt-active .players-bg-img {
   display: block;
-  -webkit-animation: stageEntrance .4s ease-out both .2s;
-  -moz-animation: stageEntrance .4s ease-out both .2s;
-  -ms-animation: stageEntrance .4s ease-out both .2s;
-  -o-animation: stageEntrance .4s ease-out both .2s;
-  animation: stageEntrance .4s ease-out both .2s;
+  -webkit-animation: stageEntrance .4s ease-in both .2s;
+  -moz-animation: stageEntrance .4s ease-in both .2s;
+  -ms-animation: stageEntrance .4s ease-in both .2s;
+  -o-animation: stageEntrance .4s ease-in both .2s;
+  animation: stageEntrance .4s ease-in both .2s;
 }
 @-webkit-keyframes stageEntrance { from { opacity: 0; -webkit-transform: translate3d(0,150px,0); } to { opacity: 1; -webkit-transform: translate3d(0,0,0); } }
 @-moz-keyframes stageEntrance { from { opacity: 0; -moz-transform: translate3d(0,150px,0); } to { opacity: 1; -moz-transform: translate3d(0,0,0); } }
@@ -1279,11 +1270,11 @@
 
 .pt-active .pt-stage-left-light {
   display: block;
-  -webkit-animation: moveLeftLight .5s ease-out both .6s;
-  -moz-animation: moveLeftLight .5s ease-out both .6s;
-  -ms-animation: moveLeftLight .5s ease-out both .6s;
-  -o-animation: moveLeftLight .5s ease-out both .6s;
-  animation: moveLeftLight .5s ease-out both .6s;
+  -webkit-animation: moveLeftLight .5s ease-in both .6s;
+  -moz-animation: moveLeftLight .5s ease-in both .6s;
+  -ms-animation: moveLeftLight .5s ease-in both .6s;
+  -o-animation: moveLeftLight .5s ease-in both .6s;
+  animation: moveLeftLight .5s ease-in both .6s;
 }
 @-webkit-keyframes moveLeftLight { from { opacity: 0; -webkit-transform: translate3d(0,-150px,0); } to { opacity: 1; -webkit-transform: translate3d(0,0,0); } }
 @-moz-keyframes moveLeftLight { from { opacity: 0; -moz-transform: translate3d(0,-150px,0); } to { opacity: 1; -moz-transform: translate3d(0,0,0); } }
@@ -1293,11 +1284,11 @@
 
 .pt-active .pt-stage-right-light {
   display: block;
-  -webkit-animation: moveRightLight .5s ease-out both .8s;
-  -moz-animation: moveRightLight .5s ease-out both .8s;
-  -ms-animation: moveRightLight .5s ease-out both .8s;
-  -o-animation: moveRightLight .5s ease-out both .8s;
-  animation: moveRightLight .5s ease-out both .8s;
+  -webkit-animation: moveRightLight .5s ease-in both .8s;
+  -moz-animation: moveRightLight .5s ease-in both .8s;
+  -ms-animation: moveRightLight .5s ease-in both .8s;
+  -o-animation: moveRightLight .5s ease-in both .8s;
+  animation: moveRightLight .5s ease-in both .8s;
 }
 @-webkit-keyframes moveRightLight { from { opacity: 0; -webkit-transform: translate3d(0,-150px,0); } to { opacity: 1; -webkit-transform: translate3d(0,0,0); } }
 @-moz-keyframes moveRightLight { from { opacity: 0; -moz-transform: translate3d(0,-150px,0); } to { opacity: 1; -moz-transform: translate3d(0,0,0); } }
@@ -1309,11 +1300,11 @@
 /* Animations of frame-5.5: */
 .pt-active .pt-foot-title {
   display: block;
-  -webkit-animation: moveFootTitle .4s ease-out both;
-  -moz-animation: moveFootTitle .4s ease-out both;
-  -ms-animation: moveFootTitle .4s ease-out both;
-  -o-animation: moveFootTitle .4s ease-out both;
-  animation: moveFootTitle .4s ease-out both;
+  -webkit-animation: moveFootTitle .4s ease-in both;
+  -moz-animation: moveFootTitle .4s ease-in both;
+  -ms-animation: moveFootTitle .4s ease-in both;
+  -o-animation: moveFootTitle .4s ease-in both;
+  animation: moveFootTitle .4s ease-in both;
 }
 @-webkit-keyframes moveFootTitle { from { opacity: 0; -webkit-transform: translate3d(0,-100px,0); } to { opacity: 1; -webkit-transform: translate3d(0,0,0); } }
 @-moz-keyframes moveFootTitle { from { opacity: 0; -moz-transform: translate3d(0,-100px,0); } to { opacity: 1; -moz-transform: translate3d(0,0,0); } }
@@ -1323,11 +1314,11 @@
 
 .pt-active .pt-foot-download-btn {
   display: block;
-  -webkit-animation: moveFootBtn .4s ease-out both .2s;
-  -moz-animation: moveFootBtn .4s ease-out both .2s;
-  -ms-animation: moveFootBtn .4s ease-out both .2s;
-  -o-animation: moveFootBtn .4s ease-out both .2s;
-  animation: moveFootBtn .4s ease-out both .2s;
+  -webkit-animation: moveFootBtn .4s ease-in both .2s;
+  -moz-animation: moveFootBtn .4s ease-in both .2s;
+  -ms-animation: moveFootBtn .4s ease-in both .2s;
+  -o-animation: moveFootBtn .4s ease-in both .2s;
+  animation: moveFootBtn .4s ease-in both .2s;
 }
 @-webkit-keyframes moveFootBtn { from { opacity: 0; -webkit-transform: translate3d(0,-100px,0); } to { opacity: 1; -webkit-transform: translate3d(0,0,0); } }
 @-moz-keyframes moveFootBtn { from { opacity: 0; -moz-transform: translate3d(0,-100px,0); } to { opacity: 1; -moz-transform: translate3d(0,0,0); } }

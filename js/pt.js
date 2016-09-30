@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-26 19:33
+  Latest modified: 2016-09-30 17:53
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -732,7 +732,7 @@
     cdTriggers: $('.cdTrigger'),
 		curPagesClassName: 'cur-pages',
     publicHeader: $('#header'),
-    publicFooter: $('.footerPT')
+    publicFooter: $('#footer-wrap')
 	}
 	CMmousewheel.init(pageObj);
   // Click to pop dialog for downloading:
