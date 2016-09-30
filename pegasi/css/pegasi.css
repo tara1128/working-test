@@ -1,7 +1,7 @@
 /*
   CSS of pegasi
   Author: Alex
-  Date: 2016-09-30 10:57
+  Date: 2016-09-30 13:22
 */
 
 /* Reset */
@@ -19,29 +19,29 @@ table { border-collapse:collapse;border-spacing:0; }
 /* Fonts */
 @font-face {
 	font-family: 'HelveticaBold';
-	src: url('../images/fonts/helveticabold.eot');
-	src: url('../images/fonts/helveticabold.eot') format('embedded-opentype'), url('../images/fonts/helveticabold.woff') format('woff'), url('../images/fonts/helveticabold.ttf') format('truetype'), url('../images/fonts/helveticabold.svg#HelveticaBold') format('svg')
+	src: url('../../images/fonts/helveticabold.eot');
+	src: url('../../images/fonts/helveticabold.eot') format('embedded-opentype'), url('../../images/fonts/helveticabold.woff') format('woff'), url('../../images/fonts/helveticabold.ttf') format('truetype'), url('../../images/fonts/helveticabold.svg#HelveticaBold') format('svg')
 }
 @font-face {
 	font-family: 'HelveticaRegular';
-	src: url('../images/fonts/helvetica.eot');
-	src: url('../images/fonts/helvetica.eot') format('embedded-opentype'), url('../images/fonts/helvetica.woff') format('woff'), url('../images/fonts/helvetica.ttf') format('truetype'), url('../images/fonts/helvetica.svg#HelveticaRegular') format('svg')
+	src: url('../../images/fonts/helvetica.eot');
+	src: url('../../images/fonts/helvetica.eot') format('embedded-opentype'), url('../../images/fonts/helvetica.woff') format('woff'), url('../../images/fonts/helvetica.ttf') format('truetype'), url('../../images/fonts/helvetica.svg#HelveticaRegular') format('svg')
 }
 @font-face {
 	font-family: 'helveticaLight';
-	src: url('../images/fonts/helveticaneue-light.eot');
-	src: url('../images/fonts/helveticaneue-light.eot?#iefix') format('embedded-opentype'), url('../images/fonts/helveticalight.woff') format('woff'), url('../images/fonts/helveticalight.woff') format('woff'), url('../images/fonts/HelveticaLight.ttf') format('truetype'), url('../images/fonts/helveticaneue-light.svg#HelveticaLight') format('svg')
+	src: url('../../images/fonts/helveticaneue-light.eot');
+	src: url('../../images/fonts/helveticaneue-light.eot?#iefix') format('embedded-opentype'), url('../../images/fonts/helveticalight.woff') format('woff'), url('../../images/fonts/helveticalight.woff') format('woff'), url('../../images/fonts/HelveticaLight.ttf') format('truetype'), url('../../images/fonts/helveticaneue-light.svg#HelveticaLight') format('svg')
 }
 @font-face {
 	font-family: 'Gotham-Book';
-	src: url('../images/fonts/Gotham-Book.eot');
-	src: url('../images/fonts/Gotham-Book.eot') format('embedded-opentype'), url('../images/fonts/Gotham-Book.woff') format('woff'), url('../images/fonts/Gotham-Book.ttf') format('truetype'), url('../images/fonts/Gotham-Book.svg#Gotham-Book') format('svg')
+	src: url('../../images/fonts/Gotham-Book.eot');
+	src: url('../../images/fonts/Gotham-Book.eot') format('embedded-opentype'), url('../../images/fonts/Gotham-Book.woff') format('woff'), url('../../images/fonts/Gotham-Book.ttf') format('truetype'), url('../../images/fonts/Gotham-Book.svg#Gotham-Book') format('svg')
 }
 @font-face {
 	font-family: 'Gotham-Book';
 	font-weight: bold;
-	src: url('../images/fonts/Gotham-Bold.eot');
-	src: url('../images/fonts/Gotham-Bold.eot') format('embedded-opentype'), url('../images/fonts/Gotham-Bold.woff') format('woff'), url('../images/fonts/Gotham-Bold.ttf') format('truetype'), url('../images/fonts/Gotham-Bold.svg#Gotham-Bold') format('svg')
+	src: url('../../images/fonts/Gotham-Bold.eot');
+	src: url('../../images/fonts/Gotham-Bold.eot') format('embedded-opentype'), url('../../images/fonts/Gotham-Bold.woff') format('woff'), url('../../images/fonts/Gotham-Bold.ttf') format('truetype'), url('../../images/fonts/Gotham-Bold.svg#Gotham-Bold') format('svg')
 }
 
 /* Global styles */
@@ -99,7 +99,7 @@ table { border-collapse:collapse;border-spacing:0; }
 /* Every icon with this classname is using sprites */
 .peg-has-sprites {
   display:block;
-  background-image:url(../images/peg-icons-gathering2.png);
+  background-image:url(../../images/peg-icons-gathering2.png);
   background-repeat:no-repeat;
   overflow:hidden;
 }
@@ -109,7 +109,7 @@ table { border-collapse:collapse;border-spacing:0; }
 .peg-billboard {
   position:relative;
   height:750px;
-  background:url(../images/peg-top-bg.jpg) 50% 0 no-repeat #193344;
+  background:url(../../images/peg-top-bg.jpg) 50% 0 no-repeat #193344;
   background-size:cover;
 }
 .peg-topmenu {
@@ -260,7 +260,7 @@ table { border-collapse:collapse;border-spacing:0; }
 .peg-stream {
   padding-top:160px;
   height:460px;
-  background:url(../images/peg-stream-service-bg2.jpg) 50% 0 no-repeat #f1f3f4;
+  background:url(../../images/peg-stream-service-bg2.jpg) 50% 0 no-repeat #f1f3f4;
 }
 .peg-stream-title, .peg-stream-intro {
   color:#333;
@@ -319,7 +319,7 @@ table { border-collapse:collapse;border-spacing:0; }
 .peg-searchkit {
   padding-top:160px;
   height:500px;
-  background:url(../images/peg-search-kit-bg.jpg) 50% 0 no-repeat #626467;
+  background:url(../../images/peg-search-kit-bg.jpg) 50% 0 no-repeat #626467;
   background-size:cover;
 }
 .peg-searchkit-title, .peg-searchkit-intro {
@@ -366,7 +366,7 @@ table { border-collapse:collapse;border-spacing:0; }
 .peg-monetization {
   padding-top:160px;
   height:430px;
-  background:url(../images/peg-monetization-bg.jpg) 50% 0 no-repeat #fff;
+  background:url(../../images/peg-monetization-bg.jpg) 50% 0 no-repeat #fff;
   background-size:cover;
 }
 .peg-monetization-title, .peg-monetization-intro {
@@ -445,7 +445,7 @@ table { border-collapse:collapse;border-spacing:0; }
   height:84px;
   overflow:hidden;
   text-indent:-9999px;
-  background:url(../images/peg-partner-icons-grey.png) no-repeat;
+  background:url(../../images/peg-partner-icons-grey.png) no-repeat;
   -webkit-transform: scale(0.95, 0.95); 
   -moz-transform: scale(0.95, 0.95); 
   -ms-transform: scale(0.95, 0.95); 
@@ -458,7 +458,7 @@ table { border-collapse:collapse;border-spacing:0; }
   transition:transform .3s ease, background .3s ease;
 }
 .peg-work-partner.colored {
-  background:url(../images/peg-partner-icons-color.png) no-repeat;
+  background:url(../../images/peg-partner-icons-color.png) no-repeat;
   -webkit-transform: scale(1, 1); 
   -moz-transform: scale(1, 1); 
   -ms-transform: scale(1, 1); 

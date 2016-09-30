@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-28 19:56
+  Latest modified: 2016-09-30 15:06
 */
 
 /* main */
@@ -389,55 +389,30 @@
 .pt-comp-list li {
   position: absolute;
   left: 50%;
+  margin-left: -50%;
+  width: 100%;
   opacity: 0;
 }
 .pt-comp-list li.comp-1 {
   z-index: 9;
-  margin-left: -343px;
-  width: 686px;
-  height: 220px;
 }
 .pt-comp-list li.comp-2 {
   z-index: 8;
-  margin-left: -308px;
-  width: 617px;
-  height: 198px;
 }
 .pt-comp-list li.comp-3 {
   z-index: 7;
-  margin-left: -278px;
-  width: 556px;
-  height: 178px;
 }
 .pt-comp-list li.comp-4 {
   z-index: 6;
-  margin-left: -250px;
-  width: 500px;
-  height: 160px;
 }
 .pt-comp-list li.comp-5 {
   z-index: 5;
-  margin-left: -225px;
-  width: 450px;
-  height: 144px;
 }
 .pt-comp-list img {
+  margin: 0 auto;
+  display: block;
   width: 100%;
-}
-.pt-comp-list img.chart-img-1 {
   max-width: 686px;
-}
-.pt-comp-list img.chart-img-2 {
-  max-width: 617px;
-}
-.pt-comp-list img.chart-img-3 {
-  max-width: 556px;
-}
-.pt-comp-list img.chart-img-4 {
-  max-width: 500px;
-}
-.pt-comp-list img.chart-img-5 {
-  max-width: 450px;
 }
 .pt-fb-icon {
   width: 120px;
@@ -449,7 +424,6 @@
   margin: -110px 0 0 180px;
   opacity: 0;
 }
-
 
 /* Frame 2 "Re" */
 .pt-pulr-title, .pt-pulr-intro, .pt-pulr-video, .pt-video-btn, .pt-pulr-coins, .pt-pulr-honor {
@@ -1221,37 +1195,66 @@
 .pt-active .pt-players-wrap {
   display: block;
   -webkit-animation: movePlayerWrap .5s ease-out both .5s;
+  -moz-animation: movePlayerWrap .5s ease-out both .5s;
+  -ms-animation: movePlayerWrap .5s ease-out both .5s;
+  -o-animation: movePlayerWrap .5s ease-out both .5s;
+  animation: movePlayerWrap .5s ease-out both .5s;
 }
-@keyframes movePlayerWrap { from { opacity: 0; transform:translate(0,-150px); } to { opacity: 1; transform:translate(0, 0); } }
-.pt-active .pt-prev,
-.pt-active .pt-next {
+@-webkit-keyframes movePlayerWrap {from {opacity:0;-webkit-transform:translate(0,-150px); } to {opacity:1;-webkit-transform:translate(0,0);}}
+@-moz-keyframes movePlayerWrap {from {opacity:0;-moz-transform:translate(0,-150px); } to {opacity:1;-moz-transform:translate(0,0);}}
+@-ms-keyframes movePlayerWrap {from {opacity:0;-ms-transform:translate(0,-150px); } to {opacity:1;-ms-transform:translate(0,0);}}
+@-o-keyframes movePlayerWrap {from {opacity:0;-o-transform:translate(0,-150px); } to {opacity:1;-o-transform:translate(0,0);}}
+@keyframes movePlayerWrap {from {opacity:0;transform:translate(0,-150px); } to {opacity:1;transform:translate(0,0);}}
+
+.pt-active .pt-prev, .pt-active .pt-next {
   display: block;
-  -webkit-animation: moveArrowBtn .5s ease-out both .7s;
+  -webkit-animation: moveArrowBtn .5s ease-out both .5s;
+  -moz-animation: moveArrowBtn .5s ease-out both .5s;
+  -ms-animation: moveArrowBtn .5s ease-out both .5s;
+  -o-animation: moveArrowBtn .5s ease-out both .5s;
+  animation: moveArrowBtn .5s ease-out both .5s;
 }
-@keyframes moveArrowBtn { from { opacity: 0; transform:translate(0,-150px); } to { opacity: 1; transform:translate(0, 0); } }
+@-webkit-keyframes moveArrowBtn {from {opacity:0;-webkit-transform:translate(0,-150px);} to {opacity:1;-webkit-transform:translate(0,0);}}
+@-moz-keyframes moveArrowBtn {from {opacity:0;-moz-transform:translate(0,-150px);} to {opacity:1;-moz-transform:translate(0,0);}}
+@-ms-keyframes moveArrowBtn {from {opacity:0;-ms-transform:translate(0,-150px);} to {opacity:1;-ms-transform:translate(0,0);}}
+@-o-keyframes moveArrowBtn {from {opacity:0;-o-transform:translate(0,-150px);} to {opacity:1;-o-transform:translate(0,0);}}
+@keyframes moveArrowBtn {from {opacity:0;transform:translate(0,-150px);} to {opacity:1;transform:translate(0,0);}}
 
 .pt-active .pt-player-drum-guy {
   display: block;
-  -webkit-animation: moveDrumGuy .5s ease-out both .9s;
+  -webkit-animation: moveDrumGuy .5s ease-out both .8s;
+  -moz-animation: moveDrumGuy .5s ease-out both .8s;
+  -ms-animation: moveDrumGuy .5s ease-out both .8s;
+  -o-animation: moveDrumGuy .5s ease-out both .8s;
+  animation: moveDrumGuy .5s ease-out both .8s;
 }
-@keyframes moveDrumGuy { from { opacity: 0; transform:translate(0,-150px); } to { opacity: 1; transform:translate(0, 0); } }
+@-webkit-keyframes moveDrumGuy { from {opacity:0;-webkit-transform:translate(0,-150px);} to {opacity:1;-webkit-transform:translate(0,0);}}
+@-moz-keyframes moveDrumGuy { from {opacity:0;-moz-transform:translate(0,-150px);} to {opacity:1;-moz-transform:translate(0,0);}}
+@-ms-keyframes moveDrumGuy { from {opacity:0;-ms-transform:translate(0,-150px);} to {opacity:1;-ms-transform:translate(0,0);}}
+@-o-keyframes moveDrumGuy { from {opacity:0;-o-transform:translate(0,-150px);} to {opacity:1;-o-transform:translate(0,0);}}
+@keyframes moveDrumGuy { from {opacity:0;transform:translate(0,-150px);} to {opacity:1;transform:translate(0,0);}}
+
 .pt-active .pt-player-bass-guy {
   display: block;
-  -webkit-animation: moveBassGuy .5s ease-out both 1.1s;
-  -moz-animation: moveBassGuy .5s ease-out both 1.1s;
-  -ms-animation: moveBassGuy .5s ease-out both 1.1s;
-  -o-animation: moveBassGuy .5s ease-out both 1.1s;
-  animation: moveBassGuy .5s ease-out both 1.1s;
+  -webkit-animation: moveBassGuy .5s ease-out both 1s;
+  -moz-animation: moveBassGuy .5s ease-out both 1s;
+  -ms-animation: moveBassGuy .5s ease-out both 1s;
+  -o-animation: moveBassGuy .5s ease-out both 1s;
+  animation: moveBassGuy .5s ease-out both 1s;
 }
-@keyframes moveBassGuy { from { opacity: 0; transform:translate(0,-150px); } to { opacity: 1; transform:translate(0, 0); } }
+@-webkit-keyframes moveBassGuy { from {opacity:0;-webkit-transform:translate(0,-150px);} to {opacity:1;-webkit-transform:translate(0,0);}}
+@-moz-keyframes moveBassGuy { from {opacity:0;-moz-transform:translate(0,-150px);} to {opacity:1;-moz-transform:translate(0,0);}}
+@-ms-keyframes moveBassGuy { from {opacity:0;-ms-transform:translate(0,-150px);} to {opacity:1;-ms-transform:translate(0,0);}}
+@-o-keyframes moveBassGuy { from {opacity:0;-o-transform:translate(0,-150px);} to {opacity:1;-o-transform:translate(0,0);}}
+@keyframes moveBassGuy { from {opacity:0;transform:translate(0,-150px);} to {opacity:1;transform:translate(0,0);}}
 
 .pt-active .pt-player-drumkit-guys {
   display: block;
-  -webkit-animation: moveDrumkitGuys .5s ease-out both 1.3s;
-  -moz-animation: moveDrumkitGuys .5s ease-out both 1.3s;
-  -ms-animation: moveDrumkitGuys .5s ease-out both 1.3s;
-  -o-animation: moveDrumkitGuys .5s ease-out both 1.3s;
-  animation: moveDrumkitGuys .5s ease-out both 1.3s;
+  -webkit-animation: moveDrumkitGuys .5s ease-out both 1.2s;
+  -moz-animation: moveDrumkitGuys .5s ease-out both 1.2s;
+  -ms-animation: moveDrumkitGuys .5s ease-out both 1.2s;
+  -o-animation: moveDrumkitGuys .5s ease-out both 1.2s;
+  animation: moveDrumkitGuys .5s ease-out both 1.2s;
 }
 @-webkit-keyframes moveDrumkitGuys {from {opacity: 0; -webkit-transform:translate(0,-150px); } to {opacity: 1; -webkit-transform:translate(0, 0); } }
 @-moz-keyframes moveDrumkitGuys {from {opacity:0;-moz-transform:translate(0,-150px);} to {opacity:1; -moz-transform:translate(0,0);}}
@@ -1333,25 +1336,45 @@
 @keyframes moveFootBtn { from { opacity: 0; transform: translate3d(0,-100px,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
 
 
-
-
-
-
-
-
+/* ======= ==================== ======= */
 /* ======= Responsive Solutions ======= */
+/* ======= ==================== ======= */
 @media screen and (max-width: 599px) {
   .pt-do-tile{ margin: 0 0 0 -50%; top: 70px; }
   .pt-do-text{ margin: 0 0 0 -50%; top: 280px; }
   .pt-do-crumb{ margin: -150px 0 0 -50%; }
   .pt-do-tile img { margin: 0 auto; width: 55%; }
   .pt-do-text img { margin: 0 auto; width: 70%; }
+  .pt-comp-list {margin:-80px 0 0 -45%; width:90%;}
   .pt-players-wrap{ width: 300px; height: 360px; margin:-158px 0 0 -150px; }
   .pt-next{ margin-left: 0; right: 5%; left: auto; }
   .pt-prev{ margin-left: 0; left: 5%; }
   .pt-do-download-btn{ margin:174px 0 0 -164px; }
   .pt-stage-elements {display:none!important;}
 	.pt-pop-main { left: 10%; width: 80%; margin-left: 0; }
+  @-webkit-keyframes moveComp_2 { from {opacity:0; top:120px;} to {opacity:1; top:80px;} }
+  @-moz-keyframes moveComp_2 { from {opacity:0; top:120px;} to {opacity:1; top:80px;} }
+  @-ms-keyframes moveComp_2 { from {opacity:0; top:120px;} to {opacity:1; top:80px;} }
+  @-o-keyframes moveComp_2 { from {opacity:0; top:120px;} to {opacity:1; top:80px;} }
+  @keyframes moveComp_2 { from {opacity:0; top:120px;} to {opacity:1; top:80px;} }
+
+  @-webkit-keyframes moveComp_3 { from {opacity:0; top:170px;} to {opacity:1; top:130px;} }
+  @-moz-keyframes moveComp_3 { from {opacity:0; top:170px;} to {opacity:1; top:130px;} }
+  @-ms-keyframes moveComp_3 { from {opacity:0; top:170px;} to {opacity:1; top:130px;} }
+  @-o-keyframes moveComp_3 { from {opacity:0; top:170px;} to {opacity:1; top:130px;} }
+  @keyframes moveComp_3 { from {opacity:0; top:170px;} to {opacity:1; top:130px;} }
+
+  @-webkit-keyframes moveComp_4 { from {opacity:0; top:220px;} to {opacity:1; top:180px;} }
+  @-moz-keyframes moveComp_4 { from {opacity:0; top:220px;} to {opacity:1; top:180px;} }
+  @-ms-keyframes moveComp_4 { from {opacity:0; top:220px;} to {opacity:1; top:180px;} }
+  @-o-keyframes moveComp_4 { from {opacity:0; top:220px;} to {opacity:1; top:180px;} }
+  @keyframes moveComp_4 { from {opacity:0; top:220px;} to {opacity:1; top:180px;} }
+
+  @-webkit-keyframes moveComp_5 { from {opacity:0; top:270px;} to {opacity:1; top:230px;} }
+  @-moz-keyframes moveComp_5 { from {opacity:0; top:270px;} to {opacity:1; top:230px;} }
+  @-ms-keyframes moveComp_5 { from {opacity:0; top:270px;} to {opacity:1; top:230px;} }
+  @-o-keyframes moveComp_5 { from {opacity:0; top:270px;} to {opacity:1; top:230px;} }
+  @keyframes moveComp_5 { from {opacity:0; top:270px;} to {opacity:1; top:230px;} }
 }/* /end media */
 @media (min-width: 600px) and (max-width: 899px) {
   .pt-do-tile{ margin: 0 0 0 -50%; top: 120px; }
@@ -1359,6 +1382,7 @@
   .pt-do-crumb{ margin: -150px 0 0 -50%; }
   .pt-do-tile img { margin: 0 auto; width: 55%; }
   .pt-do-text img { margin: 0 auto; width: 70%; }
+  .pt-comp-list {margin:-80px 0 0 -45%; width:90%;}
   .pt-players-wrap{ width: 300px; height: 360px; margin: -180px 0 0 -150px; }
   .pt-next{ margin-left: 30%; }
   .pt-prev{ margin-left: -37%; }
@@ -1416,9 +1440,8 @@
   .pt-comp-title{ top: 0; left: 50%; margin: 80px 0 0 -50%; width: 100%; }
   .pt-comp-title img { display: block; width: 80%; margin: 0 auto; }
   .pt-comp-intro{ width: 70%; top: 0; left: 50%; margin: 290px 0 0 -35%; }
-  .pt-comp-list{ width: 100%; height: auto; top: 50%; margin: -80px 0 0 -50%; }
-  .pt-comp-list li{ width: 100%; height: auto; }
-  .pt-fb-icon{ top: 50%; left: auto; right: 45px; margin: -110px 0 0 0; }
+  .pt-comp-list{ margin:-70px 0 0 -45%;width:90%;}
+  .pt-fb-icon{ top: 50%; left: auto; right: 35px; margin: -110px 0 0 0; }
   .pt-fb-icon img { width: 80%; }
   .pt-stories-title{ top: 0; left: 50%; margin: 80px 0 0 -50%; }
   .pt-stories-title img { display: block; width: 80%; margin: 0 auto; }
@@ -1453,9 +1476,8 @@
   .pt-music-intro{ width: 90%; top: 0; margin:225px 0 0 -45%; }
   .pt-comp-title{ top: 0; left: 50%; margin: 80px 0 0 -50%; width: 100%; }
   .pt-comp-title img { display: block; width: 80%; margin: 0 auto; }
-  .pt-comp-list{ width: 100%; height: auto; top: 50%; margin:-70px 0 0 -50%; }
-  .pt-comp-list li{ width: 100%; height: auto; }
-  .pt-fb-icon{ top: 50%; left: auto; right: 45px; margin: -110px 0 0 0; }
+  .pt-comp-list{ margin:-70px 0 0 -45%;width:90%;}
+  .pt-fb-icon{ top: 50%; left: auto; right: 18px; margin: -110px 0 0 0; }
   .pt-fb-icon img { width: 80%; }
   .pt-stories-title{ top: 0; left: 50%; margin:90px 0 0 -50%; }
   .pt-stories-title img { display: block; width: 80%; margin: 0 auto; }
