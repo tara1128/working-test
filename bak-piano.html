@@ -100,7 +100,7 @@ var startTime = new Date().getTime();
 
   <div id="ptWrap">
 
-    <div class="pt-content" id="switch-do">
+    <div class="pt-content" id="switchDo">
     	<div class="pt-do-tile"><img src="images/pt/pt-big-tile.png" /></div>
     	<div class="pt-do-text"><img src="images/pt/pt-big-text.png" /></div>
     	<div class="pt-do-crumb"><img src="images/pt/pt-crumb.png" /></div>
@@ -109,9 +109,9 @@ var startTime = new Date().getTime();
         <s class="btn-body"></s>
         <s class="btn-face"></s>
       </a>
-    </div><!-- pt content -->
+    </div><!-- pt content #switchDo -->
 
-    <div class="pt-content" id="switch-re">
+    <div class="pt-content" id="switchRe">
       <span class="pt-pulr-title">
         <img src="images/pt/pt-popular-title.png" alt="The Most Popular Musical Game" />
       </span>
@@ -135,9 +135,9 @@ var startTime = new Date().getTime();
         <i class="csc"><img src="images/pt/pt-video-coins-3.png" /></i>
       </div>
       <span class="pt-pulr-honor"><img src="images/pt/pt-best-of-2015.png" /></span>
-    </div><!-- pt content -->
+    </div><!-- pt content #switchRe -->
 
-    <div class="pt-content" id="switch-me">
+    <div class="pt-content" id="switchMe">
     	<span class="pt-music-title">
         <img src="images/pt/pt-various-sel-title.png" alt="Various Selections Of Music" />
       </span>
@@ -178,9 +178,9 @@ var startTime = new Date().getTime();
           </div>
         </div><!-- music main -->
       </div><!-- play field -->
-    </div><!-- pt content -->
+    </div><!-- pt content #switchMe -->
 
-    <div class="pt-content" id="switch-fa">
+    <div class="pt-content" id="switchFa">
     	<div class="pt-comp-title">
         <img src="images/pt/pt-compete-title.png" alt="Compete with Friends and Global Players" />
       </div>
@@ -193,9 +193,9 @@ var startTime = new Date().getTime();
         <li class="comp-4"><img class="chart-img-4" src="images/pt/pt-charts-4s.png" /></li>
         <li class="comp-5"><img class="chart-img-5" src="images/pt/pt-charts-5s.png" /></li>
     	</ul>
-    </div>
+    </div><!-- pt content #switchFa -->
 
-    <div class="pt-content" id="switch-so">
+    <div class="pt-content" id="switchSo">
     	<div class="pt-stories-title">
         <img src="images/pt/pt-stories-title.png" alt="Stories From Our Players" />
       </div>
@@ -211,7 +211,8 @@ var startTime = new Date().getTime();
     				</li>
     				<li>
     					<div class="pt-players-videostory">
-                <img src="images/pt/pt-with-cat.png" /><a class="pt-story-ply-btn" href="https://www.youtube.com/watch?v=icXN5-DJloc" target="_blank"></a>
+                <img src="images/pt/pt-with-cat.png" />
+                <a class="pt-story-ply-btn" href="https://www.youtube.com/watch?v=icXN5-DJloc" target="_blank"></a>
               </div>
               <p class="pt-players-vdtitle">This Cat can be master Piano Tiles 2</p>
     				</li>
@@ -232,53 +233,60 @@ var startTime = new Date().getTime();
               </div>
     				</li>
     			</ul>
-    		</div>
-    	</div>
+    		</div><!-- players main -->
+    	</div><!-- players wrap -->
 		  <a class="pt-next" href="javascript:;"></a>
-        <div class="players-bg-img">
-            <span class="pt-player-drum-guy pt-stage-elements"><img src="images/pt/pt-drum-guy.png" /></span>
-            <span class="pt-player-bass-guy pt-stage-elements"><img src="images/pt/pt-bass-guy.png" /></span>
-            <span class="pt-player-drumkit-guys pt-stage-elements"><img src="images/pt/pt-drum-kit-guys.png" /></span>
-            <span class="pt-stage-left-light pt-stage-elements"><img src="images/pt/pt-floor-left-light.png" /></span>
-            <span class="pt-stage-right-light pt-stage-elements"><img src="images/pt/pt-floor-right-light.png" /></span>
-            <img src="images/pt/pt-stadium.png" width="100%" />
-        </div>
-    </div>
-    <!-- right down -->
+      <div class="players-bg-img">
+        <span class="pt-player-drum-guy pt-stage-elements"><img src="images/pt/pt-drum-guy.png" /></span>
+        <span class="pt-player-bass-guy pt-stage-elements"><img src="images/pt/pt-bass-guy.png" /></span>
+        <span class="pt-player-drumkit-guys pt-stage-elements"><img src="images/pt/pt-drum-kit-guys.png" /></span>
+        <span class="pt-stage-left-light pt-stage-elements"><img src="images/pt/pt-floor-left-light.png" /></span>
+        <span class="pt-stage-right-light pt-stage-elements"><img src="images/pt/pt-floor-right-light.png" /></span>
+        <img src="images/pt/pt-stadium.png" width="100%" />
+      </div>
+    </div><!-- pt content # switchSo -->
+
+    <!-- Right down -->
     <div class="pt-right-down" id="ptRightDown">
       <span class="pt-rd-img"><img src="images/pt/pt-rightdown-logo.png" /></span>
-      <p><a href="https://itunes.apple.com/us/app/piano-tiles-2-dont-tap-white/id1027688889?mt=8" class="pt-rd-ios" target="_blank"></a><a href="https://play.google.com/store/apps/details?id=com.cmplay.tiles2" class="pt-rd-android" target="_blank"></a></p>
+      <p>
+        <a class="pt-rd-ios" href="https://itunes.apple.com/us/app/piano-tiles-2-dont-tap-white/id1027688889?mt=8" target="_blank"></a>
+        <a class="pt-rd-android" href="https://play.google.com/store/apps/details?id=com.cmplay.tiles2" target="_blank"></a>
+      </p>
     </div>
-    <!-- canvas -->
+
     <canvas id="myCanvas"></canvas>
-</div>
+    
+  </div><!-- End of #ptWrap -->
+  
+  <!-- PT footer -->
+  <div class="pt-footer" id="ptVfooter">
+    <span class="pt-foot-title">
+      <img src="images/pt/pt-pianist-title.png" alt="Wanna be the pianist?" />
+    </span>
+    <a class="pt-foot-download-btn pt-triple-layer-btn" title="Download" id="ptDownLoadBtnb">
+      <s class="btn-shadow"></s>
+      <s class="btn-body"></s>
+      <s class="btn-face"></s>
+    </a>
+    <span class="pt-foot-pianist"></span>
+  </div><!-- pt footer -->
 
-<!-- footer -->
-<div class="pt-footer" id="ptVfooter">
-  <span class="pt-foot-title">
-    <img src="images/pt/pt-pianist-title.png" alt="Wanna be the pianist?" />
-  </span>
-  <a class="pt-foot-download-btn pt-triple-layer-btn" title="Download" id="ptDownLoadBtnb">
-    <s class="btn-shadow"></s>
-    <s class="btn-body"></s>
-    <s class="btn-face"></s>
-  </a>
-  <span class="pt-foot-pianist"></span>
-</div>
+  <!-- Buttons on the right side -->
+  <div id="pt-cur">
+    <a data="switch-do" class="cur-pages">Do</a>
+    <a data="switch-re">Re</a>
+    <a data="switch-me">Me</a>
+    <a data="switch-fa">Fa</a>
+    <a data="switch-so">So</a>
+  </div><!-- Btns on the right side -->
 
-<div id="pt-cur">
-  <a data="switch-do" class="cur-pages">Do</a>
-  <a data="switch-re">Re</a>
-  <a data="switch-me">Me</a>
-  <a data="switch-fa">Fa</a>
-  <a data="switch-so">So</a>
-</div>
-
-<div id="footer-wrap" class="footerPT">
-  <div id="footer">
-    <span class="foot-copy"><a href="/protocol/site/privacy.html">Privacy Policy</a>&nbsp;<em>|</em>&nbsp;Cheetah Mobile &copy; 2016</span><span class="foot-lang"> · <em class="lang-current">English</em><em class="lang-list"><a href="/en-us/">English</a><a href="/es-es/">Español</a><a href="/fr-fr/">Français</a><a href="/ru-ru/">Pусский</a><a href="/pt-pt/">Português</a><a href="/ja-jp/">日本語</a><a href="/ko-kr/">한국어</a><a href="/zh-tw/">繁體中文</a><a href="/zh-cn/">简体中文</a></em></span>
+  <!-- Here starts the public footer: -->
+  <div id="footer-wrap">
+    <div id="footer">
+      <span class="foot-copy"><a href="/protocol/site/privacy.html">Privacy Policy</a>&nbsp;<em>|</em>&nbsp;Cheetah Mobile &copy; 2016</span><span class="foot-lang"> · <em class="lang-current">English</em><em class="lang-list"><a href="/en-us/">English</a><a href="/es-es/">Español</a><a href="/fr-fr/">Français</a><a href="/ru-ru/">Pусский</a><a href="/pt-pt/">Português</a><a href="/ja-jp/">日本語</a><a href="/ko-kr/">한국어</a><a href="/zh-tw/">繁體中文</a><a href="/zh-cn/">简体中文</a></em></span>
+    </div>
   </div>
-</div>
 
 </div><!-- end #wrap -->
 <script type="text/javascript" src="/js/common.min.js"></script>
