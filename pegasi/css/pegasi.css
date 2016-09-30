@@ -537,9 +537,6 @@ table { border-collapse:collapse;border-spacing:0; }
     padding:10px 0 0 10px;
     width:260px;
   }
-  .peg-mone-item {
-    margin:0 0 16px;
-  }
 }
 
 @media screen and (max-width: 767px) {
