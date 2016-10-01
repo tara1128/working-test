@@ -1,17 +1,50 @@
 <!DOCTYPE html>
-<html class="standard">
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
 <meta name="format-detection" content="email=no" />
 <meta name="format-detection" content="address=no" />
 <meta name="format-detection" content="telephone=no" />
-<title> Test index </title>
+<title> Web Test Platform </title>
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<link rel="stylesheet" href="#" type="text/css" />
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+<link rel="stylesheet" href="css/reset.css" type="text/css" />
 </head>
-<body>
-  Nothing but an index page...
+<body id="webTestBody">
+
+  <div class="popupMask" id="myPopupMask"></div>
+
+  <div class="wrapper" id="myWrap">
+
+    <div class="heading" id="myHeading">
+      <div class="head-left">
+        <div class="head-icon">
+          <img src="images/testing-icon.png" width="120" alt="I am your testing robot!">
+        </div>
+        <h1>Web Test Platform</h1>
+      </div><!-- left -->
+      <div class="head-right">
+        <h2>Make web pages & web apps perfect!</h2>
+      </div><!-- right -->
+    </div><!-- #myHeading -->
+
+    <div class="bodying" id="myBodying">
+      <h2>Sign in to get started!</h2>
+      <div class="form-content" id="formDiv"></div>
+    </div><!-- #myBodying -->
+
+    <div class="footing" id="myFooting">
+      <p>2016 Web Test Platform all rights reserved.</p>
+    </div><!-- #myFooting -->
+
+  </div><!-- #myWrap -->
+
+<script src="lib/react.js"></script>
+<script src="lib/react-dom.js"></script>
+<script src="lib/browser.js"></script>
+<!-- script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script -->
+<script type="text/babel" src="js/index.js"></script>
 </body>
 </html>
