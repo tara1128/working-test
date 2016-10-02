@@ -56,9 +56,9 @@ var IndexLogin = React.createClass({
 
   reqForAccount: function() {
     var title = 'Info';
-    var description = 'Leave your email here and I will send you an account! Thanks!';
+    var description = 'Leave your email here and I will send you an account.';
     var popWrap = document.getElementById('myPopupMask');
-    ReactDOM.render( <Popup title={title} desc={description} hasInput={true} />, popWrap );
+    ReactDOM.render( <Popup title={title} desc={description} mask={popWrap} hasInput={true} />, popWrap );
   },
 
   render: function(){
@@ -89,6 +89,7 @@ var Popup = React.createClass({
     return {
       title: this.props.title,
       desc: this.props.desc,
+      mask: this.props.mask,
       hasInput: this.props.hasInput
     }
   },
@@ -99,6 +100,14 @@ var Popup = React.createClass({
 
   onCancel: function() {
     alert('Cancelled');
+  },
+
+  componentWillMount: function() {
+    this.state.mask.style.display = 'block';
+  },
+
+  componentWillUnmount: function() {
+    this.state.mask.style.display = 'none';
   },
 
   render: function() {
