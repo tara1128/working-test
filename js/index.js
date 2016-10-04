@@ -1,6 +1,6 @@
 /*
   index.js
-  latest modified: 2016-10-01 17:18
+  latest modified: 2016-10-04 10:09
 */
 
 var IndexLogin = React.createClass({
@@ -46,6 +46,12 @@ var IndexLogin = React.createClass({
     this.setState({error: msg});
   },
 
+  removeErrorMsg: function() {
+    if( this.state.error ){
+      this.setState({error: ''});
+    }
+  },
+
   validate: function(type, value) {
     var rules = {
       'text': /\w+[\w.]*@(([c][m]){2}||conew)\.com/,
@@ -65,8 +71,8 @@ var IndexLogin = React.createClass({
     return (
       <div className='form-field'>
         <div className='inputs-wrap'>
-          <input type='text' onChange={this.onChange} value={this.state.username} placeholder='Your username here' />
-          <input type='password' onChange={this.onChange} value={this.state.password} placeholder='Password here' />
+          <input type='text' onChange={this.onChange} onFocus={this.removeErrorMsg} value={this.state.username} placeholder='Your username here' />
+          <input type='password' onChange={this.onChange} onFocus={this.removeErrorMsg} value={this.state.password} placeholder='Password here' />
         </div>
         <div className='btns-wrap'>
           <a className='btn-submit' onClick={this.handleSubmit}>Enter</a>
@@ -90,29 +96,65 @@ var Popup = React.createClass({
       title: this.props.title,
       desc: this.props.desc,
       mask: this.props.mask,
-      hasInput: this.props.hasInput
+      hasInput: this.props.hasInput,
+      inputElement: null,
+      inputValue: ''
     }
   },
 
-  onConfirm: function() {
-    alert('Ok');
-  },
-
-  onCancel: function() {
-    alert('Cancelled');
-  },
-
-  componentWillMount: function() {
+  showPopup: function() {
     this.state.mask.style.display = 'block';
   },
 
-  componentWillUnmount: function() {
+  destroyPopup: function() {
+    ReactDOM.unmountComponentAtNode( ReactDOM.findDOMNode(this).parentNode );
     this.state.mask.style.display = 'none';
+  },
+
+  onConfirm: function() {
+    if( !this.state.hasInput ){
+      this.destroyPopup();
+    }else if( this.validate(this.state.inputValue) ){
+      // Store emails to somewhere
+      console.log('Email ok, ready to save it.');
+      this.destroyPopup();
+    }else{
+      // Warn email invalid
+      //ReactDOM.findDOMNode(this).childNodes
+      this.state.inputElement.style.border = '1px solid #972624';
+      this.state.inputElement.style.transform = 'translateY(4px)';
+      console.log('Email invalid' );
+    }
+  },
+
+  onCancel: function() {
+    this.destroyPopup();
+  },
+
+  onChange: function(e) {
+    var _val = e.target.value;
+    this.setState({
+      inputElement: e.target,
+      inputValue: _val
+    });
+  },
+
+  validate: function( value ) {
+    var emailPattern = /\w+[\w.]*@[\w.]+\.\w+/;
+    return emailPattern.test(value);
+  },
+
+  componentWillMount: function() {
+    this.showPopup();
+  },
+
+  componentWillUnmount: function() {
+    this.destroyPopup();
   },
 
   render: function() {
     if(this.state.hasInput){
-      var _input = <input type='text' className='popup-input' id='popupInput' />
+      var _input = <input type='text' className='popup-input' onChange={this.onChange} value={this.state.inputValue} />
     }else{
       var _input = '';
     }

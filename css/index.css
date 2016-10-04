@@ -1,6 +1,6 @@
 /*
   index.css for Web Test Platform
-  Latest modified: 2016-10-02 11:32
+  Latest modified: 2016-10-04 10:09
 */
 
 body {
@@ -173,6 +173,11 @@ body {
   border-radius:4px;
   background:#fff;
   color:#0060b5;
+  -webkit-transition:all .4s ease-out;
+  -moz-transition:all .4s ease-out;
+  -ms-transition:all .4s ease-out;
+  -o-transition:all .4s ease-out;
+  transition:all .4s ease-out;
 }
 .popup-btns {
   margin:50px 20px 0;
