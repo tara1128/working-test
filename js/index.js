@@ -1,6 +1,6 @@
 /*
   index.js
-  latest modified: 2016-10-04 10:09
+  latest modified: 2016-10-05 18:14
 */
 
 var IndexLogin = React.createClass({
@@ -38,7 +38,11 @@ var IndexLogin = React.createClass({
     }else if( !validPassword ){
       this.giveErrorMsg( 'Invalid password!' );
     }else{
-      alert('OK!!!');
+      ReactDOM.unmountComponentAtNode( ReactDOM.findDOMNode(this).parentNode );
+      var divOfCategory = document.getElementById('categoryDiv');
+      var cates = cateList;
+      ReactDOM.render( <Categories list={cates} />, divOfCategory );
+      reactCookie.save('CMWebTester', this.state.username);
     }
   },
 
@@ -67,9 +71,21 @@ var IndexLogin = React.createClass({
     ReactDOM.render( <Popup title={title} desc={description} mask={popWrap} hasInput={true} />, popWrap );
   },
 
+  componentWillMount: function() {
+    var _this = this;
+    if( document.addEventListener ){
+      document.addEventListener('keypress', function(e){
+        if(e.keyCode == 13){
+          _this.handleSubmit();
+        }
+      });
+    }
+  },
+
   render: function(){
     return (
       <div className='form-field'>
+        <h2 className='form-title'>Sign in to get started!</h2>
         <div className='inputs-wrap'>
           <input type='text' onChange={this.onChange} onFocus={this.removeErrorMsg} value={this.state.username} placeholder='Your username here' />
           <input type='password' onChange={this.onChange} onFocus={this.removeErrorMsg} value={this.state.password} placeholder='Password here' />
@@ -84,9 +100,32 @@ var IndexLogin = React.createClass({
   }
 });
 
-var divOfLogin = document.getElementById('formDiv');
-ReactDOM.render( <IndexLogin />, divOfLogin );
+/* Module of Categories */
+var Categories = React.createClass({
 
+  getInitialState: function() {
+    return {
+      
+    }
+  },
+
+  render: function() {
+    return (
+      <div className='cate-wrap'>
+        <h2 className='cate-title'>Choose one to test</h2>
+        {this.props.list.map(function(value,i){
+          return (
+            <a className='cate-item clearfix' key={i} href={value.linkTo}>
+              <span className='cate-name'>{value.projectName}</span>
+              <span className='cate-date'>{value.latestModified}</span>
+            </a>
+          );
+        })}
+      </div>
+    );
+  }
+
+});
 
 /* Module of Popup */
 var Popup = React.createClass({
@@ -112,18 +151,17 @@ var Popup = React.createClass({
   },
 
   onConfirm: function() {
-    if( !this.state.hasInput ){
-      this.destroyPopup();
-    }else if( this.validate(this.state.inputValue) ){
-      // Store emails to somewhere
+    var _this = this;
+    if( !_this.state.hasInput ){
+      _this.destroyPopup();
+    }else if( _this.validate(_this.state.inputValue) ){
       console.log('Email ok, ready to save it.');
-      this.destroyPopup();
+      _this.destroyPopup();
+    }else if( _this.state.inputElement ) {
+      _this.state.inputElement.style.border = '1px solid #972624';
+      _this.state.inputElement.style.transform = 'translateY(4px)';
     }else{
-      // Warn email invalid
-      //ReactDOM.findDOMNode(this).childNodes
-      this.state.inputElement.style.border = '1px solid #972624';
-      this.state.inputElement.style.transform = 'translateY(4px)';
-      console.log('Email invalid' );
+      return;
     }
   },
 
@@ -172,4 +210,35 @@ var Popup = React.createClass({
   }
 
 });
+
+var cateList = [
+  {
+    projectName: 'Piano Tiles 2',
+    linkTo: 'piano-tiles/',
+    latestModified: '2016-10-04 12:22'
+  },
+  {
+    projectName: 'Pegasi',
+    linkTo: 'pegasi/',
+    latestModified: '2016-09-28 20:34'
+  },
+  {
+    projectName: 'WhatsCall',
+    linkTo: 'whats-call/',
+    latestModified: '2016-10-09 10:11'
+  }
+];
+
+function init() {
+  var cookie = reactCookie.load('CMWebTester');
+  if( cookie ){
+    var divOfCategory = document.getElementById('categoryDiv');
+    ReactDOM.render( <Categories list={cateList} />, divOfCategory );
+  }else{
+    var divOfLogin = document.getElementById('formDiv');
+    ReactDOM.render( <IndexLogin />, divOfLogin );
+  }
+};
+
+init();
 
