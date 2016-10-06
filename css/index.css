@@ -1,6 +1,6 @@
 /*
   index.css for Web Test Platform
-  Latest modified: 2016-10-04 10:09
+  Latest modified: 2016-10-06 20:39
 */
 
 body {
@@ -257,12 +257,6 @@ body {
   color:#e5e5e5;
 }
 
-
-
-
-
-
-
 .footing {
   position:fixed;
   bottom:0;
@@ -277,4 +271,35 @@ body {
   text-align:center;
   color:#aaa;
   line-height:32px;
+}
+
+@media screen and (max-width:768px) {
+  .heading {
+    padding-top:15px;
+    height:225px;
+  }
+  .heading-title {
+    margin:15px auto 4px;
+    font-size:28px;
+  }
+  .heading-slogan {
+    font-size:14px;
+  }
+  .bodying {
+    margin:30px auto 100px;
+    width:90%;
+  }
+  .bodying-form input {
+    width:100%;
+  }
+  .popup-container {
+    top:120px;
+    margin:0 0 0 -45%;
+    width:90%;
+  }
+  .cate-title {
+    margin:0 0 18px;
+    font-size:16px;
+  }
+
 }
