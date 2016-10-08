@@ -1,7 +1,7 @@
 /*
   CSS of pegasi
   Author: Alex
-  Date: 2016-10-08 18:54
+  Date: 2016-10-08 19:16
 */
 
 /* Reset */
@@ -263,7 +263,7 @@ table { border-collapse:collapse;border-spacing:0; }
 .peg-stream {
   padding-top:160px;
   height:460px;
-  background:url(../../images/peg-stream-service-bg2.jpg) 50% 0 no-repeat #f1f3f4;
+  background:url(../../images/peg-streamservice-bg.jpg) 50% 0 no-repeat #f1f3f4;
 }
 .peg-stream-title, .peg-stream-intro {
   color:#333;
@@ -564,7 +564,7 @@ table { border-collapse:collapse;border-spacing:0; }
     line-height:1.4rem;
   }
   .peg-sec h2 {
-    margin:35px 20px 60px;
+    margin:35px 20px 50px;
     line-height:1.4em;
   }
   .peg-container-wider {
@@ -650,6 +650,15 @@ table { border-collapse:collapse;border-spacing:0; }
     margin:0 auto 30px;
     float:none;
     width:100%;
+    height:auto;
+  }
+  .peg-mone-icon {
+    margin: 12px auto 8px;
+    float:none;
+  }
+  .peg-mone-item-title {
+    padding:0 10px;
+    text-align:center;
   }
   .peg-work-partner {
     margin:10px 5px;
