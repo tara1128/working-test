@@ -1,6 +1,6 @@
 /*
   index.js
-  latest modified: 2016-10-05 18:14
+  latest modified: 2016-10-08 19:32
 */
 
 var IndexLogin = React.createClass({
@@ -87,7 +87,7 @@ var IndexLogin = React.createClass({
       <div className='form-field'>
         <h2 className='form-title'>Sign in to get started!</h2>
         <div className='inputs-wrap'>
-          <input type='text' onChange={this.onChange} onFocus={this.removeErrorMsg} value={this.state.username} placeholder='Your username here' />
+          <input type='text' onChange={this.onChange} onFocus={this.removeErrorMsg} autoFocus value={this.state.username} placeholder='Your username here please' />
           <input type='password' onChange={this.onChange} onFocus={this.removeErrorMsg} value={this.state.password} placeholder='Password here' />
         </div>
         <div className='btns-wrap'>
@@ -155,13 +155,19 @@ var Popup = React.createClass({
     if( !_this.state.hasInput ){
       _this.destroyPopup();
     }else if( _this.validate(_this.state.inputValue) ){
-      console.log('Email ok, ready to save it.');
-      _this.destroyPopup();
+      _this.saveEmail( _this.state.inputValue, _this.destroyPopup );
     }else if( _this.state.inputElement ) {
       _this.state.inputElement.style.border = '1px solid #972624';
       _this.state.inputElement.style.transform = 'translateY(4px)';
     }else{
       return;
+    }
+  },
+
+  saveEmail: function(email, callback) {
+    // You need an API to store data...
+    if(callback){
+      callback();
     }
   },
 
