@@ -1,7 +1,7 @@
 /*
   CSS of pegasi
   Author: Alex
-  Date: 2016-09-30 13:22
+  Date: 2016-10-08 18:54
 */
 
 /* Reset */
@@ -135,6 +135,9 @@ table { border-collapse:collapse;border-spacing:0; }
   float:left;
   width:116px;
   height:40px;
+  background-image:url(../../images/peg-logo-img.png);
+  background-repeat:no-repeat;
+  background-size:116px 40px;
   text-indent:-9999px;
 }
 .peg-logarea {
@@ -540,6 +543,12 @@ table { border-collapse:collapse;border-spacing:0; }
 }
 
 @media screen and (max-width: 767px) {
+  .peg-logo {
+    margin-top:8px;
+    width:87px;
+    height:30px;
+    background-size:87px 30px;
+  }
   .peg-sec h1.peg-maintitle {
     font-size:1.8rem;
   }
@@ -576,15 +585,16 @@ table { border-collapse:collapse;border-spacing:0; }
     width:90%;
   }
   .peg-logarea {
-    width:210px;
+    width:170px;
+  }
+  .only-for-pc {
+    display:none;
   }
   .peg-login-btn, .peg-signup-btn {
+    width:78px;
     height:28px;
     line-height:28px;
     font-size:0.9rem;
-  }
-  .peg-signup-btn {
-    width:78px;
   }
   .peg-tag-item {
     margin:30px auto 0;
