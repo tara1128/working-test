@@ -224,8 +224,8 @@ var cateList = [
   },
   {
     projectName: 'WhatsCall',
-    linkTo: 'whats-call/',
-    latestModified: '2016-10-09 10:11'
+    linkTo: 'whatscall/',
+    latestModified: '2016-10-08 13:01'
   }
 ];
 

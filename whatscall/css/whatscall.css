@@ -1,0 +1,254 @@
+/*
+  whatscall.css
+  Latest modified: 2016-10-08 18:18
+*/
+
+@font-face {
+  font-family: "Roboto_Light";
+  src: url("../images/v3/fonts/Roboto-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto_Regular";
+  src: url("../images/v3/fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto_Medium";
+  src: url("../images/v3/fonts/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto_Bold";
+  src: url("../images/v3/fonts/Roboto-Bold.ttf") format("truetype");
+}
+/* ======= Global for WhatsCall ======= */
+.bodyWhatsCall #header-wrap, .bodyWhatsCall #header-fixed {
+  background-color: transparent;
+}
+.bodyWhatsCall {
+  background:#fff;
+}
+.wtc-wrap {
+  position:relative;
+  left:0;
+  right:0;
+  top:-101px;
+  width:100%;
+}
+.wtc-container {
+  margin:0 auto;
+  width:1000px;
+}
+.wtc-section {
+  margin:120px auto 0;
+  width:100%;
+}
+.wtc-has-sprites {
+  display:block;
+  background-image:url(../images/wtc/whatscall-sprites.png);
+  background-repeat:no-repeat;
+  overflow:hidden;
+  text-indent:-9999px;
+}
+/* Clearing floats */
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+/* ======= Heading ======= */
+.wtc-heading {
+  width:100%;
+  height:800px;
+  background:url(../images/wtc/whatscall-bg.jpg) 50% 0 no-repeat;
+  background-size:cover;
+}
+.wtc-whats-call {
+  position:relative;
+  margin:0 auto;
+  padding-top:270px;
+  width:840px;
+}
+.wtc-title {
+  font-family: "Roboto_Bold";
+  margin:0 auto;
+  width:585px;
+  height:100px;
+}
+.wtc-free {
+  position:absolute;
+  right:0;
+  bottom:110px;
+  width:135px;
+  height:90px;
+  background-position:-400px -100px;
+}
+.wtc-subtitle {
+  font-family: "Roboto_Medium";
+  margin:20px auto 0;
+  width:380px;
+  height:44px;
+  background-position:0 -100px;
+}
+.wtc-downloads {
+  margin:50px auto 0;
+  padding:20px;
+  width:456px;
+}
+.wtc-dl-btn {
+  position:relative;
+  display:block;
+  width:216px;
+  height:70px;
+  text-indent:-9999px;
+  box-shadow:10px 10px 50px rgba(0,0,0,.4);
+}
+.wtc-dl-btn.to-google {
+  float:left;
+  background-color:#49c961;
+}
+.wtc-dl-btn.to-apple {
+  float:right;
+  background-color:#303030;
+}
+.wtc-dl-btn s {
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin:-25px 0 0 -90px;
+  width:180px;
+  height:50px;
+}
+.wtc-dl-btn s.wtc-dl-icon-g {
+  background-position:0 -150px;
+}
+.wtc-dl-btn s.wtc-dl-icon-a {
+  background-position:-200px -150px;
+}
+.wtc-video-btn {
+  display:block;
+  margin:55px auto 0;
+  font-family: "Roboto_Regular";
+  width:105px;
+  height:30px;
+  font-size:14px;
+  line-height:27px;
+  color:#fff;
+  cursor:pointer;
+  font-weight:normal;
+}
+.wtc-video-icon {
+  float:right;
+  margin-top:4px;
+  width:20px;
+  height:20px;
+  background-position:-550px -100px;
+}
+
+
+/* ======= Sections ======= */
+.wtc-sec-pic, .wtc-sec-txt {
+  float:left;
+}
+.wtc-sec-txt h2 {
+  font-family: "Roboto_Regular";
+  margin-bottom:18px;
+  font-size:46px;
+  color:#4d4d4d;
+}
+.wtc-sec-txt p {
+  font-family: "Roboto_Light";
+  font-size:24px;
+  line-height:36px;
+  color:#4d4d4d;
+}
+.wtc-sec-pic img {
+  display:block;
+  width:480px;
+}
+
+/* ======= Section of Truly Free! ======= */
+.wtc-truly-free .wtc-sec-txt {
+  margin:90px 0 0 60px;
+  width:350px;
+}
+
+/* ======= Section of call credits ======= */
+.wtc-call-credits .wtc-sec-txt {
+  margin:90px 60px 0 10px;
+  width:400px;
+}
+
+/* ======= Section of no internet ======= */
+.wtc-no-internet .wtc-sec-txt {
+  margin:90px 0 0 60px;
+  width:350px;
+}
+
+/* ======= Section of harassment ======= */
+.wtc-harassment .wtc-sec-txt {
+  margin:90px 60px 0 0;
+  width:400px;
+}
+
+
+/* ======= Features ======= */
+.wtc-feature-row {
+  width:100%;
+  height:76px;
+  border-bottom:1px solid #e5e5e5;
+  overflow:hidden;
+  background:#fff;
+}
+.wtc-feature-row.feature-head {
+  height:120px;
+}
+.wtc-feature-row h3 {
+  float:left;
+  width:340px;
+  font-family: "Roboto_Light";
+  font-size:18px;
+  color:#4d4d4d;
+  line-height:78px;
+}
+.wtc-feature-row.feature-head h3 {
+  font-family: "Roboto_Bold";
+  line-height:120px;
+}
+.wtc-feature-cell {
+  float:left;
+  width:220px;
+  height:100%;
+}
+.wtc-feature-cell.grey {
+  background:#f8f8f8;
+}
+.feature-head s {
+  margin:20px auto 0;
+  width:80px;
+  height:80px;
+}
+.wtc-feature-icon-free {
+  background-position:0 -300px;
+}
+.wtc-feature-icon-unknown1 {
+  background-position:-100px -300px;
+}
+.wtc-feature-icon-unknown2 {
+  background-position:-400px -300px;
+}
+.wtc-feature-icon-check, .wtc-feature-icon-cross {
+  margin:18px auto 0;
+  width:30px;
+  height:30px;
+}
+.wtc-feature-icon-check {
+  background-position:-400px -200px;
+}
+.wtc-feature-icon-cross {
+  background-position:-450px -200px;
+}
+
+
