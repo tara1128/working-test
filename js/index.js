@@ -1,6 +1,6 @@
 /*
   index.js
-  latest modified: 2016-10-08 19:32
+  latest modified: 2016-10-09 00:00
 */
 
 var IndexLogin = React.createClass({
@@ -41,7 +41,7 @@ var IndexLogin = React.createClass({
       ReactDOM.unmountComponentAtNode( ReactDOM.findDOMNode(this).parentNode );
       var divOfCategory = document.getElementById('categoryDiv');
       var cates = cateList;
-      ReactDOM.render( <Categories list={cates} />, divOfCategory );
+      ReactDOM.render( <Categories list={cates} ck={this.state.username} />, divOfCategory );
       reactCookie.save('CMWebTester', this.state.username);
     }
   },
@@ -105,11 +105,22 @@ var Categories = React.createClass({
 
   getInitialState: function() {
     return {
-      
+      name: this.props.ck
     }
   },
 
+  checkOutData: function() {
+    webTestPlayformEmails.findBy(persistence, null, 'value', '*', function (v) {
+      console.log(114, v);
+    });
+  },
+
   render: function() {
+    if( this.state.name == 'alexandra@cmcm.com' ){
+      var adminBtn = <a className='cate-admin-btn' onClick={this.checkOutData}>Check out datas!</a>;
+    }else{
+      var adminBtn = '';
+    }
     return (
       <div className='cate-wrap'>
         <h2 className='cate-title'>Choose one to test</h2>
@@ -121,6 +132,7 @@ var Categories = React.createClass({
             </a>
           );
         })}
+        {adminBtn}
       </div>
     );
   }
@@ -166,6 +178,13 @@ var Popup = React.createClass({
 
   saveEmail: function(email, callback) {
     // You need an API to store data...
+    // Insert data to database:
+    var emailObj = new webTestPlayformEmails({
+      value: email,
+      date: new Date().getTime()
+    });
+    persistence.add( emailObj );
+    persistence.flush();
     if(callback){
       callback();
     }
@@ -235,15 +254,37 @@ var cateList = [
   }
 ];
 
+
+function setUpDatabase() {
+  if(window.openDatabase){ // Browser supports Web SQL
+    persistence.store.websql.config(
+      persistence,
+      'webTestDB', // Name of DB, create if not existed.
+      'Database for webTestPlatform', // Description of DB.
+      5 * 1024 * 1024 //the maximum size of your database in bytes (5MB in this example).
+    );
+  }else{
+    persistence.store.memory.config(persistence);
+  }
+  window.webTestPlayformEmails = persistence.define('Emails', { // Create a table named 'Emails'
+    value: '',
+    date: ''
+  });
+  persistence.schemaSync();
+};
+
+
+
 function init() {
   var cookie = reactCookie.load('CMWebTester');
   if( cookie ){
     var divOfCategory = document.getElementById('categoryDiv');
-    ReactDOM.render( <Categories list={cateList} />, divOfCategory );
+    ReactDOM.render( <Categories list={cateList} ck={cookie} />, divOfCategory );
   }else{
     var divOfLogin = document.getElementById('formDiv');
     ReactDOM.render( <IndexLogin />, divOfLogin );
   }
+  setUpDatabase();
 };
 
 init();
