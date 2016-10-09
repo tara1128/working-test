@@ -31,13 +31,6 @@
       $(this).css('transform', 'rotate(0deg)');
     });
 
-    $('#pegSearchKit').delegate('s', 'mouseenter', function(){
-      var ranDeg = random(20, 60);
-      $(this).css('transform', 'rotate('+ ranDeg +'deg)');
-    }).delegate('s', 'mouseleave', function(){
-      $(this).css('transform', 'rotate(0deg)');
-    });
-
     $('.pegMakeWhirl').mouseenter(function(){
       var icon = $(this).parent().find('s');
       icon.addClass('whirl');

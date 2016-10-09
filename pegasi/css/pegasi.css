@@ -1,7 +1,7 @@
 /*
   CSS of pegasi
   Author: Alex
-  Date: 2016-10-08 19:16
+  Date: 2016-10-09 17:21
 */
 
 /* Reset */
@@ -99,9 +99,9 @@ table { border-collapse:collapse;border-spacing:0; }
 /* Every icon with this classname is using sprites */
 .peg-has-sprites {
   display:block;
-  background-image:url(../../images/peg-icons-gathering2.png);
-  background-repeat:no-repeat;
   overflow:hidden;
+  background-repeat:no-repeat;
+  background-image:url(../../images/peg-gathering-x1.png);
 }
 
 /* Specific styles */
@@ -133,12 +133,15 @@ table { border-collapse:collapse;border-spacing:0; }
 }
 .peg-logo {
   float:left;
-  width:116px;
-  height:40px;
-  background-image:url(../../images/peg-logo-img.png);
-  background-repeat:no-repeat;
-  background-size:116px 40px;
+  width:112px;
+  height:35px;
   text-indent:-9999px;
+  background-repeat:no-repeat;
+  background-image:url(../../images/logo-x1.png);
+  background-image: -webkit-image-set(
+    url(../../images/logo-x1.png) 1x,
+    url(../../images/logo-x2.png) 2x
+  );
 }
 .peg-logarea {
   float:right;
@@ -306,35 +309,58 @@ table { border-collapse:collapse;border-spacing:0; }
 }
 .peg-stream-item.right .peg-stream-item-title s {
   left:16px;
+  background-repeat:no-repeat;
 }
 .global-coverage s {
-  background-position:0 -250px;
+  background-image:url(../../images/global-coverage-x1.png);
+  background-image: -webkit-image-set(
+    url(../../images/global-coverage-x1.png) 1x,
+    url(../../images/global-coverage-x2.png) 2x
+  );
 }
 .rich-content s {
-  background-position:-100px -250px;
+  background-image:url(../../images/rich-content-x1.png);
+  background-image: -webkit-image-set(
+    url(../../images/rich-content-x1.png) 1x,
+    url(../../images/rich-content-x2.png) 2x
+  );
 }
 .full-copyright s {
-  background-position:-200px -250px;
+  background-image:url(../../images/full-cp-x1.png);
+  background-image: -webkit-image-set(
+    url(../../images/full-cp-x1.png) 1x,
+    url(../../images/full-cp-x2.png) 2x
+  );
 }
 
 
 /* Search Kit */
 .peg-searchkit {
   padding-top:160px;
-  height:500px;
-  background:url(../../images/peg-search-kit-bg.jpg) 50% 0 no-repeat #626467;
+  height:440px;
+  background:url(../../images/peg-monetization-bg.jpg) 50% 0 no-repeat #fff; /* Switch bg with monetization */
   background-size:cover;
 }
 .peg-searchkit-title, .peg-searchkit-intro {
-  color:#fff;
+  color:#333;
 }
 .peg-searchkit-intro {
   clear:both;
 }
+.peg-sk-item-title {
+  font-size:18px;
+  line-height:30px;
+  color:#333;
+  font-weight:normal;
+  overflow:hidden;
+}
 .peg-sk-icon {
-  margin:0 auto;
-  width:95px;
-  height:95px;
+  display:block;
+  margin:0 8px 0 0;
+  float:left;
+  width:30px;
+  height:30px;
+  background-repeat:no-repeat;
   -webkit-transition: transform .4s ease-in-out;
   -moz-transition: transform .4s ease-in-out;
   -ms-transition: transform .4s ease-in-out;
@@ -342,26 +368,30 @@ table { border-collapse:collapse;border-spacing:0; }
   transition: transform .4s ease-in-out;
 }
 .peg-sk-icon.keyword {
-  background-position:0 -300px;
+  background-image:url(../../images/keyword-x1.png);
+  background-image: -webkit-image-set(
+    url(../../images/keyword-x1.png) 1x,
+    url(../../images/keyword-x2.png) 2x
+  );
 }
 .peg-sk-icon.team {
-  background-position:-100px -300px;
+  background-image:url(../../images/team-x1.png);
+  background-image: -webkit-image-set(
+    url(../../images/team-x1.png) 1x,
+    url(../../images/team-x2.png) 2x
+  );
 }
 .peg-sk-icon.wide {
-  background-position:-200px -300px;
-}
-.peg-sk-item-title {
-  margin:30px 0 0;
-  font-size:18px;
-  color:#fff;
-  text-align:center;
-  font-weight:normal;
+  background-image:url(../../images/wide-x1.png);
+  background-image: -webkit-image-set(
+    url(../../images/wide-x1.png) 1x,
+    url(../../images/wide-x2.png) 2x
+  );
 }
 .peg-sk-item-text {
   margin:10px 0 0;
-  padding:10px 15px 0;
-  text-align:center;
-  color:#e5e5e5;
+  padding:0 5px 0 2px;
+  color:#333;
 }
 
 
@@ -369,13 +399,14 @@ table { border-collapse:collapse;border-spacing:0; }
 .peg-monetization {
   padding-top:160px;
   height:430px;
-  background:url(../../images/peg-monetization-bg.jpg) 50% 0 no-repeat #fff;
+  background:url(../../images/peg-search-kit-bg.jpg) 50% 0 no-repeat #626467; /* Switch bg with Search Kit */
   background-size:cover;
 }
-.peg-monetization-title, .peg-monetization-intro {
-  color:#333;
+.peg-monetization-title {
+  color:#fff;
 }
 .peg-monetization-intro {
+  color: #c4c5c5;
   clear:both;
 }
 .peg-mone-item {
@@ -385,40 +416,59 @@ table { border-collapse:collapse;border-spacing:0; }
   height:30px;
 }
 .peg-mone-icon {
+  display:block;
   margin: 2px 0 0;
   float:left;
   width:30px;
   height:30px;
+  background-repeat:no-repeat;
 }
 .peg-mone-icon.connect {
-  background-position:0 -400px;
+  background-image:url(../../images/connect-x1.png);
+  background-image: -webkit-image-set(
+    url(../../images/connect-x1.png) 1x,
+    url(../../images/connect-x2.png) 2x
+  );
 }
 .peg-mone-icon.excellent {
-  background-position:-200px -400px;
+  background-image:url(../../images/excellent-x1.png);
+  background-image: -webkit-image-set(
+    url(../../images/excellent-x1.png) 1x,
+    url(../../images/excellent-x2.png) 2x
+  );
 }
 .peg-mone-icon.customize {
-  background-position:-100px -400px;
+  background-image:url(../../images/customize-x1.png);
+  background-image: -webkit-image-set(
+    url(../../images/customize-x1.png) 1x,
+    url(../../images/customize-x2.png) 2x
+  );
 }
 .peg-mone-icon.dedicate {
-  background-position:-300px -400px;
+  background-image:url(../../images/dedicate-x1.png);
+  background-image: -webkit-image-set(
+    url(../../images/dedicate-x1.png) 1x,
+    url(../../images/dedicate-x2.png) 2x
+  );
 }
+
 .peg-mone-item-title {
   padding:0 10px 0 40px;
   font-size:14px;
   line-height:18px;
-  color:#333;
+  color:#fff;
   font-weight:normal;
 }
 
 /* Icons to whirl */
-.peg-stream-item-title s, .peg-mone-icon {
+.peg-stream-item-title s, .peg-mone-icon, .peg-sk-icon {
   -webkit-transition:transform .5s ease-out;
   -moz-transition:transform .5s ease-out;
   -ms-transition:transform .5s ease-out;
   -o-transition:transform .5s ease-out;
   transition:transform .5s ease-out;
 }
-.peg-stream-item-title s.whirl, .peg-mone-icon.whirl {
+.peg-stream-item-title s.whirl, .peg-mone-icon.whirl, .peg-sk-icon.whirl {
   -webkit-transform:rotateY(180deg);
   -moz-transform:rotateY(180deg);
   -ms-transform:rotateY(180deg);
@@ -544,10 +594,7 @@ table { border-collapse:collapse;border-spacing:0; }
 
 @media screen and (max-width: 767px) {
   .peg-logo {
-    margin-top:8px;
-    width:87px;
-    height:30px;
-    background-size:87px 30px;
+    margin-top:4px;
   }
   .peg-sec h1.peg-maintitle {
     font-size:1.8rem;
@@ -585,13 +632,13 @@ table { border-collapse:collapse;border-spacing:0; }
     width:90%;
   }
   .peg-logarea {
-    width:170px;
+    width:150px;
   }
   .only-for-pc {
     display:none;
   }
   .peg-login-btn, .peg-signup-btn {
-    width:78px;
+    width:70px;
     height:28px;
     line-height:28px;
     font-size:0.9rem;
@@ -658,6 +705,13 @@ table { border-collapse:collapse;border-spacing:0; }
   }
   .peg-mone-item-title {
     padding:0 10px;
+    text-align:center;
+  }
+  .peg-sk-icon {
+    float:none;
+    margin:0 auto;
+  }
+  .peg-sk-item-title, .peg-sk-item-text {
     text-align:center;
   }
   .peg-work-partner {
