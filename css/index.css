@@ -1,6 +1,6 @@
 /*
   index.css for Web Test Platform
-  Latest modified: 2016-10-06 20:39
+  Latest modified: 2016-10-09 10:24
 */
 
 body {
@@ -162,6 +162,20 @@ body {
 .cate-date {
   float:right;
   color:#999;
+}
+.cate-admin-btn {
+  display:block;
+  margin:30px auto 0;
+  width:118px;
+  text-align:center;
+  font-size:14px;
+  color:#999;
+  cursor:pointer;
+  -webkit-transition:all .4s ease-out;
+}
+.cate-admin-btn:hover {
+  color:#0060b5;
+  font-weight:bold;
 }
 
 
