@@ -267,6 +267,7 @@ table { border-collapse:collapse;border-spacing:0; }
   padding-top:160px;
   height:460px;
   background:url(../../images/peg-streamservice-bg.jpg) 50% 0 no-repeat #f1f3f4;
+  background-size:cover;
 }
 .peg-stream-title, .peg-stream-intro {
   color:#333;
