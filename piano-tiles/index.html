@@ -292,5 +292,12 @@ var startTime = new Date().getTime();
 <script type="text/javascript" src="js/common.min.js"></script>
 <script type="text/javascript" src="js/jquery.easing.min.js"></script>
 <script type="text/javascript" src="js/pt.js"></script>
+
+
+
+<script src="../lib/react-cookie.min.js"></script>
+<script>
+  if( !reactCookie.load('CMWebTester') ){ location.href = '/'; }
+</script>
 </body>
 </html>

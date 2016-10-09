@@ -214,5 +214,13 @@ var startTime = new Date().getTime();
 </div><!-- end #wrap -->
 <script type="text/javascript" src="js/common.min.js"></script>
 <script type="text/javascript" src="js/whatscall.js"></script>
+
+
+
+
+<script src="../lib/react-cookie.min.js"></script>
+<script>
+  if( !reactCookie.load('CMWebTester') ){ location.href = '/'; }
+</script>
 </body>
 </html>
