@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2016-10-08 18:18
+  Latest modified: 2016-10-09 18:52
 */
 
 @font-face {
@@ -60,10 +60,35 @@
 
 /* ======= Heading ======= */
 .wtc-heading {
+  position:relative;
   width:100%;
   height:800px;
+}
+.wtc-video, .wtc-vmask {
+  position:absolute;
+  top:0;
+  left:50%;
+  margin-left:-840px;
+  width:1680px;
+  height:800px;
+}
+.wtc-video {
+  z-index:1;
   background:url(../images/wtc/whatscall-bg.jpg) 50% 0 no-repeat;
   background-size:cover;
+}
+.wtc-vmask {
+  z-index:2;
+  background:rgba(39,110,190, .6);
+}
+
+.heading-container {
+  position:relative;
+  top:0;
+  left:50%;
+  margin-left:-500px;
+  z-index:3;
+  width:1000px;
 }
 .wtc-whats-call {
   position:relative;
