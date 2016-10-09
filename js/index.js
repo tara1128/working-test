@@ -1,6 +1,6 @@
 /*
   index.js
-  latest modified: 2016-10-09 00:00
+  latest modified: 2016-10-09 10:14
 */
 
 var IndexLogin = React.createClass({
@@ -110,8 +110,8 @@ var Categories = React.createClass({
   },
 
   checkOutData: function() {
-    webTestPlayformEmails.findBy(persistence, null, 'value', '*', function (v) {
-      console.log(114, v);
+    webTestPlayformEmails.all().one(function(email){
+      console.log( 'Get emails from db: ', email.value );
     });
   },
 
@@ -177,7 +177,6 @@ var Popup = React.createClass({
   },
 
   saveEmail: function(email, callback) {
-    // You need an API to store data...
     // Insert data to database:
     var emailObj = new webTestPlayformEmails({
       value: email,
