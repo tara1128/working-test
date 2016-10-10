@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2016-10-10 15:56
+  Latest modified: 2016-10-10 19:08
 */
 
 @font-face {
@@ -225,6 +225,7 @@
 /* ======= Sections ======= */
 .wtc-sec-pic, .wtc-sec-txt {
   float:left;
+  opacity:0; /* Using animation to make them visible */
 }
 .wtc-sec-txt h2 {
   font-family: "Roboto_Regular";
@@ -275,6 +276,7 @@
   width:470px;
   height:245px;
   text-indent:-9999px;
+  opacity:0;
 }
 .tf-girl {
   top:245px;
@@ -294,6 +296,7 @@
   top:290px;
   width:14px;
   height:24px;
+  opacity:0;
 }
 .tf-lines.line1 {
   left:175px;
@@ -329,6 +332,65 @@
   background-position:-273px -290px;
 }
 
+/* Animations of Truly Free: */
+.wtc-truly-free.active .wtc-sec-pic {
+  -webkit-animation: trulyFreePicComes 1s ease both;
+}
+@-webkit-keyframes trulyFreePicComes { from {opacity:0;-webkit-transform:translate3d(-100px,0,0);} to {opacity:1;-webkit-transform:translate3d(0,0,0);}}
+
+.wtc-truly-free.active .wtc-sec-txt {
+  -webkit-animation: trulyFreeTxtComes 1s ease both .3s;
+}
+@-webkit-keyframes trulyFreeTxtComes { from {opacity:0;-webkit-transform:translate3d(100px,0,0);} to {opacity:1;-webkit-transform:translate3d(0,0,0);}}
+
+.wtc-truly-free.active .tf-dialog {
+  -webkit-animation: trulyFreeDialogShows 1s ease both .6s;
+}
+@-webkit-keyframes trulyFreeDialogShows { from {opacity:0;-webkit-transform:scale(1.4,1.4);} to {opacity:1;-webkit-transform:scale(1,1);}}
+
+.wtc-truly-free.active .tf-lines.line1 {
+  -webkit-animation: trulyFreeLineOne .1s linear both 1s;
+}
+@-webkit-keyframes trulyFreeLineOne { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
+
+.wtc-truly-free.active .tf-lines.line2 {
+  -webkit-animation: trulyFreeLineTwo .1s linear both 1.1s;
+}
+@-webkit-keyframes trulyFreeLineTwo { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
+
+.wtc-truly-free.active .tf-lines.line3 {
+  -webkit-animation: trulyFreeLineThree .1s linear both 1.2s;
+}
+@-webkit-keyframes trulyFreeLineThree { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
+
+.wtc-truly-free.active .tf-lines.line4 {
+  -webkit-animation: trulyFreeLineFour .1s linear both 1.3s;
+}
+@-webkit-keyframes trulyFreeLineFour { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
+
+.wtc-truly-free.active .tf-lines.line5 {
+  -webkit-animation: trulyFreeLineFive .1s linear both 1.4s;
+}
+@-webkit-keyframes trulyFreeLineFive { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
+
+.wtc-truly-free.active .tf-lines.line6 {
+  -webkit-animation: trulyFreeLineSix .1s linear both 1.5s;
+}
+@-webkit-keyframes trulyFreeLineSix { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
+
+.wtc-truly-free.active .tf-lines.line7 {
+  -webkit-animation: trulyFreeLineSeven .1s linear both 1.6s;
+}
+@-webkit-keyframes trulyFreeLineSeven { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
+
+.wtc-truly-free.active .tf-lines.line8 {
+  -webkit-animation: trulyFreeLineEight .1s linear both 1.7s;
+}
+@-webkit-keyframes trulyFreeLineEight { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
+
+
+
+
 
 
 
@@ -349,6 +411,7 @@
 }
 .wtc-coins {
   position:absolute;
+  opacity:0;
 }
 .wtc-coins.coin1 {
   left:-190px;
@@ -386,6 +449,24 @@
   background-position:-500px -300px;
 }
 
+/* Animations of Call Credits: */
+.wtc-call-credits.active .wtc-sec-pic {
+  -webkit-animation: callCreditsPicComes 1s ease both;
+}
+@-webkit-keyframes callCreditsPicComes { from {opacity:0;-webkit-transform:translate3d(100px,0,0) rotate(180deg);} to {opacity:1;-webkit-transform:translate3d(0,0,0) rotate(0deg);}}
+
+.wtc-call-credits.active .wtc-sec-txt {
+  -webkit-animation: callCreditsTxtComes 1s ease both .3s;
+}
+@-webkit-keyframes callCreditsTxtComes { from {opacity:0;-webkit-transform:translate3d(-100px,0,0);} to {opacity:1;-webkit-transform:translate3d(0,0,0);}}
+
+.wtc-call-credits.active .wtc-coins {
+  -webkit-animation: callCreditsCoinsComes 1s ease both .5s;
+}
+@-webkit-keyframes callCreditsCoinsComes { from {opacity:0;-webkit-transform:translate3d(200px,0,0) scale(0,0);} to {opacity:1;-webkit-transform:translate3d(0,0,0) scale(1,1);}}
+
+
+
 
 
 
@@ -415,8 +496,24 @@
   width:160px;
   height:160px;
   background-position:-200px -200px;
+  opacity:0;
 }
 
+/* Animations of No Internet: */
+.wtc-no-internet.active .wtc-sec-pic {
+  -webkit-animation: noInternetPicComes 1s ease both;
+}
+@-webkit-keyframes noInternetPicComes { from {opacity:0;-webkit-transform:translate3d(-100px,0,0);} to {opacity:1;-webkit-transform:translate3d(0,0,0);}}
+
+.wtc-no-internet.active .wtc-sec-txt {
+  -webkit-animation: noInternetTxtComes 1s ease both .3s;
+}
+@-webkit-keyframes noInternetTxtComes { from {opacity:0;-webkit-transform:translate3d(100px,0,0);} to {opacity:1;-webkit-transform:translate3d(0,0,0);}}
+
+.wtc-no-internet.active .wtc-nowifis.wifi {
+  -webkit-animation: noInternetWifiComes 1s ease both .7s;
+}
+@-webkit-keyframes noInternetWifiComes { from {opacity:0;-webkit-transform:translate3d(0,-50px,0);} to {opacity:1;-webkit-transform:translate3d(0,0,0);}}
 
 
 
@@ -451,6 +548,7 @@
   height:108px;
   background:#ea6c4a;
   border-radius:6px;
+  opacity:0;
 }
 .hara-warn {
   display:block;
@@ -461,11 +559,21 @@
   text-indent:-9999px;
 }
 
+/* Animations of Harassments: */
+.wtc-harassment.active .wtc-sec-pic {
+  -webkit-animation: harassmentPicComes 1s ease both;
+}
+@-webkit-keyframes harassmentPicComes { from {opacity:0;-webkit-transform:translate3d(100px,0,0);} to {opacity:1;-webkit-transform:translate3d(0,0,0);}}
 
+.wtc-harassment.active .wtc-sec-txt {
+  -webkit-animation: harassmentTxtComes 1s ease both .3s;
+}
+@-webkit-keyframes harassmentTxtComes { from {opacity:0;-webkit-transform:translate3d(-100px,0,0);} to {opacity:1;-webkit-transform:translate3d(0,0,0);}}
 
-
-
-
+.wtc-harassment.active .wtc-hara-items.hara-txt {
+  -webkit-animation: harassmentWarnComes 1s ease both .6s;
+}
+@-webkit-keyframes harassmentWarnComes { from {opacity:0;-webkit-transform:scale(1.4,1.4);} to {opacity:1;-webkit-transform:scale(1,1);}}
 
 
 /* ======= Features ======= */
