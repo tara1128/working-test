@@ -240,7 +240,7 @@ var cateList = [
     projectName: 'WhatsCall',
     linkTo: 'whatscall/',
     latestModified: '2016-10-10 19:13'
-  }
+  },
   {
     projectName: 'Pegasi',
     linkTo: 'pegasi/',
