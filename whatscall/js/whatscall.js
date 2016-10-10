@@ -23,7 +23,6 @@
   $(window).scroll(function(){
     var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
     var clitWidth = document.body.clientWidth;
-    console.log('Scrolling: top =', scrollTop );
     if( scrollTop > 400 ){
       trulyFree.addClass('active');
     }
