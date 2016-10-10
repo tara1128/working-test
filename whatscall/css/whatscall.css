@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2016-10-10 19:08
+  Latest modified: 2016-10-10 19:45
 */
 
 @font-face {
@@ -599,6 +599,10 @@
   font-size:18px;
   color:#4d4d4d;
   line-height:78px;
+}
+.wtc-feature-row.last h3 {
+  padding-top:14px;
+  line-height:24px;
 }
 .wtc-feature-row.feature-head h3 {
   font-family: "Roboto_Bold";

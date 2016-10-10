@@ -26,13 +26,13 @@
     if( scrollTop > 400 ){
       trulyFree.addClass('active');
     }
-    if( scrollTop > 1100 ){
+    if( scrollTop > 1000 ){
       callCredits.addClass('active');
     }
-    if( scrollTop > 1800 ){
+    if( scrollTop > 1600 ){
       noInternet.addClass('active');
     }
-    if( scrollTop > 2500 ){
+    if( scrollTop > 2200 ){
       harassment.addClass('active');
     }
   });
