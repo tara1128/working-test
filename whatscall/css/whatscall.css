@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2016-10-09 19:31
+  Latest modified: 2016-10-10 15:56
 */
 
 @font-face {
@@ -38,12 +38,14 @@
   width:1000px;
 }
 .wtc-section {
-  margin:120px auto 0;
+  margin:0;
+  padding:80px 0;
   width:100%;
+  background:#f5f6f8;
 }
 .wtc-has-sprites {
   display:block;
-  background-image:url(../images/wtc/whatscall-sprites.png);
+  background-image:url(../images/wtc/wtc-sprites-x1.png);
   background-repeat:no-repeat;
   overflow:hidden;
   text-indent:-9999px;
@@ -63,21 +65,24 @@
   position:relative;
   width:100%;
   height:800px;
+  overflow:hidden;
+  background:url(../images/wtc/whatscall-bg.jpg) 50% 0 no-repeat;
+  background-size:cover;
 }
 .wtc-video, .wtc-vmask {
   position:absolute;
   top:0;
   left:50%;
-  margin-left:-840px;
-  width:1680px;
   height:800px;
 }
 .wtc-video {
+  margin-left:-840px;
+  width:1680px;
   z-index:1;
-  background:url(../images/wtc/whatscall-bg.jpg) 50% 0 no-repeat;
-  background-size:cover;
 }
 .wtc-vmask {
+  margin-left:-50%;
+  width:100%;
   z-index:2;
   background:rgba(39,110,190, .6);
 }
@@ -180,11 +185,23 @@
   font-weight:normal;
 }
 .wtc-video-icon {
+  position:relative;
   float:right;
   margin-top:4px;
   width:20px;
   height:20px;
   background-position:-550px -100px;
+  overflow:hidden;
+}
+.wtc-vd-heart {
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin:-4px 0 0 -3px;
+  width:10px;
+  height:10px;
+  background-position:-570px -125px;
+  -webkit-animation: moveVdHeart .5s ease both;
 }
 
 /* Animations for heading: */
@@ -221,43 +238,248 @@
   line-height:36px;
   color:#4d4d4d;
 }
-.wtc-sec-pic img {
-  display:block;
-  width:480px;
+.wtc-sec-pic {
+  position:relative;
+  width:470px;
+  height:470px;
+  background:#217fef;
+  border-radius:6px;
+  box-shadow:10px 10px 50px rgba(33,127,239, .3), -10px -10px 50px rgba(33,127,239, .3);
+}
+.wtc-sec-txt {
+  box-sizing:border-box;
 }
 
+
+
 /* ======= Section of Truly Free! ======= */
+.wtc-truly-free {
+  background:url(../images/wtc/wtc-bg-free.png) 50% 100% no-repeat;
+}
+.wtc-truly-free .wtc-sec-pic {
+  background:url(../images/wtc/wtc-free-earth-bg.png) no-repeat #217fef;
+}
 .wtc-truly-free .wtc-sec-txt {
   margin:90px 0 0 60px;
   width:350px;
 }
+.tf-items {
+  position:absolute;
+  background-repeat:no-repeat;
+  background-image:url(../images/wtc/wtc-tf-pics.png);
+}
+.tf-dialog {
+  top:0;
+  left:0;
+  right:0;
+  width:470px;
+  height:245px;
+  text-indent:-9999px;
+}
+.tf-girl {
+  top:245px;
+  left:0;
+  width:175px;
+  height:175px;
+  background-position:0 -245px;
+}
+.tf-boy {
+  top:245px;
+  left:295px;
+  width:175px;
+  height:175px;
+  background-position:-295px -245px;
+}
+.tf-lines {
+  top:290px;
+  width:14px;
+  height:24px;
+}
+.tf-lines.line1 {
+  left:175px;
+  background-position:-175px -290px;
+}
+.tf-lines.line2 {
+  left:189px;
+  background-position:-189px -290px;
+}
+.tf-lines.line3 {
+  left:203px;
+  background-position:-203px -290px;
+}
+.tf-lines.line4 {
+  left:217px;
+  background-position:-217px -290px;
+}
+.tf-lines.line5 {
+  left:231px;
+  background-position:-231px -290px;
+}
+.tf-lines.line6 {
+  left:245px;
+  background-position:-245px -290px;
+}
+.tf-lines.line7 {
+  left:259px;
+  background-position:-259px -290px;
+}
+.tf-lines.line8 {
+  width:22px;
+  left:273px;
+  background-position:-273px -290px;
+}
+
+
+
 
 /* ======= Section of call credits ======= */
+.wtc-call-credits {
+  background:url(../images/wtc/wtc-bg-credits.png) 50% 100% no-repeat;
+}
 .wtc-call-credits .wtc-sec-txt {
   margin:90px 60px 0 10px;
   width:400px;
 }
+.wtc-call-credits .wtc-sec-pic {
+  width:412px;
+  height:412px;
+  background:url(../images/wtc/wtc-panel.png) no-repeat transparent;
+  border-radius:206px;
+  box-shadow:10px 10px 50px rgba(130,130,130, .15), -10px -10px 50px rgba(130,130,130, .15);
+}
+.wtc-coins {
+  position:absolute;
+}
+.wtc-coins.coin1 {
+  left:-190px;
+  top:-20px;
+  width:90px;
+  height:90px;
+  background-position:0 -200px;
+}
+.wtc-coins.coin2 {
+  left:-5px;
+  top:0px;
+  width:65px;
+  height:65px;
+  background-position:-100px -200px;
+}
+.wtc-coins.coin3 {
+  left:-75px;
+  top:40px;
+  width:50px;
+  height:50px;
+  background-position:-400px -250px;
+}
+.wtc-coins.coin4 {
+  left:200px;
+  top:-40px;
+  width:70px;
+  height:70px;
+  background-position:-500px -200px;
+}
+.wtc-coins.coin5 {
+  left:-250px;
+  top:120px;
+  width:60px;
+  height:60px;
+  background-position:-500px -300px;
+}
+
+
+
+
 
 /* ======= Section of no internet ======= */
+.wtc-no-internet {
+  background:url(../images/wtc/wtc-bg-nowifi.png) 50% 100% no-repeat;
+}
 .wtc-no-internet .wtc-sec-txt {
   margin:90px 0 0 60px;
   width:350px;
 }
+.wtc-nowifis {
+  position:absolute;
+}
+.wtc-nowifis.woman {
+  bottom:0;
+  left:50%;
+  margin-left:-135px;
+  width:270px;
+  height:320px;
+  background:url(../images/wtc/wtc-woman.png) no-repeat;
+}
+.wtc-nowifis.wifi {
+  right:50px;
+  top:-30px;
+  width:160px;
+  height:160px;
+  background-position:-200px -200px;
+}
+
+
+
+
+
+
+
+
 
 /* ======= Section of harassment ======= */
+.wtc-harassment {
+  background:url(../images/wtc/wtc-bg-harassment.png) 50% 100% no-repeat;
+}
 .wtc-harassment .wtc-sec-txt {
   margin:90px 60px 0 0;
   width:400px;
 }
+.wtc-hara-items {
+  position:absolute;
+  left:50%;
+}
+.wtc-hara-items.hara-man {
+  top:30px;
+  margin-left:-160px;
+  width:320px;
+  height:319px;
+  background:url(../images/wtc/wtc-man.png) no-repeat;
+}
+.wtc-hara-items.hara-txt {
+  bottom:30px;
+  margin-left:-206px;
+  width:412px;
+  height:108px;
+  background:#ea6c4a;
+  border-radius:6px;
+}
+.hara-warn {
+  display:block;
+  margin:20px auto 0;
+  width:257px;
+  height:67px;
+  background:url(../images/wtc/wtc-hara-warn.png) no-repeat;
+  text-indent:-9999px;
+}
+
+
+
+
+
+
 
 
 /* ======= Features ======= */
+.wtc-features {
+  margin:0;
+  padding:50px 0;
+  width:100%;
+  background:url(../images/wtc/wtc-bg-feature.png) repeat-x #fff;
+}
 .wtc-feature-row {
   width:100%;
   height:76px;
   border-bottom:1px solid #e5e5e5;
   overflow:hidden;
-  background:#fff;
 }
 .wtc-feature-row.feature-head {
   height:120px;
