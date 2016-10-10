@@ -1,6 +1,6 @@
 /*
   index.js
-  latest modified: 2016-10-09 10:14
+  latest modified: 2016-10-10 19:13
 */
 
 var IndexLogin = React.createClass({
@@ -237,19 +237,19 @@ var Popup = React.createClass({
 
 var cateList = [
   {
-    projectName: 'Piano Tiles 2',
-    linkTo: 'piano-tiles/',
-    latestModified: '2016-10-04 12:22'
-  },
+    projectName: 'WhatsCall',
+    linkTo: 'whatscall/',
+    latestModified: '2016-10-10 19:13'
+  }
   {
     projectName: 'Pegasi',
     linkTo: 'pegasi/',
-    latestModified: '2016-09-28 20:34'
+    latestModified: '2016-10-10 10:34'
   },
   {
-    projectName: 'WhatsCall',
-    linkTo: 'whatscall/',
-    latestModified: '2016-10-08 13:01'
+    projectName: 'Piano Tiles 2',
+    linkTo: 'piano-tiles/',
+    latestModified: '2016-10-09 12:22'
   }
 ];
 
