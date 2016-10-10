@@ -21,6 +21,10 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@CleanMaster">
 <meta name="twitter:creator" content="@CleanMaster">
+<script src="../lib/react-cookie.min.js"></script>
+<script>
+  if( !reactCookie.load('CMWebTester') ){ location.href = '/'; }
+</script>
 <link rel="stylesheet" href="css/v4.main.css" type="text/css" />
 <script>
 var __FROM='';
@@ -292,12 +296,5 @@ var startTime = new Date().getTime();
 <script type="text/javascript" src="js/common.min.js"></script>
 <script type="text/javascript" src="js/jquery.easing.min.js"></script>
 <script type="text/javascript" src="js/pt.js"></script>
-
-
-
-<script src="../lib/react-cookie.min.js"></script>
-<script>
-  if( !reactCookie.load('CMWebTester') ){ location.href = '/'; }
-</script>
 </body>
 </html>
