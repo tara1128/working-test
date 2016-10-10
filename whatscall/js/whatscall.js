@@ -24,16 +24,16 @@
     var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
     var clitWidth = document.body.clientWidth;
     console.log('Scrolling: top =', scrollTop );
-    if( scrollTop > 380 ){
+    if( scrollTop > 400 ){
       trulyFree.addClass('active');
     }
-    if( scrollTop > 900 ){
+    if( scrollTop > 1100 ){
       callCredits.addClass('active');
     }
-    if( scrollTop > 1500 ){
+    if( scrollTop > 1800 ){
       noInternet.addClass('active');
     }
-    if( scrollTop > 2000 ){
+    if( scrollTop > 2500 ){
       harassment.addClass('active');
     }
   });
