@@ -8,6 +8,7 @@
   /* Cache variables for elements: */
   var vdBtn = $('#wtcVdBtn');
   var vdhrt = $('#wtcVdHeart');
+  var video = $('#wtcVideo');
   var trulyFree = $('#wtcTrulyFree');
   var callCredits = $('#wtcCallCredits');
   var noInternet = $('#wtcNoInternet');
