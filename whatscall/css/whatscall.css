@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2016-10-10 19:45
+  Latest modified: 2016-10-11 11:20
 */
 
 @font-face {
@@ -59,6 +59,12 @@
   height: 0;
   overflow: hidden;
 }
+/* Animations for entering from the left side: */
+@-webkit-keyframes enterFromLeftSide { from {opacity:0;-webkit-transform:translate3d(-100px,0,0);} to {opacity:1;-webkit-transform:translate3d(0,0,0);}}
+
+/* Animations for entering from the right side: */
+@-webkit-keyframes enterFromRightSide { from {opacity:0;-webkit-transform:translate3d(100px,0,0);} to {opacity:1;-webkit-transform:translate3d(0,0,0);}}
+
 
 /* ======= Heading ======= */
 .wtc-heading {
@@ -71,18 +77,18 @@
 }
 .wtc-video, .wtc-vmask {
   position:absolute;
-  top:0;
+  top:50%;
   left:50%;
-  height:800px;
+  min-width:100%;
+  min-height:100%;
+  width:auto;
+  height:auto;
+  -webkit-transform:translate(-50%, -50%);
 }
 .wtc-video {
-  margin-left:-840px;
-  width:1680px;
   z-index:1;
 }
 .wtc-vmask {
-  margin-left:-50%;
-  width:100%;
   z-index:2;
   background:rgba(39,110,190, .6);
 }
@@ -219,9 +225,6 @@
 }
 
 
-
-
-
 /* ======= Sections ======= */
 .wtc-sec-pic, .wtc-sec-txt {
   float:left;
@@ -250,8 +253,6 @@
 .wtc-sec-txt {
   box-sizing:border-box;
 }
-
-
 
 /* ======= Section of Truly Free! ======= */
 .wtc-truly-free {
@@ -332,16 +333,14 @@
   background-position:-273px -290px;
 }
 
+
 /* Animations of Truly Free: */
 .wtc-truly-free.active .wtc-sec-pic {
-  -webkit-animation: trulyFreePicComes 1s ease both;
+  -webkit-animation: enterFromLeftSide 1s ease both;
 }
-@-webkit-keyframes trulyFreePicComes { from {opacity:0;-webkit-transform:translate3d(-100px,0,0);} to {opacity:1;-webkit-transform:translate3d(0,0,0);}}
-
 .wtc-truly-free.active .wtc-sec-txt {
-  -webkit-animation: trulyFreeTxtComes 1s ease both .3s;
+  -webkit-animation: enterFromRightSide 1s ease both .3s;
 }
-@-webkit-keyframes trulyFreeTxtComes { from {opacity:0;-webkit-transform:translate3d(100px,0,0);} to {opacity:1;-webkit-transform:translate3d(0,0,0);}}
 
 .wtc-truly-free.active .tf-dialog {
   -webkit-animation: trulyFreeDialogShows 1s ease both .6s;
@@ -349,49 +348,30 @@
 @-webkit-keyframes trulyFreeDialogShows { from {opacity:0;-webkit-transform:scale(1.4,1.4);} to {opacity:1;-webkit-transform:scale(1,1);}}
 
 .wtc-truly-free.active .tf-lines.line1 {
-  -webkit-animation: trulyFreeLineOne .1s linear both 1s;
+  -webkit-animation: connectionLines .1s linear both 1s;
 }
-@-webkit-keyframes trulyFreeLineOne { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
-
 .wtc-truly-free.active .tf-lines.line2 {
-  -webkit-animation: trulyFreeLineTwo .1s linear both 1.1s;
+  -webkit-animation: connectionLines .1s linear both 1.1s;
 }
-@-webkit-keyframes trulyFreeLineTwo { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
-
 .wtc-truly-free.active .tf-lines.line3 {
-  -webkit-animation: trulyFreeLineThree .1s linear both 1.2s;
+  -webkit-animation: connectionLines .1s linear both 1.2s;
 }
-@-webkit-keyframes trulyFreeLineThree { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
-
 .wtc-truly-free.active .tf-lines.line4 {
-  -webkit-animation: trulyFreeLineFour .1s linear both 1.3s;
+  -webkit-animation: connectionLines .1s linear both 1.3s;
 }
-@-webkit-keyframes trulyFreeLineFour { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
-
 .wtc-truly-free.active .tf-lines.line5 {
-  -webkit-animation: trulyFreeLineFive .1s linear both 1.4s;
+  -webkit-animation: connectionLines .1s linear both 1.4s;
 }
-@-webkit-keyframes trulyFreeLineFive { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
-
 .wtc-truly-free.active .tf-lines.line6 {
-  -webkit-animation: trulyFreeLineSix .1s linear both 1.5s;
+  -webkit-animation: connectionLines .1s linear both 1.5s;
 }
-@-webkit-keyframes trulyFreeLineSix { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
-
 .wtc-truly-free.active .tf-lines.line7 {
-  -webkit-animation: trulyFreeLineSeven .1s linear both 1.6s;
+  -webkit-animation: connectionLines .1s linear both 1.6s;
 }
-@-webkit-keyframes trulyFreeLineSeven { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
-
 .wtc-truly-free.active .tf-lines.line8 {
-  -webkit-animation: trulyFreeLineEight .1s linear both 1.7s;
+  -webkit-animation: connectionLines .1s linear both 1.7s;
 }
-@-webkit-keyframes trulyFreeLineEight { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
-
-
-
-
-
+@-webkit-keyframes connectionLines { from {opacity:0;-webkit-transform:scale(0,0);} to {opacity:1;-webkit-transform:scale(1,1);}}
 
 
 /* ======= Section of call credits ======= */
@@ -453,7 +433,7 @@
 .wtc-call-credits.active .wtc-sec-pic {
   -webkit-animation: callCreditsPicComes 1s ease both;
 }
-@-webkit-keyframes callCreditsPicComes { from {opacity:0;-webkit-transform:translate3d(100px,0,0) rotate(180deg);} to {opacity:1;-webkit-transform:translate3d(0,0,0) rotate(0deg);}}
+@-webkit-keyframes callCreditsPicComes { from {opacity:0;-webkit-transform:translate3d(100px,0,0) rotate(80deg);} to {opacity:1;-webkit-transform:translate3d(0,0,0) rotate(0deg);}}
 
 .wtc-call-credits.active .wtc-sec-txt {
   -webkit-animation: callCreditsTxtComes 1s ease both .3s;

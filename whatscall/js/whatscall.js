@@ -1,11 +1,9 @@
 /*
   whatscall.js
-  Latest modified: 2016-10-10 19:04
+  Latest modified: 2016-10-11 10:46
 */
 
 (function(){ 
-
-  /* Initial Skroolr: */
 
   /* Cache variables for elements: */
   var vdBtn = $('#wtcVdBtn');
@@ -23,16 +21,16 @@
   $(window).scroll(function(){
     var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
     var clitWidth = document.body.clientWidth;
-    if( scrollTop > 400 ){
+    if( scrollTop > 380 ){
       trulyFree.addClass('active');
     }
-    if( scrollTop > 1000 ){
+    if( scrollTop > 980 ){
       callCredits.addClass('active');
     }
-    if( scrollTop > 1600 ){
+    if( scrollTop > 1500 ){
       noInternet.addClass('active');
     }
-    if( scrollTop > 2200 ){
+    if( scrollTop > 2100 ){
       harassment.addClass('active');
     }
   });
