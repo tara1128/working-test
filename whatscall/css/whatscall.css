@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2016-10-11 16:21
+  Latest modified: 2016-10-11 19:32
 */
 
 @font-face {
@@ -163,6 +163,7 @@
   width:216px;
   height:70px;
   text-indent:-9999px;
+  color:transparent;
   box-shadow:10px 10px 50px rgba(0,0,0,.4);
   -webkit-transition:all .4s ease-out;
   -moz-transition:all .4s ease-out;
@@ -485,6 +486,7 @@
   width:400px;
 }
 .wtc-call-credits .wtc-sec-pic {
+  max-width:412px;
   width:412px;
   height:412px;
   background:url(../images/wtc/wtc-panel.png) no-repeat transparent;
@@ -570,8 +572,6 @@
 @keyframes callCreditsCoinsComes { from {opacity:0;transform:translate(200px,0) scale(0,0);} to {opacity:1;transform:translate(0,0) scale(1,1);}}
 
 
-
-
 /* ======= Section of no internet ======= */
 .wtc-no-internet {
   background:url(../images/wtc/wtc-bg-nowifi.png) 50% 100% no-repeat #f5f6f8;
@@ -640,18 +640,15 @@
   margin:90px 60px 0 0;
   width:400px;
 }
-.wtc-hara-items {
-  position:absolute;
-  left:50%;
-}
 .wtc-hara-items.hara-man {
-  top:30px;
-  margin-left:-160px;
+  margin:30px auto 0;
   width:320px;
   height:319px;
   background:url(../images/wtc/wtc-man.png) no-repeat;
 }
 .wtc-hara-items.hara-txt {
+  position:absolute;
+  left:50%;
   bottom:30px;
   margin-left:-206px;
   width:412px;
@@ -768,3 +765,129 @@
 }
 
 
+
+/* ======= Responsive to mobile devices ======= */
+@media screen and (max-width:768px) {
+  .wtc-heading {
+    background:url(../images/wtc/whatscall-bg.jpg) 50% 0 no-repeat;
+  }
+  .wtc-video, .wtc-vmask {
+    display:none;
+  }
+  .wtc-section {
+    padding:20px 0;
+  }
+
+  .wtc-container {
+    width:90%;
+  }
+
+  .heading-container {
+    margin-left:-45%;
+    width:90%;
+  }
+
+  .wtc-whats-call {
+    padding-top:200px;
+    width:100%;
+  }
+  .wtc-title.wtc-has-sprites, .wtc-subtitle.wtc-has-sprites {
+    width:100%;
+    text-align:center;
+    text-indent:0;
+    background:none;
+    color:#fff;
+    font-weight:normal;
+  }
+  .wtc-title.wtc-has-sprites {
+    font-size:60px;
+    height:auto;
+  }
+  .wtc-subtitle.wtc-has-sprites {
+    font-size:28px;
+    height:auto;
+  }
+  .wtc-free {
+    right:10px;
+    bottom:65px;
+  }
+  .wtc-downloads {
+    padding:0;
+    width:100%;
+  }
+  .wtc-dl-btn {
+    box-sizing:border-box;
+    padding-left:60px;
+    padding-top:14px;
+    width:45%;
+    height:60px;
+    text-indent:0;
+    color:#fff;
+    font-size:14px;
+    line-height:1.2em;
+  }
+  .wtc-dl-btn s {
+    width:42px;
+    left:10px;
+    margin:-25px 0 0 0;
+  }
+  .wtc-sec-pic {
+    width:98%;
+    height:auto; /* Adjust height in JS */
+    background:#217fef;
+  }
+  .wtc-sec-pic, .wtc-sec-txt {
+    float:none;
+    margin:30px auto 0;
+  }
+  .wtc-sec-txt h2 {
+    font-size:36px;
+  }
+  .tf-items.tf-dialog {
+    top:-10px;
+    width:100%;
+    height:auto;
+  }
+  .tf-girl {
+    top:auto;
+    left:-15px;
+    bottom:-15px;
+  }
+  .tf-boy {
+    top:auto;
+    left:auto;
+    right:-15px;
+    bottom:-15px;
+  }
+  .tf-lines {
+    display:none;
+  }
+  .wtc-truly-free .wtc-sec-txt,
+  .wtc-call-credits .wtc-sec-txt,
+  .wtc-no-internet .wtc-sec-txt,
+  .wtc-harassment .wtc-sec-txt {
+    margin:50px auto 0;
+    width:100%;
+  }
+  .wtc-call-credits .wtc-sec-pic.credits-roll {
+    width:100%;
+    height:auto;
+    background:url(../images/wtc/wtc-panel.png) no-repeat transparent;
+  }
+  .wtc-nowifis.wifi {
+    right:0;
+  }
+  .wtc-hara-items.hara-man {
+    margin:10px auto 0;
+    width:100%;
+  }
+  .wtc-hara-items.hara-txt {
+    bottom:0px;
+  }
+
+
+
+
+
+
+}/* End of media */

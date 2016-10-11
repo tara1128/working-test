@@ -1,7 +1,7 @@
 /*
   CSS of pegasi
   Author: Alex
-  Date: 2016-10-09 18:29
+  Date: 2016-10-11 17:26
 */
 
 /* Reset */
@@ -144,6 +144,7 @@ table { border-collapse:collapse;border-spacing:0; }
   );
 }
 .peg-logarea {
+  display:none; /* Only shows in PC&iPad devices */
   float:right;
   margin:8px 0 0;
   width:230px;
@@ -578,7 +579,7 @@ table { border-collapse:collapse;border-spacing:0; }
     padding-bottom:50px;
   }
   .peg-container {
-    width:768px;
+    width:748px;
   }
   .peg-sec h2 {
     margin:35px 20px 60px;
@@ -588,7 +589,7 @@ table { border-collapse:collapse;border-spacing:0; }
     width:90%;
   }
   .peg-tag-item {
-    width:380px;
+    width:370px;
   }
   .peg-tag-text {
     padding:10px 0 0 10px;
