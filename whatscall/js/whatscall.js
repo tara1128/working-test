@@ -1,11 +1,12 @@
 /*
   whatscall.js
-  Latest modified: 2016-10-11 18:43
+  Latest modified: 2016-10-11 18:19
 */
 
 (function(){ 
 
   /* Cache variables for elements: */
+  var heading = $('#wtcHeading');
   var vdBtn = $('#wtcVdBtn');
   var vdhrt = $('#wtcVdHeart');
   var video = $('#wtcVideo');
@@ -13,15 +14,26 @@
   var callCredits = $('#wtcCallCredits');
   var noInternet = $('#wtcNoInternet');
   var harassment = $('#wtcHarassment');
-  var secPics = $('.wtcSecPics');
-  
-  /* Adjust height of sec pics for mobiles: */
-  for(var i = 0; i < secPics.length; i++){
-    var _pic = $(secPics[i]);
-    var _width = _pic.width();
-    _pic.height( _width );
+  var secPics = $('.wtcSecPics'); 
+
+
+  function adjustForMobiles() {
+    /* Adjust the first screen height to be full-screen: */
+    var win_width = $(window).width();
+    var win_height = $(window).height();
+    if( win_width < 769 ){
+      heading.css('height', (win_height+101) + 'px' );
+    }
+    /* Adjust height of sec pics for mobiles: */
+    for(var i = 0; i < secPics.length; i++){
+      var _pic = $(secPics[i]);
+      var _width = _pic.width();
+      _pic.height( _width );
+    };
   };
 
+
+  adjustForMobiles();
   scaleWithProportion( '.tf-dialog', 470, 270, true );
   scaleWithProportion( '.credits-roll', 412, 412, true );
   scaleWithProportion( '.hara-man', 320, 319, true );

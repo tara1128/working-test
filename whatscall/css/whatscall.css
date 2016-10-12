@@ -781,6 +781,7 @@
 /* ======= Responsive to mobile devices ======= */
 @media screen and (max-width:768px) {
   .wtc-heading {
+    height:auto;/* Full screen on mobile, make height with JS */
     background:url(../images/wtc/whatscall-bg.jpg) 50% 0 no-repeat;
   }
   .wtc-video, .wtc-vmask {
@@ -826,23 +827,14 @@
   .wtc-downloads {
     padding:0;
     width:100%;
+    height:auto;
   }
-  .wtc-dl-btn {
-    box-sizing:border-box;
-    padding-left:60px;
-    padding-top:14px;
-    width:45%;
-    height:60px;
-    text-indent:0;
-    color:#fff;
-    font-size:14px;
-    line-height:1.2em;
+  .wtc-dl-btn.to-google, .wtc-dl-btn.to-apple {
+    float:none;
+    margin:20px auto 0;
   }
-  .wtc-dl-btn s {
-    width:42px;
-    left:10px;
-    margin:-25px 0 0 0;
-  }
+
+
   .wtc-sec-pic {
     width:98%;
     height:auto; /* Adjust height in JS */
