@@ -146,11 +146,11 @@
   width:146px;
   height:106px;
   background-position:-400px -100px;
-  -webkit-animation: showFree 1s ease both .7s;
-  -moz-animation: showFree 1s ease both .7s;
-  -ms-animation: showFree 1s ease both .7s;
-  -o-animation: showFree 1s ease both .7s;
-  animation: showFree 1s ease both .7s;
+  -webkit-animation: showFree 1s ease both .5s;
+  -moz-animation: showFree 1s ease both .5s;
+  -ms-animation: showFree 1s ease both .5s;
+  -o-animation: showFree 1s ease both .5s;
+  animation: showFree 1s ease both .5s;
 }
 .wtc-downloads {
   margin:50px auto 0;
@@ -255,13 +255,8 @@
 
 @-webkit-keyframes showFree {
   0% {opacity:0; -webkit-transform:scale(0,0);}
-  70% {opacity:.7; -webkit-transform:scale(1.7,1.7);}
-  80% {opacity:1; -webkit-transform:scale(1,1);}
-  84% {opacity:1; -webkit-transform:translate(3px,0);}
-  88% {opacity:1; -webkit-transform:translate(-3px,0);}
-  92% {opacity:1; -webkit-transform:translate(3px,0);}
-  96% {opacity:1; -webkit-transform:translate(-3px,0);}
-  100% {opacity:1; -webkit-transform:translate(0,0);}
+  78% {opacity:.7; -webkit-transform:scale(1.5,1.5);}
+  100% {opacity:1; -webkit-transform:scale(1,1);}
 }
 
 

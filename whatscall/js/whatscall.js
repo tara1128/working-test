@@ -50,16 +50,16 @@
   $(window).scroll(function(){
     var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
     var clitWidth = document.body.clientWidth;
-    if( scrollTop > 300 ){
+    if( scrollTop > 245 ){
       trulyFree.addClass('active');
     }
-    if( scrollTop > 800 ){
+    if( scrollTop > 745 ){
       callCredits.addClass('active');
     }
-    if( scrollTop > 1200 ){
+    if( scrollTop > 1145 ){
       noInternet.addClass('active');
     }
-    if( scrollTop > 1700 ){
+    if( scrollTop > 1645 ){
       harassment.addClass('active');
     }
   });
