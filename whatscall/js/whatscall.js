@@ -14,7 +14,6 @@
   var callCredits = $('#wtcCallCredits');
   var noInternet = $('#wtcNoInternet');
   var harassment = $('#wtcHarassment');
-  var secPics = $('.wtcSecPics'); 
 
 
   function adjustForMobiles() {
@@ -24,12 +23,6 @@
     if( win_width < 769 ){
       heading.css('height', (win_height+101) + 'px' );
     }
-    /* Adjust height of sec pics for mobiles: */
-    for(var i = 0; i < secPics.length; i++){
-      var _pic = $(secPics[i]);
-      var _width = _pic.width();
-      _pic.height( _width );
-    };
   };
 
 
@@ -37,16 +30,18 @@
   scaleWithProportion( '.tf-dialog', 470, 270, true );
   scaleWithProportion( '.credits-roll', 412, 412, true );
   scaleWithProportion( '.hara-man', 320, 319, true );
+  scaleWithProportion( '.wtcSecPics', 470, 470, true, 1.45 );
+  scaleWithProportion( '.credits-roll', 470, 470, true );
 
 
   /* Scale with proportion: */
-  function scaleWithProportion( clsName, width, height, scaleBg ) {
+  function scaleWithProportion( clsName, width, height, scaleBg, newProp ) {
     var items = $(clsName);
     for(var j = 0; j < items.length; j++){
       var _item = $(items[j]);
       var _prop = parseFloat( (width/height).toFixed(2) );
       var _newW = _item.width();
-      var _newH = _newW / _prop;
+      var _newH = (newProp)?(_newW/newProp):(_newW/_prop);
       _item.height( _newH );
       if( scaleBg ){
         _item.css('background-size', _newW + 'px ' + _newH + 'px' );

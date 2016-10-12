@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2016-10-12 16:38
+  Latest modified: 2016-10-12 18:44
 */
 
 @font-face {
@@ -781,7 +781,6 @@
 /* ======= Responsive to mobile devices ======= */
 @media screen and (max-width:768px) {
   .wtc-heading {
-    height:auto;/* Full screen on mobile, make height with JS */
     background:url(../images/wtc/whatscall-bg.jpg) 50% 0 no-repeat;
   }
   .wtc-video, .wtc-vmask {
@@ -790,16 +789,16 @@
   .wtc-section {
     padding:20px 0;
   }
-
   .wtc-container {
     width:90%;
   }
-
   .heading-container {
     margin-left:-45%;
     width:90%;
   }
-
+  .wtc-bg {
+    display:none;
+  }
   .wtc-whats-call {
     padding-top:200px;
     width:100%;
@@ -834,21 +833,20 @@
     margin:20px auto 0;
   }
 
-
-  .wtc-sec-pic {
-    width:98%;
-    height:auto; /* Adjust height in JS */
-    background:#217fef;
-  }
   .wtc-sec-pic, .wtc-sec-txt {
     float:none;
-    margin:30px auto 0;
+    margin:90px auto 0;
+    width:94%;
+  }
+  .wtc-sec-pic {
+    height:auto; /* Adjust height in JS */
+    background:#217fef;
   }
   .wtc-sec-txt h2 {
     font-size:36px;
   }
   .tf-items.tf-dialog {
-    top:-10px;
+    top:-120px;
     width:100%;
     height:auto;
   }
