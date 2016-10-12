@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2016-10-11 19:32
+  Latest modified: 2016-10-12 16:38
 */
 
 @font-face {
@@ -38,6 +38,7 @@
   width:1000px;
 }
 .wtc-section {
+  position:relative;
   margin:0;
   padding:90px 0;
   width:100%;
@@ -269,6 +270,14 @@
   float:left;
   opacity:0; /* Using animation to make them visible */
 }
+.wtc-bg {
+  position:absolute;
+  bottom:0;
+  left:50%;
+  margin-left:-500px;
+  width:1000px;
+  opacity:0;
+}
 .wtc-sec-txt h2 {
   font-family: "Roboto_Regular";
   margin-bottom:18px;
@@ -294,8 +303,9 @@
 }
 
 /* ======= Section of Truly Free! ======= */
-.wtc-truly-free {
-  background:url(../images/wtc/wtc-bg-free.png) 50% 100% no-repeat #f5f6f8;
+.wtc-truly-free .wtc-bg {
+  height:350px;
+  background:url(../images/wtc/wtc-bg-free.png) 50% 100% no-repeat;
 }
 .wtc-truly-free .wtc-sec-pic {
   background:url(../images/wtc/wtc-free-earth-bg.png) no-repeat #217fef;
@@ -383,7 +393,8 @@
   -o-animation: enterFromLeftSide 1s ease both;
   animation: enterFromLeftSide 1s ease both;
 }
-.wtc-truly-free.active .wtc-sec-txt {
+.wtc-truly-free.active .wtc-sec-txt,
+.wtc-truly-free.active .wtc-bg {
   opacity:1;
   -webkit-animation: enterFromRightSide 1s ease both .3s;
   -moz-animation: enterFromRightSide 1s ease both .3s;
@@ -478,8 +489,9 @@
 
 
 /* ======= Section of call credits ======= */
-.wtc-call-credits {
-  background:url(../images/wtc/wtc-bg-credits.png) 50% 100% no-repeat #f5f6f8;
+.wtc-call-credits .wtc-bg {
+  height:250px;
+  background:url(../images/wtc/wtc-bg-credits.png) 50% 100% no-repeat;
 }
 .wtc-call-credits .wtc-sec-txt {
   margin:90px 60px 0 10px;
@@ -548,7 +560,8 @@
 @-o-keyframes callCreditsPicComes { from {opacity:0;-o-transform:translate(100px,0) rotate(80deg);} to {opacity:1;-o-transform:translate(0,0) rotate(0deg);}}
 @keyframes callCreditsPicComes { from {opacity:0;transform:translate(100px,0) rotate(80deg);} to {opacity:1;transform:translate(0,0) rotate(0deg);}}
 
-.wtc-call-credits.active .wtc-sec-txt {
+.wtc-call-credits.active .wtc-sec-txt,
+.wtc-call-credits.active .wtc-bg {
   opacity:1;
   -webkit-animation: enterFromLeftSide 1s ease both .3s;
   -moz-animation: enterFromLeftSide 1s ease both .3s;
@@ -573,8 +586,9 @@
 
 
 /* ======= Section of no internet ======= */
-.wtc-no-internet {
-  background:url(../images/wtc/wtc-bg-nowifi.png) 50% 100% no-repeat #f5f6f8;
+.wtc-no-internet .wtc-bg {
+  height:350px;
+  background:url(../images/wtc/wtc-bg-nowifi.png) 50% 100% no-repeat;
 }
 .wtc-no-internet .wtc-sec-txt {
   margin:90px 0 0 60px;
@@ -609,7 +623,8 @@
   -o-animation: enterFromLeftSide 1s ease both;
   animation: enterFromLeftSide 1s ease both;
 }
-.wtc-no-internet.active .wtc-sec-txt {
+.wtc-no-internet.active .wtc-sec-txt,
+.wtc-no-internet.active .wtc-bg {
   opacity:1;
   -webkit-animation: enterFromRightSide 1s ease both .3s;
   -moz-animation: enterFromRightSide 1s ease both .3s;
@@ -633,7 +648,8 @@
 
 
 /* ======= Section of harassment ======= */
-.wtc-harassment {
+.wtc-harassment .wtc-bg {
+  height:350px;
   background:url(../images/wtc/wtc-bg-harassment.png) 50% 100% no-repeat #f5f6f8;
 }
 .wtc-harassment .wtc-sec-txt {
@@ -675,7 +691,8 @@
   -o-animation: enterFromRightSide 1s ease both;
   animation: enterFromRightSide 1s ease both;
 }
-.wtc-harassment.active .wtc-sec-txt {
+.wtc-harassment.active .wtc-sec-txt,
+.wtc-harassment.active .wtc-bg {
   opacity:1;
   -webkit-animation: enterFromLeftSide 1s ease both .3s;
   -moz-animation: enterFromLeftSide 1s ease both .3s;
