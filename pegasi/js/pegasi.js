@@ -1,6 +1,6 @@
 /* 
   JS for Pegasi
-  Latest modified: 2016-10-11 17:24
+  Latest modified: 2016-10-12 14:59
 */
 
 (function(){
@@ -10,10 +10,19 @@
       isAndroid = (/Android|HTC/i.test(UA)),
       isIPhone = !isAndroid && /iPod|iPhone/i.test(UA),
       isWindowsPhone = /Windows Phone/i.test(UA);
-  var logins = $('#pegLoginArea');
+  var logins = $('#pegLoginArea'),
+      backToTop = $('#pegToTop');
 
   if( isAndroid || isIPhone || isWindowsPhone ) {
     logins.hide();
+    $(window).scroll(function(){/* Show [back to top] button in mobiles: */
+      var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+      if( scrollTop > 3050 ){
+        backToTop.show();
+      }else{
+        backToTop.hide();
+      }
+    });
   }else{
     logins.show();
   }
@@ -32,6 +41,10 @@
   function random(min,max){
     return Math.floor(Math.random()*(max-min)+min);
   };
+
+  backToTop.click(function(){
+    window.scrollTo(0,0);
+  });
 
   $('#pegSeeMore').click(function(){
     $('body').animate({scrollTop: 750}, 400);
