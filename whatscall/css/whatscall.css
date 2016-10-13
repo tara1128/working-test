@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2016-10-13 16:57
+  Latest modified: 2016-10-13 18:45
 */
 
 @font-face {
@@ -235,17 +235,34 @@
 .wtc-vd-heart {
   position:absolute;
   top:50%;
-  left:50%;
-  margin:-4px 0 0 -3px;
+  right:3px;
+  margin:-4px 0 0 0;
+  width:40px;
+  height:10px;
+}
+.wtc-vd-heart b {
+  position:absolute;
+  top:0;
   width:10px;
   height:10px;
   background-position:-570px -125px;
-  -webkit-animation: moveVdHeart .5s ease both;
-  -moz-animation: moveVdHeart .5s ease both;
-  -ms-animation: moveVdHeart .5s ease both;
-  -o-animation: moveVdHeart .5s ease both;
-  animation: moveVdHeart .5s ease both;
 }
+.wtc-vd-heart b.one {
+  left:0;
+}
+.wtc-vd-heart b.two {
+  right:0;
+}
+.wtc-vd-heart.slide-out {
+  right:-27px;
+  -webkit-transition:right ease .8s;
+  -moz-transition:right ease .8s;
+  -ms-transition:right ease .8s;
+  -o-transition:right ease .8s;
+  transition:right ease .8s;
+}
+
+
 
 /* Animations for heading: */
 @-webkit-keyframes moveTitles { from {opacity:0; -webkit-transform:translate(0,-70px);} to {opacity:1; -webkit-transform:translate(0,0);}}

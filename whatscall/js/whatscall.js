@@ -1,6 +1,6 @@
 /*
   whatscall.js
-  Latest modified: 2016-10-13 15:09
+  Latest modified: 2016-10-13 18:45
 */
 
 (function(){ 
@@ -8,7 +8,7 @@
   /* Cache variables for elements: */
   var heading = $('#wtcHeading');
   var vdBtn = $('#wtcVdBtn');
-  var vdhrt = $('#wtcVdHeart');
+  var vdHrt = $('#wtcVdHeart');
   var video = $('#wtcVideo');
   var trulyFree = $('#wtcTrulyFree');
   var callCredits = $('#wtcCallCredits');
@@ -53,6 +53,10 @@
 
   /* Animation of video button hover: */
   vdBtn.mouseenter(function(){
+    vdHrt.addClass('slide-out');
+  });
+  vdBtn.mouseleave(function(){
+    vdHrt.removeClass('slide-out');
   });
 
   /* Listen ScrollBar: */
