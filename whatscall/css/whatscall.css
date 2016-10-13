@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2016-10-13 15:40
+  Latest modified: 2016-10-13 16:57
 */
 
 @font-face {
@@ -215,6 +215,13 @@
   color:#fff;
   cursor:pointer;
   font-weight:normal;
+}
+.wtc-video-btn:visited {
+  color:#fff;
+}
+.heading-container span {
+  display:none;
+  /* Chromes with "SaveFrom" plugin have a span along with youtube links, make it none! */
 }
 .wtc-video-icon {
   position:relative;
