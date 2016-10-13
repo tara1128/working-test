@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2016-10-13 15:08
+  Latest modified: 2016-10-13 15:40
 */
 
 @font-face {
@@ -758,13 +758,13 @@
   width:80px;
   height:80px;
 }
-.wtc-feature-icon-free {
+.wtc-feature-icons.iconfree {
   background-position:0 -300px;
 }
-.wtc-feature-icon-unknown1 {
+.wtc-feature-icons.unknown1 {
   background-position:-100px -300px;
 }
-.wtc-feature-icon-unknown2 {
+.wtc-feature-icons.unknown2 {
   background-position:-400px -300px;
 }
 .wtc-feature-icon-check, .wtc-feature-icon-cross {
@@ -952,9 +952,44 @@
     height:auto;
   }
 
+  .wtc-feature-row h3 {
+    padding:0 5px 0 10px;
+    box-sizing:border-box;
+    width:40%;
+    font-size:14px;
+  }
+  .wtc-feature-row.last h3 {
+    line-height:18px;
+  }
+  .wtc-feature-row.feature-head {
+    height:100px;
+  }
+  .wtc-feature-row.feature-head h3 {
+    line-height:100px;
+  }
+  .wtc-feature-cell {
+    width:20%;
+  }
 
-
-
+  .feature-head s {
+    width:80%;
+    height:auto;
+  }
+  .wtc-feature-icons.iconfree {
+    background-image:url(../images/wtc/wtc-feature-icon0-for-mobile.png);
+    background-position:0 0;
+  }
+  .wtc-feature-icons.unknown1 {
+    background-image:url(../images/wtc/wtc-feature-icon1-for-mobile.png);
+    background-position:0 0;
+  }
+  .wtc-feature-icons.unknown2 {
+    background-image:url(../images/wtc/wtc-feature-icon2-for-mobile.png);
+    background-position:0 0;
+  }
+  .wtc-br {
+    display:none;
+  }
 
 
 }/* End of Media */

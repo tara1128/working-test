@@ -33,6 +33,7 @@
       scaleWithProportion( '.hara-warn', 257, 67, true );
       scaleWithProportion( '.wtcSecPics', 470, 470, true, 1.45 );
       scaleWithProportion( '.credits-roll', 470, 470, true );
+      scaleWithProportion( '.wtc-feature-icons', 80, 80, true );
     }
   };
 
