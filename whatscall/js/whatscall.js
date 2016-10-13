@@ -1,6 +1,6 @@
 /*
   whatscall.js
-  Latest modified: 2016-10-11 18:19
+  Latest modified: 2016-10-13 15:09
 */
 
 (function(){ 
@@ -15,24 +15,26 @@
   var noInternet = $('#wtcNoInternet');
   var harassment = $('#wtcHarassment');
 
+  adjustForMobiles();
 
   function adjustForMobiles() {
-    /* Adjust the first screen height to be full-screen: */
     var win_width = $(window).width();
     var win_height = $(window).height();
     if( win_width < 769 ){
+      /* Adjust the first screen height to be full-screen: */
       heading.css('height', (win_height+101) + 'px' );
+      /* Some pics needs to be scaled down on mobiles: */
+      scaleWithProportion( '.tf-dialog', 470, 270, true );
+      scaleWithProportion( '.credits-roll', 412, 412, true );
+      scaleWithProportion( '.woman', 270, 320, true );
+      scaleWithProportion( '.wifi', 160, 160, true );
+      scaleWithProportion( '.hara-man', 320, 319, true );
+      scaleWithProportion( '.hara-txt', 412, 108 );
+      scaleWithProportion( '.hara-warn', 257, 67, true );
+      scaleWithProportion( '.wtcSecPics', 470, 470, true, 1.45 );
+      scaleWithProportion( '.credits-roll', 470, 470, true );
     }
   };
-
-
-  adjustForMobiles();
-  scaleWithProportion( '.tf-dialog', 470, 270, true );
-  scaleWithProportion( '.credits-roll', 412, 412, true );
-  scaleWithProportion( '.hara-man', 320, 319, true );
-  scaleWithProportion( '.wtcSecPics', 470, 470, true, 1.45 );
-  scaleWithProportion( '.credits-roll', 470, 470, true );
-
 
   /* Scale with proportion: */
   function scaleWithProportion( clsName, width, height, scaleBg, newProp ) {
@@ -72,7 +74,4 @@
   });
 
 
-
-
 })();
-

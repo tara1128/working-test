@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2016-10-12 18:44
+  Latest modified: 2016-10-13 15:08
 */
 
 @font-face {
@@ -651,6 +651,9 @@
   margin:90px 60px 0 0;
   width:400px;
 }
+.wtc-harassment .wtc-sec-pic {
+  float:right;/* Float right for html-structures in mobile where pic comes first */
+}
 .wtc-hara-items.hara-man {
   margin:30px auto 0;
   width:320px;
@@ -780,6 +783,9 @@
 
 /* ======= Responsive to mobile devices ======= */
 @media screen and (max-width:768px) {
+  .bodyWhatsCall {
+    background:#f5f6f8;
+  }
   .wtc-heading {
     background:url(../images/wtc/whatscall-bg.jpg) 50% 0 no-repeat;
   }
@@ -789,12 +795,13 @@
   .wtc-section {
     padding:20px 0;
   }
-  .wtc-container {
-    width:90%;
-  }
   .heading-container {
     margin-left:-45%;
     width:90%;
+  }
+  .wtc-container {
+    position:relative;
+    width:100%;
   }
   .wtc-bg {
     display:none;
@@ -835,56 +842,114 @@
 
   .wtc-sec-pic, .wtc-sec-txt {
     float:none;
-    margin:90px auto 0;
-    width:94%;
   }
   .wtc-sec-pic {
+    margin:50px auto 0;
+    width:80%;
     height:auto; /* Adjust height in JS */
     background:#217fef;
   }
   .wtc-sec-txt h2 {
+    margin-bottom:10px;
     font-size:36px;
   }
+  .wtc-sec-txt p {
+    font-size:18px;
+    line-height:28px;
+  }
+
   .tf-items.tf-dialog {
-    top:-120px;
+    top:-110px;
     width:100%;
     height:auto;
   }
-  .tf-girl {
+  .tf-items.tf-girl, .tf-items.tf-boy {
     top:auto;
-    left:-15px;
-    bottom:-15px;
+    bottom:25px;
+    width:110px;
+    height:110px;
+    background-position:0 0;
+    background-size:110px 110px;
   }
-  .tf-boy {
-    top:auto;
+  .tf-items.tf-girl {
+    left:15px;
+    background-image:url(../images/wtc/wtc-girl-for-mobile.png);
+  }
+  .tf-items.tf-boy {
     left:auto;
-    right:-15px;
-    bottom:-15px;
+    right:15px;
+    background-image:url(../images/wtc/wtc-boy-for-mobile.png);
   }
   .tf-lines {
     display:none;
   }
   .wtc-truly-free .wtc-sec-txt,
-  .wtc-call-credits .wtc-sec-txt,
-  .wtc-no-internet .wtc-sec-txt,
-  .wtc-harassment .wtc-sec-txt {
-    margin:50px auto 0;
-    width:100%;
+  .wtc-no-internet .wtc-sec-txt {
+    margin:20px auto 0;
+    width:80%;
+  }
+  .wtc-call-credits .wtc-sec-txt {
+    position:absolute;
+    left:50%;
+    top:0;
+    z-index:2;
+    margin:20px 0 0 -40%;
+    width:80%;
   }
   .wtc-call-credits .wtc-sec-pic.credits-roll {
-    width:100%;
+    position:relative;
+    right:-200px;
+    top:0;
+    z-index:1;
+    width:92%;
     height:auto;
     background:url(../images/wtc/wtc-panel.png) no-repeat transparent;
   }
+
   .wtc-nowifis.wifi {
-    right:0;
+    right:30px;
+    top:-30px;
+    width:30%;
+    height:auto;
+    background-image:url(../images/wtc/wtc-wifi-single.png);
+    background-position:0 0;
+  }
+  .wtc-nowifis.woman {
+    left:35%;
+    margin-left:-25%;
+    width:50%;
+    height:auto;
+  }
+
+  .wtc-harassment .wtc-sec-txt {
+    position:relative;
+    margin:20px auto 0;
+    width:80%;
+  }
+  .wtc-harassment .wtc-sec-pic {
+    float:none;
+    position:relative;
+    margin:70px auto 0; /* marginTop not less than 60, top of man jumping */
   }
   .wtc-hara-items.hara-man {
-    margin:10px auto 0;
-    width:100%;
+    position:absolute;
+    top:-60px; /* man jumps out for 60px */
+    left:50%;
+    margin:0 0 0 -35%;
+    width:70%;
+    height:auto;
   }
   .wtc-hara-items.hara-txt {
-    bottom:0px;
+    bottom:10px;
+    left:50%;
+    margin-left:-44%;
+    width:88%;
+    height:auto;
+  }
+  .hara-warn {
+    margin:15px auto 0;
+    width:62%;
+    height:auto;
   }
 
 
@@ -892,4 +957,4 @@
 
 
 
-}/* End of media */
+}/* End of Media */
