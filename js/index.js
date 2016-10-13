@@ -239,12 +239,12 @@ var cateList = [
   {
     projectName: 'WhatsCall',
     linkTo: 'whatscall/',
-    latestModified: '2016-10-10 19:13'
+    latestModified: '2016-10-13 17:19'
   },
   {
     projectName: 'Pegasi',
     linkTo: 'pegasi/',
-    latestModified: '2016-10-10 10:34'
+    latestModified: '2016-10-12 17:28'
   },
   {
     projectName: 'Piano Tiles 2',
