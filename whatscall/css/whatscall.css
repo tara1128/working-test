@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2016-10-14 16:54
+  Latest modified: 2016-10-14 17:16
 */
 
 @font-face {
@@ -21,6 +21,9 @@
 }
 /* ======= Global for WhatsCall ======= */
 .bodyWhatsCall #header-wrap, .bodyWhatsCall #header-fixed {
+  background-color:transparent;
+}
+.bodyWhatsCall .fixed #header-wrap {
   background-color: rgba(33,127,239, .8);
 }
 .bodyWhatsCall {
@@ -174,6 +177,9 @@
 }
 .wtc-dl-btn:hover {
   margin-top:-10px;
+}
+.wtc-dl-btn:visited, .wtc-dl-btn:active {
+  text-indent:-9999px;
 }
 .wtc-dl-btn.to-google {
   float:left;
