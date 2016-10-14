@@ -725,6 +725,25 @@ body {
 	text-align: center;
 	color: #fff
 }
+.fs-appinsight{
+	background: url(../images/front/appinsight-bg.jpg) no-repeat center #020a16;
+	-moz-background-size: cover;
+	  -o-background-size: cover;
+	     background-size: cover;
+}
+.fs-appinsight img {
+	display: block;
+	margin: 0 auto
+}
+.fs-appinsight .title {
+	margin-top: 140px;
+}
+.fs-appinsight .desc {
+	font-size: 22px;
+	margin-top: 48px;
+	text-align: center;
+	color: #fff
+}
 .cml3d-video{
 	position: absolute;
 	left: 0;
@@ -748,6 +767,8 @@ body {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.7);
 }
+
+
 #topnotice .fullSlider .main {
 	margin-top: -140px
 }
@@ -1536,7 +1557,8 @@ body {
 	padding: 30px 0
 }
 .bodyBD #banner .download .gp {
-	float: right
+	/*float: right*/
+	float: none;
 }
 #bdCharge {
 	position: absolute;
@@ -4438,7 +4460,9 @@ a.btn_green:visited {
 		width: 280px;
 		margin-top: 25px;
 	}
-
+	.fs-appinsight .title{
+		width: 490px;
+	}
 	#banner {
 		padding: 60px 0 70px
 	}
@@ -5077,11 +5101,20 @@ a.btn_green:visited {
 		margin: 50px auto 20px
 	}
 	.fs-cml3d .title {
-		width: 280px
+		width: 280px;
 	}
 	.fs-cml3d .desc {
 		width: 200px;
 		margin-top: 15px
+	}
+	.fs-appinsight .title{
+		width: 280px;
+		margin: 80px auto 0;
+	}
+	.fs-appinsight .desc{
+		font-size: 14px;
+		padding: 0 15px;
+		margin-top: 30px;
 	}
 	#topnotice .fullSlider .main {
 		margin-top: -130px
