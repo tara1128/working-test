@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2016-10-13 18:45
+  Latest modified: 2016-10-14 16:54
 */
 
 @font-face {
@@ -21,7 +21,7 @@
 }
 /* ======= Global for WhatsCall ======= */
 .bodyWhatsCall #header-wrap, .bodyWhatsCall #header-fixed {
-  background-color: transparent;
+  background-color: rgba(33,127,239, .8);
 }
 .bodyWhatsCall {
   background:#fff;
@@ -255,11 +255,11 @@
 }
 .wtc-vd-heart.slide-out {
   right:-27px;
-  -webkit-transition:right ease .8s;
-  -moz-transition:right ease .8s;
-  -ms-transition:right ease .8s;
-  -o-transition:right ease .8s;
-  transition:right ease .8s;
+  -webkit-transition:right ease .4s;
+  -moz-transition:right ease .4s;
+  -ms-transition:right ease .4s;
+  -o-transition:right ease .4s;
+  transition:right ease .4s;
 }
 
 
@@ -740,7 +740,7 @@
 /* ======= Features ======= */
 .wtc-features {
   margin:0;
-  padding:50px 0;
+  padding:50px 0 0;
   width:100%;
   background:url(../images/wtc/wtc-bg-feature.png) repeat-x #fff;
 }
@@ -925,9 +925,14 @@
     right:-200px;
     top:0;
     z-index:1;
-    width:92%;
+    width:88%;
     height:auto;
     background:url(../images/wtc/wtc-panel.png) no-repeat transparent;
+  }
+  .wtc-coins.coin1, .wtc-coins.coin2 {
+    width:50px;
+    height:50px;
+    background-position:-400px -250px;
   }
 
   .wtc-nowifis.wifi {
@@ -976,9 +981,6 @@
     height:auto;
   }
 
-  .wtc-features {
-    padding:50px 0 0;
-  }
   .wtc-feature-row h3 {
     padding:0 5px 0 10px;
     box-sizing:border-box;

@@ -1,6 +1,6 @@
 /*
   whatscall.js
-  Latest modified: 2016-10-13 18:45
+  Latest modified: 2016-10-14 16:55
 */
 
 (function(){ 
@@ -63,7 +63,7 @@
   $(window).scroll(function(){
     var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
     var clitWidth = document.body.clientWidth;
-    if( scrollTop > 245 ){
+    if( scrollTop > 180 ){
       trulyFree.addClass('active');
     }
     if( scrollTop > 745 ){
