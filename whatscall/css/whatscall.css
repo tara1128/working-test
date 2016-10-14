@@ -330,7 +330,7 @@
 /* ======= Section of Truly Free! ======= */
 .wtc-truly-free .wtc-bg {
   height:350px;
-  background:url(../images/wtc/wtc-bg-free.png) 50% 100% no-repeat;
+  background:url(../images/wtc/wtc-bg-free_2.png) 50% 100% no-repeat;
 }
 .wtc-truly-free .wtc-sec-pic {
   background:url(../images/wtc/wtc-free-earth-bg.png) no-repeat #217fef;
@@ -613,7 +613,7 @@
 /* ======= Section of no internet ======= */
 .wtc-no-internet .wtc-bg {
   height:350px;
-  background:url(../images/wtc/wtc-bg-nowifi.png) 50% 100% no-repeat;
+  background:url(../images/wtc/wtc-bg-nowifi_2.png) 50% 100% no-repeat;
 }
 .wtc-no-internet .wtc-sec-txt {
   margin:90px 0 0 60px;
