@@ -1,6 +1,6 @@
 /*
   whatscall.js
-  Latest modified: 2016-10-14 17:18
+  Latest modified: 2016-10-17 19:07
 */
 
 (function(){ 
@@ -67,13 +67,13 @@
     if( clitHeight > 820 || scrollTop > 250 ){
       trulyFree.addClass('active');
     }
-    if( scrollTop > 745 ){
+    if( scrollTop > 500 ){
       callCredits.addClass('active');
     }
-    if( scrollTop > 1145 ){
+    if( scrollTop > 1000 ){
       noInternet.addClass('active');
     }
-    if( scrollTop > 1645 ){
+    if( scrollTop > 1700 ){
       harassment.addClass('active');
     }
   });
