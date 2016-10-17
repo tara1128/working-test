@@ -5206,6 +5206,17 @@ a.btn_green:visited {
 		-o-background-size: contain;
 		background-size: contain
 	}
+  .fs-whatscall img.whatscallTitle {
+    padding-top:100px;
+    width:90%;
+  }
+  .fs-whatscall img.whatscallSubtitle {
+    margin: 20px auto 0;
+    width:80%;
+  }
+  .fs-whatscall img.whatscallFree {
+    top:0;
+  }
 	#banner .title {
 		width: 300px;
 		height: 75px;
