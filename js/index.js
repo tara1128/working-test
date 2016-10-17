@@ -1,6 +1,6 @@
 /*
   index.js
-  latest modified: 2016-10-10 19:13
+  latest modified: 2016-10-17 15:04
 */
 
 var IndexLogin = React.createClass({
@@ -236,6 +236,11 @@ var Popup = React.createClass({
 });
 
 var cateList = [
+  {
+    projectName: 'cmcm.com/en-us',
+    linkTo: 'en-us/',
+    latestModified: '2016-10-17 15:04'
+  },
   {
     projectName: 'WhatsCall',
     linkTo: 'whatscall/',

@@ -18,3 +18,8 @@ chrome-user-data
 *.sublime-workspace
 .idea
 *.iml
+
+
+en-us/images
+en-us/js
+en-us/js/lang
