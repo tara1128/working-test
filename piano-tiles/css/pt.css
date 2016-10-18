@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-09-30 18:50
+  Latest modified: 2016-10-18 17:39
 */
 
 /* main */
@@ -456,6 +456,11 @@
   width: 120px;
   height: 120px;
   cursor: pointer;
+  -webkit-transition:all ease .4s;
+  -moz-transition:all ease .4s;
+  -ms-transition:all ease .4s;
+  -o-transition:all ease .4s;
+  transition:all ease .4s;
 }
 .pt-video-btn.play {
   background: url(../images/pt/pt-btn-play.png) no-repeat;
@@ -706,10 +711,10 @@
   height: 128px;
   cursor:pointer;
   background-repeat:no-repeat;
-  background-image: url(../images/pt/pt-cdbtn-play.png);
+  background-image:url(../images/pt/pt-cdbtn-play2.png);
 }
 .pt-cdbtn.playing {
-  background-image: url(../images/pt/pt-cdbtn-pause.png);
+  background-image: url(../images/pt/pt-cdbtn-pause2.png);
 }
 
 /* Stage elements in Frame 5 */
@@ -800,8 +805,8 @@
 .pt-rd-ios, .pt-rd-android {
   display: inline-block;
   width: 36px;
-  height: 36px;
-  margin: 0 5px;
+  height: 35px;
+  margin: 0 3px;
   cursor: pointer;
   background-repeat: no-repeat;
   background-image: url(../images/pt/pt-downicon.png);
@@ -1506,7 +1511,7 @@
   height: 180px;
   text-align: center;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #f4f4f4;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   -webkit-transition: background-color .3s;
@@ -1516,7 +1521,7 @@
   transition: background-color .3s;
 }
 .pt-open-gp:hover, .pt-open-as:hover {
-  background-color: #e5e5e5;
+  background-color: #fff;
 }
 .pt-open-gp {
   background-image: url(../images/pt/pt-popicon-google.png);
@@ -1558,17 +1563,17 @@
 }
 .pt-pop-main.popShow {
   display: block;
-  -webkit-animation: popMainShow .3s ease both .3s;
-  -moz-animation: popMainShow .3s ease both .3s;
-  -ms-animation: popMainShow .3s ease both .3s;
-  -o-animation: popMainShow .3s ease both .3s;
-  animation: popMainShow .3s ease both .3s;
+  -webkit-animation: popMainShow .3s ease both;
+  -moz-animation: popMainShow .3s ease both;
+  -ms-animation: popMainShow .3s ease both;
+  -o-animation: popMainShow .3s ease both;
+  animation: popMainShow .3s ease both;
 }
-@-webkit-keyframes popMainShow { from { opacity: 0; -webkit-transform: translate(0,-300px); } to { opacity: 1; -webkit-transform: translate(0,0); } }
-@-moz-keyframes popMainShow { from { opacity: 0; -moz-transform: translate(0,-300px); } to { opacity: 1; -moz-transform: translate(0,0); } }
-@-ms-keyframes popMainShow { from { opacity: 0; -ms-transform: translate(0,-300px); } to { opacity: 1; -ms-transform: translate(0,0); } }
-@-o-keyframes popMainShow { from { opacity: 0; -o-transform: translate(0,-300px); } to { opacity: 1; -o-transform: translate(0,0); } }
-@keyframes popMainShow { from { opacity: 0; transform: translate(0,-300px); } to { opacity: 1; transform: translate(0,0); } }
+@-webkit-keyframes popMainShow { from { opacity: 0; -webkit-transform: translate(0,-100px); } to { opacity: 1; -webkit-transform: translate(0,0); } }
+@-moz-keyframes popMainShow { from { opacity: 0; -moz-transform: translate(0,-100px); } to { opacity: 1; -moz-transform: translate(0,0); } }
+@-ms-keyframes popMainShow { from { opacity: 0; -ms-transform: translate(0,-100px); } to { opacity: 1; -ms-transform: translate(0,0); } }
+@-o-keyframes popMainShow { from { opacity: 0; -o-transform: translate(0,-100px); } to { opacity: 1; -o-transform: translate(0,0); } }
+@keyframes popMainShow { from { opacity: 0; transform: translate(0,-100px); } to { opacity: 1; transform: translate(0,0); } }
 
 .pt-pop-mask.popClose {
   background:rgba(0,0,0,0);
