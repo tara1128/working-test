@@ -5206,17 +5206,31 @@ a.btn_green:visited {
 		-o-background-size: contain;
 		background-size: contain
 	}
+
+  .fs-liveme img.livemeStar {
+    margin: 10px auto 0;
+    width:40%;
+    max-width:210px;
+  }
+  .fs-liveme img.livemeTxt {
+    margin: 10px auto 0;
+    width:46%;
+    max-width:260px;
+  }
   .fs-whatscall img.whatscallTitle {
     padding-top:100px;
-    width:90%;
+    width:76%;
   }
   .fs-whatscall img.whatscallSubtitle {
-    margin: 20px auto 0;
-    width:80%;
+    margin:14px auto 0;
+    width:60%;
   }
   .fs-whatscall img.whatscallFree {
-    top:0;
+    width:100px;
+    top:20px;
+    right:0;
   }
+
 	#banner .title {
 		width: 300px;
 		height: 75px;
