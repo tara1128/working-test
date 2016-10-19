@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-10-19 16:18
+  Latest modified: 2016-10-19 17:32
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -423,7 +423,8 @@
 			 		ptVfooter.removeClass('pt-active');
 			 	},obj.animateTime);
 			}
-			obj.wrapDiv.css({ width: '100%', position: 'absolute', height: self.allHeight + 'px', top: initTop +'px', overflow: 'overflow'});
+      initTop = initTop+2; // Fix one wired bug of foot-top-border
+			obj.wrapDiv.css({width:'100%',position:'absolute',height:self.allHeight+'px',top:initTop+'px',overflow:'overflow'});
 		},
     adjustRightBtns: function(obj) {
       var self = this;
