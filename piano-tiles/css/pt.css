@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-18 17:39
+  Latest modified: 2016-10-19 16:06
 */
 
 /* main */
@@ -434,12 +434,12 @@
   left: 50%;
 }
 .pt-pulr-title {
-  margin: -340px 0 0 -500px;
+  margin: -320px 0 0 -500px;
   width: 447px;
   height: 132px;
 }
 .pt-pulr-intro {
-  margin: -180px 0 0 -500px;
+  margin: -160px 0 0 -500px;
   width: 454px;
   color: #fff;
   line-height: 24px;
@@ -472,7 +472,7 @@
   background: url(../images/pt/pt-btn-replay.png) no-repeat;
 }
 .pt-pulr-coins {
-  margin: 50px 0 0 -500px;
+  margin: 70px 0 0 -500px;
   width: 306px;
   height: 87px;
 }
@@ -544,12 +544,12 @@
   left: 50%;
 }
 .pt-music-title {
-  margin: -340px 0 0 -500px;
+  margin: -300px 0 0 -500px;
   width: 465px;
   height: 132px;
 }
 .pt-music-intro {
-  margin: -180px 0 0 -500px;
+  margin: -140px 0 0 -500px;
   width: 454px;
   line-height: 24px;
   color: #fff;
@@ -569,27 +569,25 @@
   color: #fff;
 }
 .pt-music-playfield {
-  margin-left: -220px;
   position: absolute;
   z-index: 4;
   top: 0;
-  left: 50%;
+  left: 0;
   width: 100%;
   height: 100%;
 }
 .pt-music-main {
   display: none;
   width: 100%;
-  height: 150%;
+  height: 100%;
   position: absolute;
   z-index: 5;
-  top: -25%;
+  top: 0;
   left: 0;
 }
 .pt-cdobj {
   position: absolute;
   z-index: 5;
-  left: 50%;
   width: 570px;
   height: 570px;
   -webkit-transition: all .4s ease-in;
@@ -599,16 +597,16 @@
   transition: all .4s ease-in;
 }
 .pt-music-obja {
-  top: 0;
-  margin-left: -30%;
+  right:10%;
+  top:-20%;
 }
 .pt-music-objb {
-  top: 50%;
-  margin: -15% 0 0 -38%;
+  right:20%;
+  top:34%;
 }
 .pt-music-objc {
-  bottom: 0;
-  margin-left: -60%;
+  right:45%;
+  bottom:-30%;
 }
 .pt-cd-trigger {
   position: absolute;
@@ -711,7 +709,7 @@
   height: 128px;
   cursor:pointer;
   background-repeat:no-repeat;
-  background-image:url(../images/pt/pt-cdbtn-play2.png);
+  background-image:url(../images/pt/pt-cdbtn-play3.png);
 }
 .pt-cdbtn.playing {
   background-image: url(../images/pt/pt-cdbtn-pause2.png);
@@ -1387,16 +1385,17 @@
 @media (min-width: 900px) and (max-width: 1099px) {
   .pt-vd-leftguy{ left: 10px; }
   .pt-vd-rightguy{ right: 40px; }
-  .pt-pulr-title { margin: -340px 0 0 -428px; }
-  .pt-pulr-intro { margin: -180px 0 0 -428px; }
-  .pt-pulr-coins { margin: 50px 0 0 -420px; }
+  .pt-pulr-title { margin: -320px 0 0 -428px; }
+  .pt-pulr-intro { margin: -160px 0 0 -428px; }
+  .pt-pulr-coins { margin: 70px 0 0 -420px; }
   .pt-pulr-honor{ margin: 210px 0 0 -420px; }
-  .pt-cdobj {width:500px;height:500px;}
-  .pt-music-obja{ top: 5%; }
-  .pt-music-objc{ bottom: 5%; }
-  .pt-music-title{ margin: -340px 0 0 -400px; }
-  .pt-music-intro{ margin: -180px 0 0 -400px; }
+  .pt-cdobj {width:400px;height:400px;}
+  .pt-music-obja{ top: -15%; }
+  .pt-music-objc{ bottom: -25%; }
+  .pt-music-title{ margin: -300px 0 0 -400px; }
+  .pt-music-intro{ margin: -140px 0 0 -400px; }
   .pt-music-bmg{ margin: 50px 0 0 -400px; }
+  .pt-cdbtn {margin:-50px 0 0 -50px;width:100px;height:100px;background-size:100px 100px;}
   .pt-players-wrap{ width: 300px; height: 360px; margin: -180px 0 0 -150px; }
   .pt-next{ margin-left: 30%; }
   .pt-prev{ margin-left: -37%; }
@@ -1406,16 +1405,18 @@
 @media (min-width: 830px) and (max-width: 899px) {
   .pt-vd-leftguy{ left: -20px; }
   .pt-vd-rightguy{ right: 100px; }
-  .pt-pulr-title { margin: -340px 0 0 -408px; }
-  .pt-pulr-intro { margin: -180px 0 0 -408px; }
-  .pt-pulr-coins { margin: 50px 0 0 -400px; }
+  .pt-pulr-title { margin: -320px 0 0 -408px; }
+  .pt-pulr-intro { margin: -160px 0 0 -408px; }
+  .pt-pulr-coins { margin: 70px 0 0 -400px; }
   .pt-pulr-honor { margin: 210px 0 0 -400px; }
-  .pt-cdobj { width: 400px; height: 400px;}
-  .pt-music-obja{ top: 5%; }
-  .pt-music-objc{ bottom: 5%; }
-  .pt-music-title{ margin: -340px 0 0 -400px; }
-  .pt-music-intro{ margin: -180px 0 0 -400px; }
+  .pt-cdobj {width:300px;height:300px;}
+  .pt-music-obja{ top: -15%; }
+  .pt-music-objb{ top: 32%; }
+  .pt-music-objc{ bottom: -15%; }
+  .pt-music-title{ margin: -300px 0 0 -400px; }
+  .pt-music-intro{ margin: -140px 0 0 -400px; }
   .pt-music-bmg{ margin: 50px 0 0 -400px; }
+  .pt-cdbtn {margin:-40px 0 0 -40px;width:80px;height:80px;background-size:80px 80px;}
   .pt-foot-title{ left: 8%; margin-left: 0px; }
   .pt-foot-download-btn { left: 8%; margin: -60px 0 0 0; }
 }/* /end media */
@@ -1426,13 +1427,15 @@
   .pt-pulr-honor { top: auto; bottom: 80px; margin: 0 0 0 -196px; }
   .pt-pulr-video{ margin: -125px 0 0 -272px; z-index: 1; }
   .pt-video-btn{ margin: -155px 0 0 -47px; }
-  .pt-cdobj { width: 300px; height: 300px;}
-  .pt-music-obja{ top: 5%; }
-  .pt-music-objc{ bottom: 5%; }
+  .pt-cdobj { width:250px;height:250px;}
+  .pt-music-obja{ top: -5%; }
+  .pt-music-objb{ top: 35%; }
+  .pt-music-objc{ bottom: -5%; }
   .pt-music-title{ top: 0; margin: 80px 0 0 -233px; }
   .pt-music-title img { display: block; width: 90%; margin: 0 auto; }
   .pt-music-intro{ top:0; width:408px; margin:250px 0 0 -205px; }
   .pt-music-bmg{ top: auto; bottom: 70px; margin: 0 0 0 -205px; }
+  .pt-cdbtn {margin:-40px 0 0 -40px;width:80px;height:80px;background-size:80px 80px;}
   .pt-comp-title{ top: 0; left: 50%; margin: 80px 0 0 -50%; width: 100%; }
   .pt-comp-title img { display: block; width: 80%; margin: 0 auto; }
   .pt-comp-intro{ width: 70%; top: 0; left: 50%; margin: 290px 0 0 -35%; }
@@ -1461,12 +1464,15 @@
   .pt-music-bmg,
   .pt-comp-intro,
   .pt-stories-intro,
+  .pt-cd-trigger,
   #pt-cur{display: none!important;}
   .pt-pulr-video{ margin: -125px 0 0 -272px; z-index: 1; }
   .pt-video-btn{ margin: -148px 0 0 -47px; }
-  .pt-cdobj { width: 200px; height: 200px;}
-  .pt-music-obja{ top: 2%; }
-  .pt-music-objc{ bottom: 8%; }
+  .pt-cdobj {width:180px;height:180px;}
+  .pt-music-obja{ top: -5%; }
+  .pt-music-objb{ top: 45%; }
+  .pt-music-objc{ bottom: -5%; }
+  .pt-cdbtn {margin:-25px 0 0 -25px;width:50px;height:50px;background-size:50px 50px;}
   .pt-music-title{ width: 100%; top: 0; margin: 80px 0 0 -50%; }
   .pt-music-title img { display: block; width: 90%; margin: 0 auto; }
   .pt-music-intro{ width: 90%; top: 0; margin:225px 0 0 -45%; }

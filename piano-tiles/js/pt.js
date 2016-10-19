@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-09-30 17:53
+  Latest modified: 2016-10-19 16:18
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -254,12 +254,12 @@
         accessaries.fadeIn(200);
         self.pauseCDs(obj, index);
       }
-      if(index == 0){
-        obj.musicMain.animate({top: '0', left: '-8%'}, obj.animateTime);
-      }else if(index == 2){
-        obj.musicMain.animate({top: '-50%', left: '8%'}, obj.animateTime);
-      }else{
-        obj.musicMain.animate({top: '-25%', left: '0'}, obj.animateTime);
+      if(index == 0){ /* Playing CD 1: */
+        obj.musicMain.animate({top: '5%', left: '-4%'}, obj.animateTime);
+      }else if(index == 1){ /* Playing CD 2: */
+        obj.musicMain.animate({top: '-10%', left: '6%'}, obj.animateTime);
+      }else{ /* Playing CD 3: */
+        obj.musicMain.animate({top: '-28%', left: '8%'}, obj.animateTime);
       }
     },
     pauseCDs: function(obj, i) { // Pause CDs except item(i). Pause all CDs when i is -1.
