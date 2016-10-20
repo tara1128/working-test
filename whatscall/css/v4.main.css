@@ -725,6 +725,44 @@ body {
 	text-align: center;
 	color: #fff
 }
+.fs-liveme {
+	background: url(../images/front/bg-liveme.jpg) no-repeat center #341c6c;
+	-moz-background-size: cover;
+	  -o-background-size: cover;
+	     background-size: cover;
+}
+.fs-liveme img.livemeStar {
+	display: block;
+	margin: 50px auto 0;
+}
+.fs-liveme img.livemeTxt {
+	display: block;
+	margin: 30px auto 0;
+}
+.fs-whatscall {
+	background: url(../images/front/bg-whatscall-front.jpg) no-repeat center #3477c1;
+	-moz-background-size: cover;
+	  -o-background-size: cover;
+	     background-size: cover;
+}
+.fullSlider .fs-whatscall .main {
+  z-index:3;
+}
+.fs-whatscall img {
+	display: block;
+}
+.fs-whatscall img.whatscallTitle {
+	margin:0px auto 0;
+  padding-top:160px;
+}
+.fs-whatscall img.whatscallSubtitle {
+	margin: 36px auto 0;
+}
+.fs-whatscall img.whatscallFree {
+  position:absolute;
+  right:30px;
+  top:80px;
+}
 .fs-appinsight{
 	background: url(../images/front/appinsight-bg.jpg) no-repeat center #020a16;
 	-moz-background-size: cover;
@@ -744,7 +782,7 @@ body {
 	text-align: center;
 	color: #fff
 }
-.cml3d-video{
+.cml3d-video, .whatscall-video {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -757,7 +795,7 @@ body {
 	height: 100%;
 	margin: 0 auto;
 }
-.cml3d-video:before{
+.cml3d-video:before, .whatscall-video:before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -767,6 +805,35 @@ body {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.7);
 }
+
+.whatscall-video video, .whatscall-vdmask {
+  position:absolute;
+  top:50%;
+  left:50%;
+  min-width:100%;
+  min-height:100%;
+  width:auto;
+  height:auto;
+  -webkit-transform:translate(-50%, -50%);
+  -moz-transform:translate(-50%, -50%);
+  -ms-transform:translate(-50%, -50%);
+  -o-transform:translate(-50%, -50%);
+  transform:translate(-50%, -50%);
+}
+.whatscall-video video{
+  z-index:1;
+}
+.whatscall-vdmask {
+  z-index:2;
+  background:rgba(22,81,147, .8);
+}
+
+
+
+
+
+
+
 
 
 #topnotice .fullSlider .main {
@@ -5139,6 +5206,31 @@ a.btn_green:visited {
 		-o-background-size: contain;
 		background-size: contain
 	}
+
+  .fs-liveme img.livemeStar {
+    margin: 10px auto 0;
+    width:40%;
+    max-width:210px;
+  }
+  .fs-liveme img.livemeTxt {
+    margin: 10px auto 0;
+    width:46%;
+    max-width:260px;
+  }
+  .fs-whatscall img.whatscallTitle {
+    padding-top:100px;
+    width:76%;
+  }
+  .fs-whatscall img.whatscallSubtitle {
+    margin:14px auto 0;
+    width:60%;
+  }
+  .fs-whatscall img.whatscallFree {
+    width:100px;
+    top:20px;
+    right:0;
+  }
+
 	#banner .title {
 		width: 300px;
 		height: 75px;

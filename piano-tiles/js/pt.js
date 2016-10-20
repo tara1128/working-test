@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-10-19 17:32
+  Latest modified: 2016-10-20 16:43
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -737,9 +737,11 @@
 	}
 	CMmousewheel.init(pageObj);
   // Click to pop dialog for downloading:
+  var downloadLinkToGoogle = 'https://play.google.com/store/apps/details?id=com.cmplay.tiles2';
+  var downloadLinkToApple = 'https://itunes.apple.com/us/app/piano-tiles-2-dont-tap-white/id1027688889?mt=8';
 	var dialogHtml = '<span class="pt-down-qd clearfix">\
-                      <a class="pt-open-gp" href="https://play.google.com/store/apps/details?id=com.cmplay.tiles2" target="_blank"></a>\
-                      <a class="pt-open-as" href="https://itunes.apple.com/us/app/piano-tiles-2-dont-tap-white/id1027688889?mt=8" target="_blank"></a>\
+                      <a class="pt-open-gp" href="'+ downloadLinkToGoogle +'" target="_blank"></a>\
+                      <a class="pt-open-as" href="'+ downloadLinkToApple +'" target="_blank"></a>\
                     </span>';
 	var popHTML = '<div class="pt-pop-mask popElements" id="popMask"></div>\
                  <div class="pt-pop-main popElements clearfix" id="popMain">\
@@ -747,18 +749,24 @@
                    <div class="cm-pop-content clearfix">' + dialogHtml + '</div>\
                  </div>';
 	$('#ptDownLoadBtna, #ptDownLoadBtnb').on('click',function(){
-		$('body').append(popHTML);
-    var popMask = $('#popMask');
-    var popMain = $('#popMain');
-    var popClsBtn = $('#popClose');
-    var popElems = $('.popElements');
-		popMask.css('height', $(window).height() + 'px').addClass('popShow');
-		popMain.css({marginTop: - popMain.outerHeight() / 2 + 'px'}).addClass('popShow');
-    popClsBtn.on('click', function(){
-      popElems.addClass('popClose');
-      setTimeout(function() {
-        popElems.remove();
-      }, 500);
-    });
+    if( IsAndroid ) {
+      location.href = downloadLinkToGoogle;
+    }else if( IsIOS ){
+      location.href = downloadLinkToApple;
+    }else{
+      $('body').append(popHTML);
+      var popMask = $('#popMask');
+      var popMain = $('#popMain');
+      var popClsBtn = $('#popClose');
+      var popElems = $('.popElements');
+      popMask.css('height', $(window).height() + 'px').addClass('popShow');
+      popMain.css({marginTop: - popMain.outerHeight() / 2 + 'px'}).addClass('popShow');
+      popClsBtn.on('click', function(){
+        popElems.addClass('popClose');
+        setTimeout(function() {
+          popElems.remove();
+        }, 500);
+      });
+    }
 	});
 })(jQuery);
