@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2016-10-14 17:16
+  Latest modified: 2016-10-20 19:02
 */
 
 @font-face {
@@ -29,7 +29,14 @@
 .bodyWhatsCall {
   background:#fff;
 }
+.bodyWhatsCall #footer-wrap {
+  display:none!important;
+}
+.wtc-foot-dl {
+  display:none;
+}
 .wtc-wrap {
+  padding-bottom:50px;
   position:relative;
   left:0;
   right:0;
@@ -203,6 +210,19 @@
 .wtc-dl-btn s.wtc-dl-icon-a {
   background-position:-200px -150px;
 }
+
+/* Download buttons specified in public footer model: */
+.footer-inner .wtc-dl-btn {
+  position:absolute;
+  top:30px;
+}
+.footer-inner .wtc-dl-btn.to-google {
+  right: 246px;
+}
+.footer-inner .wtc-dl-btn.to-apple {
+  right: 0px;
+}
+
 .wtc-downloads, .wtc-video-btn {
   -webkit-animation: moveBtns 1s ease both .1s;
   -moz-animation: moveBtns 1s ease both .1s;
@@ -809,12 +829,47 @@
   background-position:-450px -200px;
 }
 
+/* Overwrite public footer model style: */
+.bodyWhatsCall .footer-wrap {
+  background:#217fef;
+}
+.bodyWhatsCall .footer-inner {
+  width:1000px;
+}
+
+
+
+
 
 
 /* ======= Responsive to mobile devices ======= */
 @media screen and (max-width:768px) {
   .bodyWhatsCall {
     background:#f5f6f8;
+  }
+  .bodyWhatsCall #footer-wrap {
+    display:block!important;
+  }
+  .bodyWhatsCall .footer-wrap {
+    display:none!important;
+  }
+  .wtc-foot-dl {
+    display:block;
+  }
+  .wtc-foot-dl .wtc-container {
+    padding:20px 0 40px;
+    clear:both;
+    overflow:hidden;
+  }
+  /* Show one button in foot, according to phone: */
+  .wtc-foot-dl .wtc-dl-btn.to-google,
+  .wtc-foot-dl .wtc-dl-btn.to-apple {
+    float:none;
+    margin:20px auto 0;
+  }
+
+  .wtc-wrap {
+    padding-bottom:0px;
   }
   .wtc-heading {
     background:url(../images/wtc/whatscall-bg.jpg) 50% 0 no-repeat;

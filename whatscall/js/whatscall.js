@@ -1,6 +1,6 @@
 /*
   whatscall.js
-  Latest modified: 2016-10-17 19:07
+  Latest modified: 2016-10-20 18:53
 */
 
 (function(){ 
@@ -14,8 +14,10 @@
   var callCredits = $('#wtcCallCredits');
   var noInternet = $('#wtcNoInternet');
   var harassment = $('#wtcHarassment');
+  var theWrap = $('#wrap');
 
   adjustForMobiles();
+  renderFooterButtons();
 
   function adjustForMobiles() {
     var win_width = $(window).width();
@@ -48,6 +50,28 @@
       if( scaleBg ){
         _item.css('background-size', _newW + 'px ' + _newH + 'px' );
       }
+    }
+  };
+
+  /* Render download buttons on footer: */
+  function renderFooterButtons() {
+    $('.gp-dl').remove();
+    var wrapHeight = theWrap.height();
+    var footerInner = $('.footer-inner');
+    var btnToGoogle = '<a class="wtc-dl-btn to-google" href="http://whatscall.cmcm.com/sho/promo?utm_source=6037" target="_blank"><s class="wtc-dl-icon-g wtc-has-sprites"></s></a>';
+    var btnToApple = '<a class="wtc-dl-btn to-apple" href="http://whatscall.cmcm.com/sho/promo?utm_source=6037" target="_blank"><s class="wtc-dl-icon-a wtc-has-sprites"></s></a>';
+    footerInner.append( btnToGoogle ).append( btnToApple );
+    if( IsAndroid ){
+      theWrap.height( wrapHeight - 101 );
+      $('#btnInAndroid').show();
+      $('#btnInIOS').hide();
+    }else if( IsIOS ){
+      theWrap.height( wrapHeight - 101 );
+      $('#btnInAndroid').hide();
+      $('#btnInIOS').show();
+    }else{
+      $('#btnInAndroid').hide();
+      $('#btnInIOS').hide();
     }
   };
 
