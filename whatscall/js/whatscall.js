@@ -1,6 +1,6 @@
 /*
   whatscall.js
-  Latest modified: 2016-10-20 18:53
+  Latest modified: 2016-10-21 09:30
 */
 
 (function(){ 
@@ -88,17 +88,33 @@
     var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
     var clitWidth = document.body.clientWidth;
     var clitHeight = document.body.clientHeight;
-    if( clitHeight > 820 || scrollTop > 250 ){
-      trulyFree.addClass('active');
-    }
-    if( scrollTop > 500 ){
-      callCredits.addClass('active');
-    }
-    if( scrollTop > 1000 ){
-      noInternet.addClass('active');
-    }
-    if( scrollTop > 1700 ){
-      harassment.addClass('active');
+    if( clitWidth < 768 ){ /* On mobile devices: */
+      if( scrollTop > 220 ){
+        trulyFree.addClass('active');
+      }
+      if( scrollTop > 440 ){
+        callCredits.addClass('active');
+      }
+      if( scrollTop > 660 ){
+        noInternet.addClass('active');
+      }
+      if( scrollTop > 1100 ){
+        harassment.addClass('active');
+      }
+
+    }else{ /* On desktop devices: */
+      if( clitHeight > 820 || scrollTop > 250 ){
+        trulyFree.addClass('active');
+      }
+      if( scrollTop > 500 ){
+        callCredits.addClass('active');
+      }
+      if( scrollTop > 1000 ){
+        noInternet.addClass('active');
+      }
+      if( scrollTop > 1700 ){
+        harassment.addClass('active');
+      }
     }
   });
 

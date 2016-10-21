@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2016-10-20 19:02
+  Latest modified: 2016-10-21 09:31
 */
 
 @font-face {
@@ -28,6 +28,9 @@
 }
 .bodyWhatsCall {
   background:#fff;
+}
+.bodyWhatsCall #wrap {
+  overflow:hidden;
 }
 .bodyWhatsCall #footer-wrap {
   display:none!important;
@@ -837,11 +840,6 @@
   width:1000px;
 }
 
-
-
-
-
-
 /* ======= Responsive to mobile devices ======= */
 @media screen and (max-width:768px) {
   .bodyWhatsCall {
@@ -857,9 +855,8 @@
     display:block;
   }
   .wtc-foot-dl .wtc-container {
-    padding:20px 0 40px;
+    padding:20px 0;
     clear:both;
-    overflow:hidden;
   }
   /* Show one button in foot, according to phone: */
   .wtc-foot-dl .wtc-dl-btn.to-google,
