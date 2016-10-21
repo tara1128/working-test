@@ -7870,3 +7870,8 @@ a.btn_green:visited {
 #trans-tooltip, #tip-arrow-bottom, #tip-arrow-top {
 	display: none !important
 }
+
+/* Fix the bug of video button displaying on iPhone: */
+video::-webkit-media-controls {
+  display:none !important;
+}
