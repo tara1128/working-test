@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-21 19:46
+  Latest modified: 2016-10-23 19:12
 */
 
 /* main */
@@ -327,13 +327,13 @@
   height:20px;
   background:url(../images/pt/dialog-arr.png) no-repeat;
 }
-.pt-little-drummer {
+.pt-musical-note {
   position:absolute;
   left:20px;
-  bottom:0;
-  width:54px;
-  height:59px;
-  background:url(../images/pt/pt-drum-guy.png) no-repeat;
+  bottom:35px;
+  width:35px;
+  height:39px;
+  background:url(../images/pt/pt-musical-note.png) no-repeat;
 }
 .pt-plus-tones {
   position:absolute;
@@ -544,33 +544,40 @@
   width:147px;
   height:50px;
 }
-.pt-vd-leftguy, .pt-vd-rightguy {
+.pt-vd-normal-guy, .pt-vd-tall-guy, .pt-vd-fat-guy {
   display: block;
   position: absolute;
   z-index: 5;
 }
-.pt-pulr-title, .pt-pulr-intro, .pt-pulr-coins, .pt-pulr-honor, .pt-vd-leftguy, .pt-vd-rightguy {
+.pt-pulr-title, .pt-pulr-intro, .pt-pulr-coins, .pt-pulr-honor, .pt-vd-normal-guy, .pt-vd-tall-guy, .pt-vd-fat-guy {
   -webkit-transition: all .4s ease-in;
   -moz-transition: all .4s ease-in;
   -ms-transition: all .4s ease-in;
   -o-transition: all .4s ease-in;
   transition: all .4s ease-in;
 }
-.pt-vd-leftguy {
-  width: 187px;
-  height: 162px;
-  left: -100px;
+.pt-vd-normal-guy {
+  width: 124px;
+  height: 153px;
+  left: -20px;
   bottom: 50px;
 }
-.pt-vd-rightguy {
-  width: 173px;
-  height: 238px;
-  right: -50px;
-  bottom: 30px;
+.pt-vd-tall-guy {
+  width: 134px;
+  height: 250px;
+  right:-40px;
+  bottom:70px;
+}
+.pt-vd-fat-guy {
+  width:162px;
+  height:142px;
+  right:-100px;
+  bottom:60px;
 }
 /* Specified for video */
 .pt-vd-box {
   position: relative;
+  z-index: 6; /* In front of the guys */
   width: 544px;
   height: 845px;
   overflow: hidden;
@@ -774,8 +781,10 @@
   z-index: 2;
   bottom: 0;
   left: 0;
+  box-sizing:border-box;
+  border:3px dashed orange;
 }
-.pt-stage-elements {
+.pt-stage-elements {/* Guys & lights on stage */
   display:none;
   position:absolute;
   z-index:7;
@@ -787,15 +796,40 @@
   -o-transition: all .4s ease;
   transition: all .4s ease;
 }
-.pt-stage-elements.pt-player-bass-guy {
-  margin: -2% 0 0 -160px;
-  width: 111px;
-  height: 127px;
+.pt-stage-elements.pt-player-left-purple-guy {
+  margin:0 0 0 -250px;
+  width:68px;
+  height:62px;
 }
-.pt-stage-elements.pt-player-drumkit-guys {
-  margin: 0 0 0 100px;
-  width: 181px;
-  height: 91px;
+.pt-stage-elements.pt-player-left-tall-guy {
+  margin:-110px 0 0 -170px;
+  width:90px;
+  height:165px;
+}
+.pt-stage-elements.pt-player-red-guy {
+  margin:-30px 0 0 -120px;
+  width:64px;
+  height:88px;
+}
+.pt-stage-elements.pt-player-middle-guy {
+  margin:-30px 0 0 -80px;
+  width:95px;
+  height:99px;
+}
+.pt-stage-elements.pt-player-yellow-guy {
+  margin:-30px 0 0 -40px;
+  width:66px;
+  height:82px;
+}
+.pt-stage-elements.pt-player-giant-guy {
+  margin:0 0 0 155px;
+  width:120px;
+  height:132px;
+}
+.pt-stage-elements.pt-player-right-purple-guy {
+  margin:0 0 0 170px;
+  width:68px;
+  height:62px;
 }
 .pt-stage-elements.pt-stage-left-light {
   margin: 0 0 0 -400px;
@@ -1231,7 +1265,7 @@
   animation: enterFromTop 1s ease both .5s;
 }
 
-.pt-active .pt-player-bass-guy {
+.pt-active .pt-player-left-purple-guy {
   display: block;
   -webkit-animation: enterFromTop .3s ease-in both 1s;
   -moz-animation: enterFromTop .3s ease-in both 1s;
@@ -1239,7 +1273,47 @@
   -o-animation: enterFromTop .3s ease-in both 1s;
   animation: enterFromTop .3s ease-in both 1s;
 }
-.pt-active .pt-player-drumkit-guys {
+.pt-active .pt-player-left-tall-guy {
+  display: block;
+  -webkit-animation: enterFromTop .3s ease-in both 1.2s;
+  -moz-animation: enterFromTop .3s ease-in both 1.2s;
+  -ms-animation: enterFromTop .3s ease-in both 1.2s;
+  -o-animation: enterFromTop .3s ease-in both 1.2s;
+  animation: enterFromTop .3s ease-in both 1.2s;
+}
+.pt-active .pt-player-red-guy {
+  display: block;
+  -webkit-animation: enterFromTop .3s ease-in both 1.2s;
+  -moz-animation: enterFromTop .3s ease-in both 1.2s;
+  -ms-animation: enterFromTop .3s ease-in both 1.2s;
+  -o-animation: enterFromTop .3s ease-in both 1.2s;
+  animation: enterFromTop .3s ease-in both 1.2s;
+}
+.pt-active .pt-player-yellow-guy {
+  display: block;
+  -webkit-animation: enterFromTop .3s ease-in both 1.2s;
+  -moz-animation: enterFromTop .3s ease-in both 1.2s;
+  -ms-animation: enterFromTop .3s ease-in both 1.2s;
+  -o-animation: enterFromTop .3s ease-in both 1.2s;
+  animation: enterFromTop .3s ease-in both 1.2s;
+}
+.pt-active .pt-player-giant-guy {
+  display: block;
+  -webkit-animation: enterFromTop .3s ease-in both 1.2s;
+  -moz-animation: enterFromTop .3s ease-in both 1.2s;
+  -ms-animation: enterFromTop .3s ease-in both 1.2s;
+  -o-animation: enterFromTop .3s ease-in both 1.2s;
+  animation: enterFromTop .3s ease-in both 1.2s;
+}
+.pt-active .pt-player-middle-guy {
+  display: block;
+  -webkit-animation: enterFromTop .3s ease-in both 1.2s;
+  -moz-animation: enterFromTop .3s ease-in both 1.2s;
+  -ms-animation: enterFromTop .3s ease-in both 1.2s;
+  -o-animation: enterFromTop .3s ease-in both 1.2s;
+  animation: enterFromTop .3s ease-in both 1.2s;
+}
+.pt-active .pt-player-right-purple-guy {
   display: block;
   -webkit-animation: enterFromTop .3s ease-in both 1.2s;
   -moz-animation: enterFromTop .3s ease-in both 1.2s;
@@ -1385,8 +1459,6 @@
 @media (min-width:769px) and (max-width:1099px) {
 
   /* Frame2 "Re": */
-  .pt-vd-leftguy{ left: 10px; }
-  .pt-vd-rightguy{ right: 40px; }
   .pt-pulr-title { margin: -320px 0 0 -428px; }
   .pt-pulr-intro { margin: -160px 0 0 -428px; }
   .pt-pulr-coins { margin: 70px 0 0 -420px; }
