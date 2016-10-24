@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-10-24 15:49
+  Latest modified: 2016-10-24 19:29
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -460,13 +460,8 @@
 			obj.wrapDiv.css({width:'100%',position:'absolute',height:self.allHeight+'px',top:initTop+'px',overflow:'overflow'});
 		},
     adjustRightBtns: function(obj) {
-      var self = this;
-			var curWinWidth = $(win).width();
-      var limitWinWidth = 600; // When width less than this value, make btns down low.
-      if( self.initNum == self.offsetArr.length-1 && curWinWidth < limitWinWidth ){ // When comes to the last scene, make btns a little bit lower...
-        obj.curPages.parent().css("top", "75%");
-      }else{ // When not in the last scene, make btns back to 50% top.
-        obj.curPages.parent().css("top", "50%");
+      if( IsAndroid || IsIOS || IsWindowsPhone ){
+        obj.curPages.parent().hide();
       }
     },
 		activeWeb: function(obj,items) {

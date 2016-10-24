@@ -401,12 +401,12 @@
 
 /* Frame foot, with pianist: */
 .pt-foot-title {
-  display: none;
-  position: absolute;
-  z-index: 8;
-  left: 50%;
-  top: 60px;
-  margin-left: -500px;
+  display:none;
+  position:absolute;
+  z-index:8;
+  left:50%;
+  top:60px;
+  margin-left:-500px;
 }
 
 /* Frame 4 "Fa": */
@@ -1667,6 +1667,14 @@
   .pt-stage-elements.pt-stage-right-light{bottom:3%;left:auto;right:20px;margin-left:0;width:58px;height:46.5px;}
   .pt-stage-elements.pt-stage-left-light img, .pt-stage-elements.pt-stage-right-light img{margin-left:-29px;width:58px;height:46.5px;}
 
+  /* Frame5.5 "Foot": */
+  .pt-footer{height:275px;}
+  .pt-foot-pianist{background:url(../images/pt/pt-no-pianist.jpg) 50% 100% no-repeat;}
+  .pt-foot-title{margin-left:-160px;width:320px;}
+  .pt-foot-title img{display:block;margin:0 auto;width:100%;}
+  .pt-foot-download-btn{margin:-20px 0 0 -110px;}
+
+
 	.pt-pop-main{left:10%;width:80%;margin-left:0;}
   
 }/* /end media 768 */
@@ -1680,6 +1688,12 @@
   /* Frame3 "Me": */
   .pt-cdobj{width:400px;height:400px;}
   .pt-cdbtn{margin:-50px 0 0 -50px;width:100px;height:100px;background-size:100px 100px;}
+
+  /* Frame5.5 "Foot": */
+  .pt-foot-title{margin-left:-400px;}
+  .pt-foot-download-btn{margin:-60px 0 0 -414px;}
+
+
 }/* /end media 769-1099 */
 
 
