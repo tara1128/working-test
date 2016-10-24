@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-24 13:26
+  Latest modified: 2016-10-24 18:30
 */
 
 /* main */
@@ -115,14 +115,13 @@
   position:absolute;
   top:50%;
   left:50%;
-  width: 100%;
-  -webkit-transition: all .4s ease-in;
-  -moz-transition: all .4s ease-in;
-  -ms-transition: all .4s ease-in;
-  -o-transition: all .4s ease-in;
-  transition: all .4s ease-in;
+  width:100%;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
 }
-
 .pt-do-tile{
   margin:-162px 0 0 -440px;
   z-index:2;
@@ -135,10 +134,9 @@
   margin:-292px 0 0 -50%;
   z-index:4;
 }
-
 .pt-do-tile img, .pt-do-text img, .pt-do-crumb img {
-  display: block;
-  width: 100%;
+  display:block;
+  width:100%;
 }
 .pt-do-tile img {
   max-width: 374px;
@@ -149,6 +147,10 @@
 .pt-do-crumb img {
   margin: 0 auto;
   max-width: 1410px;
+}
+.pt-do-crumb img.pt-crm-mob {
+  display:none;
+  max-width:750px;
 }
 
 
@@ -259,9 +261,10 @@
   margin: -320px 0 0 0;
 }
 .pt-stories-intro {
-  margin: -240px 0 0 0;
-  color: #fff;
-  font-size: 16px;
+  margin:-240px 0 0 0;
+  color:#fff;
+  font-size:16px;
+  line-height:24px;
 }
 
 .pt-players-wrap {
@@ -417,12 +420,13 @@
   text-align: center;
 }
 .pt-comp-title {
-  margin: -300px 0 0 0;
+  margin:-300px 0 0 0;
 }
 .pt-comp-intro {
-  margin: -140px 0 0 0;
-  color: #fff;
-  font-size: 16px;
+  margin:-140px 0 0 0;
+  color:#fff;
+  font-size:16px;
+  line-height:24px;
 }
 .pt-comp-list { 
   margin: -80px 0 0 -343px;
@@ -477,7 +481,7 @@
 }
 
 /* Frame 2 "Re" */
-.pt-pulr-title, .pt-pulr-intro, .pt-pulr-video, .pt-video-btn, .pt-pulr-coins, .pt-pulr-honor {
+.pt-pulr-title, .pt-pulr-intro, .pt-pulr-video, .pt-video-btn, .pt-pulr-fake-video, .pt-pulr-coins, .pt-pulr-honor {
   display: none;
   position: absolute;
   z-index: 4;
@@ -492,6 +496,8 @@
 .pt-pulr-intro {
   margin: -160px 0 0 -500px;
   width: 454px;
+}
+.pt-pulr-intro p {
   color: #fff;
   line-height: 24px;
   font-size: 16px;
@@ -522,6 +528,9 @@
 .pt-video-btn.replay {
   background: url(../images/pt/pt-btn-replay.png) no-repeat;
 }
+.pt-pulr-fake-video {
+  display:none; /* Fake video displays on mobiles only! */
+}
 .pt-pulr-coins {
   margin: 70px 0 0 -500px;
   width: 306px;
@@ -549,7 +558,7 @@
   position: absolute;
   z-index: 5;
 }
-.pt-pulr-title, .pt-pulr-intro, .pt-pulr-coins, .pt-pulr-honor, .pt-vd-normal-guy, .pt-vd-tall-guy, .pt-vd-fat-guy {
+.pt-pulr-title, .pt-pulr-intro, .pt-pulr-fake-video, .pt-pulr-coins, .pt-pulr-honor, .pt-vd-normal-guy, .pt-vd-tall-guy, .pt-vd-fat-guy {
   -webkit-transition: all .4s ease-in;
   -moz-transition: all .4s ease-in;
   -ms-transition: all .4s ease-in;
@@ -594,7 +603,7 @@
 
 
 /* Frame 3 "Me": */
-.pt-music-title, .pt-music-intro, .pt-music-bmg {
+.pt-music-title, .pt-music-intro, .pt-music-bmg, .pt-music-bars-in-mobile {
   display: none;
   position: absolute;
   z-index: 5;
@@ -609,9 +618,11 @@
 .pt-music-intro {
   margin: -140px 0 0 -500px;
   width: 454px;
-  line-height: 24px;
-  color: #fff;
-  font-size: 16px;
+}
+.pt-music-intro span {
+  line-height:24px;
+  color:#fff;
+  font-size:16px;
 }
 .pt-music-bmg {
   margin: 80px 0 0 -500px;
@@ -782,9 +793,10 @@
   display: none;
   width: 100%;
   height:400px;
-  background:url(../images/pt/pt-stadium.png) 50% 50% no-repeat;
+  background-position:50% 50%;
+  background-repeat:no-repeat;
+  background-image:url(../images/pt/pt-stadium.png);
   background-size:cover;
-  box-sizing:border-box;
 }
 .pt-stage-elements {/* Guys & lights on stage */
   display:none;
@@ -1100,7 +1112,7 @@
   animation: enterFromTop 1s ease both .2s;
 }
 
-.pt-active .pt-pulr-coins {
+.pt-active .pt-pulr-coins, .pt-active .pt-pulr-fake-video {
   display: block;
   -webkit-animation: enterFromTop 1s ease both .4s;
   -moz-animation: enterFromTop 1s ease both .4s;
@@ -1190,7 +1202,7 @@
   animation: enterFromTop 1s ease both .2s;
 }
 
-.pt-active .pt-music-bmg {
+.pt-active .pt-music-bmg, .pt-active .pt-music-bars-in-mobile {
   display: block;
   -webkit-animation: enterFromTop 1s ease both .4s;
   -moz-animation: enterFromTop 1s ease both .4s;
@@ -1519,33 +1531,55 @@
 /* ======= Responsive Solutions ======= */
 /* ======= ==================== ======= */
 @media screen and (max-width:768px) {
-  .pt-right-down {display:none;}
+  .pt-right-down{display:none;}
   /* Frame1 "Do": */
-  .pt-do-tile{ margin:0 0 0 -50%; top:80px; }
-  .pt-do-text{ margin:0 0 0 -50%; top:280px; }
-  .pt-do-crumb{ margin:-150px 0 0 -50%; }
-  .pt-do-tile img { margin:0 auto; width:55%; }
-  .pt-do-text img { margin:0 auto; width:70%; }
-  .pt-do-download-btn{ margin:174px 0 0 -164px; }
+  .pt-do-tile{top:80px;margin:0 0 0 -50%;}
+  .pt-do-tile img{margin:0 auto;width:75%;}
+  .pt-do-text{top:280px;margin:0 0 0 -50%;}
+  .pt-do-text img{margin:0 auto;width:65%;}
+  .pt-do-crumb{top:60px;margin:0 0 0 -50%;}
+  .pt-do-crumb img.pt-crm-pc{display:none!important;}
+  .pt-do-crumb img.pt-crm-mob{display:block;}
+  .pt-do-download-btn{margin:160px 0 0 -123px;width:246px;height:93px;}
+  .pt-do-download-btn s.btn-face,
+  .pt-do-download-btn s.btn-body,
+  .pt-do-download-btn s.btn-shadow{background-size:246px 93px;}
 
   /* Frame2 "Re": */
-  .pt-pulr-title {top:0;width:320px;margin:90px 0 0 -160px;}
-  .pt-pulr-title img {display:block;width:100%;margin:0 auto; }
-  .pt-pulr-intro {top:0;margin:230px 0 0 -160px;width:320px; }
-  .pt-pulr-coins {top:auto;bottom:80px;margin:0 0 0 -153px;}
-  .pt-pulr-honor {top:auto;bottom:15px;margin:0 0 0 -73.5px;}
-  .pt-pulr-video {display: none!important;}
+  .pt-pulr-title{top:0;width:320px;height:auto;margin:90px 0 0 -160px;}
+  .pt-pulr-title img {display:block;width:100%;margin:0 auto;}
+  .pt-pulr-intro{top:0;margin:210px 0 0 -160px;width:320px;}
+  .pt-pulr-intro p {font-size:14px;line-height:18px;}
+  .pt-pulr-video, .pt-pulr-coins, .pt-pulr-honor, .pt-pulr-hide-in-mobile{display:none!important;}
+  .pt-pulr-fake-video{
+    top:0;margin:376px 0 0 -160px;width:320px;height:195px;border-radius:15px;
+    background:url(../images/pt/pt-fake-vd.png) no-repeat;
+    -webkit-box-shadow: 3px 3px 50px rgba(0,0,0, .2);
+    -moz-box-shadow: 3px 3px 50px rgba(0,0,0, .2);
+    -ms-box-shadow: 3px 3px 50px rgba(0,0,0, .2);
+    -o-box-shadow: 3px 3px 50px rgba(0,0,0, .2);
+    box-shadow: 3px 3px 50px rgba(0,0,0, .2);
+  }
 
   /* Frame3 "Me": */
-  .pt-music-title{width:320px;top:0;margin:90px 0 0 -160px;}
+  .pt-music-title{top:0;width:320px;height:auto;margin:90px 0 0 -160px;}
   .pt-music-title img {display:block;width:100%;margin:0 auto;}
-  .pt-music-intro{width:320px;top:0;margin:225px 0 0 -160px;}
-  .pt-music-bmg{top:auto;bottom:30px;margin:0 0 0 -143.5px; }
+  .pt-music-intro{top:0;margin:210px 0 0 -160px;width:320px;}
+  .pt-music-intro span {font-size:14px;line-height:18px;}
+  .pt-pusic-hide-in-mobile, .pt-music-bmg {display:none!important;}
+  .pt-cdbtn{margin:-50px 0 0 -50px;width:100px;height:100px;background-size:100px 100px;}
+  .pt-cdobj{width:320px;height:320px;left:50%;top:42%;right:auto;bottom:auto;}
+  .pt-music-obja {margin-left:-160px;}
+  .pt-music-objb {margin-left:1000px;} /* objb & objc are out of the screen, margin will be specified in JS */
+  .pt-music-objc {margin-left:1000px;}
+  .pt-music-bars-in-mobile{top:auto;bottom:25px;margin-left:-90px;width:180px;height:14px;}
+  .pt-music-bar{float:left;margin:0 5px;width:50px;height:14px;background:#fff;border-radius:14px;}
+  .pt-music-bar.active{background:#ffe217;}
 
   /* Frame4 "Fa": */
-  .pt-comp-title{top:0;left:50%;width:320px;margin:90px 0 0 -160px;}
+  .pt-comp-title{top:0;left:50%;width:320px;height:auto;margin:90px 0 0 -160px;}
   .pt-comp-title img {display:block;width:100%;margin:0 auto;}
-  .pt-comp-intro{top:0;left:50%;width:300px;margin:200px 0 0 -150px;}
+  .pt-comp-intro{top:0;left:50%;width:300px;margin:210px 0 0 -150px;text-align:left;font-size:14px;line-height:18px;}
   .pt-comp-list {top:0;width:320px;margin:300px 0 0 -160px;}
   .pt-fb-icon{top:0;width:80px;height:80px;margin:260px 0 0 55px;}
   
@@ -1573,100 +1607,117 @@
   @-o-keyframes moveComp_3 { from {opacity:0; top:130px;} to {opacity:1; top:90px;} }
   @keyframes moveComp_3 { from {opacity:0; top:130px;} to {opacity:1; top:90px;} }
 
-  @-webkit-keyframes moveComp_4 { from {opacity:0; top:160px;} to {opacity:1; top:120px;} }
-  @-moz-keyframes moveComp_4 { from {opacity:0; top:160px;} to {opacity:1; top:120px;} }
-  @-ms-keyframes moveComp_4 { from {opacity:0; top:160px;} to {opacity:1; top:120px;} }
-  @-o-keyframes moveComp_4 { from {opacity:0; top:160px;} to {opacity:1; top:120px;} }
-  @keyframes moveComp_4 { from {opacity:0; top:160px;} to {opacity:1; top:120px;} }
+  @-webkit-keyframes moveComp_4 { from {opacity:0; top:160px;} to {opacity:.7; top:120px;} }
+  @-moz-keyframes moveComp_4 { from {opacity:0; top:160px;} to {opacity:.7; top:120px;} }
+  @-ms-keyframes moveComp_4 { from {opacity:0; top:160px;} to {opacity:.7; top:120px;} }
+  @-o-keyframes moveComp_4 { from {opacity:0; top:160px;} to {opacity:.7; top:120px;} }
+  @keyframes moveComp_4 { from {opacity:0; top:160px;} to {opacity:.7; top:120px;} }
 
-  @-webkit-keyframes moveComp_5 { from {opacity:0; top:190px;} to {opacity:1; top:150px;} }
-  @-moz-keyframes moveComp_5 { from {opacity:0; top:190px;} to {opacity:1; top:150px;} }
-  @-ms-keyframes moveComp_5 { from {opacity:0; top:190px;} to {opacity:1; top:150px;} }
-  @-o-keyframes moveComp_5 { from {opacity:0; top:190px;} to {opacity:1; top:150px;} }
-  @keyframes moveComp_5 { from {opacity:0; top:190px;} to {opacity:1; top:150px;} }
+  @-webkit-keyframes moveComp_5 { from {opacity:0; top:190px;} to {opacity:.3; top:150px;} }
+  @-moz-keyframes moveComp_5 { from {opacity:0; top:190px;} to {opacity:.3; top:150px;} }
+  @-ms-keyframes moveComp_5 { from {opacity:0; top:190px;} to {opacity:.3; top:150px;} }
+  @-o-keyframes moveComp_5 { from {opacity:0; top:190px;} to {opacity:.3; top:150px;} }
+  @keyframes moveComp_5 { from {opacity:0; top:190px;} to {opacity:.3; top:150px;} }
 
   /* Frame5 "So": */
-  .pt-stories-title{top:0;left:50%;width:320px;margin:90px 0 0 -160px;}
+  .pt-stories-title{top:0;left:50%;width:320px;height:auto;margin:90px 0 0 -160px;}
   .pt-stories-title img{display:block;width:100%;margin:0 auto;}
-  .pt-stories-intro{top:0;left:50%;width:320px;margin:150px 0 0 -160px;}
-  .pt-players-wrap{top:0;width:226px;height:290px;margin:220px 0 0 -115px;}
+  .pt-players-wrap{top:0;width:226px;height:290px;margin:190px 0 0 -115px;}
   .pt-players-list li{width:210px;height:290px;}
   .pt-players-story{padding:10px 0;height:250px;}
   .pt-players-videostory{height:270px;}
   .pt-players-text, .pt-players-vdtitle{line-height:18px;font-size:14px;}
   .pt-story-ply-btn {top:0;margin:70px 0 0 -40px;width:80px;height:80px;background-size:80px 80px;}
   .pt-plus-star{right:0;width:210px;height:40px;}
-  .pt-next{margin-left:0;right:5%;left:auto;}
-  .pt-prev{margin-left:0;left:5%;}
-  .pt-stage-elements{display:none!important;}
+  .pt-next{margin-left:0;top:48%;right:5%;left:auto;}
+  .pt-prev{margin-left:0;top:48%;left:5%;}
+  .pt-stories-intro{display:none!important;}
+  .players-bg-img{background-position:50% 100%;background-size:contain;}
+  /* ----------- Fit guys on mobile ---------- */
+  /* ------- left purple guy on mobile ------- */
+  .pt-stage-elements.pt-player-left-purple-guy {bottom:4%;margin-left:-27%;width:35px;height:35px;}
+  .pt-stage-elements.pt-player-left-purple-guy img{margin-left:-17px;width:34px;height:31px;}
+  .pt-stage-elements.pt-player-left-purple-guy s.shadow{margin-left:-17.5px;width:35px;height:7.5px;background-size:35px 7.5px;}
+  /* ------- tall guy on mobile ------- */
+  .pt-stage-elements.pt-player-left-tall-guy{bottom:4.5%;margin-left:-19%;width:45px;height:85px;}
+  .pt-stage-elements.pt-player-left-tall-guy img{margin-left:-22.5px;width:45px;height:82.5px;}
+  .pt-stage-elements.pt-player-left-tall-guy s.shadow{margin-left:-16.3px;width:32.5px;height:7.5px;background-size:32.5px 7.5px;}
+  /* ------- red guy on mobile ------- */
+  .pt-stage-elements.pt-player-red-guy{bottom:4%;margin-left:-12%;width:32px;height:47px;}
+  .pt-stage-elements.pt-player-red-guy img{margin-left:-16px;width:32px;height:44px;}
+  .pt-stage-elements.pt-player-red-guy s.shadow{margin-left:-10px;width:19.5px;height:4.5px;background-size:19.5px 4.5px;}
+  /* ------- middle guy on mobile ------- */
+  .pt-stage-elements.pt-player-middle-guy{bottom:4%;margin-left:-4%;width:47.5px;height:53px;}
+  .pt-stage-elements.pt-player-middle-guy img{margin-left:-24px;width:47.5px;height:49.5px;}
+  .pt-stage-elements.pt-player-middle-guy s.shadow{margin-left:-20px;width:40px;height:8.5px;background-size:40px 8.5px;}
+  /* ------- yellow guy on mobile ------- */
+  .pt-stage-elements.pt-player-yellow-guy{bottom:4.5%;margin-left:6%;width:33px;height:44px;}
+  .pt-stage-elements.pt-player-yellow-guy img{margin-left:-16.5px;width:33px;height:41px;}
+  .pt-stage-elements.pt-player-yellow-guy s.shadow{margin-left:-10px;width:19.5px;height:4.5px;background-size:19.5px 4.5px;}
+  /* ------- giant guy on mobile ------- */
+  .pt-stage-elements.pt-player-giant-guy{bottom:4.5%;margin-left:13%;width:60px;height:71px;}
+  .pt-stage-elements.pt-player-giant-guy img{margin-left:-30px;width:60px;height:66px;}
+  .pt-stage-elements.pt-player-giant-guy s.shadow{margin-left:-22px;width:43.5px;height:9.5px;background-size:43.5px 9.5px;}
+  /* ------- right purple guy on mobile ------- */
+  .pt-stage-elements.pt-player-right-purple-guy{bottom:4%;margin-left:19%;width:35px;height:35px;}
+  .pt-stage-elements.pt-player-right-purple-guy img{margin-left:-17px;width:34px;height:31px;}
+  .pt-stage-elements.pt-player-right-purple-guy s.shadow{margin-left:-17.5px;width:35px;height:7.5px;background-size:35px 7.5px;}
+  /* ------- two lights on mobile ------- */
+  .pt-stage-elements.pt-stage-left-light{bottom:3%;left:20px;margin-left:0;width:58px;height:46.5px;}
+  .pt-stage-elements.pt-stage-right-light{bottom:3%;left:auto;right:20px;margin-left:0;width:58px;height:46.5px;}
+  .pt-stage-elements.pt-stage-left-light img, .pt-stage-elements.pt-stage-right-light img{margin-left:-29px;width:58px;height:46.5px;}
+
 	.pt-pop-main{left:10%;width:80%;margin-left:0;}
   
-
 }/* /end media 768 */
 
 @media (min-width:769px) and (max-width:1099px) {
-
   /* Frame2 "Re": */
-  .pt-pulr-title { margin: -320px 0 0 -428px; }
-  .pt-pulr-intro { margin: -160px 0 0 -428px; }
-  .pt-pulr-coins { margin: 70px 0 0 -420px; }
-  .pt-pulr-honor{ margin: 210px 0 0 -420px; }
-
+  .pt-pulr-title{margin:-320px 0 0 -428px;}
+  .pt-pulr-intro{margin:-160px 0 0 -428px;}
+  .pt-pulr-coins{margin:70px 0 0 -420px;}
+  .pt-pulr-honor{margin:210px 0 0 -420px;}
   /* Frame3 "Me": */
-  .pt-cdobj {width:400px;height:400px;}
-  .pt-cdbtn {margin:-50px 0 0 -50px;width:100px;height:100px;background-size:100px 100px;}
+  .pt-cdobj{width:400px;height:400px;}
+  .pt-cdbtn{margin:-50px 0 0 -50px;width:100px;height:100px;background-size:100px 100px;}
+}/* /end media 769-1099 */
 
-}/* /end media 1099 */
-
-@media screen and (max-height:999px) {
-  /* Frame3 "Me": */
-  .pt-cdobj {width:400px;height:400px;}
-  .pt-cdbtn {margin:-50px 0 0 -50px;width:100px;height:100px;background-size:100px 100px;}
-
-
-}/* /end media 1099 */
 
 /* Specific for iPhone 5-, must be placed after the above settings */
 /* IPhone5 320*460 in screen */
 @media screen and (max-width:320px) {
   /* Frame1 "Do": */
-  .pt-do-text{margin:0 0 0 -50%;top:220px;}
-  .pt-do-download-btn {margin:118px 0 0 -131.2px;width:262.4px;height:98.4px;}
-  .pt-do-download-btn s.btn-shadow,
+  .pt-do-text{top:260px;}
+  .pt-do-download-btn{margin:140px 0 0 -111.5px;width:223px;height:84px;}
+  .pt-do-download-btn s.btn-face,
   .pt-do-download-btn s.btn-body,
-  .pt-do-download-btn s.btn-face {background-size:262.4px 98.4px;}
+  .pt-do-download-btn s.btn-shadow{background-size:223px 84px;}
 
   /* Frame2 "Re": */
-  .pt-pulr-title {top:0;width:90%;margin:80px 0 0 -45%;}
-  .pt-pulr-intro {top:0;width:90%;margin:210px 0 0 -45%;}
-  .pt-pulr-coins, .pt-pulr-honor {display:none!important;}
+  .pt-pulr-title{width:90%;margin:80px 0 0 -45%;}
+  .pt-pulr-intro{width:90%;margin:190px 0 0 -45%;}
+  .pt-pulr-fake-video{margin:320px 0 0 -140px;width:280px;height:170px;background-size:280px 170px;}
 
   /* Frame3 "Me": */
-  .pt-music-title{top:0;width:90%;margin:80px 0 0 -45%;}
-  .pt-music-intro{top:0;width:90%;margin:205px 0 0 -45%;}
-  .pt-music-bmg{top:auto;bottom:15px;margin:0 0 0 -143.5px; }
-  .pt-cdobj {width:180px;height:180px;}
-  .pt-cdbtn {margin:-25px 0 0 -25px;width:50px;height:50px;background-size:50px 50px;}
-  .pt-music-obja{ top: 2%; }
-  .pt-music-objb{ top: 45%; }
-  .pt-music-objc{ bottom: 1%; }
+  .pt-music-title{width:90%;margin:80px 0 0 -45%;}
+  .pt-music-intro{width:90%;margin:190px 0 0 -45%;}
+  .pt-cdobj img{margin:0 auto;width:90%;}
+  .pt-cdbtn{margin:-60px 0 0 -45px;width:90px;height:90px;background-size:90px 90px;}
+  .pt-music-bars-in-mobile{bottom:20px;}
 
   /* Frame4 "Fa": */
-  .pt-comp-title{top:0;left:50%;width:90%;margin:80px 0 0 -45%;}
-  .pt-comp-intro{top:0;left:50%;width:90%;margin:190px 0 0 -45%;}
-  .pt-comp-list{top:0;width:320px;margin:300px 0 0 -160px;}
-  .pt-fb-icon{top:0;width:80px;height:80px;margin:260px 0 0 55px;}
+  .pt-comp-title{width:90%;margin:80px 0 0 -45%;}
+  .pt-comp-intro{width:90%;margin:190px 0 0 -45%;}
+  .pt-comp-list{margin:280px 0 0 -160px;}
+  .pt-fb-icon{margin:240px 0 0 55px;}
 
   /* Frame5 "So": */
-  .pt-stories-title{top:0;left:50%;width:90%;margin:80px 0 0 -45%;}
-  .pt-stories-intro{top:0;left:50%;width:90%;margin:140px 0 0 -45%;}
-  .pt-players-wrap{margin:200px 0 0 -115px;}
-  .pt-story-ply-btn {top:0;margin:60px 0 0 -30px;width:60px;height:60px;background-size:60px 60px;}
+  .pt-stories-title{width:90%;margin:80px 0 0 -45%;}
+  .pt-players-wrap{margin:150px 0 0 -115px;}
+  .pt-story-ply-btn{top:0;margin:60px 0 0 -30px;width:60px;height:60px;background-size:60px 60px;}
   .pt-prev, .pt-next{width:28px;}
   .pt-next{background-position:-144px 0;}
-
 }/* /end media 320 */
-
 /* ======= End of responsive styles. ======= */
 
 /* ======= Popup Dialog Style for PianoTiles: ======= */

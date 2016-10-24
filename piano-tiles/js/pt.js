@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-10-24 13:28
+  Latest modified: 2016-10-24 15:49
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -205,6 +205,7 @@
 		addEvent: function(obj) {
 			var self = this;
 			var isMousewheel = false;
+      var curWinWidth = $(win).width();
 			clearTimeout(self.pageTimeout);
 			this._doc.mousewheel(function(e,delta) {
 				if(isMousewheel == true) return false;
@@ -231,9 +232,33 @@
         var me = $(this);
         self.playOneCD( obj, me );
 			});
+      /* CD bars display on mobiles only: */
+      var CDBars = obj.cdBars;
+      if( curWinWidth < 769 ){ // On mobiles:
+        CDBars.on('click', function(){
+          var me = $(this);
+          var index = me.attr('data');
+          CDBars.removeClass('active');
+          me.addClass('active');
+          if(index == 0){ /* Switch to CD 1: */
+            obj.cdObjA.css('margin-left', '-160px');
+            obj.cdObjB.css('margin-left', (curWinWidth + 50) + 'px');
+            obj.cdObjC.css('margin-left', (curWinWidth + 370) + 'px');
+          }else if(index == 1){ /* Switch to CD 2: */
+            obj.cdObjA.css('margin-left', '-' + (curWinWidth + 320) + 'px');
+            obj.cdObjB.css('margin-left', '-160px');
+            obj.cdObjC.css('margin-left', (curWinWidth + 50) + 'px');
+          }else{ /* Switch to CD 3: */
+            obj.cdObjA.css('margin-left', '-' + (curWinWidth + 640) + 'px');
+            obj.cdObjB.css('margin-left', '-' + (curWinWidth + 320) + 'px');
+            obj.cdObjC.css('margin-left', '-160px');
+          }
+        });
+      }
 		},
     playOneCD: function(obj, cdTrigger) {
       var self = this;
+      var curWinWidth = $(win).width();
       var thisCD = cdTrigger.parent();
       var index = cdTrigger.attr('data');
       var thisAudio = thisCD.find('audio').get(0);
@@ -254,12 +279,14 @@
         accessaries.fadeIn(200);
         self.pauseCDs(obj, index);
       }
-      if(index == 0){ /* Playing CD 1: */
-        obj.musicMain.animate({top: '5%', left: '-4%'}, obj.animateTime);
-      }else if(index == 1){ /* Playing CD 2: */
-        obj.musicMain.animate({top: '-10%', left: '6%'}, obj.animateTime);
-      }else{ /* Playing CD 3: */
-        obj.musicMain.animate({top: '-28%', left: '8%'}, obj.animateTime);
+      if( curWinWidth > 768 ){ // On PC:
+        if(index == 0){ /* Playing CD 1: */
+          obj.musicMain.animate({top: '5%', left: '-4%'}, obj.animateTime);
+        }else if(index == 1){ /* Playing CD 2: */
+          obj.musicMain.animate({top: '-10%', left: '6%'}, obj.animateTime);
+        }else{ /* Playing CD 3: */
+          obj.musicMain.animate({top: '-28%', left: '8%'}, obj.animateTime);
+        }
       }
     },
     pauseCDs: function(obj, i) { // Pause CDs except item(i). Pause all CDs when i is -1.
@@ -293,6 +320,7 @@
 		},
 		mainRun: function(obj,isdown) {
 			var self = this;
+      var curWinWidth = $(win).width();
       var vdElement = obj.videoElm.get(0);
 			if (isdown == 'down') {
 				if (self.initNum == obj.pageDiv.length) return;
@@ -306,6 +334,12 @@
       if( self.initNum != 2 ){ // Shut down audios
         if( typeof self.cdAudios[0].canPlayType != 'undefined' ){
           self.pauseCDs(obj, -1);
+        }
+      }else{ // When sliding to the CD page, place 3CD to the right positions on mobile
+        if( curWinWidth < 769 ){
+          obj.cdObjA.css('margin-left', '-160px');
+          obj.cdObjB.css('margin-left', (curWinWidth + 50) + 'px');
+          obj.cdObjC.css('margin-left', (curWinWidth + 370) + 'px');
         }
       }
       if( self.initNum != 1 && (typeof vdElement.canPlayType != 'undefined') ){ // Shut down videos
@@ -730,6 +764,10 @@
     musicMain: $('#ptMusicMain'),
 		ptVfooter: $('#ptVfooter'),
     cdTriggers: $('.cdTrigger'),
+    cdBars: $('.cdBars'),
+    cdObjA: $('.pt-music-obja'),
+    cdObjB: $('.pt-music-objb'),
+    cdObjC: $('.pt-music-objc'),
 		curPagesClassName: 'cur-pages',
     publicHeader: $('#header'),
     publicFooter: $('#footer-wrap')

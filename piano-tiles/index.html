@@ -107,7 +107,10 @@ var startTime = new Date().getTime();
     <div class="pt-content" id="switchDo">
     	<div class="pt-do-tile"><img src="images/pt/pt-big-tile.png" /></div>
     	<div class="pt-do-text"><img src="images/pt/pt-big-text.png" /></div>
-    	<div class="pt-do-crumb"><img src="images/pt/pt-crumb.png" /></div>
+    	<div class="pt-do-crumb">
+        <img class="pt-crm-pc" src="images/pt/pt-crumb.png" />
+        <img class="pt-crm-mob" src="images/pt/pt-crumb-on-mobile.png" />
+      </div>
     	<a class="pt-do-download-btn pt-triple-layer-btn" id="ptDownLoadBtna" title="Download">
         <s class="btn-shadow"></s>
         <s class="btn-body"></s>
@@ -116,10 +119,13 @@ var startTime = new Date().getTime();
     </div><!-- pt content #switchDo -->
 
     <div class="pt-content" id="switchRe">
-      <span class="pt-pulr-title">
+      <div class="pt-pulr-title">
         <img src="images/pt/pt-popular-title.png" alt="The Most Popular Musical Game" />
-      </span>
-      <p class="pt-pulr-intro">Piano Tiles 2 has 600 million players. This world-popular game is now having its biggest update! New pop songs added, with multi-instrumental accompaniment feature. More fun in the music and fantastic experience for you.<br />Tap on the black tiles while listening to music. Avoid the white ones! Hurry now! Have a grand festival day with classic and pop music. Compete with your friends and speed up your fingers!</p>
+      </div>
+      <div class="pt-pulr-intro">
+        <p>Piano Tiles 2 has 600 million players. This world-popular game is now having its biggest update! New pop songs added, with multi-instrumental accompaniment feature. More fun in the music and fantastic experience for you.</p>
+        <p class="pt-pulr-hide-in-mobile">Tap on the black tiles while listening to music. Avoid the white ones! Hurry now! Have a grand festival day with classic and pop music. Compete with your friends and speed up your fingers!</p>
+      </div>
       <div class="pt-pulr-video">
         <div class="pt-vd-box">
           <img class="pt-video-bg-img" id="vdBgImg" src="images/pt/pt-video-bg.png" />
@@ -134,6 +140,7 @@ var startTime = new Date().getTime();
         <span class="pt-vd-tall-guy"><img src="images/pt/pt-tall-guy.png" /></span>
         <span class="pt-vd-fat-guy"><img src="images/pt/pt-fat-guy.png" /></span>
       </div><!-- pulr video -->
+      <div class="pt-pulr-fake-video"></div><!-- fake video display on screen smaller than 768 only -->
       <div class="pt-pulr-coins clearfix" id="ptGameScore">
         <i class="csa"><img src="images/pt/pt-video-coins-1.png" /></i>
         <i class="csb"><img src="images/pt/pt-video-coins-2.png" /></i>
@@ -143,14 +150,17 @@ var startTime = new Date().getTime();
     </div><!-- pt content #switchRe -->
 
     <div class="pt-content" id="switchMe">
-    	<span class="pt-music-title">
+    	<div class="pt-music-title">
         <img src="images/pt/pt-various-sel-title.png" alt="Various Selections Of Music" />
-      </span>
-      <p class="pt-music-intro">Piano Tiles 2 has added up more pop songs alongside the classical pieces. Sound quality was greatly-improved to make music more authentic. Specially-designed sound and visual effects contribute to the gaming experience of playing piano. Try out our game by listening to the song samples we prepared for you now!</p>
-      <span class="pt-music-bmg">
+      </div>
+      <div class="pt-music-intro">
+        <span class="pt-pusic-hide-in-mobile">Piano Tiles 2 has added up more pop songs alongside the classical pieces. Sound quality was greatly-improved to make music more authentic. Specially-designed sound and visual effects contribute to the gaming experience of playing piano.</span>
+        <span>Try out our game by listening to the song samples we prepared for you now!</span>
+      </div>
+      <div class="pt-music-bmg">
         <em>Cooperate with</em>
         <i><img src="images/pt/pt-wind-music-bmg.png" /></i>
-      </span>
+      </div>
       <div class="pt-music-playfield">
         <div class="pt-music-main" id="ptMusicMain">
           <div class="pt-music-obja pt-cdobj clearfix">
@@ -181,6 +191,11 @@ var startTime = new Date().getTime();
             <s class="accessary leftleaf"></s>
             <s class="accessary topleaf"></s>
           </div>
+          <div class="pt-music-bars-in-mobile">
+            <div class="pt-music-bar cdBars bar-a active" data="0"></div>
+            <div class="pt-music-bar cdBars bar-b" data="1"></div>
+            <div class="pt-music-bar cdBars bar-c" data="2"></div>
+          </div><!-- bars in mobile -->
         </div><!-- music main -->
       </div><!-- play field -->
     </div><!-- pt content #switchMe -->
@@ -250,13 +265,13 @@ var startTime = new Date().getTime();
     	</div><!-- players wrap -->
 		  <a class="pt-next" href="javascript:;"></a>
       <div class="players-bg-img">
-        <div class="pt-stage-elements pt-player-left-purple-guy">
-          <s class="shadow"></s>
-          <img src="images/pt/pt-left-purple-guy.png" />
-        </div>
         <div class="pt-stage-elements pt-player-left-tall-guy">
           <s class="shadow"></s>
           <img src="images/pt/pt-left-tall-guy.png" />
+        </div>
+        <div class="pt-stage-elements pt-player-left-purple-guy">
+          <s class="shadow"></s>
+          <img src="images/pt/pt-left-purple-guy.png" />
         </div>
         <div class="pt-stage-elements pt-player-red-guy">
           <s class="shadow"></s>
@@ -266,13 +281,13 @@ var startTime = new Date().getTime();
           <s class="shadow"></s>
           <img src="images/pt/pt-middle-guy.png" />
         </div>
-        <div class="pt-stage-elements pt-player-yellow-guy">
-          <s class="shadow"></s>
-          <img src="images/pt/pt-yellow-guy.png" />
-        </div>
         <div class="pt-stage-elements pt-player-giant-guy">
           <s class="shadow"></s>
           <img src="images/pt/pt-giant-guy.png" />
+        </div>
+        <div class="pt-stage-elements pt-player-yellow-guy">
+          <s class="shadow"></s>
+          <img src="images/pt/pt-yellow-guy.png" />
         </div>
         <div class="pt-stage-elements pt-player-right-purple-guy">
           <s class="shadow"></s>
