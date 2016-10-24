@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-10-20 16:43
+  Latest modified: 2016-10-24 13:28
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -338,7 +338,7 @@
 			var animateSetOut;
 			clearTimeout(animateSetOut);
 			if(self.initNum == self.offsetArr.length){ // When showing half-screen pianist foot part:
-				obj.wrapDiv.animate({ top: (parseInt(self.offsetArr[0]) * (self.initNum - 1) - ptVfooter.outerHeight())+2 + 'px'}, {
+				obj.wrapDiv.animate({ top: (parseInt(self.offsetArr[0]) * (self.initNum - 1) - ptVfooter.outerHeight()) + 'px'}, {
           easing: 'easeInQuart',
           duration: obj.animateTime,
           complete:function(){}
@@ -423,7 +423,6 @@
 			 		ptVfooter.removeClass('pt-active');
 			 	},obj.animateTime);
 			}
-      initTop = initTop+2; // Fix one wired bug of foot-top-border
 			obj.wrapDiv.css({width:'100%',position:'absolute',height:self.allHeight+'px',top:initTop+'px',overflow:'overflow'});
 		},
     adjustRightBtns: function(obj) {
