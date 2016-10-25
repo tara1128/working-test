@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-10-25 18:26
+  Latest modified: 2016-10-25 18:59
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
