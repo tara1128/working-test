@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-10-24 19:29
+  Latest modified: 2016-10-25 15:22
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -241,17 +241,17 @@
           CDBars.removeClass('active');
           me.addClass('active');
           if(index == 0){ /* Switch to CD 1: */
-            obj.cdObjA.css('margin-left', '-160px');
+            obj.cdObjA.css('margin-left', '-140px');
             obj.cdObjB.css('margin-left', (curWinWidth + 50) + 'px');
             obj.cdObjC.css('margin-left', (curWinWidth + 370) + 'px');
           }else if(index == 1){ /* Switch to CD 2: */
-            obj.cdObjA.css('margin-left', '-' + (curWinWidth + 320) + 'px');
-            obj.cdObjB.css('margin-left', '-160px');
+            obj.cdObjA.css('margin-left', '-' + (curWinWidth + 280) + 'px');
+            obj.cdObjB.css('margin-left', '-140px');
             obj.cdObjC.css('margin-left', (curWinWidth + 50) + 'px');
           }else{ /* Switch to CD 3: */
-            obj.cdObjA.css('margin-left', '-' + (curWinWidth + 640) + 'px');
-            obj.cdObjB.css('margin-left', '-' + (curWinWidth + 320) + 'px');
-            obj.cdObjC.css('margin-left', '-160px');
+            obj.cdObjA.css('margin-left', '-' + (curWinWidth + 540) + 'px');
+            obj.cdObjB.css('margin-left', '-' + (curWinWidth + 280) + 'px');
+            obj.cdObjC.css('margin-left', '-140px');
           }
         });
       }
@@ -337,7 +337,7 @@
         }
       }else{ // When sliding to the CD page, place 3CD to the right positions on mobile
         if( curWinWidth < 769 ){
-          obj.cdObjA.css('margin-left', '-160px');
+          obj.cdObjA.css('margin-left', '-140px');
           obj.cdObjB.css('margin-left', (curWinWidth + 50) + 'px');
           obj.cdObjC.css('margin-left', (curWinWidth + 370) + 'px');
         }
@@ -462,6 +462,8 @@
     adjustRightBtns: function(obj) {
       if( IsAndroid || IsIOS || IsWindowsPhone ){
         obj.curPages.parent().hide();
+      }else{
+        obj.curPages.parent().show();
       }
     },
 		activeWeb: function(obj,items) {
@@ -487,19 +489,20 @@
 		},
     curPageTouch: function(obj, items) {
       var self = this;
+      var wrap = obj.wrapDiv.get(0);
       var startX, startY, deltaY;
-      var touchMoveMinDistance = 10;
-      if( !document.addEventListener ){ return; }
-      document.addEventListener('touchstart', function(e){
+      var touchMoveMinDistance = 20;
+      if( !wrap.addEventListener ){ return; }
+      wrap.addEventListener('touchstart', function(e){
         var touch = e.touches[0];
         startX = touch.pageX;
         startY = touch.pageY
       },false);
-      document.addEventListener('touchmove', function(e){
+      wrap.addEventListener('touchmove', function(e){
         var touch = e.touches[0];
         deltaY = touch.pageY - startY;
       }, false);
-      document.addEventListener('touchend', function(e){
+      wrap.addEventListener('touchend', function(e){
         if( deltaY && Math.abs(deltaY) > touchMoveMinDistance ){
           if( deltaY > 0 ){ 
             self.mainRun(obj, 'up');
@@ -568,7 +571,7 @@
 	};
 	win.CMmousewheel = CMmousewheel;
 })(window, document, jQuery);
-/* CMCM canvas */ 
+/* CMCM canvas ======> 
 ;(function(win, doc, $, undefined) {
 	var canvas = document.getElementById("myCanvas");
 	var setCanvasfor;
@@ -668,6 +671,7 @@
 	cancelAnimationFrame(setCanvasfor);
 	setCanvasfor = requestAnimationFrame(forCanvas);
 })(window, document, jQuery);
+*/
 /* switch */
 ;(function(win, doc, $, undefined) {
 	function switchPlayers(){
