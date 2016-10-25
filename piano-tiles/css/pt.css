@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-25 15:20
+  Latest modified: 2016-10-25 16:00
 */
 
 /* main */
@@ -430,51 +430,56 @@
   line-height:24px;
 }
 .pt-comp-list { 
-  margin: -80px 0 0 -343px;
-  position: absolute;
-  z-index: 4;
-  top: 50%;
-  left: 50%;
-  width: 686px;
-  height: 478px;
+  margin:-80px 0 0 -343px;
+  position:absolute;
+  z-index:4;
+  top:50%;
+  left:50%;
+  width:686px;
+  height:478px;
 }
 .pt-comp-list li {
-  position: absolute;
-  left: 50%;
-  margin-left: -50%;
-  width: 100%;
-  opacity: 0;
+  position:absolute;
+  left:50%;
+  margin-left:-50%;
+  width:100%;
+  opacity:0;
 }
 .pt-comp-list li.comp-1 {
-  z-index: 9;
+  z-index:9;
+  top:0;
 }
 .pt-comp-list li.comp-2 {
-  z-index: 8;
+  z-index:8;
+  top:100px;
 }
 .pt-comp-list li.comp-3 {
-  z-index: 7;
+  z-index:7;
+  top:170px;
 }
 .pt-comp-list li.comp-4 {
-  z-index: 6;
+  z-index:6;
+  top:220px;
 }
 .pt-comp-list li.comp-5 {
-  z-index: 5;
+  z-index:5;
+  top:270px;
 }
 .pt-comp-list img {
-  margin: 0 auto;
-  display: block;
-  width: 100%;
-  max-width: 686px;
+  margin:0 auto;
+  display:block;
+  width:100%;
+  max-width:686px;
 }
 .pt-fb-icon {
-  width: 120px;
-  height: 120px;
-  position: absolute;
-  z-index: 6;
-  top: 50%;
-  left: 50%;
-  margin: -110px 0 0 180px;
-  opacity: 0;
+  position:absolute;
+  z-index:6;
+  width:120px;
+  height:120px;
+  top:50%;
+  left:50%;
+  margin:-110px 0 0 180px;
+  opacity:0;
 }
 .pt-fb-icon img {
   display:block;
@@ -1239,39 +1244,44 @@
   animation: enterFromTop 1s ease both .2s;
 }
 .pt-active .pt-comp-list li.comp-1 {
-  -webkit-animation: moveComp_1 .4s ease 1.4s forwards;
-  -moz-animation: moveComp_1 .4s ease 1.4s forwards;
-  -ms-animation: moveComp_1 .4s ease 1.4s forwards;
-  -o-animation: moveComp_1 .4s ease 1.4s forwards;
-  animation: moveComp_1 .4s ease 1.4s forwards;
+  opacity:1;
+  -webkit-animation: moveComp_1 .4s ease 1.4s both;
+  -moz-animation: moveComp_1 .4s ease 1.4s both;
+  -ms-animation: moveComp_1 .4s ease 1.4s both;
+  -o-animation: moveComp_1 .4s ease 1.4s both;
+  animation: moveComp_1 .4s ease 1.4s both;
 }
 .pt-active .pt-comp-list li.comp-2 {
-  -webkit-animation: moveComp_2 .4s ease 1.2s forwards;
-  -moz-animation: moveComp_2 .4s ease 1.2s forwards;
-  -ms-animation: moveComp_2 .4s ease 1.2s forwards;
-  -o-animation: moveComp_2 .4s ease 1.2s forwards;
-  animation: moveComp_2 .4s ease 1.2s forwards;
+  opacity:1;
+  -webkit-animation: moveComp_2 .4s ease 1.2s both;
+  -moz-animation: moveComp_2 .4s ease 1.2s both;
+  -ms-animation: moveComp_2 .4s ease 1.2s both;
+  -o-animation: moveComp_2 .4s ease 1.2s both;
+  animation: moveComp_2 .4s ease 1.2s both;
 }
 .pt-active .pt-comp-list li.comp-3 {
-  -webkit-animation: moveComp_3 .4s ease 1s forwards;
-  -moz-animation: moveComp_3 .4s ease 1s forwards;
-  -ms-animation: moveComp_3 .4s ease 1s forwards;
-  -o-animation: moveComp_3 .4s ease 1s forwards;
-  animation: moveComp_3 .4s ease 1s forwards;
+  opacity:1;
+  -webkit-animation: moveComp_3 .4s ease 1s both;
+  -moz-animation: moveComp_3 .4s ease 1s both;
+  -ms-animation: moveComp_3 .4s ease 1s both;
+  -o-animation: moveComp_3 .4s ease 1s both;
+  animation: moveComp_3 .4s ease 1s both;
 }
 .pt-active .pt-comp-list li.comp-4 {
-  -webkit-animation: moveComp_4 .4s ease .7s forwards;
-  -moz-animation: moveComp_4 .4s ease .7s forwards;
-  -ms-animation: moveComp_4 .4s ease .7s forwards;
-  -o-animation: moveComp_4 .4s ease .7s forwards;
-  animation: moveComp_4 .4s ease .7s forwards;
+  opacity:1;
+  -webkit-animation: moveComp_4 .4s ease .7s both;
+  -moz-animation: moveComp_4 .4s ease .7s both;
+  -ms-animation: moveComp_4 .4s ease .7s both;
+  -o-animation: moveComp_4 .4s ease .7s both;
+  animation: moveComp_4 .4s ease .7s both;
 }
 .pt-active .pt-comp-list li.comp-5 {
-  -webkit-animation: moveComp_5 1s ease .2s forwards;
-  -moz-animation: moveComp_5 1s ease .2s forwards;
-  -ms-animation: moveComp_5 1s ease .2s forwards;
-  -o-animation: moveComp_5 1s ease .2s forwards;
-  animation: moveComp_5 1s ease .2s forwards;
+  opacity:1;
+  -webkit-animation: moveComp_5 1s ease .2s both;
+  -moz-animation: moveComp_5 1s ease .2s both;
+  -ms-animation: moveComp_5 1s ease .2s both;
+  -o-animation: moveComp_5 1s ease .2s both;
+  animation: moveComp_5 1s ease .2s both;
 }
 @-webkit-keyframes moveComp_1 { from {opacity:0; top:90px;} to {opacity:1; top:0px;} }
 @-moz-keyframes moveComp_1 { from {opacity:0; top:90px;} to {opacity:1; top:0px;} }
@@ -1304,11 +1314,12 @@
 @keyframes moveComp_5 { from {opacity:0; top:340px;} to {opacity:1; top:270px;} }
 
 .pt-active .pt-fb-icon{
-  -webkit-animation: showFB 1s ease-out forwards 1.5s;
-  -moz-animation: showFB 1s ease-out forwards 1.5s;
-  -ms-animation: showFB 1s ease-out forwards 1.5s;
-  -o-animation: showFB 1s ease-out forwards 1.5s;
-  animation: showFB 1s ease-out forwards 1.5s;
+  opacity:1;
+  -webkit-animation: showFB 1s ease-out both 1.5s;
+  -moz-animation: showFB 1s ease-out both 1.5s;
+  -ms-animation: showFB 1s ease-out both 1.5s;
+  -o-animation: showFB 1s ease-out both 1.5s;
+  animation: showFB 1s ease-out both 1.5s;
 }
 @-webkit-keyframes showFB{ from {opacity:0;top:65%;} to {opacity:1;top:50%;} }
 @-moz-keyframes showFB{ from {opacity:0;top:65%;} to {opacity:1;top:50%;} }
