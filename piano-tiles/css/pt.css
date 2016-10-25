@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-25 10:25
+  Latest modified: 2016-10-25 12:02
 */
 
 /* main */
@@ -778,10 +778,10 @@
   height: 128px;
   cursor:pointer;
   background-repeat:no-repeat;
-  background-image:url(../images/pt/pt-cdbtn-play3.png);
+  background-image:url(../images/pt/pt-cdbtn-play.png);
 }
 .pt-cdbtn.playing {
-  background-image: url(../images/pt/pt-cdbtn-pause2.png);
+  background-image: url(../images/pt/pt-cdbtn-pause.png);
 }
 
 /* Stage elements in Frame 5 */
