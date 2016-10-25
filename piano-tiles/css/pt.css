@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-24 18:30
+  Latest modified: 2016-10-25 10:25
 */
 
 /* main */
@@ -1674,9 +1674,8 @@
   .pt-foot-title img{display:block;margin:0 auto;width:100%;}
   .pt-foot-download-btn{margin:-20px 0 0 -110px;}
 
-
+  /* Pop dialog */
 	.pt-pop-main{left:10%;width:80%;margin-left:0;}
-  
 }/* /end media 768 */
 
 @media (min-width:769px) and (max-width:1099px) {
@@ -1688,14 +1687,10 @@
   /* Frame3 "Me": */
   .pt-cdobj{width:400px;height:400px;}
   .pt-cdbtn{margin:-50px 0 0 -50px;width:100px;height:100px;background-size:100px 100px;}
-
   /* Frame5.5 "Foot": */
   .pt-foot-title{margin-left:-400px;}
   .pt-foot-download-btn{margin:-60px 0 0 -414px;}
-
-
 }/* /end media 769-1099 */
-
 
 /* Specific for iPhone 5-, must be placed after the above settings */
 /* IPhone5 320*460 in screen */
@@ -1732,6 +1727,19 @@
   .pt-prev, .pt-next{width:28px;}
   .pt-next{background-position:-144px 0;}
 }/* /end media 320 */
+
+/* For extremely wide screens, stage guys cannot be flying */
+@media screen and (min-width:2000px) {
+  .pt-stage-elements.pt-player-left-purple-guy,
+  .pt-stage-elements.pt-player-yellow-guy,
+  .pt-stage-elements.pt-player-red-guy{bottom:15%;}
+  .pt-stage-elements.pt-player-left-tall-guy{bottom:20%;}
+  .pt-stage-elements.pt-player-middle-guy{bottom:17%;}
+  .pt-stage-elements.pt-player-right-purple-guy{bottom:16%;}
+  .pt-stage-elements.pt-player-giant-guy,
+  .pt-stage-elements.pt-stage-left-light,
+  .pt-stage-elements.pt-stage-right-light{bottom:17%;}
+}/* /end media 2000 */
 /* ======= End of responsive styles. ======= */
 
 /* ======= Popup Dialog Style for PianoTiles: ======= */
