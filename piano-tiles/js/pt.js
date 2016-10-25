@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-10-25 15:22
+  Latest modified: 2016-10-25 18:26
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -372,15 +372,14 @@
 			var animateSetOut;
 			clearTimeout(animateSetOut);
 			if(self.initNum == self.offsetArr.length){ // When showing half-screen pianist foot part:
-				obj.wrapDiv.animate({ top: (parseInt(self.offsetArr[0]) * (self.initNum - 1) - ptVfooter.outerHeight()) + 'px'}, {
+				var _topValue = parseInt(self.offsetArr[0]) * (self.initNum - 1) + ptVfooter.outerHeight();
+				obj.wrapDiv.animate({ top: '-' + _topValue + 'px'}, {
           easing: 'easeInQuart',
-          duration: obj.animateTime,
-          complete:function(){}
+          duration: obj.animateTime
 			 	});
 				ptVfooter.animate({bottom: '0'},{
           easing: 'easeInQuart',
-          duration: obj.animateTime,
-          complete:function(){}
+          duration: obj.animateTime
 			 	});
 			 	animateSetOut = setTimeout(function(){
 			 		ptVfooter.addClass('pt-active');
@@ -388,13 +387,11 @@
 			}else{ // When showing full-screen parts:
 				ptVfooter.animate({bottom: '-' + ptVfooter.outerHeight() + 'px'},{
           easing: 'easeInQuart',
-          duration: obj.animateTime,
-          complete:function(){}
+          duration: obj.animateTime
 			 	});
-				obj.wrapDiv.animate({ top: parseInt(self.offsetArr[0]) * (self.initNum) + 'px' },{
+				obj.wrapDiv.animate({ top: '-' + parseInt(self.offsetArr[0]) * (self.initNum) + 'px' },{
           easing: 'easeInQuart',
-          duration: obj.animateTime,
-          complete:function(){}
+          duration: obj.animateTime
 			 	});
 			 	animateSetOut = setTimeout(function(){
 			 		ptVfooter.removeClass('pt-active');
@@ -440,7 +437,7 @@
 			$('body,html').eq(0).css({ width: '100%', height: curWinHeight + 'px', overflow: 'hidden' });
 			obj.pageDiv.eq(0).addClass('pt-active');
 			for(var g = 0; g < obj.pageDiv.length; g++){
-				obj.pageDiv.eq(g).show().css({ height: curWinHeight + 'px', top: '-' + g * curWinHeight + 'px'});
+				obj.pageDiv.eq(g).show().css({ height: curWinHeight + 'px', top: g * curWinHeight + 'px'});
 				self.offsetArr.push(obj.pageDiv.eq(g).outerHeight());
 				self.allHeight += parseInt(obj.pageDiv.eq(g).outerHeight());
 			}
@@ -678,7 +675,6 @@
 		this.findLi = $('#ptPlayersList li');
 		this._initNum = 0;
     this._numShow = 3; // Quantity of items shown at one time.
-    this._limitWidth = 1099; // Only when window width larger than it, can show 3 items one time.
 		this.prevs = $('.pt-prev');
 		this.nexts = $('.pt-next');
 		this.init();
@@ -693,10 +689,10 @@
       });
 		},
     confirmNumShow: function() {
-      if( $(win).width() > this._limitWidth ) {
-        this._numShow = 3;
-      }else{
+      if( IsAndroid || IsIOS || IsWindowsPhone ){
         this._numShow = 1;
+      }else{
+        this._numShow = 3;
       }
     },
 		_prev: function(){
@@ -726,8 +722,7 @@
 			var getLiWidth = this.findLi.eq(0).outerWidth();
 			ptPlayersList.animate({left: - items * (getLiWidth + 16) + 'px'},{
         easing: 'easeOutBack',
-        duration: 700,
-        complete:function(){}
+        duration: 900
 		 	});
 		},
 		bindEvent: function(){
@@ -750,7 +745,7 @@
 /* obj worked */
 ;(function($,undefined){
 	var pageObj = {
-		animateTime: 600,
+		animateTime: 700,
     ptBody: $('.bodyPT'),
 		wrapDiv: $('#ptWrap'),
 		pageDiv: $('.pt-content'),
