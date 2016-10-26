@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-10-25 18:59
+  Latest modified: 2016-10-26 09:45
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -442,7 +442,7 @@
 				self.allHeight += parseInt(obj.pageDiv.eq(g).outerHeight());
 			}
 			if(self.initNum == self.offsetArr.length){
-				initTop = parseInt(self.offsetArr[0]) * (self.offsetArr.length - 1) - ptVfooter.outerHeight();
+				initTop = parseInt(self.offsetArr[0]) * (self.offsetArr.length - 1) + ptVfooter.outerHeight();
 				ptVfooter.css({bottom: '0px'});
 				setTimeout(function(){
 			 		ptVfooter.addClass('pt-active');
@@ -454,7 +454,7 @@
 			 		ptVfooter.removeClass('pt-active');
 			 	},obj.animateTime);
 			}
-			obj.wrapDiv.css({width:'100%',position:'absolute',height:self.allHeight+'px',top:initTop+'px',overflow:'overflow'});
+			obj.wrapDiv.css({width:'100%',position:'absolute',height:self.allHeight+'px',top:'-'+initTop+'px',overflow:'overflow'});
 		},
     adjustRightBtns: function(obj) {
       if( IsAndroid || IsIOS || IsWindowsPhone ){

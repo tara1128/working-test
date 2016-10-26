@@ -1,6 +1,6 @@
 /*
   index.js
-  latest modified: 2016-10-25 18:59
+  latest modified: 2016-10-26 09:45
 */
 
 var IndexLogin = React.createClass({
@@ -254,7 +254,7 @@ var cateList = [
   {
     projectName: 'Piano Tiles 2',
     linkTo: 'piano-tiles/',
-    latestModified: '2016-10-25 18:59'
+    latestModified: '2016-10-26 09:45'
   }
 ];
 
