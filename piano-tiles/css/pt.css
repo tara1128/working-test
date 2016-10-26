@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-26 16:19
+  Latest modified: 2016-10-26 18:17
 */
 
 /* main */
@@ -319,7 +319,7 @@
 }
 .pt-players-text {
   margin:0 auto;
-  width:90%;
+  width:85%;
   line-height:22px;
   font-size:16px;
   color:#333;
@@ -1568,7 +1568,7 @@
   .pt-pulr-video, .pt-pulr-coins, .pt-pulr-honor, .pt-pulr-hide-in-mobile{display:none!important;}
   .pt-pulr-fake-video{
     top:0;margin:346px 0 0 -160px;width:320px;height:195px;border-radius:15px;
-    background:url(../images/pt/pt-fake-vd.png) no-repeat;
+    background:url(../images/pt/pt-fake-vd-cover.png) no-repeat;
     -webkit-box-shadow: 3px 3px 50px rgba(0,0,0, .2);
     -moz-box-shadow: 3px 3px 50px rgba(0,0,0, .2);
     -ms-box-shadow: 3px 3px 50px rgba(0,0,0, .2);
@@ -1719,33 +1719,37 @@
 /* IPhone5 320*460 in screen */
 @media screen and (max-width:320px) {
   /* Frame1 "Do": */
-  .pt-do-text{top:250px;}
-  .pt-do-download-btn{margin:130px 0 0 -111.5px;width:223px;height:84px;}
+  .pt-do-tile{top:50px;}
+  .pt-do-tile img{width:60%;}
+  .pt-do-text{top:210px;}
+  .pt-do-download-btn{margin:120px 0 0 -111.5px;width:223px;height:84px;}
   .pt-do-download-btn s.btn-face,
   .pt-do-download-btn s.btn-body,
   .pt-do-download-btn s.btn-shadow{background-size:223px 84px;}
 
   /* Frame2 "Re": */
-  .pt-pulr-title{width:90%;margin:60px 0 0 -45%;}
-  .pt-pulr-intro{width:90%;margin:175px 0 0 -45%;}
-  .pt-pulr-fake-video{margin:300px 0 0 -140px;width:280px;height:170px;background-size:280px 170px;}
+  .pt-pulr-title{width:80%;margin:60px 0 0 -40%;}
+  .pt-pulr-intro{width:80%;margin:150px 0 0 -40%;}
+  .pt-pulr-intro p{font-size:13px;line-height:16px;}
+  .pt-pulr-fake-video{margin:270px 0 0 -128px;width:256px;height:155px;background-size:256px 155px;}
 
   /* Frame3 "Me": */
-  .pt-music-title{width:90%;margin:60px 0 0 -45%;}
-  .pt-music-intro{width:90%;margin:175px 0 0 -45%;}
-  .pt-cdobj img{margin:0 auto;width:90%;}
-  .pt-cdbtn{margin:-60px 0 0 -45px;}
+  .pt-music-title{width:80%;margin:60px 0 0 -40%;}
+  .pt-music-intro{width:80%;margin:150px 0 0 -40%;}
+  .pt-cdobj{top:44%;}
+  .pt-cdobj img{margin:0 auto;width:76%;}
+  .pt-cdbtn{margin:-75px 0 0 -40px;width:80px;height:80px;background-size:80px 80px;}
   .pt-music-bars-in-mobile{bottom:20px;}
 
   /* Frame4 "Fa": */
-  .pt-comp-title{width:90%;margin:60px 0 0 -45%;}
-  .pt-comp-intro{width:90%;margin:175px 0 0 -45%;}
-  .pt-comp-list{margin:260px 0 0 -160px;}
-  .pt-fb-icon{margin:220px 0 0 55px;}
+  .pt-comp-title{width:80%;margin:60px 0 0 -40%;}
+  .pt-comp-intro{width:80%;margin:150px 0 0 -40%;font-size:13px;line-height:16px;}
+  .pt-comp-list{margin:230px 0 0 -160px;}
+  .pt-fb-icon{margin:200px 0 0 55px;}
 
   /* Frame5 "So": */
-  .pt-stories-title{width:90%;margin:60px 0 0 -45%;}
-  .pt-players-wrap{margin:130px 0 0 -115px;}
+  .pt-stories-title{width:80%;margin:60px 0 0 -40%;}
+  .pt-players-wrap{margin:110px 0 0 -115px;}
   .pt-story-ply-btn{top:0;margin:60px 0 0 -30px;width:60px;height:60px;background-size:60px 60px;}
   .pt-prev, .pt-next{width:28px;}
   .pt-next{background-position:-144px 0;}
