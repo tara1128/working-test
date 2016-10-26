@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-26 11:23
+  Latest modified: 2016-10-26 14:50
 */
 
 /* main */
@@ -684,13 +684,14 @@
   bottom:-30%;
 }
 .pt-cd-trigger {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: -38% 0 0 -38%;
-  width: 76%;
-  height: 76%;
-  cursor: pointer;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin:-38% 0 0 -38%;
+  width:76%;
+  height:76%;
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
 }
 .pt-cdobj img {
   display: block;
@@ -760,18 +761,19 @@
   background:url(../images/pt/pt-freeloop-around.png) no-repeat;
 }
 .accessary.rightmark{
-  right:0;
-  top:50px;
+  right:-38px;
+  top:20px;
   width:70px;
   height:100px;
-  background:url(../images/pt/pt-freeloop-rightmark.png) no-repeat;
+  background:url(../images/pt/pt-freeloop-rightmark.png?v=1) no-repeat;
 }
 .accessary.yelmark{
-  left:10px;
-  top:50px;
+  left:-20px;
+  top:20px;
   width:60px;
   height:60px;
-  background:url(../images/pt/pt-freeloop-yelmark.png) no-repeat;
+  background:url(../images/pt/pt-freeloop-yelmark.png?v=1) no-repeat;
+  -webkit-transform:rotate(15deg);
 }
 
 /* Buttons on CD: */
@@ -1584,15 +1586,17 @@
   .pt-music-obja {margin-left:-140px;}
   .pt-music-objb {margin-left:1000px;} /* objb & objc are out of the screen, margin will be specified in JS */
   .pt-music-objc {margin-left:1000px;}
-  .pt-music-bars-in-mobile{top:auto;bottom:25px;margin-left:-90px;width:180px;height:14px;}
-  .pt-music-bar{float:left;margin:0 5px;width:50px;height:14px;background:#fff;border-radius:14px;}
+  .pt-music-bars-in-mobile{top:auto;bottom:25px;margin-left:-60px;width:120px;height:10px;}
+  .pt-music-bar{float:left;margin:0 5px;width:30px;height:10px;background:#fff;border-radius:10px;}
   .pt-music-bar.active{background:#ffe217;}
   /* CD Accessaries should be scale down on mobiles: */
-  .accessary.frlp{right:-5px;bottom:-15px;width:100px;height:75px;background-size:100px 75px;}
-  .accessary.litstr{right:5px;bottom:-35px;width:107px;height:96px;background-size:107px 96px;}
+  .accessary.frlp{right:90px;bottom:-50px;width:100px;height:75px;background-size:100px 75px;-webkit-transform:rotate(38deg);}
+  .accessary.litstr{right:100px;bottom:-60px;width:107px;height:96px;background-size:107px 96px;-webkit-transform:rotate(41deg);}
   .accessary.leftstr{left:-10px;top:200px;}
   .accessary.topstr{left:0px;top:-12px;}
-  .accessary.elves{right:-20px;bottom:-15px;width:110px;height:110px;background-size:110px 110px;}
+  .accessary.elves{right:93px;bottom:-60px;width:110px;height:110px;background-size:110px 110px;-webkit-transform:rotate(51deg);}
+  .accessary.topleaf{left:-20px;top:40px;}
+  .accessary.oneleaf{right:-10px;bottom:180px;-webkit-transform:rotate(-20deg);}
 
   /* Frame4 "Fa": */
   .pt-comp-title{top:0;left:50%;width:320px;height:auto;margin:60px 0 0 -160px;}
@@ -1649,7 +1653,7 @@
   .pt-plus-star{right:0;width:210px;height:40px;}
   .pt-next{margin-left:0;top:48%;right:5%;left:auto;}
   .pt-prev{margin-left:0;top:48%;left:5%;}
-  .pt-stories-intro{display:none!important;}
+  .pt-stories-intro, .pt-musical-note{display:none!important;}
   .players-bg-img{background-position:50% 100%;background-size:contain;}
   /* ----------- Fit guys on mobile ---------- */
   /* ------- left purple guy on mobile ------- */
