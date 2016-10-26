@@ -739,6 +739,18 @@ body {
 	display: block;
 	margin: 30px auto 0;
 }
+
+.fs-pianotiles {
+	background: url(../images/front/bg-piano-tiles-zip.jpg) no-repeat center #50bbf7;
+	-moz-background-size: cover;
+	  -o-background-size: cover;
+	     background-size: cover;
+}
+.fs-pianotiles img.pianoTiles {
+	display: block;
+	margin: 50px auto 0;
+}
+
 .fs-whatscall {
 	background: url(../images/front/bg-whatscall-front.jpg) no-repeat center #3477c1;
 	-moz-background-size: cover;
@@ -5216,6 +5228,11 @@ a.btn_green:visited {
     margin: 10px auto 0;
     width:46%;
     max-width:260px;
+  }
+  .fs-pianotiles img.pianoTiles {
+    margin:10px auto 0;
+    width:80%;
+    max-width:320px;
   }
   .fs-whatscall img.whatscallTitle {
     padding-top:100px;

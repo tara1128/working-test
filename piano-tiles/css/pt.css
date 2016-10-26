@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-26 18:17
+  Latest modified: 2016-10-26 19:48
 */
 
 /* main */
@@ -304,6 +304,7 @@
 .pt-players-story {
   padding:20px 0 0;
   height:320px;
+  overflow:hidden;
 }
 .pt-players-videostory {
   position:relative;
