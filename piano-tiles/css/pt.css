@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-25 18:59
+  Latest modified: 2016-10-26 11:23
 */
 
 /* main */
@@ -580,14 +580,14 @@
 .pt-vd-tall-guy {
   width: 134px;
   height: 250px;
-  right:-40px;
+  right:-35px;
   bottom:70px;
 }
 .pt-vd-fat-guy {
   width:162px;
   height:142px;
-  right:-100px;
-  bottom:60px;
+  right:-105px;
+  bottom:63px;
 }
 /* Specified for video */
 .pt-vd-box {
