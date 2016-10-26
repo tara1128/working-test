@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-10-26 09:45
+  Latest modified: 2016-10-26 17:29
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -158,6 +158,7 @@
     cdRotateInterval: {},
     cdAngleContainer: [],
 		init: function(pageObj) {
+      document.ontouchmove = function(e){ e.preventDefault();} /* Make IOS not to scroll the whole page when touchmoves */
 			var father = this;
 			if (typeof pageObj == 'object' && typeof pageObj != 'undefined') {
 				father.initDom(pageObj);
@@ -182,18 +183,18 @@
 			obj.musicMain.on({
 				mousedown: function(e){
 					e.preventDefault();
-					ismove = true; 
-					getpageY = e.pageY-parseInt($(this).css("top")); 
+					ismove = true;
+					getpageY = e.pageY-parseInt($(this).css("top"));
 				},
 				mousemove: function(e){
 					var moveHeight = parseInt(($(win).height() / 2) - $(win).height());
 					$(this).css({ cursor: 'move'});
-					if(ismove){ 
-						var y = e.pageY - getpageY; 
+					if(ismove){
+						var y = e.pageY - getpageY;
 						if(y >= 0 || y <= moveHeight){
 							return false;
 						}else{
-							$(this).css({"top": y + 'px'}); 
+							$(this).css({"top": y + 'px'});
 						}
 					}
 				},
@@ -223,7 +224,7 @@
         return; // when browser does't support audio.
       }
       var CDTriggers = obj.cdTriggers;
-      for( var _i = 0; _i < CDTriggers.length; _i++ ){ 
+      for( var _i = 0; _i < CDTriggers.length; _i++ ){
         self.cdAngleContainer.push({ cdIndex: $(CDTriggers[_i]).attr('data'), currentDeg: 0 });//Stored every CD's index and rotate deg.
         self.cdRotateInterval[ 'CD_' + _i ] = null;//Object stored every CD's interval.
       };
@@ -234,26 +235,66 @@
 			});
       /* CD bars display on mobiles only: */
       var CDBars = obj.cdBars;
-      if( curWinWidth < 769 ){ // On mobiles:
+      var switchCDs = function(index) {
+        CDBars.removeClass('active');
+        $(CDBars[index]).addClass('active');
+        if(index == 0){ /* Switch to CD 1: */
+          obj.cdObjA.css('margin-left', '-140px');
+          obj.cdObjB.css('margin-left', (curWinWidth + 50) + 'px');
+          obj.cdObjC.css('margin-left', (curWinWidth + 370) + 'px');
+        }else if(index == 1){ /* Switch to CD 2: */
+          obj.cdObjA.css('margin-left', '-' + (curWinWidth + 280) + 'px');
+          obj.cdObjB.css('margin-left', '-140px');
+          obj.cdObjC.css('margin-left', (curWinWidth + 50) + 'px');
+        }else{ /* Switch to CD 3: */
+          obj.cdObjA.css('margin-left', '-' + (curWinWidth + 540) + 'px');
+          obj.cdObjB.css('margin-left', '-' + (curWinWidth + 280) + 'px');
+          obj.cdObjC.css('margin-left', '-140px');
+        }
+      };
+      if( curWinWidth < 769 ){
         CDBars.on('click', function(){
           var me = $(this);
           var index = me.attr('data');
-          CDBars.removeClass('active');
-          me.addClass('active');
-          if(index == 0){ /* Switch to CD 1: */
-            obj.cdObjA.css('margin-left', '-140px');
-            obj.cdObjB.css('margin-left', (curWinWidth + 50) + 'px');
-            obj.cdObjC.css('margin-left', (curWinWidth + 370) + 'px');
-          }else if(index == 1){ /* Switch to CD 2: */
-            obj.cdObjA.css('margin-left', '-' + (curWinWidth + 280) + 'px');
-            obj.cdObjB.css('margin-left', '-140px');
-            obj.cdObjC.css('margin-left', (curWinWidth + 50) + 'px');
-          }else{ /* Switch to CD 3: */
-            obj.cdObjA.css('margin-left', '-' + (curWinWidth + 540) + 'px');
-            obj.cdObjB.css('margin-left', '-' + (curWinWidth + 280) + 'px');
-            obj.cdObjC.css('margin-left', '-140px');
-          }
+          switchCDs(index);
         });
+        if( !obj.musicMain.get(0).addEventListener ){return;}
+        obj.musicMain.get(0).addEventListener('touchstart', function(e){
+          var touch = e.touches[0];
+          obj.cdTouchStartX = touch.pageX;
+        },false);
+        obj.musicMain.get(0).addEventListener('touchmove', function(e){
+          var touch = e.touches[0];
+          obj.cdTouchDeltaX = touch.pageX - obj.cdTouchStartX;
+        }, false);
+        obj.musicMain.get(0).addEventListener('touchend', function(e){
+          if( Math.abs(obj.cdTouchDeltaX) < 20 ) { return; }
+          if( obj.cdTouchDeltaX < 0 ){ /* Make it scroll to left */
+            if( !!$(CDBars[CDBars.length-1]).hasClass('active') ){ // Already displaying the last one
+              return;
+            }else{
+              for( var _l = 0; _l < CDBars.length; _l++ ){
+                if( !!$(CDBars[_l]).hasClass('active') ){
+                  switchCDs( _l + 1 );
+                  obj.cdTouchStartX = 0;
+                  break;
+                }
+              }
+            }
+          }else{ /* Scroll to right */
+            if( !!$(CDBars[0]).hasClass('active') ){ // Already displaying the first one
+              return;
+            }else{
+              for( var _r = 0; _r < CDBars.length; _r++ ){
+                if( !!$(CDBars[_r]).hasClass('active') ){
+                  switchCDs( _r - 1 );
+                  obj.cdTouchStartX = 0;
+                  break;
+                }
+              }
+            }
+          }
+        }, false);
       }
 		},
     playOneCD: function(obj, cdTrigger) {
@@ -340,6 +381,10 @@
           obj.cdObjA.css('margin-left', '-140px');
           obj.cdObjB.css('margin-left', (curWinWidth + 50) + 'px');
           obj.cdObjC.css('margin-left', (curWinWidth + 370) + 'px');
+          /* Display CD bars in the right status: */
+          var CDBars = obj.cdBars;
+          CDBars.removeClass('active');
+          $(CDBars[0]).addClass('active');
         }
       }
       if( self.initNum != 1 && (typeof vdElement.canPlayType != 'undefined') ){ // Shut down videos
@@ -402,7 +447,7 @@
     adjustBgPicture: function(obj) { /* Added adjustment for background picture suitable in full screen. */
 			var curWinHeight = $(win).height();
 			var curWinWidth = $(win).width();
-      var proportion = 1.68; // The value of w/h for pt-mabg.jpg */ 
+      var proportion = 1.68; // The value of w/h for pt-mabg.jpg */
       if( curWinWidth/curWinHeight < proportion ) {
         obj.ptBody.css("background-size", "auto 100%");
       }else{
@@ -487,21 +532,26 @@
     curPageTouch: function(obj, items) {
       var self = this;
       var wrap = obj.wrapDiv.get(0);
-      var startX, startY, deltaY;
+      var startX, startY, deltaX, deltaY;
       var touchMoveMinDistance = 20;
       if( !wrap.addEventListener ){ return; }
       wrap.addEventListener('touchstart', function(e){
         var touch = e.touches[0];
         startX = touch.pageX;
-        startY = touch.pageY
+        startY = touch.pageY;
       },false);
       wrap.addEventListener('touchmove', function(e){
         var touch = e.touches[0];
+        deltaX = touch.pageX - startX;
         deltaY = touch.pageY - startY;
       }, false);
       wrap.addEventListener('touchend', function(e){
+        if( self.initNum == 2 && Math.abs(deltaX) > 100 ){/* CD page listen scroll event horizontal */
+          deltaX = 0;
+          return;
+        }
         if( deltaY && Math.abs(deltaY) > touchMoveMinDistance ){
-          if( deltaY > 0 ){ 
+          if( deltaY > 0 ){
             self.mainRun(obj, 'up');
           }else{
             self.mainRun(obj, 'down');
@@ -568,8 +618,9 @@
 	};
 	win.CMmousewheel = CMmousewheel;
 })(window, document, jQuery);
-/* CMCM canvas ======> 
+/* CMCM canvas ======> */
 ;(function(win, doc, $, undefined) {
+  if( IsAndroid || IsIOS || IsWindowsPhone ){ return; }/* No floating blocks on mobiles */
 	var canvas = document.getElementById("myCanvas");
 	var setCanvasfor;
 	canvas.width = window.innerWidth;
@@ -587,7 +638,7 @@
 	    var vendors = ['webkit', 'moz', 'ms', 'o'];
 	    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
 	        window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
-	        window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || 
+	        window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] ||
 	                                      window[vendors[x] + 'CancelRequestAnimationFrame'];
 	    }
 	    if (!window.requestAnimationFrame) {
@@ -668,7 +719,7 @@
 	cancelAnimationFrame(setCanvasfor);
 	setCanvasfor = requestAnimationFrame(forCanvas);
 })(window, document, jQuery);
-*/
+
 /* switch */
 ;(function(win, doc, $, undefined) {
 	function switchPlayers(){

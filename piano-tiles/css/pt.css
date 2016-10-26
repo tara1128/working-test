@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-26 14:50
+  Latest modified: 2016-10-26 16:19
 */
 
 /* main */
@@ -17,6 +17,7 @@
   -ms-transition: background-size .5s ease;
   -o-transition: background-size .5s ease;
   transition: background-size .5s ease;
+  -webkit-overflow-scrolling: touch;
 }
 #pt-wrap{
   height:100%;
@@ -1060,15 +1061,6 @@
 /* Animations of frame-1: */
 .pt-active .pt-do-tile {
   display: block;
-  -webkit-animation: enterFromTop 1s ease both;
-  -moz-animation: enterFromTop 1s ease both;
-  -ms-animation: enterFromTop 1s ease both;
-  -o-animation: enterFromTop 1s ease both;
-  animation: enterFromTop 1s ease both;
-}
-
-.pt-active .pt-do-text {
-  display: block;
   -webkit-animation: enterFromTop 1s ease both .2s;
   -moz-animation: enterFromTop 1s ease both .2s;
   -ms-animation: enterFromTop 1s ease both .2s;
@@ -1076,13 +1068,22 @@
   animation: enterFromTop 1s ease both .2s;
 }
 
+.pt-active .pt-do-text {
+  display: block;
+  -webkit-animation: enterFromTop 1s ease both .5s;
+  -moz-animation: enterFromTop 1s ease both .5s;
+  -ms-animation: enterFromTop 1s ease both .5s;
+  -o-animation: enterFromTop 1s ease both .5s;
+  animation: enterFromTop 1s ease both .5s;
+}
+
 .pt-active .pt-do-download-btn {
   display: block;
-  -webkit-animation: enterFromBottom 1s ease both .4s;
-  -moz-animation: enterFromBottom 1s ease both .4s;
-  -ms-animation: enterFromBottom 1s ease both .4s;
-  -o-animation: enterFromBottom 1s ease both .4s;
-  animation: enterFromBottom 1s ease both .4s;
+  -webkit-animation: enterFromBottom 1s ease both .7s;
+  -moz-animation: enterFromBottom 1s ease both .7s;
+  -ms-animation: enterFromBottom 1s ease both .7s;
+  -o-animation: enterFromBottom 1s ease both .7s;
+  animation: enterFromBottom 1s ease both .7s;
 }
 
 .pt-active .pt-do-crumb {
@@ -1592,8 +1593,8 @@
   /* CD Accessaries should be scale down on mobiles: */
   .accessary.frlp{right:90px;bottom:-50px;width:100px;height:75px;background-size:100px 75px;-webkit-transform:rotate(38deg);}
   .accessary.litstr{right:100px;bottom:-60px;width:107px;height:96px;background-size:107px 96px;-webkit-transform:rotate(41deg);}
-  .accessary.leftstr{left:-10px;top:200px;}
-  .accessary.topstr{left:0px;top:-12px;}
+  .accessary.leftstr{left:-20px;top:220px;}
+  .accessary.topstr{left:-20px;top:-20px;width:76px;height:76px;background-size:76px 76px;}
   .accessary.elves{right:93px;bottom:-60px;width:110px;height:110px;background-size:110px 110px;-webkit-transform:rotate(51deg);}
   .accessary.topleaf{left:-20px;top:40px;}
   .accessary.oneleaf{right:-10px;bottom:180px;-webkit-transform:rotate(-20deg);}
@@ -1644,15 +1645,15 @@
   /* Frame5 "So": */
   .pt-stories-title{top:0;left:50%;width:320px;height:auto;margin:60px 0 0 -160px;}
   .pt-stories-title img{display:block;width:100%;margin:0 auto;}
-  .pt-players-wrap{top:0;width:226px;height:290px;margin:180px 0 0 -115px;}
+  .pt-players-wrap{top:0;width:226px;height:290px;margin:160px 0 0 -115px;}
   .pt-players-list li{width:210px;height:290px;}
   .pt-players-story{padding:15px 0;height:240px;}
   .pt-players-videostory{height:270px;}
   .pt-players-text, .pt-players-vdtitle{line-height:18px;font-size:14px;}
   .pt-story-ply-btn {top:0;margin:70px 0 0 -40px;width:80px;height:80px;background-size:80px 80px;}
   .pt-plus-star{right:0;width:210px;height:40px;}
-  .pt-next{margin-left:0;top:48%;right:5%;left:auto;}
-  .pt-prev{margin-left:0;top:48%;left:5%;}
+  .pt-next{margin-left:0;right:5%;left:auto;}
+  .pt-prev{margin-left:0;left:5%;}
   .pt-stories-intro, .pt-musical-note{display:none!important;}
   .players-bg-img{background-position:50% 100%;background-size:contain;}
   /* ----------- Fit guys on mobile ---------- */
