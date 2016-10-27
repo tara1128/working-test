@@ -5263,13 +5263,13 @@ a.btn_green:visited {
   }
   .fs-pianotiles img.ptImgTile {
     top:-90px;
-    margin:0 0 0 -40%;
-    width:80%;
+    margin:0 0 0 -30%;
+    width:60%;
   }
   .fs-pianotiles img.ptImgText {
-    top:140px;
-    margin:0 0 0 -40%;
-    width:80%;
+    top:120px;
+    margin:0 0 0 -30%;
+    width:60%;
   }
   .fs-pianotiles img.ptImgCrumb.onPC {
     display:none;
