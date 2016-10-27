@@ -741,7 +741,7 @@ body {
 }
 
 .fs-pianotiles {
-	background: url(../images/front/bg-piano-tiles-zip.jpg) no-repeat center #50bbf7;
+	background: url(../images/front/bg-piano-front.jpg) no-repeat center #50bbf7;
 	-moz-background-size: cover;
 	  -o-background-size: cover;
 	     background-size: cover;
@@ -753,11 +753,30 @@ body {
 	display:block;
 }
 .fs-pianotiles img.ptImgTile {
-  margin:-162px 0 0 -440px;
+  margin:-162px 0 0 -400px;
 }
 .fs-pianotiles img.ptImgText {
-  margin:-252px 0 0 -130px;
+  margin:-220px 0 0 -140px;
 }
+.fs-pianotiles img.ptImgCrumb {
+  margin:-292px 0 0 -50%;
+  width:100%;
+  max-width:1410px;
+  -webkit-animation: showCrumbs .7s ease both .2s;
+  -moz-animation: showCrumbs .7s ease both .2s;
+  -ms-animation: showCrumbs .7s ease both .2s;
+  -o-animation: showCrumbs .7s ease both .2s;
+  animation: showCrumbs .7s ease both .2s;
+}
+.fs-pianotiles img.ptImgCrumb.onMobile {
+  display:none; /* Display on mobile only */
+}
+
+@-webkit-keyframes showCrumbs {from {opacity:0;-webkit-transform:scale(0.4,0.4);} to {opacity:1;-webkit-transform:scale(1,1);}}
+@-moz-keyframes showCrumbs {from {opacity:0;-moz-transform:scale(0.4,0.4);} to {opacity:1;-moz-transform:scale(1,1);}}
+@-ms-keyframes showCrumbs {from {opacity:0;-ms-transform:scale(0.4,0.4);} to {opacity:1;-ms-transform:scale(1,1);}}
+@-o-keyframes showCrumbs {from {opacity:0;-o-transform:scale(0.4,0.4);} to {opacity:1;-o-transform:scale(1,1);}}
+@keyframes showCrumbs {from {opacity:0;transform:scale(0.4,0.4);} to {opacity:1;transform:scale(1,1);}}
 
 
 .fs-whatscall {
@@ -5251,6 +5270,13 @@ a.btn_green:visited {
     top:140px;
     margin:0 0 0 -40%;
     width:80%;
+  }
+  .fs-pianotiles img.ptImgCrumb.onPC {
+    display:none;
+  }
+  .fs-pianotiles img.ptImgCrumb.onMobile {
+    display:block;
+    max-width:750px;
   }
 
   .fs-whatscall img.whatscallTitle {

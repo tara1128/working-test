@@ -1,6 +1,6 @@
 /*
   index.js
-  latest modified: 2016-10-26 18:18
+  latest modified: 2016-10-27 16:31
 */
 
 var IndexLogin = React.createClass({
@@ -239,7 +239,7 @@ var cateList = [
   {
     projectName: 'cmcm.com/en-us',
     linkTo: 'en-us/',
-    latestModified: '2016-10-17 15:04'
+    latestModified: '2016-10-27 16:31'
   },
   {
     projectName: 'WhatsCall',
@@ -254,7 +254,7 @@ var cateList = [
   {
     projectName: 'Piano Tiles 2',
     linkTo: 'piano-tiles/',
-    latestModified: '2016-10-26 18:18'
+    latestModified: '2016-10-27 16:30'
   }
 ];
 

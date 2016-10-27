@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-10-26 17:29
+  Latest modified: 2016-10-27 15:41
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -158,7 +158,7 @@
     cdRotateInterval: {},
     cdAngleContainer: [],
 		init: function(pageObj) {
-      document.ontouchmove = function(e){ e.preventDefault();} /* Make IOS not to scroll the whole page when touchmoves */
+      document.ontouchmove = function(e){ e.preventDefault();} /* Make IOS not to scroll the whole page when touch-moves */
 			var father = this;
 			if (typeof pageObj == 'object' && typeof pageObj != 'undefined') {
 				father.initDom(pageObj);
@@ -268,7 +268,7 @@
           obj.cdTouchDeltaX = touch.pageX - obj.cdTouchStartX;
         }, false);
         obj.musicMain.get(0).addEventListener('touchend', function(e){
-          if( Math.abs(obj.cdTouchDeltaX) < 20 ) { return; }
+          if( Math.abs(obj.cdTouchDeltaX) < 50 ) { return; }
           if( obj.cdTouchDeltaX < 0 ){ /* Make it scroll to left */
             if( !!$(CDBars[CDBars.length-1]).hasClass('active') ){ // Already displaying the last one
               return;
@@ -533,7 +533,6 @@
       var self = this;
       var wrap = obj.wrapDiv.get(0);
       var startX, startY, deltaX, deltaY;
-      var touchMoveMinDistance = 20;
       if( !wrap.addEventListener ){ return; }
       wrap.addEventListener('touchstart', function(e){
         var touch = e.touches[0];
@@ -550,7 +549,7 @@
           deltaX = 0;
           return;
         }
-        if( deltaY && Math.abs(deltaY) > touchMoveMinDistance ){
+        if( deltaY && Math.abs(deltaY) > 50 ){
           if( deltaY > 0 ){
             self.mainRun(obj, 'up');
           }else{

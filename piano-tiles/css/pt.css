@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-26 19:48
+  Latest modified: 2016-10-27 15:30
 */
 
 /* main */
@@ -180,16 +180,31 @@
   display:none;
   margin:194px 0 0 -164px;
   width:328px;
-  height:123px;
+  height:118px;
+}
+.pt-do-download-btn s {
+  background-repeat:no-repeat;
 }
 .pt-do-download-btn s.btn-face {
-  background:url(../images/pt/pt-dl-btn-face.png) no-repeat;
+  background-image:url(../images/pt/trpl-btn-face1x-zip.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/trpl-btn-face1x-zip.png) 1x,
+    url(../images/pt/trpl-btn-face2x-zip.png) 2x
+  );
 }
 .pt-do-download-btn s.btn-body {
-  background:url(../images/pt/pt-dl-btn-body.png) no-repeat;
+  background-image:url(../images/pt/trpl-btn-body1x-zip.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/trpl-btn-body1x-zip.png) 1x,
+    url(../images/pt/trpl-btn-body2x-zip.png) 2x
+  );
 }
 .pt-do-download-btn s.btn-shadow {
-  background:url(../images/pt/pt-dl-btn-shadow.png) no-repeat;
+  background-image:url(../images/pt/trpl-btn-shadow1x-zip.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/trpl-btn-shadow1x-zip.png) 1x,
+    url(../images/pt/trpl-btn-shadow2x-zip.png) 2x
+  );
 }
 .pt-do-download-btn:hover s.btn-face {
   top: 8px;
@@ -210,16 +225,31 @@
   z-index: 6;
   margin: -60px 0 0 -514px;
   width: 220px;
-  height: 80px;
+  height: 79px;
+}
+.pt-foot-download-btn s {
+  background-repeat:no-repeat;
 }
 .pt-foot-download-btn s.btn-face {
-  background:url(../images/pt/pt-ft-dl-btn-face.png) no-repeat;
+  background-image:url(../images/pt/trpl-footbtn-face1x-zip.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/trpl-footbtn-face1x-zip.png) 1x,
+    url(../images/pt/trpl-footbtn-face2x-zip.png) 2x
+  );
 }
 .pt-foot-download-btn s.btn-body {
-  background:url(../images/pt/pt-ft-dl-btn-body.png) no-repeat;
+  background-image:url(../images/pt/trpl-footbtn-body1x-zip.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/trpl-footbtn-body1x-zip.png) 1x,
+    url(../images/pt/trpl-footbtn-body2x-zip.png) 2x
+  );
 }
 .pt-foot-download-btn s.btn-shadow {
-  background:url(../images/pt/pt-ft-dl-btn-shadow.png) no-repeat;
+  background-image:url(../images/pt/trpl-footbtn-shadow1x-zip.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/trpl-footbtn-shadow1x-zip.png) 1x,
+    url(../images/pt/trpl-footbtn-shadow2x-zip.png) 2x
+  );
 }
 .pt-foot-download-btn:hover s.btn-face {
   top: 5px;
