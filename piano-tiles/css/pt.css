@@ -1,9 +1,13 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-28 10:05
+  Latest modified: 2016-10-28 14:08
 */
 
-/* main */
+/* Global */
+@font-face {
+  font-family: "Futura";
+  src: url('../images/v3/fonts/FuturaCondensed.ttf') format("truetype");
+}
 .bodyPT #wrap {
   min-width:auto!important;
 }
@@ -99,6 +103,10 @@
   height: 375px;
   overflow: hidden;
 }
+.pt-footer h2.section-title {
+  font-size:40px;
+  line-height:40px;
+}
 .pt-foot-pianist {
   display:block;
   position:absolute;
@@ -109,6 +117,13 @@
   height:100%;
   background:url(../images/pt/pt-pianist.png) 50% 0 no-repeat;
   background-size:cover;
+}
+
+h2.section-title {
+	font-family: 'Futura', 'Gotham-Book', Helvetica, Verdana, Arial, 'Microsoft YaHei';
+  font-size:68px;
+  line-height:72px;
+  color:#fff;
 }
 
 /* Frame 1 "Do": */
@@ -457,14 +472,16 @@
   position: absolute;
   z-index: 6;
   top: 50%;
-  left: 0;
   width: 100%;
   text-align: center;
 }
 .pt-comp-title {
-  margin:-300px 0 0 0;
+  left:50%;
+  margin:-300px 0 0 -250px;
+  width: 500px;
 }
 .pt-comp-intro {
+  left:0;
   margin:-140px 0 0 0;
   color:#fff;
   font-size:16px;
@@ -659,7 +676,7 @@
 }
 .pt-music-title {
   margin: -300px 0 0 -500px;
-  width: 465px;
+  width: 440px;
   height: 132px;
 }
 .pt-music-intro {
@@ -1587,6 +1604,7 @@
 /* ======= ==================== ======= */
 @media screen and (max-width:768px) {
   .pt-right-down{display:none;}
+  h2.section-title{font-size:50px;line-height:54px;}
   /* Frame1 "Do": */
   .pt-do-tile{top:60px;margin:0 0 0 -50%;}
   .pt-do-tile img{margin:0 auto;width:75%;}
@@ -1607,8 +1625,12 @@
   .pt-pulr-intro p {font-size:14px;line-height:18px;}
   .pt-pulr-video, .pt-pulr-coins, .pt-pulr-honor, .pt-pulr-hide-in-mobile{display:none!important;}
   .pt-pulr-fake-video{
-    top:0;margin:346px 0 0 -160px;width:320px;height:195px;border-radius:15px;
-    background:url(../images/pt/pt-fake-vd-cover.png) no-repeat;
+    top:0;margin:346px 0 0 -160px;width:320px;height:195px;background-repeat:no-repeat;border-radius:15px;overflow:hidden;
+    background-image:url(../images/pt/fake-v-cover1x-zip.png);
+    background-image: -webkit-image-set(
+      url(../images/pt/fake-v-cover1x-zip.png) 1x,
+      url(../images/pt/fake-v-cover2x-zip.png) 2x
+    );
     -webkit-box-shadow: 3px 3px 50px rgba(0,0,0, .2);
     -moz-box-shadow: 3px 3px 50px rgba(0,0,0, .2);
     -ms-box-shadow: 3px 3px 50px rgba(0,0,0, .2);
@@ -1641,6 +1663,7 @@
 
   /* Frame4 "Fa": */
   .pt-comp-title{top:0;left:50%;width:320px;height:auto;margin:60px 0 0 -160px;}
+  .pt-comp-title h2.section-title{font-size:44px;line-height:48px;}
   .pt-comp-title img {display:block;width:100%;margin:0 auto;}
   .pt-comp-intro{top:0;left:50%;width:300px;margin:180px 0 0 -150px;text-align:left;font-size:14px;line-height:18px;}
   .pt-comp-list {top:0;width:320px;margin:280px 0 0 -160px;}
@@ -1683,7 +1706,8 @@
   @keyframes moveComp_5 { from {opacity:0; top:190px;} to {opacity:.3; top:150px;} }
 
   /* Frame5 "So": */
-  .pt-stories-title{top:0;left:50%;width:320px;height:auto;margin:60px 0 0 -160px;}
+  .pt-stories-title{top:0;left:50%;width:100%;height:auto;margin:60px 0 0 -50%;}
+  .pt-stories-title h2.section-title{font-size:44px;line-height:48px;}
   .pt-stories-title img{display:block;width:100%;margin:0 auto;}
   .pt-players-wrap{top:0;width:226px;height:290px;margin:160px 0 0 -115px;}
   .pt-players-list li{width:210px;height:290px;}
@@ -1732,6 +1756,7 @@
 
   /* Frame5.5 "Foot": */
   .pt-footer{height:275px;}
+  .pt-footer h2.section-title{font-size:34px;text-align:center;}
   .pt-foot-pianist{background:url(../images/pt/pt-no-pianist.jpg) 50% 100% no-repeat;}
   .pt-foot-title{margin-left:-160px;width:320px;}
   .pt-foot-title img{display:block;margin:0 auto;width:100%;}
@@ -1758,6 +1783,7 @@
 /* Specific for iPhone 5-, must be placed after the above settings */
 /* IPhone5 320*460 in screen */
 @media screen and (max-width:320px) {
+  h2.section-title{font-size:40px;line-height:42px;}
   /* Frame1 "Do": */
   .pt-do-tile{top:50px;}
   .pt-do-tile img{width:60%;}
@@ -1782,13 +1808,15 @@
   .pt-music-bars-in-mobile{bottom:20px;}
 
   /* Frame4 "Fa": */
-  .pt-comp-title{width:80%;margin:60px 0 0 -40%;}
+  .pt-comp-title{width:100%;margin:60px 0 0 -50%;}
+  .pt-comp-title h2.section-title{font-size:36px;line-height:42px;}
   .pt-comp-intro{width:80%;margin:150px 0 0 -40%;font-size:13px;line-height:16px;}
   .pt-comp-list{margin:230px 0 0 -160px;}
   .pt-fb-icon{margin:200px 0 0 55px;}
 
   /* Frame5 "So": */
-  .pt-stories-title{width:80%;margin:60px 0 0 -40%;}
+  .pt-stories-title{width:100%;margin:60px 0 0 -50%;}
+  .pt-stories-title h2.section-title{font-size:36px;line-height:42px;}
   .pt-players-wrap{margin:110px 0 0 -115px;}
   .pt-story-ply-btn{top:0;margin:60px 0 0 -30px;width:60px;height:60px;background-size:60px 60px;}
   .pt-prev, .pt-next{width:28.7px;height:45.5px;background-size:28.7px 45.5px;}
