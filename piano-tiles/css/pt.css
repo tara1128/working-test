@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-28 14:08
+  Latest modified: 2016-10-28 15:13
 */
 
 /* Global */
@@ -1806,6 +1806,9 @@ h2.section-title {
   .pt-cdobj img{margin:0 auto;width:76%;}
   .pt-cdbtn{margin:-75px 0 0 -40px;width:80px;height:80px;background-size:80px 80px;}
   .pt-music-bars-in-mobile{bottom:20px;}
+  .accessary.frlp{bottom:10px;}
+  .accessary.litstr, .accessary.elves{bottom:0px;}
+  .pt-cd-trigger{height:56%;}
 
   /* Frame4 "Fa": */
   .pt-comp-title{width:100%;margin:60px 0 0 -50%;}
