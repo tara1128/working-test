@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-10-28 09:26
+  Latest modified: 2016-10-28 10:51
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -232,7 +232,7 @@
 				e.preventDefault();
         var me = $(this);
         self.playOneCD( obj, me );
-        e.stopPropagation()
+        e.stopPropagation();
 			});
       /* CD bars display on mobiles only: */
       var CDBars = obj.cdBars;
@@ -258,7 +258,7 @@
           var me = $(this);
           var index = me.attr('data');
           switchCDs(index);
-          e.stopPropagation()
+          e.stopPropagation();
         });
         if( !obj.musicMain.get(0).addEventListener ){return;}
         obj.musicMain.get(0).addEventListener('touchstart', function(e){
@@ -270,6 +270,7 @@
           obj.cdTouchDeltaX = touch.pageX - obj.cdTouchStartX;
         }, false);
         obj.musicMain.get(0).addEventListener('touchend', function(e){
+          if( !obj.cdTouchDeltaX ) { return; }/* When just clicking, no delta.  */
           if( Math.abs(obj.cdTouchDeltaX) < 50 ) { return; }
           if( obj.cdTouchDeltaX < 0 ){ /* Make it scroll to left */
             if( !!$(CDBars[CDBars.length-1]).hasClass('active') ){ // Already displaying the last one
