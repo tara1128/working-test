@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-27 15:30
+  Latest modified: 2016-10-28 10:05
 */
 
 /* main */
@@ -263,22 +263,31 @@
 
 /* Frame 5 "So": */
 .pt-prev, .pt-next {
-  display: none;
-  margin-top: -33px;
-  position: absolute;
-  z-index: 5;
-  top: 50%;
-  left: 50%;
-  width: 42px;
-  height: 66px;
-  background: url(../images/pt/pt-arrows.png) no-repeat;
+  display:none;
+  margin-top:-33px;
+  position:absolute;
+  z-index:5;
+  top:50%;
+  left:50%;
+  width:41px;
+  height:65px;
+  background-repeat:no-repeat;
 }
 .pt-prev{
-  margin-left: -520px;
+  margin-left:-520px;
+  background-image:url(../images/pt/pt-arrow-left1x.png);
+  background-image:-webkit-image-set(
+    url(../images/pt/pt-arrow-left1x.png) 1x,
+    url(../images/pt/pt-arrow-left2x.png) 2x
+  );
 }
 .pt-next{
-  margin-left: 468px;
-  background-position: -131px 0;
+  margin-left:468px;
+  background-image:url(../images/pt/pt-arrow-right1x.png);
+  background-image:-webkit-image-set(
+    url(../images/pt/pt-arrow-right1x.png) 1x,
+    url(../images/pt/pt-arrow-right2x.png) 2x
+  );
 }
 .pt-stories-title, .pt-stories-intro {
   display: none;
@@ -1782,8 +1791,7 @@
   .pt-stories-title{width:80%;margin:60px 0 0 -40%;}
   .pt-players-wrap{margin:110px 0 0 -115px;}
   .pt-story-ply-btn{top:0;margin:60px 0 0 -30px;width:60px;height:60px;background-size:60px 60px;}
-  .pt-prev, .pt-next{width:28px;}
-  .pt-next{background-position:-144px 0;}
+  .pt-prev, .pt-next{width:28.7px;height:45.5px;background-size:28.7px 45.5px;}
 
   /* Frame5.5 "Foot": */
   .pt-foot-title{margin-left:-45%;width:90%;}
