@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-28 15:13
+  Latest modified: 2016-10-31 18:25
 */
 
 /* Global */
@@ -207,6 +207,43 @@ h2.section-title {
     url(../images/pt/trpl-btn-face2x-zip.png) 2x
   );
 }
+/* Multi-lang for download button face: */
+.pt-do-download-btn s.btn-face.btn-es-es {
+  background-image:url(../images/pt/dl-btn-face-es1x.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/dl-btn-face-es1x.png) 1x,
+    url(../images/pt/dl-btn-face-es2x.png) 2x
+  );
+}
+.pt-do-download-btn s.btn-face.btn-ja-jp {
+  background-image:url(../images/pt/dl-btn-face-jp1x.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/dl-btn-face-jp1x.png) 1x,
+    url(../images/pt/dl-btn-face-jp2x.png) 2x
+  );
+}
+.pt-do-download-btn s.btn-face.btn-ko-kr {
+  background-image:url(../images/pt/dl-btn-face-kr1x.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/dl-btn-face-kr1x.png) 1x,
+    url(../images/pt/dl-btn-face-kr2x.png) 2x
+  );
+}
+.pt-do-download-btn s.btn-face.btn-zh-tw {
+  background-image:url(../images/pt/dl-btn-face-tw1x.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/dl-btn-face-tw1x.png) 1x,
+    url(../images/pt/dl-btn-face-tw2x.png) 2x
+  );
+}
+.pt-do-download-btn s.btn-face.btn-fr-fr {
+  background-image:url(../images/pt/dl-btn-face-fr1x.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/dl-btn-face-fr1x.png) 1x,
+    url(../images/pt/dl-btn-face-fr2x.png) 2x
+  );
+}
+
 .pt-do-download-btn s.btn-body {
   background-image:url(../images/pt/trpl-btn-body1x-zip.png);
   background-image: -webkit-image-set(
@@ -252,6 +289,43 @@ h2.section-title {
     url(../images/pt/trpl-footbtn-face2x-zip.png) 2x
   );
 }
+/* For multi-lang button face: */
+.pt-foot-download-btn s.btn-face.btn-es-es {
+  background-image:url(../images/pt/dl-footbtn-face-es1x.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/dl-footbtn-face-es1x.png) 1x,
+    url(../images/pt/dl-footbtn-face-es2x.png) 2x
+  );
+}
+.pt-foot-download-btn s.btn-face.btn-ja-jp {
+  background-image:url(../images/pt/dl-footbtn-face-jp1x.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/dl-footbtn-face-jp1x.png) 1x,
+    url(../images/pt/dl-footbtn-face-jp2x.png) 2x
+  );
+}
+.pt-foot-download-btn s.btn-face.btn-ko-kr {
+  background-image:url(../images/pt/dl-footbtn-face-kr1x.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/dl-footbtn-face-kr1x.png) 1x,
+    url(../images/pt/dl-footbtn-face-kr2x.png) 2x
+  );
+}
+.pt-foot-download-btn s.btn-face.btn-zh-tw {
+  background-image:url(../images/pt/dl-footbtn-face-tw1x.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/dl-footbtn-face-tw1x.png) 1x,
+    url(../images/pt/dl-footbtn-face-tw2x.png) 2x
+  );
+}
+.pt-foot-download-btn s.btn-face.btn-fr-fr {
+  background-image:url(../images/pt/dl-footbtn-face-fr1x.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/dl-footbtn-face-fr1x.png) 1x,
+    url(../images/pt/dl-footbtn-face-fr2x.png) 2x
+  );
+}
+
 .pt-foot-download-btn s.btn-body {
   background-image:url(../images/pt/trpl-footbtn-body1x-zip.png);
   background-image: -webkit-image-set(

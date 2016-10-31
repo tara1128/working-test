@@ -1,19 +1,21 @@
 /*
   index.js
-  latest modified: 2016-10-28 15:13
+  Trying ES6
+  Latest modified: 2016-10-31 19:43
 */
 
-var IndexLogin = React.createClass({
+class IndexLogin extends React.Component {
 
-  getInitialState: function() {
-    return {
+  constructor(props) {
+    super(props);
+    this.state = {
       username: '',
       password: '',
       error: ''
     }
-  },
+  }
 
-  onChange: function(e) {
+  onChange(e) {
     var _target = e.target;
     var _type = _target.type;
     var _val = _target.value;
@@ -28,9 +30,9 @@ var IndexLogin = React.createClass({
     } else {
       this.giveErrorMsg('Unknown errors occur!');
     }
-  },
+  }
 
-  handleSubmit: function() {
+  handleSubmit() {
     var validUserName = this.validate('text', this.state.username);
     var validPassword = this.validate('password', this.state.password);
     if( !validUserName ){
@@ -44,34 +46,34 @@ var IndexLogin = React.createClass({
       ReactDOM.render( <Categories list={cates} ck={this.state.username} />, divOfCategory );
       reactCookie.save('CMWebTester', this.state.username);
     }
-  },
+  }
 
-  giveErrorMsg: function(msg) {
+  giveErrorMsg(msg) {
     this.setState({error: msg});
-  },
+  }
 
-  removeErrorMsg: function() {
+  removeErrorMsg() {
     if( this.state.error ){
       this.setState({error: ''});
     }
-  },
+  }
 
-  validate: function(type, value) {
+  validate(type, value) {
     var rules = {
       'text': /\w+[\w.]*@(([c][m]){2}||conew)\.com/,
       'password': /\d{4}\.ok/
     };
     return rules[type].test(value);
-  },
+  }
 
-  reqForAccount: function() {
+  reqForAccount() {
     var title = 'Info';
     var description = 'Leave your email here and I will send you an account.';
     var popWrap = document.getElementById('myPopupMask');
     ReactDOM.render( <Popup title={title} desc={description} mask={popWrap} hasInput={true} />, popWrap );
-  },
+  }
 
-  componentWillMount: function() {
+  componentWillMount() {
     var _this = this;
     if( document.addEventListener ){
       document.addEventListener('keypress', function(e){
@@ -80,44 +82,46 @@ var IndexLogin = React.createClass({
         }
       });
     }
-  },
+  }
 
-  render: function(){
+  render() {
     return (
       <div className='form-field'>
         <h2 className='form-title'>Sign in to get started!</h2>
         <div className='inputs-wrap'>
-          <input type='text' onChange={this.onChange} onFocus={this.removeErrorMsg} autoFocus value={this.state.username} placeholder='Your username here please' />
-          <input type='password' onChange={this.onChange} onFocus={this.removeErrorMsg} value={this.state.password} placeholder='Password here' />
+          <input type='text' onChange={this.onChange.bind(this)} onFocus={this.removeErrorMsg.bind(this)} autoFocus value={this.state.username} placeholder='Your username here please' />
+          <input type='password' onChange={this.onChange.bind(this)} onFocus={this.removeErrorMsg.bind(this)} value={this.state.password} placeholder='Password here' />
         </div>
         <div className='btns-wrap'>
-          <a className='btn-submit' onClick={this.handleSubmit}>Enter</a>
-          <a className='btn-req' onClick={this.reqForAccount}>Get an account!</a>
+          <a className='btn-submit' onClick={this.handleSubmit.bind(this)}>Enter</a>
+          <a className='btn-req' onClick={this.reqForAccount.bind(this)}>Get an account!</a>
         </div>
         <div className='error-msgs'>{this.state.error}</div>
       </div>
     );
   }
-});
+
+};
 
 /* Module of Categories */
-var Categories = React.createClass({
+class Categories extends React.Component {
 
-  getInitialState: function() {
-    return {
+  constructor(props) {
+    super(props);
+    this.state = {
       name: this.props.ck
     }
-  },
+  }
 
-  checkOutData: function() {
+  checkOutData() {
     webTestPlayformEmails.all().one(function(email){
       console.log( 'Get emails from db: ', email.value );
     });
-  },
+  }
 
-  render: function() {
+  render() {
     if( this.state.name == 'alexandra@cmcm.com' ){
-      var adminBtn = <a className='cate-admin-btn' onClick={this.checkOutData}>Check out datas!</a>;
+      var adminBtn = <a className='cate-admin-btn' onClick={this.checkOutData.bind(this)}>Check out datas!</a>;
     }else{
       var adminBtn = '';
     }
@@ -137,13 +141,14 @@ var Categories = React.createClass({
     );
   }
 
-});
+};
 
 /* Module of Popup */
-var Popup = React.createClass({
-  
-  getInitialState: function() {
-    return {
+class Popup extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
       title: this.props.title,
       desc: this.props.desc,
       mask: this.props.mask,
@@ -151,18 +156,19 @@ var Popup = React.createClass({
       inputElement: null,
       inputValue: ''
     }
-  },
-
-  showPopup: function() {
+  }
+  
+  showPopup() {
     this.state.mask.style.display = 'block';
-  },
+  }
 
-  destroyPopup: function() {
+  destroyPopup() {
+    console.log(166, ReactDOM.findDOMNode(this)); // Why null ?
     ReactDOM.unmountComponentAtNode( ReactDOM.findDOMNode(this).parentNode );
     this.state.mask.style.display = 'none';
-  },
+  }
 
-  onConfirm: function() {
+  onConfirm() {
     var _this = this;
     if( !_this.state.hasInput ){
       _this.destroyPopup();
@@ -174,9 +180,9 @@ var Popup = React.createClass({
     }else{
       return;
     }
-  },
+  }
 
-  saveEmail: function(email, callback) {
+  saveEmail(email, callback) {
     // Insert data to database:
     var emailObj = new webTestPlayformEmails({
       value: email,
@@ -187,36 +193,36 @@ var Popup = React.createClass({
     if(callback){
       callback();
     }
-  },
+  }
 
-  onCancel: function() {
+  onCancel() {
     this.destroyPopup();
-  },
+  }
 
-  onChange: function(e) {
+  onChange(e) {
     var _val = e.target.value;
     this.setState({
       inputElement: e.target,
       inputValue: _val
     });
-  },
+  }
 
-  validate: function( value ) {
+  validate( value ) {
     var emailPattern = /\w+[\w.]*@[\w.]+\.\w+/;
     return emailPattern.test(value);
-  },
+  }
 
-  componentWillMount: function() {
+  componentWillMount() {
     this.showPopup();
-  },
+  }
 
-  componentWillUnmount: function() {
+  componentWillUnmount() {
     this.destroyPopup();
-  },
+  }
 
-  render: function() {
+  render() {
     if(this.state.hasInput){
-      var _input = <input type='text' className='popup-input' onChange={this.onChange} value={this.state.inputValue} />
+      var _input = <input type='text' className='popup-input' onChange={this.onChange.bind(this)} value={this.state.inputValue} />
     }else{
       var _input = '';
     }
@@ -226,14 +232,14 @@ var Popup = React.createClass({
         <p>{this.state.desc}</p>
         <div className='popup-inp'>{_input}</div>
         <div className='popup-btns clearfix'>
-          <a className='popup-btn-yes' onClick={this.onConfirm}>OK</a>
-          <a className='popup-btn-no' onClick={this.onCancel}>Cancel</a>
+          <a className='popup-btn-yes' onClick={this.onConfirm.bind(this)}>OK</a>
+          <a className='popup-btn-no' onClick={this.onCancel.bind(this)}>Cancel</a>
         </div>
       </div>
     );
   }
 
-});
+};
 
 var cateList = [
   {
