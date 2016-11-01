@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-10-31 18:25
+  Latest modified: 2016-11-01 14:37
 */
 
 /* Global */
@@ -22,6 +22,10 @@
   -o-transition: background-size .5s ease;
   transition: background-size .5s ease;
   -webkit-overflow-scrolling: touch;
+}
+/* Customize public footer's earth icon */
+.bodyPT .lang-current {
+  background-position:0 -98px!important;
 }
 #pt-wrap{
   height:100%;

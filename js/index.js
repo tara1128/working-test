@@ -1,7 +1,7 @@
 /*
   index.js
   Trying ES6
-  Latest modified: 2016-10-31 19:43
+  Latest modified: 2016-11-01 13:40
 */
 
 class IndexLogin extends React.Component {
@@ -89,7 +89,7 @@ class IndexLogin extends React.Component {
       <div className='form-field'>
         <h2 className='form-title'>Sign in to get started!</h2>
         <div className='inputs-wrap'>
-          <input type='text' onChange={this.onChange.bind(this)} onFocus={this.removeErrorMsg.bind(this)} autoFocus value={this.state.username} placeholder='Your username here please' />
+          <input type='text' onChange={e=>this.onChange(e)} onFocus={e=>this.removeErrorMsg(e)} autoFocus value={this.state.username} placeholder='Your username here please' />
           <input type='password' onChange={this.onChange.bind(this)} onFocus={this.removeErrorMsg.bind(this)} value={this.state.password} placeholder='Password here' />
         </div>
         <div className='btns-wrap'>
