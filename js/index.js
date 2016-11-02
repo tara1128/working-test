@@ -1,7 +1,7 @@
 /*
   index.js
   Trying ES6
-  Latest modified: 2016-11-01 13:40
+  Latest modified: 2016-11-01 23:24
 */
 
 class IndexLogin extends React.Component {
@@ -261,6 +261,16 @@ var cateList = [
     projectName: 'Piano Tiles 2',
     linkTo: 'piano-tiles/',
     latestModified: '2016-10-28 15:13'
+  },
+  {
+    projectName: 'Test i18n en-us',
+    linkTo: 'test-i18n/dist/en-us/',
+    latestModified: '2016-11-01 23:24'
+  },
+  {
+    projectName: 'Test i18n zh-cn',
+    linkTo: 'test-i18n/dist/zh-cn/',
+    latestModified: '2016-11-01 23:24'
   }
 ];
 
