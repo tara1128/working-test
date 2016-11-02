@@ -4,23 +4,25 @@
 */
 
 var path = require('path');
-var absPathArray = path.resolve().split('/');
+var findRoot = require('find-root');
+var devRootPath = findRoot();
+var projectRootName = path.basename(path.resolve());
 var HtmlWebpackPlugin = require('html-webpack-plugin'); 
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-/* Default project name: */
-var projectName = 'home';
-/* Get the name of each project, also the name of its directory */
-if( absPathArray ){
-  projectName = absPathArray[absPathArray.length - 1];
-}
+var distPath = devRootPath + '/dist/'; /* Identical to the root of www.cmcm.com/ */
+var cssPath = distPath + '/css/';
+var jsPath = distPath + '/js/';
+var imgPath = distPath + '/images/';
+
+// var sourceJson
 
 /* Get all languages this project supported: */
 var langs = require('../../i18n/cms/langs.json').langs;
 
 /* Variables for final index page: */
 var htmlDefaultOptions = {
-  template: projectName + '.hbs',
+  template: projectRootName + '.hbs',
   inject: 'body'
 };
 
@@ -28,21 +30,21 @@ var htmlDefaultOptions = {
 var pluginsArray = [];
 langs.map(function( lang, index ){
   var _mergedOptions = {};
-  var _htmlOptions = require('../../i18n/' + projectName + '/' + lang + '.json' );
-  var _fileNameObj = {filename: '../../../dist/' + lang + '/' + projectName + '/index.html'};
+  var _htmlOptions = require('../../i18n/' + projectRootName + '/' + lang + '.json' );
+  var _fileNameObj = {filename: '../../../dist/' + lang + '/' + projectRootName + '/index.html'};
   Object.assign(_mergedOptions, htmlDefaultOptions, _fileNameObj, _htmlOptions);
   var _htmlWebpackPlugin = new HtmlWebpackPlugin(_mergedOptions);
   pluginsArray.push( _htmlWebpackPlugin );
 });
-pluginsArray.push(new ExtractTextPlugin( projectName + '.min.css'));
+pluginsArray.push(new ExtractTextPlugin( projectRootName + '.min.css'));
 
 /* Here comes the module to export! */
 module.exports = {
   entry: './index.js',
   output: {
-    path: path.resolve(__dirname, '../../../dist/assets/' + projectName + '/' ),
+    path: path.resolve(__dirname, '../../../dist/assets/' + projectRootName + '/' ),
     publicPath: '',
-    filename: './assets/' + projectName + '.min.js'
+    filename: './assets/' + projectRootName + '.min.js'
   },
   module: {
     loaders: [
