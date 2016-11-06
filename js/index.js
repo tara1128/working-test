@@ -1,7 +1,7 @@
 /*
   index.js
   Trying ES6
-  Latest modified: 2016-11-01 23:24
+  Latest modified: 2016-11-04 09:55
 */
 
 class IndexLogin extends React.Component {
@@ -263,14 +263,14 @@ var cateList = [
     latestModified: '2016-10-28 15:13'
   },
   {
-    projectName: 'Test i18n en-us',
-    linkTo: 'test-i18n/dist/en-us/',
-    latestModified: '2016-11-01 23:24'
+    projectName: 'Test i18n en-us/cms',
+    linkTo: 'i18n/www.cmcm.com/en-us/cms',
+    latestModified: '2016-11-04 09:55'
   },
   {
-    projectName: 'Test i18n zh-cn',
-    linkTo: 'test-i18n/dist/zh-cn/',
-    latestModified: '2016-11-01 23:24'
+    projectName: 'Test i18n fr-fr/cms,
+    linkTo: 'i18n/www.cmcm.com/fr-fr/cms',
+    latestModified: '2016-11-04 09:55'
   }
 ];
 
