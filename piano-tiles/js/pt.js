@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-11-11 18:41
+  Latest modified: 2016-11-11 19:35
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -861,7 +861,7 @@
     if( IsAndroid ) {
       location.href = pageObj.downloadLinkToGoogle;
     }else if( IsIOS ){
-      location.href = downloadLinkToApple;
+      location.href = pageObj.downloadLinkToApple;
     }else{
       $('body').append(popHTML);
       var popMask = $('#popMask');
