@@ -1,7 +1,6 @@
 /*
-  index.js
-  Trying ES6
-  Latest modified: 2016-11-04 09:55
+  index.js, trying ES6
+  Latest modified: 2016-11-09 14:51
 */
 
 class IndexLogin extends React.Component {
@@ -265,12 +264,12 @@ var cateList = [
   {
     projectName: 'Test i18n en-us/cms',
     linkTo: 'i18n/www.cmcm.com/en-us/cms',
-    latestModified: '2016-11-04 09:55'
+    latestModified: '2016-11-06 00:55'
   },
   {
-    projectName: 'Test i18n fr-fr/cms,
-    linkTo: 'i18n/www.cmcm.com/fr-fr/cms',
-    latestModified: '2016-11-04 09:55'
+    projectName: 'React Isomorphic',
+    linkTo: 'try-isomorphic/',
+    latestModified: '2016-11-09 14:53'
   }
 ];
 

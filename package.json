@@ -46,5 +46,9 @@
     "grunt-envify": "~0.1.0",
     "grunt-env": ">=0.4.1",
     "jsx-loader": "^0.10.2"
+  },
+  "devDependencies": {
+    "node-jsx": "^0.13.3",
+    "react": "^15.3.2"
   }
 }

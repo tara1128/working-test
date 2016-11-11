@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-11-01 14:37
+  Latest modified: 2016-11-11 18:41
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -476,6 +476,17 @@
       }
       $('#ptRightDown').css({opacity: 1, top: rdTop});
     },
+    
+    formatURL: function() {
+      var arr = window.location.search.substring(1).split("&");
+      var res = {};
+      $.each(arr, function( index, value ){
+        var xObj = value.split("=");
+        res[ xObj[0] ] = xObj[1];
+      });
+      return res;
+    },
+
 		initDom: function(obj) {
 			var self = this;
 			var curWinHeight = $(win).height();
@@ -505,6 +516,18 @@
 			 	},obj.animateTime);
 			}
 			obj.wrapDiv.css({width:'100%',position:'absolute',height:self.allHeight+'px',top:'-'+initTop+'px',overflow:'overflow'});
+
+      /* 判断URL参数，使用不同下载链接，f=roman */
+      var url_param = self.formatURL();
+      if( url_param && url_param['f'] == 'roman' ){
+        obj.downloadLinkToGoogle = 'https://app.appsflyer.com/com.cmplay.tiles2?pid=roman&c=roman';
+        obj.downloadLinkToApple = 'https://app.appsflyer.com/id1027688889?pid=roman&c=roman';
+        $('.pt-rd-android').attr('href', 'https://app.appsflyer.com/com.cmplay.tiles2?pid=roman&c=roman');
+        $('.pt-rd-ios').attr('href', 'https://app.appsflyer.com/id1027688889?pid=roman&c=roman');
+      }else{
+        obj.downloadLinkToGoogle = 'https://play.google.com/store/apps/details?id=com.cmplay.tiles2';
+        obj.downloadLinkToApple = 'https://itunes.apple.com/us/app/piano-tiles-2-dont-tap-white/id1027688889?mt=8';
+      }
 		},
     adjustRightBtns: function(obj) {
       if( IsAndroid || IsIOS || IsWindowsPhone ){
@@ -819,15 +842,15 @@
     cdObjC: $('.pt-music-objc'),
 		curPagesClassName: 'cur-pages',
     publicHeader: $('#header'),
-    publicFooter: $('#footer-wrap')
+    publicFooter: $('#footer-wrap'),
+    downloadLinkToGoogle: 'https://play.google.com/store/apps/details?id=com.cmplay.tiles2',
+    downloadLinkToApple: 'https://itunes.apple.com/us/app/piano-tiles-2-dont-tap-white/id1027688889?mt=8'
 	}
 	CMmousewheel.init(pageObj);
   // Click to pop dialog for downloading:
-  var downloadLinkToGoogle = 'https://play.google.com/store/apps/details?id=com.cmplay.tiles2';
-  var downloadLinkToApple = 'https://itunes.apple.com/us/app/piano-tiles-2-dont-tap-white/id1027688889?mt=8';
 	var dialogHtml = '<span class="pt-down-qd clearfix">\
-                      <a class="pt-open-gp" href="'+ downloadLinkToGoogle +'" target="_blank"></a>\
-                      <a class="pt-open-as" href="'+ downloadLinkToApple +'" target="_blank"></a>\
+                      <a class="pt-open-gp" href="'+ pageObj.downloadLinkToGoogle +'" target="_blank"></a>\
+                      <a class="pt-open-as" href="'+ pageObj.downloadLinkToApple +'" target="_blank"></a>\
                     </span>';
 	var popHTML = '<div class="pt-pop-mask popElements" id="popMask"></div>\
                  <div class="pt-pop-main popElements clearfix" id="popMain">\
@@ -836,7 +859,7 @@
                  </div>';
 	$('#ptDownLoadBtna, #ptDownLoadBtnb').on('click',function(){
     if( IsAndroid ) {
-      location.href = downloadLinkToGoogle;
+      location.href = pageObj.downloadLinkToGoogle;
     }else if( IsIOS ){
       location.href = downloadLinkToApple;
     }else{
