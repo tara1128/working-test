@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%= title %></title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/build/all.min.css" type="text/css">
+  </head>
+  <body>
+
+    <h1><%= desc %></h1>
+    <section role="main" class="react-container">
+      <div><%- app %></div>
+    </section>
+
+    <script>
+      try {
+        window.__REDUX_STATE__ = <%- JSON.stringify(reduxData) %>;
+      } catch (e) {
+        console.warn('Error in getting server redux data');
+      }
+    </script>
+    <script src="/build/combo.js"></script>
+    <script src="/build/main.js"></script>
+  </body>
+</html>
