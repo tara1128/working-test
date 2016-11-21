@@ -879,12 +879,12 @@ body {
   background:rgba(22,81,147, .8);
 }
 
-
-
-
-
-
-
+/* Not display video of whatscall on iPhone: */
+@media (max-width:768px) {
+  .whatscall-video, .whatscall-vdmask {
+    display:none!important;
+  }
+}
 
 
 #topnotice .fullSlider .main {

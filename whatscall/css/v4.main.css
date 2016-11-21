@@ -503,7 +503,8 @@ body {
 	background: linear-gradient(to bottom, #3798bc 0%, #3798bc 15%, #2a6fab 76%, #2a5993 100%)
 }
 .fs-ad {
-	background: url(../images/front/ad-bg.jpg) no-repeat center center #fe6813
+	background: url(../images/front/bg-front-ad-platform.jpg) no-repeat center center;
+  background-size:cover!important;
 }
 .fs-cml {
 	background: no-repeat center center #271e37;
@@ -674,12 +675,22 @@ body {
 	left: 50%
 }
 .fs-ad .pic {
-	width: 280px;
-	margin: -150px 0 0 -340px
+	width: 540px;
+	margin: -180px 0 0 -270px;
 }
 .fs-ad .title {
-	width: 400px;
-	margin: -100px 0 0 -10px
+	width: 540px;
+	margin: 0px 0 0 -270px;
+}
+@media screen and (max-width:540px) {
+  .fs-ad .pic {
+    width: 80%;
+    margin: -180px 0 0 -40%;
+  }
+  .fs-ad .title {
+    width: 80%;
+    margin: -70px 0 0 -40%;
+  }
 }
 .fs-cml .cml-app-bg {
 	top: 50%;
@@ -868,12 +879,12 @@ body {
   background:rgba(22,81,147, .8);
 }
 
-
-
-
-
-
-
+/* Not display video of whatscall on iPhone: */
+@media (max-width:768px) {
+  .whatscall-video, .whatscall-vdmask {
+    display:none!important;
+  }
+}
 
 
 #topnotice .fullSlider .main {
@@ -3995,6 +4006,7 @@ body {
 	.fs-cmlk .description {
 		font-size: 26px
 	}
+  /*
 	.fs-ad .pic {
 		width: auto;
 		margin: -225px 0 0 -440px
@@ -4003,6 +4015,7 @@ body {
 		width: auto;
 		margin: -170px 0 0 -30px
 	}
+  */
 	.fs-cml .pic {
 		margin: 100px auto 50px
 	}
@@ -4536,6 +4549,7 @@ a.btn_green:visited {
 		-o-background-size: 1000px auto;
 		background-size: 1000px auto
 	}
+  /*
 	.fs-ad .pic {
 		width: 200px;
 		margin: -140px 0 0 -250px
@@ -4544,6 +4558,7 @@ a.btn_green:visited {
 		width: 300px;
 		margin: -100px 0 0 -40px
 	}
+  */
 	.fs-cml .cml-app-bg {
 		display: none
 	}
@@ -5177,18 +5192,20 @@ a.btn_green:visited {
 		-o-background-size: 600px auto;
 		background-size: 600px auto
 	}
+  /*
 	.fs-ad img {
 		position: static;
 		display: block
 	}
 	.fs-ad .pic {
 		width: 140px;
-		margin: 0 auto
+		margin: 0 auto;
 	}
 	.fs-ad .title {
 		width: 250px;
 		margin: 20px auto 0
 	}
+  */
 	.fs-cml .pic {
 		width: 100px;
 		margin: 50px auto 20px
@@ -5869,12 +5886,14 @@ a.btn_green:visited {
 		width: 200px;
 		margin-left: -100px
 	}
+  /*
 	.fs-ad .pic {
-		display: none
+		display: none;
 	}
 	.fs-ad .title {
-		margin-top: 60px
+		margin-top: 60px;
 	}
+  */
 }
 @media (max-width:540px) and (min-height:450px) {
 	.mobileModel .cml-page .content {
@@ -5922,12 +5941,14 @@ a.btn_green:visited {
 	.fs-ad .main {
 		margin-top: -170px !important
 	}
+  /*
 	.fs-ad .pic {
 		width: 160px
 	}
 	.fs-ad .title {
 		width: 270px
 	}
+  */
 }
 @media (max-width:540px) {
 	.news-banner em {
