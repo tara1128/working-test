@@ -1,5 +1,5 @@
 /*
-  common/components/bigButton.jsx
+  common/components/bigButton.js
 */
 
 import React, { Component, PropTypes } from 'react'

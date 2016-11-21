@@ -1,9 +1,9 @@
 /*
   Configuration of building with webpack
-  Latest modified 2016-11-16 16:15
+  Latest modified 2016-11-20 18:46
 */
 
-console.log('The \"webpack.build.js\" is NOW working ...');
+console.log('The \"webpack.build.js\" is now working ... ...');
 var fs = require('fs')
 var path = require('path')
 var webpack = require('webpack')
@@ -26,10 +26,15 @@ var includes = [
 module.exports = [{
   name: 'Client side render',
   devtool: 'cheap-source-map',
-  entry: ['./client/index.js'],
+  entry: [
+    // 'eventsource-polyfill', /* For IE */
+    // 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+    './client/index.js'
+  ],
   output: {
-    path: 'public/build',
+    path: path.join(__dirname, '/public/build'),
     filename: '[name].js',
+    chunkFilename: '[id].chunk.js',
     publicPath: '/build/'
   },
   module: {
@@ -53,7 +58,7 @@ module.exports = [{
   },
   postcss: [ rucksack(), autoprefixer() ],
   resolve: {
-    modulesDirectories: ['node_modules', path.join(__dirname, '/node_modules')],
+    modulesDirectories: ['web_modules', 'node_modules', path.join(__dirname, '/node_modules')],
     extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx']
   },
   resolveLoader: {
@@ -62,11 +67,14 @@ module.exports = [{
   plugins: [
     extractStyle,
     new webpack.optimize.CommonsChunkPlugin('common', 'combo.js'),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development'),
-      __SERVER__: false
-    })
+    // new webpack.optimize.DedupePlugin(),
+    // new webpack.DefinePlugin({
+      // 'process.env.NODE_ENV': JSON.stringify('development'),
+      // __SERVER__: false
+    // }),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
   ]
 }, {
   name: 'Server side render',

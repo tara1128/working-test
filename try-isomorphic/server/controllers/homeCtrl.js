@@ -9,7 +9,9 @@ import { Provider } from 'react-redux'
 import config from '../../common/config'
 import BigButton from '../../common/components/bigButton'
 
-const btntext = 'Add a Post';
+console.log('GET the controller of HomePage render !!');
+
+const btntext = 'BtnInServer';
 
 export default async (ctx) => {
   return ctx.render('index', {

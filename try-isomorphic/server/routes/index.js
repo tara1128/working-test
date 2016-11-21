@@ -13,20 +13,19 @@ const router = new Router()
 router.prefix('/api')
 
 router.get('/home', homeState)
-router.get('/detail', detailState)
 
 export default router
 */
 
-/* react-router: */
+/* react-router:
 import React from 'react'
 import { RouterContext } from 'react-router'
 import { renderToString } from 'react-dom/server'
 import { Provider } from 'react-redux'
+*/
+import homeRenderCtrl from '../controllers/homeCtrl'
 
 export default async (ctx, next) => {
-  ctx.render('index', {
-    title: 'Here is the title from server!',
-    app: renderToString(<div>Hello Server</div>)
-  })
+  console.log('In router! I am about to render! ==========> ', `${ctx.method} - ${ctx.url} - ${ctx.type}`);
+  await homeRenderCtrl(ctx)
 }

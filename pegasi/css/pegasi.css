@@ -1,7 +1,7 @@
 /*
   CSS of pegasi
   Author: Alex
-  Date: 2016-10-12 16:54
+  Date: 2016-11-16 18:54
 */
 
 /* Reset */
@@ -500,7 +500,7 @@ table { border-collapse:collapse;border-spacing:0; }
   height:84px;
   overflow:hidden;
   text-indent:-9999px;
-  background:url(../../images/peg-partner-icons-grey.png) no-repeat;
+  background:url(../../images/peg-partner-icons-color.png) no-repeat;
   -webkit-transform: scale(0.95, 0.95); 
   -moz-transform: scale(0.95, 0.95); 
   -ms-transform: scale(0.95, 0.95); 
