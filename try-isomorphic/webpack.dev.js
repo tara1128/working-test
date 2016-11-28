@@ -1,15 +1,16 @@
 /*
   Configuration of DEV building with webpack
-  Latest modified 2016-11-20 18:46
+  Latest modified 2016-11-21 19:21
 */
 
-console.log('The \"webpack.dev.js\" is now working, just for development environment ... ...');
+console.log('The \"webpack.dev.js\" is now working, for DEV environment ... ...');
+
 var fs = require('fs')
 var path = require('path')
 var webpack = require('webpack')
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
-var autoprefixer = require('autoprefixer')
 var rucksack = require('rucksack-css')
+var autoprefixer = require('autoprefixer')
 
 var includes = [
   path.resolve(__dirname, 'client'),
@@ -18,11 +19,11 @@ var includes = [
 ]
 
 module.exports = {
-  name: 'Bundle both sides for dev',
-  devtool: 'cheap-source-map',
+  devtool: '#source-map',
   entry: [
     'eventsource-polyfill', /* For IE */
-    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true&quiet=false',
+    'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr',
+    // 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
     './client/index.js'
   ],
   output: {
@@ -39,14 +40,14 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         query: {
-          presets: ['react-hmre'],
-          plugins: [
-            ['inline-replace-variables', { '__SERVER__': false }]
-          ]
+          presets: ['react-hmre']
+          // plugins: [
+            // ['inline-replace-variables', { '__SERVER__': false }]
+          // ]
         }
       },
-      { test: /\.css$/, include: includes, loader: 'style!css!postcss' },
-      { test: /\.less$/, include: includes, loader: 'style!css!less!postcss' },
+      { test: /\.css$/, include: includes, loader:'style!css!less!postcss'},
+      { test: /\.less$/, include: includes, loader:'style!css!postcss' },
       { test: /\.(png|jpg|jpeg|gif|webp)$/i, loader: 'url?limit=10000' },
       { test: /\.woff2?$/, loader: 'url?limit=10000&minetype=application/font-woff' },
       { test: /\.ttf$/, loader: 'url?limit=10000&minetype=application/octet-stream' },
@@ -56,7 +57,12 @@ module.exports = {
       { test: /\.html?$/, loader: 'file?name=[name].[ext]' }
     ]
   },
-  postcss: [ rucksack(), autoprefixer() ],
+  postcss: [
+    rucksack(),
+    autoprefixer({
+      browsers: ['last 2 versions', 'Firefox ESR', '> 1%', 'ie >= 8']  
+    })
+  ],
   resolve: {
     modulesDirectories: ['web_modules', 'node_modules', path.join(__dirname, '/node_modules')],
     extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx']
@@ -66,11 +72,6 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin('common', 'combo.js'),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development'),
-      __SERVER__: false
-    }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()

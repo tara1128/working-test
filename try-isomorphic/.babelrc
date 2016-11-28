@@ -1,12 +1,18 @@
 {
-  "presets": ["es2015", "stage-0", "react"],
-  "plugins": ["add-module-exports", "transform-runtime", "antd"],
+  "presets": ["react", "es2015", "stage-0"],
+  "plugins": [
+    ["transform-class-properties"],
+    ["transform-es2015-classes", { "loose": true }],
+    ["add-module-exports"],
+    ["transform-runtime"],
+    ["antd"]
+  ],
   "env": {
     "development": {
-      "presets": ["react-hmre"]  
     },
     "production": {
-      "optional": ["optimisation", "minification"]
+      "optional": ["optimisation", "minification"],
+      "presets": ["react-hmre"]
     }
   }
 }

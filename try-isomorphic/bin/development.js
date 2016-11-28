@@ -1,8 +1,6 @@
 #!/usr/bin/env node
-console.log('This is Development Environment! Program Started with webpack.dev.js ... ... ');
 
-/* For hot middleware using, this file only executed in development environment */
-/* Since this file would be executed before webpack bundle, no ES6 here unless with babel. */
+console.log('This is Development Environment! Program Started with webpack.dev.js ... ... ');
 
 require('babel-polyfill')
 require('babel-core/register')({
@@ -34,27 +32,13 @@ var KWM = require('koa-webpack-middleware');
 var devMiddleware = KWM.devMiddleware;
 var hotMiddleware = KWM.hotMiddleware;
 var webpackConfig = require('../webpack.dev');
-var compiler = webpack(webpackConfig, function(){
-  console.log('This is a CALLBACK of webpack configuration!!!!!!!!');  
-  app.use(router);
-});
-app.env = 'development';
+var compiler = webpack(webpackConfig);
+
 app.use(devMiddleware(compiler, {
   noInfo: true,
-  watchOptions: {
-    aggregateTimeout: 300,
-    poll: true
-  },
-  publicPath: '/build/',
-  stats: {
-    colors: true
-  }
+  publicPath: webpackConfig.output.publicPath
 }));
-app.use(hotMiddleware(compiler, {
-  log: console.log,
-  path: '/__webpack_hmr',
-  heartbeat: 10 * 1000
-}));
+app.use(hotMiddleware(compiler));
 
 /* Using middlewares */
 app.use(convert(Bodyparser()));
@@ -70,7 +54,7 @@ app.use(convert(
 app.use(views(templatePath, { extension: 'ejs' }));
 
 /* Koa serve, go to routes to dispatch */
-// app.use(router);
+app.use(router);
 
 /* Error logger */
 koaOnError(app, {template: templatePath + '/500.ejs' })
@@ -94,4 +78,3 @@ watcher.on('ready', function () {
 server.listen(config.port, function () {
   console.log('In Dev Env!!! App is now listening port', config.port, ' ! ... ... '); 
 });
-

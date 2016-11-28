@@ -2,17 +2,22 @@
   client/index.js
 */
 
-console.log('client/index.js runs ... ... ');
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import '../common/styles/reset.css'
-import '../common/styles/main.less'
-import BigButton from '../common/components/bigButton'
-
-const btntext = 'Button from cli';
+// import Container from '../common/components/Container'
+import App from '../common/components/App'
+import store from '../common/store'
+/*
+const btntext = 'Save This Idea';
+const placeholderTxt = 'I got one idea here ... ';
+*/
 ReactDOM.render(
-  <BigButton btnText={btntext}/>
-  ,document.querySelector('.react-container')
-)
+  // <Container btnText={btntext} placeholderText={placeholderTxt} list={store.getState().displayList} />
+  // ,document.querySelector('.react-container')
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('RootElement')
+);
+

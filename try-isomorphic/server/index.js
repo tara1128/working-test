@@ -17,7 +17,6 @@ import config from '../common/config'
 import homeRenderCtrl from './controllers/homeCtrl'
 const templatePath = path.join(__dirname, './template')
 const app = new Koa()
-app.env = 'production'
 
 /* Using middlewares */
 app.use(convert(Bodyparser()))

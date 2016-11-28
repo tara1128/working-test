@@ -1,9 +1,10 @@
 /*
   Configuration of building with webpack
-  Latest modified 2016-11-20 18:46
+  Latest modified 2016-11-23 10:59
 */
 
-console.log('The \"webpack.build.js\" is now working ... ...');
+console.log('The \"webpack.build.js\" is working, for production environment ... ...');
+
 var fs = require('fs')
 var path = require('path')
 var webpack = require('webpack')
@@ -26,15 +27,10 @@ var includes = [
 module.exports = [{
   name: 'Client side render',
   devtool: 'cheap-source-map',
-  entry: [
-    // 'eventsource-polyfill', /* For IE */
-    // 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
-    './client/index.js'
-  ],
+  entry: './client/index.js',
   output: {
     path: path.join(__dirname, '/public/build'),
     filename: '[name].js',
-    chunkFilename: '[id].chunk.js',
     publicPath: '/build/'
   },
   module: {
@@ -67,14 +63,11 @@ module.exports = [{
   plugins: [
     extractStyle,
     new webpack.optimize.CommonsChunkPlugin('common', 'combo.js'),
-    // new webpack.optimize.DedupePlugin(),
-    // new webpack.DefinePlugin({
-      // 'process.env.NODE_ENV': JSON.stringify('development'),
-      // __SERVER__: false
-    // }),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.optimize.DedupePlugin(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+      __SERVER__: false
+    })
   ]
 }, {
   name: 'Server side render',
@@ -132,11 +125,13 @@ module.exports = [{
   },
   plugins: [
     new webpack.optimize.DedupePlugin(),
+    /*
     new webpack.optimize.UglifyJsPlugin({
       compress: {warnings: false}
     }),
+    */
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development'),
+      'process.env.NODE_ENV': JSON.stringify('production'),
       __SERVER__: true
     })
   ]
