@@ -309,8 +309,8 @@ var startTime = new Date().getTime();
     <div class="pt-right-down" id="ptRightDown">
       <span class="pt-rd-img"><img src="images/pt/pt-rightdown-logo.png" /></span>
       <p>
-        <a class="pt-rd-ios" href="https://itunes.apple.com/us/app/piano-tiles-2-dont-tap-white/id1027688889?mt=8" target="_blank"></a>
-        <a class="pt-rd-android" href="https://play.google.com/store/apps/details?id=com.cmplay.tiles2" target="_blank"></a>
+        <a class="pt-rd-ios" href="https://itunes.apple.com/us/app/piano-tiles-2-dont-tap-white/id1027688889?mt=8" target="_blank" onclick="ga('send','event','piano-tiles','click','download-ios',1)"></a>
+        <a class="pt-rd-android" href="https://play.google.com/store/apps/details?id=com.cmplay.tiles2" target="_blank" onclick="ga('send','event','piano-tiles','click','download-android',1)"></a>
       </p>
     </div>
 
@@ -352,7 +352,7 @@ var startTime = new Date().getTime();
 <script type="text/javascript" src="js/common.min.js"></script>
 <script type="text/javascript" src="js/lang/lang-change.js"></script>
 <script type="text/javascript" src="js/easing-jq.js"></script>
-<script type="text/javascript" src="js/pt.js"></script>
-<!-- script type="text/javascript" src="build/piano-tiles2.min.js"></script -->
+<!-- script type="text/javascript" src="js/pt.js"></script -->
+<script type="text/javascript" src="build/piano-tiles2.min.js"></script>
 </body>
 </html>

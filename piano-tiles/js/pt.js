@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-11-11 19:35
+  Latest modified: 2016-11-30 16:05
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -848,9 +848,11 @@
 	}
 	CMmousewheel.init(pageObj);
   // Click to pop dialog for downloading:
+  var gaForAndroid = 'ga(\'send\',\'event\',\'piano-tiles\',\'click\',\'download-android\',1)';
+  var gaForIOS = 'ga(\'send\',\'event\',\'piano-tiles\',\'click\',\'download-ios\',1)';
 	var dialogHtml = '<span class="pt-down-qd clearfix">\
-                      <a class="pt-open-gp" href="'+ pageObj.downloadLinkToGoogle +'" target="_blank"></a>\
-                      <a class="pt-open-as" href="'+ pageObj.downloadLinkToApple +'" target="_blank"></a>\
+                      <a class="pt-open-gp" href="'+ pageObj.downloadLinkToGoogle +'" target="_blank" onClick="'+ gaForAndroid +'"></a>\
+                      <a class="pt-open-as" href="'+ pageObj.downloadLinkToApple +'" target="_blank" onClick="'+ gaForIOS +'"></a>\
                     </span>';
 	var popHTML = '<div class="pt-pop-mask popElements" id="popMask"></div>\
                  <div class="pt-pop-main popElements clearfix" id="popMain">\
@@ -859,8 +861,10 @@
                  </div>';
 	$('#ptDownLoadBtna, #ptDownLoadBtnb').on('click',function(){
     if( IsAndroid ) {
+      ga('send','event','piano-tiles','click','download-android',1);
       location.href = pageObj.downloadLinkToGoogle;
     }else if( IsIOS ){
+      ga('send','event','piano-tiles','click','download-ios',1);
       location.href = pageObj.downloadLinkToApple;
     }else{
       $('body').append(popHTML);
