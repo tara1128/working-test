@@ -9,18 +9,14 @@ import { displayAll, addItem, delItem, changeAuthor } from '../actions'
 import Container from './Container'
 import store from '../store'
 
-const btntext = 'Save Idea';
-const placeholderTxt = 'I got one excellent idea here !';
+const buttonText = 'Save Idea';
+const plhText = 'I got one excellent idea here !';
 
-const App = () => {
-  <Container btnText={btntext} placeholderText={placeholderTxt} list={store.getState().displayList} />
-}
-
-const mapStateToProps = (state) => {
+let mapStateToProps = (state) => {
   return {
-    btnText:
-    placeholderText:
-    list:
+    btnText: buttonText,
+    placeholderText: plhText,
+    list: store.getState().modifiedList
   }
 }
 

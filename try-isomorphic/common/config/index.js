@@ -12,6 +12,11 @@ export default {
   title: 'Ideas Anytime',
   description: 'Record Your Excellent Ideas Anytime You Got One',
   db: {
+    dialect: 'sqlite',
+    username: 'admin',
+    password: 'admin',
+    database: 'mydb',
+    storage: path.join(rootPath, 'db.sqlite')
   }
 }
 

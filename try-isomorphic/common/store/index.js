@@ -20,22 +20,12 @@ let store = createStore( rootReducer )
 
 /* Note that subscribe() returns a function for unregistering the listener */
 let unsubscribe = store.subscribe(() => {
-  console.log( 'Subscribe store !', store.getState() );  
+  // console.log( 'Subscribe store !', store.getState() );  
 })
 // store.subscribe()
 
 /* After creating the store, it is time to dispatch actions: */
-/*
-store.dispatch(addItem({
-  id: 1048,
-  content: 'A brand new content here, Friday today!',
-  date: 1480039458951,
-  sta: 1
-}))
-store.dispatch(delItem('1002'))
-store.dispatch(changeAuthor('Wangshaojing'))
-store.dispatch(displayAll())
-*/
+
 /* Everytime you dispatch an action, the reducer will be called ! */
 
 /* If you stop listening to state updates: */

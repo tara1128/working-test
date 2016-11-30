@@ -31,7 +31,8 @@ class InputBox extends React.Component {
       sta: 1
     };
     store.dispatch(addItem( newItem ))
-    store.dispatch(displayAll( store.getState().modifyDataArray ))
+    store.dispatch(displayAll( store.getState().modifiedList ))
+    window.localStorage.setItem('ideasAnytime_LocalList', store.getState().modifiedList );
   }
 
   render() {

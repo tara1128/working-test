@@ -20,8 +20,8 @@ class List extends React.Component {
         Keys should be given to the elements inside the array to give the elements a stable identity.
         But when extracting one element from the array, no need to specify the key.
     **/
-    const list = this.props.dataList;
-    const listItems = list.map( (item, index) =>
+    let list = this.props.dataList;
+    let listItems = list.map( (item, index) =>
       // <li key={index.toString()}> // Only using "index" if items have no stable IDs
       <li className="list-item clearfix" key={item.id}> 
         <span className="item-id">{item.id}. </span>
