@@ -12,7 +12,7 @@ router.post('/api/add', updateListCtrl)
 router.post('/api/del', updateListCtrl)
 
 export default async (ctx, next) => {
-  console.log('In router: ctx.path =', ctx.path, ' @@ ', `${ctx.method} - ${ctx.url} - ${ctx.type}`);
+  // console.log('In router: ctx.path =', ctx.path, ' @@ ', `${ctx.method} - ${ctx.url} - ${ctx.type}`);
   if (ctx.path.match(/^\/api/)) {
     await updateListCtrl(ctx)
   } else {

@@ -11,6 +11,8 @@ export default {
   port: 3000,
   title: 'Ideas Anytime',
   description: 'Record Your Excellent Ideas Anytime You Got One',
+  btntext: 'Add An Idea',
+  placeholderTxt: 'Please enter something here',
   firstItemID: 100,
   db: {
     dialect: 'sqlite',

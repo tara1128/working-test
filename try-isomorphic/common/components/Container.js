@@ -29,30 +29,31 @@ class Container extends React.Component {
         which should be operated in the server side.
         So we need an API here, for this request to server.
       **/
-      this.makeRequestToServer();
+      this.makeRequestToServer('/api/add', newItem);
     } else {
       return false;
     }
   }
 
-  makeRequestToServer() {
-    let req = null;
+  makeRequestToServer(url, item) {
+    let http = null;
     if (window.XMLHttpRequest) {
-      req = new XMLHttpRequest();
+      http = new XMLHttpRequest();
     } else if (window.ActiveXObject) {
-      req = new ActiveXObject('Microsoft.XMLHTTP');
+      http = new ActiveXObject('Microsoft.XMLHTTP');
     } else {
-      console.log('Failed in inserting data into database!');
+      console.log('Failed in creating http request!');
     }
-    req.onreadystatechange = function(){
-      if (req.readyState == 4 && req.status == 200) {
-        console.log( 200, req, req.responseText );
+    let params = JSON.stringify(item);
+    http.onreadystatechange = function(){
+      if (http.readyState == 4 && http.status == 200) {
+        console.log( 200, http, http.responseText );
       } else {
-        console.log('Not 200: ', req);
+        console.log( 'Not 200', http, http.responseText );
       }
     };
-    req.open('POST', '/api/add');
-    req.send();
+    http.open('POST', url, true);
+    http.send(params);
   }
 
   render() {

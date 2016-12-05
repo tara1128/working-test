@@ -12,9 +12,6 @@ import store from '../../common/store'
 import { displayAll, addItem, delItem, changeAuthor } from '../../common/actions'
 import { Users, List } from '../db'
 
-const btntext = 'Add An Idea';
-const placeholderTxt = 'Please Enter Something Here ... ';
-
 export default async (ctx) => {
 
   let initList = [];
@@ -33,7 +30,7 @@ export default async (ctx) => {
     title: config.title,
     desc: config.description,
     app: renderToString(
-      <Container btnText={btntext} placeholderText={placeholderTxt} list={initList} />
+      <Container btnText={config.btntext} placeholderText={config.placeholderTxt} list={initList} />
     ),
     reduxData: initList 
   })
