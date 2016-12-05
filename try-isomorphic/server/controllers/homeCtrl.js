@@ -19,7 +19,7 @@ export default async (ctx) => {
 
   let initList = [];
 
-  List.find({where: {id: 1001}}).then(function( data ){
+  List.find({where: {id: config.firstItemID}}).then(function( data ){
     if ( data ) {
       initList.push( data.dataValues );
       console.log('DB has data for server controllers to render !', data.dataValues, initList );

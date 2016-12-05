@@ -11,15 +11,56 @@ import List from './List'
 class Container extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      list: this.props.list  
+    }
+  }
+
+  handleListUpdate(newItem) {
+    let tmpList = [];
+    if ( this.state.list.length ) {
+      this.state.list.forEach((i) => {
+        tmpList.push(i);
+      });
+      tmpList.unshift(newItem);
+      this.setState({ list: tmpList })
+      /**
+        Then we need to insert new item into database,
+        which should be operated in the server side.
+        So we need an API here, for this request to server.
+      **/
+      this.makeRequestToServer();
+    } else {
+      return false;
+    }
+  }
+
+  makeRequestToServer() {
+    let req = null;
+    if (window.XMLHttpRequest) {
+      req = new XMLHttpRequest();
+    } else if (window.ActiveXObject) {
+      req = new ActiveXObject('Microsoft.XMLHTTP');
+    } else {
+      console.log('Failed in inserting data into database!');
+    }
+    req.onreadystatechange = function(){
+      if (req.readyState == 4 && req.status == 200) {
+        console.log( 200, req, req.responseText );
+      } else {
+        console.log('Not 200: ', req);
+      }
+    };
+    req.open('POST', '/api/add');
+    req.send();
   }
 
   render() {
     return (
       <div className="container">
         <h3>Input your ideas right now, make life better!</h3>
-        <Input placeholderText={this.props.placeholderText} btnText={this.props.btnText} />
-        <List dataList={this.props.list} />
+        <Input updateList={this.handleListUpdate.bind(this)} placeholderText={this.props.placeholderText} btnText={this.props.btnText} />
+        <List dataList={this.state.list} />
       </div>
     )
   }

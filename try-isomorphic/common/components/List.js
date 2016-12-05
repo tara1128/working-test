@@ -24,8 +24,8 @@ class List extends React.Component {
     let listItems = list.map( (item, index) =>
       // <li key={index.toString()}> // Only using "index" if items have no stable IDs
       <li className="list-item clearfix" key={item.id}> 
-        <span className="item-id">{item.id}. </span>
-        <span className="item-txt">{item.content}</span>
+        <span className="item-id">{item.id}</span>
+        <span className="item-txt">~ {item.content}</span>
         <span className="item-time">({FormatDate(item.date)})</span>
         <span className="item-sta">[{item.sta}]</span>
       </li>

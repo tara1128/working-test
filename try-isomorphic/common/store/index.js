@@ -5,7 +5,6 @@
 
 import { createStore } from 'redux'
 import rootReducer from '../reducers'
-import { displayAll, addItem, delItem, changeAuthor } from '../actions'
 
 /** 
   When you create a store, 
@@ -20,13 +19,13 @@ let store = createStore( rootReducer )
 
 /* Note that subscribe() returns a function for unregistering the listener */
 let unsubscribe = store.subscribe(() => {
-  // console.log( 'Subscribe store !', store.getState() );  
+  console.log( 'Subscribe! store.getState() ====> ', store.getState() );  
 })
-// store.subscribe()
 
-/* After creating the store, it is time to dispatch actions: */
-
-/* Everytime you dispatch an action, the reducer will be called ! */
+/**
+  After creating the store, it is time to dispatch actions.
+  Everytime you dispatch an action, the reducer will be called !
+**/
 
 /* If you stop listening to state updates: */
 // unsubscribe()

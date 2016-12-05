@@ -3,7 +3,7 @@
 */
 
 export default (t) => {
-  let time = new Date(t)
+  let time = new Date( Number(t) )
   let year = time.getFullYear()
   let month = time.getMonth() + 1
   let date = time.getDate()

@@ -12,39 +12,22 @@ import fetch from 'isomorphic-fetch'
 **/
 
 /* Action types: */
-export const DISPLAY_ALL = 'DISPLAY_ALL'
 export const ADD_ITEM = 'ADD_ITEM'
 export const DEL_ITEM = 'DEL_ITEM'
-export const CHANGE_AUTHOR = 'CHANGE_AUTHOR'
 
 /* Action creators: */
-export function displayAll( updatedList ) {
-  return {
-    type: DISPLAY_ALL,
-    updatedList
-  }
-}
-
-export function addItem( newData ) {
+/* The second parameter is the new whole list after adding or deleting items */
+export function addItem( list ) {
   return {
     type: ADD_ITEM,
-    newData
+    list
   }
 }
 
-export function delItem( id ) {
+export function delItem( list ) {
   return {
     type: DEL_ITEM,
-    id
-  }
-}
-/* To delete an item is to make it "sta=0", with id to find the target item */
-
-
-export function changeAuthor( newAuthor ) {
-  return {
-    type: CHANGE_AUTHOR,
-    newAuthor
+    list
   }
 }
 

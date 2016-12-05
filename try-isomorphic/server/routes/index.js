@@ -2,30 +2,20 @@
   server/routes/index.js
 */
 
-/* Dispatch routes: koa-router OR react-router:
-
-/* koa-router: 
 import Router from 'koa-router'
-import homeState from '../controllers/homeCtrl'
-import detailState from '../controllers/detailCtrl'
+import homeRenderCtrl from '../controllers/homeCtrl'
+import updateListCtrl from '../controllers/updateListController'
 
 const router = new Router()
-router.prefix('/api')
 
-router.get('/home', homeState)
-
-export default router
-*/
-
-/* react-router:
-import React from 'react'
-import { RouterContext } from 'react-router'
-import { renderToString } from 'react-dom/server'
-import { Provider } from 'react-redux'
-*/
-import homeRenderCtrl from '../controllers/homeCtrl'
+router.post('/api/add', updateListCtrl)
+router.post('/api/del', updateListCtrl)
 
 export default async (ctx, next) => {
-  console.log('In router! I am about to render! ==========> ', `${ctx.method} - ${ctx.url} - ${ctx.type}`);
-  await homeRenderCtrl(ctx)
+  console.log('In router: ctx.path =', ctx.path, ' @@ ', `${ctx.method} - ${ctx.url} - ${ctx.type}`);
+  if (ctx.path.match(/^\/api/)) {
+    await updateListCtrl(ctx)
+  } else {
+    await homeRenderCtrl(ctx)
+  }
 }
