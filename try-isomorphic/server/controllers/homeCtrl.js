@@ -10,21 +10,27 @@ import config from '../../common/config'
 import Container from '../../common/components/Container'
 import store from '../../common/store'
 import { displayAll, addItem, delItem, changeAuthor } from '../../common/actions'
-import { Users, List } from '../db'
+import { _Users, _List } from '../db'
 
 export default async (ctx) => {
 
+  let cookies = ctx.cookies;
+  let session = ctx.session;
+
+  console.log( 'COOKIES ========>>> ', cookies.get(config.sessionID) );
+  console.log( 'SESSION ========>>> ', typeof session, session );
+  console.log( 'In homeCtrl.js, _List ====> ', _List );
+
   let initList = [];
 
-  List.find({where: {id: config.firstItemID}}).then(function( data ){
-    if ( data ) {
-      initList.push( data.dataValues );
-      console.log('DB has data for server controllers to render !', data.dataValues, initList );
-    } else {
-      console.log('No data from List in DB!');
+  _List.findAll().then(function( datas ){ /* return an instance of Array */
+      for ( let p in datas ) {
+        initList.unshift( datas[p].dataValues );
+      }
+    }).catch(function(err){
+      console.log('No datas from List in DB!', err);
       initList = store.getState().dataList;
-    }
-  });
+    });
 
   return ctx.render('index', {
     title: config.title,

@@ -9,6 +9,7 @@ export default {
   rootPath,
   publicPath: '/public/build',
   port: 3000,
+  sessionID: 'ideasAnytimeSessionID',
   title: 'Ideas Anytime',
   description: 'Record Your Excellent Ideas Anytime You Got One',
   btntext: 'Add An Idea',

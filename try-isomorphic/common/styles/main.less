@@ -9,6 +9,7 @@
 @big-fontsize: 32px;
 @mid-fontsize: 16px;
 @sml-fontsize: 14px;
+@tin-fontsize: 12px;
 @seperate-length: 40px;
 @inner-width:86%;
 @radius-size:5px;
@@ -18,7 +19,6 @@
 html, body {
   width:100%;
   height:100%;
-  overflow:hidden;
   background:@almost-white;
 }
 
@@ -116,7 +116,7 @@ html, body {
 }
 
 .list-wrap {
-  margin:0 auto;
+  margin:0 auto 100px;
   box-sizing:border-box;
   width:@inner-width;
   border:1px solid @light-grey;
@@ -145,4 +145,26 @@ html, body {
   }
 }
 
-
+.init-db-btn {
+  position:fixed;
+  right:10px;
+  top:10px;
+  width:130px;
+  height:22px;
+  line-height:24px;
+  text-align:center;
+  font-size:@tin-fontsize;
+  color:@light-grey;
+  border:1px solid @light-grey;
+  border-radius:@radius-size;
+  background:#fff;
+  a {
+    display:block;
+    cursor:pointer;
+  }
+}
+.init-db-btn:hover {
+  background:@almost-white;
+  color:@nice-red;
+  border:1px dashed @nice-red;
+}

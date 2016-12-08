@@ -43,17 +43,33 @@ class Container extends React.Component {
       http = new ActiveXObject('Microsoft.XMLHTTP');
     } else {
       console.log('Failed in creating http request!');
+      return;
     }
+    // let params = this.serializeData(item);
     let params = JSON.stringify(item);
+    /* Must indicate onreadystatechange event function before open() is invoked! */
     http.onreadystatechange = function(){
-      if (http.readyState == 4 && http.status == 200) {
-        console.log( 200, http, http.responseText );
-      } else {
-        console.log( 'Not 200', http, http.responseText );
+      if (http.readyState == 4) {
+        if ((http.status >= 200 && http.status < 300) || (http.status == 304)) {
+          console.log('ResponseText is ', http.responseText);
+        } else {
+          console.log('Response failed! Status is', http.status);
+        }
       }
     };
-    http.open('POST', url, true);
+    http.open('POST', url, true); // 'true' means this request is 'async'
+    // http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    http.setRequestHeader('Content-Type', 'application/json');
     http.send(params);
+  }
+
+  serializeData(objectData) {
+    let dataString = [];
+    for ( let p in objectData ) {
+      dataString.push(p + '=' + objectData[p]);
+    }
+    dataString = dataString.join('&');
+    return dataString;
   }
 
   render() {

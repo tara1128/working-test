@@ -84,6 +84,7 @@
     "json-loader": "^0.5.4",
     "koa-ejs": "^3.0.0",
     "koa-middlewares": "^6.0.0",
+    "koa-session2": "^1.0.8",
     "koa-webpack-hot-middleware": "^1.0.3",
     "koa-webpack-middleware": "^1.0.1",
     "less": "^2.7.1",
