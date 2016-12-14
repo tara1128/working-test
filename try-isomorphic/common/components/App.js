@@ -12,13 +12,17 @@ let initList = [];
 /**
   Two flows of data:
   1: database -> server -> renderToString -> reduxData -> window;
-  2: reducer's initState -> store.getState().
+  2: reducer's initState -> store.getState().list
+  There is 50-50 chance for each flow of data.
+  To make sure they display the same, try read data from DB in reducer file.
 **/
 
-if( window.STATE_FROM_SERVER.length ) {
-  initList = window.STATE_FROM_SERVER; /* One flow of data */
-} else {
-  initList = store.getState(); /* The other flow of data */
+if( window.STATE_FROM_SERVER.length ) { /* Data flow 1 */
+  console.log('Has window.STATE_FROM_SERVER.length !!!', window.STATE_FROM_SERVER.length);
+  initList = window.STATE_FROM_SERVER;
+} else { /* Data flow 2 */
+  initList = store.getState().list; 
+  console.log('NO window.STATE_FROM_SERVER.length ! initList ===> ', initList );
 }
 
 let mapStateToProps = (state) => {

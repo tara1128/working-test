@@ -19,17 +19,17 @@ export default async (ctx) => {
 
   console.log( 'COOKIES ========>>> ', cookies.get(config.sessionID) );
   console.log( 'SESSION ========>>> ', typeof session, session );
-  console.log( 'In homeCtrl.js, _List ====> ', _List );
 
   let initList = [];
 
   _List.findAll().then(function( datas ){ /* return an instance of Array */
       for ( let p in datas ) {
+        console.log('_List.findAll(): initList is unshifting items: ', datas[p].dataValues.content );
         initList.unshift( datas[p].dataValues );
       }
     }).catch(function(err){
       console.log('No datas from List in DB!', err);
-      initList = store.getState().dataList;
+      initList = store.getState().list;
     });
 
   return ctx.render('index', {

@@ -14,9 +14,17 @@ import fetch from 'isomorphic-fetch'
 /* Action types: */
 export const ADD_ITEM = 'ADD_ITEM'
 export const DEL_ITEM = 'DEL_ITEM'
+export const INI_DATA = 'INI_DATA'
 
 /* Action creators: */
 /* The second parameter is the new whole list after adding or deleting items */
+export function iniData( data ) {
+  return {
+    type: INI_DATA,
+    data
+  }
+}
+
 export function addItem( list ) {
   return {
     type: ADD_ITEM,

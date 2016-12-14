@@ -21,6 +21,7 @@ class List extends React.Component {
         But when extracting one element from the array, no need to specify the key.
     **/
     let list = this.props.dataList;
+    console.log('In List, list ============> ', list);
     let listItems = list.map( (item, index) =>
       // <li key={index.toString()}> // Only using "index" if items have no stable IDs
       <li className="list-item clearfix" key={item.id}> 

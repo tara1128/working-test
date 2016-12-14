@@ -42,7 +42,6 @@ class Container extends React.Component {
     } else if (window.ActiveXObject) {
       http = new ActiveXObject('Microsoft.XMLHTTP');
     } else {
-      console.log('Failed in creating http request!');
       return;
     }
     // let params = this.serializeData(item);
