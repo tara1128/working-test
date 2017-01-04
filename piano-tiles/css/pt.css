@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2017-01-04 10:38
+  Latest modified: 2017-01-04 11:53
 */
 
 /* Global */
@@ -254,7 +254,20 @@ h2.section-title {
     url(../images/pt/dl-btn-face-cn2x.png) 2x
   );
 }
-
+.pt-do-download-btn s.btn-face.btn-pt-pt {
+  background-image:url(../images/pt/dl-btn-face-pt1x.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/dl-btn-face-pt1x.png) 1x,
+    url(../images/pt/dl-btn-face-pt2x.png) 2x
+  );
+}
+.pt-do-download-btn s.btn-face.btn-ru-ru {
+  background-image:url(../images/pt/dl-btn-face-ru1x.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/dl-btn-face-ru1x.png) 1x,
+    url(../images/pt/dl-btn-face-ru2x.png) 2x
+  );
+}
 
 .pt-do-download-btn s.btn-body {
   background-image:url(../images/pt/trpl-btn-body1x-zip.png);
@@ -342,6 +355,20 @@ h2.section-title {
   background-image: -webkit-image-set(
     url(../images/pt/dl-footbtn-face-cn1x.png) 1x,
     url(../images/pt/dl-footbtn-face-cn2x.png) 2x
+  );
+}
+.pt-foot-download-btn s.btn-face.btn-pt-pt {
+  background-image:url(../images/pt/dl-footbtn-face-pt1x.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/dl-footbtn-face-pt1x.png) 1x,
+    url(../images/pt/dl-footbtn-face-pt2x.png) 2x
+  );
+}
+.pt-foot-download-btn s.btn-face.btn-ru-ru {
+  background-image:url(../images/pt/dl-footbtn-face-ru1x.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/dl-footbtn-face-ru1x.png) 1x,
+    url(../images/pt/dl-footbtn-face-ru2x.png) 2x
   );
 }
 
