@@ -1,6 +1,6 @@
 /*
   Author: Yang Gang
-  Latest modified: 2016-11-30 16:05
+  Latest modified: 2017-01-04 10:06
 */
 (function (factory) {
     if ( typeof define === 'function' && define.amd ) {
@@ -524,7 +524,10 @@
         obj.downloadLinkToApple = 'https://app.appsflyer.com/id1027688889?pid=roman&c=roman';
         $('.pt-rd-android').attr('href', 'https://app.appsflyer.com/com.cmplay.tiles2?pid=roman&c=roman');
         $('.pt-rd-ios').attr('href', 'https://app.appsflyer.com/id1027688889?pid=roman&c=roman');
-      }else{
+      }else if ( document.location.href.indexOf('/zh-cn/') > -1 ) {
+        obj.downloadLinkToGoogle = 'http://pianodown.cmcm.com/dispath/?pmd5=be1b754c8ccab04ccccbff1b5d23c389';
+        obj.downloadLinkToApple = 'https://itunes.apple.com/us/app/piano-tiles-2-dont-tap-white/id1027688889?mt=8';
+      } else {
         obj.downloadLinkToGoogle = 'https://play.google.com/store/apps/details?id=com.cmplay.tiles2';
         obj.downloadLinkToApple = 'https://itunes.apple.com/us/app/piano-tiles-2-dont-tap-white/id1027688889?mt=8';
       }
@@ -862,7 +865,11 @@
 	$('#ptDownLoadBtna, #ptDownLoadBtnb').on('click',function(){
     if( IsAndroid ) {
       ga('send','event','piano-tiles','click','download-android',1);
-      location.href = pageObj.downloadLinkToGoogle;
+      if(document.location.href.indexOf('/zh-cn/') > -1) {
+        location.href = 'http://pianodown.cmcm.com/dispath/?pmd5=be1b754c8ccab04ccccbff1b5d23c389';
+      }else{
+        location.href = pageObj.downloadLinkToGoogle;
+      }
     }else if( IsIOS ){
       ga('send','event','piano-tiles','click','download-ios',1);
       location.href = pageObj.downloadLinkToApple;

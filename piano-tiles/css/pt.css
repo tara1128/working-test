@@ -1,6 +1,6 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2016-11-01 14:37
+  Latest modified: 2017-01-04 10:38
 */
 
 /* Global */
@@ -247,6 +247,14 @@ h2.section-title {
     url(../images/pt/dl-btn-face-fr2x.png) 2x
   );
 }
+.pt-do-download-btn s.btn-face.btn-zh-cn {
+  background-image:url(../images/pt/dl-btn-face-cn1x.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/dl-btn-face-cn1x.png) 1x,
+    url(../images/pt/dl-btn-face-cn2x.png) 2x
+  );
+}
+
 
 .pt-do-download-btn s.btn-body {
   background-image:url(../images/pt/trpl-btn-body1x-zip.png);
@@ -327,6 +335,13 @@ h2.section-title {
   background-image: -webkit-image-set(
     url(../images/pt/dl-footbtn-face-fr1x.png) 1x,
     url(../images/pt/dl-footbtn-face-fr2x.png) 2x
+  );
+}
+.pt-foot-download-btn s.btn-face.btn-zh-cn {
+  background-image:url(../images/pt/dl-footbtn-face-cn1x.png);
+  background-image: -webkit-image-set(
+    url(../images/pt/dl-footbtn-face-cn1x.png) 1x,
+    url(../images/pt/dl-footbtn-face-cn2x.png) 2x
   );
 }
 
