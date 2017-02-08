@@ -1,6 +1,6 @@
 /*
   index.js, trying ES6
-  Latest modified: 2017-02-08 18:17
+  Latest modified: 2017-02-08 18:40
 */
 
 class IndexLogin extends React.Component {
@@ -126,7 +126,7 @@ class Categories extends React.Component {
     }
     return (
       <div className='cate-wrap'>
-        <h2 className='cate-title'>Choose one to test</h2>
+        <h2 className='cate-title'>Our Current Project</h2>
         {this.props.list.map(function(value,i){
           return (
             <a className='cate-item clearfix' key={i} href={value.linkTo}>
