@@ -10,8 +10,12 @@
   <title>Cheetah Ads – Make Your Ads Smarter</title>
   <meta name="keywords" content="Cheetah Ads,Cheetah Mobile,Branding Video,App Lock,Musical.ly,News Republic,Live.me,Clean Master" />
   <meta name="description" content="Intelligently connecting advertisers to Cheetah Mobile’s hundreds of millions of users worldwide." />
-  <link rel="stylesheet" href="/dist/all.min.css?v02091139" type="text/css" />
+  <link rel="stylesheet" href="/dist/all.min.css?v02091529" type="text/css" />
   <script src="js/jquery-1.9.1.min.js"></script>
+<script src="../lib/react-cookie.min.js"></script>
+<script>
+  if( !reactCookie.load('CMWebTester') ){ location.href = '/'; }
+</script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -30,9 +34,9 @@
         <div class="container clearfix has-trans">
           <a class="the-logo left has-trans" title="Cheetah ads">Cheetah ads</a>
           <ul class="navs right">
-            <li class="left hide-on-mob"><a class="nav-a" href="#BrandingVideo" title="Branding Video">Branding Video<s class="has-trans">.</s></a></li>
-            <li class="left hide-on-mob"><a class="nav-a" href="#AppLock" title="App Lock">App Lock<s class="has-trans">.</s></a></li>
-            <li class="left hide-on-mob"><a class="nav-a" href="#PerformanceAds" title="Performance Ads">Performance Ads<s class="has-trans">.</s></a></li>
+            <li class="left hide-on-mob"><a class="nav-a C_NavAnchors" data-id="BrandingVideo" title="Branding Video">Branding Video<s class="has-trans">.</s></a></li>
+            <li class="left hide-on-mob"><a class="nav-a C_NavAnchors" data-id="AppLock" title="App Lock">App Lock<s class="has-trans">.</s></a></li>
+            <li class="left hide-on-mob"><a class="nav-a C_NavAnchors" data-id="PerformanceAds" title="Performance Ads">Performance Ads<s class="has-trans">.</s></a></li>
             <li class="left hide get-started" id="C_StartBtn"><a class="nav-a has-trans" href="mailto:ads@conew.com" title="Contact Us">Contact Us</a></li>
             <li class="left has-login"><a class="nav-a has-border has-trans" href="https://ori.cmcm.com/login/" title="Log in">Log in</a></li>
           </ul>
@@ -82,8 +86,18 @@
             <h3 class="pro-name">BRANDING VIDEO</h3>
             <h2 class="pro-slogan boldfont">Leave an impression with striking video ads</h2>
             <div class="pro-texts">
-              <p>Cheetah Branding Video offers engaging video ads embedded smoothly and natively across Cheetah Mobile products and partner apps. They are available in a variety of formats, for example vertical videos in social apps like musical.ly and live.me, and horizontal videos in utility apps like Clean Master.</p>
-              <p class="last-p">Our professional editors will creatively design and edit your Branding Videos to make each campaign stand out. We can even partner with influencers from our popular social apps to create custom integrated campaigns for your brand.</p>
+              <div class="pro-txt-item">
+                <h4>Vertical Video</h4>
+                <p>The most engaging and best performing mobile video format for brands</p>
+              </div><!-- item -->
+              <div class="pro-txt-item">
+                <h4>100% Viewable</h4>
+                <p>Be confident your ads are being seen with guaranteed viewability</p>
+              </div><!-- item -->
+              <div class="pro-txt-item last">
+                <h4>Free Video Editing</h4>
+                <p>Let our expert video editors make your campaign pop</p>
+              </div><!-- item -->
             </div>
           </div><!-- pro text box, rel -->
         </div><!-- pro half, right -->
@@ -102,8 +116,18 @@
             <h3 class="pro-name">APP LOCK</h3>
             <h2 class="pro-slogan boldfont">Tell your brand story with pre-social moments</h2>
             <div class="pro-texts">
-              <p>App Lock is a popular security feature offered in Cheetah Mobile's utility apps, allowing users to protect their privacy by creating password-protected lock screens for individual apps. App Lock acts as the perfect "Pre-Social Moment" for advertisers to creatively reach social media app users.</p>
-              <p class="last-p">This customizable ad format provides brands with the unique opportunity to reach social app users without advertising within the apps themselves. Three out of four users usually lock WhatsApp or Facebook app on their mobile phones.</p>
+              <div class="pro-txt-item">
+                <h4>Frequent Usage</h4>
+                <p>Direct connection to social users with over 20 app opens per day worldwide</p>
+              </div><!-- item -->
+              <div class="pro-txt-item">
+                <h4>Customizable Formats</h4>
+                <p>Interactive branded lock screens offer countless creative options</p>
+              </div><!-- item -->
+              <div class="pro-txt-item last">
+                <h4>Huge Impression Numbers</h4>
+                <p>Over 1.5 billion daily impressions globally</p>
+              </div><!-- item -->
             </div>
           </div><!-- pro text box, rel -->
         </div><!-- pro half, left -->
@@ -122,8 +146,18 @@
             <h3 class="pro-name">PERFORMANCE ADS</h3>
             <h2 class="pro-slogan boldfont">Get clicks or downloads from your targeted users</h2>
             <div class="pro-texts">
-              <p>Charge up your performance campaigns with Cheetah Mobile's premium inventory. Get the best value for your investment by leveraging our big data platform to reach the audience you want. Segment your target audience with 40+ interest tags, such as "sports enthusiast" or "card game player".</p>
-              <p class="last-p">You can also target users by Age and Gender. With over 612 million active users all around the world, we offer global reach you won't find elsewhere.</p>
+              <div class="pro-txt-item">
+                <h4>Premium Inventory</h4>
+                <p>A gateway to Cheetah Mobile’s content+utility apps</p>
+              </div><!-- item -->
+              <div class="pro-txt-item">
+                <h4>Targeting Capabilities</h4>
+                <p>40+ proprietary interest tags to help reach the right audience</p>
+              </div><!-- item -->
+              <div class="pro-txt-item last">
+                <h4>Massive Global Reach</h4>
+                <p>612 million monthly active users worldwide</p>
+              </div><!-- item -->
             </div>
           </div><!-- pro text box, rel -->
         </div><!-- pro half, right -->
@@ -142,6 +176,6 @@
     </section><!-- copyright -->
 
   </div><!-- wrapper -->
-  <script src="/dist/all.min.js?v02081813"></script>
+  <script src="/dist/all.min.js?v02091529"></script>
 </body>
 </html>
