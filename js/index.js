@@ -1,6 +1,6 @@
 /*
   index.js, trying ES6
-  Latest modified: 2017-02-09 16:15
+  Latest modified: 2017-02-22 11:03
 */
 
 class IndexLogin extends React.Component {
@@ -241,6 +241,11 @@ class Popup extends React.Component {
 };
 
 var cateList = [
+  {
+    projectName: 'Cheetah for Publishers',
+    linkTo: 'publishers/',
+    latestModified: '2017-02-22 11:04'
+  },
   {
     projectName: 'Cheetah Ads Platform',
     linkTo: 'ads/',
