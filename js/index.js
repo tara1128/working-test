@@ -243,8 +243,8 @@ class Popup extends React.Component {
 var cateList = [
   {
     projectName: 'Cheetah for Publishers',
-    linkTo: 'publishers/',
-    latestModified: '2017-02-22 20:31'
+    linkTo: 'publishers/index.html?123',
+    latestModified: '2017-02-22 20:35'
   },
   {
     projectName: 'Cheetah Ads Platform',
