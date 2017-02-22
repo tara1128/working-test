@@ -10,7 +10,7 @@
   <title>Cheetah for Publishers - New Traffic, New Revenue</title>
   <meta name="keywords" content="Cheetah for Publisher, Cheetah Mobile, News Locker, News Republic, Cheetah monetization, news feed, Cheetah Open Feed" />
   <meta name="description" content="Publisher-facing service platform offering Cheetah Mobile's leading monetization products." />
-  <link rel="stylesheet" href="/dist/all.min.css?1034" type="text/css" />
+  <link rel="stylesheet" href="/dist/all.min.css?1055" type="text/css" />
   <script src="js/jquery-1.9.1.min.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -28,7 +28,8 @@
       <div class="top-bar abs" id="P_TopBar">
         <div class="container clearfix has-trans">
           <a class="the-logo" title="Cheetah for Publishers" href="#">Cheetah for Publishers</a>
-          <ul class="navs clearfix">
+          <a class="the-burger for-mobile-only has-trans" id="P_NavBurger" href="javascript:;"><span class="bar1 has-trans">&nbsp;</span><span class="bar2 has-trans">&nbsp;</span><span class="bar3 has-trans">&nbsp;</span></a>
+          <ul class="navs clearfix has-trans" id="P_Navs">
             <li class="nav-item"><a class="nav-link has-trans"><s class="has-trans">&nbsp;</s>Product</a></li>
             <li class="nav-item"><a class="nav-link has-trans"><s class="has-trans">&nbsp;</s>Resources</a></li>
             <li class="nav-item"><a class="nav-link has-trans"><s class="has-trans">&nbsp;</s>FAQ</a></li>
@@ -40,9 +41,9 @@
 
       <div class="main-slogan">
         <div class="container has-trans">
-          <h1 class="big-title boldfont">Cheetah Open Feed</h1>
-          <h2 class="sub-title">New Traffic  New Revenue</h2>
-          <p class="main-desc">Cheetah Open Feed is a free service that allows publishers and OEMs to embed various types of news content feeds into their apps and operating systems, providing them with new traffic and new revenue opportunities.</p>
+          <h1 class="big-title boldfont has-trans">Cheetah Open Feed</h1>
+          <h2 class="sub-title has-trans">New Traffic  New Revenue</h2>
+          <p class="main-desc has-trans">Cheetah Open Feed is a free service that allows publishers and OEMs to embed various types of news content feeds into their apps and operating systems, providing them with new traffic and new revenue opportunities.</p>
           <a class="big-button has-trans boldfont" href="#">Contact Us</a>
         </div>
       </div><!-- main screen, not higher than 900px -->
@@ -63,15 +64,15 @@
 
     <section class="third-screen dau-rev">
       <div class="container clearfix has-trans">
+        <div class="rev-graph">
+          <img src="/dist/images/revenue-bg.png" alt="Increase DAU and Revenue" />
+        </div><!-- right -->
         <div class="rev-left">
           <div class="rev-leftbox abs">
             <h2 class="rev-title has-trans">Increase DAU and Revenue</h2>
             <p class="rev-para">Occupy locker traffic, reactive <s class="highlight">10%</s> silent users. Strong monetization ability, promote revenue.</p>
           </div>
         </div><!-- left -->
-        <div class="rev-graph">
-          <img src="/dist/images/revenue-bg.png" alt="Increase DAU and Revenue" />
-        </div><!-- right -->
       </div>
     </section>
 
@@ -123,16 +124,19 @@
       <div class="container has-trans">
         <h2 class="partner-title">Partners</h2>
         <div class="partners-box clearfix">
-          <img src="/dist/images/p-sumsung.png" class="one-partner has-trans sumsung" alt="Sumsung" />
-          <img src="/dist/images/p-lenovo.png" class="one-partner has-trans lenovo" alt="Lenovo" />
-          <img src="/dist/images/p-tcl.png" class="one-partner has-trans tcl" alt="TCL" />
-          <img src="/dist/images/p-zte.png" class="one-partner has-trans zte" alt="ZTE中兴" />
-          <img src="/dist/images/p-fotoable.png" class="one-partner has-trans fotoable" alt="Fotoable" />
-          <img src="/dist/images/p-hupo.png" class="one-partner has-trans hupo" alt="琥珀天气" />
-          <img src="/dist/images/p-ibit.png" class="one-partner has-trans ibit" alt="Ibit" />
-          <img src="/dist/images/p-htc.png" class="one-partner has-trans htc" alt="HTC" />
-          <img src="/dist/images/p-goal-alert.png" class="one-partner has-trans goal-alert" alt="Goal Alert" />
-          <img src="/dist/images/p-wiko.png" class="one-partner has-trans wiko last" alt="Wiko, Game changer" />
+          <img class="logos-of-p-pc" src="/dist/images/logos-of-partners-1400.png" alt="Partners" />
+          <img class="logos-of-p-mobile" src="/dist/images/logos-of-partners-m1.png" alt="Partners" />
+          <img class="logos-of-p-mobile last" src="/dist/images/logos-of-partners-m2.png" alt="Partners" />
+          <div class="one-partner has-trans sumsung">Sumsung</div>
+          <div class="one-partner has-trans lenovo">Lenovo</div>
+          <div class="one-partner has-trans tcl">TCL</div>
+          <div class="one-partner has-trans zte">ZTE中兴</div>
+          <div class="one-partner has-trans fotoable">Fotoable</div>
+          <div class="one-partner has-trans hupo">琥珀天气</div>
+          <div class="one-partner has-trans iobit">IObit</div>
+          <div class="one-partner has-trans htc">HTC</div>
+          <div class="one-partner has-trans goal-alert">Goal Alert</div>
+          <div class="one-partner has-trans wiko last">Wiko</div>
         </div><!-- box -->
       </div><!-- Container -->
     </section>
@@ -141,7 +145,7 @@
       <div class="container clearfix has-trans">
         <div class="cp-item left">
           <a class="cp-link" href="http://ads.cmcm.com/" target="_blank">Cheetah Ads</a>&nbsp;|&nbsp;
-          <a class="cp-link" href="http://www.cmcm.com/protocol/site/privacy.html" target="_blank">Privacy Policy</a>&nbsp;|&nbsp;
+          <a class="cp-link" href="http://www.cmcm.com/protocol/site/privacy.html" target="_blank">Privacy Policy</a><span class="hide-in-mob">&nbsp;|&nbsp;</span>
         </div> 
         <div class="cp-item left"><span class="cp-txt">Cheetah Mobile © 2017 ·</span><a>English</a></div>
       </div><!-- Container -->
@@ -149,6 +153,6 @@
 
 
   </div><!-- wrapper -->
-  <script src="/dist/all.min.js"></script>
+  <script src="/dist/all.min.js?v=2019"></script>
 </body>
 </html>
