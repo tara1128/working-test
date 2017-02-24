@@ -1,6 +1,6 @@
 /*
   whatscall.js
-  Latest modified: 2016-10-21 09:30
+  Latest modified: 2017-02-23 19:04
 */
 
 (function(){ 
@@ -72,6 +72,10 @@
     }else{
       $('#btnInAndroid').hide();
       $('#btnInIOS').hide();
+      heading.find('.to-google').attr('href', 'https://play.google.com/store/apps/details?id=com.cmcm.whatscall');
+      heading.find('.to-apple').attr('href', 'https://itunes.apple.com/app/whatscall-mian-fei-bo-da-quan/id1137062559');
+      footerInner.find('.to-google').attr('href', 'https://play.google.com/store/apps/details?id=com.cmcm.whatscall');
+      footerInner.find('.to-apple').attr('href', 'https://itunes.apple.com/app/whatscall-mian-fei-bo-da-quan/id1137062559');
     }
   };
 
