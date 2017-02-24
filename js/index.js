@@ -1,6 +1,6 @@
 /*
   index.js, trying ES6
-  Latest modified: 2017-02-23 15:11
+  Latest modified: 2017-02-24 10:20
 */
 
 class IndexLogin extends React.Component {
@@ -243,15 +243,14 @@ class Popup extends React.Component {
 var cateList = [
   {
     projectName: 'Cheetah for Publishers',
-    linkTo: 'publishers/index.html?123',
-    latestModified: '2017-02-23 15:11'
+    linkTo: 'publishers/',
+    latestModified: '2017-02-24 10:19'
   },
   {
     projectName: 'Cheetah Ads Platform',
     linkTo: 'ads/',
     latestModified: '2017-02-09 16:15'
-  }
-/*
+  },
   {
     projectName: 'cmcm.com/en-us',
     linkTo: 'en-us/',
@@ -282,7 +281,6 @@ var cateList = [
     linkTo: 'try-isomorphic/',
     latestModified: '2016-11-09 14:53'
   }
-  */
 ];
 
 
