@@ -1,3 +1,6 @@
+/*
+  Latest modified: 2017-03-01 17:41
+*/
 @font-face {
 	font-family: 'HelveticaBold';
 	src: url('../images/v3/fonts/helveticabold.eot');
@@ -24,6 +27,7 @@
 	src: url('../images/v3/fonts/Gotham-Bold.eot');
 	src: url('../images/v3/fonts/Gotham-Bold.eot') format('embedded-opentype'), url('../images/v3/fonts/Gotham-Bold.woff') format('woff'), url('../images/v3/fonts/Gotham-Bold.ttf') format('truetype'), url('../images/v3/fonts/Gotham-Bold.svg#Gotham-Bold') format('svg')
 }
+.clearfix:after {content:"\0020";display:block;visibility:hidden;clear:both;height:0;overflow:hidden;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	font: inherit;
 	font-size: 100%;
@@ -277,6 +281,7 @@ body {
 	padding-left: 35px;
 	background: url(../images/v3/icon.png) no-repeat -130px -1px
 }
+/* The new style of "menumore" */
 #menuMore {
 	position: fixed;
 	z-index: 11;
@@ -286,89 +291,86 @@ body {
 	height: 0;
 	background: #000;
 	background: rgba(0, 0, 0, .85);
-	_position: absolute
+	_position: absolute;
 }
 #topnotice #menuMore {
-	top: 134px
+	top: 134px;
 }
 #topnotice .small-screen #menuMore {
-	top: 84px
+	top: 84px;
 }
 #topnotice.Front #menuMore .content {
-	padding-bottom: 80px
+	padding-bottom: 80px;
 }
 #menuMore .content {
 	position: absolute;
-	top: 50%;
+	top: 60px;
 	left: 50%;
-	width: 960px;
-	margin: -270px 0 0 -490px;
-	_top: 5%;
-	_margin-top: 0
+	width: 86%;
+	margin: 0 0 0 -43%;
 }
-#menuMore li {
+#menuMore li.menu-item {
 	font-size: 18px;
 	line-height: 35px;
-	display: inline;
-	float: left;
 	overflow: hidden;
-	width: 30%;
-	margin: 20px 0 10px 3.3%;
-	white-space: nowrap;
-	color: #fff
+	margin: 0 0 60px 0;
+	color: #fff;
 }
 #menuMore li.primary {
 	display: none
 }
-#menuMore li h2 {
-	font-size: 36px;
-	padding: 0 0 10px 24px
+#menuMore li h2.menu-name {
+  float:left;
+	padding:0 2% 0 0;
+  width:12%;
+	font-size:18px;
+  color:#585858;
 }
+#menuMore li div.menu-box {
+  float:right;
+  width:85%;
+}
+
 #menuMore li a {
-	color: #aaa;
-	outline: none;
+  display:block;
+  padding-right:15px;
+  float:left;
+	color:#aaa;
+	outline:none;
 }
 #menuMore li a.hover, #menuMore li a:hover {
-	color: #fff
+	color:#fff;
 }
 #menuMore li a span {
 	visibility: hidden;
 	float: left;
 	overflow: hidden;
-	width: 12px;
-	height: 12px;
-	margin: 11px 10px 0 0;
+	width: 10px;
+	height: 10px;
+	margin: 11px 8px 0 0;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
 	border-radius: 10px;
-	background: #eb6100
+	background: #eb6100;
 }
 #menuMore li a.hover span, #menuMore li a:hover span {
-	visibility: visible
+	visibility: visible;
 }
 .small-screen #header, .fixed #header, .small-screen #header-fixed {
-	height: 50px
+	height: 50px;
 }
 .small-screen #menuMore, .fixed #menuMore {
-	top: 50px
+	top: 50px;
 }
 #topnotice #header-fixed {
-	top: 34px
+	top: 34px;
 }
-.menu-share {
-	line-height: 26px;
-	font-size: 14px;
-	margin-top: 146px;
-}
-.menu-share-label {
+#menuMore li a.menu-share-btn {
 	float: left;
-	color: rgba(255,255,255,0.2);
-	color/*\**/:#535354 \9;
-	padding: 0 18px 0 22px;
-	white-space: nowrap;
-}
-.menu-share-btn {
-	float: left;
+  margin:5px 5px 0 16px;
+  padding-right:0!important;
 	width: 26px;
 	height: 26px;
 	overflow: hidden;
@@ -379,30 +381,29 @@ body {
 	-webkit-border-radius: 50%;
 	   -moz-border-radius: 50%;
 	        border-radius: 50%;
-	margin-right: 6px;
 }
-.menu-share-fb{
+#menuMore li a.menu-share-fb {
 	background-position: 0 0;
 }
-.menu-share-fb:hover{
+#menuMore li a.menu-share-fb:hover {
 	background-color: #3a5898;
 }
-.menu-share-gp{
+#menuMore li a.menu-share-gp {
 	background-position: 0 -30px;
 }
-.menu-share-gp:hover{
+#menuMore li a.menu-share-gp:hover {
 	background-color: #ca151a;
 }
-.menu-share-tt{
+#menuMore li a.menu-share-tt {
 	background-position: 0 -60px;
 }
-.menu-share-tt:hover{
+#menuMore li a.menu-share-tt:hover {
 	background-color: #31aae1;
 }
-.menu-share-li{
+#menuMore li a.menu-share-li {
 	background-position: 0 -90px;
 }
-.menu-share-li:hover{
+#menuMore li a.menu-share-li:hover {
 	background-color: #0074b1;
 }
 
@@ -884,6 +885,24 @@ body {
   .whatscall-video, .whatscall-vdmask {
     display:none!important;
   }
+  #menuMore li.menu-item {
+    margin: 0 0 30px 0;
+  }
+
+  #menuMore li h2.menu-name {
+    float:none;
+    padding:0 0 0 0;
+    width:auto;
+  }
+  #menuMore li div.menu-box {
+    float:none;
+    width:auto;
+  }
+  #menuMore li a {
+    padding-right:0;
+    float:none;
+  }
+
 }
 
 
@@ -7104,7 +7123,7 @@ a.btn_green:visited {
 		bottom: 0
 	}
 	#menuMore ul {
-		padding: 20px 0 0 15%
+		padding: 20px 0 0 2%;
 	}
 	#menuMore li {
 		font-size: 16px;
@@ -7113,10 +7132,10 @@ a.btn_green:visited {
 		margin-top: 10px
 	}
 	#menuMore li a span {
-		margin-top: 8px
+		margin-top:12px;
 	}
 	#menuMore li.primary {
-		display: block
+		display: block;
 	}
 	#menuMore li h2 {
 		font-size: 30px;
@@ -7358,9 +7377,6 @@ a.btn_green:visited {
 
 	.bodyCML3d #container-wrap{
 		margin-top: -50px;
-	}
-	.menu-share{
-		margin: 10px 0;
 	}
 }
 @media (max-width:540px) {
@@ -7807,9 +7823,6 @@ a.btn_green:visited {
 	}
 	.pg-v2-sharebox {
 		display: none
-	}
-	.menu-share{
-		margin: 10px 0;
 	}
 	.bodyCML3d #container-wrap{
 		margin-top: 0;
