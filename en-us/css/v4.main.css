@@ -1,5 +1,5 @@
 /*
-  Latest modified: 2017-03-01 17:41
+  Latest modified: 2017-03-02 11:40
 */
 @font-face {
 	font-family: 'HelveticaBold';
@@ -333,8 +333,11 @@ body {
 
 #menuMore li a {
   display:block;
-  padding-right:15px;
   float:left;
+  width:225px;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 	color:#aaa;
 	outline:none;
 }
@@ -899,7 +902,6 @@ body {
     width:auto;
   }
   #menuMore li a {
-    padding-right:0;
     float:none;
   }
 
@@ -7123,7 +7125,7 @@ a.btn_green:visited {
 		bottom: 0
 	}
 	#menuMore ul {
-		padding: 20px 0 0 2%;
+		padding: 20px 0 0 8%;
 	}
 	#menuMore li {
 		font-size: 16px;
