@@ -1,5 +1,5 @@
 /*
-  Latest modified: 2017-03-06 11:57
+  Latest modified: 2017-03-06 12:24
   Make menuMore's content NOT absolute.
 */
 @font-face {
@@ -374,42 +374,31 @@ body {
 }
 #menuMore li a.menu-share-btn {
 	float: left;
-  margin:5px 16px 0 0px;
+  margin:2px 20px 0 0;
   padding-right:0!important;
-	width: 26px;
-	height: 26px;
+	width: 28px;
+	height: 28px;
 	overflow: hidden;
 	text-indent: -9999px;
-	background: url(../images/v3/icon-share.png) no-repeat;
-	background-color:rgba(255,255,255,0.2);
-	background-color/*\**/:#535354 \9;
-	-webkit-border-radius: 50%;
-	   -moz-border-radius: 50%;
-	        border-radius: 50%;
+	background: url(../images/v3/icon-share-no-bgcolor.png) no-repeat;
 }
 #menuMore li a.menu-share-fb {
 	background-position: 0 0;
 }
 #menuMore li a.menu-share-fb:hover {
-	background-color: #3a5898;
-}
-#menuMore li a.menu-share-gp {
-	background-position: 0 -30px;
-}
-#menuMore li a.menu-share-gp:hover {
-	background-color: #ca151a;
+	background-position: 0 -50px;
 }
 #menuMore li a.menu-share-tt {
-	background-position: 0 -60px;
+	background-position: -85px 0;
 }
 #menuMore li a.menu-share-tt:hover {
-	background-color: #31aae1;
+	background-position: -85px -50px;
 }
 #menuMore li a.menu-share-li {
-	background-position: 0 -90px;
+	background-position: -173px 0;
 }
 #menuMore li a.menu-share-li:hover {
-	background-color: #0074b1;
+	background-position: -173px -50px;
 }
 
 .fullSlider, .fullSlider ul, .fullSlider li {
