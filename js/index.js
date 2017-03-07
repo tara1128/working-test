@@ -1,6 +1,6 @@
 /*
   index.js, trying ES6
-  Latest modified: 2017-03-06 16:43
+  Latest modified: 2017-03-07 12:00
 */
 
 class IndexLogin extends React.Component {
@@ -260,6 +260,11 @@ var cateList = [
     projectName: 'cn.cmcm.com',
     linkTo: 'cn.cmcm/',
     latestModified: '2017-03-06 16:43'
+  },
+  {
+    projectName: 'blog.cmcm.com',
+    linkTo: 'blog.cmcm/',
+    latestModified: '2017-03-07 12:01'
   },
   {
     projectName: 'WhatsCall',

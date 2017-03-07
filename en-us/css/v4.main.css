@@ -1,5 +1,5 @@
 /*
-  Latest modified: 2017-03-06 12:24
+  Latest modified: 2017-03-07 11:44
   Make menuMore's content NOT absolute.
 */
 @font-face {
@@ -341,6 +341,11 @@ body {
   text-overflow: ellipsis;
 	color:#aaa;
 	outline:none;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
 }
 #menuMore li a.hover, #menuMore li a:hover {
 	color:#f0641e;
@@ -374,31 +379,56 @@ body {
 }
 #menuMore li a.menu-share-btn {
 	float: left;
-  margin:2px 20px 0 0;
+  margin:3px 15px 0 0;
   padding-right:0!important;
 	width: 28px;
 	height: 28px;
 	overflow: hidden;
 	text-indent: -9999px;
-	background: url(../images/v3/icon-share-no-bgcolor.png) no-repeat;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
 }
 #menuMore li a.menu-share-fb {
-	background-position: 0 0;
+  background-image:url(../images/v3/share-fb-1x.png);
+  background-image: -webkit-image-set(
+    url(../images/v3/share-fb-1x.png) 1x,
+    url(../images/v3/share-fb-2x.png) 2x
+  );
 }
 #menuMore li a.menu-share-fb:hover {
-	background-position: 0 -50px;
+  background-image:url(../images/v3/share-fb-1x-hover.png);
+  background-image: -webkit-image-set(
+    url(../images/v3/share-fb-1x-hover.png) 1x,
+    url(../images/v3/share-fb-2x-hover.png) 2x
+  );
 }
 #menuMore li a.menu-share-tt {
-	background-position: -85px 0;
+  background-image:url(../images/v3/share-tt-1x.png);
+  background-image: -webkit-image-set(
+    url(../images/v3/share-tt-1x.png) 1x,
+    url(../images/v3/share-tt-2x.png) 2x
+  );
 }
 #menuMore li a.menu-share-tt:hover {
-	background-position: -85px -50px;
+  background-image:url(../images/v3/share-tt-1x-hover.png);
+  background-image: -webkit-image-set(
+    url(../images/v3/share-tt-1x-hover.png) 1x,
+    url(../images/v3/share-tt-2x-hover.png) 2x
+  );
 }
 #menuMore li a.menu-share-li {
-	background-position: -173px 0;
+  background-image:url(../images/v3/share-in-1x.png);
+  background-image: -webkit-image-set(
+    url(../images/v3/share-in-1x.png) 1x,
+    url(../images/v3/share-in-2x.png) 2x
+  );
 }
 #menuMore li a.menu-share-li:hover {
-	background-position: -173px -50px;
+  background-image:url(../images/v3/share-in-1x-hover.png);
+  background-image: -webkit-image-set(
+    url(../images/v3/share-in-1x-hover.png) 1x,
+    url(../images/v3/share-in-2x-hover.png) 2x
+  );
 }
 
 .fullSlider, .fullSlider ul, .fullSlider li {
