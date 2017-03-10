@@ -1,14 +1,19 @@
 /*
   Main styles of Cheetah Ads.
   Author: Alexandra
-  Latest modified: 2017-02-28 18:36 */
+  Add pop up form for testing ...
+  Latest modified: 2017-03-03 18:36 */
 
 @main-orange:#f63;
 @dark-grey:#333;
 @page-bg:#fff;
+@frame-height:700px;
+@largest-first-height:1080px;
 @top-bar-height:60px;
 @pc-container-width:86%;
+@pc-container-largest-width:1280px;
 @opening-largest-width:600px;
+@pro-half-largest-width:640px;
 @transition-duration:.4s;
 @transition-function:ease;
 
@@ -16,14 +21,16 @@
 html, body {
   width:100%;
   background:@page-bg;
-  overflow:hidden;/* For full-screen style */
 }
-.wrapper {
-  position:absolute;
-  top:0;
-  left:0;
+.wrapper, section {
   width:100%;
   overflow:hidden;
+}
+.wrapper .left {
+  float:left;
+}
+.wrapper .right {
+  float:right;
 }
 .container {
   margin:0 auto;
@@ -41,7 +48,7 @@ html, body {
 /* Top bar and nav */
 .top-bar {
   position:absolute;
-  z-index:9;
+  z-index:10;
   left:0px;
   top:0px;
   width:100%;
@@ -53,7 +60,6 @@ html, body {
 }
 .the-logo {
   display:block;
-  float:left;
   margin-top:15px;
   width:220px;
   height:30px;
@@ -117,56 +123,31 @@ html, body {
   color:@main-orange;
 }
 
-/* Side menus, fixed to the right */
-.side-menus {
-  position:fixed;
-  z-index:10;
-  right:10px;
-  top:38%;
-  width:50px;
-}
-.side-menu-item {
-  display:block;
-  margin:20px 0;
-  width:20px;
-  height:20px;
-  border-radius:20px;
-  background:@dark-grey;
-  text-indent:-9999px;
-}
-.side-menu-item.active, .side-menu-item:hover {
-  background:@main-orange;
-}
-
-
-/* Sections, using full-screen style */
-.section-frame {
-  width:100%;
-}
-.section-frame.active {
-}
-
 /* First Screen */
 .first-screen {
+  position:relative;
 }
 /* Billboard */
 .billboard {
-  position:relative;
   width:100%;
-  height:100%;
+  max-height:@largest-first-height;
+  min-height:@frame-height;
   background-color:@main-orange;
 }
 .billboard .container {
   position:relative;
-  z-index:3;
+  z-index:2;
 }
-.britney {
+.heading-img {
   position:absolute;
   z-index:1;
   left:50%;
   top:0;
   width:50%;
   height:100%;
+  background-image:url(http://www.cmcm.com/images/asd/heading-bg.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
 }
 /* Left parts with Slogan on the first screen */
 .opening {
@@ -201,32 +182,25 @@ html, body {
   color:@main-orange;
   background:#fff;
 }
-
-/* Second Screen */
-.second-screen {
-  width:100%;
-  background:#0096ff;
+/* Datas on the right side on the first screen */
+.heading-datas {
+  position:absolute;
+  z-index:2;
+  left:50%;
+  bottom:100px;
+  margin-left:-225px;
+  width:450px;
 }
-.second-screen .container {
-  padding:50px 0;
-}
-.why-me-title {
-  font-size:30px;
-  text-align:center;
-  color:#fff;
-}
-
 .data-item {
   float:left;
   width:150px;
-  border:1px dashed @dark-grey;
-  color:@dark-grey;
+  color:#fff;
 }
 .data-on-top {
   padding:0 5px;
 }
 .data-on-top.with-left-border {
-  border-left:2px solid @main-orange;
+  border-left:2px solid #fff;
 }
 .data-on-top strong, .data-on-top span {
   display:block;
@@ -245,75 +219,107 @@ html, body {
   line-height:18px;
 }
 
-
-
-/* Third Screen */
-.third-screen {
-  width:100%;
-  background:#4e4444;
+/* 3 Products with imgs and texts */
+section.product {
+  height:@frame-height;
+  background:#fff;
+}
+section.product .container {
+  max-width:@pc-container-largest-width;
+}
+section.product.app-lock {
+  background:@main-orange;
+}
+.pro-half {
+  position:relative;
+  width:50%;
+  height:100%;
+  max-width:@pro-half-largest-width;
+}
+.pro-picture {
+  display:block;
+  position:absolute;
+  left:50%;
+  bottom:0;
+}
+.branding-video .pro-picture {
+  margin-left:-230px;
+}
+.app-lock .pro-picture {
+  margin-left:-207.5px;
+}
+.performance-ads .pro-picture {
+  margin-left:-240px;
+}
+.pro-text-box {
+  position:relative;
+  padding:110px 0 0 128px; /* Cause having quote icon */
+}
+.pro-quote-icon {
+  position:absolute;
+  left:0px;
+  top:130px;
+  text-indent:-9999px;
+  width:105px;
+  height:95px;
+  background:url(http://www.cmcm.com/images/asd/quote.png) no-repeat;
+}
+.app-lock .pro-quote-icon {
+  background:url(http://www.cmcm.com/images/asd/quote-dark.png) no-repeat;
+}
+.pro-name {
+  margin-bottom:15px;
+  padding:0 0 0 10px;
+  border-left:3px solid @main-orange;
+  font-size:18px;
+  line-height:18px;
+  color:@dark-grey;
+}
+.pro-slogan {
+  font-size:40px;
+  line-height:48px;
+  color:@dark-grey;
+}
+.pro-texts {
+  margin-top:60px;
+}
+.pro-txt-item {
+  margin:0 0 30px;
+}
+.pro-txt-item.last {
+  margin:0 0 0;
+}
+.pro-txt-item h4 {
+  margin:0 0 10px;
+  font-family:'GothamBold';
+  font-size:20px;
+  color:@dark-grey;
+}
+.pro-txt-item p {
+  font-size:16px;
+  line-height:20px;
+  color:@dark-grey;
+}
+.app-lock .pro-name,
+.app-lock .pro-slogan,
+.app-lock .pro-texts h4,
+.app-lock .pro-texts p {
   color:#fff;
 }
-.third-screen .container {
-  padding:50px 0;
+.app-lock .pro-name {
+  border-left:3px solid #fff;
 }
-
-
-
-
-/* Fourth Screen */
-.fourth-screen {
-  width:100%;
-  background:@main-orange;
-  color:#fafafa;
-}
-.fourth-screen .container {
-  padding:50px 0;
-}
-
-
-
-
-/* Fifth Screen */
-.fifth-screen {
-  width:100%;
-  background:@dark-grey;
-  color:#fafafa;
-}
-.fifth-screen .container {
-  padding:50px 0;
-}
-
-
-
-
-/* Sixth Screen */
-.sixth-screen {
-  width:100%;
-  background:pink;
-  color:#fafafa;
-}
-.sixth-screen .container {
-  padding:50px 0;
-}
-
-
-
-
-
-
-
-
 
 /* Copyright */
-.copyright {
+section.copyright {
   height:100px;
-  background:@dark-grey;
+  background:@main-orange;
 }
-.copyright .container {
-  width:402px;
+section.copyright .container {
+  width:302px;
   font-size:12px;
   line-height:96px;
-  color:#fff;
+  color:#eee;
 }
 .cp-link {
   color:#eee;
@@ -330,6 +336,66 @@ html, body {
 
 /* ===== Responsive Styles ===== */
 @media (max-width: 1488px) {
+  section.product .container {
+    width:90%;
+  }
+}
+@media (max-width: 1388px) {
+  section.product .container {
+    width:95%;
+  }
+}
+@media (max-width: 1288px) {
+  section.product .container {
+    width:98%;
+  }
+}
+@media (max-width: 1188px) {
+  .pro-texts {
+    /* margin-top:60px; */
+  }
+}
+@media (max-width: 1088px) {
+  .pro-slogan {
+    font-size:36px;
+    line-height:40px;
+  }
+  .slg-br {
+    display:none;
+  }
+  .data-on-top strong {
+    font-size:32px;
+  }
+  .data-on-top span {
+    font-size:16px;
+  }
+}
+@media (max-width: 988px) {
+  .pro-quote-icon {
+    display:none;
+  }
+  .pro-text-box {
+    padding:100px 0 0 30px;/* Hide quote icon */
+  }
+  .top-bar .container, .billboard .container {
+    width:96%;
+  }
+}
+@media (max-width: 938px) {
+  .heading-datas {
+    margin-left:-180px;
+    width:360px;
+  }
+  .data-item {
+    width:120px;
+  }
+  .nav-a {
+    font-size:14px;
+    padding:0 10px;
+  }
+  li.has-login, li.get-started {
+    padding-left:10px;
+  }
 }
 
 /* Mobile type display */
@@ -340,6 +406,7 @@ html, body {
     height:20px;
     background-size:150px 20px;
   }
+
   /* Navs become the burger style on mobile */
   .the-burger {
     display:block;
@@ -361,6 +428,7 @@ html, body {
     position:absolute;
     left:0;
     top:60px;
+    z-index:10;
     width:100%;
     height:0px;
     overflow:hidden;
@@ -396,7 +464,7 @@ html, body {
     color:#fff;
   }
 
-  .britney {
+  .heading-img {
     left:0;
     width:100%;
     background-image:url(http://www.cmcm.com/images/asd/head-img-mob-compress.png);
@@ -417,6 +485,11 @@ html, body {
   .big-btn {
     margin:0 auto;
   }
+  .heading-datas {
+    bottom:30px;
+    margin-left:-45%;
+    width:90%;
+  }
   .data-item {
     width:33%;
   }
@@ -431,12 +504,93 @@ html, body {
     line-height:16px;
   }
 
+  section.product {
+    height:auto;
+  }
+  .pro-half {
+    float:none!important;
+    width:100%;
+  }
+  .pro-text-box {
+    padding:40px 10px 20px;
+  }
+  .pro-picture {
+    margin:0 auto;
+    width:68%;
+    position:static!important;
+  }
+  .branding-video .pro-picture,
+  .app-lock .pro-picture,
+  .performance-ads .pro-picture {
+    margin-left:none;
+    margin:0 auto;
+  }
+  .pro-name {
+    font-size:16px;
+    line-height:16px;
+  }
+  .pro-slogan {
+    font-size:24px;
+    line-height:28px;
+  }
+  .pro-texts {
+    margin-top:40px;
+  }
+  .pro-txt-item {
+    margin:0 0 15px;
+  }
+  .pro-txt-item h4 {
+    font-size:16px;
+  }
+  .pro-txt-item p {
+    font-size:14px;
+    line-height:18px;
+  }
 
-  .copyright {
+  section.copyright {
     height:80px;
   }
-  .copyright .container {
+  section.copyright .container {
     line-height:80px;
   }
 
 }
+
+
+
+
+
+
+
+
+
+/* Pop up form */
+.pop-wrap {
+  display:none;
+  position:fixed;
+  z-index:19;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:rgba(0,0,0,.4);
+}
+.pop-container {
+  position:absolute;
+  left:50%;
+  top:100px;
+  width:500px;
+  margin-left:-250px;
+  padding:20px;
+  background:#fafafa;
+  border-radius:4px;
+  border:1px solid #ccc;
+}
+.pop-container input {
+  margin:0 0 20px;
+  height:24px;
+}
+
