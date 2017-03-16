@@ -15,6 +15,10 @@
   <!-- link rel="stylesheet" href="css/responsive.css?v=1109" type="text/css" / -->
   <link rel="Shortcut Icon" href="http://www.cmcm.com/images/favicon.ico">
   <script src="http://www.cmcm.com/js/jquery-1.9.1.min.js"></script>
+<script src="../lib/react-cookie.min.js"></script>
+<script>
+  if( !reactCookie.load('CMWebTester') ){ location.href = '/'; }
+</script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
