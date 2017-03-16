@@ -1,5 +1,6 @@
 /*
-  Latest modified: 2017-03-07 11:44
+  Latest modified: 2017-03-10 14:55
+  Update logo & slogan for Photogrid.
   Make menuMore's content NOT absolute.
 */
 @font-face {
@@ -2030,7 +2031,7 @@ body {
 	float: left;
 	width: 143px;
 	height: 143px;
-	background: url(../images/v3/pg_icon.png) no-repeat;
+	background: url(../images/v3/pg-new-logo-143.png) no-repeat;
 	-moz-background-size: contain;
 	-o-background-size: contain;
 	background-size: contain
@@ -2312,7 +2313,7 @@ body {
 }
 #pg-v2-banner .title {
 	height: 138px;
-	background: url(../images/v3/pg-v2-slogan.png) no-repeat left center
+	background: url(../images/v3/pg-new-slogan.png) no-repeat left center
 }
 #pg-v2-banner .title h2 {
 	text-indent: -999em
@@ -3178,7 +3179,7 @@ body {
 	line-height: 1.25;
 	min-height: 89px;
 	padding: 0 0 0 106px;
-	background: url(../images/v3/pg-v2-logo.png) no-repeat left center
+	background: url(../images/v3/pg-new-logo-90.png) no-repeat left center;
 }
 .pg-v2-join-btn {
 	padding: 43px 0 0 95px
