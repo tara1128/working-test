@@ -1,6 +1,6 @@
 /*
   index.js, trying ES6
-  Latest modified: 2017-03-18 09:19
+  Latest modified: 2017-03-18 09:31
 */
 
 class IndexLogin extends React.Component {
@@ -248,8 +248,8 @@ var cateList = [
   },
   {
     projectName: 'Cheetah Ads Platform',
-    linkTo: 'ads/index.html?0318',
-    latestModified: '2017-03-18 09:19'
+    linkTo: 'ads/index.html?0931',
+    latestModified: '2017-03-18 09:31'
   },
   {
     projectName: 'cmcm.com/en-us',
