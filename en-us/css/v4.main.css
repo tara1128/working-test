@@ -1,7 +1,6 @@
 /*
-  Latest modified: 2017-03-10 14:55
-  Update logo & slogan for Photogrid.
-  Make menuMore's content NOT absolute.
+  Latest modified: 2017-03-21 17:16
+  Update Cheetah Ads links for menus
 */
 @font-face {
 	font-family: 'HelveticaBold';
@@ -165,7 +164,16 @@ body {
 .news-banner span {
 	display: inline;
 	float: right;
-	color: #fcb428
+  margin-top:8px;
+	color: #fcb428;
+  width:110px;
+  height:15px;
+  background:url(http://www.cmcm.com/images/asd/logo.png) no-repeat;
+  background-size:110px 15px;
+  text-indent:-9999px;
+}
+.news-banner span:hover {
+  opacity:0.7;
 }
 #header-fixed {
 	height: 101px;
