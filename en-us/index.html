@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@CleanMaster">
 <meta name="twitter:creator" content="@CleanMaster">
-<link rel="stylesheet" href="css/v4.main.css?v=1143" type="text/css" />
+<link rel="stylesheet" href="css/v4.main.css?v=09901" type="text/css" />
 <script>
 var __FROM='';
 var startTime = new Date().getTime();
@@ -278,6 +278,26 @@ var startTime = new Date().getTime();
 </div>
 <script type="text/javascript" src="js/common.min.js?v=20150808"></script>
 <script type="text/javascript" src="js/lang/lang-change.js?v=20150504"></script>
+<script>
+  var _win = $(window);
+  var _header = $('#header');
+  var _content = $('#menuMore .content');
+  function adjustPos() {
+    if (_win.width() > 768) {
+      var outHeight = _win.height() - _header.height();
+      var innHeight = _content.height();
+      var marginTop = parseInt( Math.floor((outHeight/2) - (innHeight/2)) );
+      marginTop = (marginTop < 20)?(20):(marginTop);
+      _content.css('margin', marginTop + 'px auto 0');
+    } else {
+      _content.css('margin', '20px auto 0');
+    }
+  };
+  adjustPos();
+  $(window).resize(function(){
+    adjustPos();
+  });
+</script>
 <!--test-->
 </body>
 </html>

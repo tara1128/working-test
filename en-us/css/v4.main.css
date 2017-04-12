@@ -1,7 +1,6 @@
 /*
-  Latest modified: 2017-03-21 17:41
-  Update Cheetah Ads links for menus
-  Add slogan for Ads on cn index.
+  Latest modified: 2017-04-07 10:51
+  Merge blog.css styles for "/about" page.
 */
 @font-face {
 	font-family: 'HelveticaBold';
@@ -134,7 +133,7 @@ body {
 .content {
 	position: relative;
 	width: 960px;
-	margin: 0 auto
+	margin: 0 auto;
 }
 .aninode {
 	visibility: hidden
@@ -276,21 +275,24 @@ body {
 	top: 25px \9
 }
 #menus a .more {
-	line-height: 23px;
-	height: 23px;
-	margin-top: -12px;
-	outline: none;
-	background-position: -534px -25px
+	line-height:23px;
+  width:50px;
+	height:24px;
+	margin-top:-12px;
+	outline:none;
+  background:url(../images/v3/burger-more.png) 50% 0 no-repeat;
+  text-indent:-9999px;
+  font-size:0;
 }
 #menus a:hover .more, #menus a.active .more {
-	background-position: -534px -53px
+  opacity:0.8;
 }
 #more span {
-	display: block;
-	height: 23px;
-	margin-top: 36px;
-	padding-left: 35px;
-	background: url(../images/v3/icon.png) no-repeat -130px -1px
+	display:block;
+	height:24px;
+	margin-top:36px;
+	padding-left:35px;
+	/* background:url(../images/v3/icon.png) no-repeat -130px -1px */
 }
 /* The new style of "menumore" */
 #menuMore {
@@ -301,7 +303,7 @@ body {
 	width: 100%;
 	height: 0;
 	background: #000;
-	background: rgba(0, 0, 0, .85);
+	background: rgba(0, 0, 0, .9);
 	_position: absolute;
 }
 #topnotice #menuMore {
@@ -311,27 +313,31 @@ body {
 	top: 84px;
 }
 #topnotice.Front #menuMore .content {
-	padding-bottom: 80px;
+	/* padding-bottom: 80px; */
 }
 #menuMore .content {
-  margin: 60px auto 0;
-	width: 90%;
+  margin: 100px auto 0;
+	width: 100%;
   max-width:1200px;
 }
 #menuMore li.menu-item {
 	font-size: 18px;
 	line-height: 35px;
 	overflow: hidden;
-	margin: 0 0 48px 0;
+	margin: 0 auto 48px;
+  width: 870px; /* 170+680+20 */
 	color: #fff;
+}
+#menuMore li.menu-item.no-margin-bottom {
+	margin: 0 auto 2px;
 }
 #menuMore li.primary {
 	display: none
 }
 #menuMore li h2.menu-name {
   float:left;
-	padding:0 2% 0 0;
-  width:12%;
+	padding:0;
+  width:170px;
 	font-family: 'Gotham-Bold'!important;
 	font-size:18px;
   font-weight:bold;
@@ -339,7 +345,7 @@ body {
 }
 #menuMore li div.menu-box {
   float:right;
-  width:85%;
+  width:680px; /* 225*3=675 */
 }
 
 #menuMore li a {
@@ -349,7 +355,7 @@ body {
   overflow:hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-	color:#aaa;
+	color:#fff;
 	outline:none;
   -webkit-transition: all .4s ease;
   -moz-transition: all .4s ease;
@@ -725,6 +731,43 @@ body {
   line-height:30px;
   color:#fff;
 }
+
+/* Merge styles in blog.css & global.css for page "/about" */
+.banner-about { height:298px; background-color:#EE6100; color:#fff; text-align:center;}
+.banner-text, .banner-icon { display:inline-block; _display:inline; *zoom:1; vertical-align: middle;  padding-top:68px;}
+.banner-text { width:740px;}
+.banner-text h2 { font-size:66px; font-weight:normal;}
+.banner-text p {padding:0 30px;font-size:16px;margin-top:8px;}
+.banner-icon { margin:25px -20px 0 0; padding-left:10px;}
+.body-zh-cn .banner-text { width:auto;}
+.body-zh-cn .banner-text p { padding:0;}
+.body-zh-cn .banner-icon { margin-top:22px;}
+.detail-single { padding:30px 0px;}
+.detail .title { font-size:38px; line-height:1.2;}
+.body-zh-cn .detail .title, .body-zh-tw .detail .title {letter-spacing:1px;}
+
+.detail-text { overflow:hidden; min-height:250px; color:#555; line-height:1.8em;}
+.detail-text h1 { margin-bottom:25px; color:#333; font-size:1.5em;}
+.detail-text h2 { margin-bottom:25px; color:#333; font-size:1.4em;}
+.detail-text h3 { margin:20px 0 0; color:#333; font-size:1.3em;}
+.detail-text h4 { margin:20px 0 0; color:#333; font-size:1.2em;}
+.detail-text h5 { margin:20px 0 0; color:#333; font-size:1.1em;}
+.detail-text h6 { margin:20px 0 0; color:#333; font-size:1em;}
+.detail-text img { max-width:100%;}
+.detail-text img.lazy { background: url(/images/v3/img-loading.gif) no-repeat; width:16px; height:16px; margin:10px auto;}
+.detail-text a { color:#f60;}
+.detail-text a:hover { text-decoration:underline;}
+.detail-text p {margin:0 0 20px;font-size:16px;letter-spacing:0.25px;}
+.detail-text table { width:100%; border-left:1px #ddd solid;border-top:1px #ddd solid;}
+.detail-text th, .detail-text td {border-right:1px #ddd solid;border-bottom:1px #ddd solid; padding:5px;}
+.detail-text th { background:#ED7501; color:#fff;}
+.detail-text tr.first td { background:#F7EADE;}
+.detail-text ol { list-style:outside disc; padding-left:20px;}
+.detail-text ol li p { margin:0; padding:0;}
+.detail-text blockquote { padding: 10px 15px; line-height:1.6em; border-left: 4px #ddd solid;background: #F5F5F5;font-size: .95em; margin-bottom:20px;}
+.detail-text blockquote p { margin-bottom:0;}
+
+
 @media screen and (max-width:540px) {
   .fs-ad .pic {
     width: 80%;
@@ -738,7 +781,14 @@ body {
     margin:0 0 0 -45%;
     width:90%;
   }
+  /* From blog.css: */
+  .banner-text h2 { font-size:26px;}
+  .banner-text p { font-size:12px;}
+  .banner-text p span { display:block;}
+  .banner-icon img { width:60px;}
 }
+
+
 
 .fs-cml .cml-app-bg {
 	top: 50%;
@@ -933,7 +983,7 @@ body {
     display:none!important;
   }
   #menuMore li.menu-item {
-    margin: 0 0 30px 0;
+    margin: 0 auto 30px;
   }
 
   #menuMore li h2.menu-name {
@@ -2026,9 +2076,6 @@ body {
 	background: url(../images/v3/none.gif);
 	filter: alpha(opacity=100)
 }
-.bodyPG #menus a .more {
-	background: url(../images/v3/pg_menumore.png) no-repeat
-}
 .bannerBG {
 	position: absolute;
 	top: -101px;
@@ -2137,7 +2184,7 @@ body {
 	background: #fff
 }
 #pg_features .content {
-	background: url(../images/v3/pg_free.jpg) no-repeat right 10px
+	background:url(../images/v3/pg_free.jpg) no-repeat right 10px;
 }
 #pg_features img {
 	float: left;
@@ -2164,7 +2211,7 @@ body {
 }
 #func_effect .content {
 	padding: 80px 0 105px;
-	background: url(../images/v3/pg_b.jpg) no-repeat right bottom
+	background: url(../images/v3/pg_b.jpg) no-repeat right bottom;
 }
 #func_effect h3 {
 	font-size: 50px;
@@ -3189,7 +3236,7 @@ body {
 	display: block;
 	clear: both;
 	height: 0;
-	content: '\200c'
+	content: '\200c';
 }
 .pg-v2-join-info {
 	float: right;
@@ -3501,93 +3548,93 @@ body {
 }
 .cml-page .content {
 	padding: 70px 0;
-	border-bottom: 1px solid #e4e3e8
+	border-bottom: 1px solid #e4e3e8;
 }
 .cml-page .textbox {
 	width: 500px;
 	margin-top: 60px
 }
 .cml-page .title {
-	font-size: 60px;
-	line-height: 60px;
-	height: 60px;
-	text-indent: -9990em;
-	color: #7f8fdd;
-	background: url(../images/v3/cml_tt.png) no-repeat
+	font-size:60px;
+	line-height:60px;
+	height:60px;
+	text-indent:-9990em;
+	color:#7f8fdd;
+	background:url(../images/v3/cml_tt.png) no-repeat;
 }
 .cml-page .desc {
-	font-size: 24px;
-	line-height: 1.4;
-	margin: 10px 0 40px;
-	color: #7f8fdd
+	font-size:24px;
+	line-height:1.4;
+	margin:10px 0 40px;
+	color:#7f8fdd;
 }
 .cml-page .entry {
-	font-size: 18px;
-	color: #4c4c4c
+	font-size:18px;
+	color:#4c4c4c;
 }
 .cml-page .anibox {
-	position: relative;
-	width: 350px
+	position:relative;
+	width:350px;
 }
 #cml-sleek .content {
-	padding-top: 0
+	padding-top:0;
 }
 #cml-sleek .textbox {
-	margin-top: 100px
+	margin-top:100px;
 }
 #cml-sleek .title {
-	background-position: 0 0
+	background-position:0 0;
 }
 #cml-sleek .anibox img {
-	display: block;
-	width: 100%;
-	margin: 0 auto
+	display:block;
+	width:100%;
+	margin:0 auto;
 }
 #cml-secure .title {
-	background-position: 0 -60px
+	background-position:0 -60px;
 }
 #cml-small .title {
-	background-position: 0 -120px
+	background-position:0 -120px;
 }
 #cml-smart .title {
 	margin-top: 50px;
-	background-position: 0 -180px
+	background-position:0 -180px;
 }
 #cml-secure .anibox {
-	width: 360px;
-	height: 360px;
-	margin-top: 30px
+	width:360px;
+	height:360px;
+	margin-top:30px;
 }
 #cml-secure .anibox img {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 0
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	opacity:0;
 }
 #cml-secure.animated .anibox img {
-	opacity: 1
+	opacity:1;
 }
 #cml-secure .powered {
-	font-size: 18px;
-	line-height: 1.6;
-	position: relative;
-	margin-top: 60px;
-	padding: 30px 0 0 100px;
-	color: #9f9f9f
+	font-size:18px;
+	line-height:1.6;
+	position:relative;
+	margin-top:60px;
+	padding:30px 0 0 100px;
+	color:#9f9f9f;
 }
 #cml-secure .powered i {
-	position: absolute;
-	top: 0;
-	left: 0;
-	overflow: hidden;
-	width: 78px;
-	height: 87px;
-	background: url(../images/v3/cmbc_cer.png) no-repeat 0 -87px
+	position:absolute;
+	top:0;
+	left:0;
+	overflow:hidden;
+	width:78px;
+	height:87px;
+	background:url(../images/v3/cmbc_cer.png) no-repeat 0 -87px;
 }
 #cml-small .anibox {
-	padding-top: 150px
+	padding-top:150px;
 }
 #cml-small .anibox .ball {
 	position: absolute;
@@ -3596,10 +3643,10 @@ body {
 	width: 282px;
 	height: 356px;
 	margin-left: -121px;
-	background: url(../images/v3/cml_small_ball.png) no-repeat
+	background: url(../images/v3/cml_small_ball.png) no-repeat;
 }
 #cml-small .anibox .ball-shadow {
-	background-image: url(../images/v3/cml_small_ball_shadow.png)
+	background-image: url(../images/v3/cml_small_ball_shadow.png);
 }
 #cml-small .anibox .ball .ulbox {
 	font-size: 60px;
@@ -3612,7 +3659,7 @@ body {
 	width: 40px;
 	height: 170px;
 	text-align: center;
-	color: #5f5cbc
+	color: #5f5cbc;
 }
 #cml-small .anibox .ball ul {
 	position: relative;
@@ -3683,45 +3730,41 @@ body {
 	border: 1px solid #e5e5e5;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
-	border-radius: 4px
+	border-radius: 4px;
 }
 #cml-footer .cml-dl .qrcode {
-	height: 60px
+	height: 60px;
 }
 .cml-social {
-	margin-top: 20px
+	margin-top: 20px;
 }
 .bodyCML3d {
-	background: #FFF
+	background: #FFF;
 }
 .bodyCML3d #container-wrap {
-	margin-top: -101px
+	margin-top: -101px;
 }
 .bodyCML3d #header-fixed, .bodyCML3d #header-wrap {
-	background: none
+	background: none;
 }
 .bodyCML3d .fixed #header-wrap {
-	background: url(../images/v3/cml3d-head.jpg) no-repeat center #020b17
+	background: url(../images/v3/cml3d-head.jpg) no-repeat center #020b17;
 }
 .bodyCML3d #header-wrap {
-	border-bottom: 1px solid rgba(255, 255, 255, 0.08)
-}
-.bodyCML3d #menus a .more {
-	font-size: 0;
-	text-indent: -9999px
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .bodyCML3d .mobileModel #container-wrap {
-	height: 100%;
-	padding: 0
+	height:100%;
+	padding:0;
 }
 .bodyCML3d #banner-wrap {
 	background: url(../images/v3/cml3d-banner.jpg) no-repeat center #020b17;
 	-moz-background-size: auto 100%;
 	-o-background-size: auto 100%;
-	background-size: auto 100%
+	background-size: auto 100%;
 }
 .bodyCML3d #banner-wrap {
-	position: relative
+	position:relative;
 }
 .bodyCML3d #banner {
 	padding: 216px 0 150px
@@ -4439,6 +4482,46 @@ a.btn_green:visited {
 	#wrap {
 		min-width: 100%
 	}
+  .detail-single {
+    padding:20px 10px;
+  }
+  .banner-about {
+    height:auto;
+    padding:15px 0;
+  }
+  .banner-text, .banner-icon {
+    width:100%;
+    padding:0;
+    margin:0!important;
+  }
+  .banner-icon {
+    padding-top:10px;
+  }
+  .banner-text h2 {
+    font-size:40px;
+  }
+  .banner-text p {
+    font-size:14px;padding:0 20px;
+  }
+  .banner-icon {
+    margin-right:0;
+  }
+  .banner-icon img {
+    width:80px;
+  }
+
+  .detail .title,
+  .detail-nav,
+  .detail-text,
+  .side-con {
+    padding-left:5px;
+    padding-right:5px;
+  }
+  .detail .title {
+    font-size:24px;
+    padding-top:10px;
+  }
+
 	#footer a:nth-child(4):before {
 		display: block;
 		clear: both;
@@ -7138,21 +7221,10 @@ a.btn_green:visited {
 		padding: 0 10px
 	}
 	#menus a .more {
-		width: 24px;
-		height: 15px;
-		margin-top: -8px;
-		padding-left: 0;
-		text-indent: -9999em;
-		background: url(/images/v3/x2/menu-small-2x.png) no-repeat;
-		-moz-background-size: 100%;
-		-o-background-size: 100%;
-		background-size: 100%
-	}
-	.bodyPG #menus a .more {
-		background-image: url(/images/v3/x2/menu-small-black-2x.png);
-		-moz-background-size: 100%;
-		-o-background-size: 100%;
-		background-size: 100%
+		width:50px;
+		height:24px;
+		margin-top:-10px;
+		padding-left:0;
 	}
 	#menus a:hover .more, #menus a.active .more {
 		background-position: 0 0
@@ -7193,6 +7265,13 @@ a.btn_green:visited {
   #menuMore .content {
     margin: 20px auto 0;
   }
+  #menuMore li.menu-item {
+    width:650px;
+  }
+  #menuMore li div.menu-box {
+    width:460px;
+  }
+
 	#topnotice #menuMore {
 		top: 84px
 	}
@@ -8012,4 +8091,22 @@ a.btn_green:visited {
 /* Fix the bug of video button displaying on iPhone: */
 video::-webkit-media-controls {
   display:none !important;
+}
+
+/* Styles from blog.css for old ie: */
+@media (min-width:801px) and (max-width:1001px) {
+  .ie9 .detail-text img { max-width:500px;}
+}
+@media (min-width:1002px) {
+  .ie9 .detail-text img { max-width:690px;}
+}
+@media (min-width:1300px) {
+  .ie9 .detail-text img { max-width:100%;}
+}
+
+@media (min-width:1300px) {
+	#header, .content {
+		width:auto;
+		max-width:1200px;
+	}
 }
