@@ -1,7 +1,7 @@
 /*
   CSS for PMP Techniques
   Author: Alexandra Wang
-  Latest modified: 2017-05-05 16:11
+  Latest modified: 2017-05-05 19:10
 */
 
 html, body {
@@ -19,8 +19,13 @@ html, body {
   transition:all .4s ease;
 }
 .hiding {
+  display:none;
   background:#aaa;
   color:#fff;
+}
+.hiding.active {
+  display:block;
+  background:#fff;
 }
 
 /* ===== Left Pan ===== */
