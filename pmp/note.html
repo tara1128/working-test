@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
+<meta name="format-detection" content="email=no" />
+<meta name="format-detection" content="address=no" />
+<meta name="format-detection" content="telephone=no" />
+<title>PMP Notes</title>
+<meta name="description" content="PMI,PMP" />
+<meta name="keywords" content="PMI,PMP" />
+<link rel="shortcut icon" href="/images/test.png" type="image/x-icon" />
+<link rel="stylesheet" href="/css/reset.css" type="text/css" />
+<link rel="stylesheet" href="css/note.css" type="text/css" />
+<script src="/lib/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div class="wrapper clearfix" id="myWrap">
+
+  <h1 class="big-title"> --- AlexReader --- </h1>
+
+  <div class="float-panel clearfix">
+    <a class="fl-btn pagebtn to-previous" data-type="-1">Previous</a>
+    <a class="fl-btn show-current" id="BtnShowCurrent"></a>
+    <a class="fl-btn pagebtn to-next" data-type="1">Next</a>
+  </div><!-- float panel, fixed to window -->
+
+  <div class="container clearfix">
+    <div class="left-pan" id="leftPan">
+      <div id="List"></div>
+    </div><!-- left -->
+
+    <div class="right-pan" id="rightPan">
+      <h2 class="right-title">Check out: Page <b id="token"></b></h2>
+      <a class="rotate" id="notRotate" href="dev/index.html">Details !</a>
+      <img class="pmp-img" id="curPage" src="PMPNotes/p5.jpg" alt="PMP" />
+    </div><!-- right -->
+  </div>
+
+</div><!-- #myWrap -->
+<script src="js/note.js"></script>
+</body>
+</html>
