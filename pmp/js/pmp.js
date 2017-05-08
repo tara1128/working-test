@@ -1,7 +1,7 @@
 /*
   Script for PMP Techniques
   Author: Alexandra Wang
-  Latest modified: 2017-05-05 19:10
+  Latest modified: 2017-05-08 15:35
 */
 ;(function(win, doc, $) {
 	var PMPTech = {
@@ -23,24 +23,86 @@
       var me = this;
       me.page = pageObj;
       if (me.processData) me.bindProcessEvent(me);
+      me.bindPopCloseEvent(me);
+    },
+
+    bindPopCloseEvent: function(me) {
+      var _pop = me.page.popMask;
+      var _cls = me.page.popClose;
+      _cls.click(function(){
+        if ( _pop.hasClass(me._actCls) ) {
+          _pop.removeClass(me._actCls).html('');
+          _cls.removeClass(me._actCls);
+        }
+      });
     },
 
     bindProcessEvent: function(me) {
       var processes = me.page.process;
       processes.click(function(){
         var _prc = $(this);
-        var _pid = me._prefix + _prc.attr('data-id'); //'041'
+        var _pid = me._prefix + _prc.attr('data-id'); //'pmp-041'
         var _tid = _prc.attr('data-target'); //'P_D_4'
-        var _con = $('#' + _tid); // Container for details
         var prcDatas = me.processData[_tid].datas;
-        console.log('Clicking ... ', prcDatas);
-        _con.addClass(me._actCls);
+        var _pop = me.page.popMask;
+        var _cls = me.page.popClose;
+        if ( !_pop.hasClass(me._actCls) ) {
+          if (prcDatas[_pid]) me.renderProcessDetail(me, _pop, _cls, prcDatas[_pid]);
+        } else {
+          _pop.removeClass(me._actCls).html('');
+          _cls.removeClass(me._actCls);
+        }
       });
-    }
+    },
 
+    renderProcessDetail: function(me, pop, cls, data) {
+      pop.height(me._doc.height());
+      cls.addClass(me._actCls);
+      var tmpl = '<div class="detail-wrapper">\
+                    <h1 class="detail-title">'+ data.name +'</h1>\
+                    <div class="detail-infos has-trans">\
+                      <span class="detail-kl">知识领域：'+ data.knowledge +' &nbsp;|&nbsp; </span>\
+                      <span class="detail-gp">过程组：'+ data.processGroup +'</span>\
+                    </div>\
+                    <div class="detail-notes">\
+                      <h3>考试要点：</h3>\
+                      <ul class="detail-notes-content clearfix" id="D_KeyNotes"></ul>\
+                    </div>\
+                    <div class="detail-input">\
+                      <h4>输入：</h4>\
+                      <ul class="detail-input-content clearfix" id="D_Input"></ul>\
+                    </div>\
+                    <div class="detail-tools">\
+                      <h4>工具：</h4>\
+                      <ul class="detail-input-content clearfix" id="D_Tools"></ul>\
+                    </div>\
+                    <div class="detail-output">\
+                      <h4>输出：</h4>\
+                      <ul class="detail-input-content clearfix" id="D_Output"></ul>\
+                    </div>\
+                  </div>';
+      pop.addClass(me._actCls).html( tmpl );
+      var keyNotes = data.keyNotes,
+          inputs = data.inputs,
+          tools = data.tools,
+          outputs = data.outputs;
+      if (keyNotes) me.renderListItems(keyNotes, $('#D_KeyNotes'));
+      if (inputs) me.renderListItems(inputs, $('#D_Input'));
+      if (tools) me.renderListItems(tools, $('#D_Tools'));
+      if (outputs) me.renderListItems(outputs, $('#D_Output'));
+    },
 
-
-
+    renderListItems: function(dataArray, container) {
+      var itemsTmpl = '';
+      for (var i = 0; i < dataArray.length; i++) {
+        if (dataArray[i].ext) {
+          itemsTmpl += '<li class="one-item clearfix has-trans"><span class="item-text">'+ dataArray[i].text +'</span> | <a class="item-extend has-trans" href="javascript:;" data-id="'+ dataArray[i].ext +'">Detail</a></li>';
+        } else {
+          itemsTmpl += '<li class="one-item clearfix has-trans"><span class="item-text">'+ dataArray[i].text +'</span></li>';
+        }
+      }
+      container.html( itemsTmpl );
+    },
 
   };
 	win.PMPTech = PMPTech;
@@ -49,7 +111,9 @@
 /* Make it work: */
 (function($) {
   var PMPInstance = {
-    process: $('.P_Process')
+    process: $('.P_Process'),
+    popMask: $('#P_PopMask'),
+    popClose: $('#P_PopClose')
   };
 
   PMPTech.init(PMPInstance);

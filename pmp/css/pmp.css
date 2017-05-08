@@ -1,7 +1,7 @@
 /*
   CSS for PMP Techniques
   Author: Alexandra Wang
-  Latest modified: 2017-05-05 19:10
+  Latest modified: 2017-05-08 15:34
 */
 
 html, body {
@@ -18,17 +18,151 @@ html, body {
   -o-transition:all .4s ease;
   transition:all .4s ease;
 }
-.hiding {
+
+/* ===== Pop up styles ===== */
+.pop-mask {
   display:none;
-  background:#aaa;
+  position:absolute;
+  z-index:100;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;/* Revalued dynamically in JS */
+  background:rgba(0,0,0, .38);
+}
+.pop-mask.active {
+  display:block;
+}
+.pop-close {
+  position:fixed;
+  z-index:120;
+  right:-150px;
+  top:-100px;
+  padding:10px 20px;
+  border-left:1px solid #a0a0a0;
+  border-bottom:1px solid #a0a0a0;
+  color:#dedede;
+  background:rgba(0,0,0, .58);
+  font-size:20px;
+  overflow:hidden;
+  cursor:pointer;
+  border-radius:0 0 0 4px;
+}
+.pop-close.active {
+  right:0px;
+  top:0px;
+}
+.pop-close:hover {
+  padding:12px 22px;
+  border-left:1px solid #fafafa;
+  border-bottom:1px solid #fafafa;
   color:#fff;
 }
-.hiding.active {
-  display:block;
+.detail-wrapper {
+  position:absolute;
+  top:50px;
+  left:50%;
+  margin-left:-450px;
+  padding:50px 0;
+  width:900px;
+  overflow:hidden;
   background:#fff;
+  border-radius:4px;
+}
+.detail-title {
+  margin:0 auto 20px;
+  text-align:center;
+  width:90%;
+  font-size:20px;
+  font-weight:normal;
+  color:#69d2e7;
+}
+.detail-infos,
+.detail-notes,
+.detail-input,
+.detail-tools,
+.detail-output {
+  margin:0 auto 20px;
+  padding:10px 0;
+  width:90%;
+  border-radius:4px;
+  overflow:hidden;
+}
+.detail-infos {
+  text-align:center;
+  border:1px dashed #d5d5d5;
+  background:#fafafa;
+}
+.detail-infos:hover {
+  background:#ededed;
+  border:1px solid #dcdcdc;
+}
+.detail-kl, .detail-gp {
+  font-size:14px;
+  color:#696969;
+}
+.detail-notes h3,
+.detail-input h4, 
+.detail-tools h4,
+.detail-output h4 {
+  margin:0 0 12px;
+  font-size:16px;
+  color:#585858;
 }
 
-/* ===== Left Pan ===== */
+.detail-notes li {
+  margin:0 0 10px 10px;
+  padding:0 5px 0 10px;
+  font-size:14px;
+  color:#585858;
+  border-left:1px dotted #989898;
+  border-bottom:1px dotted #cdcdcd;
+}
+.detail-notes .item-text {
+  line-height:1.5em;
+}
+.detail-notes .item-extend {
+  color:#fa6900;
+}
+.detail-notes .item-extend:hover {
+  color:#69d2e7;
+}
+
+
+.detail-input li,
+.detail-tools li,
+.detail-output li {
+  float:left;
+  margin:5px 10px;
+  padding:10px 15px;
+  font-size:14px;
+  border:1px solid #e0e4cc;
+  border-radius:4px;
+  background:#c6d5cd;
+  text-align:center;
+  color:#585858;
+}
+.detail-input li:hover,
+.detail-tools li:hover,
+.detail-output li:hover {
+  background:#69d2e7;
+  border:1px solid #a7dbdb;
+  color:#fff;
+}
+.detail-input .item-extend,
+.detail-tools .item-extend,
+.detail-output .item-extend {
+  color:#fa6900;
+}
+.detail-input .item-extend:hover,
+.detail-tools .item-extend:hover,
+.detail-output .item-extend:hover {
+  color:#fff;
+}
+
+
+
+/* ===== Main Pan ===== */
 .main-pan {
   margin:0 auto;
   width:96%;

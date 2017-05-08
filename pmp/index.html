@@ -11,13 +11,17 @@
 <meta name="keywords" content="PMI,PMP" />
 <link rel="shortcut icon" href="/images/test.png" type="image/x-icon" />
 <link rel="stylesheet" href="/css/reset.css" type="text/css" />
-<link rel="stylesheet" href="css/pmp.css?1905" type="text/css" />
+<link rel="stylesheet" href="css/pmp.css?1535" type="text/css" />
 <script src="/lib/jquery-1.9.1.min.js"></script>
-<script src="/pmp/datas/integration-management/json.js"></script>
-<script src="/pmp/datas/scope-management/json.js"></script>
-<script src="/pmp/datas/time-management/json.js"></script>
+<script src="/pmp/datas/integration-management/json.js?1535"></script>
+<script src="/pmp/datas/scope-management/json.js?1513"></script>
+<script src="/pmp/datas/time-management/json.js?1535"></script>
 </head>
 <body>
+
+<div class="pop-close has-trans" id="P_PopClose">Close</div>
+<div class="pop-mask" id="P_PopMask"></div>
+
 <div class="wrapper clearfix">
 
   <div class="main-pan">
@@ -54,9 +58,6 @@
             <td class="closing-group">
               <a class="one-process P_Process has-trans" data-id="046" data-target="P_D_4"><s class="has-trans">4.6</s>结束项目或阶段</a>
             </td>
-          </tr>
-          <tr class="hiding mng-integration" id="P_D_4">
-            <td colspan="6">Hiding contents of Integration Management.</td>
           </tr><!-- One line -->
 
           <tr class="knowledge mng-scope">
@@ -74,9 +75,6 @@
               <a class="one-process P_Process has-trans" data-id="056" data-target="P_D_5"><s class="has-trans">5.6</s>控制范围</a>
             </td>
             <td class="closing-group no-process">- None -</td>
-          </tr>
-          <tr class="hiding mng-scope" id="P_D_5">
-            <td colspan="6">Hiding contents of Scope Management.</td>
           </tr><!-- One line -->
 
           <tr class="knowledge mng-time">
@@ -95,9 +93,6 @@
               <a class="one-process P_Process has-trans" data-id="067" data-target="P_D_6"><s class="has-trans">6.7</s>控制进度</a>
             </td>
             <td class="closing-group no-process">- None -</td>
-          </tr>
-          <tr class="hiding mng-time" id="P_D_6">
-            <td colspan="6">Hiding contents of Time Management.</td>
           </tr><!-- One line -->
 
           <!-- Still got 7 knowledges to go! Here is the model structure: -->
@@ -108,9 +103,6 @@
             <td class="executing-group"></td>
             <td class="monitoring-group"></td>
             <td class="closing-group"></td>
-          </tr>
-          <tr class="hiding mng-?? ">
-            <td colspan="6">Hiding contents of ??  Management.</td>
           </tr><One line -->
 
 
@@ -121,6 +113,6 @@
 
   
 </div><!-- .wrapper -->
-<script src="js/pmp.js?1904"></script>
+<script src="js/pmp.js?1535"></script>
 </body>
 </html>
