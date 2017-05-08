@@ -1,7 +1,7 @@
 /*
   CSS for PMP Techniques
   Author: Alexandra Wang
-  Latest modified: 2017-05-08 15:34
+  Latest modified: 2017-05-08 18:04
 */
 
 html, body {
@@ -70,13 +70,22 @@ html, body {
   border-radius:4px;
 }
 .detail-title {
-  margin:0 auto 20px;
+  margin:0 auto 8px;
   text-align:center;
   width:90%;
   font-size:20px;
   font-weight:normal;
   color:#69d2e7;
 }
+.detail-subtitle {
+  margin:0 auto 20px;
+  text-align:center;
+  width:90%;
+  font-size:16px;
+  font-weight:normal;
+  color:#909090;
+}
+
 .detail-infos,
 .detail-notes,
 .detail-input,
@@ -86,7 +95,6 @@ html, body {
   padding:10px 0;
   width:90%;
   border-radius:4px;
-  overflow:hidden;
 }
 .detail-infos {
   text-align:center;
@@ -111,6 +119,7 @@ html, body {
 }
 
 .detail-notes li {
+  position:relative;
   margin:0 0 10px 10px;
   padding:0 5px 0 10px;
   font-size:14px;
@@ -128,10 +137,10 @@ html, body {
   color:#69d2e7;
 }
 
-
 .detail-input li,
 .detail-tools li,
 .detail-output li {
+  position:relative;
   float:left;
   margin:5px 10px;
   padding:10px 15px;
@@ -160,6 +169,47 @@ html, body {
   color:#fff;
 }
 
+.dialog-bubble {
+  position:absolute;
+  z-index:121;
+  right:0px;
+  bottom:0px;
+  padding:0;
+  width:0px;
+  border-radius:4px;
+  border:none;
+  background:#fafafa;
+  overflow:hidden;
+}
+.dialog-bubble.active {
+  padding:10px 15px 15px;
+  width:320px;
+  border:1px dashed #e0e4cc;
+  right:-330px;
+  bottom:30px;
+  box-shadow:2px 2px 8px rgba(0,0,0,.4);
+}
+.dialog-bubble s {
+  position:absolute;
+  right:8px;
+  bottom:4px;
+  font-size:12px;
+  color:#fa6900;
+  cursor:pointer;
+}
+.dialog-bubble s:hover {
+  font-size:14px;
+  font-weight:bold;
+}
+
+.dialog-bubble .dialog-text {
+  display:block;
+  margin:15px 0;
+  text-align:left;
+  color:#989898;
+  font-size:14px;
+  line-height:20px;
+}
 
 
 /* ===== Main Pan ===== */
@@ -167,7 +217,6 @@ html, body {
   margin:0 auto;
   width:96%;
   max-width:1440px;
-  border:1px dashed yellow;
 }
 .tech-contents {
   padding:50px 0;

@@ -3,6 +3,7 @@ id: 4,
 datas: {
     "pmp-041": {
       name: '制定项目章程',
+      engname: 'Develop Project Charter',
       knowledge: '项目整合管理',
       processGroup: '启动过程组',
       keyNotes: [
@@ -30,12 +31,14 @@ datas: {
 
     "pmp-042": {
       name: '制定项目管理计划',
+      engname: 'Develop Project Management Plan',
       knowledge: '项目整合管理',
       processGroup: '规划过程组'
     }, // One process
 
     "pmp-043": {
-      name: 'Direct and Manage Project Work',
+      name: '指导与管理项目执行',
+      engname: 'Direct and Manage Project Work',
       knowledge: 'Project Integration Management',
       processGroup: 'Executing Group'
     } // One process

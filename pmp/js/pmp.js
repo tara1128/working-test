@@ -1,7 +1,7 @@
 /*
   Script for PMP Techniques
   Author: Alexandra Wang
-  Latest modified: 2017-05-08 15:35
+  Latest modified: 2017-05-08 18:04
 */
 ;(function(win, doc, $) {
 	var PMPTech = {
@@ -60,6 +60,7 @@
       cls.addClass(me._actCls);
       var tmpl = '<div class="detail-wrapper">\
                     <h1 class="detail-title">'+ data.name +'</h1>\
+                    <h2 class="detail-subtitle">'+ data.engname +'</h2>\
                     <div class="detail-infos has-trans">\
                       <span class="detail-kl">知识领域：'+ data.knowledge +' &nbsp;|&nbsp; </span>\
                       <span class="detail-gp">过程组：'+ data.processGroup +'</span>\
@@ -96,12 +97,33 @@
       var itemsTmpl = '';
       for (var i = 0; i < dataArray.length; i++) {
         if (dataArray[i].ext) {
-          itemsTmpl += '<li class="one-item clearfix has-trans"><span class="item-text">'+ dataArray[i].text +'</span> | <a class="item-extend has-trans" href="javascript:;" data-id="'+ dataArray[i].ext +'">Detail</a></li>';
+          if (dataArray[i].ext instanceof Array) {
+            var extArray = dataArray[i].ext;
+            var intoDialog = '';
+            extArray.map(function(v, i) {
+              intoDialog += '<span class="dialog-text">'+ v.text + '</span>';
+            });
+            itemsTmpl += '<li class="one-item clearfix has-trans"><span class="item-text">'+ dataArray[i].text +'</span> | <a class="item-extend has-trans D_HasDetailDialog" href="javascript:;">Detail</a><div class="dialog-bubble has-trans D_Dialog">'+ intoDialog +'<s class="D_CloseDialog has-trans">Close</s></div></li>';
+          } else { 
+            itemsTmpl += '<li class="one-item clearfix has-trans"><span class="item-text">'+ dataArray[i].text +'</span> | <a class="item-extend has-trans" href="javascript:;" data-id="'+ dataArray[i].ext +'">Detail</a></li>';
+          }
         } else {
           itemsTmpl += '<li class="one-item clearfix has-trans"><span class="item-text">'+ dataArray[i].text +'</span></li>';
         }
       }
       container.html( itemsTmpl );
+      this.bindDetailDialogEvents(this);
+    },
+
+    bindDetailDialogEvents: function(me) {
+      var detailBtn = $('.D_HasDetailDialog');
+      var detailClsBtn = $('.D_CloseDialog');
+      detailBtn.click(function(){
+        $(this).parent().find('.D_Dialog').addClass(me._actCls);
+      });
+      detailClsBtn.click(function() {
+        $(this).parent().removeClass(me._actCls);
+      });
     },
 
   };

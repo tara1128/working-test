@@ -2,7 +2,8 @@ var Project_Scope_Management = {
 id: 5,
 datas: {
     "pmp-051": {
-      name: 'Plan Scope Management',
+      name: '规划范围管理',
+      engname: 'Plan Scope Management',
       knowledge: 'Project Scope Management',
       processGroup: 'Planning Group',
       keyNotes: [
@@ -27,13 +28,15 @@ datas: {
     }, // One process
 
     "pmp-052": {
-      name: 'name 052',
+      name: '收集需求',
+      engname: '',
       knowledge: '...',
       processGroup: '...'
     }, // One process
 
     "pmp-053": {
-      name: 'name 053',
+      name: '5.3 定义范围',
+      engname: '',
       knowledge: 'ooo',
       processGroup: 'asds'
     } // One process
