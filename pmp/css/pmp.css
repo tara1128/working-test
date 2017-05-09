@@ -1,7 +1,7 @@
 /*
   CSS for PMP Techniques
   Author: Alexandra Wang
-  Latest modified: 2017-05-08 18:04
+  Latest modified: 2017-05-09 14:24
 */
 
 html, body {
@@ -65,7 +65,6 @@ html, body {
   margin-left:-450px;
   padding:50px 0;
   width:900px;
-  overflow:hidden;
   background:#fff;
   border-radius:4px;
 }
@@ -185,8 +184,8 @@ html, body {
   padding:10px 15px 15px;
   width:320px;
   border:1px dashed #e0e4cc;
-  right:-330px;
-  bottom:30px;
+  right:-70%;
+  bottom:40px;
   box-shadow:2px 2px 8px rgba(0,0,0,.4);
 }
 .dialog-bubble s {
