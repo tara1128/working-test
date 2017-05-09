@@ -20,7 +20,9 @@ datas: {
         {text: '会议'}
       ],
       outputs: [
-        {text: '进度管理计划', ext: ''}
+        {text: '进度管理计划', ext: [
+          {text: '作为过程 6.2 - 6.6 的输入'}
+        ]}
       ]
     }, // One process
 
@@ -324,56 +326,86 @@ datas: {
         ]},
         {text: '建模技术', ext: [
           {text: 'Modeling Techniques'},
-          {text: '假设情景分析What-If Scenario Analysis'},
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''},
+          {text: '假设情景分析 What-If Scenario Analysis'},
+          {text: '模拟 Simulation，常用三点估算其概率分布，最常用蒙特卡洛分析Monte Carlo analysis：首先确定每个活动的可能持续时间的概率分布，再计算整个项目的可能工期概率分布'},
+          {text: 'Monte Carlo Analysis，多点估算，比三点估算（PERT）和单点估算（CPM）更准确'},
+          {text: 'Monte Carlo Analysis 考虑了“路径汇聚”对项目进度的影响，更接近现实'},
+          {text: '路径汇聚Path Convergence：在进度的某个节点上有数个并行的活动，此节点风险最高，这里并行的任何一个活动的延迟都可能导致项目延期'},
+          {text: '例题：活动A、B、C并行汇聚于X点，三者全部完成后，活动D才能开始，ABC在5天内完成的概率都是50%，则D在第6天开始的概率是？答：50% * 50% * 50% = 12.5%'},
+          {text: 'Monte Carlo Analysis 也可用于成本估算'},
         ]},
         {text: '提前量与滞后量'},
-        {text: '进度压缩'},
+        {text: '进度压缩', ext: [
+          {text: 'Schedule Compression，进度压缩的前提是不缩减项目范围！'},
+          {text: '进度压缩所用于关键路径'},
+          {text: '压缩后，关键路径可能发生变化，产生新的关键路径'},
+          {text: '进度压缩两个方法：赶工（赶进度）& 快速跟进'},
+          {text: '赶工Crashing，即常说的加班、加人、加资源，会导致成本增加，风险增加（压缩活动本身的时间，即计划3天做完的事赶在1天做完）'},
+          {text: '快速跟进Fast Tracking，改变活动之间的逻辑关系，原本顺序执行的活动，改为并行，可能造成返工和风险增加。也会改变项目进度网络图（不压缩活动本身的时间）'},
+        ]},
         {text: '进度计划编制工具'}
       ],
       outputs: [
-        {text: '进度基准', ext: ''},
-        {text: '项目进度计划', ext: ''},
-        {text: '进度数据', ext: ''},
-        {text: '项目日历', ext: ''},
+        {text: '进度基准', ext: [
+          {text: '被批准的进度模型，想变更必须经过正式的变更控制程序'},
+          {text: '此基准用作与实际结果相比较的依据'}
+        ]},
+        {text: '项目进度计划', ext: [
+          {text: '进度计划有三个类型：'},
+          {text: '里程碑图：只标出主要的可交付成果和关键外部接口的计划开始和完成日期，一般用于向客户展示'},
+          {text: '横道图（甘特图、二维横道图）：标识出每个活动的预期持续时间，日期在横轴、进度在纵轴，没有逻辑关系，用于向管理层汇报'},
+          {text: '时标进度网络图（逻辑甘特图）：详细的进度计划，既有活动的持续时间，也有活动之间的逻辑关系，用于项目团队自己人看'}
+        ]},
+        {text: '进度数据', ext: [
+          {text: '描述和控制进度计划的信息集合'},
+          {text: '至少包括：进度里程碑、进度活动、活动属性、制约因素'}
+        ]},
+        {text: '项目日历', ext: [
+          {text: '规定可以开展项目活动的工作日和班次'},
+          {text: '把可用于项目活动的时间段和不可用的时间段区分开'},
+          {text: '可能需要不止一个项目日历'},
+        ]},
         {text: '项目管理计划更新', ext: ''},
         {text: '项目文件更新', ext: ''}
       ]
     }, // One process
 
     "pmp-067": {
-      name: '6.7 ',
-      engname: '',
+      name: '6.7 控制进度',
+      engname: 'Control Schedule',
       knowledge: '项目时间管理',
       processGroup: '监控过程组',
       keyNotes: [
-        {text: ''},
-        {text: ''},
-        {text: ''}
+        {text: '监督项目活动状态、更新项目进展、管理进度基准变更'},
+        {text: '发现计划偏离，及时纠正和预防，降低风险'},
+        {text: '项目时间管理的大部分工作都在控制进度中！'}
       ],
       inputs: [
-        {text: '', ext: ''},
-        {text: '', ext: ''},
-        {text: '', ext: ''},
+        {text: '项目管理计划', ext: ''},
+        {text: '项目进度计划', ext: [{text: '6.6 制定进度计划的输出'}]},
+        {text: '工作绩效数据', ext: ''},
+        {text: '项目日历', ext: [{text: '6.6 制定进度计划的输出'}]},
+        {text: '进度数据', ext: [{text: '6.6 制定进度计划的输出'}]},
         {text: '事业环境因素和组织过程资产', ext: 'global-01'}
       ],
       tools: [
-        {text: '专家判断'},
-        {text: ''},
-        {text: ''}
+        {text: '绩效审查'},
+        {text: '项目管理软件'},
+        {text: '资源优化技术'},
+        {text: '建模技术'},
+        {text: '提前量与滞后量'}
+        {text: '进度压缩'},
+        {text: '进度计划编制工具'}
       ],
       outputs: [
-        {text: '', ext: ''},
-        {text: '', ext: ''},
-        {text: '', ext: ''}
+        {text: '工作绩效信息', ext: ''},
+        {text: '进度预测', ext: ''},
+        {text: '变更请求', ext: ''},
+        {text: '项目管理计划更新', ext: ''},
+        {text: '项目文件更新', ext: ''},
+        {text: '组织过程资产更新', ext: ''}
       ]
     } // One process
 }, // End of datas
 
-extensions: {
-
-} // End of extensions
 };
