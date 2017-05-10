@@ -4,8 +4,8 @@ datas: {
     "pmp-061": {
       name: '6.1 规划进度管理',
       engname: 'Plan Schedule Management',
-      knowledge: '项目时间管理',
-      processGroup: '规划过程组',
+      knowledge: '项目时间管理 <b>Project Time Management</b>',
+      processGroup: '规划过程组 <b>Planning Process Group</b>',
       keyNotes: [
         {text: '为管理项目进度提供指南和方向，制定政策、程序和文档'},
       ],
@@ -29,8 +29,8 @@ datas: {
     "pmp-062": {
       name: '6.2 定义活动',
       engname: 'Define Activity',
-      knowledge: '项目时间管理',
-      processGroup: '规划过程组',
+      knowledge: '项目时间管理 <b>Project Time Management</b>',
+      processGroup: '规划过程组 <b>Planning Process Group</b>',
       keyNotes: [
         {text: '识别和记录具体的活动'},
         {text: '活动表示完成工作包所需的投入'},
@@ -79,8 +79,8 @@ datas: {
     "pmp-063": {
       name: '6.3 排列活动顺序',
       engname: 'Sequence Activities',
-      knowledge: '项目时间管理',
-      processGroup: '规划过程组',
+      knowledge: '项目时间管理 <b>Project Time Management</b>',
+      processGroup: '规划过程组 <b>Planning Process Group</b>',
       keyNotes: [
         {text: '识别和记录项目活动之间的逻辑关系'},
         {text: '定义工作之间的逻辑顺序，以便在既定的制约因素下获得较高效率'}
@@ -142,8 +142,8 @@ datas: {
     "pmp-064": {
       name: '6.4 估算活动资源',
       engname: 'Estimate Activity Resources',
-      knowledge: '项目时间管理',
-      processGroup: '规划过程组',
+      knowledge: '项目时间管理 <b>Project Time Management</b>',
+      processGroup: '规划过程组 <b>Planning Process Group</b>',
       keyNotes: [
         {text: '本过程只估算有形资源，时间作为资源在6.5中估算'},
         {text: '估算活动所需的材料、人员、设备、用品的种类和数量'},
@@ -196,8 +196,8 @@ datas: {
     "pmp-065": {
       name: '6.5 估算活动持续时间',
       engname: 'Estimate Activity Durations',
-      knowledge: '项目时间管理',
-      processGroup: '规划过程组',
+      knowledge: '项目时间管理 <b>Project Time Management</b>',
+      processGroup: '规划过程组 <b>Planning Process Group</b>',
       keyNotes: [
         {text: '也叫做“估算任务工期”，根据资源估算结果，来估算每个活动所需工期（不含节假日）'},
         {text: '确定完成每个活动所需的时间量，为制定进度计划过程(6.6)提供输入'},
@@ -273,8 +273,8 @@ datas: {
     "pmp-066": {
       name: '6.6 制定进度计划',
       engname: 'Develop Schedule',
-      knowledge: '项目时间管理',
-      processGroup: '规划过程组',
+      knowledge: '项目时间管理 <b>Project Time Management</b>',
+      processGroup: '规划过程组 <b>Planning Process Group</b>',
       keyNotes: [
         {text: '分析活动顺序、持续时间、资源需求、进度制约因素，创建项目进度模型'}
       ],
@@ -373,8 +373,8 @@ datas: {
     "pmp-067": {
       name: '6.7 控制进度',
       engname: 'Control Schedule',
-      knowledge: '项目时间管理',
-      processGroup: '监控过程组',
+      knowledge: '项目时间管理 <b>Project Time Management</b>',
+      processGroup: '监控过程组 <b>Monitoring and Controlling Process Group</b>',
       keyNotes: [
         {text: '监督项目活动状态、更新项目进展、管理进度基准变更'},
         {text: '发现计划偏离，及时纠正和预防，降低风险'},
