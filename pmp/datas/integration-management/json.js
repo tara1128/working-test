@@ -80,8 +80,8 @@ datas: {
         {text: ''}
       ],
       outputs: [
-        {text: '', ext: []}
-        {text: ''}
+        {text: '', ext: []},
+        {text: ''},
         {text: ''}
       ]
     }, // One process
@@ -107,8 +107,8 @@ datas: {
         {text: ''}
       ],
       outputs: [
-        {text: '', ext: []}
-        {text: ''}
+        {text: '', ext: []},
+        {text: ''},
         {text: ''}
       ]
     }, // One process
@@ -134,8 +134,8 @@ datas: {
         {text: ''}
       ],
       outputs: [
-        {text: '', ext: []}
-        {text: ''}
+        {text: '', ext: []},
+        {text: ''},
         {text: ''}
       ]
     }, // One process
@@ -161,8 +161,8 @@ datas: {
         {text: ''}
       ],
       outputs: [
-        {text: '', ext: []}
-        {text: ''}
+        {text: '', ext: []},
+        {text: ''},
         {text: ''}
       ]
     }, // One process
@@ -188,8 +188,8 @@ datas: {
         {text: ''}
       ],
       outputs: [
-        {text: '', ext: []}
-        {text: ''}
+        {text: '', ext: []},
+        {text: ''},
         {text: ''}
       ]
     } // One process
