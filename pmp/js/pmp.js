@@ -17,7 +17,8 @@
     processData: {
       'P_D_4': Project_Integration_Management,
       'P_D_5': Project_Scope_Management,
-      'P_D_6': Project_Time_Management
+      'P_D_6': Project_Time_Management,
+      'P_D_7': Project_Cost_Management
     },
     init: function(pageObj) {
       var me = this;

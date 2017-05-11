@@ -13,9 +13,10 @@
 <link rel="stylesheet" href="/css/reset.css" type="text/css" />
 <link rel="stylesheet" href="css/pmp.css?1424" type="text/css" />
 <script src="/lib/jquery-1.9.1.min.js"></script>
-<script src="/pmp/datas/integration-management/json.js?1804"></script>
+<script src="/pmp/datas/integration-management/json.js?1442"></script>
 <script src="/pmp/datas/scope-management/json.js?1840"></script>
 <script src="/pmp/datas/time-management/json.js?1125"></script>
+<script src="/pmp/datas/cost-management/json.js?1411"></script>
 </head>
 <body>
 
@@ -71,7 +72,7 @@
             </td>
             <td class="executing-group no-process">- None -</td>
             <td class="monitoring-group">
-              <a class="one-process P_Process has-trans" data-id="055" data-target="P_D_5"><s class="has-trans">5.5</s>核实范围</a>
+              <a class="one-process P_Process has-trans" data-id="055" data-target="P_D_5"><s class="has-trans">5.5</s>确认范围</a>
               <a class="one-process P_Process has-trans" data-id="056" data-target="P_D_5"><s class="has-trans">5.6</s>控制范围</a>
             </td>
             <td class="closing-group no-process">- None -</td>
@@ -95,9 +96,26 @@
             <td class="closing-group no-process">- None -</td>
           </tr><!-- One line -->
 
-          <!-- Still got 7 knowledges to go! Here is the model structure: -->
+          <tr class="knowledge mng-cost">
+            <th class="knowledge-of-cost">项目成本管理</th>
+            <td class="initiating-group no-process">- None -</td>
+            <td class="planning-group">
+              <a class="one-process P_Process has-trans" data-id="071" data-target="P_D_7"><s class="has-trans">7.1</s>规划成本管理</a>
+              <a class="one-process P_Process has-trans" data-id="072" data-target="P_D_7"><s class="has-trans">7.2</s>估算成本</a>
+              <a class="one-process P_Process has-trans" data-id="073" data-target="P_D_7"><s class="has-trans">7.3</s>制定预算</a>
+            </td>
+            <td class="executing-group no-process">- None -</td>
+            <td class="monitoring-group">
+              <a class="one-process P_Process has-trans" data-id="074" data-target="P_D_7"><s class="has-trans">7.4</s>控制成本</a>
+            </td>
+            <td class="closing-group no-process">- None -</td>
+          </tr><!-- One line -->
+
+
+
+          <!-- Still got 6 knowledges to go! Here is the model structure: -->
           <!-- tr class="knowledge mng-?? ">
-            <td class="knowledge-of-?? "></td>
+            <th class="knowledge-of-?? "></th>
             <td class="initiating-group"></td>
             <td class="planning-group"></td>
             <td class="executing-group"></td>
@@ -113,6 +131,6 @@
 
   
 </div><!-- .wrapper -->
-<script src="js/pmp.js?1804"></script>
+<script src="js/pmp.js?1410"></script>
 </body>
 </html>
