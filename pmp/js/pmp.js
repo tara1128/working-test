@@ -1,7 +1,7 @@
 /*
   Script for PMP Techniques
   Author: Alexandra Wang
-  Latest modified: 2017-05-08 18:04
+  Latest modified: 2017-05-12 14:53
 */
 ;(function(win, doc, $) {
 	var PMPTech = {
@@ -57,8 +57,6 @@
     },
 
     renderProcessDetail: function(me, pop, cls, data) {
-      pop.height(me._doc.height());
-      cls.addClass(me._actCls);
       var tmpl = '<div class="detail-wrapper">\
                     <h1 class="detail-title">'+ data.name +'</h1>\
                     <h2 class="detail-subtitle">'+ data.engname +'</h2>\
@@ -84,6 +82,7 @@
                     </div>\
                   </div>';
       pop.addClass(me._actCls).html( tmpl );
+      cls.addClass(me._actCls);
       var keyNotes = data.keyNotes,
           inputs = data.inputs,
           tools = data.tools,
@@ -92,6 +91,7 @@
       if (inputs) me.renderListItems(inputs, $('#D_Input'));
       if (tools) me.renderListItems(tools, $('#D_Tools'));
       if (outputs) me.renderListItems(outputs, $('#D_Output'));
+      pop.height(me._doc.height());
     },
 
     renderListItems: function(dataArray, container) {
