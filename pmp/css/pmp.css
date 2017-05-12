@@ -1,7 +1,7 @@
 /*
   CSS for PMP Techniques
   Author: Alexandra Wang
-  Latest modified: 2017-05-09 14:24
+  Latest modified: 2017-05-12 16:06
 */
 
 html, body {
@@ -60,7 +60,7 @@ html, body {
 }
 .detail-wrapper {
   position:absolute;
-  top:50px;
+  top:80px;
   left:50%;
   margin-left:-450px;
   padding:50px 0;
@@ -182,9 +182,9 @@ html, body {
 }
 .dialog-bubble.active {
   padding:10px 15px 15px;
-  width:320px;
+  width:400px;
   border:1px dashed #e0e4cc;
-  right:-70%;
+  right:-80%;
   bottom:40px;
   box-shadow:2px 2px 8px rgba(0,0,0,.4);
 }
