@@ -1,7 +1,7 @@
 /*
   Script for PMP Techniques
   Author: Alexandra Wang
-  Latest modified: 2017-05-12 14:53
+  Latest modified: 2017-05-15 15:27
 */
 ;(function(win, doc, $) {
 	var PMPTech = {
@@ -100,11 +100,12 @@
         if (dataArray[i].ext) {
           if (dataArray[i].ext instanceof Array) {
             var extArray = dataArray[i].ext;
+            var cusWidth = (dataArray[i].cusWidth)?(dataArray[i].cusWidth):(320);
             var intoDialog = '';
             extArray.map(function(v, i) {
               intoDialog += '<span class="dialog-text">'+ v.text + '</span>';
             });
-            itemsTmpl += '<li class="one-item clearfix has-trans"><span class="item-text">'+ dataArray[i].text +'</span> | <a class="item-extend has-trans D_HasDetailDialog" href="javascript:;">Detail</a><div class="dialog-bubble has-trans D_Dialog">'+ intoDialog +'<s class="D_CloseDialog has-trans">Close</s></div></li>';
+            itemsTmpl += '<li class="one-item clearfix has-trans"><span class="item-text">'+ dataArray[i].text +'</span> | <a class="item-extend has-trans D_HasDetailDialog" href="javascript:;">Detail</a><div class="dialog-bubble has-trans D_Dialog" style="width:'+ cusWidth +'px;">'+ intoDialog +'<s class="D_CloseDialog has-trans">Close</s></div></li>';
           } else { 
             itemsTmpl += '<li class="one-item clearfix has-trans"><span class="item-text">'+ dataArray[i].text +'</span> | <a class="item-extend has-trans" href="javascript:;" data-id="'+ dataArray[i].ext +'">Detail</a></li>';
           }

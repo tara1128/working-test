@@ -7,174 +7,199 @@ datas: {
       knowledge: '项目成本管理 <b>Project Cost Management</b>',
       processGroup: '规划过程组 <b>Planning Process Group</b>',
       keyNotes: [
-        {text: ''},
-        {text: ''},
-        {text: ''},
-        {text: ''},
-        {text: ''}
+        {text: '生命周期成本life-cycle costing：虽然项目成本管理重点关注的是完成项目活动所需的资源成本，但也要考虑项目产品、成果的使用成本、维护成本等。例如一个打印机，除了购买成本，还有后期不断购买墨盒需要的成本（不只是产品本身的成本，还有后期运营成本，就是生命周期成本）'},
+        {text: '可变成本Variable Cost：随生产量和工作量而变的成本，例如人员工资、消耗的原材料。'},
+        {text: '固定成本Fixed Cost：不随生产规模变化的非重复成本，如设备费用、场地租赁费。'},
+        {text: '直接成本Direct Cost：直接属于这一个项目的成本，如项目组人员工资奖金、使用的物资。'},
+        {text: '间接成本Indirect Cost：多个项目分摊的成本。如购买某软件用于多个项目；又如财务、行政费用。'},
+        {text: '注意：项目经理不能控制的是【间接成本】！'},
+        {text: '沉没成本Sunk Cost：目前为止已花掉的成本，与是否合理无关，做决策时绝对不考虑沉没成本！'},
+        {text: '机会成本Opportunity Cost：因选择项目B而放弃另一个项目A，则被放弃的项目A可能带来的收益就是被选择的项目B的机会成本！例如：A当前净值¥20K，B当前净值¥60K，选择项目B的机会成本是？答：¥20K。'},
+        {text: '收益递减规律Law of diminishing returns：随投入的增加，单位投入的产出会呈逐渐减少的趋势（例如：减肥第一个月减掉8斤，第二个月只减掉5斤，想再减掉8斤则需要3个月而不是1个月了……）'},
+        {text: '边际分析Marginal analysis：追加的支出和追加的收入相等时为临界点，此时取得最大利润。根据收益递减规律，不能再追加支出了！（例：客车上每来一位乘客，司机的收入是座位钱，支出是一瓶水。当座位刚好坐满，利润最大。不能再追加支出了。再来乘客（超载罚款？），利润会下降！）'},
+        {text: '折旧Depreciation：固定资产随时间产生的逐渐损耗。折旧可以抵扣所得税。假设企业年底收入100万，应交25%的所得税，即25万。但是如果100万中有40万折旧，应交所得税为 (100-40) * 25%'},
+        {text: '在固定资产的使用过程中，要把相当于损耗的钱从销售收入中提取出来，以便以后购买新的固定资产！'},
+        {text: '直线折旧发现Straight-line Method：8000元电脑四年报废，每年折旧2000元！'},
+        {text: '加速折旧Accelerated Depreciation：8000元电脑第一年折旧4000元、第二年折旧2000元，第三年折旧1000元……对于企业来说，在税上有利的是加速折旧！'}
       ],
       inputs: [
-        {text: ''},
-        {text: ''},
-        {text: '事业环境因素和组织过程资产', ext: 'global-01'}
+        {text: '1. 项目管理计划', ext: [{text: '4.2 制定项目管理计划的输出'}]},
+        {text: '2. 项目章程', ext: [{text: '4.1 制定项目章程的输出'}]},
+        {text: '3. 事业环境因素和组织过程资产'}
       ],
       tools: [
-        {text: ''},
-        {text: ''}
+        {text: '1. 专家判断'},
+        {text: '2. 分析技术', cusWidth: 600, ext: [
+          {text: '规划成本管理的分析技术有6个指标：'},
+          {text: '1. 现金流贴现Discounted cash flow：货币的时间价值。今天的1元比明天的1元更值钱！现值PV：Present Value。将来值FV：Future Value。利率R：Interest Rate。时间期数N：Number of time period'},
+          {text: ' ---- PV = FV/(1+R)n (n次方) 是银行计算利息的标准公式。R就是银行利率，也就是折现率'},
+          {text: '2. 净现值NPV：Net Present Value，考虑风险（通胀、政治等）把未来的现金流折算成现值，以此计算项目的净货币收益或损失。NPV = 收入现值PV - 支出现值PV （注：PV通过公式，用FV和R、N共同求得！）NPV越大越好，NPV小于0的项目不能接受！'},
+          {text: '3. 投资回收期Payback Period：多久把投资收回来，NPV = 0时。投资回收期 = 项目建设期 + 投产后运营利润。静态分析法（现投入100万，每年回收20万，回收期为五年，不考虑货币的时间价值）；动态分析法（考虑货币的时间价值，把未来每年的收入20万折算成现值19余万）'},
+          {text: '4. 投资回报率ROI：Return on Investment，年均利润与投资额之比。是静态分析法，不考虑货币的时间价值。例如，今年投入100万，一年后收回20万，ROI为20%。'},
+          {text: '5. 内部报酬率IRR：Internal Rate of Return，项目现金流入量现值等于现金流出量现值时的折现率（为收回投资，每年的净收益率）是一种特殊的折现率！！！IRR越高越好，考虑了货币的时间价值，是动态分析法。当IRR小于i0时，项目不可接受！（i0是资本成本，是指向银行借钱时，需支付的利息或成本）'},
+          {text: '6. 收益成本比BCR：Benefit Cost Ratio，收益与成本之比，大于1时才值得做！（收益Benefit是指收入Revenue或回报Payback，而不是单纯指利润Profit）（Profit/Cost 小于1没事儿，但是Benefit/Cost必须大于1！）'}
+        ]},
+        {text: '3. 会议'}
       ],
       outputs: [
-        {text: '', ext: [
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''}
-        ]},
-        {text: '', ext: [
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''}
-        ]},
+        {text: '成本管理计划'}
       ]
     }, // One process
 
     "pmp-072": {
       name: '7.2 估算成本',
-      engname: '',
+      engname: 'Estimate Costs',
       knowledge: '项目成本管理 <b>Project Cost Management</b>',
       processGroup: '规划过程组 <b>Planning Process Group</b>',
       keyNotes: [
-        {text: ''},
-        {text: ''},
-        {text: ''},
-        {text: ''}
+        {text: '估算每个活动所需资金，在某个特定时间点，做出的成本预测！要权衡备选成本方案并考虑风险！'},
+        {text: '估算成本渐进明细：启动阶段：量级估算ROM。随着进展后，确定性估算。'},
+        {text: '估算活动的成本与估算活动持续时间，所用方法一样的，如专家判断、类比估算、参数估算、三点估算、储备分析。'}
       ],
       inputs: [
-        {text: '', ext: [{text: ''}]},
-        {text: '', ext: [{text: ''}]},
-        {text: '', ext: [{text: ''}]},
-        {text: '', ext: [{text: ''}]},
-        {text: '事业环境因素和组织过程资产', ext: 'global-01'}
+        {text: '1. 成本管理计划', ext: [{text: '7.1 规划成本管理的输出'}]},
+        {text: '2. 人力资源管理计划', ext: [{text: '9.1 规划人力资源管理的输出'}]},
+        {text: '3. 范围基准', ext: [{text: '5.4 创建WBS的输出'}]},
+        {text: '4. 项目进度计划', ext: [{text: '6.6 制定进度计划的输出'}]},
+        {text: '5. 风险登记册'},
+        {text: '6. 事业环境因素和组织过程资产'}
       ],
       tools: [
-        {text: '', ext: [
-          {text: ''},
-          {text: ''}
+        {text: '1. 专家判断'},
+        {text: '2. 类比估算', ext: [{text: '参考讲义125-126页'}]},
+        {text: '3. 参数估算', ext: [{text: '参考讲义127页'}]},
+        {text: '4. 自下而上估算', cusWidth: 420, ext: [
+          {text: 'Bottom-Up Estimating'},
+          {text: '先对单个工作包或活动做细致、具体的估算'},
+          {text: '然后向上汇总、滚动到更高层次，用于后续报告和跟踪'},
+          {text: '其准确性和估算本身所需的成本，取决于工作包或活动的规模和复杂程度'}
         ]},
-        {text: '', ext: [
-          {text: ''},
-          {text: ''},
-          {text: ''}
+        {text: '5. 三点估算', ext: [{text: '参考讲义128-130页'}]},
+        {text: '6. 储备分析', cusWidth: 450, ext: [
+          {text: 'Reserve Analysis，成本估算中要包含应急储备contingency reserves，也称应急费用contingency allowances。'},
+          {text: '应急储备是包含在成本基准内的一部分预算，有针对性的应对已识别的风险。'},
+          {text: '随项目越来越明晰，可以动用、减少或取消应急储备！'},
+          {text: '注：管理储备Management Reserve：为管理控制而特别留出的项目预算。应对未知风险。不包含在成本基准中！但属于项目总预算！动用管理储备，需要得到管理层批准，并将其增加到成本基准中，同时导致成本基准变更，以及文件更新！'}
         ]},
-        {text: '', ext: [
-          {text: ''},
-          {text: ''}
-        ]}
+        {text: '7. 质量成本'},
+        {text: '8. 项目管理软件'},
+        {text: '9. 卖房投标分析'},
+        {text: '10. 群体决策技术'}
       ],
       outputs: [
-        {text: '', ext: [
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''}
+        {text: '1. 活动成本估算', cusWidth: 400, ext: [
+          {text: '每个活动的成本包括：直接成本、间接成本、应急储备！无沉没成本！'},
+          {text: '活动成本估算是对完成项目工作可能需要的成本的量化估算！且覆盖活动所需的全部资源'}
         ]},
-        {text: '', ext: [
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''}
-        ]}
+        {text: '2. 估算依据'},
+        {text: '3. 项目文件更新'}
       ],
     }, // One process
 
     "pmp-073": {
       name: '7.3 制定预算',
-      engname: '',
+      engname: 'Determine Budget',
       knowledge: '项目成本管理 <b>Project Cost Management</b>',
       processGroup: '规划过程组 <b>Planning Process Group</b>',
       keyNotes: [
-        {text: ''},
-        {text: ''}
+        {text: '汇总所有单个活动或工作包的估算成本7.2，建立一个经批准的【成本基准】！'},
+        {text: '确定成本基准，据此可以监督和控制项目绩效'},
+        {text: '【成本基准】是经过批准且按照时间段分配的项目预算，不包括管理储备！'},
+        {text: '【项目预算】是经过批准用于项目的全部资金，包括批准后的管理储备！'}
       ],
       inputs: [
-        {text: '', ext: [{text: ''}]},
-        {text: ''},
-        {text: '', ext: [{text: ''}]},
-        {text: '事业环境因素和组织过程资产', ext: 'global-01'}
+        {text: '1. 成本管理计划', ext: [{text: '7.1 规划成本管理的输出'}]},
+        {text: '2. 范围基准', ext: [{text: '5.4 创建WBS的输出'}]},
+        {text: '3. 活动成本估算', ext: [{text: '7.2 估算成本的输出'}]},
+        {text: '4. 估算依据', ext: [{text: '7.2 估算成本的输出'}]},
+        {text: '5. 项目进度计划', ext: [{text: '6.6 制定进度计划的输出'}]},
+        {text: '6. 资源日历', ext: [
+          {text: '9.2 组建项目团队的输出'},
+          {text: '6.4 估算活动资源的输入也有资源日历'}
+        ]},
+        {text: '7. 风险登记册'},
+        {text: '8. 协议'},
+        {text: '9. 事业环境因素和组织过程资产'}
       ],
       tools: [
-        {text: ''},
-        {text: '', ext: [
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''}
+        {text: '1. 成本汇总', cusWidth: 450, ext: [
+          {text: 'Cost Aggregation：先以WBS工作包为单位对活动成本估算进行汇总；再汇总到WBS的更高层次如控制账户；最终得出整个项目的总成本（制定预算的基本技术，自下而上）。见讲义167页第一个图！'},
+          {text: '需要对汇总结果做交叉验证、适当调整（储备分析、历史关系、资金限制平衡）'},
+          {text: '公式：成本基准 + 管理储备 = 项目预算'},
+          {text: '例题：一个项目预算82500美元，而管理层掌握的管理储备为1000美元，问该项目的成本基准是多少美元？答：82500-1000=81500美元'},
         ]},
-        {text: '', ext: [
-          {text: ''},
-          {text: ''},
-          {text: ''}
-        ]}
+        {text: '2. 储备分析'},
+        {text: '3. 专家判断'},
+        {text: '4. 历史关系'},
+        {text: '5. 资金限制平衡'}
       ],
       outputs: [
-        {text: '', ext: [
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''}
+        {text: '1. 成本基准', cusWidth: 450, ext: [
+          {text: 'Cost Baseline，经批准的、按时间段分配的项目预算，不含管理储备'},
+          {text: '是不同进度活动经批准的预算总和。用S曲线表示（168页第一个图）'},
+          {text: '成本基准中既包括预计的支出，也包括预计的债务'}
         ]},
-        {text: ''}
+        {text: '2. 项目资金需求', cusWidth: 450, ext: [
+          {text: 'Project Funding Requirements，根据成本基准，确定总体需求和阶段性资金需求'},
+          {text: '总资金需求 = 成本基准 + 管理储备'},
+          {text: '参考169页的图，支出（虚线）和成本基准（黑实线）相交的点，表示动用了应急储备；支出（虚线）超过了成本基准（黑实线），表示动用了管理储备！成本基准与实际支出之间的差额，就是应急储备。尚有差额时，表示已知风险没有发生。'}
+        ]},
+        {text: '3. 项目文件更新'}
       ],
     }, // One process
 
     "pmp-074": {
       name: '7.4 控制成本',
-      engname: '',
+      engname: 'Control Costs',
       knowledge: '项目成本管理 <b>Project Cost Management</b>',
       processGroup: '监控过程组 <b>Monitoring and Controlling Process Group</b>',
       keyNotes: [
-        {text: ''},
-        {text: ''},
-        {text: ''},
-        {text: ''},
-        {text: ''},
-        {text: ''}
+        {text: '监督项目状态，以更新项目成本，管理成本基准的变更'},
+        {text: '控制成本，重点分析的是资金支出与相应完成的实际工作之间的关系'},
+        {text: '根据成本基准，确保项目按照预算完成'},
+        {text: '不考虑实际工作的价值，是没有意义的！'}
       ],
       inputs: [
-        {text: '', ext: [{text: ''}]},
-        {text: '', ext: [{text: ''}]},
-        {text: '', ext: [{text: ''}]},
-        {text: '事业环境因素和组织过程资产', ext: 'global-01'}
+        {text: '1. 项目管理计划', ext: [{text: '4.2 制定项目管理计划的输出'}]},
+        {text: '2. 项目资金需求', ext: [{text: '7.3 制定预算的输出'}]},
+        {text: '3. 工作绩效数据'},
+        {text: '4. 事业环境因素和组织过程资产'}
       ],
       tools: [
-        {text: '', ext: [
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''}
+        {text: '1. 挣值管理Earned Value Management', cusWidth: 680, ext: [
+          {text: 'EVM是把范围、进度、资源绩效综合考虑，来评估项目绩效和进展的方法。即把【范围基准】、【成本基准】、【进度基准】整合起来，形成【绩效基准】（179页的图表记下来）'},
+          {text: '1. PV = 计划完成的工作量 * 预算单价'},
+          {text: '2. EV = 实际完成的工作量 * 预算单价 （EV的上限是BAC）'},
+          {text: '3. AC = 实际完成的工作量 * 实际单价 （AC无上限，为实现EV所花费的所有成本）'},
+          {text: '4. BAC: PV的总和、完工预算，也是成本基准PMB'},
+          {text: '5. SV = EV-PV，进度偏差，大于0时进度提前。需考虑关键路径！'},
+          {text: '6. CV = EV-AC，成本偏差，小于0时成本超支，项目结束时的CV就是BAC与实际总成本的差值'},
+          {text: '7. CPI = EV/AC，成本绩效指数，每花费一个单位的成本所带来的价值（CV大于0时，CPI大于1）'},
+          {text: '8. SPI = EV/PV，进度绩效指数，时间利用效率，需对关键路径单独分析（SV大于0时，SPI大于1）'},
+          {text: '9. ETC：叫“完工尚需估算”，即完成剩余工作的预计成本。典型偏差ETC=(BAC-EV)/CPI，当前偏差继续保持。非典型偏差ETC=BAC-EV，今后无偏差，CPI=1，即以后EV=AC。'},
+          {text: '10. EAC：叫“完工估算”，即完成所有工作所需的预期总成本EAC = AC + ETC。典型偏差（EAC=BAC/CPI）。非典型偏差（EAC=BAC-CV）。EAC作为一个预测值，每次预测都是在变化的。'},
+          {text: '11. EACt：叫“完工时间估算”，最新一次完工需要多少时间，典型偏差时EACt=原计划完工时间/SPI'},
+          {text: '12. TCPI = 剩余工作/剩余资金 = (BAC-EV)/(BAC-AC)，即剩余工作必须达到的成本绩效指标'},
+          {text: '13. VAC = BAC - EAC，完工偏差，项目完成时，总成本是超支还是结余'}
         ]},
-        {text: ''}
+        {text: '2. 预测'},
+        {text: '3. 完工尚需绩效指数'},
+        {text: '4. 绩效审查Performance Reviews', ext: [
+          {text: '审查Reviews：计划的和实际的相比较、分析原因、决定措施'},
+          {text: '成本偏差：CV = EV - AC'},
+          {text: '进度偏差：SV = EV - PV'},
+          {text: '完工偏差：VAC = BAC - EAC'}
+        ]},
+        {text: '5. 项目管理软件'},
+        {text: '6. 储备分析'}
       ],
       outputs: [
-        {text: '', ext: [
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''}
-        ]},
-        {text: ''}
+        {text: '1. 工作绩效信息'},
+        {text: '2. 成本预测'},
+        {text: '3. 变更请求'},
+        {text: '4. 项目管理计划更新'},
+        {text: '5. 项目文件更新'},
+        {text: '6. 组织过程资产更新'}
       ],
     } // One process
 
