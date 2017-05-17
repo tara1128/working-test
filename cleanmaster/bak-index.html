@@ -15,7 +15,7 @@
 <title>猎豹清理大师(Clean Master) - 全球最专业的垃圾清理软件</title>
 <meta name="description" content="猎豹清理大师(Clean Master),猎豹移动旗下核心产品，全球200余个国家安卓用户装机必备，GooglePlay全球工具榜排名第一；清理手机隐藏垃圾，比同类软件多清30%，有效防止误删；手机省电待机时间延长1倍，首次使用一键加速20%，CPU降温，一键快切">
 <meta name="keywords" content="猎豹清理大师，清理软件，清理工具，金山清理大师，Clean Master，猎豹移动, 猎豹清理，清理垃圾，清理手机垃圾，手机省电，手机降温">
-<link rel="stylesheet" href="css/style.css?v=1918" type="text/css" />
+<link rel="stylesheet" href="css/style.css?v=1" type="text/css" />
 <!--[if lt IE 9]>
 <script src="js/core/html5shiv.js"></script>
 <![endif]-->
@@ -46,31 +46,38 @@ var _hmt = _hmt || [];
         <section class="cmltpage wrapper" id="cmlt1">
             <img class="bg wrapper" src="images/cmlite/pb.jpg" alt="猎豹清理大师" />
             <div class="main">
-              <div class="billboard-left">
-                <img src="images/new-cm-title.png" class="title flyTop" alt="猎豹清理大师6 清理一切的不快" />
-                <a href="http://bj.download.ijinshan.com/clean_master/cleanmaster-release-cn.apk" stat="home-down" class="dl homeDown flyBottom" title="立即下载">立即下载</a>
+                <a href="javascript:;"><img class="banner" src="images/cmlite/banner.png" /></a>
+                <img src="images/cmlite/t.png" class="title flyTop" alt="猎豹清理大师" />
+                <a href="http://bj.download.ijinshan.com/clean_master/cleanmaster-release-cn.apk" stat="home-down" id="homeDown" class="dl flyBottom" title="立即下载">立即下载</a>
                 <i id="iosTips" class="flyBottom"></i>
                 <a href="javascript:;" class="play-video flyBottom" stat="openVideo" id="playVideo">观看视频</a>
-                <img src="images/new-cm-2dcode.png" class="cm-2dcode flyBottom" alt="扫描二维码下载" />
-              </div>
-              <img src="images/new-cm-phone2.png" class="phone flyMe" alt="猎豹清理大师" />
+                <img src="images/cmlite/a.png" class="phone flyMe" alt="猎豹清理大师" />
             </div>
         </section>
         <section class="cmltpage wrapper" id="cmlt2">
             <img class="bg wrapper" src="images/cmlite/pb_2.jpg" alt="猎豹清理大师" />
             <div class="main">
                 <div class="flyLeft">
-                    <div class="garbage" style="border:1px dashed orange">
-                        <canvas id="br" width="416" height="416" style="display:none;"></canvas>
+                    <div class="garbage ">
+                        <div class="radius radius2"></div>
+                        <div class="radius radius3"></div>
+                        <canvas id="br" width="416" height="416"></canvas>
                         <div class="radius radius1"></div>
                         <div class="trashBox">
-                          <div class="new-cm-broom"></div>
+                            <div class="transWrap transWrap1"><div class="trash">
+                                <div class="start start1"></div>
+                                <div class="start start2"></div>
+                                <div class="start start3"></div>
+                                <div class="start start4"></div>
+                                <div class="start start5"></div>
+                                <div class="can"></div>
+                            </div></div>
+                            <div class="transWrap transWrap2"><div class="finish"></div></div>
                         </div>
-                        <div class="new-cm-checked"></div>
                     </div>
                 </div>
                 <div class="desc">
-                    <img src="images/new-cm-clean-trash.png" class="flyRight" alt="猎豹清理大师 清理垃圾 更多/更快/更干净" />
+                    <img src="images/cmlite/t2.png" class="flyRight" alt="猎豹清理大师" />
                     <dl class="flyRight">
                         <dt>首次清理可腾出高达2G空间</dt>
                         <dd>多存 400 首歌或 1000 张照片<br>推出QQ和微信专清功能，深度清理软件垃圾</dd>
@@ -81,7 +88,7 @@ var _hmt = _hmt || [];
         <section class="cmltpage wrapper" id="cmlt3">
             <img class="bg wrapper" src="images/cmlite/pb.jpg" alt="猎豹清理大师" />
             <div class="main">
-                <img class="title flyTop" id="pgyy" src="images/new-cm-new-fun.png" alt="全新的功能改进" />
+                <img class="title flyTop" id="pgyy" src="images/cmlite/t3.png" alt="猎豹清理大师" />
                 <ul class="wrapper clear">
                     <li class="b1">
                         <div class="box">
@@ -99,11 +106,11 @@ var _hmt = _hmt || [];
                         <div class="box">
                             <div class="icon"></div>
                             <div class="exp">
-                                <h3>微信专清</h3>清理一下，微信更快
+                                <h3>超强省电</h3>每次充电，多用半天
                             </div>
                             <div class="desc">
-                                <h3>微信专清</h3>
-                                <p>微信卡慢、微信崩溃，都是微信垃圾惹的祸。一键清理微信垃圾，加速微信运行，避免崩溃风险。</p>
+                                <h3>超强省电</h3>
+                                <p>“运行异常”、“后台自启”手机耗电两大杀手。猎豹独创APP休眠技术，让电池更耐用。</p>
                             </div>
                         </div>
                     </li>
@@ -111,32 +118,33 @@ var _hmt = _hmt || [];
                         <div class="box">
                             <div class="icon"></div>
                             <div class="exp">
-                                <h3>通知栏清理</h3>拒绝一切垃圾通知
+                                <h3>CPU降温</h3>手机降温，30秒见效
                             </div>
                             <div class="desc">
-                                <h3>通知栏清理</h3>
-                                <p>垃圾通知太多，频繁被打扰，手机速度被拖慢开启通知栏清理，一键清理通知栏。</p>
+                                <h3>CPU降温</h3>
+                                <p>APP自启，CPU异常......所有手机发热问题，一键解决，30秒见效。</p>
                             </div>
                         </div>
                     </li>
                 </ul>
-                <p class="tip">注：数据是在Nexus6国际版 64版本测试得出。该数据可能会因不同的机型、不同的测试环境、不同的系统版本略有差异</p>
+                <p class="tip">注：数据是在Nexus6国际版，64G版本测试得出。该数据可能会因不同的机型、不同的测试环境、不同的系统版本略有差异</p>
             </div>
         </section>
 
         <section class="cmltpage wrapper" id="cmlt4">
             <img class="bg wrapper" src="images/cmlite/pb.jpg" alt="猎豹清理大师" />
             <div class="main">
-                <img class="title flyRight" src="images/new-cm-creative.png" alt="创新设计 改变手机使用方式" />
-                <img class="phone p1 flyBottom" src="images/new-cm-two-phones.png" alt="创新设计 改变手机使用方式" />
+                <img class="title flyRight" src="images/cmlite/t4.png" alt="猎豹清理大师" />
+                <img class="phone p1 fadeIn" src="images/cmlite/d1.png" alt="猎豹清理大师" />
+                <img class="phone p2 flyBottom" src="images/cmlite/d2.png" alt="猎豹清理大师" />
                 <div class="desc">
                     <dl class="d0 flyRight">
-                        <dt>应用锁</dt>
-                        <dd>极致保护，一键加密隐私应用；<br />全面防御，防止隐私照片和信息泄露风险。</dd>
+                        <dt>快切</dt>
+                        <dd>手机APP，随心掌控。原来，启动一个APP需要5步；使用快切，只需要从左下角轻轻一划。</dd>
                     </dl>
                     <dl class="d1 flyRight">
-                        <dt>安全优势</dt>
-                        <dd>最全历史记录清理，手机一秒变无痕；<br />全新优势扫描，私密聊天图片不再泄漏。</dd>
+                        <dt>安全隐私</dt>
+                        <dd>最全历史记录清理，手机一秒变无痕；<br />全新隐私扫描，私密聊天图片不再泄露。</dd>
                     </dl>
                     <dl class="d2 flyRight">
                         <dt>软件管理</dt>
@@ -144,23 +152,8 @@ var _hmt = _hmt || [];
                     </dl>
                 </div>
             </div>
+            <footer id="lastfooter" class="wrapper"><span class="copyright"><a href="/cleanmaster/update/">更新日志</a>&nbsp;<em>|</em>&nbsp;猎豹移动 &copy; 2016</span><span class="language-menu"><em><a href="http://www.cmcm.com/en-us/" target="_blank">English</a><a href="http://www.cmcm.com/es-es/" target="_blank">Español</a><a href="http://www.cmcm.com/fr-fr/" target="_blank">Français</a><a href="http://www.cmcm.com/ru-ru/" target="_blank">Pусский</a><a href="http://www.cmcm.com/pt-pt/" target="_blank">Português</a><a href="http://www.cmcm.com/ja-jp/" target="_blank">日本語</a><a href="http://www.cmcm.com/ko-kr/" target="_blank">한국어</a><a href="http://www.cmcm.com/zh-tw/" target="_blank">繁體中文</a><a href="http://www.cmcm.com/zh-cn/" target="_blank">简体中文</a></em><i>简体中文</i></span></footer>
         </section>
-
-        <section>
-          <div class="new-cm-bottom-board">
-            <div class="bottom-content">
-              <img class="bottom-2dcode" src="images/new-cm-2dcode-bottom.png" alt="扫描二维码下载" />
-              <div class="bottom-right">
-                <img src="images/new-cm-exp-now.png" alt="立即体验 猎豹清理大师6" />
-                <a href="http://bj.download.ijinshan.com/clean_master/cleanmaster-release-cn.apk" stat="home-down" class="dl homeDown flyBottom" title="立即下载">立即下载</a>
-              </div>
-            </div><!-- bottom-content -->
-          </div><!-- new cm bottom board -->
-
-        </section>
-
-
-
     </div>
     <footer id="footer" class="wrapper"><span class="copyright"><a href="/cleanmaster/update/">更新日志</a>&nbsp;<em>|</em>&nbsp;猎豹移动 &copy; 2016</span><span class="language-menu"><em><a href="http://www.cmcm.com/en-us/" target="_blank">English</a><a href="http://www.cmcm.com/es-es/" target="_blank">Español</a><a href="http://www.cmcm.com/fr-fr/" target="_blank">Français</a><a href="http://www.cmcm.com/ru-ru/" target="_blank">Pусский</a><a href="http://www.cmcm.com/pt-pt/" target="_blank">Português</a><a href="http://www.cmcm.com/ja-jp/" target="_blank">日本語</a><a href="http://www.cmcm.com/ko-kr/" target="_blank">한국어</a><a href="http://www.cmcm.com/zh-tw/" target="_blank">繁體中文</a><a href="http://www.cmcm.com/zh-cn/">简体中文</a></em><i>简体中文</i></span></footer>
 </div>
@@ -169,7 +162,7 @@ var _hmt = _hmt || [];
     <a class="fb-wx" href="javascript:;"></a>
     <a class="fb-dcode away" href="javascript:;"></a>
     <a class="fb-qq" href="javascript:;"></a>
-    <span class="code-dwrap"><img src="images/new-cm-2dcode.png" alt="扫描二维码下载" /><p>扫描二维码下载</p></span>
+    <span class="code-dwrap"><img src="/cleanmaster/images/cmlite/code.png" alt="扫描二维码下载" /><p>扫描二维码下载</p></span>
     <span class="code-gwrap"><img src="/cleanmaster/images/cmlite/wxc.png" alt="扫描关注微信" /><p>扫描关注微信</p></span>
     <span class="code-qwrap"><img src="/cleanmaster/images/cmlite/qqc.png" alt="24小时答疑Q群" /><p>24小时答疑Q群<br>185039125</p></span>
 </div>
@@ -181,6 +174,6 @@ var _hmt = _hmt || [];
 </div>
 <!-- script -->
 <script type="text/javascript" src="js/core.js"></script>
-<script type="text/javascript" src="js/cmlite.js?1918"></script>
+<script type="text/javascript" src="js/cmlite.js?20170510"></script>
 </body>
 </html>

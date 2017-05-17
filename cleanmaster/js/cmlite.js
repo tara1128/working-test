@@ -29,7 +29,7 @@ var UA = window.navigator.userAgent,
             range: -300,
             callback: function() {
                 $(this).addClass('animated');
-                var el = $(this).find('.title, .dl, #iosTips, #playVideo');
+                var el = $(this).find('.title, .dl, #iosTips, #playVideo, .cm-2dcode');
                 setTimeout(function() {
                     el.css('display', 'block');
                 }, 1000);
@@ -117,10 +117,11 @@ var UA = window.navigator.userAgent,
                     startPoint: 1.5,
                     center: [208, 208, 163],
                     num: 2,
-                    color: '#4f77cb',
+                    // color: '#4f77cb',
+                    color: '#749ce1',
                     timer: null,
                     duration: 2500,
-                    lineWidth: 10,
+                    lineWidth: 5,
                     init: function() {
                         this.canvas = document.getElementById("br");
                         this.ctx = this.canvas.getContext("2d");
@@ -166,7 +167,7 @@ var UA = window.navigator.userAgent,
                 // window.drawArc=  drawArc;
                 
                 $_this.addClass('animated');
-                drawArc.init();
+                // drawArc.init();
 
                 var dl = $_this.find('dl'),
                     pgy = $_this.find('.pgylite');
@@ -458,7 +459,7 @@ function getQueryString(name) {
     var downCode = '<a class="log-down" stat="log-down-btn" href="http://bj.download.ijinshan.com/clean_master/cleanmaster-release-cn.apk">下载</a>',
         logContent = $('.log_content'),
         rFunctionBar = $('#function-bar'),
-        homeDowna = $('#homeDown'),
+        homeDowna = $('.homeDown'),
         wxOpenb = $('#wxTispb'),
         languageMenu = $('.language-menu'),
         fbBtn = rFunctionBar.find('a'),
@@ -506,23 +507,23 @@ function getQueryString(name) {
 
     if (link !== '') {
         downCode = '<a class="log-down" stat="log-down-btn" href="'+link+'">下载</a>'
-        $('#homeDown').attr('href', ''+link);
+        $('.homeDown').attr('href', ''+link);
     }
     // if (getQueryString('f') == '100031') {
     //     downCode = '<a class="log-down" stat="log-down-btn" href="http://bj.download.ijinshan.com/clean_master/cleanmaster100031.apk">下载</a>'
-    //     $('#homeDown').attr('href', 'http://bj.download.ijinshan.com/clean_master/cleanmaster100031.apk');
+    //     $('.homeDown').attr('href', 'http://bj.download.ijinshan.com/clean_master/cleanmaster100031.apk');
     // }
     // if (getQueryString('f') == '2010002301') {
     //     downCode = '<a class="log-down" stat="log-down-btn" href="http://dl.cm.ksmobile.com/static/res/6b/a6/CleanMaster_2010002301_0_1418373505.apk">下载</a>'
-    //     $('#homeDown').attr('href', 'http://dl.cm.ksmobile.com/static/res/6b/a6/CleanMaster_2010002301_0_1418373505.apk');
+    //     $('.homeDown').attr('href', 'http://dl.cm.ksmobile.com/static/res/6b/a6/CleanMaster_2010002301_0_1418373505.apk');
     // }
     // if (getQueryString('f') == '2010006196') {
     //     downCode = '<a class="log-down" stat="log-down-btn" href="http://dl.cm.ksmobile.com/static/res/7b/b5/CleanMaster_2010006196_0_1463645484.apk">下载</a>'
-    //     $('#homeDown').attr('href', 'http://dl.cm.ksmobile.com/static/res/7b/b5/CleanMaster_2010006196_0_1463645484.apk');
+    //     $('.homeDown').attr('href', 'http://dl.cm.ksmobile.com/static/res/7b/b5/CleanMaster_2010006196_0_1463645484.apk');
     // }
     // if (getQueryString('f') == '2010006219') {
     //     downCode = '<a class="log-down" stat="log-down-btn" href="http://dl.cm.ksmobile.com/static/res/8a/69/CleanMaster_2010006219_0_1465812670.apk">下载</a>'
-    //     $('#homeDown').attr('href', 'http://dl.cm.ksmobile.com/static/res/8a/69/CleanMaster_2010006219_0_1465812670.apk');
+    //     $('.homeDown').attr('href', 'http://dl.cm.ksmobile.com/static/res/8a/69/CleanMaster_2010006219_0_1465812670.apk');
     // }
 
     if (K.isMobile) {
