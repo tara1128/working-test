@@ -1,5 +1,5 @@
 ﻿/*
-  Latest modified: 2017-05-18 15:50
+  Latest modified: 2017-05-18 10:31
 */
 @charset "utf-8";
 @font-face {
@@ -363,18 +363,18 @@ body {
 	height:386px;
   background:url(../images/new-cm-circle.png) no-repeat;
 }
-.garb-son {
+.garbage .garb-son {
   position:absolute;
   left:0;
   top:0;
 }
-.garb-son.fan,
-.garb-son.done,
-.garb-son.bubbles {
+.garbage .garb-son.fan,
+.garbage .garb-son.done,
+.garbage .garb-son.bubbles {
   width:386px;
   height:386px;
 }
-.garb-son.fan {
+.garbage .garb-son.fan {
   background:url(../images/new-cm-fan.png) no-repeat;
   -webkit-animation: rotateFan 2s linear forwards .2s;
 }
@@ -382,7 +382,7 @@ body {
 
 
 
-.garb-son.done {
+.garbage .garb-son.done {
   opacity:0;
   background:url(../images/new-cm-done.png) no-repeat;
   -webkit-animation: showDone 1s ease forwards 2s;
@@ -390,89 +390,59 @@ body {
 @-webkit-keyframes showDone {from {opacity:0;-webkit-transform:rotateY(90deg);} to {opacity:1;-webkit-transform:rotateY(0deg);}}
 
 
-/* Animations for bubbles, make every bubble-div rotate */
-.bubble {
-  position:absolute;
-  width:100%;
-  height:100%;
-}
-.bubble s {
+
+
+.garbage .garb-son.bubbles .bubble {
   position:absolute;
   background-repeat:no-repeat;
   background-image:url(../images/new-cm-done-no-check.png);
   text-indent:-9999px;
 }
-
-/* ==== Bubble A ==== */
-.bubble.bubb-a {
-  right:-100px;
+.garbage .garb-son.bubbles .bubble.bubb-a {
+  left:400px;
   top:-20px;
-  -webkit-animation: bubbleMoving_A .8s ease-in forwards .2s 3;
-}
-.bubble.bubb-a s {
-  right:80px;
-  top:0px;
-  background-size:30px 30px;
-  width:30px;
-  height:30px;
+  background-size:37px 37px;
+  width:37px;
+  height:37px;
+  -webkit-animation: bubbleMoving_A .6s ease-in-out forwards .2s 3;
 }
 @-webkit-keyframes bubbleMoving_A {
-  0 {-webkit-transform:rotate(0deg);right:-120px;scale(1);}
-  100% {-webkit-transform:rotate(-150deg);right:-190px;scale(0.3);}
+  0 {left:400px;top:-20px;scale(1);}
+  100% {left:180px;top:180px;scale(0.2);}
 }
 
-/* ==== Bubble B ==== */
-.bubble.bubb-b {
-  left:0px;
-  top:-30px;
-  -webkit-animation: bubbleMoving_B .6s ease-in forwards .2s 3;
-}
-.bubble.bubb-b s {
+.garbage .garb-son.bubbles .bubble.bubb-b {
+  left:-80px;
+  top:-80px;
   background-size:45px 45px;
   width:45px;
   height:45px;
+  -webkit-animation: bubbleMoving_B .5s ease-in-out forwards .2s 3;
 }
-@-webkit-keyframes bubbleMoving_B {
-  0 {-webkit-transform:rotate(0deg);left:0px;top:-30px;scale(1);}
-  100% {-webkit-transform:rotate(-120deg);left:70px;top:-220px;scale(0.2);}
-}
+@-webkit-keyframes bubbleMoving_B {from {left:-80px;top:-80px;scale(1);} to {left:170px;top:170px;scale(0.2);}}
 
 
-/* ==== Bubble C ==== */
-.bubble.bubb-c {
-  right:-150px;
-  bottom:-20px;
-  -webkit-animation: bubbleMoving_C .8s ease-in forwards .1s 3;
-}
-.bubble.bubb-c s {
+
+.garbage .garb-son.bubbles .bubble.bubb-c {
+  left:420px;
+  top:360px;
   background-size:64px 64px;
   width:64px;
   height:64px;
-  right:20%;
-  bottom:0;
+  -webkit-animation: bubbleMoving_C .6s ease-in-out forwards .1s 3;
 }
-@-webkit-keyframes bubbleMoving_C {
-  0 {-webkit-transform:rotate(0deg);right:-50px;bottom:-20px;scale(1);}
-  100% {-webkit-transform:rotate(125deg);right:-180px;bottom:-35px;scale(0.2);}
-}
+@-webkit-keyframes bubbleMoving_C {from {left:420px;top:360px;scale(1);} to {left:161px;top:161px;scale(0.2);}}
 
 
-/* ==== Bubble D ==== */
-.bubble.bubb-d {
-  left:-120px;
-  -webkit-animation: bubbleMoving_D .6s ease-in forwards .2s 3;
-}
-.bubble.bubb-d s {
+.garbage .garb-son.bubbles .bubble.bubb-d {
+  left:-20px;
+  top:380px;
   background-size:32px 32px;
   width:32px;
   height:32px;
-  left:20%;
-  bottom:0;
+  -webkit-animation: bubbleMoving_D .7s ease-in-out forwards .2s 3;
 }
-@-webkit-keyframes bubbleMoving_D {
-  0 {-webkit-transform:rotate(0deg);left:-120px;scale(1);}
-  100% {-webkit-transform:rotate(-114deg);left:-195px;scale(0.3);}
-}
+@-webkit-keyframes bubbleMoving_D {from {left:-20px;top:380px;scale(1);} to {left:177px;top:177px;scale(0.2);}}
 
 
 .garbage .garb-son.broom {
