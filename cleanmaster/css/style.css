@@ -1,5 +1,5 @@
 ﻿/*
-  Latest modified: 2017-05-19 18:42
+  Latest modified: 2017-05-19 18:57
 */
 
 @charset "utf-8";
@@ -386,11 +386,11 @@ body {
 
 .garb-son.fan { /* Multiple animations: first rotate, then swirl, which is sync as .done ! */
   background:url(../images/new-cm-rolling-fan.png) no-repeat;
-  -webkit-animation:rotateFan 2s linear forwards .2s, swirlFan 1s ease forwards 1.8s;
-  -moz-animation:rotateFan 2s linear forwards .2s, swirlFan 1s ease forwards 1.8s;
-  -ms-animation:rotateFan 2s linear forwards .2s, swirlFan 1s ease forwards 1.8s;
-  -o-animation:rotateFan 2s linear forwards .2s, swirlFan 1s ease forwards 1.8s;
-  animation:rotateFan 2s linear forwards .2s, swirlFan 1s ease forwards 1.8s;
+  -webkit-animation:rotateFan 2s linear forwards .2s, swirlFan 1s ease forwards 2s;
+  -moz-animation:rotateFan 2s linear forwards .2s, swirlFan 1s ease forwards 2s;
+  -ms-animation:rotateFan 2s linear forwards .2s, swirlFan 1s ease forwards 2s;
+  -o-animation:rotateFan 2s linear forwards .2s, swirlFan 1s ease forwards 2s;
+  animation:rotateFan 2s linear forwards .2s, swirlFan 1s ease forwards 2s;
 }
 @-webkit-keyframes rotateFan {from {-webkit-transform:rotate(0deg);} to {-webkit-transform:rotate(720deg);}}
 @-moz-keyframes rotateFan {from {-moz-transform:rotate(0deg);} to {-moz-transform:rotate(720deg);}}
