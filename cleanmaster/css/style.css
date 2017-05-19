@@ -1,16 +1,14 @@
 ﻿/*
-  Latest modified: 2017-05-19 17:41
+  Latest modified: 2017-05-19 18:25
 */
 
-/* Define font */
+@charset "utf-8";
 @font-face {
 	font-family: 'Gotham-Book';
-  src: url('../images/fonts/Gotham-Book.otf');
-  src: url('../images/fonts/Gotham-Book.eot') format('embedded-opentype'),
-       url('../images/fonts/Gotham-Book.woff') format('woff'),
-       url('../images/fonts/Gotham-Book.ttf') format('truetype'),
-       url('../images/fonts/Gotham-Book.svg#Gotham-Book') format('svg'),
+	src: url('../images/fonts/Gotham-Book.eot');
+	src: url('../images/fonts/Gotham-Book.eot') format('embedded-opentype'), url('../images/fonts/Gotham-Book.woff') format('woff'), url('../images/fonts/Gotham-Book.ttf') format('truetype'), url('../images/fonts/Gotham-Book.svg#Gotham-Book') format('svg');
 }
+
 /* Reset css */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
 /* HTML5 display-role reset for older browsers */
@@ -376,7 +374,6 @@ body {
 }
 
 .garb-son.broom,
-.garb-son.circle,
 .garb-son.fan,
 .garb-son.done,
 .garb-son.bubbles {
@@ -386,25 +383,27 @@ body {
 .garb-son.broom {
   background:url(../images/new-cm-new-broom.png?v=new) no-repeat;
 }
-.garb-son.circle {
-  background:url(../images/new-cm-circle.png) no-repeat;
-  -webkit-animation:rotateCircle 1s ease forwards 2s;/* Sync with .done */
-}
-@-webkit-keyframes rotateCircle {from {-webkit-transform:rotateY(180deg);} to {-webkit-transform:rotateY(0deg);}}
 
-.garb-son.fan {
-  background:url(../images/new-cm-fan.png) no-repeat;
-  -webkit-animation:rotateFan 2s linear forwards .2s;
-  -moz-animation:rotateFan 2s linear forwards .2s;
-  -ms-animation:rotateFan 2s linear forwards .2s;
-  -o-animation:rotateFan 2s linear forwards .2s;
-  animation:rotateFan 2s linear forwards .2s;
+.garb-son.fan { /* Multiple animations: first rotate, then swirl, which is sync as .done ! */
+  background:url(../images/new-cm-rolling-fan.png) no-repeat;
+  -webkit-animation:rotateFan 2s linear forwards .2s, swirlFan 1s ease forwards 1.8s;
+  -moz-animation:rotateFan 2s linear forwards .2s, swirlFan 1s ease forwards 1.8s;
+  -ms-animation:rotateFan 2s linear forwards .2s, swirlFan 1s ease forwards 1.8s;
+  -o-animation:rotateFan 2s linear forwards .2s, swirlFan 1s ease forwards 1.8s;
+  animation:rotateFan 2s linear forwards .2s, swirlFan 1s ease forwards 1.8s;
 }
 @-webkit-keyframes rotateFan {from {-webkit-transform:rotate(0deg);} to {-webkit-transform:rotate(720deg);}}
 @-moz-keyframes rotateFan {from {-moz-transform:rotate(0deg);} to {-moz-transform:rotate(720deg);}}
 @-ms-keyframes rotateFan {from {-ms-transform:rotate(0deg);} to {-ms-transform:rotate(720deg);}}
 @-o-keyframes rotateFan {from {-o-transform:rotate(0deg);} to {-o-transform:rotate(720deg);}}
 @keyframes rotateFan {from {transform:rotate(0deg);} to {transform:rotate(720deg);}}
+
+@-webkit-keyframes swirlFan {from {-webkit-transform:rotateY(180deg);} to {-webkit-transform:rotateY(0deg);}}
+@-moz-keyframes swirlFan {from {-moz-transform:rotateY(180deg);} to {-moz-transform:rotateY(0deg);}}
+@-ms-keyframes swirlFan {from {-ms-transform:rotateY(180deg);} to {-ms-transform:rotateY(0deg);}}
+@-o-keyframes swirlFan {from {-o-transform:rotateY(180deg);} to {-o-transform:rotateY(0deg);}}
+@keyframes swirlFan {from {transform:rotateY(180deg);} to {transform:rotateY(0deg);}}
+
 
 .garb-son.done {
   opacity:0;
