@@ -1,5 +1,5 @@
 ﻿/*
-  Latest modified: 2017-05-19 18:25
+  Latest modified: 2017-05-19 18:42
 */
 
 @charset "utf-8";
@@ -398,16 +398,16 @@ body {
 @-o-keyframes rotateFan {from {-o-transform:rotate(0deg);} to {-o-transform:rotate(720deg);}}
 @keyframes rotateFan {from {transform:rotate(0deg);} to {transform:rotate(720deg);}}
 
-@-webkit-keyframes swirlFan {from {-webkit-transform:rotateY(180deg);} to {-webkit-transform:rotateY(0deg);}}
-@-moz-keyframes swirlFan {from {-moz-transform:rotateY(180deg);} to {-moz-transform:rotateY(0deg);}}
-@-ms-keyframes swirlFan {from {-ms-transform:rotateY(180deg);} to {-ms-transform:rotateY(0deg);}}
-@-o-keyframes swirlFan {from {-o-transform:rotateY(180deg);} to {-o-transform:rotateY(0deg);}}
-@keyframes swirlFan {from {transform:rotateY(180deg);} to {transform:rotateY(0deg);}}
+@-webkit-keyframes swirlFan {from {-webkit-transform:rotateY(180deg);opacity:1;} to {-webkit-transform:rotateY(90deg);opacity:0;}}
+@-moz-keyframes swirlFan {from {-moz-transform:rotateY(180deg);opacity:1;} to {-moz-transform:rotateY(90deg);opacity:0;}}
+@-ms-keyframes swirlFan {from {-ms-transform:rotateY(180deg);opacity:1;} to {-ms-transform:rotateY(90deg);opacity:0;}}
+@-o-keyframes swirlFan {from {-o-transform:rotateY(180deg);opacity:1;} to {-o-transform:rotateY(90deg);opacity:0;}}
+@keyframes swirlFan {from {transform:rotateY(180deg);opacity:1;} to {transform:rotateY(90deg);opacity:0;}}
 
 
 .garb-son.done {
   opacity:0;
-  background:url(../images/new-cm-done.png) no-repeat;
+  background:url(../images/new-cm-checking-done.png) no-repeat;
   -webkit-animation: showDone 1s ease forwards 2s;
   -moz-animation: showDone 1s ease forwards 2s;
   -ms-animation: showDone 1s ease forwards 2s;
