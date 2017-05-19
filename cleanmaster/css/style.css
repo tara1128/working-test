@@ -1,11 +1,15 @@
 ﻿/*
-  Latest modified: 2017-05-19 12:41
+  Latest modified: 2017-05-19 17:41
 */
-@charset "utf-8";
+
+/* Define font */
 @font-face {
 	font-family: 'Gotham-Book';
-	src: url('../images/fonts/Gotham-Book.eot');
-	src: url('../images/fonts/Gotham-Book.eot') format('embedded-opentype'), url('../images/fonts/Gotham-Book.woff') format('woff'), url('../images/fonts/Gotham-Book.ttf') format('truetype'), url('../images/fonts/Gotham-Book.svg#Gotham-Book') format('svg');
+  src: url('../images/fonts/Gotham-Book.otf');
+  src: url('../images/fonts/Gotham-Book.eot') format('embedded-opentype'),
+       url('../images/fonts/Gotham-Book.woff') format('woff'),
+       url('../images/fonts/Gotham-Book.ttf') format('truetype'),
+       url('../images/fonts/Gotham-Book.svg#Gotham-Book') format('svg'),
 }
 /* Reset css */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
@@ -19,7 +23,8 @@ table {border-collapse:collapse;border-spacing:0;}
 /* To preserve line-height and selector appearance */
 sup {vertical-align:text-top;}
 sub {vertical-align:text-bottom;}
-input, button, textarea, select {font-family:"Gotham-Book",Helvetica,Verdana,Arial,"Microsoft YaHei","微软雅黑";font-size:inherit;font-weight:inherit;*font-size:100%;/* To enable resizing for IE */width:auto;overflow:visible;}
+input,button,textarea,select{font-family:'Gotham-Book',Helvetica,Arial,Verdana,serif,'Microsoft YaHei','微软雅黑';font-size:inherit;font-weight:inherit;*font-size:100%;/* To enable resizing for IE */width:auto;overflow:visible;}
+	
 /* Because legend doesn't inherit in IE */
 legend {color:#000;}
 h1, h2, h3, h4, h5, h6 {font-weight:normal;}
@@ -35,9 +40,9 @@ a, a:active {color:#333;text-decoration:none;outline:none;}
 a {-webkit-tap-highlight-color:rgba(0,0,0,0);}
 /* ========== ========== ========== ========== */
 body {
+  font-family:'Gotham-Book',Helvetica,Arial,Verdana,serif,'Microsoft YaHei','微软雅黑';
 	background:#fff;
 	color:#333;
-	font-family:"Gotham-Book", Helvetica, Verdana, Arial, "Microsoft YaHei";
 	font-size:12px;
 	line-height:1.4;
 	-webkit-user-select:none; /* 禁止选择 */
@@ -279,20 +284,26 @@ body {
 }
 #cmlt1 {
 	padding: 101px 0 0;
-	background: #f8f8f8;
+	background:url(../images/new-cm-bg-bar1.png) 0 100% repeat-x #f6f8fa;
 	height: 600px;
 }
 #cmlt1 .main {
-	height: 200px;
-	padding: 200px 0 200px;
+	height:250px;
+	padding:150px 0 200px;
 }
 #cmlt1 .billboard-left {
-  margin:0 0 0 30px;
-  width:336px;
+  margin:0 0 0 40px;
+  width:290px;/* Should be same as img.title */
+}
+#cmlt1 .title {
+	margin:0 auto;
+  width:290px;
+	height:90px;/* Original size: 290*90 */
+	display:none;
 }
 #cmlt1 .cm-2dcode {
 	display:none;
-  margin:18px 0 0 92px;
+  margin:18px auto 0;
   width:128px;
 }
 
@@ -302,26 +313,21 @@ body {
 	right: -100%;
 }
 #cmlt1 img {
-	display: block;
-}
-#cmlt1 .title {
-	margin:0 auto;
-	height:98px;/* Original size: 336*98 */
-	display:none;
+	display:block;
 }
 #cmlt1 .dl {
 	position:relative;
 	z-index:1;
 	display:none;
-	margin:30px 0 0 62px;
-	width:188px;
+	margin:60px auto 0;
+	width:214px;
 	height:56px;
 	line-height:56px;
 	text-align:center;
 	background:#2f6bd6;
 	color:#fff;
 	font-size:18px;
-  border-radius:4px;
+  border-radius:5px;
   -webkit-transition:all .4s ease;
   -moz-transition:all .4s ease;
   -ms-transition:all .4s ease;
@@ -329,7 +335,10 @@ body {
   transition:all .4s ease;
 }
 #cmlt1 .dl:hover {
-	background:#17389f;
+	background:#3973e5;
+}
+#cmlt1 .dl:active {
+	background:#2a64cb;
 }
 #cmlt1 .phone {
 	position: absolute;
@@ -359,7 +368,6 @@ body {
   left:30px;
 	width:386px;
 	height:386px;
-  background:url(../images/new-cm-circle.png) no-repeat;
 }
 .garb-son {
   position:absolute;
@@ -368,6 +376,7 @@ body {
 }
 
 .garb-son.broom,
+.garb-son.circle,
 .garb-son.fan,
 .garb-son.done,
 .garb-son.bubbles {
@@ -377,6 +386,12 @@ body {
 .garb-son.broom {
   background:url(../images/new-cm-new-broom.png?v=new) no-repeat;
 }
+.garb-son.circle {
+  background:url(../images/new-cm-circle.png) no-repeat;
+  -webkit-animation:rotateCircle 1s ease forwards 2s;/* Sync with .done */
+}
+@-webkit-keyframes rotateCircle {from {-webkit-transform:rotateY(180deg);} to {-webkit-transform:rotateY(0deg);}}
+
 .garb-son.fan {
   background:url(../images/new-cm-fan.png) no-repeat;
   -webkit-animation:rotateFan 2s linear forwards .2s;
@@ -416,7 +431,7 @@ body {
 .bubble s {
   position:absolute;
   background-repeat:no-repeat;
-  background-image:url(../images/new-cm-done-no-check.png);
+  background-image:url(../images/new-cm-ball64.png);
   text-indent:-9999px;
 }
 /* ==== Bubble A: ==== */
@@ -632,10 +647,11 @@ body {
 	margin: 0 60px;
 }
 #cmlt3 .box {
-	height: 400px;
-	width: 280px;
 	position: relative;
-	overflow: hidden;
+	height:400px;
+	width:280px;
+  border-radius:6px;
+	overflow:hidden;
 }
 #cmlt3 .b1 .box {
 	background: #ec732e;
@@ -733,7 +749,7 @@ body {
 }
 .bottom-content {
   margin:0 auto;
-  width:580px;
+  width:548px;
 }
 .bottom-2dcode {
   display:block;
@@ -763,7 +779,10 @@ body {
   transition:all .4s ease;
 }
 .bottom-right a.dl:hover {
-	background:#17389f;
+	background:#3973e5;
+}
+.bottom-right a.dl:active {
+	background:#2a64cb;
 }
 
 #cmlt4 {
@@ -1011,17 +1030,25 @@ body {
 }
 #cmlt1 .play-video {
 	display:none;
-	margin:6px auto 0;
+  position:relative;
+	margin:3px auto 0;
 	position:relative;
 	z-index:1;
-	width:90px;
-	height:24px;
-	line-height:24px;
-	background:url(../images/new-cm-playbtn.png) 95% 2px no-repeat;
+	width:68px;
+	height:22px;
+	line-height:22px;
 	font-size:16px;
 	color:#2f6bd6;
 	text-align:left;
-	overflow:hidden;
+}
+#cmlt1 .play-video s {
+  position:absolute;
+  right:-16px;
+  top:3px;
+  width:16px;
+  height:16px;
+  text-indent:-9999px;
+	background:url(../images/new-cm-playbtn.png) no-repeat;
 }
 
 /* slide */
@@ -1229,8 +1256,9 @@ body {
 		height: 800px;
 	}
 	#cmlt1 .main {
-		height: 230px;
-		padding: 315px 0 255px;
+		height:300px;
+		padding:250px 0 250px;
+    border:none;
 	}
 	#cmlt1 .title {
 		height: auto;
@@ -1239,7 +1267,7 @@ body {
 		width: auto;
 	}
   #cmlt1 .cm-2dcode {
-    margin:38px 0 0 92px;
+    margin:38px auto 0;
   }
 	#cmlt2 {
 		height: 800px;
@@ -1589,20 +1617,13 @@ body {
 		display:none;
 	}
   #cmlt1 .billboard-left {
-    margin:0 0 0 20px;
-    width:228.5px;/* Should be same as img.title */
+    margin:0 auto;
   }
 	#cmlt1 .title {
 		margin:0 auto 20px;
-    width:228.5px;
-		height:66.6px!important;
 	}
 	#cmlt1 .dl {
-    margin:20px auto 0;
-		width:150px;
-		height:40px;
-		line-height:40px;
-    font-size:16px;
+    margin:25px auto 0;
 	}
   #cmlt1 .cm-2dcode {
     display:none;
@@ -1611,8 +1632,8 @@ body {
     height:0px;
   }
 	#cmlt1 .phone {
-		width: 300px;
-		margin-left: -150px;
+		width:300px;
+		margin-left:-150px;
 	}
 	#cmlt2 .main {
 		padding-top: 30px;
@@ -1748,8 +1769,6 @@ body {
   }
   .bottom-right a.dl {
     margin:0 auto;
-    height:48px;
-    line-height:48px;
   }
 
 	.close-btn {
@@ -1781,23 +1800,6 @@ body {
 		left: 5%;
 		margin: 0;
 		overflow: hidden;
-	}
-	#cmlt1 .play-video {
-		display: none;
-		width:70px;
-		height:20px;
-		line-height:20px;
-    background:url(../images/new-cm-playbtn.png) 95% 1px no-repeat;
-		background-size:16px 16px;
-		font-size:12px;
-		color:#2f6bd6;
-		text-align:left;
-		overflow:hidden;
-	}
-	#cmlt1 .play-video:hover {
-    background: url(../images/new-cm-playbtn.png) 95% 2px no-repeat;
-		background-size: 16px 16px;
-		color: #09308a;
 	}
 } /* End media of 540 */
 
@@ -2682,14 +2684,9 @@ body {
 		height:58px;
 		margin-bottom:20px;
 	}
-	#cmlt1 .dl {
-		width: 180px;
-		height: 50px;
-		line-height: 50px;
-	}
 	#cmlt1 .phone {
-		width: 100%;
-		margin-left: -50%;
+		width:100%;
+		margin-left:-54%;
 	}
 	#cmlt2 .pgy {
 		width: 100%;
