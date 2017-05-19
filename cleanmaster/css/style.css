@@ -1,5 +1,5 @@
 ﻿/*
-  Latest modified: 2017-05-19 10:44
+  Latest modified: 2017-05-19 12:41
 */
 @charset "utf-8";
 @font-face {
@@ -366,31 +366,45 @@ body {
   left:0;
   top:0;
 }
-.garb-son.broom {
-  left:141px;
-  top:141px;
-  width:104px;
-  height:104px;
-  background:url(../images/new-cm-broom.png) no-repeat;
-}
+
+.garb-son.broom,
 .garb-son.fan,
 .garb-son.done,
 .garb-son.bubbles {
   width:386px;
   height:386px;
 }
+.garb-son.broom {
+  background:url(../images/new-cm-new-broom.png?v=new) no-repeat;
+}
 .garb-son.fan {
   background:url(../images/new-cm-fan.png) no-repeat;
-  -webkit-animation: rotateFan 2s linear forwards .2s;
+  -webkit-animation:rotateFan 2s linear forwards .2s;
+  -moz-animation:rotateFan 2s linear forwards .2s;
+  -ms-animation:rotateFan 2s linear forwards .2s;
+  -o-animation:rotateFan 2s linear forwards .2s;
+  animation:rotateFan 2s linear forwards .2s;
 }
 @-webkit-keyframes rotateFan {from {-webkit-transform:rotate(0deg);} to {-webkit-transform:rotate(720deg);}}
+@-moz-keyframes rotateFan {from {-moz-transform:rotate(0deg);} to {-moz-transform:rotate(720deg);}}
+@-ms-keyframes rotateFan {from {-ms-transform:rotate(0deg);} to {-ms-transform:rotate(720deg);}}
+@-o-keyframes rotateFan {from {-o-transform:rotate(0deg);} to {-o-transform:rotate(720deg);}}
+@keyframes rotateFan {from {transform:rotate(0deg);} to {transform:rotate(720deg);}}
 
 .garb-son.done {
   opacity:0;
   background:url(../images/new-cm-done.png) no-repeat;
   -webkit-animation: showDone 1s ease forwards 2s;
+  -moz-animation: showDone 1s ease forwards 2s;
+  -ms-animation: showDone 1s ease forwards 2s;
+  -o-animation: showDone 1s ease forwards 2s;
+  animation: showDone 1s ease forwards 2s;
 }
 @-webkit-keyframes showDone {from {opacity:0;-webkit-transform:rotateY(90deg);} to {opacity:1;-webkit-transform:rotateY(0deg);}}
+@-moz-keyframes showDone {from {opacity:0;-moz-transform:rotateY(90deg);} to {opacity:1;-moz-transform:rotateY(0deg);}}
+@-ms-keyframes showDone {from {opacity:0;-ms-transform:rotateY(90deg);} to {opacity:1;-ms-transform:rotateY(0deg);}}
+@-o-keyframes showDone {from {opacity:0;-o-transform:rotateY(90deg);} to {opacity:1;-o-transform:rotateY(0deg);}}
+@keyframes showDone {from {opacity:0;transform:rotateY(90deg);} to {opacity:1;transform:rotateY(0deg);}}
 
 
 /* Animations for bubbles, make every bubble-div rotate */
@@ -407,43 +421,88 @@ body {
 }
 /* ==== Bubble A: ==== */
 .bubble.bubb-a {
-  right:-100px;
-  top:-20px;
+  right:-80px;
+  top:-10px;
   -webkit-animation: bubbleMoving_A .8s ease-in forwards .2s 3;
+  -moz-animation: bubbleMoving_A .8s ease-in forwards .2s 3;
+  -ms-animation: bubbleMoving_A .8s ease-in forwards .2s 3;
+  -o-animation: bubbleMoving_A .8s ease-in forwards .2s 3;
+  animation: bubbleMoving_A .8s ease-in forwards .2s 3;
 }
 .bubble.bubb-a s {
-  right:80px;
+  right:30px;
   top:0px;
   background-size:30px 30px;
   width:30px;
   height:30px;
 }
 @-webkit-keyframes bubbleMoving_A {
-  0 {-webkit-transform:rotate(0deg);right:-120px;scale(1);}
-  100% {-webkit-transform:rotate(-150deg);right:-190px;scale(0.3);}
+  0 {-webkit-transform:rotate(0deg);right:-80px;top:-10px;scale(1);}
+  100% {-webkit-transform:rotate(120deg);right:100px;top:-180px;scale(0.3);}
+}
+@-moz-keyframes bubbleMoving_A {
+  0 {-moz-transform:rotate(0deg);right:-80px;top:-10px;scale(1);}
+  100% {-moz-transform:rotate(120deg);right:100px;top:-180px;scale(0.3);}
+}
+@-ms-keyframes bubbleMoving_A {
+  0 {-ms-transform:rotate(0deg);right:-80px;top:-10px;scale(1);}
+  100% {-ms-transform:rotate(120deg);right:100px;top:-180px;scale(0.3);}
+}
+@-o-keyframes bubbleMoving_A {
+  0 {-o-transform:rotate(0deg);right:-80px;top:-10px;scale(1);}
+  100% {-o-transform:rotate(120deg);right:100px;top:-180px;scale(0.3);}
+}
+@keyframes bubbleMoving_A {
+  0 {transform:rotate(0deg);right:-80px;top:-10px;scale(1);}
+  100% {transform:rotate(120deg);right:100px;top:-180px;scale(0.3);}
 }
 
 /* ==== Bubble B: ==== */
 .bubble.bubb-b {
-  left:0px;
+  left:-20px;
   top:-30px;
   -webkit-animation: bubbleMoving_B .6s ease-in forwards .2s 3;
+  -moz-animation: bubbleMoving_B .6s ease-in forwards .2s 3;
+  -ms-animation: bubbleMoving_B .6s ease-in forwards .2s 3;
+  -o-animation: bubbleMoving_B .6s ease-in forwards .2s 3;
+  animation: bubbleMoving_B .6s ease-in forwards .2s 3;
 }
 .bubble.bubb-b s {
+  top:30px;
   background-size:45px 45px;
   width:45px;
   height:45px;
 }
 @-webkit-keyframes bubbleMoving_B {
-  0 {-webkit-transform:rotate(0deg);left:0px;top:-30px;scale(1);}
-  100% {-webkit-transform:rotate(-120deg);left:70px;top:-220px;scale(0.2);}
+  0 {-webkit-transform:rotate(0deg);left:-20px;top:-30px;scale(1);}
+  100% {-webkit-transform:rotate(120deg);left:-175px;top:75px;scale(0.2);}
+}
+@-moz-keyframes bubbleMoving_B {
+  0 {-moz-transform:rotate(0deg);left:-20px;top:-30px;scale(1);}
+  100% {-moz-transform:rotate(120deg);left:-175px;top:75px;scale(0.2);}
+}
+@-ms-keyframes bubbleMoving_B {
+  0 {-ms-transform:rotate(0deg);left:-20px;top:-30px;scale(1);}
+  100% {-ms-transform:rotate(120deg);left:-175px;top:75px;scale(0.2);}
+}
+@-o-keyframes bubbleMoving_B {
+  0 {-o-transform:rotate(0deg);left:-20px;top:-30px;scale(1);}
+  100% {-o-transform:rotate(120deg);left:-175px;top:75px;scale(0.2);}
+}
+@keyframes bubbleMoving_B {
+  0 {transform:rotate(0deg);left:-20px;top:-30px;scale(1);}
+  100% {transform:rotate(120deg);left:-175px;top:75px;scale(0.2);}
 }
 
 /* ==== Bubble C: ==== */
 .bubble.bubb-c {
-  right:-150px;
+  right:-50px;
   bottom:-20px;
   -webkit-animation: bubbleMoving_C .8s ease-in forwards .1s 3;
+  -moz-animation: bubbleMoving_C .8s ease-in forwards .1s 3;
+  -ms-animation: bubbleMoving_C .8s ease-in forwards .1s 3;
+  -o-animation: bubbleMoving_C .8s ease-in forwards .1s 3;
+  animation: bubbleMoving_C .8s ease-in forwards .1s 3;
 }
 .bubble.bubb-c s {
   background-size:64px 64px;
@@ -456,22 +515,59 @@ body {
   0 {-webkit-transform:rotate(0deg);right:-50px;bottom:-20px;scale(1);}
   100% {-webkit-transform:rotate(125deg);right:-180px;bottom:-35px;scale(0.2);}
 }
+@-moz-keyframes bubbleMoving_C {
+  0 {-moz-transform:rotate(0deg);right:-50px;bottom:-20px;scale(1);}
+  100% {-moz-transform:rotate(125deg);right:-180px;bottom:-35px;scale(0.2);}
+}
+@-ms-keyframes bubbleMoving_C {
+  0 {-ms-transform:rotate(0deg);right:-50px;bottom:-20px;scale(1);}
+  100% {-ms-transform:rotate(125deg);right:-180px;bottom:-35px;scale(0.2);}
+}
+@-o-keyframes bubbleMoving_C {
+  0 {-o-transform:rotate(0deg);right:-50px;bottom:-20px;scale(1);}
+  100% {-o-transform:rotate(125deg);right:-180px;bottom:-35px;scale(0.2);}
+}
+@keyframes bubbleMoving_C {
+  0 {transform:rotate(0deg);right:-50px;bottom:-20px;scale(1);}
+  100% {transform:rotate(125deg);right:-180px;bottom:-35px;scale(0.2);}
+}
 
 /* ==== Bubble D: ==== */
 .bubble.bubb-d {
   left:-120px;
+  top:0px;
   -webkit-animation: bubbleMoving_D .6s ease-in forwards .2s 3;
+  -moz-animation: bubbleMoving_D .6s ease-in forwards .2s 3;
+  -ms-animation: bubbleMoving_D .6s ease-in forwards .2s 3;
+  -o-animation: bubbleMoving_D .6s ease-in forwards .2s 3;
+  animation: bubbleMoving_D .6s ease-in forwards .2s 3;
 }
 .bubble.bubb-d s {
   background-size:32px 32px;
   width:32px;
   height:32px;
-  left:20%;
+  left:10%;
   bottom:0;
 }
 @-webkit-keyframes bubbleMoving_D {
-  0 {-webkit-transform:rotate(0deg);left:-120px;scale(1);}
-  100% {-webkit-transform:rotate(-114deg);left:-195px;scale(0.3);}
+  0 {-webkit-transform:rotate(0deg);left:-120px;top:0px;scale(1);}
+  100% {-webkit-transform:rotate(150deg);left:-20px;top:250px;scale(0.3);}
+}
+@-moz-keyframes bubbleMoving_D {
+  0 {-moz-transform:rotate(0deg);left:-120px;top:0px;scale(1);}
+  100% {-moz-transform:rotate(150deg);left:-20px;top:250px;scale(0.3);}
+}
+@-ms-keyframes bubbleMoving_D {
+  0 {-ms-transform:rotate(0deg);left:-120px;top:0px;scale(1);}
+  100% {-ms-transform:rotate(150deg);left:-20px;top:250px;scale(0.3);}
+}
+@-o-keyframes bubbleMoving_D {
+  0 {-o-transform:rotate(0deg);left:-120px;top:0px;scale(1);}
+  100% {-o-transform:rotate(150deg);left:-20px;top:250px;scale(0.3);}
+}
+@keyframes bubbleMoving_D {
+  0 {transform:rotate(0deg);left:-120px;top:0px;scale(1);}
+  100% {transform:rotate(150deg);left:-20px;top:250px;scale(0.3);}
 }
 
 #cmlt2 .desc {
