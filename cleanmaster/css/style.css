@@ -1,5 +1,5 @@
 ﻿/*
-  Latest modified: 2017-05-18 18:59
+  Latest modified: 2017-05-19 10:44
 */
 @charset "utf-8";
 @font-face {
@@ -306,7 +306,7 @@ body {
 }
 #cmlt1 .title {
 	margin:0 auto;
-	height:98px;
+	height:98px;/* Original size: 336*98 */
 	display:none;
 }
 #cmlt1 .dl {
@@ -1262,7 +1262,7 @@ body {
 		padding: 0 0 0;
 	}
 	.CMLITE #footer {
-		/* display:none; */
+		display:none;
 	}
 	#lastfooter {
 		display:block;
@@ -1364,7 +1364,7 @@ body {
 	}
 	#cmlt1 .phone {
 		width:500px;
-		left:68%;
+		left:50%;
 		margin-left:-250px;
 	}
 	#cmlt1 .main {
@@ -1494,12 +1494,12 @@ body {
 	}
   #cmlt1 .billboard-left {
     margin:0 0 0 20px;
-    width:168px;
+    width:228.5px;/* Should be same as img.title */
   }
 	#cmlt1 .title {
 		margin:0 auto 20px;
-    width:168px;
-		height:49px;
+    width:228.5px;
+		height:66.6px!important;
 	}
 	#cmlt1 .dl {
     margin:20px auto 0;
@@ -2580,15 +2580,11 @@ body {
 }
 @media (max-width:414px) and (min-height:481px) {
 	#cmlt1 .main, #cmlt4 .main {
-		padding: 25px 0 0;
-	}
-	#cmlt1 .title {
-		height: 50px;
-		margin-bottom: 40px;
+		padding:25px 0 0;
 	}
 	#cmlt2 .desc img {
-		height: 58px;
-		margin-bottom: 20px;
+		height:58px;
+		margin-bottom:20px;
 	}
 	#cmlt1 .dl {
 		width: 180px;
