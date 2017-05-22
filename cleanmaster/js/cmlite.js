@@ -606,7 +606,9 @@ function getQueryString(name) {
         $(this).removeClass('languageAnition');
     });
     /* 视频 */
-    var iframeUrl = '<iframe height="100%" width="100%" src="http://player.youku.com/embed/XODQxMzc4MDgw" frameborder="0" allowfullscreen></iframe>',
+    var VideoYouKuURL1 = 'http://player.youku.com/embed/XODQxMzc4MDgw';
+    var VideoYouKuURL2 = 'http://player.youku.com/embed/XMjc3OTE1MzgxMg';
+    var iframeUrl = '<iframe height="100%" width="100%" src="'+ VideoYouKuURL2 +'" frameborder="0" allowfullscreen></iframe>',
         videoMain = $('.video-main'),
         videoWrap = $('.video-wrap'),
         playVideo = $('#playVideo'),
