@@ -1,0 +1,110 @@
+/*!
+ * compile by less
+ * @author: liujiaqi@cmcm.com 
+ * Update for new visual design
+ * Latest modified 2017-05-22 16:08
+ */
+
+/* .bodyCMS can be deleted after multiple languages done */
+.applock-ani .thief,.privacy-ani .i1,.privacy-ani .i2{overflow:hidden;-webkit-transform:translateZ(0);-moz-transform:translateZ(0)}
+@font-face{font-family:helvetica-light;font-weight:400;font-style:normal;src:url(../images/v3/fonts/helveticalight.eot);src:url(../images/v3/fonts/helveticalight.eot?#iefix) format('embedded-opentype'),url(../images/v3/fonts/helveticalight.woff) format('woff'),url(../images/v3/fonts/helveticalight.ttf) format('truetype'),url(../images/v3/fonts/helveticalight.svg#helvetica-light) format('svg')}
+@font-face{font-family:helvetica;font-weight:400;font-style:normal;src:url(../images/v3/fonts/helvetica.eot);src:url(../images/v3/fonts/helvetica.eot?#iefix) format('embedded-opentype'),url(../images/v3/fonts/helvetica.woff) format('woff'),url(../images/v3/fonts/helvetica.ttf) format('truetype'),url(../images/v3/fonts/helvetica.svg#helvetica) format('svg')}
+body{background:#fff}
+.bodyCMS #banner-wrap,#footer,.bodyCMS #header-fixed{background:0 0}
+.bodyCMS #header-fixed{position:absolute;z-index:10;top:0;left:0;width:100%}
+.bodyCMS #header-wrap{background:url(../images/v3/head-bottom-line.png) 0 bottom repeat-x}
+.bodyCMS .fixed #header-wrap{background:url(../images/v3/cms-bg.jpg) center center no-repeat #2b80d9}
+.bodyCMS #banner-wrap{position:relative;overflow:hidden;background:url(../images/v3/cms-bg.jpg) center top no-repeat #2b80d9;-o-background-size:auto 100%;background-size:auto 100%}
+.footer-wrap{background:#1ea3e6}
+#banner{padding:400px 0 100px}
+#banner .logo{position:absolute;top:150px;left:50%;width:420px;margin-left:-210px}
+.bodyCMS #banner .title{width:487px;height:120px;background:url(../images/v3/cms-title-global.png) no-repeat;-o-background-size:contain;background-size:contain;}
+.bodyCMS #banner .sub-title{margin-top:8px;text-align:center;font-size:1.4em;color:#fff;}
+#banner .download{padding-top:20px}
+#banner .social{top:440px;left:730px}
+#banner .arrow{position:absolute;bottom:0;left:50%;width:100px;margin-left:-50px}
+.page{font-family:helvetica,Helvetica,Verdana,Arial;padding:0;color:#777}
+.page .desc,.page .title{color:#3bc7fc}
+.page .content{padding:100px 0}
+.page .item{width:50%}
+.page .title{font-family:helvetica-light,Helvetica,Verdana,Arial;font-size:50px;line-height:1.2}
+.page .entry{font-size:16px;margin-top:30px;color:#737373}
+.page img{display:block}
+.applock-ani{position:relative;width:219px;height:369px;margin-left:190px}
+.applock-ani .phone{position:relative;width:100%;height:100%}
+.animated .applock-ani .phone{-webkit-animation:flyTop .6s linear both;-moz-animation:flyTop .6s linear both;-o-animation:flyTop .6s linear both;animation:flyTop .6s linear both}
+.applock-ani .thief{position:absolute;top:43.3604336%;left:-59.36073059%;width:94.06392694%;height:56.09756098%;transform:translateZ(0);border-radius:100%}
+.animated .applock-ani .thief{-webkit-animation:flyBottom .6s linear both;-moz-animation:flyBottom .6s linear both;-o-animation:flyBottom .6s linear both;animation:flyBottom .6s linear both}
+.animated .applock-ani .thief .i2{-webkit-animation:flyRightIn .6s linear .6s both;-moz-animation:flyRightIn .6s linear .6s both;-o-animation:flyRightIn .6s linear .6s both;animation:flyRightIn .6s linear .6s both}
+.animated .applock-ani .i4,.animated .applock-ani .i5{-moz-animation:fadeIn .6s linear 1.3s both;-o-animation:fadeIn .6s linear 1.3s both;-webkit-animation:fadeIn .6s linear 1.3s both;animation:fadeIn .6s linear 1.3s both}
+.applock-ani .thief img{position:absolute;top:0;left:0;width:100%;height:100%; border-radius:100%;}
+.applock-ani .i4{position:absolute;top:86.72086721%;left:4.56621005%;width:21.91780822%}
+.applock-ani .i5{position:absolute;top:0;left:-54.79452055%;width:234.24657534%}
+#cms-app-lock .title{margin-top:70px}
+.anti-virus-ani{position:relative;width:302px;height:303px}
+.anti-virus-ani .i1,.anti-virus-ani .i2{position:absolute;top:0;left:0;width:100%;height:100%}
+.anti-virus-ani .i3{position:absolute;right:0;bottom:0;width:32.45033113%;-webkit-perspective:500px;-moz-perspective:500px;perspective:500px;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;backface-visibility:hidden}
+.animated .anti-virus-ani .i3{-webkit-animation:flipYIn .8s linear 1.6s both;-moz-animation:flipYIn .8s linear 1.6s both;-o-animation:flipYIn .8s linear 1.6s both;animation:flipYIn .8s linear 1.6s both}
+.anti-virus-ani .i4{position:absolute;top:10.56105611%;left:14.90066225%;width:130.13245033%}
+.animated .anti-virus-ani .i4{-webkit-animation:fadeIn .6s linear 1.6s both;-moz-animation:fadeIn .6s linear 1.6s both;-o-animation:fadeIn .6s linear 1.6s both;animation:fadeIn .6s linear 1.6s both}
+.animated .anti-virus-ani .i1{-webkit-animation:rotateIn .8s linear both;-moz-animation:rotateIn .8s linear both;-o-animation:rotateIn .8s linear both;animation:rotateIn .8s linear both}
+.animated .anti-virus-ani .i2{-webkit-animation:scaleIn .6s ease .8s both;-moz-animation:scaleIn .6s ease .8s both;-o-animation:scaleIn .6s ease .8s both;animation:scaleIn .6s ease .8s both}
+#cms-anti-virus .title{margin-top:60px}
+.privacy-ani{position:relative;width:282px;height:379px;margin-left:120px}
+.privacy-ani .i1,.privacy-ani .i2{position:absolute;transform:translateZ(0)}
+.privacy-ani .i1 img,.privacy-ani .i2 img{display:block;width:100%;height:100%}
+.privacy-ani .i1{top:50px;left:12.41134752%;width:75.17730496%;height:27.96833773%}
+.canAnimation .privacy-ani .i1{top:0;height:43.7994723%}
+.privacy-ani .i2{top:73.61477573%;left:12.41134752%;width:76.59574468%;height:16.88654354%}
+.privacy-ani .i3{position:absolute;top:39.57783641%;width:100%}
+.privacy-ani .i4{position:absolute;top:13.72031662%;left:2.12765957%;width:161.70212766%}
+.animated .privacy-ani .i4{-webkit-animation:fadeIn .6s linear 1s both;-moz-animation:fadeIn .6s linear 1s both;-o-animation:fadeIn .6s linear 1s both;animation:fadeIn .6s linear 1s both}
+.animated .privacy-ani .i1 img{-webkit-animation:slideDown 1s linear both;-moz-animation:slideDown 1s linear both;-o-animation:slideDown 1s linear both;animation:slideDown 1s linear both}
+.animated .privacy-ani .i2 img{-webkit-animation:slideTop 1s linear both;-moz-animation:slideTop 1s linear both;-o-animation:slideTop 1s linear both;animation:slideTop 1s linear both}
+#cms-privacy .title{margin-top:80px}
+.wifi-scanner-ani{position:relative;width:277px;height:306px}
+.wifi-scanner-ani .i1,.wifi-scanner-ani .i2,.wifi-scanner-ani .i3,.wifi-scanner-ani .i4{position:absolute;top:0;left:0;width:100%;height:100%}
+.wifi-scanner-ani .finger{position:absolute;right:-3.6101083%;bottom:0;width:39.71119134%;height:35.94771242%}
+.wifi-scanner-ani .i5{position:absolute;top:15.03267974%;left:18.05054152%;width:126.35379061%}
+.wifi-scanner-ani .i6{position:absolute;top:42.48366013%;left:2.88808664%;width:95.66787004%}
+.animated .wifi-scanner-ani .i1,.animated .wifi-scanner-ani .i5{-webkit-animation:flyBottomIn .6s linear both;-moz-animation:flyBottomIn .6s linear both;-o-animation:flyBottomIn .6s linear both;animation:flyBottomIn .6s linear both}
+.animated .wifi-scanner-ani .i2{-webkit-animation:fadeIn .6s linear .6s both;-moz-animation:fadeIn .6s linear .6s both;-o-animation:fadeIn .6s linear .6s both;animation:fadeIn .6s linear .6s both}
+.animated .wifi-scanner-ani .finger{-webkit-animation:fadeIn .4s linear 1.2s both;-moz-animation:fadeIn .4s linear 1.2s both;-o-animation:fadeIn .4s linear 1.2s both;animation:fadeIn .4s linear 1.2s both}
+.animated .wifi-scanner-ani .finger .i4{-webkit-animation:shakeFinger 2s ease 1.2s infinite alternate both;-moz-animation:shakeFinger 2s ease 1.2s infinite alternate both;-o-animation:shakeFinger 2s ease 1.2s infinite alternate both;animation:shakeFinger 2s ease 1.2s infinite alternate both}
+.animated .wifi-scanner-ani .i6{-webkit-animation:scanner 2s linear 1.2s infinite alternate both;-moz-animation:scanner 2s linear 1.2s infinite alternate both;-o-animation:scanner 2s linear 1.2s infinite alternate both;animation:scanner 2s linear 1.2s infinite alternate both}
+#cms-wifi-scanner .title{margin-top:60px}
+@media (min-width:1300px)and (min-height:750px){#banner{padding:510px 0 100px}
+#banner .social{top:555px;left:850px}
+#banner .logo{top:180px;width:575px;margin-left:-287px}
+#banner .arrow{width:126px;margin-left:-63px}
+.page .content{width:1050px;padding:120px 0}
+.page .title{font-size:60px}
+.page .desc{font-size:22px}
+.page .entry{font-size:18px}
+#cms-anti-virus .title{margin-top:40px}}
+@media (max-width:800px){#banner{padding:260px 0 70px}
+#banner .logo{top:80px;width:300px;margin-left:-150px}
+.bodyCMS #banner .title{width:360px;height:89px;}
+.bodyCMS #banner .sub-title{font-size:1.2em;}
+.page .content{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:60px 20px}
+.page .desc,.page .title{text-align:center}
+.page .title{font-size:34px}
+.page .desc{font-size:18px}
+.page .entry{font-size:14px}
+.page .item{width:100%}
+.page .alignleft,.page .alignright{float:none;margin:0 auto}
+#cms-anti-virus .title,#cms-app-lock .title,#cms-privacy .title,#cms-wifi-scanner .title{margin-top:0}
+.applock-ani{width:131.4px;height:221.4px}
+.anti-virus-ani{width:181.2px;height:181.8px}
+.privacy-ani{width:169.2px;height:227.4px}
+.wifi-scanner-ani{width:166.2px;height:183.6px}
+.anti-virus-ani,.applock-ani,.privacy-ani,.wifi-scanner-ani{margin:40px auto 0}}
+@media (max-width:540px){#banner{padding:240px 0 50px}
+#banner .logo{width:260px;margin-left:-130px}
+.bodyCMS #banner .title{width:250px;height:62px;}
+.bodyCMS #banner .sub-title{font-size:1em;}
+#banner .arrow{width:60px;margin-left:-30px}
+.page .content{padding:30px 10px}
+.page .title{font-size:30px}
+.page .desc{font-size:16px}
+.page .entry{font-size:14px;margin-top:15px}}
