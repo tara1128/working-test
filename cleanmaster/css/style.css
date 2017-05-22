@@ -1,8 +1,9 @@
 ﻿/*
-  Latest modified: 2017-05-22 18:34
+  Latest modified: 2017-05-22 19:02
 */
 
 @charset "utf-8";
+
 @font-face {
 	font-family: 'Gotham-Book';
 	src: url('/cleanmaster/images/fonts/Gotham-Book.eot');
@@ -21,7 +22,14 @@ table {border-collapse:collapse;border-spacing:0;}
 /* To preserve line-height and selector appearance */
 sup {vertical-align:text-top;}
 sub {vertical-align:text-bottom;}
-input,button,textarea,select{font-family:'Gotham-Book',Helvetica,Arial,Verdana,serif,'Microsoft YaHei','微软雅黑';font-size:inherit;font-weight:inherit;*font-size:100%;/* To enable resizing for IE */width:auto;overflow:visible;}
+input,button,textarea,select{
+  font-family: "Gotham-Book", Helvetica, Verdana, Arial, "Microsoft YaHei", '微软雅黑';
+  font-size:inherit;
+  font-weight:inherit;
+  *font-size:100%;/* To enable resizing for IE */
+  width:auto;
+  overflow:visible;
+}
 	
 /* Because legend doesn't inherit in IE */
 legend {color:#000;}
@@ -38,7 +46,7 @@ a, a:active {color:#333;text-decoration:none;outline:none;}
 a {-webkit-tap-highlight-color:rgba(0,0,0,0);}
 /* ========== ========== ========== ========== */
 body {
-  font-family:'Gotham-Book',Helvetica,Arial,Verdana,serif,'Microsoft YaHei','微软雅黑';
+	font-family: "Gotham-Book", Helvetica, Verdana, Arial, "Microsoft YaHei";
 	background:#fff;
 	color:#333;
 	font-size:12px;
