@@ -607,7 +607,7 @@ function getQueryString(name) {
     });
     /* 视频 */
     var VideoYouKuURL1 = 'http://player.youku.com/embed/XODQxMzc4MDgw';
-    var VideoYouKuURL2 = 'http://player.youku.com/embed/XMjc3OTE1MzgxMg';
+    var VideoYouKuURL2 = 'http://player.youku.com/embed/XMjc3OTE5OTA2NA';
     var iframeUrl = '<iframe height="100%" width="100%" src="'+ VideoYouKuURL2 +'" frameborder="0" allowfullscreen></iframe>',
         videoMain = $('.video-main'),
         videoWrap = $('.video-wrap'),
