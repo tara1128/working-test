@@ -248,7 +248,7 @@ var cateList = [
   },
   {
     projectName: 'Security Master',
-    linkTo: 'cms/',
+    linkTo: 'cms/?v=001',
     latestModified: '2017-05-22 15:54'
   },
   {

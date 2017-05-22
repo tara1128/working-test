@@ -1,12 +1,12 @@
 ﻿/*
-  Latest modified: 2017-05-22 16:41
+  Latest modified: 2017-05-22 17:12
 */
 
 @charset "utf-8";
 @font-face {
 	font-family: 'Gotham-Book';
-	src: url('../images/fonts/Gotham-Book.eot');
-	src: url('../images/fonts/Gotham-Book.eot') format('embedded-opentype'), url('../images/fonts/Gotham-Book.woff') format('woff'), url('../images/fonts/Gotham-Book.ttf') format('truetype'), url('../images/fonts/Gotham-Book.svg#Gotham-Book') format('svg');
+	src: url('/cleanmaster/images/fonts/Gotham-Book.eot');
+	src: url('/cleanmaster/images/fonts/Gotham-Book.eot') format('embedded-opentype'), url('/cleanmaster/images/fonts/Gotham-Book.woff') format('woff'), url('/cleanmaster/images/fonts/Gotham-Book.ttf') format('truetype'), url('/cleanmaster/images/fonts/Gotham-Book.svg#Gotham-Book') format('svg');
 }
 
 /* Reset css */
