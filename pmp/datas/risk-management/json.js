@@ -1,10 +1,10 @@
-var Project_???_Management = {
-id: ,
+var Project_Risk_Management = {
+id: 11,
 datas: {
-    "pmp-0??": {
-      name: '.1 ',
+    "pmp-111": {
+      name: '11.1 规划风险管理',
       engname: '',
-      knowledge: '项目 ?? 管理 <b>Project ?? Management</b>',
+      knowledge: '项目风险管理 <b>Project Risk Management</b>',
       processGroup: '规划过程组 <b>Planning Process Group</b>',
       keyNotes: [
         {text: ''},
@@ -24,10 +24,10 @@ datas: {
       ]
     }, // One process
 
-    "pmp-0??": {
-      name: '.2 ',
+    "pmp-112": {
+      name: '11.2 识别风险',
       engname: '',
-      knowledge: '项目 ?? 管理 <b>Project ?? Management</b>',
+      knowledge: '项目风险管理 <b>Project Risk Management</b>',
       processGroup: '规划过程组 <b>Planning Process Group</b>',
       keyNotes: [
         {text: ''},
@@ -48,10 +48,10 @@ datas: {
       ],
     }, // One process
 
-    "pmp-0??": {
-      name: '.3 ',
+    "pmp-113": {
+      name: '11.3 实施定性风险分析',
       engname: '',
-      knowledge: '项目 ?? 管理 <b>Project ?? Management</b>',
+      knowledge: '项目风险管理 <b>Project Risk Management</b>',
       processGroup: '规划过程组 <b>Planning Process Group</b>',
       keyNotes: [
         {text: ''},
@@ -75,11 +75,11 @@ datas: {
       ],
     }, // One process
 
-    "pmp-0??": {
-      name: '.4 ',
+    "pmp-114": {
+      name: '11.4 实施定量风险分析',
       engname: '',
-      knowledge: '项目 ?? 管理 <b>Project ?? Management</b>',
-      processGroup: '监控过程组 <b>Monitoring and Controlling Process Group</b>',
+      knowledge: '项目风险管理 <b>Project Risk Management</b>',
+      processGroup: '规划过程组 <b>Planning Process Group</b>',
       keyNotes: [
         {text: ''},
         {text: ''}
@@ -96,11 +96,11 @@ datas: {
       ],
     }, // One process
 
-    "pmp-0??": {
-      name: '.5 ',
+    "pmp-115": {
+      name: '11.5 规划风险应对',
       engname: '',
-      knowledge: '项目 ?? 管理 <b>Project ?? Management</b>',
-      processGroup: '监控过程组 <b>Monitoring and Controlling Process Group</b>',
+      knowledge: '项目风险管理 <b>Project Risk Management</b>',
+      processGroup: '规划过程组 <b>Planning Process Group</b>',
       keyNotes: [
         {text: ''},
         {text: ''}
@@ -117,10 +117,10 @@ datas: {
       ],
     }, // One process
 
-    "pmp-0??": {
-      name: '.6 ',
+    "pmp-116": {
+      name: '11.6 控制风险',
       engname: '',
-      knowledge: '项目 ?? 管理 <b>Project ?? Management</b>',
+      knowledge: '项目风险管理 <b>Project Risk Management</b>',
       processGroup: '监控过程组 <b>Monitoring and Controlling Process Group</b>',
       keyNotes: [
         {text: ''},
