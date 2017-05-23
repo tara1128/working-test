@@ -2,7 +2,7 @@
  * compile by less
  * @author: liujiaqi@cmcm.com 
  * Update for new visual design, for en-us ONLY, temporary!
- * Latest modified 2017-05-23 19:42
+ * Latest modified 2017-05-23 19:53
  */
 
 /* .bodyCMS can be deleted after multiple languages done */
@@ -282,7 +282,10 @@ body{background:#fff}
   #banner .arrow{width:60px;margin-left:-30px;}
   .page .content{padding:30px 10px;}
   .page .title img {width:320px;}
-  #cms-app-lock .entry{width:320px;}
+  #cms-anti-virus .title, 
+  #cms-anti-virus .title img {width:295px;}
+  #cms-app-lock .entry {padding:0;}
+  #cms-app-lock .entry,
   #cms-privacy .title-icon,
   #cms-privacy .title,
   #cms-privacy .entry,
