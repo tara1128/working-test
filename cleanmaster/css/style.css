@@ -1,5 +1,5 @@
 ﻿/*
-  Latest modified: 2017-05-22 19:02
+  Latest modified: 2017-05-23 11:03
 */
 
 @charset "utf-8";
@@ -347,10 +347,10 @@ body {
 	background:#2a64cb;
 }
 #cmlt1 .phone {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	width: 690px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	width:690px;
 }
 
 #cmlt2 {
@@ -1286,7 +1286,7 @@ body {
 		height: auto;
 	}
 	#cmlt1 .phone {
-		width: auto;
+		width:auto;
 	}
   #cmlt1 .cm-2dcode {
     margin:38px auto 0;
@@ -1514,7 +1514,7 @@ body {
 		margin-left:-250px;
 	}
 	#cmlt1 .main {
-		padding:30px 0 250px;
+		padding:20px 0 250px;
 	}
 	#cmlt2 {
 		height:580px;
@@ -1642,10 +1642,16 @@ body {
     margin:0 auto;
   }
 	#cmlt1 .title {
-		margin:0 auto 20px;
+		margin:0 auto;
+    width:232px;
+    height:72px;
 	}
 	#cmlt1 .dl {
-    margin:25px auto 0;
+    margin:15px auto 0;
+    width:150px;
+    height:40px;
+    line-height:42px;
+    font-size:16px;
 	}
   #cmlt1 .cm-2dcode {
     display:none;
@@ -1654,8 +1660,8 @@ body {
     height:0px;
   }
 	#cmlt1 .phone {
-		width:300px;
-		margin-left:-150px;
+		width:260px;
+		margin-left:-130px;
 	}
 	#cmlt2 .main {
 		padding-top: 30px;
