@@ -1,8 +1,8 @@
 /*!
  * compile by less
  * @author: liujiaqi@cmcm.com 
- * Update for new visual design
- * Latest modified 2017-05-23 18:49
+ * Update for new visual design, for en-us ONLY, temporary!
+ * Latest modified 2017-05-23 19:42
  */
 
 /* .bodyCMS can be deleted after multiple languages done */
@@ -21,7 +21,7 @@ body{background:#fff}
 .bodyCMS #banner .title{width:590px;height:70px;background:url(../images/cms/new-cms-big-title.png) no-repeat;-o-background-size:contain;background-size:contain;}
 .bodyCMS #banner .sub-title{margin:0 auto;width:430px;height:40px;background:url(../images/cms/new-cms-sub-title.png) no-repeat;-o-background-size:contain;background-size:contain;text-indent:-9999px;}
 #banner .download{padding-top:20px}
-#banner .social{top:440px;left:730px}
+#banner .social{top:440px;left:780px;}
 #banner .arrow{position:absolute;bottom:0;left:50%;width:100px;margin-left:-50px}
 .page{font-family:helvetica,Helvetica,Verdana,Arial;padding:0;color:#777}
 .page .desc,.page .title{color:#3bc7fc}
@@ -70,6 +70,7 @@ body{background:#fff}
 }
 #cms-anti-virus .three-icons{
   margin:30px auto 0;
+  height:120px;
 }
 #cms-anti-virus .three-icons img{
   display:block;
@@ -239,7 +240,7 @@ body{background:#fff}
 /* ====== 宽大屏 ====== */
 @media (min-width: 1300px) and (min-height: 750px){
   #banner {padding:510px 0 100px;}
-  #banner .social{top:555px;left:910px}
+  #banner .social{top:555px;left:910px;}
   #banner .logo{top:180px;width:575px;margin-left:-287px}
   #banner .arrow{width:126px;margin-left:-63px}
   .page .content{width:1050px;padding:120px 0}
@@ -251,32 +252,43 @@ body{background:#fff}
 
 /* ====== 中小屏 ====== */
 @media (max-width: 800px) {
-  #banner{padding:260px 0 70px}
-  #banner .logo{top:80px;width:300px;margin-left:-150px}
+  #banner{padding:260px 0 70px;}
+  #banner .logo{top:80px;width:300px;margin-left:-150px;}
   .bodyCMS #banner .title{width:360px;height:42.7px;}
+  .bodyCMS #banner .sub-title {width:360px;height:34px;}
   .page .content{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:60px 20px}
-  .page .desc,.page .title{text-align:center}
-  .page .title{font-size:34px}
-  .page .desc{font-size:18px}
-  .page .entry{font-size:14px}
-  .page .item{width:100%}
-  .page .alignleft,.page .alignright{float:none;margin:0 auto}
-  #cms-anti-virus .title,#cms-app-lock .title,#cms-privacy .title,#cms-wifi-scanner .title{margin-top:0}
-  .applock-ani{width:192px;height:192px;border:1px dashed red;}
-  .anti-virus-ani{width:181.2px;height:181.8px}
-  .privacy-ani{width:169.2px;height:227.4px}
-  .wifi-scanner-ani{width:166.2px;height:183.6px}
+  .page .entry{font-size:14px;}
+  .page .item{width:100%;}
+  .page .title img {margin:0 auto;}
+  .page .title-icon {display:none!important;}
+  .page .entry {margin:30px auto 0;}
+  .page .alignleft, .page .alignright{float:none;margin:0 auto;}
+  #cms-anti-virus .title, #cms-app-lock .title, #cms-privacy .title, #cms-wifi-scanner .title {margin-top:0}
+  #cms-anti-virus .entry {width:295px;}
+  #cms-anti-virus .three-icons{width:295px;}
+  #cms-anti-virus .three-icons img{width:90px;height:90px;margin-right:4px;}
+  #cms-privacy .entry {width:320px;}
+  .privacy-ani img.gathering {left:90px;}
+  #cms-wifi-scanner .entry {width:374px;}
   .anti-virus-ani, .applock-ani, .privacy-ani, .wifi-scanner-ani {margin:40px auto 0;}
 }
 
 /* ====== 小屏 ====== */
 @media (max-width: 540px) {
-  #banner{padding:240px 0 50px}
-  #banner .logo{width:260px;margin-left:-130px}
+  #banner{padding:240px 0 50px;}
+  #banner .logo{width:260px;margin-left:-130px;}
   .bodyCMS #banner .title{width:250px;height:30px;}
-  #banner .arrow{width:60px;margin-left:-30px}
-  .page .content{padding:30px 10px}
-  .page .title{font-size:30px}
-  .page .desc{font-size:16px}
-  .page .entry{font-size:14px;margin-top:15px}
+  .bodyCMS #banner .sub-title{width:250px;height:23px;}
+  #banner .arrow{width:60px;margin-left:-30px;}
+  .page .content{padding:30px 10px;}
+  .page .title img {width:320px;}
+  #cms-app-lock .entry{width:320px;}
+  #cms-privacy .title-icon,
+  #cms-privacy .title,
+  #cms-privacy .entry,
+  #cms-wifi-scanner .title-icon,
+  #cms-wifi-scanner .title,
+  #cms-wifi-scanner .entry {
+    width:320px;
+  }
 }
