@@ -2,14 +2,23 @@
  * compile by less
  * @author: liujiaqi@cmcm.com 
  * Update for new visual design, for en-us ONLY, temporary!
- * Latest modified 2017-05-23 19:53
+ * Latest modified 2017-05-24 17:14
  */
 
-/* .bodyCMS can be deleted after multiple languages done */
-.privacy-ani .i1,.privacy-ani .i2{overflow:hidden;-webkit-transform:translateZ(0);-moz-transform:translateZ(0)}
-@font-face{font-family:helvetica-light;font-weight:400;font-style:normal;src:url(../images/v3/fonts/helveticalight.eot);src:url(../images/v3/fonts/helveticalight.eot?#iefix) format('embedded-opentype'),url(../images/v3/fonts/helveticalight.woff) format('woff'),url(../images/v3/fonts/helveticalight.ttf) format('truetype'),url(../images/v3/fonts/helveticalight.svg#helvetica-light) format('svg')}
-@font-face{font-family:helvetica;font-weight:400;font-style:normal;src:url(../images/v3/fonts/helvetica.eot);src:url(../images/v3/fonts/helvetica.eot?#iefix) format('embedded-opentype'),url(../images/v3/fonts/helvetica.woff) format('woff'),url(../images/v3/fonts/helvetica.ttf) format('truetype'),url(../images/v3/fonts/helvetica.svg#helvetica) format('svg')}
-body{background:#fff}
+@font-face {
+    font-family: 'RobotoCondensedRegular';
+    src: url('../images/cms/RobotoCondensedRegular.eot');
+    src: url('../images/cms/RobotoCondensedRegular.eot') format('embedded-opentype'),
+         url('../images/cms/RobotoCondensedRegular.woff2') format('woff2'),
+         url('../images/cms/RobotoCondensedRegular.woff') format('woff'),
+         url('../images/cms/RobotoCondensedRegular.ttf') format('truetype'),
+         url('../images/cms/RobotoCondensedRegular.svg#RobotoCondensedRegular') format('svg');
+}
+
+body{
+  font-family: 'RobotoCondensedRegular';
+  background:#fff;
+}
 .bodyCMS #banner-wrap, #footer, .bodyCMS #header-fixed{background:0 0;}
 .bodyCMS #header-fixed{position:absolute;z-index:10;top:0;left:0;width:100%;}
 .bodyCMS #header-wrap{background:url(../images/v3/head-bottom-line.png) 0 bottom repeat-x;}
@@ -24,12 +33,26 @@ body{background:#fff}
 #banner .social{top:440px;left:780px;}
 #banner .arrow{position:absolute;bottom:0;left:50%;width:100px;margin-left:-50px}
 .page{font-family:helvetica,Helvetica,Verdana,Arial;padding:0;color:#777}
-.page .desc,.page .title{color:#3bc7fc}
 .page .content{padding:100px 0}
 .page .item{width:50%}
 .page .title{font-family:helvetica-light,Helvetica,Verdana,Arial;font-size:50px;line-height:1.2}
-.page .entry{font-size:16px;margin-top:30px;color:#737373}
-.page img{display:block}
+.page img{display:block;}
+.page .title, .page .descr, .page .entry {color:#2d379c;font-family:'RobotoCondensedRegular';}
+
+#cms-app-lock .title,
+#cms-anti-virus .title,
+#cms-privacy .title,
+#cms-wifi-scanner .title {margin:40px auto 0;font-size:54px;}
+
+#cms-app-lock .descr,
+#cms-anti-virus .descr,
+#cms-privacy .descr,
+#cms-wifi-scanner .descr {margin:0 auto;font-size:24px;}
+
+#cms-app-lock .entry,
+#cms-anti-virus .entry,
+#cms-privacy .entry,
+#cms-wifi-scanner .entry {margin:30px auto 0;font-size:16px;color:#737373;}
 
 .applock-ani{
   position:relative;
@@ -38,20 +61,22 @@ body{background:#fff}
   height:320px;
 }
 
-#cms-app-lock .title{
-  margin-top:70px;
-  text-indent:-9999px;
+#cms-app-lock .title {
+  margin:70px auto 0;
+  max-width:435px;
 }
-#cms-app-lock .entry{
+#cms-app-lock .entry {
   padding:0 0 0 5px;
-  width:430px;
+  max-width:430px;
 }
 #cms-app-lock .entry strong {
   color:#2d379c;
 }
+
 #cms-anti-virus .title-icon,
 #cms-anti-virus .title,
 #cms-anti-virus .entry,
+#cms-anti-virus .descr,
 #cms-anti-virus .three-icons {
   width:440px;
 }
@@ -61,12 +86,6 @@ body{background:#fff}
   height:55px;
   background:url(../images/cms/new-cms-intel-icon.png) no-repeat;
   text-indent:-9999px;
-}
-#cms-anti-virus .title{
-  margin:40px auto 0;
-}
-#cms-anti-virus .entry{
-  margin:30px auto 0!important;
 }
 #cms-anti-virus .three-icons{
   margin:30px auto 0;
@@ -122,9 +141,9 @@ body{background:#fff}
   animation:flyBottom .9s ease both;
 }
 
-
 #cms-privacy .title-icon,
 #cms-privacy .title,
+#cms-privacy .descr,
 #cms-privacy .entry {
   width:435px;
 }
@@ -134,12 +153,6 @@ body{background:#fff}
   height:50px;
   background:url(../images/cms/new-cms-keycloud.png) no-repeat;
   text-indent:-9999px;
-}
-#cms-privacy .title {
-  margin:40px auto 0;
-}
-#cms-privacy .entry {
-  margin:30px auto 0!important;
 }
 
 .privacy-ani {
@@ -168,6 +181,7 @@ body{background:#fff}
 
 #cms-wifi-scanner .title-icon,
 #cms-wifi-scanner .title,
+#cms-wifi-scanner .descr,
 #cms-wifi-scanner .entry {
   width:435px;
 }
@@ -177,12 +191,6 @@ body{background:#fff}
   height:70px;
   background:url(../images/cms/new-cms-alock.png) no-repeat;
   text-indent:-9999px;
-}
-#cms-wifi-scanner .title {
-  margin:40px auto 0;
-}
-#cms-wifi-scanner .entry {
-  margin:30px auto 0!important;
 }
 
 .wifi-scanner-ani {
@@ -234,20 +242,16 @@ body{background:#fff}
 
 
 
-
-
-
 /* ====== 宽大屏 ====== */
 @media (min-width: 1300px) and (min-height: 750px){
   #banner {padding:510px 0 100px;}
   #banner .social{top:555px;left:910px;}
-  #banner .logo{top:180px;width:575px;margin-left:-287px}
-  #banner .arrow{width:126px;margin-left:-63px}
-  .page .content{width:1050px;padding:120px 0}
-  .page .title{font-size:60px}
-  .page .desc{font-size:22px}
-  .page .entry{font-size:18px}
-  #cms-anti-virus .title{margin-top:40px}
+  #banner .logo{top:180px;width:575px;margin-left:-287px;}
+  #banner .arrow{width:126px;margin-left:-63px;}
+  .page .content{width:1050px;padding:120px 0;}
+  .page .title{font-size:60px;}
+  .page .entry{font-size:18px;}
+  #cms-anti-virus .title{margin-top:40px;}
 }
 
 /* ====== 中小屏 ====== */
@@ -256,20 +260,29 @@ body{background:#fff}
   #banner .logo{top:80px;width:300px;margin-left:-150px;}
   .bodyCMS #banner .title{width:360px;height:42.7px;}
   .bodyCMS #banner .sub-title {width:360px;height:34px;}
-  .page .content{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:60px 20px}
-  .page .entry{font-size:14px;}
+  .page .content{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:60px 20px;}
   .page .item{width:100%;}
-  .page .title img {margin:0 auto;}
   .page .title-icon {display:none!important;}
-  .page .entry {margin:30px auto 0;}
   .page .alignleft, .page .alignright{float:none;margin:0 auto;}
-  #cms-anti-virus .title, #cms-app-lock .title, #cms-privacy .title, #cms-wifi-scanner .title {margin-top:0}
-  #cms-anti-virus .entry {width:295px;}
-  #cms-anti-virus .three-icons{width:295px;}
-  #cms-anti-virus .three-icons img{width:90px;height:90px;margin-right:4px;}
-  #cms-privacy .entry {width:320px;}
+
+  #cms-app-lock .title,
+  #cms-anti-virus .title,
+  #cms-privacy .title,
+  #cms-wifi-scanner .title {margin:50px auto 0;width:435px;}
+
+  #cms-app-lock .descr,
+  #cms-anti-virus .descr,
+  #cms-privacy .descr,
+  #cms-wifi-scanner .descr {width:435px;}
+
+  #cms-app-lock .entry,
+  #cms-anti-virus .entry,
+  #cms-privacy .entry,
+  #cms-wifi-scanner .entry {width:435px;font-size:14px;}
+
+  #cms-anti-virus .three-icons{width:435px;}
+  #cms-anti-virus .three-icons img{width:140px;height:140px;margin-right:5px;}
   .privacy-ani img.gathering {left:90px;}
-  #cms-wifi-scanner .entry {width:374px;}
   .anti-virus-ani, .applock-ani, .privacy-ani, .wifi-scanner-ani {margin:40px auto 0;}
 }
 
@@ -280,18 +293,24 @@ body{background:#fff}
   .bodyCMS #banner .title{width:250px;height:30px;}
   .bodyCMS #banner .sub-title{width:250px;height:23px;}
   #banner .arrow{width:60px;margin-left:-30px;}
+  #cms-app-lock .title {margin-top:30px;}
   .page .content{padding:30px 10px;}
-  .page .title img {width:320px;}
-  #cms-anti-virus .title, 
-  #cms-anti-virus .title img {width:295px;}
   #cms-app-lock .entry {padding:0;}
-  #cms-app-lock .entry,
-  #cms-privacy .title-icon,
+
+  #cms-anti-virus .three-icons{width:320px;}
+  #cms-anti-virus .three-icons img{width:100px;height:100px;margin-right:5px;}
+
+  #cms-app-lock .title,
+  #cms-anti-virus .title,
   #cms-privacy .title,
+  #cms-wifi-scanner .title {margin:45px auto 0;width:320px;font-size:36px;}
+
+  #cms-app-lock .descr,
+  #cms-anti-virus .descr,
+  #cms-privacy .descr,
+  #cms-wifi-scanner .descr,
+  #cms-app-lock .entry,
+  #cms-anti-virus .entry,
   #cms-privacy .entry,
-  #cms-wifi-scanner .title-icon,
-  #cms-wifi-scanner .title,
-  #cms-wifi-scanner .entry {
-    width:320px;
-  }
+  #cms-wifi-scanner .entry {width:320px;}
 }
