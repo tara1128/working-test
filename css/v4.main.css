@@ -1,6 +1,6 @@
 /*
-  Latest modified: 2017-04-07 10:51
-  Merge blog.css styles for "/about" page.
+  Latest modified: 2017-05-24 16:26
+  Update Logo for AppStore and GooglePlay
 */
 @font-face {
 	font-family: 'HelveticaBold';
@@ -2393,29 +2393,21 @@ body {
 #pg-v2-banner .download a {
 	display: inline;
 	float: left;
-	width: 188px;
-	height: 62px;
-	margin-right: 20px;
+	width:198px;
+	height:57px;
+	background: url(../images/pg-new-dl-btns.png) no-repeat;
+	margin-right:20px;
 	-webkit-transition: border-color .3s, background-color .3s;
 	-moz-transition: border-color .3s, background-color .3s;
 	-o-transition: border-color .3s, background-color .3s;
 	transition: border-color .3s, background-color .3s;
 	text-indent: -999em;
-	border: 1px solid #fff;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
-	background: url(../images/v3/pg-v2-store.png) no-repeat
 }
 #pg-v2-banner .download a.googlePlay {
-	background-position: 0 -62px
+	background-position:0 0;
 }
 #pg-v2-banner .download a.appStore {
-	background-position: -188px -62px
-}
-#pg-v2-banner .download a.googlePlay:hover, #pg-v2-banner .download a.appStore:hover, #pg-v2-banner .download a.googlePlay:active, #pg-v2-banner .download a.appStore:active {
-	border-color: #253034;
-	background-color: #253034
+	background-position:-213px 0;
 }
 #pg-v2-banner .pg-v2-playvideo {
 	font-size: 18px;
@@ -3256,36 +3248,23 @@ body {
 .pg-v2-join-btn a {
 	display: inline;
 	float: left;
-	width: 188px;
-	height: 62px;
-	margin-right: 20px;
+	width:198px;
+	height:57px;
+	background:url(../images/pg-new-dl-btns.png) no-repeat;
+	margin-right:20px;
 	-webkit-transition: border-color .3s, background-color .3s;
 	-moz-transition: border-color .3s, background-color .3s;
 	-o-transition: border-color .3s, background-color .3s;
 	transition: border-color .3s, background-color .3s;
-	text-indent: -999em;
-	border: 1px solid #3a4448;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
-	background: url(../images/v3/pg-v2-store.png) no-repeat
+	text-indent:-999em;
 }
 .pg-v2-join-btn a.googlePlay {
-	background-position: 0 0
+	background-position:0 0;
 }
 .pg-v2-join-btn a.appStore {
-	background-position: -188px 0
+	background-position:-213px 0;
 }
-.pg-v2-join-btn a.googlePlay:hover, .pg-v2-join-btn a.appStore:hover, .pg-v2-join-btn a.googlePlay:active, .pg-v2-join-btn a.appStore:active {
-	border-color: #253034;
-	background-color: #253034
-}
-.pg-v2-join-btn a.googlePlay:hover, .pg-v2-join-btn a.googlePlay:active {
-	background-position: 0 -62px
-}
-.pg-v2-join-btn a.appStore:hover, .pg-v2-join-btn a.appStore:active {
-	background-position: -188px -62px
-}
+
 .pg-v2-slide {
 	float: left;
 	padding: 67px 19px 0 18px;

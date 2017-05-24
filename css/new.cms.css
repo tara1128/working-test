@@ -2,7 +2,7 @@
  * compile by less
  * @author: liujiaqi@cmcm.com 
  * Update for new visual design, for en-us ONLY, temporary!
- * Latest modified 2017-05-24 17:32
+ * Latest modified 2017-05-24 18:15
  */
 
 @font-face {
@@ -83,6 +83,7 @@ body{
   color:#2d379c;
 }
 
+
 #cms-anti-virus .title-icon,
 #cms-anti-virus .title,
 #cms-anti-virus .entry,
@@ -116,6 +117,11 @@ body{
   position:absolute;
   left:0px;
   top:0px;
+}
+.page img.phone-shadow { /* Shadow size: 460 * 630 */
+  left:50%;
+  top:-50px;
+  margin-left:-230px;
 }
 .anti-virus-ani img.cuty {
   left:168px;
