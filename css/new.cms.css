@@ -2,7 +2,7 @@
  * compile by less
  * @author: liujiaqi@cmcm.com 
  * Update for new visual design, for en-us ONLY, temporary!
- * Latest modified 2017-05-24 17:14
+ * Latest modified 2017-05-24 17:32
  */
 
 @font-face {
@@ -32,6 +32,16 @@ body{
 #banner .download{padding-top:20px}
 #banner .social{top:440px;left:780px;}
 #banner .arrow{position:absolute;bottom:0;left:50%;width:100px;margin-left:-50px}
+
+.gp-dl.new-cms-dlbtn {
+  padding:0;
+  width:181px;
+  height:64px;
+  background:url(../images/cms/new-cms-dl.png) no-repeat;
+  text-indent:-9999px;
+  border-radius:0;
+}
+
 .page{font-family:helvetica,Helvetica,Verdana,Arial;padding:0;color:#777}
 .page .content{padding:100px 0}
 .page .item{width:50%}
