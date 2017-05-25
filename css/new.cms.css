@@ -2,7 +2,7 @@
  * compile by less
  * @author: liujiaqi@cmcm.com 
  * Update for new visual design, for en-us ONLY, temporary!
- * Latest modified 2017-05-25 16:50
+ * Latest modified 2017-05-25 17:33
  */
 
 @font-face {
@@ -32,11 +32,17 @@ body {background:#fff;}
 
 .gp-dl.new-cms-dlbtn {
   padding:0;
-  width:181px;
+  width:180px;
   height:64px;
-  background:url(../images/cms/new-cms-dl.png) no-repeat;
   text-indent:-9999px;
   border-radius:0;
+  background-repeat: no-repeat;
+  background-image:url(../images/cms/new-cms-download-from-gp-x1.png);
+  background-image: -webkit-image-set(
+    url(../images/cms/new-cms-download-from-gp-x1.png) 1x,
+    url(../images/cms/new-cms-download-from-gp-x15.png) 1.5x,
+    url(../images/cms/new-cms-download-from-gp-x2.png) 2x
+  )
 }
 
 #container-wrap .title, #container-wrap .descr {font-family:'RobotoCondensedRegular';color:#2d379c;}
@@ -320,7 +326,7 @@ body {background:#fff;}
   #cms-app-lock .entry {padding:0;}
   #cms-app-lock .entry span.cms-txt {width:200px;float:left;}
   #cms-app-lock .alignright, #cms-app-lock .title, #cms-app-lock .entry {position:relative;}
-  #cms-app-lock img.img-in-mob {display:block;position:absolute;right:-60px;top:10px;width:240px;}
+  #cms-app-lock img.img-in-mob {display:block;position:absolute;right:-60px;top:30px;width:240px;}
 
   #cms-app-lock .alignleft.in-pc,
   #cms-anti-virus .alignright.in-pc,
@@ -339,13 +345,15 @@ body {background:#fff;}
   #cms-anti-virus .show-in-mob img.mob-cuty-bg,
   #cms-wifi-scanner .show-in-mob img.mob-appl-bg {position:relative;width:100%;}
 
+  #cms-privacy .show-in-mob img.mob-safe-conn {margin:0 auto;width:90%;}
+
   #cms-anti-virus .show-in-mob img.mob-cuty1 {position:absolute;left:10px;top:20px;width:137px;}
   #cms-anti-virus .show-in-mob img.mob-cuty2 {position:absolute;right:20px;top:20px;width:110px;}
   #cms-anti-virus .show-in-mob img.mob-cuty3 {position:absolute;right:10px;bottom:-40px;width:110px;}
 
-  #cms-wifi-scanner .show-in-mob img.mob-appl-thief {position:absolute;right:13px;top:-83px;width:150px;}
-  #cms-wifi-scanner .show-in-mob img.mob-appl-alerting {position:absolute;left:70px;top:80px;width:150px;}
-  #cms-wifi-scanner .show-in-mob img.mob-appl-locker {position:absolute;left:-38px;bottom:-10px;width:200px;}
+  #cms-wifi-scanner .show-in-mob img.mob-appl-thief {position:absolute;right:13px;top:-72px;width:130px;}
+  #cms-wifi-scanner .show-in-mob img.mob-appl-alerting {position:absolute;left:80px;top:30px;width:150px;}
+  #cms-wifi-scanner .show-in-mob img.mob-appl-locker {position:absolute;left:-38px;bottom:-10px;width:230px;}
 
 
   .animated .show-in-mob img.mob-cuty1 {
@@ -391,4 +399,27 @@ body {background:#fff;}
 
   #cms-privacy .entry p.tips-text {text-align:left;}
   #cms-privacy .title {margin:0 auto;}
+
+  .productFooter #container-wrap {padding-bottom:65px;}
+}
+
+
+
+/* ====== 超小屏 <320 ====== */
+@media (max-width: 320px) {
+  #cms-app-lock .title,
+  #cms-anti-virus .title,
+  #cms-privacy .title,
+  #cms-wifi-scanner .title {margin:35px auto 0;width:300px;font-size:32px;}
+
+  #cms-app-lock .descr,
+  #cms-anti-virus .descr,
+  #cms-privacy .descr,
+  #cms-wifi-scanner .descr {margin:3px auto 0;width:300px;}
+
+  #cms-app-lock .entry,
+  #cms-anti-virus .entry,
+  #cms-privacy .entry,
+  #cms-wifi-scanner .entry {margin:14px auto 0;width:300px;}
+
 }
