@@ -2,7 +2,7 @@
  * compile by less
  * @author: liujiaqi@cmcm.com 
  * Update for new visual design, for en-us ONLY, temporary!
- * Latest modified 2017-05-25 11:37
+ * Latest modified 2017-05-25 12:10
  */
 
 @font-face {
@@ -104,6 +104,9 @@ body {background:#fff;}
   display:block;
   float:left;
   margin-right:15px;
+}
+#cms-anti-virus .three-icons img.in-mob {
+  display:none;
 }
 .anti-virus-ani{
   position:relative;
@@ -296,7 +299,7 @@ body {background:#fff;}
   #cms-wifi-scanner .entry {width:435px;font-size:14px;}
 
   #cms-anti-virus .three-icons{width:435px;}
-  #cms-anti-virus .three-icons img{width:140px;height:140px;margin-right:5px;}
+  #cms-anti-virus .three-icons img{margin-right:15px;}
   .privacy-ani img.gathering {left:90px;}
   .anti-virus-ani, .applock-ani, .privacy-ani, .wifi-scanner-ani {margin:40px auto 0;}
 }
@@ -313,7 +316,8 @@ body {background:#fff;}
   #cms-app-lock .entry {padding:0;}
 
   #cms-anti-virus .three-icons{width:320px;}
-  #cms-anti-virus .three-icons img{width:100px;height:100px;margin-right:5px;}
+  #cms-anti-virus .three-icons img.in-pc {display:none;}
+  #cms-anti-virus .three-icons img.in-mob {display:block;width:100px;height:100px;margin-right:5px;}
 
   #cms-app-lock .title,
   #cms-anti-virus .title,
