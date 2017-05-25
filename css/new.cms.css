@@ -2,7 +2,7 @@
  * compile by less
  * @author: liujiaqi@cmcm.com 
  * Update for new visual design, for en-us ONLY, temporary!
- * Latest modified 2017-05-24 18:15
+ * Latest modified 2017-05-25 11:37
  */
 
 @font-face {
@@ -15,10 +15,7 @@
          url('../images/cms/RobotoCondensedRegular.svg#RobotoCondensedRegular') format('svg');
 }
 
-body{
-  font-family: 'RobotoCondensedRegular';
-  background:#fff;
-}
+body {background:#fff;}
 .bodyCMS #banner-wrap, #footer, .bodyCMS #header-fixed{background:0 0;}
 .bodyCMS #header-fixed{position:absolute;z-index:10;top:0;left:0;width:100%;}
 .bodyCMS #header-wrap{background:url(../images/v3/head-bottom-line.png) 0 bottom repeat-x;}
@@ -42,17 +39,17 @@ body{
   border-radius:0;
 }
 
-.page{font-family:helvetica,Helvetica,Verdana,Arial;padding:0;color:#777}
-.page .content{padding:100px 0}
-.page .item{width:50%}
-.page .title{font-family:helvetica-light,Helvetica,Verdana,Arial;font-size:50px;line-height:1.2}
+#container-wrap .title, #container-wrap .descr {font-family:'RobotoCondensedRegular';color:#2d379c;}
+.page .entry {font-family:helvetica,Helvetica,Verdana,Arial;padding:0;}
+.page .content{padding:100px 0;}
+.page .item{width:50%;}
+.page .title{font-size:50px;line-height:1.2;}
 .page img{display:block;}
-.page .title, .page .descr, .page .entry {color:#2d379c;font-family:'RobotoCondensedRegular';}
 
 #cms-app-lock .title,
 #cms-anti-virus .title,
 #cms-privacy .title,
-#cms-wifi-scanner .title {margin:40px auto 0;font-size:54px;}
+#cms-wifi-scanner .title {margin:35px auto 0;font-size:60px;}
 
 #cms-app-lock .descr,
 #cms-anti-virus .descr,
@@ -62,7 +59,7 @@ body{
 #cms-app-lock .entry,
 #cms-anti-virus .entry,
 #cms-privacy .entry,
-#cms-wifi-scanner .entry {margin:30px auto 0;font-size:16px;color:#737373;}
+#cms-wifi-scanner .entry {margin:30px auto 0;font-size:18px;color:#737373;}
 
 .applock-ani{
   position:relative;
@@ -81,6 +78,7 @@ body{
 }
 #cms-app-lock .entry strong {
   color:#2d379c;
+  font-weight:bold;
 }
 
 
@@ -102,7 +100,7 @@ body{
   margin:30px auto 0;
   height:120px;
 }
-#cms-anti-virus .three-icons img{
+#cms-anti-virus .three-icons img {
   display:block;
   float:left;
   margin-right:15px;
@@ -170,6 +168,7 @@ body{
   background:url(../images/cms/new-cms-keycloud.png) no-repeat;
   text-indent:-9999px;
 }
+#cms-privacy .entry p.tips-text {margin-top:20px;text-align:right;font-size:12px;}
 
 .privacy-ani {
   position:relative;
