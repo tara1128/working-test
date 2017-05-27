@@ -1,12 +1,15 @@
 /*
   Responsive styles of Cheetah Ads, mainly for mobile devices.
   Author: Alexandra
-  Latest modified: 2017-05-26 17:01 */
+  Latest modified: 2017-05-27 12:49 */
 
 /* ===== ===== ===== ===== ===== */
 /* ===== Responsive Styles ===== */
 /* ===== ===== ===== ===== ===== */
 @main-orange:#f63;
+@fontsize-subtitle-tw:36px;
+@lineheight-subtitle-tw:40px;
+
 @media (max-width: 1299px) {
   .all-events .container {
     width:100%;
@@ -488,7 +491,7 @@
   }
   .plm-item h2.zh-tw b.zh-tw {
     display:block;
-    height:3px;
+    height:2px;
     text-indent:-9999px;
   }
   .plm-item p {
@@ -595,6 +598,12 @@
     box-sizing:border-box;
   }
 
+  /* Classes named by a language is specific for styles of the language. */
+  .moments-title.zh-tw {
+    font-size:@fontsize-subtitle-tw;
+    line-height:@lineheight-subtitle-tw;
+  }
+
   .fifth-screen.placement .container {
     width:100%;
   }
@@ -635,6 +644,36 @@
     display:none!important;
   }
 
+  .plm-title.zh-tw {
+    font-size:@fontsize-subtitle-tw;
+    line-height:@lineheight-subtitle-tw;
+    b.zh-tw {
+      display:block;
+    }
+  }
+
+  .cus-img-box {
+    .cus-title.zh-tw {
+      font-size:@fontsize-subtitle-tw;
+      line-height:@lineheight-subtitle-tw;
+    }
+  }
+
+  .why-us-title.zh-tw {
+    font-size:@fontsize-subtitle-tw;
+    line-height:@lineheight-subtitle-tw;
+    b.zh-tw {
+      display:block;
+      text-indent:-9999px;
+      height:2px;
+    }
+  }
+
+  .suc-title.zh-tw {
+    font-size:@fontsize-subtitle-tw;
+    line-height:@lineheight-subtitle-tw;
+  }
+
   .the-footer {
     padding:20px 0 10px;
   }
@@ -670,6 +709,11 @@
     }
   }
 
+  .langs-list.showlang {
+    bottom:20px;
+    right:5px;
+    z-index:1000;/* In WeiXin, videos will cover all */
+  }
+
+
 }
-
-

@@ -1,0 +1,131 @@
+/*
+  Detail page styles for insights.
+  Author: Alexandra
+  Latest modified: 2017-05-11 17:28 */
+
+@main-orange:#f63;
+@dark-grey:#333;
+@top-bar-height:60px;
+
+body.detail-body {
+  background:#eaeaea;
+  .first-screen {
+    padding-top:@top-bar-height;
+  }
+  .top-bar {
+    background:#1a1a1a;
+    .container {
+      margin:0 auto;
+      width:90%;
+      max-width:1000px;
+    }
+  }
+}
+
+.the-details {
+  width:100%;
+  .container {
+    margin:0 auto;
+    width:90%;
+    max-width:1000px;
+    padding:60px 0 80px;
+  }
+}
+
+.detail-crumb {
+  margin:0 0 20px;
+  a, span {
+    margin-right:8px;
+    display:block;
+    float:left;
+    font-size:14px;
+  }
+  a {
+    color:#999;
+  }
+  a.crumb-link {
+    cursor:pointer;
+  }
+  a.crumb-link:hover {
+    text-decoration:underline;
+    color:@main-orange;
+  }
+  span {
+    color:#ccc;
+  }
+}
+
+
+.detail-title {
+  font-size:24px;
+  line-height:28px;
+  color:@dark-grey;
+}
+
+.detail-infos {
+  position:relative;
+  margin:10px 0 50px;
+  .detail-date, .detail-share-btn, .detail-seperate {
+    margin-right:8px;
+    display:block;
+    float:left;
+    font-size:14px;
+  }
+  .detail-date {
+    color:#999;
+  }
+  .detail-seperate {
+    font-weight:normal;
+    color:#ccc;
+  }
+  .detail-share-btn {
+    display:none!important;/* Not released sharing function yet! */
+    color:#999;
+    cursor:pointer;
+  }
+  .detail-share-btn:hover {
+    text-decoration:underline;
+    color:@main-orange;
+  }
+  .custom-share-detail {
+    padding:7px;
+    position:absolute;
+    left:100px;
+    top:20px;
+    width:180px;/* Will be revalued dynamically */
+    background:#fefefe;
+    border-radius:5px;
+    border:1px solid #d5d5d5;
+    box-shadow:5px 5px 10px rgba(0,0,0,.2);
+  }
+}
+
+.detail-contents {
+  h2 {
+    margin:70px 0 25px;
+    font-size:18px;
+    color:#333;
+  }
+  h3, p {
+    margin:25px 0;
+    font-size:16px;
+    line-height:20px;
+    color:#666;
+    a {
+      color:@main-orange;
+    }
+    a:hover {
+      text-decoration:underline;
+    }
+  }
+  p.img-descr {
+    margin:8px 0 25px;
+    text-align:center;
+  }
+  img {
+    display:block;
+    margin:10px auto;
+    max-width:100%;
+  }
+
+}

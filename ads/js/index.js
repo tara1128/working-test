@@ -1,7 +1,7 @@
 /*
   Script of Cheetah Ads.
   Author: Alexandra
-  Date: 2017-05-26 19:15
+  Date: 2017-05-27 12:21
 */
 var popForm = [
       '<form action="" id="form1" method="post" class="wpcf7-form" novalidate="novalidate">',
@@ -180,7 +180,7 @@ var popForm = [
           {
             liClassName: 'nav-item',
             aClassName: 'nav-a',
-            hrefURL: '/zh-tw/insight/',
+            hrefURL: '/zh-tw/insights/',
             text: 'Insights',
             id: '',
             hasS: true
@@ -228,7 +228,7 @@ var popForm = [
                     </li>';
       });
       var _html =
-      '<div class="container clearfix has-trans">\
+      '<div class="container clearfix has-trans render-in-js">\
           <a class="the-logo has-trans" title="'+ data.logo.text +'">Cheetah Ads</a>\
           <a class="the-burger for-mobile-only has-trans" id="A_NavBurger" href="javascript:;">\
             <span class="bar1 has-trans">&nbsp;</span>\
@@ -270,12 +270,12 @@ var popForm = [
       var pg = me.page;
       var data = me.footDataPerLang()[me.lang];
       var footHtml = 
-        '<div class="foot-link-group with-socials clearfix has-trans">\
+        '<div class="foot-link-group with-socials clearfix has-trans render-in-js">\
           <a class="ft-link has-trans facebook" href="https://www.facebook.com/CheetahAds">Facebook</a>\
           <a class="ft-link has-trans twitter" href="https://twitter.com/CheetahAds">Twitter</a>\
           <a class="ft-link has-trans linkedin" href="https://www.linkedin.com/company-beta/1140191/">LinkedIn</a>\
         </div>\
-        <div class="foot-link-group with-txts rel clearfix has-trans">\
+        <div class="foot-link-group with-txts rel clearfix has-trans render-in-js">\
           <a class="ft-txt ft-normal-txt" href="'+ data.aboutLink +'" target="_blank">'+ data.aboutText +'</a>\
           <a class="ft-txt ft-seperate">&nbsp;|&nbsp;</a>\
           <a class="ft-txt ft-normal-txt" href="'+ data.policyLink +'">'+ data.policyText +'</a>\
@@ -446,15 +446,14 @@ var popForm = [
           pg.startBtn.addClass('hide');
         }
       });
-      /* Burger clicks for menu on mobiles: */
+      /* Burger clicks for menu on mobiles: (Get height before binding) */
+      var lis = pg.navList.find('li');
+      var oneLiHeight = 46;
+      var listHeight = oneLiHeight * lis.length;
       pg.navBurger.click(function() {
         if (pg.navList.hasClass('showing')) {
-          pg.navList.removeClass('showing');
+          pg.navList.css('height', '0px').removeClass('showing');
         } else {
-          /* Calculate its height before shown: */
-          var lis = pg.navList.find('li');
-          var oneLiHeight = 46;
-          var listHeight = oneLiHeight * lis.length;
           pg.navList.css('height', listHeight + 'px').addClass('showing');
         }
       });
