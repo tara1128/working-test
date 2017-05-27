@@ -44,7 +44,7 @@ datas: {
 
     "pmp-092": {
       name: '9.2 组建项目团队',
-      engname: '',
+      engname: 'Acquire Project Team',
       knowledge: '项目人力资源管理 <b>Project Human Resource Management</b>',
       processGroup: '执行过程组 <b>Executing Process Group</b>',
       keyNotes: [
@@ -54,47 +54,39 @@ datas: {
         {text: ''}
       ],
       inputs: [
-        {text: '', ext: [{text: ''}]},
-        {text: '', ext: [{text: ''}]},
-        {text: '', ext: [{text: ''}]},
-        {text: '', ext: [{text: ''}]},
+        {text: '人力资源管理计划', ext: [{text: '9.1 规划人力资源管理的输出'}]},
         {text: '事业环境因素和组织过程资产'}
       ],
       tools: [
-        {text: '', ext: [
+        {text: '1. 预分派', ext: [
           {text: ''},
           {text: ''}
         ]},
-        {text: '', ext: [
+        {text: '2. 谈判', ext: [
           {text: ''},
           {text: ''},
           {text: ''}
         ]},
-        {text: '', ext: [
+        {text: '3. 招募'},
+        {text: '4. 虚拟团队'},
+        {text: '5. 多标准决策分析', ext: [
           {text: ''},
           {text: ''}
         ]}
       ],
       outputs: [
-        {text: '', ext: [
-          {text: ''},
-          {text: ''},
+        {text: '项目人员分派'},
+        {text: '资源日历', ext: [
           {text: ''},
           {text: ''}
         ]},
-        {text: '', ext: [
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''}
-        ]}
+        {text: '项目管理计划更新'}
       ],
     }, // One process
 
     "pmp-093": {
       name: '9.3 建设项目团队',
-      engname: '',
+      engname: 'Develop Project Team',
       knowledge: '项目人力资源管理 <b>Project Human Resource Management</b>',
       processGroup: '执行过程组 <b>Executing Process Group</b>',
       keyNotes: [
@@ -104,27 +96,22 @@ datas: {
         {text: ''}
       ],
       inputs: [
-        {text: ''},
-        {text: '', ext: [{text: ''}]},
-        {text: '', ext: [{text: ''}]},
+        {text: '人力资源管理计划', ext: [{text: '9.1 规划人力资源管理的输出'}]},
+        {text: '项目人员分派', ext: [{text: '9.2 组建项目团队的输出'}]},
+        {text: '资源日历', ext: [{text: '9.2 组建项目团队的输出'}]},
         {text: '事业环境因素和组织过程资产'}
       ],
       tools: [
-        {text: ''},
-        {text: '', ext: [
-          {text: ''},
-          {text: ''},
-          {text: ''},
-          {text: ''}
-        ]},
-        {text: '', ext: [
-          {text: ''},
-          {text: ''},
-          {text: ''}
-        ]}
+        {text: '1. 人际关系技能'},
+        {text: '2. 培训'},
+        {text: '3. 团队建设活动'},
+        {text: '4. 基本规则'},
+        {text: '5. 集中办公'},
+        {text: '6. 认可与奖励'},
+        {text: '7. 人事测评工具'},
       ],
       outputs: [
-        {text: '', ext: [
+        {text: '团队绩效评价', ext: [
           {text: ''},
           {text: ''},
           {text: ''},
@@ -132,7 +119,7 @@ datas: {
           {text: ''},
           {text: ''}
         ]},
-        {text: ''}
+        {text: '事业环境因素更新'}
       ],
     }, // One process
 
