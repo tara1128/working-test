@@ -11,16 +11,18 @@ datas: {
         {text: ''}
       ],
       inputs: [
-        {text: ''},
+        {text: '项目管理计划'},
+        {text: '项目章程'},
+        {text: '干系人登记册'},
         {text: '事业环境因素和组织过程资产'}
       ],
       tools: [
-        {text: ''},
-        {text: ''}
+        {text: '分析技术'},
+        {text: '专家判断'},
+        {text: '会议'}
       ],
       outputs: [
-        {text: ''},
-        {text: ''},
+        {text: '风险管理计划'},
       ]
     }, // One process
 

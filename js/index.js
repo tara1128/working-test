@@ -1,6 +1,6 @@
 /*
   index.js, trying ES6
-  Latest modified: 2017-05-27 17:08
+  Latest modified: 2017-05-27 18:07
 */
 
 class IndexLogin extends React.Component {
@@ -244,7 +244,7 @@ var cateList = [
   {
     projectName: 'PMP Techniques',
     linkTo: 'pmp/',
-    latestModified: '2017-05-27 17:08'
+    latestModified: '2017-05-27 18:07'
   },
   {
     projectName: 'Security Master',

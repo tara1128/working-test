@@ -1,7 +1,7 @@
 /*
   Script for PMP Techniques
   Author: Alexandra Wang
-  Latest modified: 2017-05-22 14:04
+  Latest modified: 2017-05-27 17:36
 */
 ;(function(win, doc, $) {
 	var PMPTech = {
@@ -22,7 +22,9 @@
       'P_D_8': Project_Quality_Management,
       'P_D_9': Project_Human_Resource_Management,
       'P_D_10': Project_Communications_Management,
-      'P_D_11': Project_Risk_Management
+      'P_D_11': Project_Risk_Management,
+      'P_D_12': Project_Procurement_Management,
+      'P_D_13': Project_Stakeholder_Management
     },
     init: function(pageObj) {
       var me = this;
