@@ -1,6 +1,6 @@
 /*
   index.js, trying ES6
-  Latest modified: 2017-05-22 15:55
+  Latest modified: 2017-05-27 17:08
 */
 
 class IndexLogin extends React.Component {
@@ -244,7 +244,7 @@ var cateList = [
   {
     projectName: 'PMP Techniques',
     linkTo: 'pmp/',
-    latestModified: '2017-05-22 14:27'
+    latestModified: '2017-05-27 17:08'
   },
   {
     projectName: 'Security Master',
@@ -264,7 +264,7 @@ var cateList = [
   {
     projectName: 'Cheetah Ads Platform',
     linkTo: 'ads/index.html',
-    latestModified: '2017-03-23 15:51'
+    latestModified: '2017-05-27 17:08'
   },
   {
     projectName: 'cmcm.com/en-us',

@@ -1,7 +1,7 @@
 /*
   Script of Cheetah Ads.
   Author: Alexandra
-  Date: 2017-05-27 12:21
+  Date: 2017-05-27 14:12
 */
 var popForm = [
       '<form action="" id="form1" method="post" class="wpcf7-form" novalidate="novalidate">',
@@ -511,7 +511,8 @@ var popForm = [
       }
       /* Second to calculate widths: */
       pg.storyList.css('width', storyLen * 100 + '%' );
-      stories.css('width', parseInt( Math.floor(100/storyLen) ) + '%' );
+      // stories.css('width', parseInt( Math.floor(100/storyLen) ) + '%' );
+      stories.css('width', parseFloat((100/storyLen).toFixed(2)) + '%' );
       pg.storyTabBox.width( tabWidths );
       pg.storyTabs = $('.A_StoryTabs');
       me.switchInterval = setInterval(function(){
