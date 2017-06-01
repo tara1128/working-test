@@ -1,7 +1,7 @@
 /*
   Script of Cheetah Ads.
   Author: Alexandra
-  Date: 2017-05-27 14:12
+  Date: 2017-06-01 11:49
 */
 var popForm = [
       '<form action="" id="form1" method="post" class="wpcf7-form" novalidate="novalidate">',
@@ -72,6 +72,7 @@ var popForm = [
     switchIndex:0,
     page: null,
     lang: 'en-us',
+    emailAddress: {'en-us': 'ads@cmcm.com', 'zh-tw': 'Ann.chen@ileopard.com'},
     isUsingForm: false, // If using form, make it true
 		init: function(pageObj) {
       var me = this;
@@ -129,6 +130,7 @@ var popForm = [
     },
 
     navDataPerLang: function() {
+      var me = this;
       var data_en_us = {
         logo: {text: 'Cheetah Ads'},
         navs: [
@@ -159,7 +161,7 @@ var popForm = [
           {
             liClassName: 'nav-item hide get-started',
             aClassName: 'nav-a A_ContactBtn has-trans',
-            hrefURL: 'mailto:ads@cmcm.com',
+            hrefURL: 'mailto:' + me.emailAddress[me.lang],
             text: 'Contact Us',
             id: 'A_StartBtn',
             hasS: false
@@ -204,7 +206,7 @@ var popForm = [
           {
             liClassName: 'nav-item',
             aClassName: 'nav-a A_ContactBtn has-trans',
-            hrefURL: 'mailto:Ann.chen@ileopard.com',
+            hrefURL: 'mailto:' + me.emailAddress[me.lang],
             text: '聯繫我們',
             id: '',
             hasS: true
@@ -229,7 +231,7 @@ var popForm = [
       });
       var _html =
       '<div class="container clearfix has-trans render-in-js">\
-          <a class="the-logo has-trans" title="'+ data.logo.text +'">Cheetah Ads</a>\
+          <a class="the-logo has-trans" title="'+ data.logo.text +'" href="/">Cheetah Ads</a>\
           <a class="the-burger for-mobile-only has-trans" id="A_NavBurger" href="javascript:;">\
             <span class="bar1 has-trans">&nbsp;</span>\
             <span class="bar2 has-trans">&nbsp;</span>\
@@ -335,6 +337,7 @@ var popForm = [
     },
 
     listItemTemplate: function(style, item) {
+      var me = this;
       var nameLimit = 80;
       var infoLimit = 120;
       if (style == 'normal') {
@@ -356,7 +359,7 @@ var popForm = [
                         <a class="normal-share-btn A_ShareBtns has-trans">share</a>\
                       </div>\
                       <div class="addthis_inline_share_toolbox A_Shares custom-share" style="display:none;" data-title="'+ item.name +'" data-url="'+ item.link +'"></div>\
-                      <a class="normal-meetus A_MeetUs has-trans" href="mailto:ads@cmcm.com">Meet Us</a>\
+                      <a class="normal-meetus A_MeetUs has-trans" href="mailto:'+ me.emailAddress[me.lang] +'">Meet Us</a>\
                     </li>';
       } else { // Else is 'simple' only, temporarily.
         var tmpl = '<li class="one-simple clearfix">\
@@ -427,7 +430,7 @@ var popForm = [
       } else { // Send email instead of using form:
         if (me.isWeiXin) {
           evt.preventDefault();
-          alert('Please send an email to ads@cmcm.com.');
+          alert('Please send an email to ' + me.emailAddress[me.lang]);
         }
       }
     },
