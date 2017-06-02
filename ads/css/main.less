@@ -1,7 +1,7 @@
 /*
   Main styles of Cheetah Ads.
   Author: Alexandra.
-  Latest modified: 2017-05-27 12:49 */
+  Latest modified: 2017-06-02 11:53 */
 
 @main-orange:#f63;
 @dark-grey:#333;
@@ -424,6 +424,9 @@ html, body {
   padding:0 30px 0 4px;
   border-left:4px solid @main-orange;
 }
+.reason-top.zh-tw {
+  margin-left:20px;
+}
 .reason-adj {
   display:block;
   font-size:32px;
@@ -443,7 +446,7 @@ html, body {
   color:@dark-grey;
 }
 .reason-bottom.zh-tw {
-  padding:0 50px 0 0;
+  padding:0 30px 0 20px;
 }
 
 
@@ -838,7 +841,26 @@ html, body {
 }
 
 
-
+/* ========== AboutUs of zh-tw ========== */
+.brands-container {
+  margin:20px 0;
+  width:100%;
+  .brands-area {
+    display:block;
+    float:left;
+    width:25%; /* 4 in one row */
+    a {
+      display:block;
+      width:80px;
+      margin:30px auto;
+      img.logo {
+        display:block;
+        margin:0 auto;
+        width:100%;
+      }
+    }
+  }
+}
 
 
 /* ========== Pop Up Dialog ========== */
