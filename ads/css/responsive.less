@@ -1,7 +1,7 @@
 /*
   Responsive styles of Cheetah Ads, mainly for mobile devices.
   Author: Alexandra
-  Latest modified: 2017-06-02 12:00 */
+  Latest modified: 2017-06-07 17:43 */
 
 /* ===== ===== ===== ===== ===== */
 /* ===== Responsive Styles ===== */
@@ -242,6 +242,14 @@
     width:74%;
   }
 
+  .box-of-subscribe {
+    margin:0 auto;
+  }
+  .btn-of-subscribe {
+    float:none;
+    margin:0 auto;
+  }
+
 }
 
 
@@ -382,13 +390,19 @@
       text-align:center;
     }
     .cus-img {
+      display:block;
       position:static;
       left:0;
       bottom:0;
       margin-left:auto;
-      margin:0 auto -2px;
+      margin:0 auto;
       max-width:460px;
       width:90%;
+    }
+    .cus-img.zh-tw {
+      margin-left:auto;
+      width:auto;
+      max-width:auto;
     }
   }
   .cus-txt-box {
@@ -692,6 +706,11 @@
     padding:25px;
     width:76%;
   }
+  body.list-body.insights .pop-mask .pop-container {
+    margin:20px auto 0;
+    padding:15px;
+    width:80%;
+  }
 
   .pcy-main {
     .alphabet-item {
@@ -723,6 +742,25 @@
         width:60px;
       }
     }
+  }
+
+  .a-subscribe-title {
+    font-size:15px;
+  }
+  .mc-field-group {
+    margin:5px 0 8px;
+    label, input {
+      font-size:14px;
+    }
+    input {
+      padding:4px!important;
+    }
+  }
+  input.button.a-subscribe-submit-button {
+    width:120px;
+    height:30px;
+    line-height:25px;
+    font-size:14px;
   }
 
 }

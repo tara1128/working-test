@@ -1,7 +1,7 @@
 /*
   Script of Cheetah Ads.
   Author: Alexandra
-  Date: 2017-06-01 11:49
+  Date: 2017-06-07 15:26
 */
 var popForm = [
       '<form action="" id="form1" method="post" class="wpcf7-form" novalidate="novalidate">',
@@ -199,7 +199,7 @@ var popForm = [
             liClassName: 'nav-item',
             aClassName: 'nav-a',
             hrefURL: '/zh-tw/about/',
-            text: '關於Cheetah Ads',
+            text: '關於我們',
             id: '',
             hasS: true
           },
@@ -221,6 +221,7 @@ var popForm = [
       var pg = me.page;
       var _D = me.navDataPerLang();
       var data = _D[me.lang];
+      var homeUrl = (me.lang == 'en-us')?('/'):('/' + me.lang + '/');
       var navList = (data.navs)?(data.navs):(_D['en-us'].navs);
       var navHtml = '';
       navList.map(function(item, i) {
@@ -231,7 +232,7 @@ var popForm = [
       });
       var _html =
       '<div class="container clearfix has-trans render-in-js">\
-          <a class="the-logo has-trans" title="'+ data.logo.text +'" href="/">Cheetah Ads</a>\
+          <a class="the-logo has-trans" title="'+ data.logo.text +'" href="'+ homeUrl +'">Cheetah Ads</a>\
           <a class="the-burger for-mobile-only has-trans" id="A_NavBurger" href="javascript:;">\
             <span class="bar1 has-trans">&nbsp;</span>\
             <span class="bar2 has-trans">&nbsp;</span>\
@@ -345,6 +346,7 @@ var popForm = [
         var ifHasLoca = (item.loca)?(''):('none');
         var infoShows = (item.info.length > infoLimit)?(item.info.substr(0,infoLimit) + '...'):(item.info);
         var nameShows = (item.name.length > nameLimit)?(item.name.substr(0,nameLimit) + '...'):(item.name);
+        var meetUsUrl = (item.link)?(item.link):('mailto:'+ me.emailAddress[me.lang]);
         var tmpl = '<li class="one-normal has-trans">\
                       <div class="normal-top">\
                         <img class="normal-img" src="'+ item.imag +'" alt="'+ item.name +'" />\
@@ -359,7 +361,7 @@ var popForm = [
                         <a class="normal-share-btn A_ShareBtns has-trans">share</a>\
                       </div>\
                       <div class="addthis_inline_share_toolbox A_Shares custom-share" style="display:none;" data-title="'+ item.name +'" data-url="'+ item.link +'"></div>\
-                      <a class="normal-meetus A_MeetUs has-trans" href="mailto:'+ me.emailAddress[me.lang] +'">Meet Us</a>\
+                      <a class="normal-meetus A_MeetUs has-trans" href="'+ meetUsUrl +'">Meet us</a>\
                     </li>';
       } else { // Else is 'simple' only, temporarily.
         var tmpl = '<li class="one-simple clearfix">\
@@ -495,6 +497,32 @@ var popForm = [
           pg.langsList.removeClass('showlang');
         }
       });
+      /* Bind click to the subscribe button on Event page: */
+      pg.subscribeBtn.click(function() {
+        // me.popToSubscribe();
+        me.slideDownSubscribe();
+      });
+    },
+
+    slideDownSubscribe: function() {
+      var me = this;
+      var pg = me.page;
+      var sdbtn = pg.subscribeBtn;
+      var subtn = pg.slideUpBtn;
+      pg.subscribeContainer.addClass('active');
+      sdbtn.hide();
+      subtn.show();
+    },
+
+    popToSubscribe: function() {
+      var me = this;
+      var pg = me.page;
+      var subForm = pg.subscribeForm.html();
+      me._body.append(me.popHTML(subForm));
+      pg.popCloseBtn = $('#A_PopCloseBtn');
+      pg.popCloseBtn.click(function() {
+        $(this).parent().parent().remove();
+      });
     },
 
     renderStories: function() {
@@ -556,25 +584,15 @@ var popForm = [
       pg.vdMask.width( me.avlHeight * proportion + 20 );
       pg.topVideo.width( me.avlHeight * proportion );
     },
-
-
   };
-
 	win.AdsPage = AdsPage;
 })(window, document, jQuery);
 
 /* Make things work: */
 (function($) {
-
   var specificPage = {
     topBar: $('#A_TopBar'),
-    // startBtn: $('#A_StartBtn'),
-    // contactBtn: $('.A_ContactBtn'),
-    // navBurger: $('#A_NavBurger'),
-    // navList: $('#A_Navs'),
     footerContainer: $('#A_FooterContainer'),
-    // switchLangBtn: $('#A_switchLang'),
-    // langsList: $('#A_langsList'),
     popCloseBtn: null,
     billboard: $('#A_Billboard'),
     slogan: $('#A_Slogan'),
@@ -593,9 +611,11 @@ var popForm = [
     theLists: $('.A_ListUL'),
     containerOfList: $('.A_ContainerOfList'),
     detailShareBtn: $('.A_DetailShareBtn'),
-    detailSharePanel: $('.A_ShareDetail')
-  }
-
+    detailSharePanel: $('.A_ShareDetail'),
+    subscribeBtn: $('#A_Subscribe'),
+    subscribeForm: $('#A_SubscribeForm'),
+    slideUpBtn: $('#A_SlideUp'),
+    subscribeContainer: $('#A_subscribeContainer')
+  };
   AdsPage.init(specificPage);
 })(jQuery);
-
