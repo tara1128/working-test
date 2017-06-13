@@ -1,9 +1,17 @@
 /*
   CSS for PhotoGrid new look ONLY!!
   Devided from v4.main.css
-  Latest modified: 2017-06-13 16:24
+  Latest modified: 2017-06-13 19:12
 */
 
+.clearfix:after {
+  content:"\0020";
+  display:block;
+  visibility:hidden;
+  clear:both;
+  height:0;
+  overflow:hidden;
+}
 .bannerBG {
 	position:absolute;
 	top:-101px;
@@ -70,45 +78,39 @@
 .bodyPG-v2 .bannerBG img {
 	min-width: initial
 }
+
+/* ========== First screen banner ========== */
 #pg-v2-banner {
-	padding: 150px 0 200px
+	padding:150px 0 200px;
 }
-#pg-v2-banner .title {
-	height: 138px;
-	background: url(../images/v3/pg-new-slogan.png) no-repeat left center
+.pg-new-logo {
+  float:left;
+  margin:0 30px 0 0;
+  width:131px;
 }
-#pg-v2-banner .title h2 {
-	text-indent: -999em
+.pg-new-logo img {
+  display:block;
 }
-#pg-v2-banner .download {
-	margin-top: 29px
+.pg-new-title-dl {
+  float:left;
+  width:344px;
 }
-#pg-v2-banner .download a {
-	display: inline;
-	float: left;
-	width:198px;
-	height:57px;
-	background: url(../images/pg-new-dl-btns.png) no-repeat;
-	margin-right:20px;
-	-webkit-transition: border-color .3s, background-color .3s;
-	-moz-transition: border-color .3s, background-color .3s;
-	-o-transition: border-color .3s, background-color .3s;
-	transition: border-color .3s, background-color .3s;
-	text-indent: -999em;
+.pg-new-title-dl h1 {
+  width:100%;
+  height:131px;
+  background:url(../images/pg/pg-new-logo-txt.png) no-repeat;
+  text-indent:-9999px;
 }
-#pg-v2-banner .download a.googlePlay {
-	background-position:0 0;
+.pg-new-dl-btns {
+  margin:30px 0 0;
 }
-#pg-v2-banner .download a.appStore {
-	background-position:-213px 0;
+.pg-new-dlbtn {
+
 }
-#pg-v2-banner .pg-v2-playvideo {
-	font-size: 18px;
-	position: absolute;
-	bottom: 68px;
-	left: 0;
-	color: #fff
+.pg-new-dlbtn.googlePlay {
+
 }
+
 .pg-v2-playico {
 	display: inline-block;
 	width: 23px;
@@ -116,15 +118,6 @@
 	margin-left: 7px;
 	vertical-align: middle;
 	background: url(../images/v3/pg-v2-play.png) no-repeat
-}
-.pg-v2-down {
-	position: absolute;
-	bottom: 47px;
-	left: 50%;
-	width: 60px;
-	height: 60px;
-	margin-left: -30px;
-	background: url(../images/v3/pg-v2-down.png) no-repeat
 }
 #pg-v2-community {
 	padding: 80px 0;
@@ -1030,7 +1023,7 @@
 /* ===== 宽高大屏 ===== */
 @media (min-width:1300px) and (min-height:750px) {
 	#pg-v2-banner {
-		padding: 251px 0 316px;
+		padding:251px 0 316px;
 	}
 	.pg-v2-t1 .tool-pic {
 		width: 597px;
@@ -1074,40 +1067,10 @@
 		min-height: initial
 	}
 	#pg-v2-banner {
-		padding: 100px 20px 150px
-	}
-	#pg-v2-banner .title {
-		height: 90px;
-		-moz-background-size: contain;
-		-o-background-size: contain;
-		background-size: contain
-	}
-	#pg-v2-banner .pg-v2-playvideo {
-		left: 20px
-	}
-	#pg-v2-banner .download a {
-		width: 140px;
-		height: 46px;
-		-moz-background-size: 280px;
-		-o-background-size: 280px;
-		background-size: 280px
-	}
-	#pg-v2-banner .download a.googlePlay {
-		background-position: 0 100%
-	}
-	#pg-v2-banner .download a.appStore {
-		background-position: 100% 100%
-	}
-	.pg-v2-down {
-		width: 40px;
-		height: 40px;
-		margin-left: -20px;
-		-moz-background-size: contain;
-		-o-background-size: contain;
-		background-size: contain
+		padding:100px 20px 150px;
 	}
 	#tools-switch-nav {
-		bottom: 20px
+		bottom:20px;
 	}
 	#tools-switch-nav li {
 		width: 54px;
@@ -1298,7 +1261,7 @@
   #pg-v2-features,
   #pg-v2-creative,
   #pg-v2-join {
-		padding: 0
+		padding:0;
 	}
 	.bodyPG-v2 .bannerBG {
 		overflow: hidden;
@@ -1319,53 +1282,12 @@
 		-moz-transform: translate3d(-50%, 0, 0);
 		transform: translate3d(-50%, 0, 0)
 	}
-	#pg-v2-banner .title {
-		position: static;
-		overflow: hidden;
-		width: 100%;
-		height: 60px;
-		margin-top: 100px;
-		background-image: url(../images/v3/pg-v2-slogan-m.png);
-		background-position: center
-	}
-	#pg-v2-banner .download {
-		position: static;
-		width: 100%;
-		margin-top: 12px;
-		text-align: center
-	}
-	#pg-v2-banner .download a {
-		display: inline-block;
-		float: none;
-		width: 94px;
-		height: 31px;
-		margin: 0 10px;
-		-webkit-border-radius: 6px;
-		-moz-border-radius: 6px;
-		border-radius: 6px;
-		-moz-background-size: 188px;
-		-o-background-size: 188px;
-		background-size: 188px
-	}
-	#pg-v2-banner .pg-v2-playvideo {
-		font-size: 12px;
-		position: static;
-		display: block;
-		width: 215px;
-		margin: 10px auto
-	}
 	.pg-v2-playico {
 		width: 12px;
 		height: 12px;
 		-moz-background-size: 12px;
 		-o-background-size: 12px;
 		background-size: 12px
-	}
-	.pg-v2-down {
-		bottom: 20px;
-		width: 20px;
-		height: 20px;
-		margin-left: -10px
 	}
 	#pg-v2-community h3 {
 		font-size: 26px;
