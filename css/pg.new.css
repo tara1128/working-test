@@ -1,7 +1,7 @@
 /*
   CSS for PhotoGrid new look ONLY!!
   Devided from v4.main.css
-  Latest modified: 2017-06-14 18:13
+  Latest modified: 2017-06-14 19:17
 */
 
 .clearfix:after {
@@ -13,15 +13,16 @@
   overflow:hidden;
 }
 .has-trans {
-  -webkit-transition: all .4s ease;
-  -moz-transition: all .4s ease;
-  -ms-transition: all .4s ease;
-  -o-transition: all .4s ease;
-  transition: all .4s ease;
+  -webkit-transition:all .4s ease;
+  -moz-transition:all .4s ease;
+  -ms-transition:all .4s ease;
+  -o-transition:all .4s ease;
+  transition:all .4s ease;
 }
 .bannerBG {
-	position:absolute;
-	top:-101px;
+	position:fixed;
+	_position:absolute;
+	top:0;
 	left:0;
 	overflow:hidden;
 	width:100%;
@@ -30,43 +31,34 @@
 .bannerBG img {
 	display:block;
 	width:100%;
-	min-width:1680px;
+	min-width:initial;
+}
+.mobileModel .bannerBG {
+	display:none;
 }
 
-.bodyPG-v2 {
+.bodyPG-new {
 	font-family:helveticaLight,'HelveticaRegular',Helvetica,HelveticaNeue,'Droid Sans',Arial,Verdana,serif,'Heiti SC',Droidsansfallback,'Microsoft YaHei','微软雅黑';
 	background:#fff;
 }
-.bodyPG-v2 #header-fixed, .bodyPG-v2 #header-wrap {
+.bodyPG-new #header-fixed,
+.bodyPG-new #header-wrap {
 	background:none;
 }
-.bodyPG-v2 #header-wrap {
+.bodyPG-new #header-wrap {
 	-webkit-transition:background .5s;
 	-moz-transition:background .5s;
 	-o-transition:background .5s;
 	transition:background .5s
 }
-.bodyPG-v2 .fixed #header-wrap {
+.bodyPG-new .fixed #header-wrap {
 	background-color:rgba(0,0,0,.4);
 	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#50000000', EndColorStr='#50000000');
 }
-.bodyPG-v2 .bannerBG, .bodyPG-v2 #container-wrap {
-	top:0;
-	overflow:hidden;
-}
-.bodyPG-v2 .mobileModel .bannerBG {
-	display:none;
-}
-.bodyPG-v2 .mobileModel #pg-v2-banner {
-	background:url(../images/v3/pg-v2-p1-m.jpg) no-repeat center;
-	-moz-background-size:cover;
-	-o-background-size:cover;
-	background-size:cover;
-}
-.bodyPG-v2 #footer-wrap {
+.bodyPG-new #footer-wrap {
 	background:#fff;
 }
-.bodyPG-v2 #menus a:hover {
+.bodyPG-new #menus a:hover {
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0, 0, 0, .2)), to(rgba(0, 0, 0, 0)));
 	background: -webkit-linear-gradient(top, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0));
 	background: -moz-linear-gradient(top, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0));
@@ -74,21 +66,20 @@
 	background: -ms-linear-gradient(top, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0));
 	_background: none;
 }
-.pg-v2-page {
+.pg-unit {
 	position: relative;
 	min-height: 400px;
 }
-.bodyPG-v2 .bannerBG {
-	position: fixed;
-	_position: absolute
-}
-.bodyPG-v2 .bannerBG img {
-	min-width: initial
-}
 
 /* ========== First screen banner ========== */
-#pg-v2-banner {
+#pg-billboard {
 	padding:150px 0 200px;
+}
+.mobileModel #pg-billboard {
+	background:url(../images/v3/pg-v2-p1-m.jpg) no-repeat center;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
 }
 .pg-new-logo {
   float:left;
@@ -137,16 +128,16 @@
 
 
 /* ========== Second screen of spectacular, the previous community ========== */
-#pg-v2-community {
+#pg-community {
 	padding:80px 0;
 	text-align:center;
 	background:#f4f4f4;
 }
-#pg-v2-community h3 {
+#pg-community h3 {
 	font-size:36px;
 	line-height:1.56;
 }
-#pg-v2-community p {
+#pg-community p {
 	font-size:16px;
 	line-height:1.33;
 	color:#767676;
@@ -278,15 +269,14 @@
   height:145px;
   background:url(../images/pg/pg-new-spec-balloon.png) no-repeat;
 }
-
 .community-playvideo {
 	margin-top:35px;
 }
-.pg-v2-playvideo {
+.pg-playvideo {
 	font-size:18px;
 	color:#387afb;
 }
-.pg-v2-playico {
+.pg-playico {
 	display:inline-block;
 	width:23px;
 	height:23px;
@@ -989,7 +979,7 @@
 /* ========== Responsive Styles ========== */
 /* ========== 宽高大屏 ========== */
 @media (min-width:1300px) {
-	#pg-v2-banner {
+	#pg-billboard {
 		padding:251px 0 316px;
 	}
 	.pg-v2-t1 .tool-pic {
@@ -1022,7 +1012,7 @@
 	.bodyPG-v2 .bannerBG img {
 		min-height: initial
 	}
-	#pg-v2-banner {
+	#pg-billboard {
 		padding:100px 20px 150px;
 	}
 	#tools-switch-nav {
@@ -1206,9 +1196,9 @@
 	.bodyPG-v2 .mobileModel #footer-wrap {
 		display: none
 	}
-	.bodyPG-v2 .mobileModel #pg-v2-banner,
-  .bodyPG-v2 .mobileModel .pg-v2-page,
-  #pg-v2-community,
+	.bodyPG-v2 .mobileModel #pg-billboard,
+  .bodyPG-v2 .mobileModel .pg-unit,
+  #pg-community,
   #pg-v2-features,
   #pg-v2-creative,
   #pg-v2-join {
@@ -1233,19 +1223,19 @@
 		-moz-transform: translate3d(-50%, 0, 0);
 		transform: translate3d(-50%, 0, 0)
 	}
-	.pg-v2-playico {
+	.pg-playico {
 		width: 12px;
 		height: 12px;
 		-moz-background-size: 12px;
 		-o-background-size: 12px;
 		background-size: 12px
 	}
-	#pg-v2-community h3 {
+	#pg-community h3 {
 		font-size: 26px;
 		margin: 0 6px;
 		text-align: left
 	}
-	#pg-v2-community p {
+	#pg-community p {
 		font-size: 12px;
 		margin: 0 6px;
 		text-align: left
@@ -1296,10 +1286,10 @@
 		font-size: 12px;
 		padding-left: 10px
 	}
-	.community-playvideo .pg-v2-playvideo {
+	.community-playvideo .pg-playvideo {
 		font-size: 12px
 	}
-	.community-playvideo .pg-v2-playico {
+	.community-playvideo .pg-playico {
 		background-position: 0 -26px
 	}
 	.mobileModel .pg-new-middle {
