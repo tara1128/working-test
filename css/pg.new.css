@@ -1,7 +1,7 @@
 /*
   CSS for PhotoGrid new look ONLY!!
   Devided from v4.main.css
-  Latest modified: 2017-06-16 15:50
+  Latest modified: 2017-06-16 18:50
 */
 
 .clearfix:after {
@@ -35,9 +35,6 @@ body.bodyPG-new {
 	display:block;
 	width:100%;
 	min-width:initial;
-}
-.mobileModel .bannerBG {
-	display:none;
 }
 
 .bodyPG-new {
@@ -1149,7 +1146,7 @@ body.bodyPG-new {
     width:100%;
   }
   #pg-v2-banner {
-    padding:50px 20px 0px;
+    padding:100px 0px 0px;
     min-height:750px;
     box-sizing:border-box;
   }
@@ -1158,7 +1155,8 @@ body.bodyPG-new {
   }
 	.mobileModel #footer-wrap,
   .bannerBG img,
-  .pg-new-logo img {
+  .pg-new-logo img,
+  .pg-ficon {
 		display:none;
 	}
   .pg-new-title-dl {
@@ -1167,12 +1165,6 @@ body.bodyPG-new {
     width:344px;
   }
 
-
-
-  .mobileModel .pg-v2-page,
-  #pg-features {
-		padding:0;
-	}
 	.pg-playico {
 		width:12px;
 		height:12px;
@@ -1184,6 +1176,7 @@ body.bodyPG-new {
 	#pg-community h3 {
 		margin:0px auto;
 		font-size:26px;
+    line-height:1.2em;
 		text-align:center;
 	}
 	#pg-community p {
@@ -1242,7 +1235,7 @@ body.bodyPG-new {
 	}
 	.mobileModel .pg-new-middle {
 		position:absolute;
-		top:50%;
+		top:48%;
 		left:50%;
 		width:79.6875%;
 		-webkit-transform: translate3d(-50%, -50%, 0);
@@ -1253,6 +1246,7 @@ body.bodyPG-new {
     height:500px;
   }
 	.pg-tools-logo {
+    top:12.67%;
 		width:94px;
 		height:54px;
 		margin-left:-180px;
@@ -1266,9 +1260,9 @@ body.bodyPG-new {
 		margin:0 5px;
 	}
 	.tool-text {
-		margin:0 0 0 -180px;
-		bottom:70px;
+		bottom:120px;
 		left:50%;
+		margin:0 0 0 -145px;
 		width:290px;
 	}
 	.tool-text h3 {
@@ -1284,43 +1278,91 @@ body.bodyPG-new {
 		margin:-190px 0 0 -145px;
 		width:290px;
 	}
+  .pg-tool-5 .tool-text.specific {
+    left:50%;
+  }
+  .tool-pic.riding-bike {
+    margin:0;
+    top:158px;
+    left:50%;
+    margin-left:-110px;
+    width:220px;
+  }
+  /* Make icons of Tool Nav be half on mobiles: */
+  .pg-tools-navbtns {
+    margin-left:-170px;
+    width:340px;
+  }
+  .pg-tools-navbtns li {
+    width:36px;
+    height:36px;
+    margin:0 10px;
+  }
+  .pg-tools-navbtns li,
+  .pg-tools-navbtns li span,
+  .pg-tools-navbtns li s,
+  .pg-tools-navbtns li strong {
+    background-image:url(../images/pg/pg-new-icons-half.png);
+    background-image:-webkit-image-set(
+      url(../images/pg/pg-new-icons-half.png) 1x,
+      url(../images/pg/pg-new-icons-1x.png) 2x
+    )
+  }
+  .pg-tools-navbtns li span {
+    background-position:-40px 0;
+  }
+  .pg-tools-navbtns li .switch-icon-1 {
+    background-position:0 -40px;
+  }
+  .pg-tools-navbtns li .switch-icon-2 {
+    background-position:-40px -40px;
+  }
+  .pg-tools-navbtns li .switch-icon-3 {
+    background-position:-80px -40px;
+  }
+  .pg-tools-navbtns li .switch-icon-4 {
+    background-position:-120px -40px;
+  }
+  .pg-tools-navbtns li .switch-icon-5 {
+    background-position:-80px 0;
+  }
+  .pg-tools-navbtns li .switch-icon-6 {
+    background-position:0 -120px;
+  }
+
 	#pg-features {
-		background:#fff;
+    padding:20px 0;
 	}
 	#pg-features h3 {
-		font-size:23px;
-		text-align:left;
+		margin:0px auto;
+		font-size:26px;
+    line-height:1.2em;
+		text-align:center;
 	}
 	#pg-features p {
-		font-size:12px;
-		width:auto;
-		text-align:left;
+		margin:10px auto;
+    width:100%;
+		font-size:14px;
+		text-align:center;
 	}
 	.pg-flist {
-		margin-top:20px;
+    margin:10px auto 0;
 	}
-	.pg-flist li {
-		padding:10px 0 0;
-		width:100%;
-		text-align:left;
-	}
-	.pg-ficon {
-		display:none;
-	}
+  .pg-flist li {
+    float:none;
+    padding:0px 0px 5px;
+    width:100%;
+    height:auto;
+  }
 	.pg-ftitle {
-		font-size:14px;
-		line-height:1.2;
-		text-align:left;
-		color:#549a36;
-		overflow:hidden;
+		font-size:16px;
+    text-align:left;
+    color:#387afb;
 	}
 	.pg-fdesc {
-		display:block;
 		font-size:12px;
-		text-align:left;
-		overflow:hidden;
+    text-align:left;
 	}
-
   #pg-creative {
     padding:30px 0;
     height:auto;
@@ -1347,6 +1389,7 @@ body.bodyPG-new {
 		width:100%;
 	}
 	.pg-imgwrap {
+    display:none;
 		position:relative;
 		margin:0 auto;
 		width:250px;
@@ -1372,6 +1415,7 @@ body.bodyPG-new {
 		content:'';
 	}
 	.pg-cicon {
+    display:none;
 		margin:0 10px 0 0;
 		position:relative;
 		top:auto;
@@ -1423,7 +1467,7 @@ body.bodyPG-new {
 		max-height:100%;
 	}
 	.pg-new-slides {
-		margin:10px auto 0;
+		margin:10px auto;
 		padding:54px 15px 0 14px;
 		width:200px;
 		height:310px;

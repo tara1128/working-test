@@ -1,6 +1,6 @@
 /*
   Removed PG styles from v4.main.css !!!!
-  Latest modified: 2017-06-13 11:34
+  Latest modified: 2017-06-16 16:25
 */
 @font-face {
 	font-family: 'HelveticaBold';
@@ -139,7 +139,7 @@ body {
 	visibility: hidden
 }
 .animated, .animated .aninode {
-	visibility: visible
+	visibility:visible;
 }
 .news-banner {
 	line-height: 34px;
@@ -2037,45 +2037,6 @@ body {
 	-o-background-size: contain;
 	background-size: contain
 }
-.bodyPG {
-	background: #fff
-}
-.bodyPG #logo a {
-	background-image: url(../images/v3/logo_black.png)
-}
-.bodyPG .fixed #logo a {
-	background-image: url(../images/v3/logo_black_small.png)
-}
-.bodyPG.canTransition .fixed #logo a {
-	background-image: url(../images/v3/logo_black.png)
-}
-.bodyPG #header-fixed, .bodyPG #header-wrap {
-	background: none
-}
-.bodyPG #header-wrap {
-	background: url(../images/v3/pg_hline.png) repeat-x 0 bottom
-}
-.bodyPG .fixed #header-wrap {
-	opacity: .9;
-	background: #d3dbe4;
-	filter: alpha(opacity=90)
-}
-.canBackgroundSize.bodyPG .fixed #header-wrap {
-	background: url(../images/v3/pg_bg.jpg) repeat-x center 0;
-	-moz-background-size: 100% auto;
-	-o-background-size: 100% auto;
-	background-size: 100% auto
-}
-.bodyPG #menus a {
-	opacity: .6;
-	color: #222;
-	filter: alpha(opacity=60)
-}
-.bodyPG #menus a:hover {
-	opacity: 1;
-	background: url(../images/v3/none.gif);
-	filter: alpha(opacity=100)
-}
 .bannerBG {
 	position: absolute;
 	top: -101px;
@@ -3075,12 +3036,6 @@ a.btn_green:visited {
 	#pg_banner .mobile {
 		right: 0
 	}
-	#pg_features img {
-		margin-right: 120px
-	}
-	#pg_features ul {
-		margin-left: 530px
-	}
 	.bodyCML #banner-wrap {
 		background-position: center -200px
 	}
@@ -3659,15 +3614,6 @@ a.btn_green:visited {
 	}
 	#pg_banner .download a {
 		margin: 10px 0
-	}
-	#pg_features {
-		padding: 0 20px 40px
-	}
-	#pg_features img {
-		display: none
-	}
-	#pg_features ul {
-		margin-left: 0
 	}
 	.bodyCB #banner-wrap {
 		-moz-background-size: 100% auto;
@@ -4327,12 +4273,6 @@ a.btn_green:visited {
 		height: 60px;
 		margin: 3px 0 0 20px
 	}
-	#pg_features .content {
-		background: none
-	}
-	#pg_features {
-		padding: 0 10px 40px
-	}
 	.bodyCB #container-wrap {
 		padding-bottom: 200px
 	}
@@ -4635,14 +4575,6 @@ a.btn_green:visited {
 		width: 200px;
 		margin-left: -100px
 	}
-  /*
-	.fs-ad .pic {
-		display: none;
-	}
-	.fs-ad .title {
-		margin-top: 60px;
-	}
-  */
 }
 @media (max-width:540px) and (min-height:450px) {
 	.mobileModel .cml-page .content {
@@ -4690,14 +4622,6 @@ a.btn_green:visited {
 	.fs-ad .main {
 		margin-top: -170px !important
 	}
-  /*
-	.fs-ad .pic {
-		width: 160px
-	}
-	.fs-ad .title {
-		width: 270px
-	}
-  */
 }
 @media (max-width:540px) {
 	.news-banner em {
@@ -4722,15 +4646,6 @@ a.btn_green:visited {
 	}
 	.canTransition .fixed #logo a {
 		background-image: url(../images/v3/x2/logo.png)
-	}
-	.bodyPG #logo a {
-		background-image: url(../images/v3/x2/logo_black.png)
-	}
-	.bodyPG .fixed #logo a {
-		background-image: url(../images/v3/x2/logo_black_small.png)
-	}
-	.bodyPG.canTransition .fixed #logo a {
-		background-image: url(../images/v3/x2/logo_black.png)
 	}
 	.android-dl {
 		background-image: url(../images/dlicon/x2/dl.png)
@@ -5818,9 +5733,6 @@ a.btn_green:visited {
 		-moz-background-size: 100%;
 		-o-background-size: 100%;
 		background-size: 100%
-	}
-	.bodyPG #logo a {
-		background-image: url(../images/v3/x2/logo-small-black-2x.png)
 	}
 	#menus a:not(#more) {
 		display: none
