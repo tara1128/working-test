@@ -1,7 +1,7 @@
 /*
   CSS for PhotoGrid new look ONLY!!
   Devided from v4.main.css
-  Latest modified: 2017-06-15 18:18
+  Latest modified: 2017-06-16 15:50
 */
 
 .clearfix:after {
@@ -77,10 +77,6 @@ body.bodyPG-new {
 /* ========== First screen banner ========== */
 #pg-v2-banner {
 	padding:100px 0 200px;
-}
-.mobileModel #pg-v2-banner {
-	background:url(../images/pg/pg-new-mobile-banner.jpg) no-repeat center;
-	background-size:cover;
 }
 .pg-new-logo {
   float:left;
@@ -1018,6 +1014,9 @@ body.bodyPG-new {
 	#pg-v2-banner {
 		padding:100px 20px 150px;
 	}
+  .pg-new-dl-btns {
+    margin:10px 0 0;
+  }
 	.pg-tools-navbtns {
 		bottom:20px;
     margin-left:-277px;
@@ -1142,82 +1141,91 @@ body.bodyPG-new {
 		height:100%;
 		padding-bottom:0;
 	}
-	.mobileModel #footer-wrap {
+  .bannerBG {
+    background:url(../images/pg/pg-new-mobile-banner.jpg) no-repeat center;
+    background-size:cover;
+    min-height:750px;
+    min-width:100%;
+    width:100%;
+  }
+  #pg-v2-banner {
+    padding:50px 20px 0px;
+    min-height:750px;
+    box-sizing:border-box;
+  }
+  .pg-new-dl-btns {
+    margin:20px 0 0;
+  }
+	.mobileModel #footer-wrap,
+  .bannerBG img,
+  .pg-new-logo img {
 		display:none;
 	}
-	.mobileModel #pg-v2-banner,
+  .pg-new-title-dl {
+    float:none;
+    margin:0 auto;
+    width:344px;
+  }
+
+
+
   .mobileModel .pg-v2-page,
-  #pg-community,
-  #pg-features,
-  #pg-creative,
-  #pg-joins {
+  #pg-features {
 		padding:0;
-	}
-	.bannerBG {
-		overflow:hidden;
-		width:100%;
-		height:100%;
-	}
-	.bannerBG img {
-		position:absolute;
-		left:50%;
-		width:100%;
-		height:100%;
-		-webkit-transform:translate3d(-50%,0,0);
-		-moz-transform:translate3d(-50%,0,0);
-		transform:translate3d(-50%,0,0);
 	}
 	.pg-playico {
 		width:12px;
-		height: 12px;
-		background-size: 12px
+		height:12px;
+		background-size:12px;
 	}
+  #pg-community {
+    padding:30px 0;
+  }
 	#pg-community h3 {
-		font-size: 26px;
-		margin: 0 6px;
-		text-align: left
+		margin:0px auto;
+		font-size:26px;
+		text-align:center;
 	}
 	#pg-community p {
-		font-size: 12px;
-		margin: 0 6px;
-		text-align: left
+		margin:20px auto;
+    width:60%;
+		font-size:14px;
+		text-align:center;
 	}
-	.bodyPG-new .community-list {
-		width: 100%;
-		max-width: 320px;
-		margin: 30px auto 0
+	.community-list {
+		margin:30px auto 0;
+		width:100%;
+		max-width:320px;
 	}
-	.bodyPG-new .community-list li {
-		overflow: hidden;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		width: 50%;
-		height: auto;
-		margin: 0 auto;
-		padding: 1px 6px
+	.community-list li {
+		overflow:hidden;
+		box-sizing:border-box;
+		width:50%;
+		height:auto;
+		margin:0 auto;
+		padding:1px 6px;
 	}
 	.community-list li i {
-		top: 0;
-		right: 9px;
-		width: 45px;
-		height: 45px;
-		background-position: right top;
-		background-size: contain
+		top:0;
+		right:9px;
+		width:45px;
+		height:45px;
+		background-position:right top;
+		background-size:contain;
 	}
-	.bodyPG-new .community-list li a {
-		width: auto;
-		height: auto
+	.community-list li a {
+		width:auto;
+		height:auto;
 	}
-	.bodyPG-new .community-list li img {
-		position: static;
-		width: 100%;
-		height: auto;
+	.community-list li a img {
+		position:static;
+		width:100%;
+		height:auto;
 		-webkit-transform: scale(1.2) translateZ(0);
 		-moz-transform: scale(1.2) translateZ(0);
 		transform: scale(1.2) translateZ(0)
 	}
-	.bodyPG-new .community-list li a:hover img {
+	.community-list li a:hover img {
 		-webkit-transform: scale(1) translateZ(0);
 		-moz-transform: scale(1) translateZ(0);
 		transform: scale(1) translateZ(0)
@@ -1233,10 +1241,10 @@ body.bodyPG-new {
 		background-position:0 -26px;
 	}
 	.mobileModel .pg-new-middle {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 79.6875%;
+		position:absolute;
+		top:50%;
+		left:50%;
+		width:79.6875%;
 		-webkit-transform: translate3d(-50%, -50%, 0);
 		-moz-transform: translate3d(-50%, -50%, 0);
 		transform: translate3d(-50%, -50%, 0)
@@ -1245,198 +1253,187 @@ body.bodyPG-new {
     height:500px;
   }
 	.pg-tools-logo {
-		width: 94px;
-		height: 54px;
-		margin-left: -140px
+		width:94px;
+		height:54px;
+		margin-left:-180px;
 	}
 	.pg-tools-navbtns {
-		bottom: 10px
+    margin-left:-247px;
+    width:494px;
+		bottom:10px;
 	}
-	.tool-text{
-		bottom: 70px;
-		left: 50%;
-		width: 290px;
-		margin: 0 0 0 -150px
+	.pg-tools-navbtns li {
+		margin:0 5px;
+	}
+	.tool-text {
+		margin:0 0 0 -180px;
+		bottom:70px;
+		left:50%;
+		width:290px;
 	}
 	.tool-text h3 {
-		font-size: 24px
+		font-size:24px;
 	}
 	.tool-text h4 {
-		font-size: 14px
+		font-size:14px;
 	}
 	.tool-text p {
-		margin-top: 10px
+		margin-top:10px;
 	}
 	.pg-tool-1 .tool-pic {
-		width: 290px;
-		margin: -190px 0 0 -145px;
-    border:1px dashed green;
+		margin:-190px 0 0 -145px;
+		width:290px;
 	}
 	#pg-features {
-		background: #fff
+		background:#fff;
 	}
 	#pg-features h3 {
-		font-size: 23px;
-		text-align: left
+		font-size:23px;
+		text-align:left;
 	}
 	#pg-features p {
-		font-size: 12px;
-		width: auto;
-		text-align: left
+		font-size:12px;
+		width:auto;
+		text-align:left;
 	}
 	.pg-flist {
 		margin-top:20px;
 	}
 	.pg-flist li {
-		width: 100%;
-		padding: 10px 0 0 0;
-		text-align: left
+		padding:10px 0 0;
+		width:100%;
+		text-align:left;
 	}
 	.pg-ficon {
-		display: none
+		display:none;
 	}
 	.pg-ftitle {
-		font-size: 14px;
-		line-height: 1.2;
-		overflow: hidden;
-		text-align: left;
-		color: #549a36
+		font-size:14px;
+		line-height:1.2;
+		text-align:left;
+		color:#549a36;
+		overflow:hidden;
 	}
 	.pg-fdesc {
-		font-size: 12px;
-		display: block;
-		overflow: hidden;
-		text-align: left
-	}
-	.creative-title h3 {
-		font-size:22px;
-		text-align:left;
-	}
-	.creative-title p {
+		display:block;
 		font-size:12px;
 		text-align:left;
+		overflow:hidden;
+	}
+
+  #pg-creative {
+    padding:30px 0;
+    height:auto;
+  }
+	.creative-title h3 {
+		margin:0px auto;
+		font-size:26px;
+		text-align:center;
+	}
+	.creative-title p {
+		margin:20px auto;
+    width:60%;
+		font-size:14px;
+		text-align:center;
 	}
 	.creative-title {
 		position:relative;
 	}
 	.pg-cbox {
-		position: static;
-		top: auto;
-		left: auto;
-		width: 100%;
-		margin: 10px auto 0
+		position:static;
+		margin:10px auto 0;
+		top:auto;
+		left:auto;
+		width:100%;
 	}
 	.pg-imgwrap {
 		position:relative;
 		margin:0 auto;
-		width:150px;
+		width:250px;
 	}
 	.pg-cbox img {
 		vertical-align:top;
 	}
 	.pg-clist {
-		width: 100%
+		width:100%;
 	}
 	.pg-clist {
-		position: relative
+		position:relative;
 	}
 	.pg-clist li {
-		margin-bottom: 10px
+		margin:30px 20px;
 	}
 	.pg-clist li:after {
-		display: block;
-		clear: both;
-		overflow: hidden;
-		width: 100%;
-		height: 0;
-		content: ''
+		display:block;
+		clear:both;
+		overflow:hidden;
+		width:100%;
+		height:0;
+		content:'';
 	}
 	.pg-cicon {
-		position: relative;
-		top: auto;
-		left: auto;
-		float: left;
-		width: 30px;
-		height: 30px;
-		margin: 0 10px 0 0;
-		background-position: -480px 0
-	}
-	.pg-cicon, .pg-cicon span {
-		background-size: 600px auto
-	}
-	.pg-cicon1 span {
-		background-position: -440px -40px
-	}
-	.pg-cicon2 span {
-		background-position: -480px -40px
-	}
-	.pg-cicon3 span {
-		background-position: -520px -40px
-	}
-	.pg-cicon4 span {
-		background-position: -560px -40px
+		margin:0 10px 0 0;
+		position:relative;
+		top:auto;
+		left:auto;
+		float:left;
 	}
 	.pg-citem {
-		position: static;
-		overflow: hidden;
-		width: auto;
-		margin: 0
+		position:static;
+		margin:0;
+		overflow:hidden;
+		width:auto;
 	}
+  .pg-citem1,
+  .pg-citem2,
+  .pg-citem3,
+  .pg-citem4 {
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    text-align:left;
+  }
 	.pg-citem h4 {
-		font-size: 18px
+    margin:0 0 10px 0;
+		font-size:18px;
 	}
 	.pg-citem p {
-		font-size: 12px
+		font-size:12px;
 	}
+  
+  #pg-joins  {
+    padding:30px 0;
+  }
 	.pg-join-info {
-		float: none;
-		width: 90%;
-		margin: 0 auto 20px;
-		padding-top: 20px
+		float:none;
+		margin:0 auto 20px;
+		padding:20px 0 0;
+		width:90%;
 	}
 	.pg-join-text {
-		width: auto;
-		padding: 55px 0 0 0;
-		text-align: center;
-		background-position: center top
+		padding:15px 0 0 0;
+		width:auto;
+		font-size:16px;
 	}
-	.pg-join-text {
-		font-size: 16px;
-		min-height: 45px;
-		background-size: 45px auto
-	}
-	.pg-join-btn {
-		padding-top: 10px;
-		text-align: center
-	}
-	.pg-join-btn a {
-		display: inline-block;
-		float: none;
-		width: 94px;
-		height: 31px;
-		margin: 0 10px;
-		border-radius: 6px;
-		background-size: 188px
-	}
+  .pg-join-btn  {
+    margin:20px auto 50px;
+  }
 	#pg-joins .pg-new-middle {
-		width: 100%;
-		max-height: 100%;
-		padding: 0
+		max-height:100%;
 	}
 	.pg-new-slides {
-		width: 249px;
-		width: 200px;
-		height: 310px;
-		margin: 10px auto 0;
-		padding: 54px 15px 0 14px;
-		background-position: 0 0;
-		background-size: 100% auto
+		margin:10px auto 0;
+		padding:54px 15px 0 14px;
+		width:200px;
+		height:310px;
+		background-size:100% auto;
 	}
 	#pg-v2-slide {
-		width: 200px;
-		height: 310px
+		width:200px;
+		height:310px;
 	}
 	.pg-v2-sharebox {
-		display: none
+		display:none;
 	}
 }
