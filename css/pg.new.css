@@ -1,7 +1,7 @@
 /*
   CSS for PhotoGrid new look ONLY!!
   Devided from v4.main.css
-  Latest modified: 2017-06-16 18:50
+  Latest modified: 2017-06-19 18:19
 */
 
 .clearfix:after {
@@ -90,8 +90,13 @@ body.bodyPG-new {
 .pg-new-title-dl h1 {
   width:100%;
   height:131px;
-  background:url(../images/pg/pg-new-logo-txt.png) no-repeat;
   text-indent:-9999px;
+  background-repeat:no-repeat;
+  background-image:url(../images/pg/pg-new-logo-txt-1x.png);
+  background-image:-webkit-image-set(
+    url(../images/pg/pg-new-logo-txt-1x.png) 1x,
+    url(../images/pg/pg-new-logo-txt-2x.png) 2x
+  )
 }
 .pg-new-dl-btns {
   margin:30px 0 0;
@@ -105,8 +110,12 @@ body.bodyPG-new {
   text-indent:-9999px;
   color:transparent;
   background-repeat:no-repeat;
-  background-image:url(../images/pg/pg-new-dl-btns.png);
   background-color:rgba(0,0,0,.7);
+  background-image:url(../images/pg/pg-new-dl-btns-1x.png);
+  background-image:-webkit-image-set(
+    url(../images/pg/pg-new-dl-btns-1x.png) 1x,
+    url(../images/pg/pg-new-dl-btns-2x.png) 2x
+  )
 }
 .pg-new-dlbtn:hover {
   background-color:#000;
@@ -161,19 +170,23 @@ body.bodyPG-new {
 	display:block;
 	width:320px;
 	height:457px;
-	-webkit-transition: -webkit-transform .2s;
-	-moz-transition: -moz-transform .2s;
-	-moz-transition: transform .2s, -moz-transform .2s;
-	-o-transition: -o-transform .2s;
-	-o-transition: transform .2s, -o-transform .2s;
-	transition: -webkit-transform .2s;
-	transition: transform .2s;
-	transition: transform .2s, -webkit-transform .2s, -moz-transform .2s, -o-transform .2s;
-	-webkit-transform: scale(1) translateZ(0);
-	-moz-transform: scale(1) translateZ(0);
-	transform: scale(1) translateZ(0);
 }
-.community-list li a:hover img {
+.community-list li a img,
+.community-list li s {
+	-webkit-transition:-webkit-transform .2s;
+	-moz-transition:-moz-transform .2s;
+	-moz-transition:transform .2s, -moz-transform .2s;
+	-o-transition:-o-transform .2s;
+	-o-transition:transform .2s, -o-transform .2s;
+	transition:-webkit-transform .2s;
+	transition:transform .2s;
+	transition:transform .2s, -webkit-transform .2s, -moz-transform .2s, -o-transform .2s;
+	-webkit-transform:scale(1) translateZ(0);
+	-moz-transform:scale(1) translateZ(0);
+	transform:scale(1) translateZ(0);
+}
+.community-list li a:hover img,
+.community-list li:hover s {
 	-webkit-transform: scale(1) translateZ(0);
 	-webkit-transform: scale(.875) translateZ(0);
 	-webkit-transform: scale(.875) translateZ(0);
@@ -201,8 +214,8 @@ body.bodyPG-new {
 	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
 	background: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
 	background: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
-	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=transparent, endColorStr=#000000);
-	filter: alpha(opacity=0);
+	filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr=transparent, endColorStr=#000000);
+	filter:alpha(opacity=0);
 }
 .community-list li a:hover span {
 	opacity:1;
@@ -227,14 +240,14 @@ body.bodyPG-new {
 	opacity: 0;
 	color: #fff;
 	-moz-opacity: .0;
-	filter: alpha(opacity=0);
+	filter:alpha(opacity=0);
 }
 .community-list li a:hover em {
 	-webkit-transform: translate3d(0, 0, 0);
 	-moz-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 	opacity: 1;
-	filter: alpha(opacity=100);
+	filter:alpha(opacity=100);
 }
 .community-list li s {
 	position:absolute;
@@ -266,7 +279,7 @@ body.bodyPG-new {
 .community-playvideo {
 	margin-top:35px;
 }
-.pg-playvideo {
+.community-playvideo .pg-playvideo {
 	font-size:18px;
 	color:#387afb;
 }
@@ -329,6 +342,35 @@ body.bodyPG-new {
   background-image:url(../images/pg/pg-new-tools-bg-6.jpg);
 }
 
+.pg-tool-filter-box {
+	position:absolute;
+	top:0;
+	left:0;
+	overflow:hidden;
+	width:100%;
+	height:100%;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
+	animation-delay: 1s;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both
+}
+.pg-tool-3 img.filter-pic {
+	position:absolute;
+  height:100%;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
+	animation-delay: 1s;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both
+}
+
 .pg-tools-logo {
 	position:absolute;
 	top:6.67%;
@@ -388,7 +430,7 @@ body.bodyPG-new {
 	transform: translate3d(0, 0, 0) rotateZ(0deg);
 }
 .tool-pic.riding-bike {
-  width:498px;
+  width:490px;
   margin:-260px 0 0;
   box-shadow:30px 30px 30px rgba(0,0,0,.4);
 }
@@ -896,8 +938,8 @@ body.bodyPG-new {
 .pg-new-slides {
   position:relative;
 	float:left;
-	padding:70px 0 0 17px;
-  width:269px;
+	padding:70px 0 0 10px;
+  width:276px;
 	background:url(../images/pg/pg-new-phone-bg.png) no-repeat;
 }
 .pg-new-slidelogo {
@@ -910,8 +952,8 @@ body.bodyPG-new {
 #pg-v2-slide {
 	position:relative;
 	overflow:hidden;
-	width:249px;
-	height:386px;
+	width:266px;
+	height:400px;
 }
 #pg-v2-slide img {
 	position:absolute;
@@ -1139,11 +1181,11 @@ body.bodyPG-new {
 		padding-bottom:0;
 	}
   .bannerBG {
-    background:url(../images/pg/pg-new-mobile-banner.jpg) no-repeat center;
+    background:url(../images/pg/pg-new-mobile-banner-640.jpg) no-repeat center;
     background-size:cover;
-    min-height:750px;
-    min-width:100%;
+    min-width:auto;
     width:100%;
+    height:100%;
   }
   #pg-v2-banner {
     padding:100px 0px 0px;
@@ -1191,7 +1233,6 @@ body.bodyPG-new {
 		max-width:320px;
 	}
 	.community-list li {
-		overflow:hidden;
 		box-sizing:border-box;
 		width:50%;
 		height:auto;
@@ -1251,6 +1292,22 @@ body.bodyPG-new {
 		height:54px;
 		margin-left:-180px;
 	}
+  .pg-tool-filter-mobbox {
+		width:100%;
+		height:100%;
+		-webkit-animation:moveLeft 1s ease 1s both;
+		-moz-animation:moveLeft 1s ease 1s both;
+		-o-animation:moveLeft 1s ease 1s both;
+		animation:moveLeft 1s ease 1s both;
+		background:url(../images/pg/pg-new-tools-bg-3-filter.jpg) no-repeat center;
+		-moz-background-size:auto 100%;
+		-o-background-size:auto 100%;
+		background-size:auto 100%
+  }
+  .pg-tool-3 img.filter-pic {
+    display:none;
+  }
+
 	.pg-tools-navbtns {
     margin-left:-247px;
     width:494px;
