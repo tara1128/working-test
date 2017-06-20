@@ -1,7 +1,7 @@
 /*
   CSS for PhotoGrid new look ONLY!!
   Devided from v4.main.css
-  Latest modified: 2017-06-19 18:19
+  Latest modified: 2017-06-20 18:41
 */
 
 .clearfix:after {
@@ -169,7 +169,7 @@ body.bodyPG-new {
 	left:-20px;
 	display:block;
 	width:320px;
-	height:457px;
+	height:458px;
 }
 .community-list li a img,
 .community-list li s {
@@ -204,17 +204,17 @@ body.bodyPG-new {
 	left:0;
 	width:100%;
 	padding:40px 0 20px;
-	-webkit-transition: opacity .2s;
-	-moz-transition: opacity .2s;
-	-o-transition: opacity .2s;
-	transition: opacity .2s;
+	-webkit-transition:opacity .2s;
+	-moz-transition:opacity .2s;
+	-o-transition:opacity .2s;
+	transition:opacity .2s;
 	opacity:0;
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, .8)));
-	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
-	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
-	background: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
-	background: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
-	filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr=transparent, endColorStr=#000000);
+	background:-webkit-gradient(linear,0% 0%,0% 100%,from(rgba(0,0,0,0)),to(rgba(0,0,0,.8)));
+	background:-webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.8));
+	background:-moz-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.8));
+	background:-o-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.8));
+	background:-ms-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.8));
+	filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr=transparent,endColorStr=#000000);
 	filter:alpha(opacity=0);
 }
 .community-list li a:hover span {
@@ -257,7 +257,7 @@ body.bodyPG-new {
 .community-list li s.pg-new-donut {
   margin-left:-82px;
   left:50%;
-  top:-46px;
+  top:-15px;
   width:154px;
   height:94px;
   background:url(../images/pg/pg-new-spec-donut.png) no-repeat;
@@ -916,7 +916,7 @@ body.bodyPG-new {
 #pg-joins .pg-new-middle {
 	width:960px;
 	margin:0 auto;
-	padding:116px 0 70px;
+	padding:116px 0 5px;
 }
 .pg-join-info {
 	float:right;
@@ -928,7 +928,7 @@ body.bodyPG-new {
   margin:0 0 20px;
 }
 .pg-join-text {
-	font-size:18px;
+	font-size:20px;
 	line-height:1.25em;
 }
 .pg-join-btn {
