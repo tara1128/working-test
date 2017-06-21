@@ -1,7 +1,7 @@
 /*
   CSS for PhotoGrid new look ONLY!!
   Devided from v4.main.css
-  Latest modified: 2017-06-20 18:41
+  Latest modified: 2017-06-21 14:54
 */
 
 .clearfix:after {
@@ -186,18 +186,13 @@ body.bodyPG-new {
 	transform:scale(1) translateZ(0);
 }
 .community-list li a:hover img,
-.community-list li:hover s {
-	-webkit-transform: scale(1) translateZ(0);
-	-webkit-transform: scale(.875) translateZ(0);
-	-webkit-transform: scale(.875) translateZ(0);
-	-moz-transform: scale(1) translateZ(0);
-	-moz-transform: scale(.875) translateZ(0);
-	-moz-transform: scale(.875) translateZ(0);
-	transform: scale(1) translateZ(0);
-	-webkit-transform: scale(.875) translateZ(0);
-	-moz-transform: scale(.875) translateZ(0);
-	transform: scale(.875) translateZ(0);
+.community-list li:hover s.pg-new-flags,
+.community-list li:hover s.pg-new-balloon {
+	-webkit-transform:scale(.875);
+	-moz-transform:scale(.875);
+	transform:scale(.875);
 }
+
 .community-list li a span {
 	position:absolute;
 	bottom:0;
@@ -257,11 +252,19 @@ body.bodyPG-new {
 .community-list li s.pg-new-donut {
   margin-left:-82px;
   left:50%;
-  top:-15px;
+  top:-23px;
   width:154px;
   height:94px;
   background:url(../images/pg/pg-new-spec-donut.png) no-repeat;
 }
+.community-list li:hover s.pg-new-donut {
+	-webkit-transform:scale(.875) translate(0px,23px);
+	-moz-transform:scale(.875) translate(0px,23px);
+	-ms-transform:scale(.875) translate(0px,23px);
+	-o-transform:scale(.875) translate(0px,23px);
+	transform:scale(.875) translate(0px,23px);
+}
+
 .community-list li s.pg-new-flags {
   left:-20px;
   top:-10px;
