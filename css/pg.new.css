@@ -1,7 +1,7 @@
 /*
   CSS for PhotoGrid new look ONLY!!
   Devided from v4.main.css
-  Latest modified: 2017-06-21 14:54
+  Latest modified: 2017-06-21 17:55
 */
 
 .clearfix:after {
@@ -255,7 +255,8 @@ body.bodyPG-new {
   top:-23px;
   width:154px;
   height:94px;
-  background:url(../images/pg/pg-new-spec-donut.png) no-repeat;
+  background-repeat:no-repeat;
+  background-image:url(../images/pg/pg-new-spec-donut.png);
 }
 .community-list li:hover s.pg-new-donut {
 	-webkit-transform:scale(.875) translate(0px,23px);
@@ -270,14 +271,16 @@ body.bodyPG-new {
   top:-10px;
   width:110px;
   height:76px;
-  background:url(../images/pg/pg-new-spec-flags.png) no-repeat;
+  background-repeat:no-repeat;
+  background-image:url(../images/pg/pg-new-spec-flags.png);
 }
 .community-list li s.pg-new-balloon {
   right:-50px;
   bottom:-20px;
   width:126px;
   height:145px;
-  background:url(../images/pg/pg-new-spec-balloon.png) no-repeat;
+  background-repeat:no-repeat;
+  background:url(../images/pg/pg-new-spec-balloon.png);
 }
 .community-playvideo {
 	margin-top:35px;
@@ -383,7 +386,9 @@ body.bodyPG-new {
 	height:108px;
 	margin:0 0 0 -480px;
 	text-indent:-9999px;
-	background:url(../images/pg/pg-new-tools.png) no-repeat center;
+  background-repeat:no-repeat;
+  background-position:center;
+	background-image:url(../images/pg/pg-new-tools.png);
 }
 .tool-text {
 	position:absolute;
@@ -1183,17 +1188,18 @@ body.bodyPG-new {
 		height:100%;
 		padding-bottom:0;
 	}
+  .bodyPG-new .mobileModel #pg-v2-banner {
+    padding:0px;
+    background:url(../images/pg/pg-new-mobile-banner-640.jpg) no-repeat center;
+    background-size:cover;
+  }
   .bannerBG {
+    display:none!important;
     background:url(../images/pg/pg-new-mobile-banner-640.jpg) no-repeat center;
     background-size:cover;
     min-width:auto;
     width:100%;
     height:100%;
-  }
-  #pg-v2-banner {
-    padding:100px 0px 0px;
-    min-height:750px;
-    box-sizing:border-box;
   }
   .pg-new-dl-btns {
     margin:20px 0 0;
@@ -1206,8 +1212,29 @@ body.bodyPG-new {
 	}
   .pg-new-title-dl {
     float:none;
-    margin:0 auto;
-    width:344px;
+    margin:100px auto 0;
+    /* width:344px; */
+    width:280px;
+  }
+  .pg-new-title-dl h1 {
+    height:107px;
+    background-image:url(../images/pg/pg-new-logo-txt-280-107-1x.png);
+    background-image:-webkit-image-set(
+      url(../images/pg/pg-new-logo-txt-280-107-1x.png) 1x,
+      url(../images/pg/pg-new-logo-txt-560-213-2x.png) 2x
+    )
+  }
+  .pg-new-dlbtn {
+    width:132px;
+    height:40px;
+    background-image:url(../images/pg/pg-new-dl-btns-280-43-1x.png);
+    background-image:-webkit-image-set(
+      url(../images/pg/pg-new-dl-btns-280-43-1x.png) 1x,
+      url(../images/pg/pg-new-dl-btns-560-85-2x.png) 2x
+    )
+  }
+  .pg-new-dlbtn.appStore {
+    background-position:-147.9px 0;
   }
 
 	.pg-playico {
@@ -1216,7 +1243,7 @@ body.bodyPG-new {
 		background-size:12px;
 	}
   #pg-community {
-    padding:30px 0;
+    padding:0;
   }
 	#pg-community h3 {
 		margin:0px auto;
@@ -1226,13 +1253,17 @@ body.bodyPG-new {
 	}
 	#pg-community p {
 		margin:20px auto;
-    width:60%;
+		width:90%;
+		max-width:308px;
 		font-size:14px;
-		text-align:center;
+		text-align:left;
+	}
+	#pg-community p br {
+    display:none;
 	}
 	.community-list {
 		margin:30px auto 0;
-		width:100%;
+		width:90%;
 		max-width:320px;
 	}
 	.community-list li {
@@ -1271,6 +1302,28 @@ body.bodyPG-new {
 		font-size:12px;
 		padding-left:10px;
 	}
+  .community-list li s.pg-new-donut {
+    margin-left:-56.3px;
+    top:-24px;
+    width:104.7px;
+    height:61.2px;
+    background-size:104.7px 61.2px;
+  }
+  .community-list li s.pg-new-flags {
+    left:-5px;
+    top:-5px;
+    width:74.8px;
+    height:51.7px;
+    background-size:74.8px 51.7px;
+  }
+  .community-list li s.pg-new-balloon {
+    right:-30px;
+    bottom:-12px;
+    width:85.68px;
+    height:98.6px;
+    background-size:85.68px 98.6px;
+  }
+
 	.community-playvideo .pg-playvideo {
 		font-size:12px;
 	}
@@ -1279,21 +1332,24 @@ body.bodyPG-new {
 	}
 	.mobileModel .pg-new-middle {
 		position:absolute;
-		top:48%;
+		top:42%;
 		left:50%;
-		width:79.6875%;
-		-webkit-transform: translate3d(-50%, -50%, 0);
-		-moz-transform: translate3d(-50%, -50%, 0);
-		transform: translate3d(-50%, -50%, 0)
+		width:96%;
+		-webkit-transform:translate3d(-50%,-50%,0);
+		-moz-transform:translate3d(-50%,-50%,0);
+		-ms-transform:translate3d(-50%,-50%,0);
+		-o-transform:translate3d(-50%,-50%,0);
+		transform:translate3d(-50%,-50%,0);
 	}
   #pg-popular-tools {
     height:500px;
   }
 	.pg-tools-logo {
-    top:12.67%;
-		width:94px;
+    top:70px;
+		margin-left:-150px;
+		width:300px;
 		height:54px;
-		margin-left:-180px;
+    background-position:0 0;
 	}
   .pg-tool-filter-mobbox {
 		width:100%;
@@ -1310,20 +1366,22 @@ body.bodyPG-new {
   .pg-tool-3 img.filter-pic {
     display:none;
   }
+  .pg-one-tool.pg-tool-2 {
+    /* background-image:url(../images/pg/pg-new-tools-bg-2.jpg); */
+    background-position:58% 50%;
+  }
+  .pg-one-tool.pg-tool-4 {
+    /* background-image:url(../images/pg/pg-new-tools-bg-4.jpg); */
+    background-position:35% 50%;
+  }
 
-	.pg-tools-navbtns {
-    margin-left:-247px;
-    width:494px;
-		bottom:10px;
-	}
 	.pg-tools-navbtns li {
 		margin:0 5px;
 	}
 	.tool-text {
-		bottom:120px;
-		left:50%;
-		margin:0 0 0 -145px;
-		width:290px;
+		bottom:110px;
+		margin:0 0 0 -150px;
+		width:300px;
 	}
 	.tool-text h3 {
 		font-size:24px;
@@ -1342,21 +1400,22 @@ body.bodyPG-new {
     left:50%;
   }
   .tool-pic.riding-bike {
-    margin:0;
-    top:158px;
+    margin:0 0 0 -150px;
+    top:138px;
     left:50%;
-    margin-left:-110px;
-    width:220px;
+    width:300px;
   }
   /* Make icons of Tool Nav be half on mobiles: */
   .pg-tools-navbtns {
-    margin-left:-170px;
-    width:340px;
+		bottom:20px;
+    margin-left:-150px;
+    width:300px;
   }
+
   .pg-tools-navbtns li {
     width:36px;
     height:36px;
-    margin:0 10px;
+    margin:0 14px 0 0;
   }
   .pg-tools-navbtns li,
   .pg-tools-navbtns li span,
@@ -1410,7 +1469,7 @@ body.bodyPG-new {
 	}
   .pg-flist li {
     float:none;
-    padding:0px 0px 5px;
+    padding:0px 5px 5px 30px;
     width:100%;
     height:auto;
   }
@@ -1464,7 +1523,7 @@ body.bodyPG-new {
 		position:relative;
 	}
 	.pg-clist li {
-		margin:30px 20px;
+		margin:30px 20px 30px 30px;
 	}
 	.pg-clist li:after {
 		display:block;
@@ -1511,28 +1570,33 @@ body.bodyPG-new {
   }
 	.pg-join-info {
 		float:none;
-		margin:0 auto 20px;
-		padding:20px 0 0;
+		margin:0 auto;
+		padding:80px 0 0;
 		width:90%;
 	}
 	.pg-join-text {
-		padding:15px 0 0 0;
-		width:auto;
+		padding:0;
+		width:90%;
 		font-size:16px;
 	}
   .pg-join-btn  {
-    margin:20px auto 50px;
+    margin:20px auto;
+    width:282px;
   }
 	#pg-joins .pg-new-middle {
 		max-height:100%;
 	}
 	.pg-new-slides {
-		margin:10px auto;
-		padding:54px 15px 0 14px;
+		margin:10px auto 0;
+		padding:54px 10px 0 9px;
 		width:200px;
 		height:310px;
 		background-size:100% auto;
 	}
+  .pg-new-slidelogo {
+    right:-30px;
+    width:60px;
+  }
 	#pg-v2-slide {
 		width:200px;
 		height:310px;
