@@ -1,7 +1,7 @@
 /*
   CSS for PhotoGrid new look ONLY!!
   Devided from v4.main.css
-  Latest modified: 2017-06-21 17:55
+  Latest modified: 2017-06-21 18:51
 */
 
 .clearfix:after {
@@ -932,8 +932,16 @@ body.bodyPG-new {
 	margin:70px 0 0 70px;
 }
 .pg-join-logo {
-  display:block;
   margin:0 0 20px;
+  width:280px;
+  height:54px;
+  text-indent:-9999px;
+  background-repeat:no-repeat;
+  background-image:url(../images/pg/pg-new-join-logo-1x.png);
+  background-image:-webkit-image-set(
+    url(../images/pg/pg-new-join-logo-1x.png) 1x,
+    url(../images/pg/pg-new-join-logo-2x.png) 2x
+  )
 }
 .pg-join-text {
 	font-size:20px;
@@ -1162,8 +1170,6 @@ body.bodyPG-new {
 	}
   .pg-join-logo, .pg-join-text {
     margin:0 auto 20px;
-    width:282px;
-    text-align:center;
   }
   .pg-join-btn  {
     margin:20px auto 0;
@@ -1332,7 +1338,7 @@ body.bodyPG-new {
 	}
 	.mobileModel .pg-new-middle {
 		position:absolute;
-		top:42%;
+		top:50%;
 		left:50%;
 		width:96%;
 		-webkit-transform:translate3d(-50%,-50%,0);
@@ -1374,6 +1380,9 @@ body.bodyPG-new {
     /* background-image:url(../images/pg/pg-new-tools-bg-4.jpg); */
     background-position:35% 50%;
   }
+  .pg-one-tool.pg-tool-5 {
+    background-image:url(../images/pg/pg-new-tools-bg-5-mobile.jpg);
+  }
 
 	.pg-tools-navbtns li {
 		margin:0 5px;
@@ -1411,7 +1420,6 @@ body.bodyPG-new {
     margin-left:-150px;
     width:300px;
   }
-
   .pg-tools-navbtns li {
     width:36px;
     height:36px;
@@ -1460,21 +1468,23 @@ body.bodyPG-new {
 	}
 	#pg-features p {
 		margin:10px auto;
-    width:100%;
+    width:300px;
 		font-size:14px;
-		text-align:center;
+		text-align:left;
 	}
 	.pg-flist {
     margin:10px auto 0;
+    width:300px;
 	}
   .pg-flist li {
     float:none;
-    padding:0px 5px 5px 30px;
+    padding:0 0 5px 0;
     width:100%;
     height:auto;
   }
 	.pg-ftitle {
 		font-size:16px;
+    line-height:1.2em;
     text-align:left;
     color:#387afb;
 	}
@@ -1483,7 +1493,7 @@ body.bodyPG-new {
     text-align:left;
 	}
   #pg-creative {
-    padding:30px 0;
+    padding:0;
     height:auto;
   }
 	.creative-title h3 {
@@ -1492,10 +1502,10 @@ body.bodyPG-new {
 		text-align:center;
 	}
 	.creative-title p {
-		margin:20px auto;
-    width:60%;
+		margin:10px auto 0;
+    width:300px;
 		font-size:14px;
-		text-align:center;
+		text-align:left;
 	}
 	.creative-title {
 		position:relative;
@@ -1517,13 +1527,12 @@ body.bodyPG-new {
 		vertical-align:top;
 	}
 	.pg-clist {
-		width:100%;
-	}
-	.pg-clist {
 		position:relative;
+    margin:20px auto 0;
+		width:300px;
 	}
 	.pg-clist li {
-		margin:30px 20px 30px 30px;
+		margin:10px 0;
 	}
 	.pg-clist li:after {
 		display:block;
@@ -1558,36 +1567,44 @@ body.bodyPG-new {
     text-align:left;
   }
 	.pg-citem h4 {
-    margin:0 0 10px 0;
-		font-size:18px;
+    margin:0 0 6px 0;
+		font-size:16px;
 	}
 	.pg-citem p {
 		font-size:12px;
 	}
   
   #pg-joins  {
-    padding:30px 0;
+    padding:0;
   }
 	.pg-join-info {
 		float:none;
 		margin:0 auto;
-		padding:80px 0 0;
+		padding:60px 0 0;
 		width:90%;
 	}
+  .pg-join-logo {
+    margin:0 auto 10px;
+    width:180px;
+    height:34.71px;
+    background-size:180px 34.71px;
+  }
 	.pg-join-text {
+    margin:0 auto 10px;
 		padding:0;
-		width:90%;
-		font-size:16px;
+    width:280px;
+		font-size:14px;
+    text-align:left;
 	}
-  .pg-join-btn  {
-    margin:20px auto;
-    width:282px;
+  .pg-join-btn {
+    margin:0 auto;
+    width:280px;
   }
 	#pg-joins .pg-new-middle {
 		max-height:100%;
 	}
 	.pg-new-slides {
-		margin:10px auto 0;
+		margin:20px auto 0;
 		padding:54px 10px 0 9px;
 		width:200px;
 		height:310px;
