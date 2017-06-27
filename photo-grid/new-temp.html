@@ -1,0 +1,293 @@
+    <!-- =========== New version development starts from here: =========== -->
+    <div class="bannerBG" id="bannerBG">
+      <img src="/images/pg/pg-new-billboard.jpg" alt="PhotoGrid - Create your photo stories" />
+    </div>
+
+    <div id="container-wrap">
+
+      <div class="section">
+
+        <div id="pg-v2-banner" class="content clearfix">
+          <div class="pg-new-logo flyTop clear">
+            <img src="/images/pg/pg-new-logo-pic.png" alt="PhotoGrid" />
+          </div>
+          <div class="pg-new-title-dl flyBottom clear">
+            <h1><?php echo $openTitle ?></h1>
+            <div class="pg-new-dl-btns clearfix">
+              <a class="pg-new-dlbtn googlePlay has-trans" href="https://play.google.com/store/apps/details?id=com.roidapp.photogrid" target="_blank" onclick="ga('send', 'event', 'V3.pg.download', 'click', 'google play',1);"><span>google play</span></a>
+              <a class="pg-new-dlbtn appStore has-trans" href="https://itunes.apple.com/app/photo-grid-collage-maker/id543577420?mt=8" target="_blank" onclick="ga('send', 'event', 'V3.pg.download', 'click', 'ios',1);"><span>app store</span></a>
+            </div>
+          </div>
+        </div><!-- #pg-v2-banner -->
+        
+        <div id="pg-community" class="pg-v2-page">
+          <div class="pg-new-middle">
+            <h3 class="aninode" data-animate="flyTop"><?php echo $secTitle ?></h3>
+            <p class="aninode" data-animate="flyTop"><?php echo $secSubtitle ?></p>
+            <ul class="community-list clear">
+              <li class="aninode" data-animate="flyLeft">
+                <a>
+                  <img src="/images/pg/pg-new-specgirl1.png" alt="" />
+                  <span><em><?php echo $secImgComment1 ?></em></span>
+                </a>
+                <s class="pg-new-donut has-trans">&nbsp;</s>
+              </li>
+              <li class="aninode" data-animate="flyRight">
+                <a>
+                  <img src="/images/pg/pg-new-specgirl2.png" alt="" />
+                  <span><em><?php echo $secImgComment2 ?></em></span>
+                </a>
+                <s class="pg-new-flags">&nbsp;</s>
+                <s class="pg-new-balloon">&nbsp;</s>
+              </li>
+            </ul>
+            <div class="aninode community-playvideo">
+              <a href="https://www.youtube.com/watch?v=y0cdDSVPqeI" class="pg-playvideo" target="_blank"><?php echo $secVideoDescr ?><i class="pg-playico">&nbsp;</i></a>
+            </div>
+          </div><!-- pg-new-middle -->
+        </div><!-- #pg-community -->
+
+
+        <div id="pg-popular-tools" class="pg-v2-page">
+          <div class="pg-tools" id="tools-switch">
+            <!-- Start a tool, Tool 1: -->
+            <div class="pg-one-tool pg-tool-1">
+              <img src="/images/pg/pg-new-layout-1.png" class="tool-pic tool-pic-rotate1" alt="PhotoGrid" />
+              <img src="/images/pg/pg-new-layout-2.png" class="tool-pic tool-pic-rotate2" alt="PhotoGrid" />
+              <img src="/images/pg/pg-new-layout-3.png" class="tool-pic tool-pic-rotate3" alt="PhotoGrid" />
+              <div class="tool-text tool-txt-1">
+                <h3 class="flyBottomFade"><?php echo $thrName1 ?></h3>
+                <h4 class="flyBottomFade"><?php echo $thrDesc1 ?></h4>
+                <p class="flyBottomFade"><?php echo $thrText1 ?></p>
+              </div>
+            </div><!-- pg-one-tool -->
+            <!-- End a tool, Tool 1. -->
+
+            <!-- Start a tool, Tool 2: -->
+            <div class="pg-one-tool pg-tool-2" style="display:none;">
+              <div class="tool-text tool-txt-2">
+                <h3 class="flyBottomFade"><?php echo $thrName2 ?></h3>
+                <h4 class="flyBottomFade"><?php echo $thrDesc2 ?></h4>
+                <p class="flyBottomFade"><?php echo $thrText2 ?></p>
+              </div>
+            </div><!-- pg-one-tool -->
+            <!-- End a tool, Tool 2. -->
+
+            <!-- Start a tool, Tool 3: -->
+            <div class="pg-one-tool pg-tool-3" style="display: none">
+              <div class="pg-tool-filter-box moveRight">
+                <div class="pg-tool-filter-mobbox">
+                  <img src="/images/pg/pg-new-tools-bg-3-filter.jpg" class="filter-pic moveLeft" alt="" />
+                </div>
+              </div><!-- filter box -->
+              <div class="tool-text tool-txt-3">
+                <h3 class="flyBottomFade"><?php echo $thrName3 ?></h3>
+                <h4 class="flyBottomFade"><?php echo $thrDesc3 ?></h4>
+                <p class="flyBottomFade"><?php echo $thrText3 ?></p>
+              </div>
+            </div><!-- pg-one-tool -->
+            <!-- End a tool, Tool 3. -->
+
+            <!-- Start a tool, Tool 4: -->
+            <div class="pg-one-tool pg-tool-4" style="display:none;">
+              <div class="tool-text tool-txt-4">
+                <h3 class="flyBottomFade"><?php echo $thrName4 ?></h3>
+                <h4 class="flyBottomFade"><?php echo $thrDesc4 ?></h4>
+                <p class="flyBottomFade"><?php echo $thrText4 ?></p>
+              </div>
+            </div><!-- pg-one-tool -->
+            <!-- End a tool, Tool 4. -->
+
+            <!-- Start a tool, Tool 5: -->
+            <div class="pg-one-tool pg-tool-5" style="display:none;">
+              <div class="tool-text tool-txt-5 specific">
+                <h3 class="flyBottomFade"><?php echo $thrName5 ?></h3>
+                <h4 class="flyBottomFade"><?php echo $thrDesc5 ?></h4>
+                <p class="flyBottomFade"><?php echo $thrText5 ?></p>
+              </div>
+            </div><!-- pg-one-tool -->
+            <!-- End a tool, Tool 5. -->
+
+            <!-- Start a tool, Tool 6: -->
+            <div class="pg-one-tool pg-tool-6" style="display:none;">
+              <img src="/images/pg/pg-new-riding.jpg" class="tool-pic riding-bike flyBottomFade" alt="PhotoGrid" />
+              <div class="tool-text tool-txt-6">
+                <h3 class="flyBottomFade"><?php echo $thrName6 ?></h3>
+                <h4 class="flyBottomFade"><?php echo $thrDesc6 ?></h4>
+                <p class="flyBottomFade"><?php echo $thrText6 ?></p>
+              </div>
+            </div><!-- pg-one-tool -->
+            <!-- End a tool, Tool 6. -->
+
+          </div><!-- #tools-switch -->
+          <ul class="pg-tools-navbtns clearfix" id="tools-switch-nav">
+            <li class="active">
+              <span>&nbsp;</span>
+              <s class="switch-icon-1">&nbsp;</s>
+              <strong class="switch-icon-1"><?php echo $thrName1 ?></strong>
+            </li>
+            <li>
+              <span>&nbsp;</span>
+              <s class="switch-icon-2">&nbsp;</s>
+              <strong class="switch-icon-2"><?php echo $thrName2 ?></strong>
+            </li>
+            <li>
+              <span>&nbsp;</span>
+              <s class="switch-icon-3">&nbsp;</s>
+              <strong class="switch-icon-3"><?php echo $thrName3 ?></strong>
+            </li>
+            <li>
+              <span>&nbsp;</span>
+              <s class="switch-icon-4">&nbsp;</s>
+              <strong class="switch-icon-4"><?php echo $thrName4 ?></strong>
+            </li>
+            <li>
+              <span>&nbsp;</span>
+              <s class="switch-icon-5">&nbsp;</s>
+              <strong class="switch-icon-5"><?php echo $thrName5 ?></strong>
+            </li>
+            <li>
+              <span>&nbsp;</span>
+              <s class="switch-icon-6">&nbsp;</s>
+              <strong class="switch-icon-6"><?php echo $thrName6 ?></strong>
+            </li>
+          </ul>
+          <h2 class="pg-tools-logo aninode" data-animate="flyLeft">Popular tools</h2>
+        </div><!-- #pg-popular-tools -->
+
+
+
+        <div id="pg-features" class="pg-v2-page">
+          <div class="pg-new-middle">
+            <h3 class="aninode flyTop" data-animate="flyTop"><?php echo $fthTitle ?></h3>
+            <p class="aninode flyTop" data-animate="flyTop"><?php echo $fthDescr ?></p>
+            <ul class="pg-flist clear aninode" data-animate="flyBottom">
+              <li>
+                <div class="pg-ficon"><span>&nbsp;</span><strong class="ficon-1">&nbsp;</strong></div>
+                <strong class="pg-ftitle"><?php echo $fthIcon1 ?></strong>
+                <span class="pg-fdesc"><?php echo $fthText1 ?></span>
+              </li>
+              <li>
+                <div class="pg-ficon"><span>&nbsp;</span><strong class="ficon-2">&nbsp;</strong></div>
+                <strong class="pg-ftitle"><?php echo $fthIcon2 ?></strong>
+                <span class="pg-fdesc"><?php echo $fthText2 ?></span>
+              </li>
+              <li>
+                <div class="pg-ficon"><span>&nbsp;</span><strong class="ficon-3">&nbsp;</strong></div>
+                <strong class="pg-ftitle"><?php echo $fthIcon3 ?></strong>
+                <span class="pg-fdesc"><?php echo $fthText3 ?></span>
+              </li>
+              <li>
+                <div class="pg-ficon"><span>&nbsp;</span><strong class="ficon-4">&nbsp;</strong></div>
+                <strong class="pg-ftitle"><?php echo $fthIcon4 ?></strong>
+                <span class="pg-fdesc"><?php echo $fthText4 ?></span>
+              </li>
+              <li>
+                <div class="pg-ficon"><span>&nbsp;</span><strong class="ficon-5">&nbsp;</strong></div>
+                <strong class="pg-ftitle"><?php echo $fthIcon5 ?></strong>
+                <span class="pg-fdesc"><?php echo $fthText5 ?></span>
+              </li>
+              <li>
+                <div class="pg-ficon"><span>&nbsp;</span><strong class="ficon-6">&nbsp;</strong></div>
+                <strong class="pg-ftitle"><?php echo $fthIcon6 ?></strong>
+                <span class="pg-fdesc"><?php echo $fthText6 ?></span>
+              </li>
+              <li>
+                <div class="pg-ficon"><span>&nbsp;</span><strong class="ficon-7">&nbsp;</strong></div>
+                <strong class="pg-ftitle"><?php echo $fthIcon7 ?></strong>
+                <span class="pg-fdesc"><?php echo $fthText7 ?></span>
+              </li>
+              <li>
+                <div class="pg-ficon"><span>&nbsp;</span><strong class="ficon-8">&nbsp;</strong></div>
+                <strong class="pg-ftitle"><?php echo $fthIcon8 ?></strong>
+                <span class="pg-fdesc"><?php echo $fthText8 ?></span>
+              </li>
+            </ul>
+          </div><!-- .pg-new-middle -->
+        </div><!-- #pg-features -->
+        
+        
+        
+        <div id="pg-creative" class="pg-v2-page">
+          <div class="pg-new-middle">
+            <div class="creative-title aninode" data-animate="flyTop">
+              <h3><?php echo $fifTitle ?></h3>
+              <p><?php echo $fifSubtitle ?></p>
+            </div>
+            <div class="pg-cbox">
+              <div class="pg-imgwrap">
+                <img src="/images/pg/pg-new-blank-circle.png" class="pg-cbg" alt="" />
+                <img src="/images/pg/pg-new-community-people.png" class="pg-cimg aninode" data-animate="scaleIn" alt="" />
+              </div>
+              <ul class="pg-clist clearfix">
+                <li>
+                  <div class="pg-cicon pg-cicon1 aninode" data-animate="scaleIn"><span>&nbsp;</span></div>
+                  <div class="pg-citem pg-citem1 aninode" data-animate="flyLeft">
+                    <h4><?php echo $fifItem1 ?></h4>
+                    <p><?php echo $fifText1 ?></p>
+                  </div>
+                </li>
+                <li>
+                  <div class="pg-cicon pg-cicon2 aninode" data-animate="scaleIn"><span>&nbsp;</span></div>
+                  <div class="pg-citem pg-citem2 aninode" data-animate="flyRight">
+                    <h4><?php echo $fifItem2 ?></h4>
+                    <p><?php echo $fifText2 ?></p>
+                  </div>
+                </li>
+                <li>
+                  <div class="pg-cicon pg-cicon3 aninode" data-animate="scaleIn"><span>&nbsp;</span></div>
+                  <div class="pg-citem pg-citem3 aninode" data-animate="flyLeft">
+                    <h4><?php echo $fifItem3 ?></h4>
+                    <p><?php echo $fifText3 ?></p>
+                  </div>
+                </li>
+                <li>
+                  <div class="pg-cicon pg-cicon4 aninode" data-animate="scaleIn"><span>&nbsp;</span></div>
+                  <div class="pg-citem pg-citem4 aninode" data-animate="flyRight">
+                    <h4><?php echo $fifItem4 ?></h4>
+                    <p><?php echo $fifText4 ?></p>
+                  </div>
+                </li>
+              </ul>
+            </div><!-- .pg-cbox -->
+          </div><!-- .pg-new-middle -->
+        </div><!-- #pg-creative -->
+
+
+
+        <div id="pg-joins" class="pg-v2-page clear">
+          <div class="pg-new-middle clearfix">
+
+            <div class="pg-join-info aninode" data-animate="flyRight">
+              <div class="pg-join-logo">PhotoGrid</div>
+              <div class="pg-join-text"><?php echo $sixSubtitle ?></div>
+              <div class="pg-join-btn clear">
+                <a href="https://play.google.com/store/apps/details?id=com.roidapp.photogrid" class="pg-new-dlbtn googlePlay has-trans" target="_blank" onclick="ga('send', 'event', 'V3.pg.download', 'click', 'google play',1);"><span>google play</span></a>
+                <a href="https://itunes.apple.com/app/photo-grid-collage-maker/id543577420?mt=8" class="pg-new-dlbtn appStore has-trans" target="_blank" onclick="ga('send', 'event', 'V3.pg.download', 'click', 'ios',1);"><span>app store</span></a>
+              </div>
+            </div><!-- .pg-join-info -->
+
+            <div class="pg-new-slides aninode" data-animate="flyLeft">
+              <div id="pg-v2-slide">
+                <img src="/images/pg/pg-new-last-slider-1.jpg" alt="PhotoGrid" />
+                <img src="/images/pg/pg-new-last-slider-2.jpg" alt="PhotoGrid" />
+                <img src="/images/pg/pg-new-last-slider-3.jpg" alt="PhotoGrid" />
+                <img src="/images/pg/pg-new-last-slider-4.jpg" alt="PhotoGrid" />
+                <img src="/images/pg/pg-new-last-slider-5.jpg" alt="PhotoGrid" />
+                <img src="/images/pg/pg-new-last-slider-6.jpg" alt="PhotoGrid" />
+              </div>
+              <img class="pg-new-slidelogo" width="108" src="/images/pg/pg-new-logo-pic.png" alt="PhotoGrid" />
+            </div><!-- .pg-new-slides -->
+          </div><!-- .pg-new-middle -->
+        </div><!-- #pg-joins -->
+
+      </div><!-- .section -->
+    </div><!-- #container-wrap -->
+
+
+    <div class="pg-v2-sharebox">
+      <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.cmcm.com%2Fen-us%2Fphoto-grid%2F%3Ff%3Dfacebook" class="pg-v2-fb" target="_blank"><span class="has-trans">facebook</span></a>
+      <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.cmcm.com%2Fen-us%2Fphoto-grid%2F%3Ff%3Dgoogle%2B&amp;hl=en" class="pg-v2-gp" target="_blank"><span class="has-trans">google＋</span></a>
+    </div><!-- .pg-v2-sharebox -->
+    <!-- =========== New version development stops in here! =========== -->
+

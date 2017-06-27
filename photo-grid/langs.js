@@ -1,112 +1,102 @@
 /*
   Multiple languages for PhotoGrid
   Starts from en-us
-  Latest modified: 2017-06-21 12:59
+  Latest modified: 2017-06-26 11:15
 */
-
 /* ===== en-us ===== */
 /* 第1屏: */
-var openTitle = "PhotoGrid: The Best Collage Maker &amp; Photo Sharing Tool";
+var openTitle = "";
 
 /* 第2屏: */
-var secTitle = "Spectacular Photo Editing Artifacts";
-var secSubtitle = "PhotoGrid is not only the most Popular photo collage maker, but also a Creative community. Explore PhotoGrid community and enjoy photo-editing Fun right now.";
-var secImgComment1 = "PhotoGrid is the best Collage Maker.";
-var secImgComment2 = "PhotoGrid is a Creative Community.";
-var secVideoDescr = "Video introduction";
+var secTitle = "";
+var secSubtitle = "";
+var secImgComment1 = "";
+var secImgComment2 = "";
+var secVideoDescr = "";
 
 /* 第3屏: */
-var thrName1 = "Layout";
-var thrDesc1 = "300+ Layouts &amp; Daily Templates";
-var thrText1 = "The best and easiest way to make collages with PhotoGrid - make your pics colorful in moments.";
+var thrName1 = "";
+var thrDesc1 = "";
+var thrText1 = "";
 
-var thrName2 = "Wow! Filter";
-var thrDesc2 = "60+ Animated Filter Effects";
-var thrText2 = "Special effects camera for selfies or video recording. Make ordinary photos look fantastic with 60+ animated filter effects!";
+var thrName2 = "";
+var thrDesc2 = "";
+var thrText2 = "";
 
-var thrName3 = "Filter";
-var thrDesc3 = "50+ Beautiful Filters";
-var thrText3 = "Add one of over 50 filter effects to enhance the mood, including selfie, vintage,scenery, halo, black and white, festival and more.";
+var thrName3 = "";
+var thrDesc3 = "";
+var thrText3 = "";
 
-var thrName4 = "Sticker";
-var thrDesc4 = "500+ Cute Sticker";
-var thrText4 = "Personalize your photo collage with 500+ stickers and cute emoji";
+var thrName4 = "";
+var thrDesc4 = "";
+var thrText4 = "";
 
-var thrName5 = "Text";
-var thrDesc5 = "Stylish Fonts &amp; Colors";
-var thrText5 = "Supports various types of font styles and colors. Write some words, let the photo tell your story.";
+var thrName5 = "";
+var thrDesc5 = "";
+var thrText5 = "";
 
-var thrName6 = "Crop &amp; Resize";
-var thrDesc6 = "Horizontal &amp; Vertical Cropping";
-var thrText6 = "Supports horizontal and vertical cropping &amp; resizing. Crop &amp; Resize your images in different aspect ratio.";
-
+var thrName6 = "";
+var thrDesc6 = "";
+var thrText6 = "";
 
 /* 第4屏: */
-var fthTitle = "Unique Features";
-var fthDescr = "Create wonderful effects with any combination of stunning photographs by using PhotoGrid's easy to follow steps. Completely free!";
+var fthTitle = "";
+var fthDescr = "";
 
-var fthIcon1 = "Grid";
-var fthText1 = "Turn pics to a wonderful collage with multitudinous layouts.";
+var fthIcon1 = "";
+var fthText1 = "";
 
-var fthIcon2 = "Editor";
-var fthText2 = "Stylize your shots with perfectly categorized filter effects.";
+var fthIcon2 = "";
+var fthText2 = "";
 
-var fthIcon3 = "Venus Filter";
-var fthText3 = "Enjoy selfie with filter Camera. Support Retouch feature.";
+var fthIcon3 = "";
+var fthText3 = "";
 
-var fthIcon4 = "Twinkle";
-var fthText4 = "Turn your photos into stunning video stories.";
+var fthIcon4 = "";
+var fthText4 = "";
 
-var fthIcon5 = "Scrapbook";
-var fthText5 = "Pin treasured moments to your personal board.";
+var fthIcon5 = "";
+var fthText5 = "";
 
-var fthIcon6 = "Slide Show";
-var fthText6 = "Turn your photos into stunning video stories.";
+var fthIcon6 = "";
+var fthText6 = "";
 
-var fthIcon7 = "Filmstrip";
-var fthText7 = "Tell a story via a long picture, combining multiple photos.";
+var fthIcon7 = "";
+var fthText7 = "";
 
-var fthIcon8 = "Poster";
-var fthText8 = "Style your images just like magazine covers. Daily update.";
-
+var fthIcon8 = "";
+var fthText8 = "";
 
 /* 第5屏: */
-var fifTitle = "Creative Community";
-var fifSubtitle = "Create, Share And Discover Something Fun On PhotoGrid.";
+var fifTitle = "";
+var fifSubtitle = "";
 
-var fifItem1 = "Share";
-var fifText1 = "Join PhotoGrid Community to share the wonderful moments.";
+var fifItem1 = "";
+var fifText1 = "";
 
-var fifItem2 = "Interact";
-var fifText2 = "Engage with friends and users around the world by tracking, comments and likes.";
+var fifItem2 = "";
+var fifText2 = "";
 
-var fifItem3 = "Explore";
-var fifText3 = "Explore celebrity fashion, travel, food and other popular works.";
+var fifItem3 = "";
+var fifText3 = "";
 
-var fifItem4 = "Activities";
-var fifText4 = "Get featured and become famous.";
-
+var fifItem4 = "";
+var fifText4 = "";
 
 /* 第6屏: */
-var sixSubtitle = "Download the most magical photo-editor, Create your PhotoGrid photo in just one tap!";
-
-
+var sixSubtitle = "";
 
 
 /* ===== es-es ===== */
 
 
-
 /* ===== fr-fr ===== */
-
 
 
 /* ===== ru-ru ===== */
 
 
-
 /* ===== pt-pt ===== */
-
 
 
 /* ===== ko-kr ===== */
@@ -118,7 +108,7 @@ var openTitle = "PhotoGrid: The Best Collage Maker &amp; Photo Sharing Tool";
 
 /* 第2屏: */
 var secTitle = "強大的相片編輯神器";
-var secSubtitle = "PhotoGrid是時下最熱門的相片編輯神器，不僅能拼貼、美化照片，還能用豐富的動態濾鏡讓自拍更可愛！即刻探索PhotoGrid，享受相片編輯的創作樂趣！";
+var secSubtitle = "PhotoGrid是時下最熱門的相片編輯神器，不僅能拼貼、美化照片，還能用豐富的動態濾鏡讓自拍更可愛！<br />即刻探索PhotoGrid，享受相片編輯的創作樂趣！";
 var secImgComment1 = "PhotoGrid is the best Collage Maker.";
 var secImgComment2 = "PhotoGrid is a Creative Community.";
 var secVideoDescr = "影片簡介";
@@ -162,20 +152,21 @@ var fthText2 = "豐富工具盡收眼底，讓你的照片完美有個性";
 var fthIcon3 = "女神濾鏡";
 var fthText3 = "拍下正臉照就能變身夢幻女神，多種華麗造型讓你迷倒眾人";
 
-var fthIcon4 = "幻燈片";
-var fthText4 = "把照片變成電影，強力支援50張照片剪輯，影像可自由排序，更能加入喜愛的音樂";
+var fthIcon4 = "Twinkle";
+var fthText4 = "讓你的照片變成名畫，而且可以動起來";
 
 var fthIcon5 = "剪貼簿";
 var fthText5 = "製作專屬於你的拼貼畫，隨心所欲調整大小及位置。你，就是最有品味的排版設計師";
 
-var fthIcon6 = "海報";
-var fthText6 = "海量模板任你挑，宛如口袋中的Photoshop，搖身一變大藝術家";
+var fthIcon6 = "幻燈片";
+var fthText6 = "把照片變成電影，強力支援50張照片剪輯，影像可自由排序，更能加入喜愛的音樂";
 
 var fthIcon7 = "長條圖";
 var fthText7 = "用拼接而成的長條圖，說段你所喜歡的故事";
 
-var fthIcon8 = "Twinkle";
-var fthText8 = "讓你的照片變成名畫，而且可以動起來";
+var fthIcon8 = "海報";
+var fthText8 = "海量模板任你挑，宛如口袋中的Photoshop，搖身一變大藝術家";
+
 
 
 /* 第5屏: */
@@ -200,9 +191,86 @@ var sixSubtitle = "立刻下載PhotoGrid照片編輯神器，創作、搞怪、�
 
 
 
-
-
-
-
-
 /* ===== zh-cn ===== */
+/* 第1屏: */
+var openTitle = "PhotoGrid: The Best Collage Maker &amp; Photo Sharing Tool";
+
+/* 第2屏: */
+var secTitle = "强大的相片编辑神器";
+var secSubtitle = "PhotoGrid是时下最热门的相片编辑神器，不仅能拼贴、美化照片，还能用丰富的动态滤镜让自拍更可爱！<br />即刻探索PhotoGrid，享受相片编辑的创作乐趣！";
+var secImgComment1 = "PhotoGrid is the best Collage Maker.";
+var secImgComment2 = "PhotoGrid is a Creative Community.";
+var secVideoDescr = "视频简介";
+
+/* 第3屏: */
+var thrName1 = "拼贴";
+var thrDesc1 = "超过300种的拼图模板";
+var thrText1 = "强力支援15张图片同时拼接，满足所有拼接需求，秀出你创作的无限可能。简单易用，让相片活出精彩！";
+
+var thrName2 = "趣味相机";
+var thrDesc2 = "超过60种趣味动态滤镜";
+var thrText2 = "透过萌萌哒动态滤镜，即可轻松拍出亮眼的作品，自拍录影动静皆宜，还能找多位朋友一起玩！";
+
+var thrName3 = "滤镜";
+var thrDesc3 = "超过50款精美滤镜";
+var thrText3 = "超过50款精美滤镜，包括美颜、复古、风景、光晕、黑白及各种节日效果";
+
+var thrName4 = "贴纸";
+var thrDesc4 = "超过500种个性化贴纸";
+var thrText4 = "超过500种个性化贴纸，也可自行将照片剪成贴纸，让你的作品充满感情并且萌感倍增";
+
+var thrName5 = "文字";
+var thrDesc5 = "多种字体颜色任你选";
+var thrText5 = "支援多种字体、颜色，更可加入背景，让你轻松用照片说故事";
+
+var thrName6 = "裁剪";
+var thrDesc6 = "直的横的都能裁";
+var thrText6 = "支援纵向及横向裁剪调整，不论1:1、3:4、5:7、2:3、3:5、9:16都能裁，就是如此随心所欲";
+
+/* 第4屏: */
+var fthTitle = "独一无二的强大功能";
+var fthDescr = "简单步骤即可制出令人惊叹的照片，而且完全免费";
+
+var fthIcon1 = "拼贴";
+var fthText1 = "不同拼接张数创造不同惊喜，甚至可自行设定拼接模样";
+
+var fthIcon2 = "美化";
+var fthText2 = "丰富工具尽收眼底，让你的照片完美有个性";
+
+var fthIcon3 = "女神滤镜";
+var fthText3 = "拍下正脸照就能变身梦幻女神，多种华丽造型让你迷倒众人";
+
+var fthIcon4 = "Twinkle";
+var fthText4 = "让你的照片变成名画，而且可以动起来";
+
+var fthIcon5 = "剪贴簿";
+var fthText5 = "制作专属于你的拼贴画，随心所欲调整大小及位置。你，就是最有品味的排版设计师！";
+
+var fthIcon6 = "幻灯片";
+var fthText6 = "把照片变成电影，强力支援50张照片剪辑，影像可自由排序，更能加入喜爱的音乐";
+
+var fthIcon7 = "长条图";
+var fthText7 = "用拼接而成的长条图，说段你所喜欢的故事";
+
+var fthIcon8 = "海报";
+var fthText8 = "海量模板任你挑，宛如口袋中的Photoshop，摇身一变大艺术家";
+
+/* 第5屏: */
+var fifTitle = "创意相片分享社群";
+var fifSubtitle = "精心制作的照片，除了上传至你喜爱的社群平台及通讯软体，更能分享至PhotoGrid专属的社群平台，让你的创作被全世界看见！";
+
+var fifItem1 = "分享";
+var fifText1 = "加入PhotoGrid相片分享社群，分享你最独一无二的感动及创意";
+
+var fifItem2 = "互动";
+var fifText2 = "透过追踪、留言、按爱心，与朋友及全球用户互动";
+
+var fifItem3 = "探索";
+var fifText3 = "探索名人时尚、旅游美食等各类热门作品";
+
+var fifItem4 = "每周挑战";
+var fifText4 = "每周推出「每周挑战」，你会发现当网红竟然如此简单容易";
+
+/* 第6屏: */
+var sixSubtitle = "立刻下载PhotoGird照片编辑神器<br />创作、搞怪、变美一指搞定！";
+
