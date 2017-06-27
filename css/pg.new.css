@@ -1,7 +1,7 @@
 /*
   CSS for PhotoGrid new look ONLY!!
   Devided from v4.main.css
-  Latest modified: 2017-06-21 18:51
+  Latest modified: 2017-06-27 14:57
 */
 
 .clearfix:after {
@@ -1118,6 +1118,11 @@ body.bodyPG-new {
 		width:25%;
     height:245px;
 	}
+	.pg-ftitle {
+		font-size:22px;
+    line-height:1.2em;
+    color:#387afb;
+	}
   #pg-creative {
     height:600px;
   }
@@ -1185,8 +1190,8 @@ body.bodyPG-new {
 
 /* ===== 小屏 ===== */
 @media (max-width:540px) {
-	.mobileModel #container-wrap,
-  .mobileModel #container-wrap .section {
+	#container-wrap,
+  #container-wrap .section {
 		position:absolute;
 		top:0;
 		left:0;
@@ -1194,8 +1199,11 @@ body.bodyPG-new {
 		height:100%;
 		padding-bottom:0;
 	}
-  .bodyPG-new .mobileModel #pg-v2-banner {
+  .mobileModel #pg-v2-banner {
     padding:0px;
+  }
+  #pg-v2-banner {
+    padding:30px 20px 380px;
     background:url(../images/pg/pg-new-mobile-banner-640.jpg) no-repeat center;
     background-size:cover;
   }
