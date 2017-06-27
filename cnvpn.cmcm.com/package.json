@@ -1,37 +1,36 @@
 {
-  "name": "CNVPN.CMCM.COM",
+  "name": "cnvpn",
   "version": "1.0.0",
-  "author": "liyang <liyang5@cmcm.com>",
-  "minify": true,
-  "changed": true,
-  "minijs": {
-    "common.min": [
-      "js/lib/common.js"
-    ]
+  "description": "VPN for CMCM",
+  "main": "index.js",
+  "scripts": {
+    "start": "rm -rf dist/ && webpack --config webpack.config.js",
+    "clean": "rm -rf dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "gulp": "*",
-    "gulp-concat": "*",
-    "gulp-uglify": "*",
-    "del": "*",
-    "gulp-jshint": "*",
-    "gulp-csslint": "*",
-    "gulp-less": "*",
-    "gulp-autoprefixer": "*",
-    "gulp-minify-css": "*",
-    "gulp-csscomb": "*",
-    "gulp-cssbeautify": "*",
-    "gulp-util": "*",
-    "gulp-rename": "*",
-    "gulp-changed": "*",
-    "gulp-header": "*",
-    "gulp-livereload": "*",
-    "jshint-stylish": "*",
-    "gulp-watch": "*",
-    "gulp-imgcache": "*",
-    "gulp-imagemin": "*",
-    "imagemin-pngquant": "*",
-    "gulp-plumber": "*",
-    "gulp.spritesmith": "*"
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "cmcm",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "copy-webpack-plugin": "latest",
+    "css-loader": "latest",
+    "less-loader": "latest",
+    "less": "latest",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "latest",
+    "html-webpack-plugin": "latest",
+    "image-webpack-loader": "latest",
+    "style-loader": "latest",
+    "url-loader": "latest",
+    "webpack": "^2.2.0",
+    "webpack-uglify-js-plugin": "latest"
   }
 }
