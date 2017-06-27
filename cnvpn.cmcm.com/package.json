@@ -1,0 +1,37 @@
+{
+  "name": "CNVPN.CMCM.COM",
+  "version": "1.0.0",
+  "author": "liyang <liyang5@cmcm.com>",
+  "minify": true,
+  "changed": true,
+  "minijs": {
+    "common.min": [
+      "js/lib/common.js"
+    ]
+  },
+  "dependencies": {
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-uglify": "*",
+    "del": "*",
+    "gulp-jshint": "*",
+    "gulp-csslint": "*",
+    "gulp-less": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-minify-css": "*",
+    "gulp-csscomb": "*",
+    "gulp-cssbeautify": "*",
+    "gulp-util": "*",
+    "gulp-rename": "*",
+    "gulp-changed": "*",
+    "gulp-header": "*",
+    "gulp-livereload": "*",
+    "jshint-stylish": "*",
+    "gulp-watch": "*",
+    "gulp-imgcache": "*",
+    "gulp-imagemin": "*",
+    "imagemin-pngquant": "*",
+    "gulp-plumber": "*",
+    "gulp.spritesmith": "*"
+  }
+}
