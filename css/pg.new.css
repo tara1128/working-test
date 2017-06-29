@@ -1,7 +1,7 @@
 /*
   CSS for PhotoGrid new look ONLY!!
   Devided from v4.main.css
-  Latest modified: 2017-06-27 14:57
+  Latest modified: 2017-06-29 12:13
 */
 
 .clearfix:after {
@@ -1630,3 +1630,17 @@ body.bodyPG-new {
 		display:none;
 	}
 }
+
+
+/* ===== 非常小屏，like iPhone5(320), iPhone6(375) ===== */
+@media (max-width:376px) {
+	.pg-new-slides,
+  #pg-v2-slide {
+		width:136px;
+		height:210.8px;
+	}
+  .pg-new-slidelogo {
+    bottom:20px;
+  }
+}
+
