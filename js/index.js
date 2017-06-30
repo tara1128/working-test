@@ -1,6 +1,6 @@
 /*
   index.js, trying ES6
-  Latest modified: 2017-06-02 16:19
+  Latest modified: 2017-06-30 17:32
 */
 
 class IndexLogin extends React.Component {
@@ -242,44 +242,14 @@ class Popup extends React.Component {
 
 var cateList = [
   {
-    projectName: 'PMP Techniques',
-    linkTo: 'pmp/',
-    latestModified: '2017-05-27 18:07'
-  },
-  {
-    projectName: 'Security Master',
-    linkTo: 'cms/?v=001',
-    latestModified: '2017-05-22 15:54'
-  },
-  {
-    projectName: 'CleanMaster for CN',
-    linkTo: 'cleanmaster/',
-    latestModified: '2017-05-22 15:54'
+    projectName: 'Cheetah Ads Platform',
+    linkTo: 'ads/index.html',
+    latestModified: '2017-06-30 17:33'
   },
   {
     projectName: 'Cheetah for Publishers',
     linkTo: 'publishers/',
     latestModified: '2017-02-24 19:20'
-  },
-  {
-    projectName: 'Cheetah Ads Platform',
-    linkTo: 'ads/index.html',
-    latestModified: '2017-06-02 16:20'
-  },
-  {
-    projectName: 'cmcm.com/en-us',
-    linkTo: 'en-us/',
-    latestModified: '2017-03-06 16:42'
-  },
-  {
-    projectName: 'cn.cmcm.com',
-    linkTo: 'cn.cmcm/',
-    latestModified: '2017-03-06 16:43'
-  },
-  {
-    projectName: 'blog.cmcm.com',
-    linkTo: 'blog.cmcm/',
-    latestModified: '2017-03-07 12:01'
   },
   {
     projectName: 'WhatsCall',
@@ -295,16 +265,6 @@ var cateList = [
     projectName: 'Piano Tiles 2',
     linkTo: 'piano-tiles/',
     latestModified: '2016-10-28 15:13'
-  },
-  {
-    projectName: 'Test i18n en-us/cms',
-    linkTo: 'i18n/www.cmcm.com/en-us/cms',
-    latestModified: '2016-11-06 00:55'
-  },
-  {
-    projectName: 'React Isomorphic',
-    linkTo: 'try-isomorphic/',
-    latestModified: '2016-11-09 14:53'
   }
 ];
 
