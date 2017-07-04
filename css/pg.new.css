@@ -1,7 +1,7 @@
 /*
   CSS for PhotoGrid new look ONLY!!
   Devided from v4.main.css
-  Latest modified: 2017-06-29 12:13
+  Latest modified: 2017-07-04 11:57
 */
 
 .clearfix:after {
@@ -141,6 +141,8 @@ body.bodyPG-new {
 	line-height:1.56;
 }
 #pg-community p {
+  margin:0 auto;
+  width:620px;
 	font-size:16px;
 	line-height:1.33;
 	color:#767676;
@@ -665,6 +667,7 @@ body.bodyPG-new {
 	float:left;
 	margin:50px 7px 0;
 	width:226px;
+  height:230px;
 	text-align:center;
 }
 .pg-ficon,
