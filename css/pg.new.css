@@ -1,7 +1,7 @@
 /*
   CSS for PhotoGrid new look ONLY!!
   Devided from v4.main.css
-  Latest modified: 2017-07-04 15:52
+  Latest modified: 2017-07-04 19:33
 */
 
 .clearfix:after {
@@ -303,11 +303,6 @@ body.bodyPG-new {
 
 
 /* ========== Third screen of 6 Popular Tools ========== */
-#pg-popular-tools {
-	position:relative;
-  height:900px;
-  overflow:hidden;
-}
 .tool-bg {
 	width:100%;
 	vertical-align:top;
@@ -327,10 +322,13 @@ body.bodyPG-new {
 	left:0;
 	width:100%;
 	height:100%;
+  /*
   background-repeat:no-repeat;
   background-size:cover;
   background-position:50% 50%;
+  */
 }
+/*
 .pg-one-tool.pg-tool-1 {
   background-image:url(../images/pg/pg-new-tools-bg-1.jpg);
 }
@@ -339,6 +337,7 @@ body.bodyPG-new {
 }
 .pg-one-tool.pg-tool-3 {
   background-image:url(../images/pg/pg-new-tools-bg-3.jpg);
+  background-position:0 0;
 }
 .pg-one-tool.pg-tool-4 {
   background-image:url(../images/pg/pg-new-tools-bg-4.jpg);
@@ -349,6 +348,12 @@ body.bodyPG-new {
 .pg-one-tool.pg-tool-6 {
   background-image:url(../images/pg/pg-new-tools-bg-6.jpg);
 }
+*/
+.pg-tool-bg-pic {
+  position:absolute;
+  width:100%;
+}
+
 
 .pg-tool-filter-box {
 	position:absolute;
@@ -809,6 +814,8 @@ body.bodyPG-new {
 	text-align:center;
 }
 .creative-title p {
+  margin:0px auto;
+  width:620px;
 	font-size:16px;
 	line-height:1.3em;
 	text-align:center;
@@ -1384,16 +1391,34 @@ body.bodyPG-new {
   .pg-tool-3 img.filter-pic {
     display:none;
   }
+
+  .pg-one-tool {
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:50% 50%;
+  }
+  .pg-one-tool.pg-tool-1 {
+    background-image:url(../images/pg/pg-new-tools-bg-1.jpg);
+  }
   .pg-one-tool.pg-tool-2 {
-    /* background-image:url(../images/pg/pg-new-tools-bg-2.jpg); */
+    background-image:url(../images/pg/pg-new-tools-bg-2.jpg);
     background-position:58% 50%;
   }
+  .pg-one-tool.pg-tool-3 {
+    background-image:url(../images/pg/pg-new-tools-bg-3.jpg);
+  }
   .pg-one-tool.pg-tool-4 {
-    /* background-image:url(../images/pg/pg-new-tools-bg-4.jpg); */
+    background-image:url(../images/pg/pg-new-tools-bg-4.jpg);
     background-position:35% 50%;
   }
   .pg-one-tool.pg-tool-5 {
     background-image:url(../images/pg/pg-new-tools-bg-5-mobile.jpg);
+  }
+  .pg-one-tool.pg-tool-6 {
+    background-image:url(../images/pg/pg-new-tools-bg-6.jpg);
+  }
+  .pg-tool-bg-pic, .tool-bg {
+    display:none!important;
   }
 
 	.pg-tools-navbtns li {
