@@ -1,7 +1,7 @@
 /*
   CSS for PhotoGrid new look ONLY!!
   Devided from v4.main.css
-  Latest modified: 2017-07-04 19:33
+  Latest modified: 2017-07-05 17:16
 */
 
 .clearfix:after {
@@ -57,6 +57,7 @@ body.bodyPG-new {
 }
 .bodyPG-new #footer-wrap {
 	background:#fff;
+  z-index:1000;
 }
 .bodyPG-new #menus a:hover {
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0, 0, 0, .2)), to(rgba(0, 0, 0, 0)));
@@ -567,10 +568,10 @@ body.bodyPG-new {
 .pg-tools-navbtns li s,
 .pg-tools-navbtns li strong {
   background-repeat:no-repeat;
-  background-image:url(../images/pg/pg-new-icons-1x.png);
+  background-image:url(../images/pg/icon-0-0.png);
   background-image:-webkit-image-set(
-    url(../images/pg/pg-new-icons-1x.png) 1x,
-    url(../images/pg/pg-new-icons-2x.png) 2x
+    url(../images/pg/icon-0-0.png) 1x,
+    url(../images/pg/icon-0-0-2x.png) 2x
   )
 }
 .pg-tools-navbtns li {
@@ -610,7 +611,12 @@ body.bodyPG-new {
 	opacity:0;
 }
 .pg-tools-navbtns li span {
-	background-position:-80px 0;
+	/* background-position:-80px 0; */
+  background-image:url(../images/pg/icon-fill-bg.png);
+  background-image:-webkit-image-set(
+    url(../images/pg/icon-fill-bg.png) 1x,
+    url(../images/pg/icon-fill-bg-2x.png) 2x
+  )
 }
 .pg-tools-navbtns .active s,
 .pg-tools-navbtns .active span {
@@ -627,22 +633,52 @@ body.bodyPG-new {
 }
 
 .pg-tools-navbtns li .switch-icon-1 {
-	background-position:0 -80px;
+	/* background-position:0 -80px; */
+  background-image:url(../images/pg/icon-1.png);
+  background-image:-webkit-image-set(
+    url(../images/pg/icon-1.png) 1x,
+    url(../images/pg/icon-1-2x.png) 2x
+  )
 }
 .pg-tools-navbtns li .switch-icon-2 {
-	background-position:-80px -80px;
+	/* background-position:-80px -80px; */
+  background-image:url(../images/pg/icon-2.png);
+  background-image:-webkit-image-set(
+    url(../images/pg/icon-2.png) 1x,
+    url(../images/pg/icon-2-2x.png) 2x
+  )
 }
 .pg-tools-navbtns li .switch-icon-3 {
-	background-position:-160px -80px;
+	/* background-position:-160px -80px; */
+  background-image:url(../images/pg/icon-3.png);
+  background-image:-webkit-image-set(
+    url(../images/pg/icon-3.png) 1x,
+    url(../images/pg/icon-3-2x.png) 2x
+  )
 }
 .pg-tools-navbtns li .switch-icon-4 {
-	background-position:-240px -80px;
+	/* background-position:-240px -80px; */
+  background-image:url(../images/pg/icon-4.png);
+  background-image:-webkit-image-set(
+    url(../images/pg/icon-4.png) 1x,
+    url(../images/pg/icon-4-2x.png) 2x
+  )
 }
 .pg-tools-navbtns li .switch-icon-5 {
-	background-position:-160px 0;
+	/* background-position:-160px 0; */
+  background-image:url(../images/pg/icon-5.png);
+  background-image:-webkit-image-set(
+    url(../images/pg/icon-5.png) 1x,
+    url(../images/pg/icon-5-2x.png) 2x
+  )
 }
 .pg-tools-navbtns li .switch-icon-6 {
-	background-position:0 -240px;
+	/* background-position:0 -240px; */
+  background-image:url(../images/pg/icon-6.png);
+  background-image:-webkit-image-set(
+    url(../images/pg/icon-6.png) 1x,
+    url(../images/pg/icon-6-2x.png) 2x
+  )
 }
 
 
@@ -1238,7 +1274,6 @@ body.bodyPG-new {
   .pg-new-title-dl {
     float:none;
     margin:100px auto 0;
-    /* width:344px; */
     width:280px;
   }
   .pg-new-title-dl h1 {
@@ -1366,6 +1401,10 @@ body.bodyPG-new {
 		-o-transform:translate3d(-50%,-50%,0);
 		transform:translate3d(-50%,-50%,0);
 	}
+	.mobileModel #pg-joins .pg-new-middle {
+    height:100%;
+	}
+
   #pg-popular-tools {
     height:500px;
   }
@@ -1466,6 +1505,14 @@ body.bodyPG-new {
   .pg-tools-navbtns li span,
   .pg-tools-navbtns li s,
   .pg-tools-navbtns li strong {
+    background-size:36px 36px;
+  }
+
+  /*
+  .pg-tools-navbtns li,
+  .pg-tools-navbtns li span,
+  .pg-tools-navbtns li s,
+  .pg-tools-navbtns li strong {
     background-image:url(../images/pg/pg-new-icons-half.png);
     background-image:-webkit-image-set(
       url(../images/pg/pg-new-icons-half.png) 1x,
@@ -1493,6 +1540,7 @@ body.bodyPG-new {
   .pg-tools-navbtns li .switch-icon-6 {
     background-position:0 -120px;
   }
+  */
 
 	#pg-features {
     padding:20px 0;
@@ -1618,7 +1666,7 @@ body.bodyPG-new {
 	.pg-join-info {
 		float:none;
 		margin:0 auto;
-		padding:60px 0 0;
+		padding:50px 0 0;
 		width:90%;
 	}
   .pg-join-logo {
@@ -1642,8 +1690,11 @@ body.bodyPG-new {
 		max-height:100%;
 	}
 	.pg-new-slides {
-		margin:20px auto 0;
 		padding:54px 10px 0 9px;
+    position:absolute;
+    bottom:35px;
+    left:50%;
+    margin-left:-110px;
 		width:200px;
 		height:310px;
 		background-size:100% auto;
@@ -1664,13 +1715,25 @@ body.bodyPG-new {
 
 /* ===== 非常小屏，like iPhone5(320), iPhone6(375) ===== */
 @media (max-width:376px) {
+  .pg-new-slides {
+    margin-left:-78px;
+  }
 	.pg-new-slides,
   #pg-v2-slide {
 		width:136px;
 		height:210.8px;
 	}
-  .pg-new-slidelogo {
-    bottom:20px;
-  }
 }
 
+@media (max-height:568px) {
+  .pg-new-title-dl {
+    margin:60px auto 0;
+  }
+  .pg-new-dl-btns {
+    margin:8px 0 0;
+  }
+	.pg-join-info {
+		padding:24px 0 0;
+	}
+
+}
