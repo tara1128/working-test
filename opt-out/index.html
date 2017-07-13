@@ -162,16 +162,6 @@ var startTime = new Date().getTime();
           <dd><input type="text" id="imei" placeholder="" class="opt-out-ipt"></dd>
         </dl>
 
-        <dl>
-          <dt><span>*</span>Verification Code</dt>
-          <dd>
-            <input type="text" placeholder="" class="opt-out-yzm" id="vCode" />
-            <i>
-              <img src="getcaptcha.sl?type=6" alt="" name="checkImg" id="checkImg" style="position:relative; top:5px; left:0; " onclick="document.getElementById('checkImg').src='getcaptcha.sl?type=6&amp;temp='+ (new Date().getTime().toString(36)); return false" />
-            </i>
-            <em id="changePic">New</em>
-          </dd>
-        </dl>
 
         <dl>
           <dt>&nbsp;</dt>
@@ -241,9 +231,40 @@ var startTime = new Date().getTime();
       devTips.fadeOut(200).removeClass('active');
     });
 
+    function sendData( devType, devId ) {
+      if (!devId) return;
+      $.ajax({
+        url: 'http://wxtz.cmcm.com/ss/getEmployeeInformation.php',
+        type: 'POST',
+        data: {
+          'type': devType,
+          'device_id': devId
+        },
+        // contentType: "application/json; charset=utf-8",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+        timeout: 3000,
+        success: function( data ) {
+          console.log( 'Ok: ', data );
+          $("#processResult").fadeIn(100);
+          setTimeout(function(){
+            $("#processResult").fadeOut(100);
+          }, 2000);
+        },
+        error: function( err ) {
+          console.log( 'Err: ', err );
+        }
+      });
+    };
+
+    $('#submit').click(function(){
+      var _type = $('#deviceType').val();
+      var _id = $('#imei').val();
+      console.log('_type = ', _type, ', ', '_id =', _id);
+      sendData( _type, _id );
+    });
+
 
 
 </script>
-<!--test-->
 </body>
 </html>
