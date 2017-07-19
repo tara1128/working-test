@@ -1,6 +1,6 @@
 /*
   whatscall.js
-  Latest modified: 2017-02-23 19:04
+  Latest modified: 2017-07-19 12:13
 */
 
 (function(){ 
@@ -10,6 +10,7 @@
   var vdBtn = $('#wtcVdBtn');
   var vdHrt = $('#wtcVdHeart');
   var video = $('#wtcVideo');
+  var freePhoneNumber = $('#wtcFreePhoneNumber');
   var trulyFree = $('#wtcTrulyFree');
   var callCredits = $('#wtcCallCredits');
   var noInternet = $('#wtcNoInternet');
@@ -26,7 +27,6 @@
       /* Adjust the first screen height to be full-screen: */
       heading.css('height', (win_height+101) + 'px' );
       /* Some pics needs to be scaled down on mobiles: */
-      scaleWithProportion( '.tf-dialog', 470, 270, true );
       scaleWithProportion( '.credits-roll', 412, 412, true );
       scaleWithProportion( '.woman', 270, 320, true );
       scaleWithProportion( '.wifi', 160, 160, true );
@@ -72,9 +72,9 @@
     }else{
       $('#btnInAndroid').hide();
       $('#btnInIOS').hide();
-      heading.find('.to-google').attr('href', 'https://play.google.com/store/apps/details?id=com.cmcm.whatscall');
+      heading.find('.to-google').attr('href', 'https://play.google.com/store/apps/details?id=com.cmcm.whatscalllite&referrer=utm_source%3D6236');
       heading.find('.to-apple').attr('href', 'https://itunes.apple.com/app/whatscall-mian-fei-bo-da-quan/id1137062559');
-      footerInner.find('.to-google').attr('href', 'https://play.google.com/store/apps/details?id=com.cmcm.whatscall');
+      footerInner.find('.to-google').attr('href', 'https://play.google.com/store/apps/details?id=com.cmcm.whatscalllite&referrer=utm_source%3D6236');
       footerInner.find('.to-apple').attr('href', 'https://itunes.apple.com/app/whatscall-mian-fei-bo-da-quan/id1137062559');
     }
   };
@@ -94,33 +94,40 @@
     var clitHeight = document.body.clientHeight;
     if( clitWidth < 768 ){ /* On mobile devices: */
       if( scrollTop > 220 ){
-        trulyFree.addClass('active');
+        freePhoneNumber.addClass('active');
       }
       if( scrollTop > 440 ){
-        callCredits.addClass('active');
+        trulyFree.addClass('active');
       }
       if( scrollTop > 660 ){
-        noInternet.addClass('active');
+        callCredits.addClass('active');
       }
       if( scrollTop > 1100 ){
+        noInternet.addClass('active');
+      }
+      if( scrollTop > 1600 ){
         harassment.addClass('active');
       }
 
     }else{ /* On desktop devices: */
       if( clitHeight > 820 || scrollTop > 250 ){
-        trulyFree.addClass('active');
+        freePhoneNumber.addClass('active');
       }
       if( scrollTop > 500 ){
-        callCredits.addClass('active');
+        trulyFree.addClass('active');
       }
       if( scrollTop > 1000 ){
-        noInternet.addClass('active');
+        callCredits.addClass('active');
       }
       if( scrollTop > 1700 ){
+        noInternet.addClass('active');
+      }
+      if( scrollTop > 2300 ){
         harassment.addClass('active');
       }
     }
   });
 
+console.log(132);
 
 })();

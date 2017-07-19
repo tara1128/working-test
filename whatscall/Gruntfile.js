@@ -1,6 +1,6 @@
 /*
 	Gruntfile.js
-  Latest modified 2016-10-11 16:42
+  Latest modified 2017-07-19 18:16
 */
 
 module.exports = function(grunt) {
@@ -20,13 +20,13 @@ module.exports = function(grunt) {
 			},
 			runUglify: {
 				src: ['js/whatscall.js'],
-				dest: 'build/whatscall.min.js'
+				dest: 'build/whatscall.new.min.js'
 			}
 		},
 		cssmin: {
 			runCssmin: {
 				src: ['css/whatscall.css'],
-				dest: 'build/whatscall.min.css'
+				dest: 'build/whatscall.new.min.css'
 			}
 		},
     concat: {
