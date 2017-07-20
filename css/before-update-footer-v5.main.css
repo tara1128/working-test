@@ -1,6 +1,6 @@
 /*
-  Removed PG styles from v4.main.css
-  Latest modified: 2017-07-20 18:30
+  Removed PG styles from v4.main.css !!!!
+  Latest modified: 2017-06-16 16:25
 */
 @font-face {
 	font-family: 'HelveticaBold';
@@ -1275,18 +1275,37 @@ body {
 	overflow: hidden;
 	max-width: 100%
 }
+#footer-wrap, .footer-wrap {
+	position: absolute;
+	z-index: 8;
+	bottom: 0;
+	left: 0;
+	width: 100%
+}
 .bodyPT #footer-wrap {
   bottom: -35px;
 }
 .bodyPT #footer-wrap.shown {
   bottom: 0;
 }
+#footer {
+	font-size: 12px;
+	line-height: 20px;
+	height: 20px;
+	padding: 10px 0 5px;
+	text-align: center;
+	word-spacing: 5px;
+	background: #fff
+}
+#footer a:hover {
+	text-decoration: underline
+}
 .Front #footer {
 	color: #fff;
-	background: none;
+	background: none
 }
 .Front #footer a {
-	color: #fff;
+	color: #fff
 }
 .bodyPT #footer {
   background:none;
@@ -3151,6 +3170,11 @@ a.btn_green:visited {
     padding-top:10px;
   }
 
+	#footer a:nth-child(4):before {
+		display: block;
+		clear: both;
+		content: ''
+	}
 	#header-wrap {
 		min-width: 300px
 	}
@@ -3205,8 +3229,11 @@ a.btn_green:visited {
 		font-size: 30px;
 		padding-bottom: 8px
 	}
+	#footer {
+		font-size: 10px
+	}
 	.Front #footer {
-		text-align: center;
+		text-align: center
 	}
 	.fullSlider, .fullSlider ul, .fullSlider li {
 		min-width: 320px;
@@ -3311,6 +3338,16 @@ a.btn_green:visited {
 		-o-background-size: 1000px auto;
 		background-size: 1000px auto
 	}
+  /*
+	.fs-ad .pic {
+		width: 200px;
+		margin: -140px 0 0 -250px
+	}
+	.fs-ad .title {
+		width: 300px;
+		margin: -100px 0 0 -40px
+	}
+  */
 	.fs-cml .cml-app-bg {
 		display: none
 	}
@@ -3810,12 +3847,15 @@ a.btn_green:visited {
 		font-size: 28px;
 		padding-bottom: 10px
 	}
+	#footer {
+		word-spacing: 2px
+	}
 	.fullSlider, .fullSlider ul, .fullSlider li {
 		min-height: 380px
 	}
 	.fullSlider .main {
 		height: 300px;
-		margin-top: -150px;
+		margin-top: -150px
 	}
 	.fullSlider .navs {
 		bottom: 30px;
@@ -5536,79 +5576,22 @@ a.btn_green:visited {
 	height: 144px;
 	padding-bottom: 0
 }
-
-/* ========= Update #footer-wrap, Jul 20th, 2017 ====== */
-#footer-wrap, .footer-wrap {
-	position:absolute;
-	z-index:8;
-	bottom:0;
-	left:0;
-	width:100%;
-}
-#footer {
-  margin:0 auto;
-	padding:10px 0 5px;
-  width:565px; /* Make width larger if adding items */
-	font-size:12px;
-	line-height:20px;
-	height:20px;
-	text-align:center;
-	background:#fff;
-}
-#footer a.show-in-mobile-only {
-  display:none;
-}
-#footer a:hover {
-	text-decoration:underline;
+.foot-lang {
+	position: relative;
+	z-index: 2;
+	display: inline-block;
+	zoom: 1;
+	margin: 0 0 0 5px;
+	cursor: pointer;
+	vertical-align: middle
 }
 .foot-copy {
-	display:block;
-  float:left;
-}
-.foot-copy a, .foot-copy em, .foot-copy b {
-  display:block;
-  float:left;
-  margin:0 5px;
-}
-.foot-lang {
-	position:relative;
-	z-index:2;
-	display:block;
-  float:left;
-	cursor:pointer;
-	vertical-align:middle;
+	display: inline-block;
+	zoom: 1
 }
 .foot-lang img {
-	display:block;
+	display: block
 }
-
-@media (max-width:800px) {
-	#footer {
-    width:500px;
-		font-size:10px;
-	}
-}
-@media (max-width:500px) {
-  #footer a.show-in-mobile-only {
-    display:block;
-  }
-  #footer a.show-in-desktop-only {
-    display:none;
-  }
-}
-
-@media (max-width:375px) {
-	#footer {
-    width:100%;
-    font-size:9px;
-	}
-  .foot-copy a, .foot-copy em, .foot-copy b {
-    margin:0 2px;
-  }
-}
-
-
-
 .lang-list {
 	font-style: normal;
 	position: absolute;
@@ -5652,7 +5635,7 @@ a.btn_green:visited {
 	background: url(../images/v3/lang_icons.png) no-repeat
 }
 .Front .lang-list {
-	border:0;
+	border: 0
 }
 .Front .lang-list:after {
 	bottom: -5px;
@@ -5686,13 +5669,13 @@ a.btn_green:visited {
 	background-position: 0 -132px
 }
 .footer-wrap {
-	background:#ff6911;
+	background: #ff6911
 }
 .footer-wrap a {
-	color:#fff;
+	color: #fff
 }
 .footer-wrap a:hover {
-	text-decoration: underline;
+	text-decoration: underline
 }
 .footer-wrap .gp-dl {
 	position: absolute;
@@ -5701,7 +5684,7 @@ a.btn_green:visited {
 }
 .footer-wrap h3 {
 	font-size: 34px;
-	line-height: 1;
+	line-height: 1
 }
 .footer-inner {
 	position: relative;
@@ -5789,12 +5772,15 @@ a.btn_green:visited {
 		font-size: 30px;
 		padding-bottom: 8px
 	}
+	#footer {
+		font-size: 10px
+	}
 	.Front #footer {
-		text-align: center;
+		text-align: center
 	}
 	.content {
 		width: auto;
-		min-width: 320px;
+		min-width: 320px
 	}
   #menuMore .content {
     margin: 20px auto 0;
@@ -5886,8 +5872,12 @@ a.btn_green:visited {
 		left: auto
 	}
 }
+@media (max-width:310px) {
+	.body-ru-ru #footer {
+	}
+}
 .body-ko-kr * {
-	font-family: 'NanumBarunGothic', 'Nanum Gothic', Dotum, Helvetica, Sans-serif !important;
+	font-family: 'NanumBarunGothic', 'Nanum Gothic', Dotum, Helvetica, Sans-serif !important
 }
 .body-ko-kr #cmbssmall .title p, .body-ko-kr #cmbssecure .title p {
 	color: #555

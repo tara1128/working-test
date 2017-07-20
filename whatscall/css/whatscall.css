@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2017-07-20 12:16
+  Latest modified: 2017-07-20 15:42
 */
 
 @font-face {
@@ -898,7 +898,8 @@
   height:80px;
 }
 .wtc-feature-icons.iconfree {
-  background-position:0 -300px;
+  background-image:url(../images/wtc/wtc-new-icon-free.png);
+  background-position:0 0;
 }
 .wtc-feature-icons.unknown1 {
   background-position:-100px -300px;
@@ -1205,8 +1206,12 @@
     background-size:50px 50px;
   }
   .wtc-feature-icons.iconfree {
-    background-image:url(../images/wtc/wtc-feature-icon0-for-mobile.png);
     background-position:0 0;
+    background-image:url(../images/wtc/wtc-new-icon-free.png);
+    background-image:-webkit-image-set(
+      url(../images/wtc/wtc-new-icon-free.png) 1x,
+      url(../images/wtc/wtc-new-icon-free-x2.png) 2x
+    )
   }
   .wtc-feature-icons.unknown1 {
     background-image:url(../images/wtc/wtc-feature-icon1-for-mobile.png);
