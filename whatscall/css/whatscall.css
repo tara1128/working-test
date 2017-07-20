@@ -1,6 +1,6 @@
 /*
   whatscall.css
-  Latest modified: 2017-07-19 18:14
+  Latest modified: 2017-07-20 12:16
 */
 
 @font-face {
@@ -413,7 +413,8 @@
   top:0px;
   width:76px;
   height:76px;
-  background:url(../images/wtc/wtc-free-corner.png?2) no-repeat;
+  background-repeat:no-repeat;
+  background-image:url(../images/wtc/wtc-free-corner.png);
   text-indent:-9999px;
 }
 .f-ph-n-item.dev-num {
@@ -962,6 +963,9 @@
   .wtc-section {
     padding:20px 0;
   }
+  .wtc-free-phone-number.wtc-section {
+    padding:70px 0 20px;
+  }
   .heading-container {
     margin-left:-45%;
     width:90%;
@@ -1025,6 +1029,75 @@
     font-size:18px;
     line-height:28px;
   }
+
+  .f-ph-n-item.man {
+    top:-63px;
+    margin-left:-51.5px;
+    width:103px;
+    height:103px;
+    background-image:url(../images/wtc/wtc-man-for-mobile.png);
+  }
+  .f-ph-n-item.wtc-num,
+  .f-ph-n-item.dev-num {
+    margin-left:-132px;
+    width:264px;
+    height:78px;
+    background-position:36%;
+    background-size:76%;
+  }
+  .f-ph-n-item.wtc-num s.wtc-free-corner {
+    right:-3px;
+    width:60px;
+    height:60px;
+    background-size:60px;
+  }
+  .f-ph-n-item.wtc-num {
+    top:38px;
+  }
+  .f-ph-n-item.dev-num {
+    top:130px;
+  }
+
+  .tf-items.tf-dialog {
+    top:-40px;
+    margin-left:-77px;
+    width:154px;
+    height:84px;
+    background-size:154px 84px;
+  }
+  .tf-items.tf-earth {
+    top:-17px;
+    left:50%;
+    margin-left:-40%;
+    width:80%;
+    height:auto;
+  }
+  .tf-items.tf-mary,
+  .tf-items.tf-kate,
+  .tf-items.tf-tony,
+  .tf-items.tf-jackie {
+    width:100px;
+    height:100px;
+    background-size:100px;
+  }
+  .tf-items.tf-mary {
+    top:27px;
+    left:0px;
+  }
+  .tf-items.tf-kate {
+    top:35px;
+    right:-5px;
+  }
+  .tf-items.tf-tony {
+    top:155px;
+    left:15px;
+  }
+  .tf-items.tf-jackie {
+    top:170px;
+    right:30px;
+  }
+
+
 
   .wtc-free-phone-number .wtc-sec-txt,
   .wtc-truly-free .wtc-sec-txt,

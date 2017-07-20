@@ -1,6 +1,6 @@
 /*
   whatscall.js
-  Latest modified: 2017-07-19 12:13
+  Latest modified: 2017-07-20 12:16
 */
 
 (function(){ 
@@ -27,6 +27,7 @@
       /* Adjust the first screen height to be full-screen: */
       heading.css('height', (win_height+101) + 'px' );
       /* Some pics needs to be scaled down on mobiles: */
+      scaleWithProportion( '.tf-earth', 470, 470, true );
       scaleWithProportion( '.credits-roll', 412, 412, true );
       scaleWithProportion( '.woman', 270, 320, true );
       scaleWithProportion( '.wifi', 160, 160, true );
@@ -128,6 +129,5 @@
     }
   });
 
-console.log(132);
 
 })();
