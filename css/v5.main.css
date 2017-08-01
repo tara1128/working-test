@@ -1,6 +1,6 @@
 /*
   Removed PG styles from v4.main.css !
-  Latest modified: 2017-07-21 17:36
+  Latest modified: 2017-08-01 15:01
 */
 @font-face {
 	font-family: 'HelveticaBold';
@@ -324,7 +324,7 @@ body {
 	font-size: 18px;
 	line-height: 35px;
 	overflow: hidden;
-	margin: 0 auto 48px;
+	margin: 0 auto 30px;
   width: 870px; /* 170+680+20 */
 	color: #fff;
 }
@@ -339,8 +339,8 @@ body {
 	padding:0;
   width:170px;
 	font-family: 'Gotham-Bold'!important;
-	font-size:18px;
   font-weight:bold;
+	font-size:18px;
   color:#585858;
 }
 #menuMore li div.menu-box {
@@ -758,6 +758,7 @@ body {
 .detail-text a { color:#f60;}
 .detail-text a:hover { text-decoration:underline;}
 .detail-text p {margin:0 0 20px;font-size:16px;letter-spacing:0.25px;}
+.detail-text p strong {font-weight:bold;font-family:'Gotham-Bold'!important;}
 .detail-text table { width:100%; border-left:1px #ddd solid;border-top:1px #ddd solid;}
 .detail-text th, .detail-text td {border-right:1px #ddd solid;border-bottom:1px #ddd solid; padding:5px;}
 .detail-text th { background:#ED7501; color:#fff;}
