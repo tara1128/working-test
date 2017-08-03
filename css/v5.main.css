@@ -1,7 +1,7 @@
 /*
   Removed PG styles from v4.main.css !
   Working on optimizing ...
-  Latest modified: 2017-08-02 17:34
+  Latest modified: 2017-08-03 15:49
 */
 
 @font-face {
@@ -470,171 +470,169 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	background-image:url(../images/front/cml-bg.jpg);
 }
 .fs-cm .title {
-	display: block;
-	width: 500px;
-	margin: 0 auto;
-	padding-top: 10px
+	display:block;
+	margin:0 auto;
+	padding-top:10px;
+	width:500px;
 }
 .fs-cm .description {
-	font-size: 20px;
-	margin-top: 12px
+	margin-top:12px;
+	font-size:20px;
 }
 .fs-cm .box {
-	position: relative;
-	width: 250px;
-	height: 250px;
-	margin: 40px auto 0
+	position:relative;
+	margin:40px auto 0;
+	width:250px;
+	height:250px;
 }
 .fs-cm .round {
-	display: block;
-	width: 100%;
-	height: 100%
+	display:block;
+	width:100%;
+	height:100%;
 }
 .fs-cm .clean {
-	position: absolute;
-	top: 55px;
-	left: 70px;
-	width: 120px
+	position:absolute;
+	top:55px;
+	left:70px;
+	width:120px;
 }
 .fs-cm .process {
-	font-size: 20px;
-	position: absolute;
-	bottom: 50px;
-	width: 100%;
-	text-align: center
+	position:absolute;
+	bottom:50px;
+	width:100%;
+	font-size:20px;
+	text-align:center;
 }
 .fs-cms .pic {
-	position: absolute;
-	left: 50%;
-	width: 500px;
-	margin-left: -250px
+	position:absolute;
+	left:50%;
+	margin-left:-250px;
+	width:500px;
 }
 .fs-cms .title {
-	display: block;
-	width: 450px;
-	margin: 0 auto;
-	padding-top: 280px
+	display:block;
+	margin:0 auto;
+	padding-top:280px;
+	width:450px;
 }
 .fs-cms .description {
-	font-size: 18px;
-	margin-top: 5px;
-	text-shadow: 0 2px 3px rgba(14, 128, 187, .75)
+	margin-top:5px;
+	font-size:18px;
+	text-shadow:0 2px 3px rgba(14,128,187,.75)
 }
 .fs-cms .cms-dun {
-	display: block;
-	width: 270px;
-	margin: 0 auto
+	display:block;
+	margin:0 auto;
+	width:270px;
 }
 .fs-bd .battery, .fs-bd .box {
-	position: absolute
+	position:absolute;
 }
 .fs-bd .battery {
-	top: 100px;
-	left: 250px;
-	width: 140px
+	top:100px;
+	left:250px;
+	width:140px;
 }
 .fs-bd .box {
-	top: 150px;
-	right: 200px
+	top:150px;
+	right:200px;
 }
 .fs-bd .title {
-	width: 350px
+	width:350px;
 }
 .fs-bd .description {
-	font-size: 20px;
-	margin-top: 10px
+	margin-top:10px;
+	font-size:20px;
 }
 .body-ru-ru .fs-bd .description {
-	font-size: 20px
+	font-size:20px;
 }
 .fs-cmb .title {
-	display: block;
-	width: 500px;
-	margin: 0 auto;
-	padding-top: 20px
+	display:block;
+	margin:0 auto;
+	padding-top:20px;
+	width:500px;
 }
 .fs-cmb .description {
-	font-size: 20px;
-	margin-top: 20px
+	font-size:20px;
+	margin-top:20px;
 }
 .fs-cmb .description i {
-	display: inline-block;
-	overflow: hidden;
-	zoom: 1;
-	width: 6px;
-	height: 6px;
-	margin: 0 4px;
-	vertical-align: middle;
-	background: url(../images/front/dot.png) no-repeat
+	display:inline-block;
+	margin:0 4px;
+	zoom:1;
+	width:6px;
+	height:6px;
+	vertical-align:middle;
+	overflow:hidden;
+	background:url(../images/front/dot.png) no-repeat;
 }
 .fs-cmb .phone {
-	display: block;
-	width: 280px;
-	margin: 40px auto 0
+	display:block;
+	margin:40px auto 0;
+	width:280px;
 }
 .fs-cmlk .title {
-	display: block;
-	margin: 0 auto
+	display:block;
+	margin:0 auto;
 }
 .fs-cmlk .logo {
-	display: block;
-	margin: 50px auto 30px
+	display:block;
+	margin:50px auto 30px;
 }
 .fs-cmlk .description {
-	font-size: 20px;
-	margin-top: 20px
+	font-size:20px;
+	margin-top:20px;
 }
 .fs-cmlk .description i {
-	display: inline-block;
-	overflow: hidden;
-	zoom: 1;
-	width: 4px;
-	height: 4px;
-	margin: 0 4px;
-	vertical-align: middle;
-	background: url(../images/front/cmlk-dot.png) no-repeat
+	display:inline-block;
+	overflow:hidden;
+	zoom:1;
+	width:4px;
+	height:4px;
+	margin:0 4px;
+	vertical-align:middle;
+	background:url(../images/front/cmlk-dot.png) no-repeat;
 }
 .fs-cmlk .round {
-	position: absolute;
-	display: none
+	position:absolute;
+	display:none;
 }
 .canBorderRadius .fs-cmlk .round {
-	display: block;
-	-webkit-border-radius: 100%;
-	-moz-border-radius: 100%;
-	border-radius: 100%;
-	background: rgba(255, 255, 255, .03)
+	display:block;
+	border-radius:100%;
+	background:rgba(255,255,255,.03);
 }
 .fs-cmlk .round-left-top {
-	top: -400px;
-	left: -300px;
-	width: 600px;
-	height: 600px
+	top:-400px;
+	left:-300px;
+	width:600px;
+	height:600px;
 }
 .fs-cmlk .round-left-bottom {
-	bottom: -700px;
-	left: -500px;
-	width: 1200px;
-	height: 1200px
+	bottom:-700px;
+	left:-500px;
+	width:1200px;
+	height:1200px;
 }
 .fs-cmlk .round-right-top {
-	top: -400px;
-	right: -500px;
-	width: 800px;
-	height: 800px
+	top:-400px;
+	right:-500px;
+	width:800px;
+	height:800px;
 }
 .fs-ad img, .fs-ad h3 {
-	position: absolute;
-	top: 50%;
-	left: 50%
+	position:absolute;
+	top:50%;
+	left:50%;
 }
 .fs-ad .pic {
-	width: 540px;
-	margin: -180px 0 0 -270px;
+	width:540px;
+	margin:-180px 0 0 -270px;
 }
 .fs-ad .title {
-	width: 540px;
-	margin: 0px 0 0 -270px;
+	width:540px;
+	margin:0px 0 0 -270px;
 }
 .fs-ad h3 {
 	margin:0 0 0 -250px;
@@ -646,128 +644,116 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 }
 
 /* Merge styles in blog.css & global.css for page "/about" */
-.banner-about { height:298px; background-color:#EE6100; color:#fff; text-align:center;}
-.banner-text, .banner-icon { display:inline-block; _display:inline; *zoom:1; vertical-align: middle;  padding-top:68px;}
-.banner-text { width:740px;}
-.banner-text h2 { font-size:66px; font-weight:normal;}
+.banner-about {height:298px;background-color:#EE6100;color:#fff;text-align:center;}
+.banner-text, .banner-icon {display:inline-block;_display:inline;*zoom:1;vertical-align:middle;padding-top:68px;}
+.banner-text {width:740px;}
+.banner-text h2 {font-size:66px;font-weight:normal;}
 .banner-text p {padding:0 30px;font-size:16px;margin-top:8px;}
-.banner-icon { margin:25px -20px 0 0; padding-left:10px;}
-.body-zh-cn .banner-text { width:auto;}
-.body-zh-cn .banner-text p { padding:0;}
-.body-zh-cn .banner-icon { margin-top:22px;}
-.detail-single { padding:30px 0px;}
-.detail .title { font-size:38px; line-height:1.2;}
+.banner-icon {margin:25px -20px 0 0;padding-left:10px;}
+.body-zh-cn .banner-text {width:auto;}
+.body-zh-cn .banner-text p {padding:0;}
+.body-zh-cn .banner-icon {margin-top:22px;}
+.detail-single {padding:30px 0px;}
+.detail .title {font-size:38px;line-height:1.2;}
 .body-zh-cn .detail .title, .body-zh-tw .detail .title {letter-spacing:1px;}
-
-.detail-text { overflow:hidden; min-height:250px; color:#555; line-height:1.8em;}
-.detail-text h1 { margin-bottom:25px; color:#333; font-size:1.5em;}
-.detail-text h2 { margin-bottom:25px; color:#333; font-size:1.4em;}
-.detail-text h3 { margin:20px 0 0; color:#333; font-size:1.3em;}
-.detail-text h4 { margin:20px 0 0; color:#333; font-size:1.2em;}
-.detail-text h5 { margin:20px 0 0; color:#333; font-size:1.1em;}
-.detail-text h6 { margin:20px 0 0; color:#333; font-size:1em;}
-.detail-text img { max-width:100%;}
-.detail-text img.lazy { background: url(/images/v3/img-loading.gif) no-repeat; width:16px; height:16px; margin:10px auto;}
-.detail-text a { color:#f60;}
-.detail-text a:hover { text-decoration:underline;}
+.detail-text {overflow:hidden;min-height:250px;color:#555;line-height:1.8em;}
+.detail-text h1 {margin-bottom:25px;color:#333;font-size:1.5em;}
+.detail-text h2 {margin-bottom:25px;color:#333;font-size:1.4em;}
+.detail-text h3 {margin:20px 0 0;color:#333;font-size:1.3em;}
+.detail-text h4 {margin:20px 0 0;color:#333;font-size:1.2em;}
+.detail-text h5 {margin:20px 0 0;color:#333;font-size:1.1em;}
+.detail-text h6 {margin:20px 0 0;color:#333;font-size:1em;}
+.detail-text img {max-width:100%;}
+.detail-text img.lazy {background:url(/images/v3/img-loading.gif) no-repeat;width:16px;height:16px;margin:10px auto;}
+.detail-text a {color:#f60;}
+.detail-text a:hover {text-decoration:underline;}
 .detail-text p {margin:0 0 20px;font-size:16px;letter-spacing:0.25px;}
 .detail-text p strong {font-weight:bold;font-family:'Gotham-Bold'!important;}
-.detail-text table { width:100%; border-left:1px #ddd solid;border-top:1px #ddd solid;}
-.detail-text th, .detail-text td {border-right:1px #ddd solid;border-bottom:1px #ddd solid; padding:5px;}
-.detail-text th { background:#ED7501; color:#fff;}
-.detail-text tr.first td { background:#F7EADE;}
-.detail-text ol { list-style:outside disc; padding-left:20px;}
-.detail-text ol li p { margin:0; padding:0;}
-.detail-text blockquote { padding: 10px 15px; line-height:1.6em; border-left: 4px #ddd solid;background: #F5F5F5;font-size: .95em; margin-bottom:20px;}
-.detail-text blockquote p { margin-bottom:0;}
+.detail-text table {width:100%;border-left:1px #ddd solid;border-top:1px #ddd solid;}
+.detail-text th, .detail-text td {border-right:1px #ddd solid;border-bottom:1px #ddd solid;padding:5px;}
+.detail-text th {background:#ED7501;color:#fff;}
+.detail-text tr.first td {background:#F7EADE;}
+.detail-text ol {list-style:outside disc;padding-left:20px;}
+.detail-text ol li p {margin:0;padding:0;}
+.detail-text blockquote {padding:10px 15px;line-height:1.6em;border-left:4px #ddd solid;background:#F5F5F5;font-size:.95em;margin-bottom:20px;}
+.detail-text blockquote p {margin-bottom:0;}
 
 
 @media screen and (max-width:540px) {
-  .fs-ad .pic {
-    width: 80%;
-    margin: -180px 0 0 -40%;
-  }
-  .fs-ad .title {
-    width: 80%;
-    margin: -70px 0 0 -40%;
-  }
-  .fs-ad h3 {
-    margin:0 0 0 -45%;
-    width:90%;
-  }
+  .fs-ad .pic {width:80%;margin:-180px 0 0 -40%;}
+  .fs-ad .title {width:80%;margin:-70px 0 0 -40%;}
+  .fs-ad h3 {margin:0 0 0 -45%;width:90%;}
   /* From blog.css: */
-  .banner-text h2 { font-size:26px;}
-  .banner-text p { font-size:12px;}
-  .banner-text p span { display:block;}
-  .banner-icon img { width:60px;}
+  .banner-text h2 {font-size:26px;}
+  .banner-text p {font-size:12px;}
+  .banner-text p span {display:block;}
+  .banner-icon img {width:60px;}
 }
-
-
 
 .fs-cml .cml-app-bg {
-	top: 50%;
-	margin-top: -150px
+	margin-top:-150px;
+	top:50%;
 }
 .fs-cml .cml-app-bg-1 {
-	width: 300px;
-	margin-left: -500px
+	margin-left:-500px;
+	width:300px;
 }
 .fs-cml .cml-app-bg-2 {
-	width: 290px;
-	margin-left: 200px
+	margin-left:200px;
+	width:290px;
 }
 .fs-cml img {
-	display: block;
-	margin: 0 auto
+	display:block;
+	margin:0 auto;
 }
 .fs-cml .pic {
-	margin: 30px auto 40px
+	margin:30px auto 40px;
 }
 .fs-cml .desc {
-	font-size: 26px;
-	margin-top: 15px;
-	text-align: center;
-	color: #fff
+	margin-top:15px;
+	font-size:26px;
+	text-align:center;
+	color:#fff;
 }
 .fs-cml3d{
-	background: url(../images/front/cml3d-bg.jpg) no-repeat center #020a16;
-	-moz-background-size: cover;
-	  -o-background-size: cover;
-	     background-size: cover;
+	background:url(../images/front/cml3d-bg.jpg) no-repeat center #020a16;
+	-moz-background-size:cover;
+	  -o-background-size:cover;
+	     background-size:cover;
 }
 .fs-cml3d img {
-	display: block;
-	margin: 0 auto
+	display:block;
+	margin:0 auto;
 }
 .fs-cml3d .pic {
-	margin: 45px auto 42px
+	margin:45px auto 42px;
 }
 .fs-cml3d .desc {
-	font-size: 26px;
-	margin-top: 33px;
-	text-align: center;
-	color: #fff
+	margin-top:33px;
+	font-size:26px;
+	text-align:center;
+	color:#fff;
 }
 .fs-liveme {
-	background: url(../images/front/bg-liveme.jpg) no-repeat center #341c6c;
-	-moz-background-size: cover;
-	  -o-background-size: cover;
-	     background-size: cover;
+	background:url(../images/front/bg-liveme.jpg) no-repeat center #341c6c;
+	-moz-background-size:cover;
+	  -o-background-size:cover;
+	     background-size:cover;
 }
 .fs-liveme img.livemeStar {
-	display: block;
-	margin: 50px auto 0;
+	display:block;
+	margin:50px auto 0;
 }
 .fs-liveme img.livemeTxt {
-	display: block;
-	margin: 30px auto 0;
+	display:block;
+	margin:30px auto 0;
 }
 
 .fs-pgnew {
-	background: url(../images/front/pg-new-banner.jpg) no-repeat center #43c5d7;
-	-moz-background-size: cover;
-	  -o-background-size: cover;
-	     background-size: cover;
+	background:url(../images/front/pg-new-banner.jpg) no-repeat center #43c5d7;
+	-moz-background-size:cover;
+	  -o-background-size:cover;
+	     background-size:cover;
 }
 .fs-pgnew h1.pg-mobile-title {
   display:none;
@@ -784,13 +770,11 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
   left:158px;
 }
 
-
-
 .fs-pianotiles {
-	background: url(../images/front/bg-piano-front.jpg) no-repeat center #50bbf7;
-	-moz-background-size: cover;
-	  -o-background-size: cover;
-	     background-size: cover;
+	background:url(../images/front/bg-piano-front.jpg) no-repeat center #50bbf7;
+	-moz-background-size:cover;
+	  -o-background-size:cover;
+	     background-size:cover;
 }
 .fs-pianotiles img {
   position:absolute;
@@ -808,11 +792,11 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
   margin:-292px 0 0 -50%;
   width:100%;
   max-width:1410px;
-  -webkit-animation: showCrumbs .7s ease both .2s;
-  -moz-animation: showCrumbs .7s ease both .2s;
-  -ms-animation: showCrumbs .7s ease both .2s;
-  -o-animation: showCrumbs .7s ease both .2s;
-  animation: showCrumbs .7s ease both .2s;
+  -webkit-animation:showCrumbs .7s ease both .2s;
+  -moz-animation:showCrumbs .7s ease both .2s;
+  -ms-animation:showCrumbs .7s ease both .2s;
+  -o-animation:showCrumbs .7s ease both .2s;
+  animation:showCrumbs .7s ease both .2s;
 }
 .fs-pianotiles img.ptImgCrumb.onMobile {
   display:none; /* Display on mobile only */
@@ -824,25 +808,24 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 @-o-keyframes showCrumbs {from {opacity:0;-o-transform:scale(0.4,0.4);} to {opacity:1;-o-transform:scale(1,1);}}
 @keyframes showCrumbs {from {opacity:0;transform:scale(0.4,0.4);} to {opacity:1;transform:scale(1,1);}}
 
-
 .fs-whatscall {
-	background: url(../images/front/bg-whatscall-front.jpg) no-repeat center #3477c1;
-	-moz-background-size: cover;
-	  -o-background-size: cover;
-	     background-size: cover;
+	background:url(../images/front/bg-whatscall-front.jpg) no-repeat center #3477c1;
+	-moz-background-size:cover;
+	  -o-background-size:cover;
+	     background-size:cover;
 }
 .fullSlider .fs-whatscall .main {
   z-index:3;
 }
 .fs-whatscall img {
-	display: block;
+	display:block;
 }
 .fs-whatscall img.whatscallTitle {
 	margin:0px auto 0;
   padding-top:160px;
 }
 .fs-whatscall img.whatscallSubtitle {
-	margin: 36px auto 0;
+	margin:36px auto 0;
 }
 .fs-whatscall img.whatscallFree {
   position:absolute;
