@@ -1,7 +1,7 @@
 /*
   Removed PG styles from v4.main.css !
   Working on optimizing ...
-  Latest modified: 2017-08-03 15:49
+  Latest modified: 2017-08-03 17:18
 */
 
 @font-face {
@@ -677,7 +677,7 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 .detail-text ol li p {margin:0;padding:0;}
 .detail-text blockquote {padding:10px 15px;line-height:1.6em;border-left:4px #ddd solid;background:#F5F5F5;font-size:.95em;margin-bottom:20px;}
 .detail-text blockquote p {margin-bottom:0;}
-
+.detail-text p sup, .detail-text p sub {vertical-align:text-bottom;}
 
 @media screen and (max-width:540px) {
   .fs-ad .pic {width:80%;margin:-180px 0 0 -40%;}
