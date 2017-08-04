@@ -1,7 +1,7 @@
 /*
   Removed PG styles from v4.main.css !
   Working on optimizing ...
-  Latest modified: 2017-08-04 18:02
+  Latest modified: 2017-08-04 16:40
 */
 
 @font-face {
@@ -905,6 +905,7 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
   #menuMore li a {float:none;}
 }
 
+
 #topnotice .fullSlider .main {
 	margin-top:-140px;
 }
@@ -1047,6 +1048,7 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	overflow:hidden;
 	padding:0 10px;
 	white-space:nowrap;
+	-o-text-overflow:ellipsis;
 	text-overflow:ellipsis;
 	color:#8f8f8f;
 	background:#eee;
@@ -1099,20 +1101,76 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	margin:0 auto;
 	max-width:880px;
 }
-
-/* *** Footer Wrap *** */
+.updatetime {
+	font-size:16px;
+	padding-bottom:10px;
+	color:#666;
+}
+.social_share {
+	margin:15px 0 25px;
+	text-align:center;
+}
+.social_share span {
+	display:inline-block;
+	margin-right:7px;
+	vertical-align:middle;
+	color:#ef7500;
+}
+.social_share a {
+	display:inline-block;
+	width:40px;
+	height:39px;
+	margin:0 6px;
+	vertical-align:middle;
+	background:url(../images/v3/socila-share.png) no-repeat;
+	background-size:auto 39px;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.social_share a.twitter {
+	background-position:-102px 0;
+}
+.social_share a.google {
+	background-position:-51px 0;
+}
+.social_share a.facebook:hover {
+	background-position:-211px 0;
+}
+.social_share a.twitter:hover {
+	background-position:-313px 0;
+}
+.social_share a.google:hover {
+	background-position:-263px 0;
+}
+.social_like {
+	display:none;
+}
+.fb-like {
+	margin-bottom:10px;
+	max-width:100%;
+	overflow:hidden;
+}
+.fb-like iframe {
+	width:auto!important;
+}
+.comment {
+	background: #fafafa
+}
+.fb-comments {
+	overflow: hidden;
+	max-width: 100%
+}
 #footer-wrap, .footer-wrap {
-	position:absolute;
-	z-index:8;
-	bottom:0;
-	left:0;
-	width:100%;
+	position: absolute;
+	z-index: 8;
+	bottom: 0;
+	left: 0;
+	width: 100%
 }
 .bodyPT #footer-wrap {
-  bottom:-35px;
+  bottom: -35px;
 }
 .bodyPT #footer-wrap.shown {
-  bottom:0;
+  bottom: 0;
 }
 #footer {
 	font-size:12px;
@@ -1123,88 +1181,88 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	word-spacing:3px;
 }
 #footer a:hover {
-	text-decoration:underline;
+	text-decoration: underline
 }
 .Front #footer {
-	color:#fff;
-	background:none;
+	color: #fff;
+	background: none
 }
 .Front #footer a {
-	color:#fff;
+	color: #fff
 }
 .bodyPT #footer {
   background:none;
 }
 .foot-copy em {
-	font-style:normal;
-	opacity:0.5;
+	font-style: normal;
+	opacity: .5
 }
 .bodyCM #header-fixed, .bodyCM #header-wrap, .bodyCM #banner-wrap {
-	background-color:#3160af;
+	background-color: #3160af
 }
 .bodyPT #header-wrap, .bodyPT #header-fixed {
-  background-color:transparent;
+  background-color: transparent;
 }
 #banner-wrap {
-	background:#3160af;
+	background: #3160af
 }
 .cmpc-promotion {
-	position:absolute;
-	top:0;
-	right:0;
+	position: absolute;
+	top: 0;
+	right: 0
 }
 .cmpc-promotion img {
-	display:block;
-	width:80px;
-	height:62px;
-	-webkit-transition:all 400ms ease;
-	-moz-transition:all 400ms ease;
-	-o-transition:all 400ms ease;
-	transition:all 400ms ease;
+	display: block;
+	width: 80px;
+	height: 62px;
+	-webkit-transition: all 400ms ease;
+	-moz-transition: all 400ms ease;
+	-o-transition: all 400ms ease;
+	transition: all 400ms ease
 }
 .cmpc-promotion:hover img {
-	width:185px;
-	height:143px;
+	width: 185px;
+	height: 143px
 }
 #banner {
-	margin:0 auto;
-	padding:60px 0 120px;
-	position:relative;
-	z-index:1;
-	text-align:center;
+	position: relative;
+	z-index: 1;
+	margin: 0 auto;
+	padding: 60px 0 120px;
+	text-align: center
 }
 #banner .title, #banner .app, #play {
-	background:url(../images/v3/cm_icon.png) no-repeat;
+	background: url(../images/v3/cm_icon.png) no-repeat
 }
 #banner .title {
-	margin:0 auto;
-	position:relative;
-	width:516px;
-	height:143px;
-	text-indent:-999em;
+	position: relative;
+	width: 516px;
+	height: 143px;
+	margin: 0 auto;
+	text-indent: -999em
 }
 #banner .download {
-	margin:0 auto;
-	padding-top:64px;
-	width:180px;
+	width: 180px;
+	margin: 0 auto;
+	padding-top: 64px
 }
 #banner .download .no-android {
-	position:relative;
-	top:-6px;
-	left:-25px;
-	clear:both;
-	width:230px;
+	position: relative;
+	top: -6px;
+	left: -25px;
+	clear: both;
+	width: 230px
 }
 #banner .meta {
-	padding-top:10px;
-	font-size:14px;
-	line-height:26px;
-	height:150px;
-	letter-spacing:1px;
-	color:#fff;
+	font-size: 14px;
+	line-height: 26px;
+	height: 150px;
+	padding-top: 10px;
+	letter-spacing: 1px;
+	color: #fff
 }
 #banner .download a {
-	position:relative;
+	position: relative;
 	float: left;
 	overflow: hidden;
 	margin: 9px 0;
