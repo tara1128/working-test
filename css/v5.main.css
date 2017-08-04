@@ -1,7 +1,7 @@
 /*
   Removed PG styles from v4.main.css !
   Working on optimizing ...
-  Latest modified: 2017-08-03 17:18
+  Latest modified: 2017-08-04 16:40
 */
 
 @font-face {
@@ -833,48 +833,47 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
   top:80px;
 }
 .fs-appinsight{
-	background: url(../images/front/appinsight-bg.jpg) no-repeat center #020a16;
-	-moz-background-size: cover;
-	  -o-background-size: cover;
-	     background-size: cover;
+	background:url(../images/front/appinsight-bg.jpg) no-repeat center #020a16;
+	-moz-background-size:cover;
+	  -o-background-size:cover;
+	     background-size:cover;
 }
 .fs-appinsight img {
-	display: block;
-	margin: 0 auto
+	display:block;
+	margin:0 auto;
 }
 .fs-appinsight .title {
-	margin-top: 140px;
+	margin-top:140px;
 }
 .fs-appinsight .desc {
-	font-size: 22px;
-	margin-top: 48px;
-	text-align: center;
-	color: #fff
+	font-size:22px;
+	margin-top:48px;
+	text-align:center;
+	color:#fff;
 }
 .cml3d-video, .whatscall-video {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
 }
 .cml3d-video video{
-	display: block;
-	height: 100%;
-	margin: 0 auto;
+	display:block;
+	height:100%;
+	margin:0 auto;
 }
 .cml3d-video:before, .whatscall-video:before {
-	content: '';
-	display: block;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.7);
+	content:'';
+	display:block;
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,.7);
 }
-
 .whatscall-video video, .whatscall-vdmask {
   position:absolute;
   top:50%;
@@ -894,152 +893,123 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 }
 .whatscall-vdmask {
   z-index:2;
-  background:rgba(22,81,147, .8);
+  background:rgba(22,81,147,.8);
 }
 
 /* Not display video of whatscall on iPhone: */
 @media (max-width:768px) {
-  .whatscall-video, .whatscall-vdmask {
-    display:none!important;
-  }
-  #menuMore li.menu-item {
-    margin: 0 auto 30px;
-  }
-
-  #menuMore li h2.menu-name {
-    float:none;
-    padding:0 0 0 0;
-    width:auto;
-  }
-  #menuMore li div.menu-box {
-    float:none;
-    width:auto;
-  }
-  #menuMore li a {
-    float:none;
-  }
-
+  .whatscall-video, .whatscall-vdmask {display:none!important;}
+  #menuMore li.menu-item {margin:0 auto 30px;}
+  #menuMore li h2.menu-name {float:none;padding:0;width:auto;}
+  #menuMore li div.menu-box {float:none;width:auto;}
+  #menuMore li a {float:none;}
 }
 
 
 #topnotice .fullSlider .main {
-	margin-top: -140px
+	margin-top:-140px;
 }
 .small-screen .fullSlider .main {
-	margin-top: -200px
+	margin-top:-200px;
 }
 #topnotice .small-screen .fullSlider .main {
-	margin-top: -180px
+	margin-top:-180px;
 }
 #topnotice .fs-cms .main, .fs-cms .main {
-	margin-top: -170px
+	margin-top:-170px;
 }
 #topnotice .fs-cmb .main, .fs-cmb .main {
-	margin-top: -200px
+	margin-top:-200px;
 }
 .no-android, .no-android-ios {
-	font-size: 12px;
-	line-height: 16px;
-	display: none;
-	color: #ccc
+	display:none;
+	font-size:12px;
+	line-height:16px;
+	color:#ccc;
 }
 .android-dl, .gp-dl, .android-dl1, .ios-dl {
-	font-size: 12px;
-	line-height: 12px;
-	display: inline-block;
-	overflow: hidden;
-	zoom: 1;
-	width: 180px;
-	height: 60px;
-	text-align: left;
-	text-decoration: none !important;
-	color: #666 !important;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	background: no-repeat;
-	-moz-background-size: contain;
-	-o-background-size: contain;
-	background-size: contain
+	display:inline-block;
+	font-size:12px;
+	line-height:12px;
+	overflow:hidden;
+	zoom:1;
+	width:180px;
+	height:60px;
+	text-align:left;
+	text-decoration:none!important;
+	color:#666!important;
+	border-radius:8px;
+	background-repeat:no-repeat;
+	background-size:contain;
 }
 .gp-dl {
-	width: 127px;
-	height: 50px;
-	padding: 10px 0 0 53px
+	padding:10px 0 0 53px;
+	width:127px;
+	height:50px;
+	background-image:url(../images/dlicon/gp.png);
 }
 .ios-dl {
-	width: 125px;
-	height: 50px;
-	padding: 10px 0 0 55px
+	padding:10px 0 0 55px;
+	width:125px;
+	height:50px;
+	background-image:url(../images/dlicon/as.png);
 }
 .android-dl {
-	width: 127px;
-	height: 49px;
-	padding: 11px 0 0 53px
+	padding:11px 0 0 53px;
+	width:127px;
+	height:49px;
+	background-image:url(../images/dlicon/dl.png);
 }
 .android-dl1 {
-	font-size: 14px;
-	line-height: 60px;
-	width: 110px;
-	padding-left: 70px
+	padding-left:70px;
+	font-size:14px;
+	line-height:60px;
+	width:110px;
+	background-image:url(../images/dlicon/dl1.png);
 }
 .android-dl.dl-disabled, .gp-dl.dl-disabled, .android-dl1.dl-disabled, .ios-dl.dl-disabled {
-	color: #888 !important
-}
-.android-dl {
-	background-image: url(../images/dlicon/dl.png)
-}
-.gp-dl {
-	background-image: url(../images/dlicon/gp.png)
-}
-.android-dl1 {
-	background-image: url(../images/dlicon/dl1.png)
-}
-.ios-dl {
-	background-image: url(../images/dlicon/as.png)
+	color:#888!important;
 }
 .android-dl.dl-disabled {
-	background-image: url(../images/dlicon/dl-disabled.png)
+	background-image:url(../images/dlicon/dl-disabled.png);
 }
 .gp-dl.dl-disabled {
-	background-image: url(../images/dlicon/gp-disabled.png)
+	background-image:url(../images/dlicon/gp-disabled.png);
 }
 .android-dl1.dl-disabled {
-	background-image: url(../images/dlicon/dl1-disabled.png)
+	background-image:url(../images/dlicon/dl1-disabled.png);
 }
 .ios-dl.dl-disabled {
-	background-image: url(../images/dlicon/as-disabled.png)
+	background-image:url(../images/dlicon/as-disabled.png);
 }
 .btn-dl-android {
-	font-size: 21px;
-	line-height: 64px;
-	width: 115px;
-	height: 64px;
-	padding: 0;
-	padding-left: 65px;
-	letter-spacing: 2px;
-	color: #777;
-	-webkit-border-radius: 5px !important;
-	-moz-border-radius: 5px !important;
-	border-radius: 5px !important;
-	background: #eee url(../images/dlicon/btn-dl-android.png) 20px center no-repeat
+	padding:0;
+	padding-left:65px;
+	font-size:21px;
+	line-height:64px;
+	width:115px;
+	height:64px;
+	letter-spacing:2px;
+	color:#777;
+	border-radius:5px!important;
+	background:url(../images/dlicon/btn-dl-android.png) 20px 50% no-repeat #eee;
 }
 #container-wrap {
-	position: relative;
-	z-index: 8;
-	overflow: hidden;
-	width: 100%;
-	padding: 0 0 35px
+	padding:0 0 35px;
+	position:relative;
+	z-index:8;
+	overflow:hidden;
+	width:100%;
 }
 .webviewOpenTip {
-	position: fixed;
-	z-index: 9999;
-	top: 0;
-	left: 0;
-	display: none;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, .7)
+	display:none;
+	position:fixed;
+	z-index:9999;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,.7);
 }
 .webviewOpenTip p {
 	position: relative;
