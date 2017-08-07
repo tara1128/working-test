@@ -1,8 +1,0 @@
-@font-face {
-    font-family: 'MisoBold';
-    src: url('miso-bold.eot');
-    src: url('miso-bold.eot') format('embedded-opentype'),
-         url('miso-bold.woff') format('woff'),
-         url('miso-bold.ttf') format('truetype'),
-         url('miso-bold.svg#MisoBold') format('svg');
-}
