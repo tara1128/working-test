@@ -1,0 +1,171 @@
+/*
+  Styles of cml abandoned from v5.main.css
+  Latest modified: 2017-08-07 17:09
+*/
+.bodyCML {
+	background-color: #fff
+}
+.bodyCML #header-fixed {
+	background: #33446c
+}
+.bodyCML #header-wrap {
+	background: url(../images/v3/cml_hline.png) repeat-x 0 bottom
+}
+.bodyCML .fixed #header-wrap {
+	background: #14142b
+}
+.bodyCML #banner-wrap {
+	background: url(../images/v3/cml_bg.jpg) no-repeat center -300px
+}
+.bodyCML .bannerBG {
+	top: 0;
+	height: 120px;
+	background: url(../images/v3/cml_bg.jpg) no-repeat center -200px
+}
+.bodyCML #banner {
+	padding: 100px 0 260px
+}
+.bodyCML #banner .title {
+	width: 750px;
+	height: auto;
+	background: none
+}
+.bodyCML #banner .download {
+	width: 266px
+}
+.bodyCML #banner .download a {
+	display: block;
+	width: 262px;
+	height: 95px;
+	margin: 15px 0;
+	border: #534a78 solid 2px;
+	border-radius: 8px
+}
+.bodyCML #banner .download a.gp {
+	background: url(../images/v3/cml_gp.png) no-repeat 28px center
+}
+.bodyCML #banner .download a.apk {
+	display: none;
+	border-color: #352e58;
+	background: url(../images/v3/cml_apk.png) no-repeat 28px center #fff
+}
+.bodyCML #banner .social {
+	position: static;
+	display: block;
+	width: 145px;
+	margin: 30px auto 0
+}
+.bodyCML #banner .download .no-android, .cml-dl .no-android {
+	position: relative;
+	top: 10px;
+	left: 0;
+	width: 100%
+}
+.fs-cml {
+	background:no-repeat center center #271e37;
+	background-size:cover;
+}
+.canBackgroundSize .fs-cml {
+	background-image:url(../images/front/cml-bg.jpg);
+}
+.fs-cml .cml-app-bg {
+	margin-top:-150px;
+	top:50%;
+}
+.fs-cml .cml-app-bg-1 {
+	margin-left:-500px;
+	width:300px;
+}
+.fs-cml .cml-app-bg-2 {
+	margin-left:200px;
+	width:290px;
+}
+.fs-cml img {
+	display:block;
+	margin:0 auto;
+}
+.fs-cml .pic {
+	margin:30px auto 40px;
+}
+.fs-cml .desc {
+	margin-top:15px;
+	font-size:26px;
+	text-align:center;
+	color:#fff;
+}
+
+.cml-app-bg {
+	position: absolute;
+	top: 50px;
+	left: 50%
+}
+.cml-app-bg-1 {
+	width: 400px;
+	margin-left: -500px
+}
+.cml-app-bg-2 {
+	width: 380px;
+	margin-left: 100px
+}
+
+
+
+@media (min-width:801px) and (min-height:790px) {
+	.fs-cml .pic {
+		margin: 100px auto 50px;
+	}
+}
+
+
+@media (min-width:1300px) and (min-height:750px) {
+	.cml-app-bg {
+		top: 100px
+	}
+	.cml-app-bg-1 {
+		margin-left: -600px
+	}
+	.cml-app-bg-2 {
+		margin-left: 200px
+	}
+	.fs-cml .cml-app-bg {
+		margin-top: -240px
+	}
+	.fs-cml .cml-app-bg-1 {
+		width: auto;
+		margin-left: -750px
+	}
+	.fs-cml .cml-app-bg-2 {
+		width: auto;
+		margin-left: 300px
+	}
+}
+
+
+@media (max-width:800px) {
+	.fs-cml .cml-app-bg {
+		display: none
+	}
+	.fs-cml .pic {
+		width: 140px
+	}
+	.fs-cml .title {
+		width: 480px
+	}
+	.fs-cml .desc {
+		font-size: 22px
+	}
+}
+
+@media (max-width:540px) {
+	.fs-cml .pic {
+		width: 100px;
+		margin: 50px auto 20px
+	}
+	.fs-cml .title {
+		width: 280px
+	}
+	.fs-cml .desc {
+		font-size: 14px;
+		margin-top: 10px
+	}
+}

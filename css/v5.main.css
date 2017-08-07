@@ -1,7 +1,7 @@
 /*
   Removed PG styles from v4.main.css !
-  Working on optimizing ...
-  Latest modified: 2017-08-07 15:47
+  Working on optimizing ... Removing CM Launcher styles ...
+  Latest modified: 2017-08-07 17:09
 */
 
 @font-face {
@@ -59,6 +59,7 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 .content {position:relative;width:960px;margin:0 auto;}
 .aninode {visibility:hidden;}
 .animated, .animated .aninode {visibility:visible;}
+.canAnimation #banner .download a {overflow:visible;}
 
 /* *** News Banner *** */
 .news-banner {
@@ -462,13 +463,6 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	background:url(../images/front/bg-front-ad-platform.jpg) no-repeat center center;
   background-size:cover!important;
 }
-.fs-cml {
-	background:no-repeat center center #271e37;
-	background-size:cover;
-}
-.canBackgroundSize .fs-cml {
-	background-image:url(../images/front/cml-bg.jpg);
-}
 .fs-cm .title {
 	display:block;
 	margin:0 auto;
@@ -690,31 +684,7 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
   .banner-icon img {width:60px;}
 }
 
-.fs-cml .cml-app-bg {
-	margin-top:-150px;
-	top:50%;
-}
-.fs-cml .cml-app-bg-1 {
-	margin-left:-500px;
-	width:300px;
-}
-.fs-cml .cml-app-bg-2 {
-	margin-left:200px;
-	width:290px;
-}
-.fs-cml img {
-	display:block;
-	margin:0 auto;
-}
-.fs-cml .pic {
-	margin:30px auto 40px;
-}
-.fs-cml .desc {
-	margin-top:15px;
-	font-size:26px;
-	text-align:center;
-	color:#fff;
-}
+
 .fs-cml3d{
 	background:url(../images/front/cml3d-bg.jpg) no-repeat center #020a16;
 	-moz-background-size:cover;
@@ -1929,96 +1899,9 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 .terms-links a:hover {
 	text-decoration: underline
 }
-.bodyCML {
-	background-color: #fff
-}
-.bodyCML #header-fixed {
-	background: #33446c
-}
-.bodyCML #header-wrap {
-	background: url(../images/v3/cml_hline.png) repeat-x 0 bottom
-}
-.bodyCML .fixed #header-wrap {
-	background: #14142b
-}
-.bodyCML #banner-wrap {
-	background: url(../images/v3/cml_bg.jpg) no-repeat center -300px
-}
-.bodyCML .bannerBG {
-	top: 0;
-	height: 120px;
-	background: url(../images/v3/cml_bg.jpg) no-repeat center -200px
-}
-.bodyCML #banner {
-	padding: 100px 0 260px
-}
-.bodyCML #banner .title {
-	width: 750px;
-	height: auto;
-	background: none
-}
-.cml-title .icon {
-	float: left;
-	width: 134px;
-	height: 134px;
-	background: url(../images/v3/cml_icon.png) no-repeat
-}
-.cml-title h2 {
-	float: left;
-	width: 553px;
-	height: 121px;
-	margin: 12px 0 0 25px;
-	background: url(../images/v3/cml_title.png) no-repeat
-}
-.bodyCML #banner .download {
-	width: 266px
-}
-.bodyCML #banner .download a {
-	display: block;
-	width: 262px;
-	height: 95px;
-	margin: 15px 0;
-	border: #534a78 solid 2px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px
-}
-.bodyCML #banner .download a.gp {
-	background: url(../images/v3/cml_gp.png) no-repeat 28px center
-}
-.bodyCML #banner .download a.apk {
-	display: none;
-	border-color: #352e58;
-	background: url(../images/v3/cml_apk.png) no-repeat 28px center #fff
-}
-.canAnimation #banner .download a {
-	overflow: visible
-}
-.bodyCML #banner .social {
-	position: static;
-	display: block;
-	width: 145px;
-	margin: 30px auto 0
-}
-.bodyCML #banner .download .no-android, .cml-dl .no-android {
-	position: relative;
-	top: 10px;
-	left: 0;
-	width: 100%
-}
-.cml-app-bg {
-	position: absolute;
-	top: 50px;
-	left: 50%
-}
-.cml-app-bg-1 {
-	width: 400px;
-	margin-left: -500px
-}
-.cml-app-bg-2 {
-	width: 380px;
-	margin-left: 100px
-}
+
+
+
 .cml-social a, .cml-social a:hover {
 	float: left;
 	overflow: hidden;
@@ -2633,19 +2516,6 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	.fs-cmlk .description {
 		font-size: 26px
 	}
-  /*
-	.fs-ad .pic {
-		width: auto;
-		margin: -225px 0 0 -440px
-	}
-	.fs-ad .title {
-		width: auto;
-		margin: -170px 0 0 -30px
-	}
-  */
-	.fs-cml .pic {
-		margin: 100px auto 50px
-	}
 	#banner {
 		padding-top: 120px
 	}
@@ -2875,32 +2745,12 @@ a.btn_green:visited {
 		width: 600px;
 		margin-top: 90px
 	}
-	.cml-app-bg {
-		top: 100px
-	}
-	.cml-app-bg-1 {
-		margin-left: -600px
-	}
-	.cml-app-bg-2 {
-		margin-left: 200px
-	}
 	#cml-sleek .textbox {
 		margin-top: 170px
 	}
 	#cml-secure .anibox {
 		width: 410px;
 		height: 410px
-	}
-	.fs-cml .cml-app-bg {
-		margin-top: -240px
-	}
-	.fs-cml .cml-app-bg-1 {
-		width: auto;
-		margin-left: -750px
-	}
-	.fs-cml .cml-app-bg-2 {
-		width: auto;
-		margin-left: 300px
 	}
 	.bodyCML3d .cml-page .textbox {
 		width: 555px
@@ -3154,28 +3004,6 @@ a.btn_green:visited {
 		-moz-background-size: 1000px auto;
 		-o-background-size: 1000px auto;
 		background-size: 1000px auto
-	}
-  /*
-	.fs-ad .pic {
-		width: 200px;
-		margin: -140px 0 0 -250px
-	}
-	.fs-ad .title {
-		width: 300px;
-		margin: -100px 0 0 -40px
-	}
-  */
-	.fs-cml .cml-app-bg {
-		display: none
-	}
-	.fs-cml .pic {
-		width: 140px
-	}
-	.fs-cml .title {
-		width: 480px
-	}
-	.fs-cml .desc {
-		font-size: 22px
 	}
 	.fs-cml3d .pic{
 		width: 115px;
@@ -3769,31 +3597,6 @@ a.btn_green:visited {
 		-moz-background-size: 600px auto;
 		-o-background-size: 600px auto;
 		background-size: 600px auto
-	}
-  /*
-	.fs-ad img {
-		position: static;
-		display: block
-	}
-	.fs-ad .pic {
-		width: 140px;
-		margin: 0 auto;
-	}
-	.fs-ad .title {
-		width: 250px;
-		margin: 20px auto 0
-	}
-  */
-	.fs-cml .pic {
-		width: 100px;
-		margin: 50px auto 20px
-	}
-	.fs-cml .title {
-		width: 280px
-	}
-	.fs-cml .desc {
-		font-size: 14px;
-		margin-top: 10px
 	}
 	.fs-cml3d{
 		background-image: url(../images/front/cml3d-bg-m.jpg);
