@@ -1,7 +1,7 @@
 /*
   Removed PG styles from v4.main.css !
   Working on optimizing ...
-  Latest modified: 2017-08-04 18:02
+  Latest modified: 2017-08-07 15:47
 */
 
 @font-face {
@@ -1205,191 +1205,183 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 }
 #banner .download a {
 	position:relative;
-	float: left;
-	overflow: hidden;
-	margin: 9px 0;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px
+	float:left;
+	overflow:hidden;
+	margin:9px 0;
+	border-radius:10px;
 }
 #banner .download a.btg, #banner .download a.htu {
-	font-size: 16px;
-	line-height: 60px;
-	width: 180px;
-	height: 60px;
-	color: #fff;
-	background: url(../images/v3/cm_icon.png) no-repeat -389px -303px
+	font-size:16px;
+	line-height:60px;
+	width:180px;
+	height:60px;
+	color:#fff;
+	background:url(../images/v3/cm_icon.png) no-repeat -389px -303px;
 }
 #banner .download a.btg:hover, #banner .download a.htu:hover {
-	background-position: -389px -228px
+	background-position:-389px -228px;
 }
 #banner .download a.link_latest {
-	font-size: 12px;
-	line-height: 20px;
-	width: 180px;
-	height: 20px;
-	margin: 0;
-	color: #fff;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0;
-	background: none
+	margin:0;
+	font-size:12px;
+	line-height:20px;
+	width:180px;
+	height:20px;
+	color:#fff;
+	border-radius:0;
+	background:none;
 }
 #banner .play {
-	line-height: 14px;
-	position: absolute;
-	bottom: -88px;
-	left: 50%;
-	width: 154px;
-	height: 0;
-	margin-left: -74px;
-	padding-top: 150px;
-	color: #8d8d8d
+	position:absolute;
+	bottom:-88px;
+	left:50%;
+	margin-left:-74px;
+	padding-top:150px;
+	width:154px;
+	height:0;
+	color:#8d8d8d;
+	line-height:14px;
 }
 #banner .app {
-	position: absolute;
-	bottom: -120px;
-	left: 62%;
-	width: 336px;
-	height: 532px;
-	background-position: -5px -153px
+	position:absolute;
+	bottom:-120px;
+	left:62%;
+	width:336px;
+	height:532px;
+	background-position:-5px -153px;
 }
 #banner .social {
-	position: absolute;
-	top: 165px;
-	left: 760px
+	position:absolute;
+	top:165px;
+	left:760px;
 }
 .social a, .social a span {
-	background: url(../images/v3/icon.png) no-repeat
+	background:url(../images/v3/icon.png) no-repeat;
 }
 .social a {
-	float: left;
-	width: 28px;
-	height: 28px;
-	margin: 0 3px;
-	-webkit-transition: background-position 400ms ease;
-	-moz-transition: background-position 400ms ease;
-	-o-transition: background-position 400ms ease;
-	transition: background-position 400ms ease;
-	-webkit-border-radius: 28px;
-	-moz-border-radius: 28px;
-	border-radius: 28px;
-	background-position: -128px -90px
+	float:left;
+	margin:0 3px;
+	width:28px;
+	height:28px;
+	-webkit-transition:background-position 400ms ease;
+	-moz-transition:background-position 400ms ease;
+	-o-transition:background-position 400ms ease;
+	transition:background-position 400ms ease;
+	border-radius:28px;
+	background-position:-128px -90px;
 }
 .social a:hover {
-	background-position: -127px -134px
+	background-position:-127px -134px;
 }
 .social a span {
-	display: block;
-	overflow: hidden;
-	width: 20px;
-	height: 15px;
-	margin: 7px 0 0 5px;
-	text-indent: -999em
+	display:block;
+	margin:7px 0 0 5px;
+	width:20px;
+	height:15px;
+	text-indent:-999em;
+	overflow:hidden;
 }
 .social a.tw span {
-	background-position: -190px 0
+	background-position:-190px 0;
 }
 .social a.fb span {
-	background-position: -222px 0
+	background-position:-222px 0;
 }
 .social a.gp span {
-	background-position: -255px 0
+	background-position:-255px 0;
 }
 .social a.yb span {
-	background-position: -293px 0
+	background-position:-293px 0;
 }
 #banner .link_text {
-	font-size: 12px;
-	display: block;
-	float: left;
-	width: 180px;
-	margin-top: 8px;
-	color: #fff
+	display:block;
+	margin-top:8px;
+	float:left;
+	width:180px;
+	font-size:12px;
+	color:#fff;
 }
 #banner .link_text a {
-	font-size: 13px;
-	line-height: normal;
-	float: none;
-	width: auto;
-	height: auto;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0;
-	background: none
+	font-size:13px;
+	line-height:normal;
+	float:none;
+	width:auto;
+	height:auto;
+	border-radius:0;
+	background:none;
 }
 #banner .link_text em {
-	font-style: normal;
-	margin: 0 10px
+	font-style:normal;
+	margin:0 10px;
 }
 #play {
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-	overflow: hidden;
-	width: 154px;
-	height: 148px;
-	-webkit-transition: -webkit-transform 1s ease;
-	-moz-transition: -moz-transform 1s ease;
-	-moz-transition: transform 1s ease, -moz-transform 1s ease;
-	-o-transition: -o-transform 1s ease;
-	-o-transition: transform 1s ease, -o-transform 1s ease;
-	transition: -webkit-transform 1s ease;
-	transition: transform 1s ease;
-	transition: transform 1s ease, -webkit-transform 1s ease, -moz-transform 1s ease, -o-transform 1s ease;
-	text-indent: -999em;
-	background-position: -411px -377px
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+	overflow:hidden;
+	width:154px;
+	height:148px;
+	-webkit-transition:-webkit-transform 1s ease;
+	-moz-transition:-moz-transform 1s ease;
+	-moz-transition:transform 1s ease, -moz-transform 1s ease;
+	-o-transition:-o-transform 1s ease;
+	-o-transition:transform 1s ease, -o-transform 1s ease;
+	transition:-webkit-transform 1s ease;
+	transition:transform 1s ease;
+	transition:transform 1s ease, -webkit-transform 1s ease, -moz-transform 1s ease, -o-transform 1s ease;
+	text-indent:-999em;
+	background-position:-411px -377px;
 }
 #play:hover {
-	-webkit-transform: scale(1.1);
-	-moz-transform: scale(1.1);
-	-ms-transform: scale(1.1);
-	-o-transform: scale(1.1);
-	transform: scale(1.1);
-	background-position: -410px -560px
+	-webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	-ms-transform:scale(1.1);
+	-o-transform:scale(1.1);
+	transform:scale(1.1);
+	background-position:-410px -560px;
 }
 .article {
-	overflow: hidden;
-	text-align: center;
-	background: #fff
+	overflow:hidden;
+	text-align:center;
+	background:#fff;
 }
 #info {
-	font-size: 20px;
-	line-height: 1.2;
-	margin-bottom: 10px;
-	padding: 150px 15px 30px;
-	color: #000
+	margin-bottom:10px;
+	padding:150px 15px 30px;
+	font-size:20px;
+	line-height:1.2;
+	color:#000;
 }
 #info h3 {
-	font-weight: bold;
-	margin-bottom: 5px
+	font-weight:bold;
+	margin-bottom:5px;
 }
 #info h4 {
-	font-weight: normal
+	font-weight:normal;
 }
 #cm_state {
-	position: relative;
-	overflow: hidden;
-	zoom: 1;
-	margin-bottom: 10px;
-	padding: 150px 0 140px 40%;
-	text-align: left
+	position:relative;
+	margin-bottom:10px;
+	padding:150px 0 140px 40%;
+	overflow:hidden;
+	zoom:1;
+	text-align:left;
 }
 #cm_state strong {
-	font-weight: bold
+	font-weight:bold;
 }
 #cm_state img {
-	vertical-align: middle
+	vertical-align:middle;
 }
 #cm_state .icon {
-	position: absolute;
-	top: 80px;
-	left: -15%;
-	width: 50%
+	position:absolute;
+	top:80px;
+	left:-15%;
+	width:50%;
 }
 #cm_state li {
-	font-size: 20px;
+	font-size:20px;
 	zoom: 1;
 	padding: 25px 0;
 	background: url(../images/v3/dot.png) repeat-x 0 100%
