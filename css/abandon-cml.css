@@ -1,7 +1,33 @@
 /*
   Styles of cml abandoned from v5.main.css
-  Latest modified: 2017-08-07 17:09
+  Latest modified: 2017-08-08 18:55
 */
+
+
+.cml3d-video, .whatscall-video {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.cml3d-video video{
+	display:block;
+	height:100%;
+	margin:0 auto;
+}
+.cml3d-video:before, .whatscall-video:before {
+	content:'';
+	display:block;
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,.7);
+}
+
 .bodyCML {
 	background-color: #fff
 }
@@ -94,6 +120,19 @@
 	color:#fff;
 }
 
+.terms-links {
+	padding: 10px 0;
+	text-align: center
+}
+.terms-links a {
+	display: inline-block;
+	margin: 0 10px;
+	color: #fff
+}
+.terms-links a:hover {
+	text-decoration:underline;
+}
+
 .cml-app-bg {
 	position: absolute;
 	top: 50px;
@@ -106,6 +145,83 @@
 .cml-app-bg-2 {
 	width: 380px;
 	margin-left: 100px
+}
+.cml-dl .gp .arrow {
+	float: left;
+	width: 26px;
+	height: 22px;
+	margin: 10px 20px 0 0;
+	background: url(../images/v3/cml_gp_arrow.png) no-repeat
+}
+.cml-dl .gp .icon {
+	float: right;
+	width: 191px;
+	height: 49px;
+	background: url(../images/v3/cml_gp.png) no-repeat
+}
+#cml-sleek .content {
+	padding-top:0;
+}
+#cml-sleek .textbox {
+	margin-top:100px;
+}
+#cml-sleek .title {
+	background-position:0 0;
+}
+#cml-sleek .anibox img {
+	display:block;
+	width:100%;
+	margin:0 auto;
+}
+#cml-small .title {
+	background-position:0 -120px;
+}
+#cml-small .anibox {
+	padding-top:150px;
+}
+#cml-small .anibox .ball {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 282px;
+	height: 356px;
+	margin-left: -121px;
+	background: url(../images/v3/cml_small_ball.png) no-repeat;
+}
+#cml-small .anibox .ball-shadow {
+	background-image: url(../images/v3/cml_small_ball_shadow.png);
+}
+#cml-small .anibox .ball .ulbox {
+	font-size: 60px;
+	line-height: 1;
+	position: relative;
+	position: absolute;
+	top: 18px;
+	left: 80px;
+	overflow: hidden;
+	width: 40px;
+	height: 170px;
+	text-align: center;
+	color: #5f5cbc;
+}
+#cml-small .anibox .ball ul {
+	position: relative;
+	top: 32%
+}
+#cml-small .anibox .ball p {
+	font-size: 36px;
+	margin: 88px 0 0 130px;
+	color: #8e8fad
+}
+#cml-small .anibox .box {
+	display: block;
+	margin: 0 auto
+}
+@media (min-width:540px) {
+	.cml-page, .bodyCML #banner-wrap {
+		position: static !important;
+		display: block !important
+	}
 }
 
 
@@ -138,6 +254,9 @@
 		width: auto;
 		margin-left: 300px
 	}
+	#cml-sleek .textbox {
+		margin-top: 170px
+	}
 }
 
 
@@ -154,6 +273,43 @@
 	.fs-cml .desc {
 		font-size: 22px
 	}
+
+	#cml-sleek .textbox {
+		margin-top: 40px
+	}
+	#cml-sleek .anibox img {
+		width: 200px
+	}
+	#cml-small .title {
+		background-position: 0 -78px
+	}
+	#cml-small .anibox {
+		padding-top: 110px
+	}
+	#cml-small .anibox .box {
+		width: 180px
+	}
+	#cml-small .anibox .ball {
+		width: 180px;
+		height: 230px;
+		margin-left: -84px;
+		-moz-background-size: contain;
+		-o-background-size: contain;
+		background-size: contain
+	}
+	#cml-small .anibox .ball p {
+		font-size: 26px;
+		margin: 58px 0 0 80px
+	}
+	#cml-small .anibox .ball .ulbox {
+		font-size: 40px;
+		top: 15px;
+		left: 40px;
+		width: 30px;
+		height: 112px
+	}
+
+
 }
 
 @media (max-width:540px) {
@@ -168,4 +324,80 @@
 		font-size: 14px;
 		margin-top: 10px
 	}
+	#cml-sleek .anibox img {
+		width: auto;
+		height: 130px
+	}
+	#cml-sleek .textbox {
+		margin-top: 10px
+	}
+	#cml-sleek .content {
+		padding-top: 40px
+	}
+	.mobileModel #cml-sleek .content {
+		padding-top: 0
+	}
+	#cml-sleek .title {
+		width: 108px
+	}
+	#cml-small .title {
+		width: 116px
+	}
+
 }
+
+
+
+@media (max-width:540px) and (min-height:450px) {
+	#cml-sleek .anibox img {
+		height: 200px
+	}
+}
+
+@media (max-width:540px) and (min-height:550px) {
+	#cml-sleek .anibox img {
+		height: 240px
+	}
+	#cml-sleek .textbox {
+		margin-top: 30px
+	}
+	.bodyCML .mobileModel #banner {
+		height: 400px;
+		margin-top: -170px
+	}
+	.bodyCML .mobileModel #banner .download {
+		bottom: 30px
+	}
+}
+
+
+
+@media (max-width:540px) and (max-height:550px) {
+	.mobileModel #cml-small .content {
+		margin-top: -190px
+	}
+	#cml-small .anibox {
+		padding-top: 80px
+	}
+	#cml-small .anibox .box {
+		width: 120px
+	}
+	#cml-small .anibox .ball {
+		width: 120px;
+		margin-left: -58px
+	}
+	#cml-small .anibox .ball p {
+		font-size: 20px;
+		margin: 50px 0 0 60px
+	}
+	#cml-small .anibox .ball .ulbox {
+		font-size: 30px;
+		top: 7px;
+		left: 30px
+	}
+
+}
+
+
+
+

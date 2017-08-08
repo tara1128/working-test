@@ -1,7 +1,7 @@
 /*
   Removed PG styles from v4.main.css !
   Working on optimizing ... Removing CM Launcher styles ...
-  Latest modified: 2017-08-07 17:09
+  Latest modified: 2017-08-08 18:55
 */
 
 @font-face {
@@ -821,7 +821,7 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	text-align:center;
 	color:#fff;
 }
-.cml3d-video, .whatscall-video {
+.whatscall-video {
 	position:absolute;
 	left:0;
 	top:0;
@@ -829,12 +829,7 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	height:100%;
 	overflow:hidden;
 }
-.cml3d-video video{
-	display:block;
-	height:100%;
-	margin:0 auto;
-}
-.cml3d-video:before, .whatscall-video:before {
+.whatscall-video:before {
 	content:'';
 	display:block;
 	position:absolute;
@@ -1887,475 +1882,10 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	margin-left: -302px;
 	background: url(../images/v3/cb_app.png) no-repeat center 0
 }
-.terms-links {
-	padding: 10px 0;
-	text-align: center
-}
-.terms-links a {
-	display: inline-block;
-	margin: 0 10px;
-	color: #fff
-}
-.terms-links a:hover {
-	text-decoration: underline
-}
 
 
 
-.cml-social a, .cml-social a:hover {
-	float: left;
-	overflow: hidden;
-	width: 34px;
-	height: 34px;
-	margin: 0 7px;
-	text-indent: -9999em;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	background: url(../images/v3/cml_social.png) no-repeat
-}
-.cml-social .gp, .cml-social .gp:hover {
-	background-position: -49px 0
-}
-.cml-social .tw, .cml-social .tw:hover {
-	background-position: -98px 0
-}
-.cml-social a:hover {
-	background-color: #5b6089
-}
-.cml-dl .qrcode {
-	float: right;
-	height: 56px;
-	margin-top: 2px
-}
-#banner .cml-dl .gp, #banner .cml-dl .apk {
-	text-indent: -999em
-}
-.cml-dl .gp .arrow {
-	float: left;
-	width: 26px;
-	height: 22px;
-	margin: 10px 20px 0 0;
-	background: url(../images/v3/cml_gp_arrow.png) no-repeat
-}
-.cml-dl .gp .icon {
-	float: right;
-	width: 191px;
-	height: 49px;
-	background: url(../images/v3/cml_gp.png) no-repeat
-}
-.cml-page {
-	overflow: hidden;
-	background: #fff
-}
-.cml-page .content {
-	padding: 70px 0;
-	border-bottom: 1px solid #e4e3e8;
-}
-.cml-page .textbox {
-	width: 500px;
-	margin-top: 60px
-}
-.cml-page .title {
-	font-size:60px;
-	line-height:60px;
-	height:60px;
-	text-indent:-9990em;
-	color:#7f8fdd;
-	background:url(../images/v3/cml_tt.png) no-repeat;
-}
-.cml-page .desc {
-	font-size:24px;
-	line-height:1.4;
-	margin:10px 0 40px;
-	color:#7f8fdd;
-}
-.cml-page .entry {
-	font-size:18px;
-	color:#4c4c4c;
-}
-.cml-page .anibox {
-	position:relative;
-	width:350px;
-}
-#cml-sleek .content {
-	padding-top:0;
-}
-#cml-sleek .textbox {
-	margin-top:100px;
-}
-#cml-sleek .title {
-	background-position:0 0;
-}
-#cml-sleek .anibox img {
-	display:block;
-	width:100%;
-	margin:0 auto;
-}
-#cml-secure .title {
-	background-position:0 -60px;
-}
-#cml-small .title {
-	background-position:0 -120px;
-}
-#cml-smart .title {
-	margin-top: 50px;
-	background-position:0 -180px;
-}
-#cml-secure .anibox {
-	width:360px;
-	height:360px;
-	margin-top:30px;
-}
-#cml-secure .anibox img {
-	position: absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	opacity:0;
-}
-#cml-secure.animated .anibox img {
-	opacity:1;
-}
-#cml-secure .powered {
-	font-size:18px;
-	line-height:1.6;
-	position:relative;
-	margin-top:60px;
-	padding:30px 0 0 100px;
-	color:#9f9f9f;
-}
-#cml-secure .powered i {
-	position:absolute;
-	top:0;
-	left:0;
-	overflow:hidden;
-	width:78px;
-	height:87px;
-	background:url(../images/v3/cmbc_cer.png) no-repeat 0 -87px;
-}
-#cml-small .anibox {
-	padding-top:150px;
-}
-#cml-small .anibox .ball {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 282px;
-	height: 356px;
-	margin-left: -121px;
-	background: url(../images/v3/cml_small_ball.png) no-repeat;
-}
-#cml-small .anibox .ball-shadow {
-	background-image: url(../images/v3/cml_small_ball_shadow.png);
-}
-#cml-small .anibox .ball .ulbox {
-	font-size: 60px;
-	line-height: 1;
-	position: relative;
-	position: absolute;
-	top: 18px;
-	left: 80px;
-	overflow: hidden;
-	width: 40px;
-	height: 170px;
-	text-align: center;
-	color: #5f5cbc;
-}
-#cml-small .anibox .ball ul {
-	position: relative;
-	top: 32%
-}
-#cml-small .anibox .ball p {
-	font-size: 36px;
-	margin: 88px 0 0 130px;
-	color: #8e8fad
-}
-#cml-small .anibox .box {
-	display: block;
-	margin: 0 auto
-}
-#cml-smart .anibox {
-	padding-top: 260px
-}
-#cml-smart .fold {
-	position: relative;
-	z-index: 1;
-	display: block;
-	width: 260px;
-	margin: 0 auto
-}
-#cml-smart .fold1, #cml-smart .fold2 {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	display: block;
-	width: 460px;
-	margin-left: -230px
-}
-.ie6 #cml-smart .fold1,
-.ie7 #cml-smart .fold1,
-.ie8 #cml-smart .fold1,
-.ie9 #cml-smart .fold1{
-	display: none;
-}
-#cml-footer .content {
-	padding-bottom: 0;
-	border-bottom: 0
-}
-#cml-footer .textbox {
-	width: 590px;
-	margin-top: 80px
-}
-#cml-footer .cml-title {
-	text-indent: -9999em
-}
-#cml-footer .cml-title h2 {
-	width: 426px;
-	height: 102px;
-	background-image: url(../images/v3/cml_title_black.png)
-}
-.cml-dl {
-	width: 260px;
-	margin-top: 50px
-}
-#cml-footer .cml-dl .gp {
-	float: left;
-	border: 1px solid #e5e5e5;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	background-color: #eee
-}
-#cml-footer .cml-dl .qrcode {
-	border: 1px solid #e5e5e5;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-}
-#cml-footer .cml-dl .qrcode {
-	height: 60px;
-}
-.cml-social {
-	margin-top: 20px;
-}
-.bodyCML3d {
-	background: #FFF;
-}
-.bodyCML3d #container-wrap {
-	margin-top: -101px;
-}
-.bodyCML3d #header-fixed, .bodyCML3d #header-wrap {
-	background: none;
-}
-.bodyCML3d .fixed #header-wrap {
-	background: url(../images/v3/cml3d-head.jpg) no-repeat center #020b17;
-}
-.bodyCML3d #header-wrap {
-	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-.bodyCML3d .mobileModel #container-wrap {
-	height:100%;
-	padding:0;
-}
-.bodyCML3d #banner-wrap {
-	background: url(../images/v3/cml3d-banner.jpg) no-repeat center #020b17;
-	-moz-background-size: auto 100%;
-	-o-background-size: auto 100%;
-	background-size: auto 100%;
-}
-.bodyCML3d #banner-wrap {
-	position:relative;
-}
-.bodyCML3d #banner {
-	padding: 216px 0 150px
-}
-#banner .cml3d-title {
-	width: 538px;
-	height: 214px;
-	background: url(../images/v3/cml3d-logo.png) no-repeat center
-}
-.cml3d-social {
-	font-size: 20px;
-	color: #99adc5;
-	margin: 18px 0 0
-}
-.cml3d-social a {
-	display: inline-block;
-	width: 26px;
-	height: 26px;
-	background: url(../images/v3/cml3d-share.png) no-repeat;
-	overflow: hidden;
-	font-size: 0;
-	text-indent: -9999px;
-	vertical-align: middle;
-	margin-left: 16px;
-	-webkit-border-radius: 2px;
-	   -moz-border-radius: 2px;
-	        border-radius: 2px
-}
-.cml3d-social a.fb {
-	background-position: 0 0
-}
-.cml3d-social a.gp {
-	background-position: 0 -48px
-}
-.cml3d-social a.tw {
-	background-position: 0 -96px
-}
-.cml3d-social a.fb:hover {
-	background-position: -30px 0
-}
-.cml3d-social a.gp:hover {
-	background-position: -30px -48px
-}
-.cml3d-social a.tw:hover {
-	background-position: -30px -96px
-}
-.bodyCML3d #banner .download {
-	width: 214px;
-	padding-top: 30px
-}
-.bodyCML3d #banner .download a {
-	float: none;
-	display: block;
-	margin: 0 auto;
-	width: 214px;
-	height: 64px;
-	background: url(../images/v3/cml3d-gp.png) no-repeat center;
-	border: 1px solid rgba(153, 173, 197, 0.58);
-	border/*\**/:1px solid #5a6b7f \9;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	-webkit-transition: border-color .3s, background-color .3s;
-	-moz-transition: border-color .3s, background-color .3s;
-	-o-transition: border-color .3s, background-color .3s;
-	transition: border-color .3s, background-color .3s
-}
-.bodyCML3d #banner .download a:hover {
-	background-image: url(../images/v3/cml3d-gp-black.png);
-	background-color: #c3ddff
-}
-.cma3d-banner-link {
-	margin-top: 95px;
-	color: #94a7bf
-}
-.cma3d-banner-link a {
-	color: #94a7bf;
-	margin: 0 11px
-}
-.cma3d-banner-link a:hover {
-	color: #58a0fb
-}
-.bodyCML3d .video {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden
-}
-.bodyCML3d .video:after {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.7)
-}
-.bodyCML3d .video video {
-	display: block;
-	height: 100%;
-	margin: 0 auto;
-	-webkit-filter: blur(4px);
-	filter: blur(4px)
-}
-.bodyCML3d .cml-page .title {
-	line-height: 80px;
-	height: 80px;
-	color: #446296;
-	background: url(../images/v3/cml3d_tt.png) no-repeat
-}
-.bodyCML3d .cml-page .desc {
-	color: #446296;
-	margin-top: 0
-}
-.bodyCML3d .cml-page .entry {
-	color: #02070f
-}
-.bodyCML3d #cml-boost .textbox {
-	margin-top: 0
-}
-.bodyCML3d #cml-boost .anibox {
-	margin-top: 30px;
-	width: 420px
-}
-.bodyCML3d #cml-boost .anibox img {
-	width: 100%
-}
-.bodyCML3d #cml-boost .title {
-	background-position: 0 -80px
-}
-.bodyCML3d #cml-boost .boost {
-	position: absolute;
-	left: 0;
-	top: -50px
-}
-.bodyCML3d #cml-person .anibox {
-	margin: 130px 0 0 0
-}
-.bodyCML3d #cml-person .person {
-	position: absolute;
-	top: -66px;
-	left: 0
-}
-.bodyCML3d #cml-person .person3 {
-	position: absolute;
-	top: -134px;
-	left: 12px
-}
-.bodyCML3d #cml-person .title {
-	background-position: 0 -160px
-}
-.bodyCML3d #cml-smart .title {
-	background-position: 0 -240px
-}
-.bodyCML3d #cml-secure .title {
-	background-position: 0 -320px
-}
-.bodyCML3d #cml-footer .cml-title {
-	width: 531px;
-	height: 116px;
-	background: url(../images/v3/cml3d-title.png) no-repeat center
-}
-.bodyCML3d #cml-footer .cml-dl {
-	width: 313px
-}
-.bodyCML3d #cml-footer .cml-dl .gp {
-	background: url(../images/v3/cml3d-gp.png) no-repeat center #FFF;
-	text-indent: -999px;
-	padding: 0;
-	margin: 0;
-	width: 208px;
-	height: 83px
-}
-.bodyCML3d #cml-footer .cml-dl .gp:hover {
-	background-color: #F1F1F1
-}
-.bodyCML3d #cml-footer .cml-dl .qrcode {
-	height: 83px;
-	margin-top: 0
-}
-.bodyCML3d .cml-social a {
-	background-color: #f7f9fb;
-	background-image: url(../images/v3/cml3d_social.png)
-}
-.bodyCML3d .cml-social a:hover {
-	background-color: #eef1f4
-}
+
 .bodyCML3d .video-wrap {
 	display: none;
 	position: fixed;
@@ -2734,57 +2264,6 @@ a.btn_green:visited {
 	}
 	.bodyCB #banner .social {
 		left: 870px
-	}
-	.cml-page .content {
-		padding: 100px 0
-	}
-	.cml-page .anibox {
-		width: 420px
-	}
-	.cml-page .textbox {
-		width: 600px;
-		margin-top: 90px
-	}
-	#cml-sleek .textbox {
-		margin-top: 170px
-	}
-	#cml-secure .anibox {
-		width: 410px;
-		height: 410px
-	}
-	.bodyCML3d .cml-page .textbox {
-		width: 555px
-	}
-	.bodyCML3d #cml-anim .anibox {
-		margin: 40px 0 0 100px
-	}
-	.bodyCML3d #cml-anim .textbox {
-		margin-right: 70px
-	}
-	.bodyCML3d #cml-boost .textbox {
-		margin-left: 60px
-	}
-	.bodyCML3d #cml-boost .anibox {
-		width: 561px
-	}
-	.bodyCML3d #cml-person .anibox {
-		margin: 130px 0 0 75px;
-		width: 354px
-	}
-	.bodyCML3d #cml-person .textbox {
-		margin-right: 65px
-	}
-	.bodyCML3d #cml-smart .anibox {
-		margin-right: 80px
-	}
-	.bodyCML3d #cml-smart .textbox {
-		margin-left: 60px
-	}
-	.bodyCML3d #cml-secure .anibox {
-		margin-left: 100px
-	}
-	.bodyCML3d #cml-secure .textbox {
-		margin-right: 10px
 	}
 	.bodyCML3d #cml-footer .textbox {
 		margin-left: 120px
@@ -3327,14 +2806,7 @@ a.btn_green:visited {
 		width: 300px;
 		margin-top: 20px
 	}
-	.cml-page .title {
-		font-size: 30px;
-		line-height: 40px;
-		height: 40px;
-		-moz-background-size: auto 155px;
-		-o-background-size: auto 155px;
-		background-size: auto 155px
-	}
+
 	.cml-page .desc {
 		font-size: 16px;
 		margin-bottom: 20px
@@ -3344,60 +2816,6 @@ a.btn_green:visited {
 	}
 	.cml-page .anibox {
 		width: 200px
-	}
-	#cml-sleek .textbox {
-		margin-top: 40px
-	}
-	#cml-sleek .anibox img {
-		width: 200px
-	}
-	#cml-secure .title {
-		background-position: 0 -39px
-	}
-	#cml-secure .anibox {
-		width: 200px;
-		height: 200px
-	}
-	#cml-secure .powered {
-		font-size: 12px;
-		margin-top: 30px;
-		padding: 15px 0 0 60px
-	}
-	#cml-secure .powered i {
-		width: 50px;
-		height: 56px;
-		background-position: 0 -54px;
-		-moz-background-size: 133px auto;
-		-o-background-size: 133px auto;
-		background-size: 133px auto
-	}
-	#cml-small .title {
-		background-position: 0 -78px
-	}
-	#cml-small .anibox {
-		padding-top: 110px
-	}
-	#cml-small .anibox .box {
-		width: 180px
-	}
-	#cml-small .anibox .ball {
-		width: 180px;
-		height: 230px;
-		margin-left: -84px;
-		-moz-background-size: contain;
-		-o-background-size: contain;
-		background-size: contain
-	}
-	#cml-small .anibox .ball p {
-		font-size: 26px;
-		margin: 58px 0 0 80px
-	}
-	#cml-small .anibox .ball .ulbox {
-		font-size: 40px;
-		top: 15px;
-		left: 40px;
-		width: 30px;
-		height: 112px
 	}
 	#cml-smart .title {
 		margin-top: 0;
@@ -3423,49 +2841,6 @@ a.btn_green:visited {
 		float: none;
 		width: 250px;
 		margin: 30px auto 0
-	}
-	.bodyCML3d .cml-page .title {
-		height: 40px;
-		-moz-background-size: 232px auto;
-		-o-background-size: 232px auto;
-		background-size: 232px auto
-	}
-	.bodyCML3d .cml-page .textbox {
-		width: 300px
-	}
-	.bodyCML3d #cml-boost .title {
-		background-position: 0 -40px
-	}
-	.bodyCML3d #cml-person .title {
-		background-position: 0 -80px
-	}
-	.bodyCML3d #cml-smart .title {
-		background-position: 0 -120px
-	}
-	.bodyCML3d #cml-secure .title {
-		background-position: 0 -160px
-	}
-	.bodyCML3d #cml-anim .anibox img {
-		width: 100%
-	}
-	.bodyCML3d #cml-boost .anibox {
-		width: 200px
-	}
-	.bodyCML3d #cml-boost .boost {
-		top: -25px
-	}
-	.bodyCML3d #cml-person .anibox {
-		margin-top: 65px;
-		width: 180px
-	}
-	.bodyCML3d #cml-person .person {
-		top: -33px
-	}
-	.bodyCML3d #cml-person .person3 {
-		top: -67px
-	}
-	.bodyCML3d #cml-person .anibox img {
-		width: 100%
 	}
 	.bodyCML3d #cml-footer .cml-title {
 		width: 500px;
@@ -3633,17 +3008,6 @@ a.btn_green:visited {
 	.bodyCML3d #banner .download {
 		padding-top: 60px
 	}
-	.cml3d-social {
-		font-size: 16px;
-		margin-top: 30px
-	}
-	.bodyCML3d #banner .download a {
-		width: 160px;
-		height: 49px;
-		-moz-background-size: contain;
-		-o-background-size: contain;
-		background-size: contain
-	}
 
   .fs-liveme img.livemeStar {
     margin: 10px auto 0;
@@ -3722,10 +3086,6 @@ a.btn_green:visited {
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover
-	}
-	#banner .cml3d-title {
-		background-position: center;
-		height: 118px
 	}
 	#banner .app {
 		width: 280px;
@@ -3950,7 +3310,10 @@ a.btn_green:visited {
 	.bodyCML3d, .bodyCML {
 		background-color: #ddd
 	}
-	.bodyCML .mobileModel #container-wrap, .bodyCML .mobileModel #container-wrap .section, .bodyCML3d .mobileModel #container-wrap, .bodyCML3d .mobileModel #container-wrap .section {
+	.bodyCML .mobileModel #container-wrap,
+  .bodyCML .mobileModel #container-wrap .section,
+  .bodyCML3d .mobileModel #container-wrap,
+  .bodyCML3d .mobileModel #container-wrap .section {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -4080,37 +3443,6 @@ a.btn_green:visited {
 		font-size: 14px;
 		margin: 7px 0 10px
 	}
-	#cml-sleek .anibox img {
-		width: auto;
-		height: 130px
-	}
-	#cml-sleek .textbox {
-		margin-top: 10px
-	}
-	#cml-sleek .content {
-		padding-top: 40px
-	}
-	.mobileModel #cml-sleek .content {
-		padding-top: 0
-	}
-	.cml-page .title {
-		margin: 0 auto
-	}
-	#cml-sleek .title {
-		width: 108px
-	}
-	#cml-secure .powered {
-		display: none
-	}
-	#cml-secure .title {
-		width: 145px
-	}
-	#cml-secure .anibox {
-		margin-top: 0
-	}
-	#cml-small .title {
-		width: 116px
-	}
 	#cml-smart .title {
 		width: 125px
 	}
@@ -4135,27 +3467,6 @@ a.btn_green:visited {
 	}
 	.bodyCML3d #cml-anim .title {
 		width: 207px
-	}
-	.bodyCML3d #cml-boost .title {
-		width: 88px
-	}
-	.bodyCML3d #cml-boost .title {
-		width: 88px
-	}
-	.bodyCML3d #cml-person .title {
-		width: 232px
-	}
-	.bodyCML3d #cml-boost .anibox {
-		width: 260px
-	}
-	.bodyCML3d #cml-smart .title {
-		width: 214px
-	}
-	.bodyCML3d #cml-secure .title {
-		width: 125px
-	}
-	.bodyCML3d #cml-person .anibox {
-		margin: 50px auto 0
 	}
 	.bodyCML3d #cml-footer .cml-title {
 		width: 290px;
@@ -4184,28 +3495,6 @@ a.btn_green:visited {
 	}
 }
 @media (max-width:540px) and (max-height:550px) {
-	.mobileModel #cml-small .content {
-		margin-top: -190px
-	}
-	#cml-small .anibox {
-		padding-top: 80px
-	}
-	#cml-small .anibox .box {
-		width: 120px
-	}
-	#cml-small .anibox .ball {
-		width: 120px;
-		margin-left: -58px
-	}
-	#cml-small .anibox .ball p {
-		font-size: 20px;
-		margin: 50px 0 0 60px
-	}
-	#cml-small .anibox .ball .ulbox {
-		font-size: 30px;
-		top: 7px;
-		left: 30px
-	}
 	#cml-smart .content {
 		margin-top: -190px
 	}
@@ -4220,46 +3509,12 @@ a.btn_green:visited {
 		margin-left: -100px
 	}
 }
-@media (max-width:540px) and (min-height:450px) {
-	.mobileModel .cml-page .content {
-		height: 420px;
-		margin-top: -210px
-	}
-	#cml-sleek .anibox img {
-		height: 200px
-	}
-	#cml-secure .anibox {
-		margin-bottom: 20px
-	}
-}
 @media (max-width:540px) and (min-height:530px) {
 	.mobileModel .bodyCML #banner {
 		padding-top: 120px
 	}
 	.bodyCML #banner .download {
 		bottom: 80px
-	}
-}
-@media (max-width:540px) and (min-height:550px) {
-	.mobileModel .cml-page .content {
-		height: 520px;
-		margin-top: -240px
-	}
-	.bodyCML .mobileModel #banner {
-		height: 400px;
-		margin-top: -170px
-	}
-	#cml-sleek .anibox img {
-		height: 240px
-	}
-	#cml-sleek .textbox {
-		margin-top: 30px
-	}
-	#cml-secure .anibox {
-		margin-top: 40px
-	}
-	.bodyCML .mobileModel #banner .download {
-		bottom: 30px
 	}
 }
 @media (max-width:540px) and (min-height:580px) {
@@ -4273,12 +3528,6 @@ a.btn_green:visited {
 	}
 	.news-banner .main {
 		width: 300px
-	}
-}
-@media (min-width:540px) {
-	.cml-page, .bodyCML #banner-wrap {
-		position: static !important;
-		display: block !important
 	}
 }
 @media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-device-pixel-ratio:1.5) {
@@ -5457,9 +4706,6 @@ a.btn_green:visited {
 		padding-bottom: 105px
 	}
 
-	.bodyCML3d #container-wrap{
-		margin-top: -50px;
-	}
 }
 @media (max-width:540px) {
 	.body-ru-ru #menuMore ul {
@@ -5490,24 +4736,6 @@ a.btn_green:visited {
 	}
 	.footer-wrap h3, .footer-wrap .gp-dl {
 		display: none
-	}
-	.bodyCML3d #container-wrap{
-		margin-top: 0;
-	}
-	.bodyCML3d #banner{
-		padding-top: 90px;
-	}
-	.cml3d-social a{
-		font-size: 14px;
-		margin-left: 10px;
-	}
-	.bodyCML3d .mobileModel #cml-boost .anibox{
-		margin-top: 60px;
-		margin-bottom: 30px;
-	}
-	.bodyCML3d .mobileModel #cml-person .anibox{
-		margin-top: 90px;
-		margin-bottom: 30px;
 	}
 }
 @media (max-width:500px) {
