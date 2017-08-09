@@ -1,7 +1,7 @@
 /*
   For CM Launcher only.
   Seperated from v5.main.css.
-  Latest modified: 2017-08-08 18:55
+  Latest modified: 2017-08-09 17:20
 */
 
 .bodyCML3d {
@@ -28,10 +28,10 @@
 	background:url(../images/v3/cml3d-banner.jpg) no-repeat center #020b17;
 	background-size:auto 100%;
 }
-#banner {
+.bodyCML3d #banner {
 	padding:216px 0 150px;
 }
-#banner .cml3d-title {
+.bodyCML3d #banner .cml3d-title {
 	width:538px;
 	height:214px;
 	background:url(../images/v3/cml3d-logo.png) no-repeat center;
@@ -58,7 +58,7 @@
 .bodyCML3d #banner .download a:hover {
 	background:url(../images/v3/cml3d-gp-black.png) no-repeat center #c3ddff;
 }
-.bodyCML3d .video {
+.video {
 	position:absolute;
 	left:0;
 	top:0;
@@ -66,7 +66,7 @@
 	height:100%;
 	overflow:hidden;
 }
-.bodyCML3d .video:after {
+.video:after {
 	position:absolute;
 	content:"";
 	left:0;
@@ -75,13 +75,80 @@
 	height:100%;
 	background:rgba(0,0,0,0.7);
 }
-.bodyCML3d .video video {
+.video video {
 	display:block;
 	margin:0 auto;
 	height:100%;
 	-webkit-filter:blur(4px);
 	filter:blur(4px);
 }
+.video-wrap {
+	display:none;
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:99999;
+	background:rgba(0,0,0,0.75);
+	_position:absolute;
+	_bottom:auto;
+	_top:expression(eval(document.documentElement.scrollTop));
+}
+.video-box {
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-274px 0 0 -426px;
+	width:852px;
+	background:#303030;
+}
+.video-frame {
+	width:852px;
+	height:479px;
+	background:#272727;
+	overflow:hidden;
+}
+.video-frame iframe {
+	width:100%;
+	height:100%;
+}
+.video-buttons a {
+	float:left;
+	line-height:68px;
+	white-space:nowrap;
+	font-size:14px;
+	color:#afafaf;
+	text-align:center;
+}
+.video-buttons a.cur {
+	background:#272727;
+}
+a.video-btn-1, a.video-btn-2 {
+	width:50%;
+}
+.video-buttons a img {
+	display:none;
+	vertical-align:middle;
+	margin-right:5px;
+}
+.video-buttons a.cur img {
+	display:inline;
+}
+.video-close {
+	display:block;
+	position:absolute;
+	right:5px;
+	top:5px;
+	width:25px;
+	height:25px;
+	background:url(../images/v3/cml3d-close-icon.png) no-repeat center;
+}
+
+
+
+
+
 .cma3d-banner-link {
 	margin-top:95px;
 	color:#94a7bf;
@@ -131,7 +198,8 @@
 	background-position:0 -160px;
 }
 
-#banner .cml-dl .gp, #banner .cml-dl .apk {
+.bodyCML3d #banner .cml-dl .gp,
+.bodyCML3d #banner .cml-dl .apk {
 	text-indent:-999em;
 }
 .cml-title .icon {
@@ -381,6 +449,8 @@
 	#cml-person .textbox {margin-right:65px;}
 	#cml-anim .anibox {margin:40px 0 0 100px;}
 	#cml-anim .textbox {margin-right:70px;}
+	#cml-footer .textbox {margin-left:120px;}
+	#cml-footer .phone {margin-right:125px;}
 }
 
 @media (max-width:800px) {
@@ -400,13 +470,22 @@
 	#cml-person .anibox img {width:100%;}
 	#cml-person .title {background-position:0 -80px;}
 	#cml-anim .anibox img {width:100%;}
+	#cml-footer .cml-title {width:500px;height:110px;background-size:contain;}
 }
 
 @media (max-width:540px) {
-	.bodyCML3d #container-wrap{margin-top:0;}
-	.bodyCML3d #banner{padding-top:90px;}
-	#banner .cml3d-title {background-position:50%;background-size:cover;width:300px;height:118px;}
+	.bodyCML3d {background:#ddd;}
+  .bodyCML3d .mobileModel #container-wrap,
+  .bodyCML3d .mobileModel #container-wrap .section {position:absolute;top:0;left:0;width:100%;height:100%;padding-bottom:0;}
+	.bodyCML3d #container-wrap {margin-top:0;}
+  .bodyCML3d #banner {padding:90px 0 60px;}
+	.bodyCML3d .mobileModel #banner {padding:90px 0 60px;}
+ 	.bodyCML3d #banner .cml3d-title {background-position:50%;background-size:cover;width:300px;height:118px;}
+	.bodyCML3d #banner .download {padding-top:60px;}
+	.bodyCML3d #banner .download a {width:160px;height:49px;background-size:contain;}
+	.bodyCML3d .mobileModel #footer-wrap {display:none;background:#fff;}
 	.cml-page .title {margin:0 auto;}
+	#cml-anim .title {width:207px;}
 	#cml-secure .title {width:125px;}
 	#cml-secure .anibox {margin-top:0;}
 	#cml-secure .powered {display:none;}
@@ -419,8 +498,18 @@
 	.mobileModel #cml-person .anibox {margin-top:90px;margin-bottom:30px;}
 	.cml3d-social {margin-top:30px;}
 	.cml3d-social a {font-size:14px;margin-left:10px;}
-	.bodyCML3d #banner .download a {width:160px;height:49px;background-size:contain;}
+	#cml-footer .cml-title {width:290px;height:64px;}
+	#cml-footer .cml-dl {width:180px;}
+	#cml-footer .cml-dl .gp {width:178px;height:60px;background-size:contain;}
+	.video-box {margin:-160px 0 0 -160px;width:320px;}
+	.video-frame {width:320px;height:180px;}
+	.video-buttons a {line-height:46px;}
+
 }
+
+
+
+
 
 @media (max-width:540px) and (min-height:450px) {
 	.mobileModel .cml-page .content {margin-top:-210px;height:420px;}
@@ -431,3 +520,12 @@
 	.mobileModel .cml-page .content {margin-top:-240px;height:520px;}
 	#cml-secure .anibox {margin-top:40px;}
 }
+
+
+@media (max-width:860px) {
+	.video-box {margin:-186px 0 0 -270px;width:540px;}
+	.video-frame {width:540px;height:304px;}
+  a.video-btn-1, a.video-btn-2 {width:100%;}
+}
+
+

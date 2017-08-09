@@ -1,9 +1,7 @@
 /*
   Styles of cml abandoned from v5.main.css
-  Latest modified: 2017-08-08 18:55
+  Latest modified: 2017-08-09 17:20
 */
-
-
 .cml3d-video, .whatscall-video {
 	position:absolute;
 	left:0;
@@ -257,10 +255,34 @@
 	#cml-sleek .textbox {
 		margin-top: 170px
 	}
+	.bodyCML #banner-wrap {
+		background-position: center -200px
+	}
+	.bodyCML .bannerBG {
+		background-position: center 0
+	}
+	.bodyCML #banner {
+		padding: 180px 0 270px
+	}
 }
 
 
 @media (max-width:800px) {
+	.bodyCML #banner-wrap {
+		background-position: center -400px
+	}
+	.bodyCML #banner {
+		padding: 90px 0 170px
+	}
+	.bodyCML #banner .title {
+		width: 500px
+	}
+	.bodyCML #banner .download a.gp {
+		margin: 10px 0
+	}
+	.bodyCML #banner .social {
+		margin: 20px auto 0
+	}
 	.fs-cml .cml-app-bg {
 		display: none
 	}
@@ -313,6 +335,79 @@
 }
 
 @media (max-width:540px) {
+
+	.bodyCML {
+		background-color: #ddd
+	}
+	.bodyCML .mobileModel #container-wrap,
+  .bodyCML .mobileModel #container-wrap .section {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding-bottom: 0
+  }
+	.bodyCML .bannerBG {
+		display: none
+	}
+	.bodyCML #banner-wrap {
+		background-position: center 0;
+		background-size: auto 110%;
+	}
+	.bodyCML #banner {
+		padding-bottom: 100px
+	}
+	.bodyCML #banner .title {
+		width: 300px
+	}
+  .bodyCML .mobileModel #footer-wrap {
+		display: none;
+		background: #fff
+	}
+	.bodyCML #banner .social {
+		display: none
+	}
+	.bodyCML #banner .download {
+		width: 180px;
+		padding-top: 40px
+	}
+	.bodyCML #banner .download a {
+		width: 178px;
+		height: 64px;
+		margin: 5px 0;
+		border-width: 1px
+	}
+	.bodyCML #banner .download a.gp {
+		background-position: 19px center;
+		-moz-background-size: 140px auto;
+		-o-background-size: 140px auto;
+		background-size: 140px auto
+	}
+	.bodyCML #banner .download a.apk {
+		background-position: 19px center;
+		-moz-background-size: 136px auto;
+		-o-background-size: 136px auto;
+		background-size: 136px auto
+	}
+	.bodyCML .mobileModel #banner .download {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 180px;
+		margin-left: -90px
+	}
+  .bodyCML .mobileModel #banner {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: 340px;
+		margin: -170px 0 0 0;
+		margin-top: -140px;
+		padding: 0;
+		border-bottom: 0;
+	}
 	.fs-cml .pic {
 		width: 100px;
 		margin: 50px auto 20px
@@ -395,9 +490,16 @@
 		top: 7px;
 		left: 30px
 	}
-
 }
 
+@media (max-width:540px) and (min-height:530px) {
+	.mobileModel .bodyCML #banner {
+		padding-top: 120px
+	}
+	.bodyCML #banner .download {
+		bottom: 80px
+	}
+}
 
 
 
