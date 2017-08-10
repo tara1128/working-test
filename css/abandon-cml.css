@@ -1,7 +1,29 @@
 /*
   Styles of cml abandoned from v5.main.css
-  Latest modified: 2017-08-09 17:20
+  Latest modified: 2017-08-10 15:53
 */
+
+
+.fs-cml3d{
+	background:url(../images/front/cml3d-bg.jpg) no-repeat center #020a16;
+	-moz-background-size:cover;
+	  -o-background-size:cover;
+	     background-size:cover;
+}
+.fs-cml3d img {
+	display:block;
+	margin:0 auto;
+}
+.fs-cml3d .pic {
+	margin:45px auto 42px;
+}
+.fs-cml3d .desc {
+	margin-top:33px;
+	font-size:26px;
+	text-align:center;
+	color:#fff;
+}
+
 .cml3d-video, .whatscall-video {
 	position:absolute;
 	left:0;
@@ -283,6 +305,9 @@
 	.bodyCML #banner .social {
 		margin: 20px auto 0
 	}
+	.cml-app-bg {
+		display: none
+	}
 	.fs-cml .cml-app-bg {
 		display: none
 	}
@@ -294,6 +319,28 @@
 	}
 	.fs-cml .desc {
 		font-size: 22px
+	}
+	.fs-cml3d .pic{
+		width: 115px;
+		margin-bottom: 30px;
+	}
+	.fs-cml3d .title{
+		width: 490px;
+	}
+	.fs-cml3d .desc{
+		width: 280px;
+		margin-top: 25px;
+	}
+	.cml-title .icon {
+		width: 100px;
+		height: 100px;
+		background-size: contain
+	}
+	.cml-title h2, #cml-footer .cml-title h2 {
+		width: 380px;
+		height: 90px;
+		margin: 8px 0 0 20px;
+		background-size: contain
 	}
 
 	#cml-sleek .textbox {
@@ -335,7 +382,6 @@
 }
 
 @media (max-width:540px) {
-
 	.bodyCML {
 		background-color: #ddd
 	}
@@ -438,6 +484,55 @@
 	#cml-small .title {
 		width: 116px
 	}
+	.cml-app-bg {
+		top: 150px;
+		display: none
+	}
+	.cml-app-bg-1 {
+		width: 150px;
+		margin-left: -170px
+	}
+	.cml-app-bg-2 {
+		width: 130px;
+		margin-left: 30px
+	}
+	.cml-dl .gp .arrow {
+		width: 20px;
+		height: 19px;
+		margin: 5px 10px 0 0;
+		-moz-background-size: contain;
+		-o-background-size: contain;
+		background-size: contain
+	}
+	.cml-dl .gp .icon {
+		width: 140px;
+		height: 40px;
+		-moz-background-size: contain;
+		-o-background-size: contain;
+		background-size: contain
+	}
+	#banner .cml-title .icon {
+		float: none;
+		width: 80px;
+		height: 80px;
+		margin: 0 auto 20px
+	}
+	#banner .cml-title h2 {
+		float: none;
+		width: 280px;
+		height: 70px;
+		margin: 0 auto
+	}
+	#cml-footer .cml-title .icon {
+		width: 55px;
+		height: 55px
+	}
+	#cml-footer .cml-title h2 {
+		float: right;
+		width: 230px;
+		height: 55px;
+		margin: 0
+	}
 
 }
 
@@ -503,3 +598,8 @@
 
 
 
+@media (min-width:801px) and (min-height:790px) {
+	.fs-cml3d .pic {
+		margin: 130px auto 42px
+	}
+}

@@ -1,7 +1,7 @@
 /*
   For CM Launcher only.
   Seperated from v5.main.css.
-  Latest modified: 2017-08-09 17:20
+  Latest modified: 2017-08-10 15:53
 */
 
 .bodyCML3d {
@@ -455,8 +455,16 @@ a.video-btn-1, a.video-btn-2 {
 
 @media (max-width:800px) {
 	.bodyCML3d #container-wrap{margin-top:-50px;}
-	.cml-page .textbox {width:300px;}
+	.cml-page .textbox {margin-top:20px;width:300px;}
 	.cml-page .title {font-size:30px;line-height:40px;height:40px;background-size:232px auto;}
+	.cml-page .desc {margin-bottom:20px;font-size:16px;}
+	.cml-page .entry {font-size:14px;}
+	.cml-page .anibox {width:200px;}
+	.cml-page .content {padding:60px 10px;max-width:600px;}
+
+	.cml-dl {margin:30px auto;}
+	.cml-social {margin:30px auto 0;width:145px;}
+
 	#cml-secure .title {background-position:0 -160px;}
 	#cml-secure .anibox {width:200px;height:200px;}
 	#cml-secure .powered {margin-top:30px;padding:15px 0 0 60px;font-size:12px;}
@@ -464,6 +472,12 @@ a.video-btn-1, a.video-btn-2 {
 	#cml-boost .title {background-position:0 -40px;}
 	#cml-boost .anibox {width:200px;}
 	#cml-boost .boost {top:-25px;}
+
+	#cml-smart .title {margin-top:0;background-position:0 -117px;}
+	#cml-smart .anibox {padding-top:150px;}
+	#cml-smart .fold {width:150px;}
+	#cml-smart .fold1, #cml-smart .fold2 {margin-left:-150px;width:300px;}
+
 	#cml-person .anibox {margin-top:65px;width:180px;}
 	#cml-person .person {top:-33px;}
 	#cml-person .person3 {top:-67px;}
@@ -471,6 +485,9 @@ a.video-btn-1, a.video-btn-2 {
 	#cml-person .title {background-position:0 -80px;}
 	#cml-anim .anibox img {width:100%;}
 	#cml-footer .cml-title {width:500px;height:110px;background-size:contain;}
+	#cml-footer .phone {margin:30px auto 0;display:block;float:none;width:250px;}
+	#cml-footer .textbox {float:none;width:auto;margin-top:0;}
+	.cml-title {margin: 0 auto;width:500px;}
 }
 
 @media (max-width:540px) {
@@ -484,7 +501,15 @@ a.video-btn-1, a.video-btn-2 {
 	.bodyCML3d #banner .download {padding-top:60px;}
 	.bodyCML3d #banner .download a {width:160px;height:49px;background-size:contain;}
 	.bodyCML3d .mobileModel #footer-wrap {display:none;background:#fff;}
+	.cml-dl {width:180px;}
+	.cml-dl .qrcode {display:none;}
+
 	.cml-page .title {margin:0 auto;}
+	.cml-page .anibox {float:none;margin:0 auto;}
+	.cml-page .textbox {float:none;margin:0 auto;text-align:center;}
+	.cml-page .desc {margin:7px 0 10px;font-size:14px;}
+	.mobileModel .cml-page .content {position:absolute;top:50%;left:0;margin:-170px 0 0 0;padding:0;width:100%;height:340px;border-bottom:0;}
+
 	#cml-anim .title {width:207px;}
 	#cml-secure .title {width:125px;}
 	#cml-secure .anibox {margin-top:0;}
@@ -496,20 +521,18 @@ a.video-btn-1, a.video-btn-2 {
 	#cml-person .title {width:232px;}
 	#cml-person .anibox {margin:50px auto 0;}
 	.mobileModel #cml-person .anibox {margin-top:90px;margin-bottom:30px;}
+	.cml-social {display:none;}
 	.cml3d-social {margin-top:30px;}
 	.cml3d-social a {font-size:14px;margin-left:10px;}
 	#cml-footer .cml-title {width:290px;height:64px;}
 	#cml-footer .cml-dl {width:180px;}
 	#cml-footer .cml-dl .gp {width:178px;height:60px;background-size:contain;}
+	#cml-footer .phone {width:180px;}
+	#cml-footer .textbox {margin-top:0;}
 	.video-box {margin:-160px 0 0 -160px;width:320px;}
 	.video-frame {width:320px;height:180px;}
 	.video-buttons a {line-height:46px;}
-
 }
-
-
-
-
 
 @media (max-width:540px) and (min-height:450px) {
 	.mobileModel .cml-page .content {margin-top:-210px;height:420px;}
@@ -521,11 +544,17 @@ a.video-btn-1, a.video-btn-2 {
 	#cml-secure .anibox {margin-top:40px;}
 }
 
+@media (max-width:540px) and (max-height:550px) {
+	#cml-smart .content {margin-top:-190px;}
+	#cml-smart .anibox {padding-top:100px;}
+	#cml-smart .fold {width:100px;}
+	#cml-smart .fold1, #cml-smart .fold2 {margin-left:-100px;width:200px;}
+}
+
 
 @media (max-width:860px) {
 	.video-box {margin:-186px 0 0 -270px;width:540px;}
 	.video-frame {width:540px;height:304px;}
   a.video-btn-1, a.video-btn-2 {width:100%;}
 }
-
 
