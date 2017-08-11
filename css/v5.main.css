@@ -1,6 +1,6 @@
 /*
   Removed CM Launcher styles from v5.main.css
-  Latest modified: 2017-08-10 16:06
+  Latest modified: 2017-08-11 13:57
 */
 
 @font-face {
@@ -452,7 +452,7 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 .fs-cmlk {
 	background:#3798bc;
 	background:-moz-linear-gradient(top, #3798bc 0%, #3798bc 15%, #2a6fab 76%, #2a5993 100%);
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #3798bc), color-stop(15%, #3798bc), color-stop(76%, #2a6fab), color-stop(100%, #2a5993));
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#3798bc),color-stop(15%,#3798bc),color-stop(76%,#2a6fab),color-stop(100%,#2a5993));
 	background:-webkit-linear-gradient(top, #3798bc 0%, #3798bc 15%, #2a6fab 76%, #2a5993 100%);
 	background:-o-linear-gradient(top, #3798bc 0%, #3798bc 15%, #2a6fab 76%, #2a5993 100%);
 	background:-webkit-gradient(linear, left top, left bottom, from(#3798bc), color-stop(15%, #3798bc), color-stop(76%, #2a6fab), to(#2a5993));
