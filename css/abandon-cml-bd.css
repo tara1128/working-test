@@ -1,6 +1,6 @@
 /*
-  Styles of cml abandoned from v5.main.css
-  Latest modified: 2017-08-10 15:53
+  Styles of cml & bd abandoned from v5.main.css
+  Latest modified: 2017-08-14 18:11
 */
 
 
@@ -286,6 +286,15 @@
 	.bodyCML #banner {
 		padding: 180px 0 270px
 	}
+	.bodyBD #banner .social {
+		left: 920px
+	}
+	#bd_feature .article {
+		padding: 50px 80px
+	}
+	#bd_feature .article img {
+		max-width: 500px
+	}
 }
 
 
@@ -533,6 +542,10 @@
 		height: 55px;
 		margin: 0
 	}
+	#bd_feature .article p {
+		font-size: 14px;
+		line-height: 1.7
+	}
 
 }
 
@@ -596,10 +609,25 @@
 	}
 }
 
-
-
 @media (min-width:801px) and (min-height:790px) {
 	.fs-cml3d .pic {
 		margin: 130px auto 42px
 	}
+}
+
+
+/* ====== Abandoned from battery doctor page ====== */
+.bodyBD #banner .social {
+	left: 820px
+}
+#bdCharge .static_img {
+	width: 381px;
+	height: 377px;
+	margin: 10px auto 0;
+	background: url(../images/bd/sp.png) no-repeat
+}
+#battery_life .static_img {
+	width: 341px;
+	height: 333px;
+	background: url(../images/bd/dbl.png) no-repeat
 }

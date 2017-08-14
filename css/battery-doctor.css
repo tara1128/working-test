@@ -1,6 +1,300 @@
 /*
   For Battery Doctor only.
   Seperated from v5.main.css.
-  Latest modified: 2017-08-11 17:22
+  Latest modified: 2017-08-14 18:10
 */
+.bodyBD #header-fixed,
+.bodyBD #header-wrap {
+	background-color:#212830;
+}
+.bodyBD #header-wrap {
+	opacity:0.9;
+	background-image:url(../images/v3/a-bd.png);
+}
+.bodyBD #banner-wrap {
+	background:url(../images/bd/bg.jpg) no-repeat center bottom #21272e;
+}
+.bodyBD #footer {
+	background:none;
+}
+.bodyBD #banner {
+	padding:80px 0 360px;
+	_background-image:none;
+}
+.bodyBD #banner .title {
+	line-height:1.2;
+	width:auto;
+	height:auto;
+	text-indent:0;
+	color:#fff;
+	background:none;
+	text-shadow:0 2px 5px rgba(0,0,0,.5);
+}
+.bodyBD #banner .title h2 {
+	height:125px;
+	text-indent:-9999em;
+	background:url(../images/bd/title.png) no-repeat center bottom;
+	background-size:auto 100%;
+}
+.bodyBD #banner .title h4 {
+	font-size:26px;
+}
+.bodyBD #banner .download {
+	margin:0 auto;
+	padding:30px 0;
+	width:380px;
+}
+.bodyBD #banner .download .gp {
+	float:none;
+}
+#bdCharge {
+	position:absolute;
+	bottom:-56px;
+	left:50%;
+	margin-left:-216px;
+	padding:20px;
+	width:390px;
+	height:390px;
+	background:url(../images/bd/round.png) no-repeat center bottom;
+}
+#bdCharge .text {
+	position:relative;
+	z-index:1;
+	display:table;
+	width:100%;
+	height:100%;
+	font-size:34px;
+	line-height:1.3;
+	color:#fff;
+	border-radius:100%;
+	background:#232429;
+	text-shadow:0 4px 10px rgba(0,0,0,.6);
+}
+#bdCharge .text div {
+  display:table-cell;
+	vertical-align:middle;
+}
+#bdCharge .text .large {
+	display:block;
+	font-size:96px;
+}
+#bdCharge .rd {
+	position:relative;
+	padding:30px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	width:100%;
+	height:100%;
+	border-radius:100%;
+	background:#3d3d41;
+}
+#bdCharge .round {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+.bd_article {
+	font-size:18px;
+	line-height:1.5;
+	color:#444;
+}
+.bd_article .title {
+	font-size:40px;
+	font-weight:bold;
+	padding-top:25px;
+}
+.bd_article .social {
+	margin:30px auto 0;
+	width:250px;
+}
+.bd_article .social a {
+	margin:0 13px;
+	width:54px;
+	height:54px;
+	background:none;
+}
+.bd_article .social a:hover {
+	background:url(../images/bd/dot.png) no-repeat;
+}
+.bd_article .social a span {
+	margin:0;
+	width:54px;
+	height:54px;
+	border-radius:100%;
+	background:url(../images/bd/sm.png) no-repeat;
+}
+.bd_article .social a:hover span {
+	-webkit-transition:background 400ms;
+	-moz-transition:background 400ms;
+	-o-transition:background 400ms;
+	transition:background 400ms;
+	background-position:0 100%;
+}
+.bd_article .social .gp span {
+	background-position:-80px 0;
+}
+.bd_article .social .tw span {
+	background-position:-151px 0;
+}
+.bd_article .social .gp:hover span {
+	background-position:-80px 100%;
+}
+.bd_article .social .tw:hover span {
+	background-position:-151px 100%;
+}
+#bd_desc {
+	padding:107px 0 40px;
+	text-align:center;
+}
+#battery_life .inner {
+	padding:15px 500px 150px 0;
+}
+#battery_life h2 {
+	margin-top:50px;
+}
+#battery_life .animate {
+	display:none;
+	position:absolute;
+	top:50%;
+	right:30px;
+	margin-top:-170px;
+	width:330px;
+	height:330px;
+}
+#stage_charging {
+	padding:50px 0;
+	text-align:center;
+	background:#fff;
+}
+#stage_charging .stages {
+	position:relative;
+	margin-top:30px;
+	height:270px;
+}
+#stage_charging .stages .line {
+	position:absolute;
+	top:100px;
+	left:0;
+	width:100%;
+	height:10px;
+	background:#ebebeb;
+}
+#stage_charging .column {
+	float:left;
+	width:33.3%;
+}
+#stage_charging .stage {
+	position:relative;
+	display:none;
+}
+#stage_charging .stage span {
+	display:block;
+	margin:0 auto 20px;
+	width:180px;
+	height:180px;
+	border:8px solid #ebebeb;
+	border-radius:100%;
+	background:#b0e4ae;
+	overflow:hidden;
+}
+#stage_charging .stage i {
+	display:block;
+	margin:50px auto 0;
+	width:80px;
+	height:80px;
+  background-repeat:no-repeat;
+	background-image:url(../images/bd/icon.png);
+	overflow:hidden;
+}
+#stage_charging .sg1 span:after {
+	background:#b0e4ae;
+}
+#stage_charging .sg2 span:after,
+#stage_charging .sg2 span {
+	background:#6fd86c;
+}
+#stage_charging .sg3 span:after,
+#stage_charging .sg3 span {
+	background:#19c714;
+}
+#stage_charging .sg2 i {
+	background-position:0 -83px;
+}
+#stage_charging .sg3 i {
+	background-position:0 -165px;
+}
+.bd_regular {
+	padding:90px 0 0;
+}
+.bd_regular img {
+	margin:-34px 20px 0;
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+.bd_power {
+	padding-bottom:85px;
+}
+.bd_power .title {
+	padding-top:0;
+}
+.bd_power img {
+	margin-top:-64px;
+}
+@media (max-width:800px) {
+	.bodyBD #banner-wrap {background-size:120% auto;}
+	.bodyBD #banner {padding:50px 0 210px;}
+	.bodyBD #banner .title h2 {height:75px;}
+	.bodyBD #banner .title h4 {font-size:20px;}
+	#bdCharge {padding:10px;bottom:-37px;margin-left:-135px;width:250px;height:250px;background-size:200px auto;}
+	#bdCharge .rd {padding:15px;}
+	#bdCharge .text {font-size:25px;}
+	#bdCharge .text .large {font-size:60px;}
+	.bd_article {font-size:14px;}
+	.bd_article .title {padding-top:0;font-size:26px;}
+	#bd_desc {padding:50px 20px 30px;}
+	#battery_life .inner {padding:10px 200px 50px 15px;}
+	#battery_life h2 {margin-top:10px;}
+	#battery_life .animate {margin-top:-95px;right:10px;width:170px;height:170px;}
+	#battery_life .animate canvas {width:100%;height:100%;}
+	#stage_charging {padding:30px 0;}
+	#stage_charging .content {padding:0 10px;}
+	#stage_charging .stage span {position:relative;width:80px;height:80px;background:transparent;margin:0 auto 10px;border:5px solid #ebebeb;}
+	#stage_charging .stage span:after {position:absolute;top:0;left:0;display:block;width:100%;height:100%;content:'';border-radius:100%;}
+	#stage_charging .stages {height:150px;}
+	#stage_charging .stages .line {top:45px;height:5px;}
+	#stage_charging .stage i {position:relative;z-index:1;margin:20px auto 0;width:40px;height:40px;background-size:40px auto;}
+	#stage_charging .sg2 i {background-position:0 -40px;}
+	#stage_charging .sg3 i {background-position:0 -80px;}
+	.bd_regular {padding:60px 0 0;}
+	.bd_regular .content {padding:0 15px;}
+	.bd_regular img {margin-top:-20px;width:40%;}
+	.bd_power {padding-bottom:55px;}
+	.bd_power img {margin-top:-20px;}
+}
 
+@media (max-width:540px) {
+	.bodyBD #banner-wrap {background-size:auto 68%;}
+	.bodyBD #banner {padding:30px 0 180px;}
+	.bodyBD #banner .title h2 {height:42px;}
+	.bodyBD #banner .title h4 {font-size:14px;}
+	.bodyBD #banner .download {padding:15px 0;width:180px;}
+	#bdCharge {bottom:-15px;margin-left:-88px;padding:10px;width:150px;height:150px;background-size:120px auto;}
+	#bdCharge .rd {padding:10px;}
+	#bdCharge .text {font-size:14px;}
+	#bdCharge .text .large {font-size:36px;}
+	.bd_article .title {font-size:20px;}
+	#bd_desc {padding:50px 10px 10px;}
+	#battery_life .inner {padding:10px 100px 20px 15px;}
+	#battery_life p {padding-right:20px;}
+	#battery_life h2 {margin-top:10px;}
+	#battery_life .animate {margin-top:-50px;right:5px;width:100px;height:100px;}
+	#stage_charging {padding:30px 0;}
+	#stage_charging .content {padding:0 10px;}
+	#stage_charging .stages {font-size:12px;}
+	.bd_regular {padding:20px 0;}
+	.bd_regular .content {padding:0 10px;}
+	.bd_regular img {display:none!important;}
+}
