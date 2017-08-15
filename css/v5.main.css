@@ -1,6 +1,6 @@
 /*
   Removed CM Launcher & Battery Doctor styles from v5.main.css
-  Latest modified: 2017-08-14 18:11
+  Latest modified: 2017-08-15 16:14
 */
 
 @font-face {
@@ -636,6 +636,50 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
   color:#fff;
 }
 
+/* For zh-cn home page slider: */
+.cml3d-video, .whatscall-video {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.cml3d-video video{
+	display:block;
+	height:100%;
+	margin:0 auto;
+}
+.cml3d-video:before, .whatscall-video:before {
+	content:'';
+	display:block;
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,.7);
+}
+.fs-cml3d {
+	background:url(../images/front/cml3d-bg.jpg) no-repeat center #020a16;
+	-moz-background-size:cover;
+	  -o-background-size:cover;
+	     background-size:cover;
+}
+.fs-cml3d img {
+	display:block;
+	margin:0 auto;
+}
+.fs-cml3d .pic {
+	margin:45px auto 42px;
+}
+.fs-cml3d .desc {
+	margin-top:33px;
+	font-size:26px;
+	text-align:center;
+	color:#fff;
+}
+
 /* Merge styles in blog.css & global.css for page "/about" */
 .banner-about {height:298px;background-color:#EE6100;color:#fff;text-align:center;}
 .banner-text, .banner-icon {display:inline-block;_display:inline;*zoom:1;vertical-align:middle;padding-top:68px;}
@@ -1154,7 +1198,8 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	margin:9px 0;
 	border-radius:10px;
 }
-#banner .download a.btg, #banner .download a.htu {
+
+#banner .download a.btg { /* Appeared in cm-for-pc also ! */
 	font-size:16px;
 	line-height:60px;
 	width:180px;
@@ -1162,19 +1207,11 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	color:#fff;
 	background:url(../images/v3/cm_icon.png) no-repeat -389px -303px;
 }
-#banner .download a.btg:hover, #banner .download a.htu:hover {
+#banner .download a.btg:hover { /* Appeared in cm-for-pc also ! */
 	background-position:-389px -228px;
 }
-#banner .download a.link_latest {
-	margin:0;
-	font-size:12px;
-	line-height:20px;
-	width:180px;
-	height:20px;
-	color:#fff;
-	border-radius:0;
-	background:none;
-}
+
+
 #banner .play {
 	position:absolute;
 	bottom:-88px;
@@ -1285,168 +1322,15 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	transform:scale(1.1);
 	background-position:-410px -560px;
 }
-.article {
+.article { /* Appeared in cm-for-pc also ! */
 	overflow:hidden;
 	text-align:center;
 	background:#fff;
 }
-#info {
-	margin-bottom:10px;
-	padding:150px 15px 30px;
-	font-size:20px;
-	line-height:1.2;
-	color:#000;
-}
-#info h3 {
-	font-weight:bold;
-	margin-bottom:5px;
-}
-#info h4 {
-	font-weight:normal;
-}
-#cm_state {
-	position:relative;
-	margin-bottom:10px;
-	padding:150px 0 140px 40%;
-	overflow:hidden;
-	zoom:1;
-	text-align:left;
-}
-#cm_state strong {
-	font-weight:bold;
-}
-#cm_state img {
-	vertical-align:middle;
-}
-#cm_state .icon {
-	position:absolute;
-	top:80px;
-	left:-15%;
-	width:50%;
-}
-#cm_state li {
-	font-size:20px;
-	zoom: 1;
-	padding: 25px 0;
-	background: url(../images/v3/dot.png) repeat-x 0 100%
-}
-#cm_state li.last {
-	background: none
-}
-#cm_state li.rate {
-	position: relative
-}
-#cm_state .star {
-	font-size: 70px;
-	font-weight: bold;
-	line-height: 26px;
-	color: #10824c;
-	*line-height: 60px
-}
-#cm_state .star span {
-	display: inline-block;
-	overflow: hidden;
-	zoom: 1;
-	width: 18px;
-	height: 17px;
-	margin-right: 2px;
-	background: url(../images/v3/star.png) no-repeat
-}
-#cm_state .star span.last {
-	background-position: 100% 0
-}
-#cm_state .desc {
-	line-height: 30px;
-	position: absolute;
-	bottom: 20px;
-	left: 110px
-}
-#cm_state .desc strong {
-	color: #333
-}
-#cm_feature {
-	font-size: 16px;
-	background: url(../images/v3/dot.png) repeat-y 50% -2px #fff
-}
-#cm_feature li {
-	line-height: 1.5;
-	position: relative;
-	display: inline;
-	float: left;
-	width: 46%;
-	margin: 40px 0 0;
-	padding: 120px 2% 60px;
-	background: url(../images/v3/dot.png) repeat-x 0 100%
-}
-#cm_feature li h4 {
-	font-weight: bold;
-	line-height: 30px
-}
-#cm_feature li p {
-	max-width: 400px;
-	margin: 0 auto;
-	color: #959595
-}
-#cm_feature li .icon {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	overflow: hidden;
-	width: 115px;
-	height: 115px;
-	margin-left: -56px;
-	-webkit-transition: background-position 400ms ease;
-	-moz-transition: background-position 400ms ease;
-	-o-transition: background-position 400ms ease;
-	transition: background-position 400ms ease;
-	background: url(../images/v3/small_icon.png) no-repeat
-}
-#cm_feature li .icon:hover {
-	background-position-y: 0 !important
-}
-#cm_feature .remove-junk-files .icon {
-	background-position: -236px 100%
-}
-#cm_feature .protect-privacy .icon {
-	background-position: -350px 100%
-}
-#cm_feature .memory-boost .icon {
-	background-position: 0 100%
-}
-#cm_feature .app-manager .icon {
-	background-position: -120px 100%
-}
-#cm_thanks {
-	font-size: 20px;
-	line-height: 1.6;
-	position: relative;
-	zoom: 1;
-	margin-bottom: 10px;
-	padding: 100px 25% 160px 10%;
-	text-align: left
-}
-#cm_thanks .icon {
-	position: absolute;
-	right: -15%;
-	bottom: 0;
-	width: 40%
-}
-#cm_thanks p {
-	margin-bottom: 30px
-}
-#cm_thanks big {
-	font-size: 24px
-}
-#cm_thanks strong {
-	font-size: 30px;
-	font-weight: bold
-}
-#cm_thanks .large {
-	font-size: 60px
-}
-#cm_thanks i {
-	font-style: normal
-}
+
+
+
+
 #ft_head {
 	margin: 0 0 10px;
 	padding: 30px 30px 0;
@@ -1866,9 +1750,6 @@ a.btn_green:visited {
 	#banner .social {
 		left: 860px
 	}
-	#cm_state .icon {
-		top: 50px
-	}
 	#pg_banner .title {
 		margin-left: 60px
 	}
@@ -2113,36 +1994,7 @@ a.btn_green:visited {
 	#banner .social {
 		display: none
 	}
-	#cm_thanks {
-		padding: 50px 15px 45%
-	}
-	#cm_thanks .icon {
-		bottom: -10%;
-		left: 30%;
-		width: 55%
-	}
-	#cm_state {
-		padding: 50px 0 260px
-	}
-	#cm_state .icon {
-		top: auto;
-		bottom: -170px;
-		left: 50%;
-		width: 500px;
-		margin-left: -250px
-	}
-	#cm_state li {
-		font-size: 18px;
-		line-height: 26px;
-		padding: 20px
-	}
-	#cm_state .desc {
-		left: 130px
-	}
-	#cm_feature, #cm_feature li {
-		font-size: 16px;
-		background-image: none
-	}
+
 	#ft_head {
 		padding: 15px 15px 0
 	}
@@ -2474,50 +2326,15 @@ a.btn_green:visited {
 		height: auto !important;
 		margin-top: -30px !important
 	}
-	#cm_state .desc {
-		position: static;
-		margin: 10px 0 0
-	}
-	#cm_state {
-		padding: 50px 0 180px
-	}
-	#cm_state .star {
-		text-align: center
-	}
-	#cm_state strong, #cm_state .desc strong {
-		font-size: 18px
-	}
-	#cm_state .icon {
-		bottom: -100px;
-		width: 320px;
-		margin-left: -160px
-	}
-	#cm_thanks, #cm_thanks strong, #cm_thanks big {
-		font-size: 18px
-	}
-	#cm_thanks {
-		line-height: 1.6
-	}
-	#cm_thanks .orange, #cm_thanks .large {
-		font-size: 18px;
-		font-weight: bold
-	}
-	#cm_feature li {
-		font-size: 15px;
-		width: 96%;
-		background: url(../images/v3/dot.png) repeat-x 0 100%
-	}
-	#play {
+
+	#play { /* Appeared in cm-for-pc also ! */
 		-webkit-transform: scale(.7);
 		-moz-transform: scale(.7);
 		-ms-transform: scale(.7);
 		-o-transform: scale(.7);
 		transform: scale(.7)
 	}
-	#info {
-		font-size: 18px;
-		padding-top: 100px
-	}
+
 	#ft_head {
 		padding: 5px 5px 0
 	}
@@ -2653,36 +2470,14 @@ a.btn_green:visited {
 		-o-background-size: contain;
 		background-size: contain
 	}
-	#cm_feature .remove-junk-files .icon {
-		background: url(../images/v3/x2/f1.png);
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover
-	}
-	#cm_feature .protect-privacy .icon {
-		background: url(../images/v3/x2/f2.png);
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover
-	}
-	#cm_feature .memory-boost .icon {
-		background: url(../images/v3/x2/f4.png);
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover
-	}
-	#cm_feature .app-manager .icon {
-		background: url(../images/v3/x2/f3.png);
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover
-	}
-	#play, #play:hover {
+
+	#play, #play:hover { /* Appeared in cm-for-pc also ! */
 		background: url(../images/v3/x2/play.png) no-repeat;
 		-moz-background-size: 154px 148px;
 		-o-background-size: 154px 148px;
 		background-size: 154px 148px
 	}
+
 	#pg_banner .download a {
 		-webkit-transition: none
 	}
@@ -3433,6 +3228,7 @@ a.btn_green:visited {
 		opacity: 0
 	}
 }
+
 .fadeIn {
 	-webkit-animation: fadeIn 1s ease;
 	-moz-animation: fadeIn 1s ease;
@@ -3532,16 +3328,6 @@ a.btn_green:visited {
 }
 .ie #sliderBox .cmpcscan, .ie9 #sliderBox .cmpcscan {
 	display: none
-}
-#cm_state .icon {
-	_width: 500px
-}
-#cm_thanks {
-	_padding-right: 150px
-}
-#cm_feature li {
-	height: 144px;
-	padding-bottom: 0
 }
 .foot-lang {
 	position: relative;
@@ -3818,82 +3604,30 @@ a.btn_green:visited {
 		left: auto
 	}
 }
-@media (max-width:310px) {
-	.body-ru-ru #footer {
-	}
-}
+
+
 .body-ko-kr * {
-	font-family: 'NanumBarunGothic', 'Nanum Gothic', Dotum, Helvetica, Sans-serif !important
+	font-family:'NanumBarunGothic','Nanum Gothic',Dotum,Helvetica,Sans-serif!important;
 }
-.body-ko-kr #cmbssmall .title p, .body-ko-kr #cmbssecure .title p {
-	color: #555
-}
-.body-ko-kr #cm_state strong {
-	font-size: 18px;
-	font-weight: bold
-}
-.body-ko-kr #cm_thanks p strong {
-	font-size: 18px
-}
-.body-ko-kr #cm_feature li h4 {
-	font-weight: bold
-}
-.body-ko-kr #cm_state li, .body-ko-kr #cm_thanks p, .body-ko-kr #info h4 {
-	font-size: 18px;
-	line-height: 1.4;
-	color: #555
-}
-.body-ko-kr #cm_feature li p {
-	font-size: 16px
-}
-.body-ko-kr #cm_thanks p strong {
-	font-weight: bold
+.body-ko-kr #cmbssmall .title p,
+.body-ko-kr #cmbssecure .title p {
+	color:#555;
 }
 .body-pt-pt .effects .cn{
-	font-size: 16px
+	font-size:16px;
 }
-.body-ru-ru #info {
-	font-size: 20px
+.body-ru-ru #cmbssmall .desc,
+.body-ru-ru #cmbsfast .title p {
+	font-size:18px;
 }
-.body-ru-ru #cm_state li, .body-ru-ru #cm_thanks {
-	font-size: 20px
-}
-.body-ru-ru #cm_thanks strong {
-	font-size: 24px;
-	font-weight: bold
-}
-.body-ru-ru #cm_feature {
-	font-size: 16px
-}
-.body-ru-ru #cm_feature li p {
-	color: #777
-}
-.body-ru-ru #cm_state .desc strong {
-	font-size: 18px;
-	font-weight: bold
-}
-.body-ru-ru #cm_state strong, .body-ru-ru #cm_feature li h4 {
-	font-family: 'Gotham-Book', Helvetica, Verdana, Arial, 'Microsoft YaHei';
-	font-weight: bold
-}
-.body-ru-ru #cmbssmall .desc, .body-ru-ru #cmbsfast .title p {
-	font-size: 18px
-}
-.body-zh-cn #info h4, .body-zh-cn #cm_state li, .body-zh-cn #cm_thanks, .body-zh-tw #info h4, .body-zh-tw #cm_state li, .body-zh-tw #cm_thanks {
-	font-size: 17px
-}
-.body-zh-cn #cm_feature li p, .body-zh-tw #cm_feature li p {
-	font-size: 15px
-}
-.body-zh-cn #cm_state .desc strong, .body-zh-tw #cm_state .desc strong {
-	font-family: 'Gotham-Book', Helvetica, Verdana, Arial, 'Microsoft YaHei'
-}
-.body-zh-tw .effects .cn, .body-zh-cn .effects .cn {
-	font-size: 16px
+.body-zh-tw .effects .cn,
+.body-zh-cn .effects .cn {
+	font-size:16px;
 }
 #ClCache {
-	display: none
+	display:none;
 }
+
 @media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-device-pixel-ratio:1.5) {
 	.lang-current {
 		background-position: 0 -241px;
