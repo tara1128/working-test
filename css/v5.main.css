@@ -1,6 +1,6 @@
 /*
-  Removed CM Launcher & Battery Doctor styles from v5.main.css
-  Latest modified: 2017-08-15 16:14
+  Removed styles of CMLauncher, BatteryDoctor, CleanMaster from v5.main.css
+  Latest modified: 2017-08-15 17:58
 */
 
 @font-face {
@@ -1127,9 +1127,6 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	font-style:normal;
 	opacity:0.5;
 }
-.bodyCM #header-fixed, .bodyCM #header-wrap, .bodyCM #banner-wrap {
-	background-color:#3160af;
-}
 .bodyPT #header-wrap, .bodyPT #header-fixed {
   background-color:transparent;
 }
@@ -1161,7 +1158,7 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	z-index:1;
 	text-align:center;
 }
-#banner .title, #banner .app, #play {
+#banner .title, #banner .app {
 	background:url(../images/v3/cm_icon.png) no-repeat;
 }
 #banner .title {
@@ -1295,7 +1292,8 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	font-style:normal;
 	margin:0 10px;
 }
-#play {
+
+#play {/* Appeared in cm-for-pc also ! */
 	position:absolute;
 	top:0;
 	left:0;
@@ -1312,6 +1310,7 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	transition:transform 1s ease;
 	transition:transform 1s ease, -webkit-transform 1s ease, -moz-transform 1s ease, -o-transform 1s ease;
 	text-indent:-999em;
+	background:url(../images/v3/cm_icon.png) no-repeat;
 	background-position:-411px -377px;
 }
 #play:hover {
@@ -1322,13 +1321,12 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	transform:scale(1.1);
 	background-position:-410px -560px;
 }
+
 .article { /* Appeared in cm-for-pc also ! */
 	overflow:hidden;
 	text-align:center;
 	background:#fff;
 }
-
-
 
 
 #ft_head {
@@ -1388,17 +1386,15 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	margin: 0 0 20px
 }
 
-
-
-.bodyPT #footer, .bodyPT #footer a, .bodyPT #footer span {
-	color: #fff;
+.bodyPT #footer,
+.bodyPT #footer a,
+.bodyPT #footer span {
+	color:#fff;
 }
 
-
-
-
-
-.bodyCMS #header-fixed, .bodyCMS #header-wrap, .bodyCMS #banner-wrap {
+.bodyCMS #header-fixed,
+.bodyCMS #header-wrap,
+.bodyCMS #banner-wrap {
 	background-color: #2a7fe9
 }
 .bodyCMS #banner {
