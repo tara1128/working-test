@@ -1,6 +1,6 @@
 /*
-  Styles of cml & bd & cm abandoned from v5.main.css
-  Latest modified: 2017-08-15 15:03
+  Styles of cml & bd & cm & cm-pc abandoned from v5.main.css
+  Latest modified: 2017-08-18 15:41
 */
 
 .bodyCML {
@@ -595,5 +595,44 @@
 	color:#fff;
 	border-radius:0;
 	background:none;
+}
+#play {
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+	overflow:hidden;
+	width:154px;
+	height:148px;
+	-webkit-transition:-webkit-transform 1s ease;
+	-moz-transition:-moz-transform 1s ease;
+	-moz-transition:transform 1s ease, -moz-transform 1s ease;
+	-o-transition:-o-transform 1s ease;
+	-o-transition:transform 1s ease, -o-transform 1s ease;
+	transition:-webkit-transform 1s ease;
+	transition:transform 1s ease;
+	transition:transform 1s ease, -webkit-transform 1s ease, -moz-transform 1s ease, -o-transform 1s ease;
+	text-indent:-999em;
+	background:url(../images/v3/cm_icon.png) no-repeat;
+	background-position:-411px -377px;
+}
+#play:hover {
+	-webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	-ms-transform:scale(1.1);
+	-o-transform:scale(1.1);
+	transform:scale(1.1);
+	background-position:-410px -560px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+       only screen and (min--moz-device-pixel-ratio:1.5),
+       only screen and (-o-min-device-pixel-ratio:3/2),
+       only screen and (min-device-pixel-ratio:1.5) {
+	#play, #play:hover {
+		background: url(../images/v3/x2/play.png) no-repeat;
+		-moz-background-size: 154px 148px;
+		-o-background-size: 154px 148px;
+		background-size: 154px 148px
+	}
 }
 

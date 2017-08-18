@@ -1,6 +1,10 @@
 /*
-  Removed styles of CMLauncher, BatteryDoctor, CleanMaster from v5.main.css
-  Latest modified: 2017-08-15 17:58
+  Removed styles of:
+  - CMLauncher,
+  - BatteryDoctor,
+  - CleanMaster,
+  - CleanMaster for PC from v5.main.css
+  Latest modified: 2017-08-18 16:20
 */
 
 @font-face {
@@ -1196,18 +1200,6 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	border-radius:10px;
 }
 
-#banner .download a.btg { /* Appeared in cm-for-pc also ! */
-	font-size:16px;
-	line-height:60px;
-	width:180px;
-	height:60px;
-	color:#fff;
-	background:url(../images/v3/cm_icon.png) no-repeat -389px -303px;
-}
-#banner .download a.btg:hover { /* Appeared in cm-for-pc also ! */
-	background-position:-389px -228px;
-}
-
 
 #banner .play {
 	position:absolute;
@@ -1292,42 +1284,6 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	font-style:normal;
 	margin:0 10px;
 }
-
-#play {/* Appeared in cm-for-pc also ! */
-	position:absolute;
-	top:0;
-	left:0;
-	display:block;
-	overflow:hidden;
-	width:154px;
-	height:148px;
-	-webkit-transition:-webkit-transform 1s ease;
-	-moz-transition:-moz-transform 1s ease;
-	-moz-transition:transform 1s ease, -moz-transform 1s ease;
-	-o-transition:-o-transform 1s ease;
-	-o-transition:transform 1s ease, -o-transform 1s ease;
-	transition:-webkit-transform 1s ease;
-	transition:transform 1s ease;
-	transition:transform 1s ease, -webkit-transform 1s ease, -moz-transform 1s ease, -o-transform 1s ease;
-	text-indent:-999em;
-	background:url(../images/v3/cm_icon.png) no-repeat;
-	background-position:-411px -377px;
-}
-#play:hover {
-	-webkit-transform:scale(1.1);
-	-moz-transform:scale(1.1);
-	-ms-transform:scale(1.1);
-	-o-transform:scale(1.1);
-	transform:scale(1.1);
-	background-position:-410px -560px;
-}
-
-.article { /* Appeared in cm-for-pc also ! */
-	overflow:hidden;
-	text-align:center;
-	background:#fff;
-}
-
 
 #ft_head {
 	margin: 0 0 10px;
@@ -2323,14 +2279,6 @@ a.btn_green:visited {
 		margin-top: -30px !important
 	}
 
-	#play { /* Appeared in cm-for-pc also ! */
-		-webkit-transform: scale(.7);
-		-moz-transform: scale(.7);
-		-ms-transform: scale(.7);
-		-o-transform: scale(.7);
-		transform: scale(.7)
-	}
-
 	#ft_head {
 		padding: 5px 5px 0
 	}
@@ -2465,13 +2413,6 @@ a.btn_green:visited {
 		-moz-background-size: contain;
 		-o-background-size: contain;
 		background-size: contain
-	}
-
-	#play, #play:hover { /* Appeared in cm-for-pc also ! */
-		background: url(../images/v3/x2/play.png) no-repeat;
-		-moz-background-size: 154px 148px;
-		-o-background-size: 154px 148px;
-		background-size: 154px 148px
 	}
 
 	#pg_banner .download a {
