@@ -1,6 +1,7 @@
 /*
   pt.css for PianoTiles2
-  Latest modified: 2017-01-04 11:53
+  Added PT styles from v5.main.css
+  Latest modified: 2017-08-22 16:11
 */
 
 /* Global */
@@ -10,6 +11,25 @@
 }
 .bodyPT #wrap {
   min-width:auto!important;
+}
+.bodyPT #footer-wrap {
+  bottom:-35px;
+}
+.bodyPT #footer-wrap.shown {
+  bottom:0;
+}
+.bodyPT #footer {
+  background:none;
+}
+.bodyPT #footer,
+.bodyPT #footer a,
+.bodyPT #footer span {
+	color:#fff;
+}
+
+.bodyPT #header-wrap,
+.bodyPT #header-fixed {
+  background-color:transparent;
 }
 .bodyPT {
   background:url(../images/pt/pt-body-bg.jpg) 50% 0 no-repeat #83d8ff;

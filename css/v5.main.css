@@ -3,8 +3,9 @@
   - CMLauncher,
   - BatteryDoctor,
   - CleanMaster,
-  - CleanMaster for PC from v5.main.css
-  Latest modified: 2017-08-18 16:20
+  - CleanMaster for PC,
+  - Piano Tiles 2 from v5.main.css
+  Latest modified: 2017-08-22 16:14
 */
 
 @font-face {
@@ -1100,12 +1101,6 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 	left:0;
 	width:100%;
 }
-.bodyPT #footer-wrap {
-  bottom:-35px;
-}
-.bodyPT #footer-wrap.shown {
-  bottom:0;
-}
 #footer {
 	font-size:12px;
 	line-height:20px;
@@ -1124,15 +1119,9 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 .Front #footer a {
 	color:#fff;
 }
-.bodyPT #footer {
-  background:none;
-}
 .foot-copy em {
 	font-style:normal;
 	opacity:0.5;
-}
-.bodyPT #header-wrap, .bodyPT #header-fixed {
-  background-color:transparent;
 }
 #banner-wrap {
 	background:#3160af;
@@ -1340,12 +1329,6 @@ body {font-family:'Gotham-Book', 'HelveticaRegular', Helvetica, Verdana, Arial, 
 }
 #ft_body p {
 	margin: 0 0 20px
-}
-
-.bodyPT #footer,
-.bodyPT #footer a,
-.bodyPT #footer span {
-	color:#fff;
 }
 
 .bodyCMS #header-fixed,
@@ -3347,9 +3330,6 @@ a.btn_green:visited {
 	background-position: 0 -198px
 }
 .Front .asia .lang-current {
-	background-position: 0 -98px
-}
-.bodyPT .lang-current {
 	background-position: 0 -98px
 }
 .euro .lang-current {
