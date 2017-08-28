@@ -1,7 +1,7 @@
 /*
   For Clean Master only.
   Seperated from v5.main.css.
-  Latest modified: 2017-08-15 17:49
+  Latest modified: 2017-08-28 18:07 Added 5th anniversary
 */
 
 .bodyCM #header-fixed,
@@ -270,6 +270,15 @@
 	font-style:normal;
 }
 
+.anniversary {
+  position:absolute;
+  bottom:80px;
+  left:0%;
+  width:260px;
+  height:341px;
+  background-repeat:no-repeat;
+  background-image:url(../images/v3/cm-5th-anni.png); 
+}
 
 @media (min-width:1300px) and (min-height:750px) {
 	#cm_state .icon {top:50px;}
@@ -283,6 +292,7 @@
 	#cm_state li {padding:20px;line-height:26px;font-size:18px;}
 	#cm_state .desc {left:130px;}
 	#cm_feature, #cm_feature li {font-size:16px;background-image:none;}
+  .anniversary {bottom:auto;left:20px;top:120px;width:65px;height:85.25px;background-size:65px 85.25px;}
 }
 
 @media (max-width:540px) {
@@ -312,3 +322,5 @@
 	#play, #play:hover {background:url(../images/v3/x2/play.png) no-repeat;background-size:154px 148px;}
 
 }
+
+
