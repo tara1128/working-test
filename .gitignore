@@ -23,4 +23,5 @@ uploads/
 tiny-cms/
 whatscall/images
 images/
+!dist/images/
 1094/
