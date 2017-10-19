@@ -26,6 +26,11 @@
       ga('create', 'UA-40488675-1', 'auto');
       ga('send', 'pageview');
   </script>
+  <script src="../lib/react-cookie.min.js"></script>
+  <script>
+    if( !reactCookie.load('CMWebTester') ){ location.href = '/'; }
+  </script>
+
 </head>
 <body class="zh-cn">
   <div class="cmcm-wrapper">
