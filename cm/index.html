@@ -12,7 +12,7 @@
   <meta name="description" content="Cheetah Mobile, the world’s leading mobile tools provider, is dedicated to provide a faster, safer and easier mobile experience for its global users. " />
   <link rel="Shortcut Icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/lib/swiper.min.css" type="text/css" />
-  <link rel="stylesheet" href="/dist/index.min.css?v=10191948" type="text/css" />
+  <link rel="stylesheet" href="/dist/index.min.css?v=10210722" type="text/css" />
   <script src="/langs/tools.js"></script>
   <script src="/lib/jquery-1.9.1.min.js"></script>
   <script src="/lib/swiper.min.js"></script>
@@ -26,11 +26,6 @@
       ga('create', 'UA-40488675-1', 'auto');
       ga('send', 'pageview');
   </script>
-  <script src="../lib/react-cookie.min.js"></script>
-  <script>
-    if( !reactCookie.load('CMWebTester') ){ location.href = '/'; }
-  </script>
-
 </head>
 <body class="zh-cn">
   <div class="cmcm-wrapper">
@@ -74,7 +69,7 @@
 
       <div class="billboard">
         <!-- Swiper -->
-        <div class="swiper-container">
+        <div class="swiper-container billboard-swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide billboard-video-container">
               <video class="bb-video" id="CMCM_BillboardVideo" autoplay="true" preload="none" loop="loop" muted poster="/dist/images/cm-intro-poster.jpg">
@@ -92,7 +87,7 @@
             <div class="swiper-slide" style="background:#4e4444;color:#fafafa;">Slide 2: what's in it ?</div>
           </div>
           <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination billboard-swiper-pagination"></div>
         </div>
         <!-- End of Swiper -->
       </div><!-- .billboard -->
@@ -112,10 +107,10 @@
 
             <div class="tool-unit proportion-100 rel">
               <div class="tool-inner clearfix">
-                <a class="tool-icon"><img src="/dist/images/brandnew-logo-clean-master-103.png" width="103" alt="CleanMaster" /></a>
+                <a class="app-icon"><img src="/dist/images/brandnew-logo-clean-master-103.png" width="103" alt="CleanMaster" /></a>
                 <div class="tool-info">
-                  <h3 class="tool-name">猎豹清理大师</h3>
-                  <p class="tool-desc">全球最大的安卓优化软件，国内率先支持清理小程序垃圾首创业界领先的“云端+人工智能”深度清理系统，拥有世界第一的云端防毒软件；支持34种语言，覆盖100多个国家，拥有Google Play全球9亿下载量，支持34种语言，覆盖100多个国家。</p>
+                  <h3 class="app-name">猎豹清理大师</h3>
+                  <p class="app-desc">全球最大的安卓优化软件，国内率先支持清理小程序垃圾首创业界领先的“云端+人工智能”深度清理系统，拥有世界第一的云端防毒软件；支持34种语言，覆盖100多个国家，拥有Google Play全球9亿下载量，支持34种语言，覆盖100多个国家。</p>
                   <div class="tool-rank clearfix CMCM_Rank" data="5.7"></div>
                   <div class="tool-tags clearfix">
                     <a class="has-trans">100个国家工具榜NO.1</a>
@@ -131,11 +126,10 @@
 
             <div class="tool-unit proportion-50 has-right-border">
               <div class="tool-inner clearfix rel">
-                <a class="tool-icon"><img src="/dist/images/brandnew-logo-security-103.png" width="103" alt="" /></a>
+                <a class="app-icon"><img src="/dist/images/brandnew-logo-security-103.png" width="103" alt="" /></a>
                 <div class="tool-info">
-                  <h3 class="tool-name">猎豹安全大师</h3>
-                  <p class="tool-desc">全球领先的安卓手机安全应用，具有智能检测、病毒查杀、SafeConnect VPN、垃圾清理手机加速应等功能全面保护用户的手机及隐私。用锁等功能全面保护用户的手机及隐私。</p>
-                  <div class="tool-rank clearfix CMCM_Rank" data="3.7"></div>
+                  <h3 class="app-name">猎豹安全大师</h3>
+                  <p class="app-desc">全球领先的安卓手机安全应用，具有智能检测、病毒查杀、SafeConnect VPN、垃圾清理手机加速应等功能全面保护用户的手机及隐私。用锁等功能全面保护用户的手机及隐私。</p>
                   <div class="tool-tags clearfix">
                     <a class="has-trans">Google Play5亿下载</a>
                     <a class="has-trans">内建全球认证No.1病毒引擎</a>
@@ -146,12 +140,11 @@
 
             <div class="tool-unit proportion-50">
               <div class="tool-inner clearfix rel">
-                <a class="tool-icon"><img src="/dist/images/brandnew-logo-launcher-103.png" width="103" alt="" /></a>
+                <a class="app-icon"><img src="/dist/images/brandnew-logo-launcher-103.png" width="103" alt="" /></a>
                 <div class="tool-info">
-                  <h3 class="tool-name">猎豹3D桌面</h3>
-                  <p class="tool-desc">安卓平台最受欢迎的桌面应用之一拥有1000+海量免费3D主题，自主研发的全新3D图形特效引擎，为用户打造个性化的手机操作系统。
+                  <h3 class="app-name">猎豹3D桌面</h3>
+                  <p class="app-desc">安卓平台最受欢迎的桌面应用之一拥有1000+海量免费3D主题，自主研发的全新3D图形特效引擎，为用户打造个性化的手机操作系统。
 为用户打造个性化的手机操作系统。</p>
-                  <div class="tool-rank clearfix CMCM_Rank" data="8.7"></div>
                   <div class="tool-tags clearfix">
                     <a class="has-trans">Google Play 94个国家个性榜NO.1</a>
                   </div>
@@ -163,10 +156,10 @@
 
             <div class="tool-unit proportion-33 has-right-border">
               <div class="tool-inner clearfix rel">
-                <a class="tool-icon"><img src="/dist/images/brandnew-logo-kb-103.png" width="103" alt="" /></a>
+                <a class="app-icon"><img src="/dist/images/brandnew-logo-kb-103.png" width="103" alt="" /></a>
                 <div class="tool-info">
-                  <h3 class="tool-name">Cheetah Keyboard</h3>
-                  <p class="tool-desc">全球首款AI输入法全球首款AI输入法全球首款AI输入法全球首款AI输入法全。</p>
+                  <h3 class="app-name">Cheetah Keyboard</h3>
+                  <p class="app-desc">全球首款AI输入法全球首款AI输入法全球首款AI输入法全球首款AI输入法全。</p>
                   <div class="tool-tags clearfix">
                     <a class="has-trans">Google Play评分最高的输入法</a>
                   </div>
@@ -179,10 +172,10 @@
 
             <div class="tool-unit proportion-33 has-right-border">
               <div class="tool-inner clearfix rel">
-                <a class="tool-icon"><img src="/dist/images/brandnew-logo-photogrid-103.png" width="103" alt="" /></a>
+                <a class="app-icon"><img src="/dist/images/brandnew-logo-photogrid-103.png" width="103" alt="" /></a>
                 <div class="tool-info">
-                  <h3 class="tool-name">PhotoGrid</h3>
-                  <p class="tool-desc">拥有超过300种照片拼贴模版500种个性化贴图、人工智能滤镜等。人工智能滤镜等。</p>
+                  <h3 class="app-name">PhotoGrid</h3>
+                  <p class="app-desc">拥有超过300种照片拼贴模版500种个性化贴图、人工智能滤镜等。人工智能滤镜等。</p>
                   <div class="tool-tags clearfix">
                     <a class="has-trans">Google Play5亿下载</a>
                   </div>
@@ -196,20 +189,16 @@
 
             <div class="tool-unit proportion-33">
               <div class="tool-inner clearfix rel">
-                <a class="tool-icon"><img src="/dist/images/brandnew-logo-browser-103.png" width="103" alt="" /></a>
+                <a class="app-icon"><img src="/dist/images/brandnew-logo-browser-103.png" width="103" alt="" /></a>
                 <div class="tool-info">
-                  <h3 class="tool-name">猎豹浏览器</h3>
-                  <p class="tool-desc">更小更快新一代手机浏览器。安装包小，上网速度快，还能强力拦截网页广告。</p>
+                  <h3 class="app-name">猎豹浏览器</h3>
+                  <p class="app-desc">更小更快新一代手机浏览器。安装包小，上网速度快，还能强力拦截网页广告。</p>
                   <div class="tool-tags clearfix">
                     <a class="has-trans">Google Play全球下载5亿次</a>
                   </div>
                 </div><!-- info -->
               </div><!-- tool inner -->
             </div><!-- one unit -->
-
-
-
-
 
           </div><!-- tools container -->
         </div><!-- sec-body -->
@@ -225,21 +214,36 @@
           <h2 class="sec-descr">Live.me是一款风靡全球的直播类社交应用，<br />42个国家Google Play社交畅销榜NO.1</h2>
         </div><!-- sec-head -->
         <div class="sec-body clearfix">
-          <div class="live-intros clearfix">
-            <a class="live-icon" href="#">live.me</a>
-            <h3 class="live-title">Live.me</h3>
-            <p class="live-para">Live.me成功将中国的直播打赏模式搬到海外，内含礼物打赏、游戏直播等功能，已成为年轻人最喜爱的社交产品之一。Live.me成功将中国的直播打赏模式搬到海外，内含礼物打赏、游戏直播等功能，已成为年轻人最喜爱的社交产品之一。2017年5月，live.me宣布融资6000万美元，经纬中国等领投。2017年5月，live.me宣布融资6000万美元，经纬中国等领投。</p>
-            <p class="live-para">2017年5月，live.me宣布融资6000万美元，经纬中国等领投。Live.me成功将中国的直播打赏模式搬到海外，内含礼物打赏、游戏直播等功能，已成为年轻人最喜爱的社交产品之一。</p>
-            <ul class="live-datas clearfix">
-              <li class="live-data"><strong>200个国家</strong><b>使用覆盖高达</b></li>
-              <li class="live-data"><strong>6000万美元</strong><b>2017宣布融资</b></li>
-              <li class="live-data"><strong>TOP 1</strong><b>美国社交产品</b></li>
-            </ul>
-          </div><!-- intros -->
-          <div class="live-displays">
-            <div class="live-big-phone"></div>
+          <div class="live-intros left clearfix">
+            <a class="app-icon" href="#"><img src="/dist/images/brandnew-logo-liveme-103.png" width="103" alt="live.me" /></a>
+            <div class="live-info">
+              <h3 class="app-name">Live.me</h3>
+              <p class="app-desc">Live.me成功将中国的直播打赏模式搬到海外，内含礼物打赏、游戏直播等功能，已成为年轻人最喜爱的社交产品之一。Live.me成功将中国的直播打赏模式搬到海外，内含礼物打赏、游戏直播等功能，已成为年轻人最喜爱的社交产品之一。2017年5月，live.me宣布融资6000万美元，经纬中国等领投。2017年5月，live.me宣布融资6000万美元，经纬中国等领投。</p>
+              <p class="app-desc">2017年5月，live.me宣布融资6000万美元，经纬中国等领投。Live.me成功将中国的直播打赏模式搬到海外，内含礼物打赏、游戏直播等功能，已成为年轻人最喜爱的社交产品之一。</p>
+              <ul class="live-datas clearfix">
+                <li class="live-data">
+                  <strong class="earth">200个国家</strong>
+                  <b>使用覆盖高达</b>
+                  <s class="line"></s>
+                </li>
+                <li class="live-data">
+                  <strong class="money">6000万美元</strong>
+                  <b>2017宣布融资</b>
+                  <s class="line"></s>
+                </li>
+                <li class="live-data">
+                  <strong class="award">TOP 1</strong>
+                  <b>美国社交产品</b>
+                </li>
+              </ul>
+            </div><!-- info -->
+          </div><!-- intros, left -->
+          <div class="live-displays right">
+            <img src="/dist/images/liveme-broadcaster.jpg" alt="live.me" />
             <div class="live-small-window"></div>
-          </div><!-- displays -->
+            <div class="live-pink"></div>
+            <div class="live-dots"></div>
+          </div><!-- displays, right -->
         </div><!-- sec-body -->
       </div><!-- manage-width -->
     </section><!-- .section-3, live -->
@@ -254,10 +258,37 @@
         </div><!-- sec-head -->
       </div><!-- manage-width -->
       <div class="cross-width clearfix">
-        <div class="game-unit proportion-50-100">Piano Tiles 50% width and 100% height.</div>
-        <div class="game-unit proportion-50-50">Rolling Sky takes 50% width and 50% height.</div>
-        <div class="game-unit proportion-25-50">Dancing Line take 25% width and 50% height.</div>
-        <div class="game-unit proportion-25-50">弓箭手大作战 take 25% width and 50% height.</div>
+        <div class="game-unit proportion-50-100 has-right-border">
+          <img src="/dist/images/brandnew-game-bg-pt2.jpg" alt="PianoTiles2" />
+          <div class="abs pt-crumb"></div>
+          <div class="abs pt-block"></div>
+          <h3 class="abs pt-name">Piano Tiles 2</h3>
+          <div class="abs pt-intro">
+            <h4>钢琴块2</h4>
+            <p>坐拥9亿玩家、风靡全球的音乐类轻游戏，全新的滑块玩法，坐拥9亿玩家、风靡全球的音乐类轻游戏，全新的滑块玩法，坐拥9亿玩家、风靡全球的音乐类轻游戏，全新的滑块玩法。</p>
+          </div>
+        </div><!-- game unit -->
+
+        <div class="game-unit proportion-50-50">
+          <img src="/dist/images/brandnew-game-bg-rs.jpg" alt="RollingSky" />
+        </div><!-- game unit -->
+
+        <div class="game-unit proportion-28-50 has-right-border">
+          <img src="/dist/images/brandnew-game-bg-dl.jpg" alt="Dancing Line" />
+          <div class="abs dl-intro">
+            <h4 class="abs dl-name">Dancing Line</h4>
+            <s class="abs dl-icon"></s>
+          </div>
+        </div><!-- game unit -->
+
+        <div class="game-unit proportion-22-50">
+          <img src="/dist/images/brandnew-game-bg-gjs.jpg" alt="弓箭手大作战" />
+          <div class="abs gjs-intro">
+            <h4 class="abs gjs-name">弓箭手大作战</h4>
+            <s class="abs gjs-icon"></s>
+          </div>
+        </div><!-- game unit -->
+
       </div><!-- cross-width -->
     </section><!-- .section-4, games -->
 
@@ -269,15 +300,30 @@
           <h1 class="sec-title">新闻</h1>
           <h2 class="sec-descr">News Republic是一款搭载个性化推荐技术的新闻聚合应用，<br />用户遍布全球200多个国家。</h2>
         </div><!-- sec-head -->
-        <div class="sec-body clearfix">
-          <div class="news-intros clearfix">
-            <a class="news-icon" href="#">News Republic</a>
-            <h3 class="news-title">News Republic</h3>
-            <p class="news-para">拥有全球近3000家优质媒体版权，运用人工智能技术为用户个性化精准推送“千人千面”的内容。</p>
-            <p class="news-para">News Republic跨越文化壁垒，为全球用户传递和分享新鲜海量的优质内容，引领新一轮内容出海浪潮。</p>
+        <div class="sec-body clearfix rel">
+          <div class="news-intros clearfix abs">
+            <a class="app-icon"><img src="/dist/images/brandnew-logo-nr-103.png" width="103" alt="News Republic" /></a>
+            <div class="news-info">
+              <h3 class="app-name">News Republic</h3>
+              <p class="app-desc">拥有全球近3000家优质媒体版权，运用人工智能技术为用户个性化精准推送“千人千面”的内容。</p>
+              <p class="app-desc">News Republic跨越文化壁垒，为全球用户传递和分享新鲜海量的优质内容，引领新一轮内容出海浪潮。</p>
+            </div><!-- news info -->
           </div><!-- intros -->
+
           <div class="news-displays">
-            Here is a group of sliders...
+          
+            <div class="swiper-container news-swiper-container" dir="rtl">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="/dist/images/brandnew-nr-slider.jpg" alt="News Republic" />
+                </div><!-- slide 1 -->
+                <div class="swiper-slide">
+                  <img src="/dist/images/brandnew-nr-slider-2.jpg" alt="News Republic" />
+                </div><!-- slide 2 -->
+              </div>
+              <div class="swiper-pagination news-swiper-pagination"></div>
+            </div><!-- swiper-container -->
+
           </div><!-- displays -->
         </div><!-- sec-body -->
       </div><!-- manage-width -->
@@ -339,7 +385,7 @@
       </div><!-- manage-width -->
     </div><!-- the-footer -->
   </div><!-- .cmcm-wrapper -->
-  <script src="js/index.js?v=16"></script>
+  <script src="js/index.js?v=10210842"></script>
   <!-- script src="/dist/index.min.js?v=1139"></script -->
 </body>
 </html>
