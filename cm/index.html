@@ -12,7 +12,7 @@
   <meta name="description" content="Cheetah Mobile, the world’s leading mobile tools provider, is dedicated to provide a faster, safer and easier mobile experience for its global users. " />
   <link rel="Shortcut Icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/lib/swiper.min.css" type="text/css" />
-  <link rel="stylesheet" href="/dist/index.min.css?v=10210722" type="text/css" />
+  <link rel="stylesheet" href="/dist/index.min.css?v=10211626" type="text/css" />
   <script src="/langs/tools.js"></script>
   <script src="/lib/jquery-1.9.1.min.js"></script>
   <script src="/lib/swiper.min.js"></script>
@@ -20,7 +20,6 @@
 <script>
   if( !reactCookie.load('CMWebTester') ){ location.href = '/'; }
 </script>
-
   <script>
     var __FROM='';
     var startTime = new Date().getTime();
@@ -338,18 +337,20 @@
     <div class="the-footer">
       <div class="manage-width clearfix">
         <div class="footer-left">
-          <h4 class="footer-logo">Cheetah Mobile</h4>
+          <h4 class="footer-logo">
+            <a class="has-trans" href="#">Cheetah Mobile</a>
+          </h4>
           <div class="social-sharings clearfix">
-            <a class="social-icon fb">Facebook</a>
-            <a class="social-icon tw">Twitter</a>
-            <a class="social-icon wb">Weibo</a>
+            <a class="social-icon fb has-trans" href="#">Facebook</a>
+            <a class="social-icon tw has-trans" href="#">Twitter</a>
+            <a class="social-icon wb has-trans" href="#">Weibo</a>
           </div>
         </div><!-- left -->
-        <div class="footer-right clearfix">
+        <div class="footer-right clearfix rel">
 
           <div class="ft-column">
-            <h4 class="column-title"><a href="#">公司</a></h4>
-            <div class="column-links">
+            <h4 class="column-title clearfix"><a href="#">公司</a></h4>
+            <div class="column-links clearfix">
               <a href="#">使命与愿景</a>
               <a href="#">公司简介</a>
               <a href="#">发展历程</a>
@@ -359,8 +360,8 @@
           </div><!-- column -->
         
           <div class="ft-column">
-            <h4 class="column-title"><a href="#">产品</a></h4>
-            <div class="column-links">
+            <h4 class="column-title clearfix"><a href="#">产品</a></h4>
+            <div class="column-links clearfix">
               <a href="#">移动</a>
               <a href="#">PC</a>
               <a href="#">人工智能</a>
@@ -370,8 +371,8 @@
           </div><!-- column -->
         
           <div class="ft-column">
-            <h4 class="column-title"><a href="#">联系</a></h4>
-            <div class="column-links">
+            <h4 class="column-title clearfix"><a href="#">联系</a></h4>
+            <div class="column-links clearfix">
               <a href="#">媒体需求</a>
               <a href="#">全球办公室</a>
               <a href="#">产品需求</a>
@@ -379,12 +380,32 @@
           </div><!-- column -->
         
           <div class="ft-column">
-            <h4 class="column-title"><a href="#">投资者关系</a></h4>
+            <h4 class="column-title clearfix"><a href="#">投资者关系</a></h4>
           </div><!-- column -->
         
           <div class="ft-column">
-            <h4 class="column-title"><a href="#">招聘</a></h4>
+            <h4 class="column-title clearfix"><a href="#">招聘</a></h4>
           </div><!-- column -->
+
+          <div class="bottom-right abs clearfix">
+            <ul class="clearfix">
+              <li class="first">
+                <a class="has-trans" href="#">隐私权政策</a>
+              </li>
+              <li>
+                <a class="has-trans" href="#">服务条款</a>
+              </li>
+              <li>
+                <a class="has-trans" href="#">法律声明</a>
+              </li>
+              <li class="copyright">
+                <span>Cheetah Mobile ©️ 2017 </span>
+              </li>
+              <li class="switch-langs">
+                <a class="has-trans">简体中文</a>
+              </li>
+            </ul>
+          </div><!-- bottom right area for privacy -->
         
         </div><!-- right -->
       </div><!-- manage-width -->
