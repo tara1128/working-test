@@ -243,7 +243,7 @@ class Popup extends React.Component {
 var cateList = [
 
   {
-    projectName: 'New official website of CMCM',
+    projectName: 'New official website',
     linkTo: 'cm/',
     latestModified: '2017-10-24 23:34'
   },
