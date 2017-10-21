@@ -16,6 +16,11 @@
   <script src="/langs/tools.js"></script>
   <script src="/lib/jquery-1.9.1.min.js"></script>
   <script src="/lib/swiper.min.js"></script>
+<script src="../lib/react-cookie.min.js"></script>
+<script>
+  if( !reactCookie.load('CMWebTester') ){ location.href = '/'; }
+</script>
+
   <script>
     var __FROM='';
     var startTime = new Date().getTime();
