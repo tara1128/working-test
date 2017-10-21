@@ -1,6 +1,6 @@
 /*
   index.js, trying ES6
-  Latest modified: 2017-08-21 16:21
+  Latest modified: 2017-10-21 08:49
 */
 
 class IndexLogin extends React.Component {
@@ -241,6 +241,14 @@ class Popup extends React.Component {
 };
 
 var cateList = [
+
+  {
+    projectName: 'New official website of CMCM',
+    linkTo: 'cm/',
+    latestModified: '2017-10-24 23:34'
+  },
+
+/*
   {
     projectName: 'Testing css',
     linkTo: 'optimizing-v5-css/en-us/',
@@ -276,6 +284,7 @@ var cateList = [
     linkTo: 'piano-tiles/',
     latestModified: '2016-10-28 15:13'
   }
+  */
 ];
 
 
