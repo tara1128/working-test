@@ -12,14 +12,16 @@
   <meta name="description" content="Cheetah Mobile, the world’s leading mobile tools provider, is dedicated to provide a faster, safer and easier mobile experience for its global users. " />
   <link rel="Shortcut Icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/lib/swiper.min.css" type="text/css" />
-  <link rel="stylesheet" href="/dist/index.min.css?v=10211626" type="text/css" />
+  <link rel="stylesheet" href="/dist/index.min.css?v=10231438" type="text/css" />
   <script src="/langs/tools.js"></script>
   <script src="/lib/jquery-1.9.1.min.js"></script>
   <script src="/lib/swiper.min.js"></script>
+
 <script src="../lib/react-cookie.min.js"></script>
 <script>
   if( !reactCookie.load('CMWebTester') ){ location.href = '/'; }
 </script>
+
   <script>
     var __FROM='';
     var startTime = new Date().getTime();
@@ -38,29 +40,32 @@
     <section class="first-screen">
       <div class="top-bar">
         <div class="manage-width clearfix">
-          <h1 class="top-logo"><a class="has-trans" href="#">Cheetah Mobile</a></h1>
-          <ul class="top-nav top-burger">
-            <li class="top-nav-li">
+          <h1 class="top-logo has-trans">
+            <a class="has-trans" href="#">Cheetah Mobile</a>
+          </h1>
+          <div class="top-burger" id="CMCM_TopBurger"></div>
+          <ul class="top-nav" id="CMCM_TopNav">
+            <li class="top-nav-li has-trans">
               <a class="top-nav-a has-trans" href="#" onclick="ga('send', 'event', 'brandnew.nav.company', 'click');">公司</a>
               <div class="top-nav-sub"></div>
             </li>
-            <li class="top-nav-li">
+            <li class="top-nav-li has-trans">
               <a class="top-nav-a has-trans" href="#" onclick="ga('send', 'event', 'brandnew.nav.product', 'click');">产品</a>
               <div class="top-nav-sub"></div>
             </li>
-            <li class="top-nav-li">
+            <li class="top-nav-li has-trans">
               <a class="top-nav-a has-trans" href="#" onclick="ga('send', 'event', 'brandnew.nav.contact', 'click');">联系</a>
               <div class="top-nav-sub"></div>
             </li>
-            <li class="top-nav-li">
+            <li class="top-nav-li has-trans">
               <a class="top-nav-a has-trans" href="#" onclick="ga('send', 'event', 'brandnew.nav.ir', 'click');">投资者关系</a>
               <div class="top-nav-sub"></div>
             </li>
-            <li class="top-nav-li">
+            <li class="top-nav-li has-trans">
               <a class="top-nav-a has-trans" href="#" onclick="ga('send', 'event', 'brandnew.nav.hr', 'click');">招聘</a>
               <div class="top-nav-sub"></div>
             </li>
-            <li class="top-nav-li top-langs">
+            <li class="top-nav-li has-trans top-langs">
               <div class="langs clearfix">
                 <a class="lang-a has-trans active" href="#">简</a>
                 <a class="lang-a strip"> | </a>
@@ -411,7 +416,7 @@
       </div><!-- manage-width -->
     </div><!-- the-footer -->
   </div><!-- .cmcm-wrapper -->
-  <script src="js/index.js?v=10210842"></script>
+  <script src="js/index.js?v=10231425"></script>
   <!-- script src="/dist/index.min.js?v=1139"></script -->
 </body>
 </html>
