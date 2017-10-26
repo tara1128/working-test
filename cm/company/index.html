@@ -11,8 +11,11 @@
   <meta name="keywords" content="CM,Cheetah Mobile, Clean Master, Live.me, Piano tiles, News Republic, CM Security, Battery Doctor, CM Browser, Photo Grid" />
   <meta name="description" content="Cheetah Mobile, the world’s leading mobile tools provider, is dedicated to provide a faster, safer and easier mobile experience for its global users. " />
   <link rel="Shortcut Icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="/dist/index.min.css?v=10222009" type="text/css" />
+  <link rel="stylesheet" href="/dist/index.min.css?v=1027" type="text/css" />
+  <script src="/data/nav.js?10270011"></script>
+  <script src="/data/history.js?10270011"></script>
   <script src="/lib/jquery-1.9.1.min.js"></script>
+  <script src="/lib/swiper.min.js"></script>
   <script>
     var __FROM='';
     var startTime = new Date().getTime();
@@ -24,46 +27,10 @@
       ga('send', 'pageview');
   </script>
 </head>
-<body class="zh-cn subpage company">
+<body class="zh-cn subpage" data-subpage="company" data-lang="zh-cn">
   <div class="cmcm-wrapper">
 
-    <section class="first-screen">
-      <div class="top-bar">
-        <div class="manage-width clearfix">
-          <h1 class="top-logo"><a class="has-trans" href="#">Cheetah Mobile</a></h1>
-          <ul class="top-nav top-burger">
-            <li class="top-nav-li">
-              <a class="top-nav-a has-trans active CMCM_Company" href="#" onclick="ga('send', 'event', 'brandnew.nav.company', 'click');">公司</a>
-              <div class="top-nav-sub"></div>
-            </li>
-            <li class="top-nav-li">
-              <a class="top-nav-a has-trans CMCM_Product" href="#" onclick="ga('send', 'event', 'brandnew.nav.product', 'click');">产品</a>
-              <div class="top-nav-sub"></div>
-            </li>
-            <li class="top-nav-li">
-              <a class="top-nav-a has-trans CMCM_Contact" href="#" onclick="ga('send', 'event', 'brandnew.nav.contact', 'click');">联系</a>
-              <div class="top-nav-sub"></div>
-            </li>
-            <li class="top-nav-li">
-              <a class="top-nav-a has-trans CMCM_IR" href="#" onclick="ga('send', 'event', 'brandnew.nav.ir', 'click');">投资者关系</a>
-              <div class="top-nav-sub"></div>
-            </li>
-            <li class="top-nav-li">
-              <a class="top-nav-a has-trans CMCM_HR" href="#" onclick="ga('send', 'event', 'brandnew.nav.hr', 'click');">招聘</a>
-              <div class="top-nav-sub"></div>
-            </li>
-            <li class="top-nav-li top-langs">
-              <div class="langs clearfix">
-                <a class="lang-a has-trans active" href="#">简</a>
-                <a class="lang-a strip"> | </a>
-                <a class="lang-a has-trans" href="#">EN</a>
-              </div>
-            </li>
-          </ul>
-        </div><!-- manage-width -->
-      </div><!-- .top-bar -->
-
-    </section><!-- .first-screen -->
+    <section class="first-screen" id="CMCM_FirstScreen"></section><!-- .first-screen -->
 
     <section class="subpage-content">
       <div class="manage-width clearfix">
@@ -109,9 +76,10 @@
           <div class="category-container category-of-company" id="Anc_Company">
             <h2 class="category-title">公司简介</h2>
             <div class="one-app-introduction clearfix">
-              <img src="/dist/images/brandnew-company-view.jpg" alt="Cheetah Mobile" />
-              <p class="company-intros">猎豹移动（NYSE: CMCM）是一家全球领先的移动互联网公司致力于为全球用户提供卓越的应用，以个性化内容连接用户，用人工智能技术为产品赋能。公司于2010年10月，由金山安全和可牛影像合并而成，继承了金山18年的安全技术积累和可牛影像的互联网基因。猎豹移动是中国移动互联网公司出海的领军者。截至2017年3月，公司产品在全球移动端月度活跃用户约为6亿，用户分布覆盖200多个国家及地区。其中，77%来自欧美为主的海外市场。</p>
-              <p class="company-intros">公司核心产品包括一系列工具及安全应用，如猎豹清理大师、猎豹安全大师猎豹3D桌面、金山毒霸、Cheetah Keyboard等，为全球移动用户提供更快速、更易用、更安全的移动互联网体验。在工具应用之外，猎豹移动还拥有直播社交类应用Live.me、新闻聚合应用News Republic，游戏应用钢琴块儿2（Piano Tiles 2）弓箭手大作战（Arrow.io）等移动娱乐类产品。</p>
+              <img class="company-view" src="/dist/images/brandnew-company-view.jpg" alt="Cheetah Mobile" />
+              <p class="company-intros">猎豹移动（NYSE: CMCM）是一家全球领先的移动互联网公司，致力于为全球用户提供卓越的应用。公司于2010年10月，由金山安全和可牛影像合并而成，继承了金山18年的安全技术积累和可牛影像的互联网基因。</p>
+              <p class="company-intros">猎豹移动是中国移动互联网公司出海的领军者。截至2017年3月，公司产品在全球移动端月度活跃用户约为6亿，用户分布覆盖全球200多个国家及地区。其中，77%来自以欧美为主的海外市场。</p>
+              <p class="company-intros">公司核心产品包括一系列工具及安全应用，如猎豹清理大师（Clean Master）、猎豹安全大师（Security Master）、猎豹3D桌面（CM Launcher）、金山毒霸（Duba Anti-virus）、Cheetah Keyboard等，为全球移动用户提供更快速、更易用、更安全的移动互联网体验。在工具应用之外，猎豹移动还拥有直播社交类应用Live.me、新闻聚合类应用News Republic，游戏应用钢琴块儿2（Piano Tiles 2）、弓箭手大作战（Arrow.io）等产品。</p>
             </div><!-- one app introduction -->
           </div><!-- category container of company -->
 
@@ -119,79 +87,8 @@
 
           <div class="category-container category-of-history" id="Anc_History">
             <h2 class="category-title">发展历程</h2>
-            <div class="one-app-introduction clearfix">
-              <div class="history-one-year clearfix">
-                <h3 class="year-number">2010</h3>
-                <div class="history-item clearfix">
-                  <span>11</span>
-                  <b>金山安全与可牛影像合并，成立金山网络（猎豹前身）</b>
-                </div><!-- item -->
-                <s>Dots</s>
-              </div><!-- history-one-year -->
-              <div class="history-one-year clearfix">
-                <h3 class="year-number">2011</h3>
-                <div class="history-item clearfix">
-                  <span>07</span>
-                  <b>获腾讯2000万美金战略投资</b>
-                </div><!-- item -->
-                <div class="history-item clearfix">
-                  <span>08</span>
-                  <b>安全客户端用户量超过1亿</b>
-                </div><!-- item -->
-                <s>Dots</s>
-              </div><!-- history-one-year -->
-              <div class="history-one-year clearfix">
-                <h3 class="year-number">2012</h3>
-                <div class="history-item clearfix">
-                  <span>06</span>
-                  <b>发布国内首款双核安全浏览器：猎豹浏览器</b>
-                </div><!-- item -->
-                <div class="history-item clearfix">
-                  <span>09</span>
-                  <b>在海外推出安卓系统专业手机清理应用Clean Master</b>
-                </div><!-- item -->
-                <s>Dots</s>
-              </div><!-- history-one-year -->
-              <div class="history-one-year clearfix">
-                <h3 class="year-number">2013</h3>
-                <div class="history-item clearfix">
-                  <span>07</span>
-                  <b>Clean Master中文版猎豹清理大师发布</b>
-                </div><!-- item -->
-                <div class="history-item clearfix">
-                  <span>08</span>
-                  <b>金山电池医生全球下载量突破1亿</b>
-                </div><!-- item -->
-                <div class="history-item clearfix">
-                  <span>12</span>
-                  <b>猎豹清理大师（Clean Master）全球下载量突破1亿，日活跃用户突破5000万</b>
-                </div><!-- item -->
-                <s>Dots</s>
-              </div><!-- history-one-year -->
-              <div class="history-one-year clearfix">
-                <h3 class="year-number">2014</h3>
-                <div class="history-item clearfix">
-                  <span>03</span>
-                  <b>金山网络更名为猎豹移动（Cheetah Mobile）</b>
-                </div><!-- item -->
-                <div class="history-item clearfix">
-                  <span>05</span>
-                  <b>登录纽交所，正式挂牌上市，交易代码CMCM</b>
-                </div><!-- item -->
-                <div class="history-item clearfix">
-                  <span>12</span>
-                  <b>成为Google Play全球第二大应用开发商，仅次于Facebook</b>
-                </div><!-- item -->
-                <div class="history-item clearfix">
-                  <span>12</span>
-                  <b>发布全面提升手机速度的安全桌面软件CM Launcher</b>
-                </div><!-- item -->
-                <s>Dots</s>
-              </div><!-- history-one-year -->
-            </div><!-- one app introduction -->
+            <div class="one-app-introduction clearfix" id="CMCM_CompanyHistory"></div><!-- one app introduction -->
           </div><!-- category container of history -->
-
-
 
 
 
@@ -208,8 +105,8 @@
           <div class="category-container category-of-welfare" id="Anc_Welfare">
             <h2 class="category-title">员工福利</h2>
             <div class="one-app-introduction clearfix">
-              <p class="welfare-para">在猎豹移动，有着多元化的员工福利。这里有丰富多彩的社团和节日活动。篮球、羽毛球、登山社公益社……总有一款适合你，每年还有各类赛事活动和例如家庭日等精彩纷呈的文化主题活动工作之余大家一起快乐生活。这里有多元化的学习和生活方式。猎豹学院、黑客马拉松、开放透明的高管周例会；图书馆、咖啡厅、健身房、电影院、KTV……这里是“东半球最像硅谷的中国公司”除此之外，还有免费班车加班打车报销、年度健康体检、生日礼物、海归落户、新婚礼金、节日关怀新晋奶妈奶爸大礼包内推伯乐奖、消费贷款补充商业保险等丰富多彩的员工福利。</p>
-              <div class="welfare-imgs">
+              <p class="welfare-para">在猎豹移动，有着多元化的员工福利。这里有丰富多彩的社团和节日活动。篮球、羽毛球、登山社、公益社……总有一款适合你。每年还有各类赛事活动和例如家庭日等精彩纷呈的文化主题活动，工作之余大家一起快乐生活。这里有多元化的学习和生活方式。猎豹学院、黑客马拉松、开放透明的高管周例会；图书馆、咖啡厅、健身房、电影院、KTV……这里是“东半球最有硅谷范儿的中国公司”。除此之外，还有免费班车、加班打车报销、年度健康体检、生日礼物、海归落户、新婚礼金、节日关怀、新晋奶妈奶爸大礼包、内推伯乐奖、消费贷款、补充商业保险等丰富多彩的员工福利。</p>
+              <div class="welfare-imgs clearfix">
                 <div class="welfare-item">
                   <img src="/dist/images/welfare-building.jpg" alt="员工福利" /> 
                   <p>大楼内不仅有着充满童趣的大滑梯，还有挑战</p>
@@ -237,25 +134,34 @@
             <h2 class="category-title">管理团队</h2>
 
             <div class="one-app-introduction clearfix">
-              <img class="leader-pic" src="/dist/images/leaders-fusheng.jpg" alt="傅盛" />
+              <div class="leader-pic">
+                <img src="/dist/images/leaders-fusheng.jpg" alt="傅盛" />
+                <div class="leader-inf-in-mobile-only"><h2>傅盛</h2><h3>猎豹移动CEO</h3></div>
+              </div>
               <div class="leader-inf">
                 <h2>傅盛</h2>
                 <h3>猎豹移动CEO</h3>
-                <p>傅盛为猎豹移动联合创始人兼CEO。猎豹移动致力于用AI+大数据为全球用户提供卓越的移动应用，用个性化内容连接6亿用户。作为猎豹移动的CEO，傅盛全面负责公司各项产品和人工智能业务全战略。短短五年，傅盛将猎豹移动打造成为全球和中国领先的工具和内容应用开发商。在他的领导下，猎豹移动也成为了第一批成功拓展海外市场的中国互联网公司之一。</p>
+                <p>傅盛为猎豹移动联合创始人兼CEO。猎豹移动致力于用AI+大数据，为全球用户提供卓越的移动应用，用个性化内容连接6亿用户。作为猎豹移动的CEO，傅盛全面负责公司各项产品和人工智能业务的全球战略。短短五年，傅盛将猎豹移动打造成为全球和中国领先的工具和内容应用开发商。在他的领导下，猎豹移动也成为了第一批成功拓展海外市场的中国互联网公司之一。2014年5月8日，傅盛带领猎豹移动成功登陆纽交所挂牌上市。从猎豹移动工具出海，到引领内容出海新浪潮，再到布局语音技术、图像识别和自然语言处理等人工智能领域，傅盛正在带领猎豹移动实现新的使命——Make the World Smarter。他曾担任奇虎360软件事业部总经理，打造了360的核心产品360安全卫士。2008年加入经纬创投中国任副总裁；2009年创立可牛影像并出任董事长兼CEO。从2014年起，他连续四年荣获中国40位40岁以下的商界精英榜单，他还被世界经济论坛评为2016年“全球青年领袖”。</p>
               </div>
             </div><!-- one app introduction -->
 
             <div class="one-app-introduction clearfix reverse">
-              <img class="leader-pic" src="/dist/images/leaders-xuming.jpg" alt="徐鸣" />
+              <div class="leader-pic">
+                <img src="/dist/images/leaders-xuming.jpg" alt="徐鸣" />
+                <div class="leader-inf-in-mobile-only"><h2>徐鸣</h2><h3>猎豹移动总裁</h3></div>
+              </div>
               <div class="leader-inf">
                 <h2>徐鸣</h2>
                 <h3>猎豹移动总裁</h3>
-                <p>徐鸣为猎豹移动总裁，全面负责公司管理战略，全产品线的产品开发、技术、运营等业务。除了传统工具应用，徐鸣也在新兴的内容及AI业务投入大量精力，带队落实人脸识别、语音OS等技术的研发。他拥有超过10年的互联网工具产品研发经验，是业界公认的天才程序员及专业研发管理人员；曾就职于3721和奇虎360在后者与猎豹移动CEO傅盛一起从0到1打造了360安全卫士等当时的核心产品。</p>
+                <p>徐鸣为猎豹移动总裁，全面负责公司管理战略，全产品线的产品开发、技术、运营等业务。除了传统工具应用，徐鸣也在新兴的内容及AI业务投入大量精力，带队落实人脸识别、语音OS等技术的研发。他拥有超过10年的互联网工具产品研发经验，是业界公认的天才程序员及专业研发管理人员；曾就职于3721和奇虎360，在后者与猎豹移动CEO傅盛一起从0到1打造了360安全卫士等当时的核心产品。此后，徐鸣与傅盛一起创办可牛影像，并担任CTO。2010年，可牛影像与金山安全合并成立新公司“金山网络”，后更名为猎豹移动，并于2014年5月8日成功登陆美国纽交所挂牌上市。期间，他担任猎豹移动CTO，带领产品技术团队，开发出Clean Master、CM Security等旗舰工具应用，并将之打造成全球第一的工具类软件，开启了中国公司工具产品国际化的浪潮。徐鸣后升任猎豹移动总裁。2002年毕业于哈尔滨工业大学工程学专业，获得硕士学位。</p>
               </div>
             </div><!-- one app introduction -->
 
             <div class="one-app-introduction clearfix">
-              <img class="leader-pic" src="/dist/images/leaders-jiangzhenyu.jpg" alt="姜振宇" />
+              <div class="leader-pic">
+                <img src="/dist/images/leaders-jiangzhenyu.jpg" alt="姜振宇" />
+                <div class="leader-inf-in-mobile-only"><h2>姜振宇</h2><h3>猎豹移动首席财务官</h3></div>
+              </div>
               <div class="leader-inf">
                 <h2>姜振宇</h2>
                 <h3>猎豹移动首席财务官</h3>
@@ -264,7 +170,10 @@
             </div><!-- one app introduction -->
 
             <div class="one-app-introduction clearfix reverse">
-              <img class="leader-pic" src="/dist/images/leaders-xiaojie.jpg" alt="肖洁" />
+              <div class="leader-pic">
+                <img src="/dist/images/leaders-xiaojie.jpg" alt="肖洁" />
+                <div class="leader-inf-in-mobile-only"><h2>肖洁</h2><h3>猎豹移动CEO</h3></div>
+              </div>
               <div class="leader-inf">
                 <h2>肖洁</h2>
                 <h3>猎豹移动CEO</h3>
@@ -273,7 +182,10 @@
             </div><!-- one app introduction -->
 
             <div class="one-app-introduction clearfix">
-              <img class="leader-pic" src="/dist/images/leaders-zhoupin.jpg" alt="周品" />
+              <div class="leader-pic">
+                <img src="/dist/images/leaders-zhoupin.jpg" alt="周品" />
+                <div class="leader-inf-in-mobile-only"><h2>周品</h2><h3>猎豹移动高级副总裁</h3></div>
+              </div>
               <div class="leader-inf">
                 <h2>周品</h2>
                 <h3>猎豹移动高级副总裁</h3>
@@ -346,8 +258,8 @@
             <h4 class="column-title clearfix"><a href="#">招聘</a></h4>
           </div><!-- column -->
 
-          <div class="bottom-right abs clearfix">
-            <ul class="clearfix">
+          <div class="bottom-right abs clearfix" id="CMCM_FooterCopyright">
+            <ul class="clearfix" id="CMCM_FooterBottomUl">
               <li class="first">
                 <a class="has-trans" href="#">隐私权政策</a>
               </li>
@@ -370,7 +282,7 @@
       </div><!-- manage-width -->
     </div><!-- the-footer -->
   </div><!-- .cmcm-wrapper -->
-  <script src="js/index.js?v=10210842"></script>
-  <!-- script src="/dist/index.min.js?v=1139"></script -->
+  <!-- script src="/js/index.js?v=1027"></script -->
+  <script src="/dist/index.min.js"></script>
 </body>
 </html>

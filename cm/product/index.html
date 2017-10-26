@@ -11,8 +11,11 @@
   <meta name="keywords" content="CM,Cheetah Mobile, Clean Master, Live.me, Piano tiles, News Republic, CM Security, Battery Doctor, CM Browser, Photo Grid" />
   <meta name="description" content="Cheetah Mobile, the world’s leading mobile tools provider, is dedicated to provide a faster, safer and easier mobile experience for its global users. " />
   <link rel="Shortcut Icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="/dist/index.min.css?v=10221146" type="text/css" />
+  <link rel="stylesheet" href="/lib/swiper.min.css" type="text/css" />
+  <link rel="stylesheet" href="/dist/index.min.css?v=10241554" type="text/css" />
+  <script src="/data/nav.js?10270011"></script>
   <script src="/lib/jquery-1.9.1.min.js"></script>
+  <script src="/lib/swiper.min.js"></script>
   <script>
     var __FROM='';
     var startTime = new Date().getTime();
@@ -24,58 +27,22 @@
       ga('send', 'pageview');
   </script>
 </head>
-<body class="zh-cn subpage">
+<body class="zh-cn subpage" data-subpage="product" data-lang="zh-cn">
   <div class="cmcm-wrapper">
 
-    <section class="first-screen">
-      <div class="top-bar">
-        <div class="manage-width clearfix">
-          <h1 class="top-logo"><a class="has-trans" href="#">Cheetah Mobile</a></h1>
-          <ul class="top-nav top-burger">
-            <li class="top-nav-li">
-              <a class="top-nav-a has-trans" href="#" onclick="ga('send', 'event', 'brandnew.nav.company', 'click');">公司</a>
-              <div class="top-nav-sub"></div>
-            </li>
-            <li class="top-nav-li">
-              <a class="top-nav-a has-trans active" href="#" onclick="ga('send', 'event', 'brandnew.nav.product', 'click');">产品</a>
-              <div class="top-nav-sub"></div>
-            </li>
-            <li class="top-nav-li">
-              <a class="top-nav-a has-trans" href="#" onclick="ga('send', 'event', 'brandnew.nav.contact', 'click');">联系</a>
-              <div class="top-nav-sub"></div>
-            </li>
-            <li class="top-nav-li">
-              <a class="top-nav-a has-trans" href="#" onclick="ga('send', 'event', 'brandnew.nav.ir', 'click');">投资者关系</a>
-              <div class="top-nav-sub"></div>
-            </li>
-            <li class="top-nav-li">
-              <a class="top-nav-a has-trans" href="#" onclick="ga('send', 'event', 'brandnew.nav.hr', 'click');">招聘</a>
-              <div class="top-nav-sub"></div>
-            </li>
-            <li class="top-nav-li top-langs">
-              <div class="langs clearfix">
-                <a class="lang-a has-trans active" href="#">简</a>
-                <a class="lang-a strip"> | </a>
-                <a class="lang-a has-trans" href="#">EN</a>
-              </div>
-            </li>
-          </ul>
-        </div><!-- manage-width -->
-      </div><!-- .top-bar -->
-
-    </section><!-- .first-screen -->
+    <section class="first-screen" id="CMCM_FirstScreen"></section><!-- .first-screen -->
 
     <section class="subpage-content">
       <div class="manage-width clearfix">
         <div class="submenu-nav left">
 
           <div class="category-unit">
-            <a class="category-name has-trans CMCM_SubMenuItem" href="#">移动应用</a>
+            <a class="category-name has-trans CMCM_SubMenuItem" href="#Anchor_Tool">移动应用</a>
             <div class="category-details has-trans CMCM_SubMenuDetails">
-              <a class="category-detail-one has-trans" href="#">工具</a>
-              <a class="category-detail-one has-trans" href="#">社交</a>
-              <a class="category-detail-one has-trans" href="#">游戏</a>
-              <a class="category-detail-one has-trans" href="#">新闻</a>
+              <a class="category-detail-one has-trans CMCM_SMD_A" href="#Anchor_Tool">工具</a>
+              <a class="category-detail-one has-trans CMCM_SMD_A" href="#Anchor_Social">社交</a>
+              <a class="category-detail-one has-trans CMCM_SMD_A" href="#Anchor_Game">游戏</a>
+              <a class="category-detail-one has-trans CMCM_SMD_A" href="#Anchor_News">新闻</a>
             </div><!-- details -->
           </div><!-- unit -->
 
@@ -94,7 +61,7 @@
           <div class="category-unit">
             <a class="category-name has-trans CMCM_SubMenuItem" href="#">商业</a>
             <div class="category-details has-trans CMCM_SubMenuDetails">
-              <a class="category-detail-one has-trans" href="#">Cheetah Ads</a>
+              <a class="category-detail-one has-trans CMCM_SMD_A" href="#">Cheetah Ads</a>
             </div><!-- details -->
           </div><!-- unit -->
 
@@ -104,8 +71,9 @@
         </div><!-- submenu-nav, left -->
         <div class="sublist-container right">
 
-          <div class="category-container category-of-tool">
+          <div class="category-container category-of-tool" id="Anchor_Tool">
             <h2 class="category-title">工具</h2>
+
             <div class="one-app-introduction clearfix">
               <div class="sub-appicon"><img src="/dist/images/brandnew-logo-clean-master-103.png" alt="CleanMaster" /></div>
               <div class="sub-appinfo">
@@ -135,7 +103,7 @@
 
 
 
-          <div class="category-container category-of-social">
+          <div class="category-container category-of-social" id="Anchor_Social">
             <h2 class="category-title">社交</h2>
             <div class="one-app-introduction clearfix">
               <div class="sub-appicon"><img src="/dist/images/brandnew-logo-liveme-103.png" alt="live.me" /></div>
@@ -150,7 +118,7 @@
 
 
 
-          <div class="category-container category-of-game">
+          <div class="category-container category-of-game" id="Anchor_Game">
             <h2 class="category-title">游戏</h2>
             <div class="one-app-introduction clearfix">
               <div class="sub-appicon"><img src="/dist/images/brandnew-logo-liveme-103.png" alt="" /></div>
@@ -178,7 +146,7 @@
           </div><!-- category container of game -->
 
 
-          <div class="category-container category-of-news">
+          <div class="category-container category-of-news" id="Anchor_News">
             <h2 class="category-title">新闻</h2>
             <div class="one-app-introduction clearfix">
               <div class="sub-appicon"><img src="/dist/images/brandnew-logo-nr-103.png" alt="" /></div>
@@ -249,8 +217,8 @@
             <h4 class="column-title clearfix"><a href="#">招聘</a></h4>
           </div><!-- column -->
 
-          <div class="bottom-right abs clearfix">
-            <ul class="clearfix">
+          <div class="bottom-right abs clearfix" id="CMCM_FooterCopyright">
+            <ul class="clearfix" id="CMCM_FooterBottomUl">
               <li class="first">
                 <a class="has-trans" href="#">隐私权政策</a>
               </li>
@@ -273,7 +241,7 @@
       </div><!-- manage-width -->
     </div><!-- the-footer -->
   </div><!-- .cmcm-wrapper -->
-  <script src="js/index.js?v=10210842"></script>
-  <!-- script src="/dist/index.min.js?v=1139"></script -->
+  <!-- script src="/js/index.js?v=1027"></script -->
+  <script src="/dist/index.min.js"></script>
 </body>
 </html>
