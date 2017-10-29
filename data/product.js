@@ -2,7 +2,7 @@ var ProductList = {
   'zh-cn': {
     page: 'any',
     name: '产品',
-    link: '/zh-cn/product/',
+    link: '/cm/zh-cn/product/',
     category: {
       mobileApps: {
         categoryName: '移动应用',

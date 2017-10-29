@@ -245,7 +245,7 @@ var cateList = [
   {
     projectName: 'New official website',
     linkTo: 'cm/zh-cn/',
-    latestModified: '2017-10-29 10:24'
+    latestModified: '2017-10-29 14:15'
   },
 
 /*
