@@ -1,7 +1,7 @@
 var CompanyInfoList = {
   'zh-cn': {
     page: 'company',
-    name: '公司',
+    name: '关于公司',
     link: '/cm/zh-cn/company/',
     category: {
       missionVisions: {

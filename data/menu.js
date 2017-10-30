@@ -4,26 +4,18 @@ var PublicNav = {
     name: '猎豹移动',
     data: [
       {
-        displayName: '公司',
+        displayName: '关于我们',
         target: '_self',
         linkTo: '/cm/zh-cn/company/',
         active: 'company',
         gaTag: 'brandnew.nav.company'
       },
       {
-        displayName: '产品',
+        displayName: '产品与业务',
         target: '_self',
         linkTo: '/cm/zh-cn/product/',
         active: 'product',
         gaTag: 'brandnew.nav.product',
-        sub: []
-      },
-      {
-        displayName: '联系',
-        target: '_self',
-        linkTo: '/cm/zh-cn/contact/',
-        active: 'contact',
-        gaTag: 'brandnew.nav.contact',
         sub: []
       },
       {
@@ -39,6 +31,14 @@ var PublicNav = {
         linkTo: 'http://hr.cmcm.com/',
         active: '',
         gaTag: 'brandnew.nav.hr'
+      },
+      {
+        displayName: '联系',
+        target: '_self',
+        linkTo: '/cm/zh-cn/contact/',
+        active: 'contact',
+        gaTag: 'brandnew.nav.contact',
+        sub: []
       }
     ]
   },

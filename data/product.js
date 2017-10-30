@@ -1,7 +1,7 @@
 var ProductList = {
   'zh-cn': {
     page: 'any',
-    name: '产品',
+    name: '产品与业务',
     link: '/cm/zh-cn/product/',
     category: {
       mobileApps: {
@@ -125,7 +125,7 @@ var ProductList = {
                 name: 'Live.me',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-liveme-103.png',
-                descForIndex: ['风靡全球的直播类社交应用，将中国的直播打赏模式复制到海外，已经成为全球年轻人最喜爱的社交产品之一。', '目前已在85个国家和地区发行，覆盖7种不同语言。在全球42个国家Google Play社交畅销榜排行NO.1。', '继工具产品之后，Live.me成为猎豹移动出海的新标杆和领航者。'],
+                descForIndex: ['风靡全球的直播类社交应用，将中国的直播打赏模式复制到海外，已经成为全球年轻人最喜爱的社交产品之一。目前已在85个国家和地区发行，覆盖7种不同语言。在全球42个国家Google Play社交畅销榜排行NO.1。继工具产品之后，Live.me成为猎豹移动出海的新标杆和领航者。'],
                 descForProd: ['一款风靡全球的直播类社交应用。将中国的直播打赏模式复制到海外，吸引了众多明星及大牌网红入驻，已经成为美国轻人最喜爱的社交产品之一。', '覆盖85个国家，8种语言，位列Google Play美国社交产品畅销榜NO.1。'],
                 star: 0,
                 tags: ['85个市场|覆盖多元文化', '7种语言|融合本地需求', '42个国家|登顶社交畅销榜'],
@@ -287,6 +287,19 @@ var ProductList = {
                 target: '_blank',
                 pict: ''
               },
+              {
+                priority: '',
+                name: '驱动精灵',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-qdjl-103.png',
+                descForIndex: [],
+                descForProd: ['2012年收购，中国首创的、第一大电脑驱动程序管理软件，基于十余年的专业数据积累，硬件设备识别率高达98.3%，其中网卡的识别率高达99.9%，位列行业翘楚，为数亿用户解决各种电脑驱动问题、系统故障，实为装机必备。'],
+                star: 0,
+                tags: [],
+                link: 'http://www.drivergenius.com',
+                target: '_blank',
+                pict: ''
+              }
             ]
           }
         }
