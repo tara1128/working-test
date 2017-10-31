@@ -6,14 +6,14 @@ var PublicNav = {
       {
         displayName: '关于公司',
         target: '_self',
-        linkTo: '/company/',
+        linkTo: '/cm/zh-cn/company/',
         active: 'company',
         gaTag: 'brandnew.nav.company'
       },
       {
         displayName: '产品服务',
         target: '_self',
-        linkTo: '/product/',
+        linkTo: '/cm/zh-cn/product/',
         active: 'product',
         gaTag: 'brandnew.nav.product',
         sub: []
@@ -35,7 +35,7 @@ var PublicNav = {
       {
         displayName: '联系',
         target: '_self',
-        linkTo: '/contact/',
+        linkTo: '/cm/zh-cn/contact/',
         active: 'contact',
         gaTag: 'brandnew.nav.contact',
         sub: []
