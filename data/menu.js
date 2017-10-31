@@ -4,14 +4,14 @@ var PublicNav = {
     name: '猎豹移动',
     data: [
       {
-        displayName: '关于我们',
+        displayName: '关于公司',
         target: '_self',
         linkTo: '/cm/zh-cn/company/',
         active: 'company',
         gaTag: 'brandnew.nav.company'
       },
       {
-        displayName: '产品与业务',
+        displayName: '产品服务',
         target: '_self',
         linkTo: '/cm/zh-cn/product/',
         active: 'product',

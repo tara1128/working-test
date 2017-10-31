@@ -1,14 +1,15 @@
 var ProductList = {
   'zh-cn': {
     page: 'any',
-    name: '产品与业务',
+    name: '产品服务',
     link: '/cm/zh-cn/product/',
     category: {
       mobileApps: {
-        categoryName: '移动应用',
+        categoryName: '移动端',
         categoryLink: 'Product_MobileApps',
         categoryData: {
           onMenu: true, /* To show sub categories on menu, make it true. */
+          unfold: true, /* To unfold sub categories by default, make it true. */
           tool: {
             name: '工具',
             hash: 'Product_Tools',
@@ -20,8 +21,8 @@ var ProductList = {
                 name: '猎豹清理大师',
                 slog: '清理所有不快',
                 icon: '/dist/images/brandnew-logo-clean-master-103.png',
-                descForIndex: ['全球第一大安卓优化软件。首创业界领先的“云端+人工智能”深度清理系统，清理量较同类产品高30%以上；率先支持清理微信小程序垃圾。云端防毒体系多次被安全权威机构AV-Test评测为全球第一，100个国家Google Play工具榜排名第一。'],
-                descForProd: ['全球第一大安卓优化软件。首创业界领先的“云端+人工智能”深度清理系统，清理量较同类产品高于30%；率先支持清理微信小程序垃圾。云端防毒体系多次被权威机构AV-Test评为全球第一；100个国家Google Play工具榜NO.1。'],
+                descForIndex: ['全球第一大安卓优化软件。首创业界领先的“云端+人工智能”深度清理系统，清理量较同类产品高30%以上；率先支持清理微信小程序垃圾。云端防毒体系多次被安全权威机构AV-Test评测为全球第一，100个国家Google Play工具榜排名第一'],
+                descForProd: ['全球第一大安卓优化软件。首创业界领先的“云端+人工智能”深度清理系统，清理量较同类产品高于30%；率先支持清理微信小程序垃圾。云端防毒体系多次被权威机构AV-Test评为全球第一，100个国家Google Play工具榜NO.1。'],
                 star: 4.7,
                 tags: ['全球下载量近30亿', '国内应用市场评分同类最高'],
                 link: 'http://cn.cmcm.com/cleanmaster/?f=www',
@@ -76,7 +77,7 @@ var ProductList = {
                 name: 'PhotoGrid',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-photogrid-103.png',
-                descForIndex: ['相片组合编辑、视频拼贴、修图滤镜神器，2016年Google Play年度最佳App之一'],
+                descForIndex: ['相片组合编辑、视频拼贴、修图滤镜神器，2016年Google Play年度最佳App'],
                 descForProd: ['时下必备的相片组合编辑、视频拼贴、修图滤镜神器。内含海量素材，更利用机器学习、脸部辨识技术，推出Twinkle功能，令照片产生特殊的动态效果。', '安卓和iOS双平台共5.5亿下载量，2016年Google Play年度最佳App之一。'],
                 star: 0,
                 tags: [],
@@ -90,7 +91,7 @@ var ProductList = {
                 name: '猎豹浏览器',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-browser-103.png',
-                descForIndex: ['极致轻巧的安全浏览器。曾在8个国家AppStore工具榜排名第一，Google Play总下载量近1亿'],
+                descForIndex: ['极致轻巧的安全浏览器。曾在8个国家App Store工具榜排名第一，Google Play总下载量近1亿'],
                 descForProd: ['更轻巧、更快速、更安全的新一代手机浏览器。同时，它还是国内最早做内容探索的浏览器。', '曾在8个国家App Store工具榜排名第一，Google Play总下载量近 1亿，是海外用户量最大的第三方浏览器。'],
                 star: 0,
                 tags: ['', ''],
@@ -105,7 +106,7 @@ var ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-bd-103.png',
                 descForIndex: [],
-                descForProd: ['全球最专业的电池保养和电量管理软件，能轻松延长手机续航时间；科学用电、延长电池寿命。', '覆盖全球200多个国家和地区，曾在Google Play 26个国家工具榜高居第一，在133个国家App Store工具榜排名第一；Google Play下载量超 1亿。'],
+                descForProd: ['全球最专业的电池保养和电量管理软件，能轻松延长手机续航时间；科学用电、延长电池寿命。', '覆盖全球200多个国家和地区，曾在Google Play 26个国家工具榜高居第一，在133个国家App Store工具榜排名第一，Google Play下载量超 1亿。'],
                 star: 0,
                 tags: [],
                 link: 'http://www.ijinshan.com/dcys/',
@@ -125,7 +126,7 @@ var ProductList = {
                 name: 'Live.me',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-liveme-103.png',
-                descForIndex: ['风靡全球的直播类社交应用，将中国的直播打赏模式复制到海外，已经成为全球年轻人最喜爱的社交产品之一。目前已在85个国家和地区发行，覆盖7种不同语言。在全球42个国家Google Play社交畅销榜排行NO.1。继工具产品之后，Live.me成为猎豹移动出海的新标杆和领航者。'],
+                descForIndex: ['风靡全球的直播类社交应用，将中国的直播打赏模式复制到海外，已经成为全球年轻人最喜爱的社交产品之一。目前已在85个国家和地区发行，覆盖7种不同语言。在全球42个国家Google Play社交畅销榜排行NO.1。继工具产品之后，Live.me成为猎豹移动出海的新标杆'],
                 descForProd: ['一款风靡全球的直播类社交应用。将中国的直播打赏模式复制到海外，吸引了众多明星及大牌网红入驻，已经成为美国轻人最喜爱的社交产品之一。', '覆盖85个国家，8种语言，位列Google Play美国社交产品畅销榜NO.1。'],
                 star: 0,
                 tags: ['85个市场|覆盖多元文化', '7种语言|融合本地需求', '42个国家|登顶社交畅销榜'],
@@ -161,7 +162,7 @@ var ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-rs-103.png',
                 descForIndex: ['挑战速度和反应力极限的轻游戏；3D立体视觉，多样的游戏场景。141个市场App Store游戏下载榜前十，iOS中国游戏免费下载榜Top5，Google Play2016最佳游戏之一'],
-                descForProd: ['一款挑战速度和反应力极限的轻游戏，具有3D立体感的超炫视觉和丰富多样的游戏场景。', '现累计下载已超2.4亿，141个海外市场App Store游戏下载榜前十，65个国家的总榜前十，iOS中国游戏免费下载榜Top 5，Google Play2016最佳游戏。'],
+                descForProd: ['一款挑战速度和反应力极限的轻游戏；具有3D立体感的超炫视觉和丰富多样的游戏场景。', '现累计下载已超2.4亿，141个海外市场App Store游戏下载榜前十，65个国家的总榜前十，iOS中国游戏免费下载榜Top 5，Google Play2016最佳游戏。'],
                 star: 0,
                 tags: [],
                 link: 'https://play.google.com/store/apps/details?id=com.turbochilli.rollingsky',
@@ -238,7 +239,7 @@ var ProductList = {
                 name: 'News Republic',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-nr-103.png',
-                descForIndex: ['一款搭载个性化推荐技术的新闻聚合应用，通过的人工智能技术的运用，为全球用户精准推送“千人千面”的新闻内容。', '覆盖43个国家，47种语言 ，拥有全球近3000家优质媒体版权，曾经在60个国家Google Play新闻杂志应用下载榜单中荣登第一。'],
+                descForIndex: ['一款搭载个性化推荐技术的新闻聚合应用，通过人工智能技术的运用，为全球用户精准推送“千人千面”的新闻内容。覆盖43个国家，47种语言 ，拥有全球近3000家优质媒体版权，曾经在60个国家Google Play新闻杂志应用下载榜单中荣登第一'],
                 descForProd: ['一款搭载个性化推荐技术的新闻聚合应用，通过AI技术，为全球用户精准推送“千人千面”的新闻内容。', '覆盖43个国家，拥有全球近3000家优质媒体版权，曾经在60个国家Google Play新闻杂志应用下载榜单中荣登第一。'],
                 star: 0,
                 tags: [],
@@ -251,12 +252,12 @@ var ProductList = {
         }
       },
       pc: {
-        categoryName: 'PC产品',
+        categoryName: 'PC端',
         categoryLink: 'Product_forPC',
         categoryData: {
           onMenu: false, /* NOT to show sub categories on menu, make it false. */
           pc: {/* When no sub category, using the same name & hash as its father!*/
-            name: 'PC产品',
+            name: 'PC端',
             hash: 'Product_forPC',
             anch: 'category-of-pc',
             desc: '',
@@ -305,12 +306,12 @@ var ProductList = {
         }
       },
       ai: {
-        categoryName: '人工智能业务',
+        categoryName: '人工智能',
         categoryLink: 'Product_AI',
         categoryData: {
           onMenu: false, /* NOT to show sub categories on menu, make it false. */
           ai: {/* When no sub category, using the same name & hash as its father!*/
-            name: '人工智能业务',
+            name: '人工智能',
             hash: 'Product_AI',
             anch: 'category-of-ai',
             desc: '',
@@ -333,12 +334,12 @@ var ProductList = {
         }
       },
       bigData: {
-        categoryName: '大数据产品',
+        categoryName: '大数据',
         categoryLink: 'Product_bigData',
         categoryData: {
           onMenu: false, /* NOT to show sub categories on menu, make it false. */
           bigData: {
-            name: '大数据产品',
+            name: '大数据',
             hash: 'Product_bigData',
             anch: 'category-of-bigdata',
             desc: '',
@@ -361,12 +362,12 @@ var ProductList = {
         }
       },
       business: {
-        categoryName: '商业产品',
+        categoryName: '商业',
         categoryLink: 'Product_Business',
         categoryData: {
           onMenu: false, /* NOT to show sub categories on menu, make it false. */
           business: {/* When no sub category, using the same name & hash as its father!*/
-            name: '商业产品',
+            name: '商业',
             hash: 'Product_Business',
             anch: 'category-of-business',
             desc: '',
@@ -389,12 +390,12 @@ var ProductList = {
         }
       },
       hardware: {
-        categoryName: '硬件产品',
+        categoryName: '硬件',
         categoryLink: 'Product_Hardware',
         categoryData: {
           onMenu: false, /* NOT to show sub categories on menu, make it false. */
           hardware: {/* When no sub category, using the same name & hash as its father!*/
-            name: '硬件产品',
+            name: '硬件',
             hash: 'Product_Hardware',
             anch: 'category-of-hardware',
             desc: '',
