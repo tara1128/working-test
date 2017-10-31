@@ -31,8 +31,8 @@ var CompanyInfoList = {
             {
               year: 2017,
               events: {
-                '09': '美商务部长罗斯访华，CEO傅盛作为唯一一位中国互联网企业代表受邀参与会谈',
                 '07': '旗下人工智能公司猎户星空在微软百万名人脸识别竞赛中，获得第一名',
+                '06': '旗下AI公司猎户星空联合喜马拉雅发布小雅音箱，为其提供全链路远场语音交互系统',
                 '05': '专注社交直播的子公司Live.me获6000万美元融资'
               }
             },
@@ -87,6 +87,39 @@ var CompanyInfoList = {
               events: {
                 '11': '金山安全与可牛影像合并，成立金山网络（猎豹移动前身）'
               }
+            }
+          ]
+        }
+      },
+      leaderTeam: {
+        categoryName: '管理团队',
+        categoryLink: 'Company_Leaders',
+        categoryData: {
+          classAnchor: 'category-of-leaders',
+          leaderDetails: [
+            {
+              name: '傅盛',
+              title: '猎豹移动CEO',
+              detail: ['全面负责公司各项产品和人工智能业务的全球战略。短短五年，将猎豹移动打造成为全球和中国领先的工具和内容应用开发商，并带领猎豹移动去实现新的使命——Make the World Smarter。', '从2014年起，他连续四年荣获中国40位40岁以下的商界精英榜单，还被世界经济论坛评为2016年“全球青年领袖”。'],
+              avatar: '/dist/images/leaders-fusheng.jpg'
+            },
+            {
+              name: '徐鸣',
+              title: '猎豹移动总裁',
+              detail: ['全面负责公司管理战略和全产品线业务。除了传统工具应用，他还带队落实人脸识别、语音OS等技术的研发。', '他拥有超过10年的互联网工具产品研发经验，是业界公认的天才程序员及专业研发管理人员。他带领团队开发出Clean Master、CM Security等旗舰产品，并将之打造成全球第一的工具类软件，开启了中国工具产品国际化浪潮。'],
+              avatar: '/dist/images/leaders-xuming.jpg'
+            },
+            {
+              name: '姜振宇',
+              title: '猎豹移动首席财务官',
+              detail: ['他在企业财务管理、资本市场运作、兼并收购交易及合规性管理领域从业十余年，积累了丰富的实战经验。同时，还具有非常丰富的互联网、移动互联网行业背景和经验。', '在加盟猎豹移动之前，姜振宇曾在北京创办过一家科技公司。2014年至2015年，他曾担任北京玖富时代投资顾问有限公司的首席财务官。'],
+              avatar: '/dist/images/leaders-jiangzhenyu.jpg'
+            },
+            {
+              name: '肖洁',
+              title: '猎豹移动高级副总裁',
+              detail: ['拥有丰厚的品牌整合、传播以及市场公关经验，全面负责公司的市场公关工作，同时还负责海外商业产品及其他创新业务的开拓。', '她带领团队打造了中国首个面向全球的移动广告平台Cheetah Ads，依靠猎豹移动横跨安全、直播、新闻、游戏等各个领域的应用产品线，为全球广告主提供了沉浸式的直立视频广告解决方案。'],
+              avatar: '/dist/images/leaders-xiaojie.jpg'
             }
           ]
         }
@@ -160,40 +193,8 @@ var CompanyInfoList = {
             }
           ]
         }
-      },
-      leaderTeam: {
-        categoryName: '管理团队',
-        categoryLink: 'Company_Leaders',
-        categoryData: {
-          classAnchor: 'category-of-leaders',
-          leaderDetails: [
-            {
-              name: '傅盛',
-              title: '猎豹移动CEO',
-              detail: ['全面负责公司各项产品和人工智能业务的全球战略。短短五年，将猎豹移动打造成为全球和中国领先的工具和内容应用开发商，并带领猎豹移动去实现新的使命——Make the World Smarter。', '从2014年起，他连续四年荣获中国40位40岁以下的商界精英榜单，还被世界经济论坛评为2016年“全球青年领袖”。'],
-              avatar: '/dist/images/leaders-fusheng.jpg'
-            },
-            {
-              name: '徐鸣',
-              title: '猎豹移动总裁',
-              detail: ['全面负责公司管理战略和全产品线业务。除了传统工具应用，他还带队落实人脸识别、语音OS等技术的研发。', '他拥有超过10年的互联网工具产品研发经验，是业界公认的天才程序员及专业研发管理人员。他带领团队开发出Clean Master、CM Security等旗舰产品，并将之打造成全球第一的工具类软件，开启了中国工具产品国际化浪潮。'],
-              avatar: '/dist/images/leaders-xuming.jpg'
-            },
-            {
-              name: '姜振宇',
-              title: '猎豹移动首席财务官',
-              detail: ['他在企业财务管理、资本市场运作、兼并收购交易及合规性管理领域从业十余年，积累了丰富的实战经验。同时，还具有非常丰富的互联网、移动互联网行业背景和经验。', '在加盟猎豹移动之前，姜振宇曾在北京创办过一家科技公司。2014年至2015年，他曾担任北京玖富时代投资顾问有限公司的首席财务官。'],
-              avatar: '/dist/images/leaders-jiangzhenyu.jpg'
-            },
-            {
-              name: '肖洁',
-              title: '猎豹移动高级副总裁',
-              detail: ['拥有丰厚的品牌整合、传播以及市场公关经验，全面负责公司的市场公关工作，同时还负责海外商业产品及其他创新业务的开拓。', '她带领团队打造了中国首个面向全球的移动广告平台Cheetah Ads，依靠猎豹移动横跨安全、直播、新闻、游戏等各个领域的应用产品线，为全球广告主提供了沉浸式的直立视频广告解决方案。'],
-              avatar: '/dist/images/leaders-xiaojie.jpg'
-            }
-          ]
-        }
       }
+
     }// category
   },
   'en-us': {},

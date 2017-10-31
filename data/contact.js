@@ -33,7 +33,7 @@ var ContactList = {
           datas: [
             {
               title: '商业开发请联系',
-              details: ['ibd@cmcm.com']
+              details: ['contact_ibd@cmcm.com']
             },
             {
               title: '猎豹智趣营销请联系',
@@ -71,10 +71,6 @@ var ContactList = {
             {
               title: '纽约',
               details: ['联系地址：1460 Broadway, Suite 4051 New York, New York 10036']
-            },
-            {
-              title: '伦敦',
-              details: ['联系地址：Linen Hall, Level 5, Room 524, 162-168 Regent St, W1B 5TD London, United Kingdom', '联系电话：+44 203 586 1887']
             },
             {
               title: '柏林',
@@ -123,7 +119,16 @@ var ContactList = {
           datas: [
             {
               title: '您可以通过以下电子邮件联系到我们：',
-              details: ['Clean Master: support@cmcm.com', 'Battery Doctor: fankui@liebao.cn', 'Security Master: cmsecurity@cmcm.com', 'CM Browser: fankui@liebao.cn', 'PhotoGrid: photogrid@cmcm.com', 'Piano Tiles: pianotiles2cmcm@gmail.com']
+              details: [
+                '猎豹清理大师: support@cmcm.com',
+                '金山电池医生: fankui@liebao.cn',
+                '猎豹安全大师: cmsecurity@cmcm.com',
+                '猎豹浏览器: fankui@liebao.cn',
+                'PhotoGrid: photogrid@cmcm.com',
+                '钢琴块2: pianotiles2cmcm@gmail.com',
+                'Cheetah Keyboard: keyboard@cmcm.com',
+                '猎豹3D桌面: launcher@cmcm.com'
+              ]
             }
           ]
         }

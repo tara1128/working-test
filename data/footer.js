@@ -33,26 +33,15 @@ var PublicFooter = {
           ]
         }
       ],
-      copyright: [
-        {
-          cpName: '隐私政策',
-          cpLink: '/protocol/site/privacy-cn.html',
-        },
-        {
-          cpName: '用户协议',
-          cpLink: '/protocol/site/tos-cn.html',
-        },
-        {
-          cpName: '猎豹移动 ©️ 2017',
-          cpLink: '',
-          cpClss: 'copyright'
-        },
-        {
-          cpName: '简体中文',
-          cpLink: '',
-          cpClss: 'switch-langs'
-        },
-      ]
+      copyRight: {
+        privacy: '隐私政策',
+        pvyLink: 'http://www.cmcm.com/protocol/site/privacy-cn.html',
+        tos: '用户协议',
+        tosLink: 'http://www.cmcm.com/protocol/site/tos-cn.html',
+        cptext: '猎豹移动 ©️ 2017',
+        curLang: '简体中文',
+        curHome: '/cm/zh-cn/'
+      }
     }
   },
   'en-us': {},

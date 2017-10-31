@@ -26,7 +26,7 @@ var ProductList = {
                 star: 4.7,
                 tags: ['全球下载量近30亿', '国内应用市场评分同类最高'],
                 link: 'http://cn.cmcm.com/cleanmaster/?f=www',
-                target: '_self',
+                target: '_blank',
                 pict: '/dist/images/brandnew-tool-cm.png'
               },
             
@@ -40,7 +40,7 @@ var ProductList = {
                 star: 0,
                 tags: ['Google Play全球下载超过5亿', 'AV TEST评测最佳病毒引擎'],
                 link: 'http://cn.cmcm.com/cm-security/?f=cmcn',
-                target: '_self',
+                target: '_blank',
                 pict: ''
               },
             
@@ -54,7 +54,7 @@ var ProductList = {
                 star: 0,
                 tags: ['94个国家排名第一'],
                 link: 'http://www.cmcm.com/zh-cn/cm-launcher/?f=cmcn',
-                target: '_self',
+                target: '_blank',
                 pict: ''
               },
             
@@ -82,7 +82,7 @@ var ProductList = {
                 star: 0,
                 tags: [],
                 link: 'http://www.cmcm.com/zh-cn/photo-grid/',
-                target: '_self',
+                target: '_blank',
                 pict: ''
               },
             
@@ -152,7 +152,7 @@ var ProductList = {
                 star: 0,
                 tags: [],
                 link: 'http://www.cmcm.com/zh-cn/piano-tiles/',
-                target: '_self',
+                target: '_blank',
                 pict: ''
               },
             
@@ -346,7 +346,7 @@ var ProductList = {
             data: [
               {
                 priority: '',
-                name: '全球移动大数据分析平台',
+                name: '猎豹大数据',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-bigdata-138.png',
                 descForIndex: [],
