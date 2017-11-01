@@ -12,10 +12,13 @@
   <meta name="description" content="Cheetah Mobile, the world’s leading mobile tools provider, is dedicated to provide a faster, safer and easier mobile experience for its global users. " />
   <link rel="Shortcut Icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/lib/swiper.min.css" type="text/css" />
-  <link rel="stylesheet" href="/dist/index.min.css?v=1026" type="text/css" />
-  <script src="/data/nav.js?10270011"></script>
-  <script src="/data/product.js?10270011"></script>
-  <script src="/data/general.js?10270011"></script>
+  <link rel="stylesheet" href="/dist/index.min.css?v=110" type="text/css" />
+  <script src="/data/menu.js?1031"></script>
+  <script src="/data/intro.js?1031"></script>
+  <script src="/data/footer.js?10311612"></script>
+  <script src="/data/product.js?1031"></script>
+  <script src="/data/company.js?1031"></script>
+  <script src="/data/contact.js?1031"></script>
   <script src="/lib/jquery-1.9.1.min.js"></script>
   <script src="/lib/swiper.min.js"></script>
   <script>
@@ -42,14 +45,13 @@
             <div class="swiper-slide billboard-video-container">
               <div class="bb-bg-in-mobile"></div>
               <video class="bb-video" id="CMCM_BillboardVideo" autoplay="true" preload="none" loop="loop" muted poster="/dist/images/cm-intro-poster.jpg">
-                <source src="/dist/images/cm-intro-1.mp4" type="video/mp4">
-                <source src="/dist/images/cm-intro-1.ogv" type="video/ogg">
-                <source src="/dist/images/cm-intro-1.webm" type="video/webm">
-                Your browser doesn't support videos!
+                <source src="/dist/images/cmcm-intro-video.mp4" type="video/mp4">
+                <source src="/dist/images/cmcm-intro-video.ogv" type="video/ogg">
+                <source src="/dist/images/cmcm-intro-video.webm" type="video/webm">
               </video>
               <div class="bb-vmask"></div>
               <div class="bb-texts manage-width">
-                <h1 class="slogan" id="CMCM_Slogan"></h1>
+                <h1 class="slogan font-bold" id="CMCM_Slogan"></h1>
                 <h2 class="sub-slogan" id="CMCM_SubSlogan"></h2>
               </div>
             </div><!-- End of one slider -->
@@ -61,11 +63,11 @@
     </section><!-- .first-screen -->
 
 
-    <section class="sections section-2" id="CMCM_Section_tool">
+    <section class="sections section-2" id="CMCM_Section_Product_Tools">
       <div class="manage-width clearfix">
         <div class="sec-head clearfix">
-          <h1 class="sec-title CMCM_SecTitle"></h1>
-          <h2 class="sec-descr CMCM_SecDescr"></h2>
+          <h1 class="sec-title CMCM_SecTitle has-anim"></h1>
+          <h2 class="sec-descr CMCM_SecDescr has-anim"></h2>
         </div><!-- sec-head -->
         <div class="sec-body">
           <div class="tools-container clearfix" id="CMCM_ToolsContainer"></div>
@@ -74,41 +76,19 @@
     </section><!-- .section-2, tools -->
 
 
-    <section class="sections section-3" id="CMCM_Section_live">
+    <section class="sections section-3" id="CMCM_Section_Product_Social">
       <div class="manage-width clearfix">
         <div class="sec-head clearfix">
-          <h1 class="sec-title CMCM_SecTitle"></h1>
-          <h2 class="sec-descr CMCM_SecDescr"></h2>
+          <h1 class="sec-title CMCM_SecTitle has-anim"></h1>
+          <h2 class="sec-descr CMCM_SecDescr has-anim"></h2>
         </div><!-- sec-head -->
         <div class="sec-body clearfix">
-          <div class="live-intros left clearfix">
-            <a class="app-icon CMCM_AutoWidthSibling" href="#"><img src="/dist/images/brandnew-logo-liveme-103.png" alt="live.me" /></a>
-            <div class="live-info CMCM_AutoWidth" data-padding="10">
-              <h3 class="app-name">Live.me</h3>
-              <p class="app-desc">风靡全球的直播类社交应用，将中国的直播打赏模式复制到海外，已经成为全球年轻人最喜爱的社交产品之一。目前已在85个国家和地区发行，覆盖7种不同语言。在全球42个国家Google Play社交畅销榜排行NO.1。继工具产品之后，Live.me成为猎豹移动出海的新标杆和领航者。</p>
-              <ul class="live-datas clearfix">
-                <li class="live-data">
-                  <strong class="earth">85个国家和地区</strong>
-                  <b>使用覆盖高达</b>
-                  <s class="line"></s>
-                </li>
-                <li class="live-data">
-                  <strong class="money">7 种</strong>
-                  <b>不同语言</b>
-                  <s class="line"></s>
-                </li>
-                <li class="live-data">
-                  <strong class="award">NO.1</strong>
-                  <b>42个国家社交畅销榜</b>
-                </li>
-              </ul>
-            </div><!-- info -->
-          </div><!-- intros, left -->
+          <div class="live-intros left clearfix" id="CMCM_LiveMeTexts"></div>
           <div class="live-displays right">
             <div class="live-pink"></div>
             <div class="live-dots"></div>
-            <img src="/dist/images/liveme-broadcaster.jpg" alt="live.me" />
-            <div class="live-small-window"></div>
+            <img class="live-broadcaster has-anim" src="/dist/images/liveme-broadcaster.jpg" alt="live.me" />
+            <div class="live-small-window has-anim"></div>
           </div><!-- displays, right -->
         </div><!-- sec-body -->
       </div><!-- manage-width -->
@@ -116,78 +96,66 @@
 
 
 
-    <section class="sections section-4" id="CMCM_Section_game">
+    <section class="sections section-4" id="CMCM_Section_Product_Games">
       <div class="manage-width clearfix">
         <div class="sec-head clearfix">
-          <h1 class="sec-title CMCM_SecTitle"></h1>
-          <h2 class="sec-descr CMCM_SecDescr"></h2>
+          <h1 class="sec-title CMCM_SecTitle has-anim"></h1>
+          <h2 class="sec-descr CMCM_SecDescr has-anim"></h2>
         </div><!-- sec-head -->
       </div><!-- manage-width -->
       <div class="cross-width clearfix">
-        <div class="game-unit proportion-50-100 has-right-border">
-          <img src="/dist/images/brandnew-game-bg-pt2.jpg" alt="PianoTiles2" />
+        <a class="game-unit CMCM_GameUnit proportion-50-100 has-right-border">
+          <img src="/dist/images/brandnew-game-bg-pt2.jpg" alt="Piano Tiles2" />
           <div class="abs pt-crumb"></div>
-          <div class="abs pt-block"></div>
-          <h3 class="abs pt-name">Piano Tiles 2</h3>
-          <div class="abs pt-intro">
-            <h4>钢琴块2</h4>
-            <p>风靡全球、坐拥9亿玩家的音乐类轻游戏；全新的滑块玩法、丰富的赛制模式。iOS中国游戏免费下载榜Top5，2016年iOS和Google Play音乐休闲游戏榜全球下载量Top1</p>
-          </div>
-        </div><!-- game unit -->
+          <div class="abs pt-block has-anim"></div>
+          <h3 class="abs pt-name has-anim">Piano Tiles 2</h3>
+          <div class="abs pt-intro CMCM_GameIntros has-trans" id="CMCM_GameOfPT"></div>
+        </a><!-- game unit -->
 
-        <div class="game-unit proportion-50-50">
+        <a class="game-unit CMCM_GameUnit proportion-50-50">
           <img src="/dist/images/brandnew-game-bg-rs.jpg" alt="RollingSky" />
-          <div class="abs rs-intro" style="display:none;">
-            <h4>滚动的天空</h4>
-            <p>挑战速度和反应力极限的轻游戏；3D立体视觉，多样的游戏场景。141个市场App Store游戏下载榜前十，iOS中国游戏免费下载榜Top5，Google Play2016最佳游戏之一</p>
-          </div>
-        </div><!-- game unit -->
+          <div class="abs rs-intro CMCM_GameIntros has-trans" id="CMCM_GameOfRS"></div>
+        </a><!-- game unit -->
 
-        <div class="game-unit proportion-28-50 has-right-border">
+        <a class="game-unit CMCM_GameUnit proportion-28-50 has-right-border">
           <img src="/dist/images/brandnew-game-bg-dl.jpg" alt="Dancing Line" />
-          <div class="abs dl-intro">
-            <img class="abs dl-name" src="/dist/images/brandnew-game-bg-dl-name.png" alt="Dancing Line" />
-            <s class="abs dl-icon"></s>
+          <div class="abs dl-stick-intro">
+            <img class="abs dl-name has-anim" src="/dist/images/brandnew-game-bg-dl-name.png" alt="Dancing Line" />
+            <s class="abs dl-icon has-anim"></s>
           </div>
-        </div><!-- game unit -->
+          <div class="abs dl-intro CMCM_GameIntros has-trans" id="CMCM_GameOfDL"></div>
+        </a><!-- game unit -->
 
-        <div class="game-unit proportion-22-50">
-          <img src="/dist/images/brandnew-game-bg-gjs.jpg" alt="弓箭手大作战" />
-          <div class="abs gjs-intro">
-            <h4 class="abs gjs-name">弓箭手大作战</h4>
-            <s class="abs gjs-icon"></s>
+        <a class="game-unit CMCM_GameUnit proportion-22-50">
+          <img src="/dist/images/brandnew-game-bg-gjs.jpg" alt="" />
+          <div class="abs gjs-stick-intro">
+            <h4 class="abs gjs-name has-anim" id="GJSName"></h4>
+            <s class="abs gjs-icon has-anim"></s>
           </div>
-        </div><!-- game unit -->
+          <div class="abs gjs-intro CMCM_GameIntros has-trans" id="CMCM_GameOfGJS"></div>
+        </a><!-- game unit -->
 
       </div><!-- cross-width -->
     </section><!-- .section-4, games -->
 
 
 
-    <section class="sections section-5" id="CMCM_Section_news">
+    <section class="sections section-5" id="CMCM_Section_Product_News">
       <div class="manage-width clearfix">
         <div class="sec-head clearfix">
-          <h1 class="sec-title CMCM_SecTitle"></h1>
-          <h2 class="sec-descr CMCM_SecDescr"></h2>
+          <h1 class="sec-title CMCM_SecTitle has-anim"></h1>
+          <h2 class="sec-descr CMCM_SecDescr has-anim"></h2>
         </div><!-- sec-head -->
         <div class="sec-body clearfix rel">
-          <div class="news-intros clearfix abs">
-            <a class="app-icon CMCM_AutoWidthSibling"><img src="/dist/images/brandnew-logo-nr-103.png" alt="News Republic" /></a>
-            <div class="news-info CMCM_AutoWidth" data-padding="10">
-              <h3 class="app-name">News Republic</h3>
-              <p class="app-desc">一款搭载个性化推荐技术的新闻聚合应用，通过的人工智能技术的运用，为全球用户精准推送“千人千面”的新闻内容。</p>
-              <p class="app-desc">覆盖43个国家，47种语言 ，拥有全球近3000家优质媒体版权，曾经在60个国家Google Play新闻杂志应用下载榜单中荣登第一。</p>
-            </div><!-- news info -->
-          </div><!-- intros -->
-
-          <div class="news-displays">       
+          <div class="news-intros clearfix abs" id="CMCM_NR"></div>
+          <div class="news-displays has-anim">       
             <div class="swiper-container news-swiper-container" dir="rtl">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="/dist/images/brandnew-nr-slider.jpg" alt="News Republic" />
+                  <img src="/dist/images/brandnew-nr-slider.jpg" alt="" />
                 </div><!-- slide 1 -->
                 <div class="swiper-slide">
-                  <img src="/dist/images/brandnew-nr-slider-2.jpg" alt="News Republic" />
+                  <img src="/dist/images/brandnew-nr-slider-2.jpg" alt="" />
                 </div><!-- slide 2 -->
               </div>
               <div class="swiper-pagination news-swiper-pagination"></div>
@@ -199,83 +167,11 @@
 
 
     <div class="the-footer">
-      <div class="manage-width clearfix">
-        <div class="footer-left">
-          <h4 class="footer-logo">
-            <a class="has-trans" href="#">Cheetah Mobile</a>
-          </h4>
-          <div class="social-sharings clearfix">
-            <a class="social-icon fb has-trans" href="#">Facebook</a>
-            <a class="social-icon tw has-trans" href="#">Twitter</a>
-            <a class="social-icon wb has-trans" href="#">Weibo</a>
-          </div>
-        </div><!-- left -->
-        <div class="footer-right clearfix rel">
-
-          <div class="ft-column">
-            <h4 class="column-title clearfix"><a href="#">公司</a></h4>
-            <div class="column-links clearfix">
-              <a href="#">使命与愿景</a>
-              <a href="#">公司简介</a>
-              <a href="#">发展历程</a>
-              <a href="#">企业文化</a>
-              <a href="#">管理团队</a>
-            </div>
-          </div><!-- column -->
-        
-          <div class="ft-column">
-            <h4 class="column-title clearfix"><a href="#">产品</a></h4>
-            <div class="column-links clearfix">
-              <a href="#">移动</a>
-              <a href="#">PC</a>
-              <a href="#">人工智能</a>
-              <a href="#">商业</a>
-              <a href="#">数据</a>
-            </div>
-          </div><!-- column -->
-        
-          <div class="ft-column">
-            <h4 class="column-title clearfix"><a href="#">联系</a></h4>
-            <div class="column-links clearfix">
-              <a href="#">媒体需求</a>
-              <a href="#">全球办公室</a>
-              <a href="#">产品需求</a>
-            </div>
-          </div><!-- column -->
-        
-          <div class="ft-column">
-            <h4 class="column-title clearfix"><a href="#">投资者关系</a></h4>
-          </div><!-- column -->
-        
-          <div class="ft-column">
-            <h4 class="column-title clearfix"><a href="#">招聘</a></h4>
-          </div><!-- column -->
-
-          <div class="bottom-right abs clearfix" id="CMCM_FooterCopyright">
-            <ul class="clearfix" id="CMCM_FooterBottomUl">
-              <li class="first">
-                <a class="has-trans" href="#">隐私权政策</a>
-              </li>
-              <li>
-                <a class="has-trans" href="#">服务条款</a>
-              </li>
-              <li>
-                <a class="has-trans" href="#">法律声明</a>
-              </li>
-              <li class="copyright">
-                <span>Cheetah Mobile ©️ 2017 </span>
-              </li>
-              <li class="switch-langs">
-                <a class="has-trans">简体中文</a>
-              </li>
-            </ul>
-          </div><!-- bottom right area for privacy -->
-        
-        </div><!-- right -->
-      </div><!-- manage-width -->
+      <div class="manage-width clearfix" id="CMCM_Footer"></div>
     </div><!-- the-footer -->
+
   </div><!-- .cmcm-wrapper -->
-  <!-- script src="/js/index.js?v=1027"></script -->
-  <script src="/dist/index.min.js"></script>
+  <script src="/js/index.js?v=1450"></script>
+  <!-- script src="/dist/index.min.js"></script -->
 </body>
 </html>

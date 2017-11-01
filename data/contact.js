@@ -25,6 +25,33 @@ var ContactList = {
           ]
         }
       },
+      /*
+      socialMedia: {
+        categoryName: '社交媒体',
+        categoryLink: 'Contact_Social',
+        categoryData: {
+          classAnchor: 'category-of-socialmedia',
+          datas: [
+            {
+              title: 'Facebook',
+              details: ['https://www.facebook.com/cmcmglobal/']
+            },
+            {
+              title: 'Twitter',
+              details: ['https://twitter.com/CheetahMobile']
+            },
+            {
+              title: 'Weibo',
+              details: ['http://weibo.com/u/5096795969?topnav=1&wvr=6&topsug=1']
+            },
+            {
+              title: 'LinkedIn',
+              details: ['https://www.linkedin.com/company/3214653/']
+            },
+          ]
+        }
+      },
+      */
       businessContact: {
         categoryName: '业务联系',
         categoryLink: 'Contact_Business',
@@ -32,12 +59,20 @@ var ContactList = {
           classAnchor: 'category-of-business',
           datas: [
             {
-              title: '商业开发请联系',
+              title: '商务合作请联系',
               details: ['contact_ibd@cmcm.com']
             },
             {
-              title: '猎豹智趣营销请联系',
-              details: ['ads@cmcm.com']
+              title: '国内移动广告合作请联系',
+              details: ['jiaolijiao@cmcm.com']
+            },
+            {
+              title: '国内PC广告合作请联系',
+              details: ['yuning@conew.com']
+            },
+            {
+              title: '中国企业出海及facebook广告合作请联系',
+              details: ['fangyining@cmcm.com']
             },
             {
               title: '商业变现与Publisher合作请联系',
