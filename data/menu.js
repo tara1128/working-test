@@ -42,7 +42,49 @@ var PublicNav = {
       }
     ]
   },
-  'en-us': {},
+  'en-us': {
+    page: 'all',
+    name: 'Cheetah Mobile',
+    data: [
+      {
+        displayName: 'About Us',
+        target: '_self',
+        linkTo: '/cm/en-us/company/',
+        active: 'company',
+        gaTag: 'brandnew.nav.company'
+      },
+      {
+        displayName: 'Products',
+        target: '_self',
+        linkTo: '/cm/en-us/product/',
+        active: 'product',
+        gaTag: 'brandnew.nav.product',
+        sub: []
+      },
+      {
+        displayName: 'IR',
+        target: '_blank',
+        linkTo: 'http://ir.cmcm.com/',
+        active: '',
+        gaTag: 'brandnew.nav.ir'
+      },
+      {
+        displayName: 'Recruit',
+        target: '_blank',
+        linkTo: 'http://hr.cmcm.com/',
+        active: '',
+        gaTag: 'brandnew.nav.hr'
+      },
+      {
+        displayName: 'Contacts',
+        target: '_self',
+        linkTo: '/cm/en-us/contact/',
+        active: 'contact',
+        gaTag: 'brandnew.nav.contact',
+        sub: []
+      }
+    ]
+  },
   'es-es': {},
   'fr-fr': {},
   'pt-pt': {},

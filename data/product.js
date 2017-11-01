@@ -109,7 +109,7 @@ var ProductList = {
                 descForProd: ['全球最专业的电池保养和电量管理软件，能轻松延长手机续航时间；科学用电、延长电池寿命。', '覆盖全球200多个国家和地区，曾在Google Play 26个国家工具榜高居第一，在133个国家App Store工具榜排名第一，Google Play下载量超 1亿。'],
                 star: 0,
                 tags: [],
-                link: 'http://www.ijinshan.com/dcys/',
+                link: 'http://www.cmcm.com/zh-cn/battery-doctor/',
                 target: '_blank',
                 pict: ''
               },
@@ -419,7 +419,439 @@ var ProductList = {
       }
     } // category
   },
-  'en-us': {},
+  'en-us': {
+    page: 'any',
+    name: 'Products',
+    link: '/cm/en-us/product/',
+    category: {
+      mobileApps: {
+        categoryName: 'Mobile Apps',
+        categoryLink: 'Product_MobileApps',
+        categoryData: {
+          onMenu: true, /* To show sub categories on menu, make it true. */
+          unfold: true, /* To unfold sub categories by default, make it true. */
+          tool: {
+            name: 'Utility',
+            hash: 'Product_Tools',
+            anch: 'category-of-tool',
+            desc: ['Cheetah Mobile\'s diversified utility matrix includes some of the world\'s leading security,', 'junk cleaning, photo editing, personalization and safe browser software'],
+            data: [
+              {
+                priority: '100',
+                name: 'Clean Master',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-clean-master-103.png',
+                descForIndex: ['Clean Master is the #1 Android phone optimization software in the world. Its industry leading "cloud + AI" deep cleaning system removes 30% more junk than other apps. Named best antivirus software for Android by independent IT-security institute AV-TEST multiple times. Top ranked tool app on Google Play in 100 countries.'],
+                descForProd: ['Clean Master is the #1 Android phone optimization software in the world. Its industry leading "cloud + AI" deep cleaning system removes 30% more junk than other apps. Named best antivirus software for Android by independent IT-security institute AV-TEST multiple times. Top ranked tool app on Google Play in 100 countries.'],
+                star: 4.7,
+                tags: ['全球下载量近30亿', '国内应用市场评分同类最高'],
+                link: 'http://www.cmcm.com/en-us/clean-master/',
+                target: '_blank',
+                pict: '/dist/images/brandnew-tool-cm.png'
+              },
+            
+              {
+                priority: '50',
+                name: 'Security Master',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-security-103.png',
+                descForIndex: ['Security Master is the world’s leading mobile security app. It offers comprehensive protection, including intelligent threat detection, the world\'s highest rated antivirus system by AV-TEST, app lock and intruder selfies.'],
+                descForProd: ['Security Master is the world’s leading mobile security app. It offers comprehensive protection, including intelligent threat detection, the world\'s highest rated antivirus system by AV-TEST, app lock and intruder selfies. Over 500 million downloads on Google Play. #1 on the security app rankings in 30 countries, with an average score of 4.7 out of 5.'],
+                star: 0,
+                tags: ['Google Play全球下载超过5亿', 'AV TEST评测最佳病毒引擎'],
+                link: 'http://www.cmcm.com/en-us/cm-security/',
+                target: '_blank',
+                pict: ''
+              },
+            
+              {
+                priority: '50',
+                name: 'CM Launcher',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-launcher-103.png',
+                descForIndex: ['The world\'s most popular smartphone personalization app for Android, CM Launcher offers a large number of themes, in-depth customization options and smart lock-screen functionality, providing comprehensive protection for privacy and safety.'],
+                descForProd: ['The world\'s most popular smartphone personalization app for Android, CM Launcher offers a large number of themes, in-depth customization options and smart lock-screen functionality, providing comprehensive protection for privacy and safety. Covering more than 200 countries and regions, it has been ranked first in the personalization category of the Google Play store in 94 countries with nearly 200 million total downloads'],
+                star: 0,
+                tags: ['94个国家排名第一'],
+                link: 'http://www.cmcm.com/en-us/cm-launcher/',
+                target: '_blank',
+                pict: ''
+              },
+            
+              {
+                priority: '33',
+                name: 'Cheetah Keyboard',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-kb-103.png',
+                descForIndex: ['Cheetah Keyboard is the industry\'s first third-party input app to incorporate deep learning technology, with features such as smart prediction, automatic correction and user modeling. Cheetah Keyboard integrates NLP technology and machine learning algorithms in order to provide stronger predictions and greater accuracy'],
+                descForProd: ['Cheetah Keyboard is the industry\'s first third-party input app to incorporate deep learning technology, with features such as smart prediction, automatic correction and user modeling. Cheetah Keyboard integrates NLP technology and machine learning algorithms in order to provide stronger predictions and greater accuracy', 'Covers more than 140 countries and regions. Highest rated third-party input method on Google Play.'],
+                star: 0,
+                tags: [],
+                link: 'https://play.google.com/store/apps/details?id=panda.keyboard.emoji.theme&hl=en',
+                target: '_blank',
+                pict: ''
+              },
+            
+              {
+                priority: '33',
+                name: 'PhotoGrid',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-photogrid-103.png',
+                descForIndex: ['PhotoGrid is a must-have photo editor and picture & video collage maker. Its huge selection of editing tools, facial recognition technology, twinkle functions and machine learning capabilities allow users to elevate their photos with dynamic special effects'],
+                descForProd: ['PhotoGrid is a must-have photo editor and picture & video collage maker. Its huge selection of editing tools, facial recognition technology, twinkle functions and machine learning capabilities allow users to elevate their photos with dynamic special effects', 'Downloaded a combined total of 550 million times on Android and iOS. Named one of Google Play’s Best Apps of 2016.'],
+                star: 0,
+                tags: [],
+                link: 'http://www.cmcm.com/en-us/photo-grid/',
+                target: '_blank',
+                pict: ''
+              },
+            
+              {
+                priority: '33',
+                name: 'CM Browser',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-browser-103.png',
+                descForIndex: ['CM Browser represents a new generation of mobile phone browser that\'s lighter, faster and more secure.'],
+                descForProd: ['CM Browser represents a new generation of mobile phone browser that\'s lighter, faster and more secure.', '#1 on the App Store tool rankings in 8 countries. Nearly 100 million downloads on Google Play.'],
+                star: 0,
+                tags: ['', ''],
+                link: 'http://m.liebao.cn/?f=cmcn',
+                target: '_blank',
+                pict: ''
+              },
+            
+              {
+                priority: '',
+                name: 'Battery Doctor',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-bd-103.png',
+                descForIndex: [],
+                descForProd: ['The world\'s most professional battery maintenance and power management software, Battery Doctor helps users extend battery life with smart power usage. Covers more than 200 countries and regions. #1 on the Google Play tool app rankings in 26 countries. #1 on the App Store tool rankings in 133 countries. Over 100 million downloads on Google Play.'],
+                star: 0,
+                tags: [],
+                link: 'http://www.cmcm.com/en-us/battery-doctor/',
+                target: '_blank',
+                pict: ''
+              },
+            ]
+          },
+          socl: {
+            name: 'Social',
+            hash: 'Product_Social',
+            anch: 'category-of-social',
+            desc: ['Crossing cultural barriers, connecting global users', 'leading the global live broadcasting market'],
+            data: [
+              {
+                priority: '',
+                name: 'Live.me',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-liveme-103.png',
+                descForIndex: ['After launching in April 2016, Cheetah\'s live broadcasting social app Live.me quickly rose to the top of the app rankings. It has attracted a large number of celebrities and influencers, and has become one of the most popular social apps among young U.S. users today.'],
+                descForProd: ['After launching in April 2016, Cheetah\'s live broadcasting social app Live.me quickly rose to the top of the app rankings. It has attracted a large number of celebrities and influencers, and has become one of the most popular social apps among young U.S. users today.', 'Available in 7 languages across 85 countries and regions. Ranked #1 on Google Play’s best-selling US social app rankings.'],
+                star: 0,
+                tags: ['85个市场|覆盖多元文化', '7种语言|融合本地需求', '42个国家|登顶社交畅销榜'],
+                link: 'http://www.liveme.com/',
+                target: '_blank',
+                pict: ''
+              },
+            ]
+          },
+          game: {
+            name: 'Games',
+            hash: 'Product_Games',
+            anch: 'category-of-game',
+            desc: ['With combined MAUs surpassing 1 billion globally', 'Cheetah Games is one of the largest casual game developers in the world'],
+            data: [          
+              {
+                priority: '50-100',
+                name: 'Piano Tiles 2',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-pt2-103.png',
+                descForIndex: ['Piano Tiles 2 is a music-based casual game and global phenomenon downloaded nearly 900 million times. With newly launched swipe-tile gameplay and racing modes, Piano Tiles brings you the perfect dual audio-visual experience'],
+                descForProd: ['Piano Tiles 2 is a music-based casual game and global phenomenon downloaded nearly 900 million times. With newly launched swipe-tile gameplay and racing modes, Piano Tiles brings you the perfect dual audio-visual experience', 'Ranked in the Top 5 of the iOS free download game rankings in China. #1 on the free download game rankings in 158 countries. Most downloaded music-based casual game on App Store and Google Play in 2016.'],
+                star: 0,
+                tags: [],
+                link: 'http://www.cmcm.com/en-us/piano-tiles/',
+                target: '_blank',
+                pict: ''
+              },
+            
+              {
+                priority: '50-50',
+                name: 'Rolling Sky',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-rs-103.png',
+                descForIndex: ['Rolling Sky is a fast-paced casual game that challenges the limits of your speed and reaction time with stunning 3D visuals.'],
+                descForProd: ['Rolling Sky is a fast-paced casual game that challenges the limits of your speed and reaction time with stunning 3D visuals.', 'Over 240 million total downloads. Top 10 in game downloads in 141 countries. Top 10 in overall downloads in 65 countries. Top 5 on the App Store\'s free download game rankings in China. One of Google Play\'s Best Games of the Year in 2016.'],
+                star: 0,
+                tags: [],
+                link: 'https://play.google.com/store/apps/details?id=com.turbochilli.rollingsky',
+                target: '_blank',
+                pict: ''
+              },
+            
+              {
+                priority: '25-50',
+                name: 'Dancing Line',
+                slog: '',
+                icon: '/dist/images/brandnew-game-bg-dl-icon.png',
+                descForIndex: ['Dancing Line is a rhythm-based casual game featuring original music to help you break through each level while exploring the infinite unknown'],
+                descForProd: ['Dancing Line is a rhythm-based casual game featuring original music to help you break through each level while exploring the infinite unknown', 'Rated 4.8 out of 5 in both the App Store and Google Play. Rated 9.7 out of 10 by top gaming media and mobile distribution platform Tap Tap. Top 5 on the App Store\'s free download game rankings in China. #1 on the music-based game rankings in 115 countries, including the U.S.'],
+                star: 0,
+                tags: [],
+                link: 'http://board.cmcm.com/dl/transfer.html',
+                target: '_blank',
+                pict: ''
+              },
+            
+              {
+                priority: '25-50',
+                name: 'Arrow.io',
+                slog: '',
+                icon: '/dist/images/brandnew-game-bg-gjs-icon.png',
+                descForIndex: ['Arrow.io is an exciting online multiplayer game with a rich line of characters to choose from as you conquer the world with your bow and arrows.'],
+                descForProd: ['Arrow.io is an exciting online multiplayer game with a rich line of characters to choose from as you conquer the world with your bow and arrows', 'Ranked in the Top 5 on the App Store\'s action game download rankings in 18 countries. Named the best action game in Taiwan and Poland in January 2017. Named the #2 action game in China in June 2017.'],
+                star: 0,
+                tags: [],
+                link: 'https://play.google.com/store/apps/details?id=com.cmcm.arrowio',
+                target: '_blank',
+                pict: ''
+              },
+
+              {
+                priority: '',
+                name: 'Tap Tap Fish',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-shszg-103.png',
+                descForIndex: [],
+                descForProd: ['Tap Tap fish is a relaxing yet addictive casual game in which players build an aquarium ecosystem and collect thousands of fish. Cheetah Mobile become the exclusive publisher of Tap Tap Fish in October 2016.', 'Named as the Best Independent Game of 2016 on both the App Store and Google Play.'],
+                star: 0,
+                tags: [],
+                link: 'https://play.google.com/store/apps/details?id=com.idleif.abyssrium',
+                target: '_blank',
+                pict: ''
+              },
+
+              {
+                priority: '',
+                name: 'Tap Tap Dash',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-ddcc-103.png',
+                descForIndex: [],
+                descForProd: ['Tap Tap dash is a fast-paced casual game featuring a simple style and easy gameplay that trains users\' reaction speed and reflexes.', 'Ranked No. 1 on the Google Play game download ranking in numerous countries. Recommended by Google Play editors.'],
+                star: 0,
+                tags: [],
+                link: 'https://play.google.com/store/apps/details?id=com.secondarm.taptapdash',
+                target: '_blank',
+                pict: ''
+              },
+
+            ]
+          },
+          news: {
+            name: 'News Republic',
+            hash: 'Product_News',
+            anch: 'category-of-news',
+            desc: ['Precisely recommending news content', 'with artificial intelligence technology'],
+            data: [          
+              {
+                priority: '',
+                name: 'News Republic',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-nr-103.png',
+                descForIndex: ['News Republic is a leading news aggregation app featuring personalized recommendation technology powered by artificial intelligence. Covers 43 countries, with nearly 3,000 high-quality global media copyrights. Previously #1 on Google Play\'s news & magazine application download rankings in 60 countries.'],
+                descForProd: ['News Republic is a leading news aggregation app featuring personalized recommendation technology powered by artificial intelligence. Covers 43 countries, with nearly 3,000 high-quality global media copyrights. Previously #1 on Google Play\'s news & magazine application download rankings in 60 countries.'],
+                star: 0,
+                tags: [],
+                link: 'http://www.news-republic.com/',
+                target: '_blank',
+                pict: ''
+              }
+            ]
+          }
+        }
+      },
+      pc: {
+        categoryName: 'PC Products',
+        categoryLink: 'Product_forPC',
+        categoryData: {
+          onMenu: false, /* NOT to show sub categories on menu, make it false. */
+          pc: {/* When no sub category, using the same name & hash as its father!*/
+            name: 'PC端',
+            hash: 'Product_forPC',
+            anch: 'category-of-pc',
+            desc: '',
+            data: [
+              {
+                priority: '',
+                name: 'CM Browser',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-browser-103.png',
+                descForIndex: [],
+                descForProd: ['CM Browser is the first dual-core security browser in China. It features more than 100 improvements based on Chromium architecture, including 30% higher activation speed, HTML5 compatibility, and artistic visual solutions. With the first ever BIPS cloud security system, CM Browser intercepts malicious websites and protects users from online security threats.'],
+                star: 0,
+                tags: [],
+                link: 'https://www.liebao.cn',
+                target: '_blank',
+                pict: ''
+              },
+              {
+                priority: '',
+                name: 'Duba Anti-Virus (Only available in China)',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-duba-103.png',
+                descForIndex: [],
+                descForProd: ['Duba Anti-Virus is security software that combines both antivirus and system management capabilities. With 18 years of development, it has been certified 20 times by VB100 (more than any other security software in China), as well as by AV-Comparatives and AV-TEST multiple years in a row. Powered by Cheetah Mobile\'s custom blue-core engine, Duba Anti-Virus seamlessly integrates with cloud security while using micro-feature recognition technology to kill unknown trojans.'],
+                star: 0,
+                tags: [],
+                link: 'http://www.duba.net',
+                target: '_blank',
+                pict: ''
+              },
+              {
+                priority: '',
+                name: 'Driver Genius',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-qdjl-103.png',
+                descForIndex: [],
+                descForProd: ['Acquired in 2012, DriverGenius is China\'s #1 domestically-developed device driver software. Based on more than 10 years of data, DriverGenius boasts a device recognition rate of 98.3%, including a network adapter card recognition rate of 99.9%. As an essential piece device installation software, DriverGenius has resolved device driver issues and system malfunctions for more than 100 million users.'],
+                star: 0,
+                tags: [],
+                link: 'http://www.drivergenius.com',
+                target: '_blank',
+                pict: ''
+              },
+              {
+                priority: '',
+                name: 'Clean Master for PC',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-clean-master-103.png',
+                descForIndex: [],
+                descForProd: ['Clean Master for PC takes the tried-and-true mobile cleaning utility software and brings it to the desktop so that Windows users can clean their system of junk files and improve the overall performance of their PCs. The Standard version, which is absolutely free, also offers privacy protection so that users can lock out intruders and easily remove browsing records. A low-cost Premium version is available as well, giving users peace of mind with the ability to recover accidentally deleted files or re-formatted hard drives and memory cards.'],
+                star: 0,
+                tags: [],
+                link: '',
+                target: '_blank',
+                pict: ''
+              }
+            ]
+          }
+        }
+      },
+      ai: {
+        categoryName: 'AI Business',
+        categoryLink: 'Product_AI',
+        categoryData: {
+          onMenu: false, /* NOT to show sub categories on menu, make it false. */
+          ai: {/* When no sub category, using the same name & hash as its father!*/
+            name: 'Artificial Intelligence',
+            hash: 'Product_AI',
+            anch: 'category-of-ai',
+            desc: '',
+            data: [
+              {
+                priority: '',
+                name: 'Artificial Intelligence',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-orion-200.png',
+                descForIndex: [],
+                descForProd: ['Cheetah Mobile has built an AI technology platform to power its full line of products, upgrade its utility product matrix and contribute to the growth of its content apps.', 'Cheetah Mobile\'s subsidiary OrionStar is a leader in the industry with cutting-edge technologies such as voice IO, facial recognition and visual navigation.', 'OrionStar won first place at the 2017 MS-Celeb-1M (LFW) challenge, a world renowned facial recognition competition.'],
+                star: 0,
+                tags: [],
+                link: 'http://ainirobot.com/',
+                target: '_blank',
+                pict: ''
+              }
+            ]
+          }
+        }
+      },
+      bigData: {
+        categoryName: 'Big Data Products',
+        categoryLink: 'Product_bigData',
+        categoryData: {
+          onMenu: false, /* NOT to show sub categories on menu, make it false. */
+          bigData: {
+            name: 'Big Data Products',
+            hash: 'Product_bigData',
+            anch: 'category-of-bigdata',
+            desc: '',
+            data: [
+              {
+                priority: '',
+                name: 'Cheetah Data',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-bigdata-138.png',
+                descForIndex: [],
+                descForProd: ['Cheetah Data is a global mobile big data analysis platform. Based on the huge amount of data accumulated through Cheetah Mobile\'s product matrix, Cheetah Data provides indices including active penetration rate, growth rate, retention rate, user intelligence and so on. It surveys every change in the Android market to help app developers, investors and marketers make decisions. Cheetah Data owns mobile internet-focused research institution Cheetah Lab.', 'Cheetah Data also owns and operates Cheetah Lab, its mobile internet-focused research institute, which releases global internet research reports and analysis on a regular basis.'],
+                star: 0,
+                tags: [],
+                link: 'http://cn.data.cmcm.com/',
+                target: '_blank',
+                pict: ''
+              }
+            ]
+          }
+        }
+      },
+      business: {
+        categoryName: 'Commercial Products',
+        categoryLink: 'Product_Business',
+        categoryData: {
+          onMenu: false, /* NOT to show sub categories on menu, make it false. */
+          business: {/* When no sub category, using the same name & hash as its father!*/
+            name: 'Commercial Products',
+            hash: 'Product_Business',
+            anch: 'category-of-business',
+            desc: '',
+            data: [
+              {
+                priority: '',
+                name: 'Cheetah Ads',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-zhiqu.png',
+                descForIndex: [],
+                descForProd: ['Cheetah Ads is Cheetah Mobile\'s self-operated ad platform offering a wide range of ad formats, from high-performing display and native ads, to beautiful, full-screen vertical video. Cheetah Ads offers diverse, global reach with over 600 million users from 200+ countries and regions across Cheetah Mobile\'s owned and operated inventory, including Clean Master, CM Security, Cheetah Keyboard, Live.me and News Republic. Enhanced by Cheetah Mobile\'s artificial intelligence and big data capabilities, Cheetah Ads helps brands reach the right audience, at the right time, in the right format throughout the entire purchase cycle.'],
+                star: 0,
+                tags: [],
+                link: 'http://ads.cmcm.com/',
+                target: '_blank',
+                pict: ''
+              },
+            ] 
+          }
+        }
+      },
+      hardware: {
+        categoryName: 'Hardware',
+        categoryLink: 'Product_Hardware',
+        categoryData: {
+          onMenu: false, /* NOT to show sub categories on menu, make it false. */
+          hardware: {/* When no sub category, using the same name & hash as its father!*/
+            name: '硬件',
+            hash: 'Product_Hardware',
+            anch: 'category-of-hardware',
+            desc: '',
+            data: [
+              {
+                priority: '',
+                name: '豹米净化器',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-baomi-200.png',
+                descForIndex: [],
+                descForProd: ['猎豹移动旗下硬件产品，针对不同消费人群做出适合各使用场景的净化器。', '选材极其苛刻，其最高滤网等级达到H14级；智能的一键操作以及激光探头配合数显，令其在业内独树一帜。并在硬件和智能交互上领跑行业。'],
+                star: 0,
+                tags: [],
+                link: 'https://www.baomi.com/',
+                target: '_blank',
+                pict: ''
+              }
+            ] 
+          }
+        }
+      }
+    } // category
+  },
   'es-es': {},
   'fr-fr': {},
   'pt-pt': {},

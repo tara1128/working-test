@@ -44,7 +44,51 @@ var PublicFooter = {
       }
     }
   },
-  'en-us': {},
+  'en-us': {
+    page: 'all',
+    name: 'Cheetah Mobile',
+    data: {
+      outLinks: [
+        {
+          linkName: 'IR',
+          linkUrl: 'http://ir.cmcm.com/',
+          sublink: [
+            {
+              name: 'Quarter performance',
+              url: 'http://ir.cmcm.com/index.php?s=123'
+            },
+            {
+              name: 'Investors news',
+              url: 'http://ir.cmcm.com/index.php?s=43'
+            }
+          ]
+        },
+        {
+          linkName: 'Recruit',
+          linkUrl: 'http://hr.cmcm.com/',
+          sublink: [
+            {
+              name: 'Social recruitment',
+              url: 'http://hr.cmcm.com/social'
+            },
+            {
+              name: 'Campus recruitment',
+              url: 'http://hr.cmcm.com/campus'
+            }
+          ]
+        }
+      ],
+      copyRight: {
+        privacy: 'Privacy',
+        pvyLink: 'http://www.cmcm.com/protocol/site/privacy.html',
+        tos: 'TOS',
+        tosLink: 'http://www.cmcm.com/protocol/site/tos.html',
+        cptext: 'Cheetah Mobile ©️ 2017',
+        curLang: 'English',
+        curHome: '/cm/en-us/'
+      }
+    }
+  },
   'es-es': {},
   'fr-fr': {},
   'pt-pt': {},
