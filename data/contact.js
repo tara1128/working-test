@@ -38,6 +38,10 @@ var ContactList = {
             {
               title: '猎豹智趣营销请联系',
               details: ['ads@cmcm.com']
+            },
+            {
+              title: '商业变现与Publisher合作请联系',
+              details: ['CFP_contact@cmcm.com']
             }
           ]
         }
@@ -118,16 +122,16 @@ var ContactList = {
           classAnchor: 'category-of-clients',
           datas: [
             {
-              title: '您可以通过以下电子邮件联系到我们：',
+              title: '对产品有任何疑问或建议请联系我们',
               details: [
                 '猎豹清理大师: support@cmcm.com',
-                '金山电池医生: fankui@liebao.cn',
                 '猎豹安全大师: cmsecurity@cmcm.com',
                 '猎豹浏览器: fankui@liebao.cn',
-                'PhotoGrid: photogrid@cmcm.com',
+                '猎豹3D桌面: launcher@cmcm.com',
+                '金山电池医生: fankui@liebao.cn',
                 '钢琴块2: pianotiles2cmcm@gmail.com',
                 'Cheetah Keyboard: keyboard@cmcm.com',
-                '猎豹3D桌面: launcher@cmcm.com'
+                'PhotoGrid: photogrid@cmcm.com'
               ]
             }
           ]
