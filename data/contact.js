@@ -57,10 +57,6 @@ var ContactList = {
           classAnchor: 'category-of-business',
           datas: [
             {
-              title: '商务合作请联系',
-              details: ['contact_ibd@cmcm.com']
-            },
-            {
               title: '国内移动广告合作请联系',
               details: ['jiaolijiao@cmcm.com']
             },
@@ -69,12 +65,16 @@ var ContactList = {
               details: ['yuning@conew.com']
             },
             {
-              title: '中国企业出海及facebook广告合作请联系',
+              title: '中国企业出海及Facebook广告合作请联系',
               details: ['fangyining@cmcm.com']
             },
             {
               title: '商业变现与Publisher合作请联系',
               details: ['CFP_contact@cmcm.com']
+            },
+            {
+              title: '商务合作请联系',
+              details: ['contact_ibd@cmcm.com']
             }
           ]
         }
