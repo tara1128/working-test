@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-01 15:24
+  Latest modified: 2017-11-02 19:23
 */
 
 (function(){
@@ -10,6 +10,8 @@
   var LANG = $('body').attr('data-lang');
   var defaultLang = 'en-us';
   if ( !LANG || LANG.length < 1 ) LANG = defaultLang;
+
+  console.log('19:23');
 
   /* A global function: */
     var arrayOutput = function( array, htmlTag, htmlCloseTag ) {
@@ -42,7 +44,7 @@
       var html = '<div class="top-bar" id="CMCM_TopBar">\
                     <div class="manage-width clearfix">\
                       <h1 class="top-logo has-trans">\
-                        <a class="has-trans" href="/">'+ name +'</a>\
+                        <a class="has-trans" href="/zh-cn/">'+ name +'</a>\
                       </h1>\
                       <div class="top-burger" id="CMCM_TopBurger"></div>\
                       <ul class="top-nav" id="CMCM_TopNav">\
@@ -126,8 +128,8 @@
                             <div class="big-pic abs has-anim" style="'+ _ifShowPict +'">\
                               <img src="'+ _pict + '" alt="'+ _name +'" />\
                             </div>\
-                            <a class="app-icon has-trans has-anim CMCM_AutoWidthSibling" href="'+ _link +'" target="'+ _target +'">\
-                              <img src="'+ _icon +'" alt="'+ _name +'" />\
+                            <a class="app-icon has-trans CMCM_AutoWidthSibling" href="'+ _link +'" target="'+ _target +'">\
+                              <img class="has-anim" src="'+ _icon +'" alt="'+ _name +'" />\
                             </a>\
                             <div class="tool-info CMCM_AutoWidth" data-padding="10">\
                               <h3 class="app-name has-anim">\
@@ -172,8 +174,8 @@
       var prodListWithLang = ProductList[LANG];
       var nrContainer = $('#CMCM_NR');
       var newsData = prodListWithLang.category.mobileApps.categoryData.news.data[0];
-      var newsHtml = '<a class="app-icon has-trans has-anim CMCM_AutoWidthSibling" href="'+ newsData.link +'" target="'+ newsData.target +'">\
-                        <img src="'+ newsData.icon +'" alt="'+ newsData.name +'" />\
+      var newsHtml = '<a class="app-icon has-trans CMCM_AutoWidthSibling" href="'+ newsData.link +'" target="'+ newsData.target +'">\
+                        <img class="has-anim" src="'+ newsData.icon +'" alt="'+ newsData.name +'" />\
                       </a>\
                       <div class="news-info CMCM_AutoWidth" data-padding="10">\
                         <h3 class="app-name has-anim">\
@@ -238,8 +240,8 @@
           _money2 = _tags[1].split('|')[1],
           _award1 = _tags[2].split('|')[0],
           _award2 = _tags[2].split('|')[1],
-          _html = '<a class="app-icon has-trans has-anim CMCM_AutoWidthSibling" href="'+ _link +'" target="'+ _target +'">\
-                    <img src="'+ _icon +'" alt="'+ _name +'" />\
+          _html = '<a class="app-icon has-trans CMCM_AutoWidthSibling" href="'+ _link +'" target="'+ _target +'">\
+                    <img class="has-anim" src="'+ _icon +'" alt="'+ _name +'" />\
                   </a>\
                   <div class="live-info CMCM_AutoWidth" data-padding="10">\
                     <h3 class="app-name has-anim">\
@@ -812,7 +814,7 @@
     var animCls = 'animated';
     elements.map(function(i, ele){
       var _offsetTop = $(ele).offset().top;
-      if (_top >= _offsetTop - 500) {
+      if (_top >= _offsetTop - 680) {
         $(ele).addClass(animCls);
       }
     });
