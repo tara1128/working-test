@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-02 19:23
+  Latest modified: 2017-11-02 19:53
 */
 
 (function(){
@@ -11,7 +11,7 @@
   var defaultLang = 'en-us';
   if ( !LANG || LANG.length < 1 ) LANG = defaultLang;
 
-  console.log('19:23');
+  console.log('19:53');
 
   /* A global function: */
     var arrayOutput = function( array, htmlTag, htmlCloseTag ) {
@@ -236,8 +236,8 @@
           _target = livemeData.target;
       var _earth1 = _tags[0].split('|')[0],
           _earth2 = _tags[0].split('|')[1],
-          _money1 = _tags[1].split('|')[0],
-          _money2 = _tags[1].split('|')[1],
+          _tongu1 = _tags[1].split('|')[0],
+          _tongu2 = _tags[1].split('|')[1],
           _award1 = _tags[2].split('|')[0],
           _award2 = _tags[2].split('|')[1],
           _html = '<a class="app-icon has-trans CMCM_AutoWidthSibling" href="'+ _link +'" target="'+ _target +'">\
@@ -255,8 +255,8 @@
                         <s class="line"></s>\
                       </li>\
                       <li class="live-data">\
-                        <strong class="money">'+ _money1 +'</strong>\
-                        <b>'+ _money2 +'</b>\
+                        <strong class="tongue">'+ _tongu1 +'</strong>\
+                        <b>'+ _tongu2 +'</b>\
                         <s class="line"></s>\
                       </li>\
                       <li class="live-data">\
