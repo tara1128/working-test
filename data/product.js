@@ -189,7 +189,7 @@ var ProductList = {
                 name: '弓箭手大作战',
                 slog: '',
                 icon: '/dist/images/brandnew-game-bg-gjs-icon.png',
-                descForIndex: ['真人对战io游戏，用弓箭征服世界；获2016阿里巴巴新晋热门游戏奖，TapTap最佳玩法提名'],
+                descForIndex: ['真人对战io游戏，用弓箭征服世界；获2016阿里巴巴新晋热门游戏奖'],
                 descForProd: ['一款全新玩法的真人对战io游戏，丰富的像素人偶风格可供选择，带你用弓箭征服世界。', '位居18个国家App Store动作类游戏下载榜Top 5，2017年1月获台湾、波兰动作类游戏第一名，2017年6月获中国动作类游戏第二名。'],
                 star: 0,
                 tags: [],
