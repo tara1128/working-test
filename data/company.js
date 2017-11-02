@@ -134,35 +134,35 @@ var CompanyInfoList = {
               valueClassName: 'value-put-users-first', 
               valueIcon: '/dist/images/cv-ci-put-users-first.png',
               valueText: '用户至上',
-              valueCute: '/dist/images/cv-put-users-first.png',
+              valueCute: '/dist/images/value-icon-put-users-first.png',
               valueDesc: '以产品为核心，做到彼此信赖，与用户共创价值'
             },
             {
               valueClassName: 'value-result-oriented', 
               valueIcon: '/dist/images/cv-ci-result-oriented.png',
               valueText: '结果导向',
-              valueCute: '/dist/images/cv-result-oriented.png',
+              valueCute: '/dist/images/value-icon-result-oriented.png',
               valueDesc: '承担责任，对结果负责，不找借口和理由，以终为始'
             },
             {
               valueClassName: 'value-start-from-me', 
               valueIcon: '/dist/images/cv-ci-start-from-me.png',
               valueText: '从我做起',
-              valueCute: '/dist/images/cv-start-from-me.png',
+              valueCute: '/dist/images/value-icon-starts-from-me.png',
               valueDesc: '目标清晰，大局观意识，拥抱变化、持续学习，不断成长'
             },
             {
               valueClassName: 'value-briefness', 
               valueIcon: '/dist/images/cv-ci-briefness.png',
               valueText: '简单',
-              valueCute: '/dist/images/cv-briefness.png',
+              valueCute: '/dist/images/value-icon-briefness.png',
               valueDesc: '简单做人，简单做事，简化目标'
             },
             {
               valueClassName: 'value-perfection', 
               valueIcon: '/dist/images/cv-ci-perfection.png',
               valueText: '极致',
-              valueCute: '/dist/images/cv-perfection.png',
+              valueCute: '/dist/images/value-icon-perfection.png',
               valueDesc: '深度思考，高效执行，把不可能变成可能'
             }
           ]
@@ -332,35 +332,35 @@ var CompanyInfoList = {
               valueClassName: 'value-put-users-first', 
               valueIcon: '/dist/images/cv-ci-put-users-first.png',
               valueText: 'Users come first',
-              valueCute: '/dist/images/cv-put-users-first.png',
+              valueCute: '/dist/images/value-icon-put-users-first.png',
               valueDesc: 'Build mutual trust and create a win-win situation with users.'
             },
             {
               valueClassName: 'value-result-oriented', 
               valueIcon: '/dist/images/cv-ci-result-oriented.png',
               valueText: 'Results-oriented',
-              valueCute: '/dist/images/cv-result-oriented.png',
+              valueCute: '/dist/images/value-icon-result-oriented.png',
               valueDesc: 'Take responsibility for results and carry the original goal to the end.'
             },
             {
               valueClassName: 'value-start-from-me', 
               valueIcon: '/dist/images/cv-ci-start-from-me.png',
               valueText: 'Starts from me',
-              valueCute: '/dist/images/cv-start-from-me.png',
+              valueCute: '/dist/images/value-icon-starts-from-me.png',
               valueDesc: 'Embrace challenges with clear targets and the overall growth of the company in mind.'
             },
             {
               valueClassName: 'value-briefness', 
               valueIcon: '/dist/images/cv-ci-briefness.png',
               valueText: 'Simplicity',
-              valueCute: '/dist/images/cv-briefness.png',
+              valueCute: '/dist/images/value-icon-briefness.png',
               valueDesc: 'Live a simple life, simplify your goals and do things simply.'
             },
             {
               valueClassName: 'value-perfection', 
               valueIcon: '/dist/images/cv-ci-perfection.png',
               valueText: 'Be the best',
-              valueCute: '/dist/images/cv-perfection.png',
+              valueCute: '/dist/images/value-icon-perfection.png',
               valueDesc: 'Think deeply, execute efficiently and realize the impossible.'
             }
           ]
