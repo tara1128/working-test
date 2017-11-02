@@ -2,7 +2,7 @@ var CompanyInfoList = {
   'zh-cn': {
     page: 'company',
     name: '关于公司',
-    link: '/cm/zh-cn/company/',
+    link: '/zh-cn/company/',
     category: {
       missionVisions: {
         categoryName: '使命与愿景',
@@ -200,7 +200,7 @@ var CompanyInfoList = {
   'en-us': {
     page: 'company',
     name: 'About Us',
-    link: '/cm/en-us/company/',
+    link: '/en-us/company/',
     category: {
       missionVisions: {
         categoryName: 'Mission & Vision',

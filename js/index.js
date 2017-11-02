@@ -1,324 +1,870 @@
 /*
-  index.js, trying ES6
-  Latest modified: 2017-10-27 00:08
+  Script of Cheetah official website.
+  Author: Alexandra
+  Latest modified: 2017-11-01 15:24
 */
 
-class IndexLogin extends React.Component {
+(function(){
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: '',
-      password: '',
-      error: ''
-    }
-  }
+  /* Detect lang of current page: */
+  var LANG = $('body').attr('data-lang');
+  var defaultLang = 'en-us';
+  if ( !LANG || LANG.length < 1 ) LANG = defaultLang;
 
-  onChange(e) {
-    var _target = e.target;
-    var _type = _target.type;
-    var _val = _target.value;
-    if( _type == 'text' ) {
-      this.setState({
-        username: _val
+  /* A global function: */
+    var arrayOutput = function( array, htmlTag, htmlCloseTag ) {
+      if (array.length < 1 || !array) return;
+      var result = '';
+      if (!htmlTag) htmlTag = '<span>';
+      if (!htmlCloseTag) htmlCloseTag = '</span>';
+      array.map(function(text){
+        result += (htmlTag + text + htmlCloseTag);
       });
-    } else if( _type == 'password' ) {
-      this.setState({
-        password: _val
-      });
-    } else {
-      this.giveErrorMsg('Unknown errors occur!');
-    }
-  }
-
-  handleSubmit() {
-    var validUserName = this.validate('text', this.state.username);
-    var validPassword = this.validate('password', this.state.password);
-    if( !validUserName ){
-      this.giveErrorMsg( 'Invalid username!' );
-    }else if( !validPassword ){
-      this.giveErrorMsg( 'Invalid password!' );
-    }else{
-      ReactDOM.unmountComponentAtNode( ReactDOM.findDOMNode(this).parentNode );
-      var divOfCategory = document.getElementById('categoryDiv');
-      var cates = cateList;
-      ReactDOM.render( <Categories list={cates} ck={this.state.username} />, divOfCategory );
-      reactCookie.save('CMWebTester', this.state.username);
-    }
-  }
-
-  giveErrorMsg(msg) {
-    this.setState({error: msg});
-  }
-
-  removeErrorMsg() {
-    if( this.state.error ){
-      this.setState({error: ''});
-    }
-  }
-
-  validate(type, value) {
-    var rules = {
-      'text': /\w+[\w.]*@(([c][m]){2}||conew)\.com/,
-      'password': /\d{4}\.ok/
+      return result;
     };
-    return rules[type].test(value);
-  }
 
-  reqForAccount() {
-    var title = 'Info';
-    var description = 'Leave your email here and I will send you an account.';
-    var popWrap = document.getElementById('myPopupMask');
-    ReactDOM.render( <Popup title={title} desc={description} mask={popWrap} hasInput={true} />, popWrap );
-  }
+  /* Render top bar to the first screen for all pages: */
+  function RenderTopBar() {
+    if (typeof PublicNav != 'undefined') {
+      var firstScreen = $('#CMCM_FirstScreen');
+      var PubNavWithLang = PublicNav[LANG];
+      var navData = PubNavWithLang.data;
+      var name = PubNavWithLang.name;
+      var cnCls = '', enCls = '';
+      switch (LANG) {
+        case 'zh-cn':
+          cnCls = 'active';
+          break;
+        case 'en-us':
+          cnCls = 'active';
+          break;
+      };
+      var html = '<div class="top-bar" id="CMCM_TopBar">\
+                    <div class="manage-width clearfix">\
+                      <h1 class="top-logo has-trans">\
+                        <a class="has-trans" href="/">'+ name +'</a>\
+                      </h1>\
+                      <div class="top-burger" id="CMCM_TopBurger"></div>\
+                      <ul class="top-nav" id="CMCM_TopNav">\
+                        <li class="top-nav-li has-trans top-langs" id="CMCM_TopLangSwitch">\
+                          <div class="langs clearfix">\
+                            <a class="lang-a has-trans '+ cnCls +'" href="/zh-cn/">简<s class="has-trans">&nbsp;</s></a>\
+                            <a class="lang-a strip"> | </a>\
+                            <a class="lang-a has-trans '+ enCls +'" href="/en-us/">EN<s class="has-trans">&nbsp;</s></a>\
+                          </div>\
+                        </li>\
+                      </ul>\
+                    </div><!-- End of manage-width -->\
+                  </div><!-- End of topbar -->';
+      firstScreen.prepend(html);
+      RenderPublicNav(navData);
+    }
+  };
+  RenderTopBar();
 
-  componentWillMount() {
-    var _this = this;
-    if( document.addEventListener ){
-      document.addEventListener('keypress', function(e){
-        if(e.keyCode == 13){
-          _this.handleSubmit();
-        }
+  /* Render public navigator in all pages: */
+  function RenderPublicNav(navData) {
+    navData.map(function( item, index ){
+      var _name = item.displayName,
+          _target = item.target,
+          _linkTo = item.linkTo,
+          _active = item.active,
+          _gaTag = item.gaTag;
+      var current = $('body').attr('data-subpage');
+      var activeCls = (_active == current)?('active'):('');
+      var _html = '<li class="top-nav-li has-trans">\
+                      <a class="top-nav-a has-trans '+ activeCls +'" href="'+ _linkTo +'" target="'+ _target +'" onclick="ga(\'send\', \'event\', \'' + _gaTag + '\', \'click\');">'+ _name +'<s class="has-trans">&nbsp;</s></a>\
+                      <div class="top-nav-sub"></div>\
+                   </li>';
+      $(_html).insertBefore('#CMCM_TopLangSwitch');
+    });
+  };
+
+
+  /* Render [Tool] apps on index: */
+  function RenderToolsOnIndex() {
+    if (typeof ProductList != 'undefined') {
+      var prodListWithLang = ProductList[LANG];
+      var ToolsData = prodListWithLang.category.mobileApps.categoryData.tool.data;
+      var container = $('#CMCM_ToolsContainer');
+      for (var i = 0; i < ToolsData.length; i++) {
+        var _priority = ToolsData[i].priority,
+            _descForIndex = ToolsData[i].descForIndex[0],
+            _target = ToolsData[i].target,
+            _name = ToolsData[i].name,
+            _icon = ToolsData[i].icon,
+            _star = ToolsData[i].star,
+            _tags = ToolsData[i].tags,
+            _link = ToolsData[i].link,
+            _pict = ToolsData[i].pict;/* Big pic for the first tool */
+        var _proportion = 'proportion-100';
+        var _ifShowPict = 'display:none;';
+        var _ifDisplayOnIndex = 'display:none;';
+        var _tagContent = '';
+        var _ifHasBorderRight = '';
+        switch (_priority) {
+          case '100':
+            _proportion = 'proportion-100';
+            _ifShowPict = 'display:block;';
+            break;
+          case '50':
+            _proportion = 'proportion-50';
+            break;
+          case '33':
+            _proportion = 'proportion-33';
+            break;
+        };
+        if (_tags.length > 0) {
+          for (var j = 0; j < _tags.length; j++) {
+            if (_tags[j].length > 1) _tagContent += ('<a class="has-trans">' + _tags[j] + '</a>');
+          }
+        };
+        if (i == 1 || i == 3 || i == 4) _ifHasBorderRight = 'has-right-border';
+        if (_descForIndex && _descForIndex.length > 1) _ifDisplayOnIndex = 'display:block;';
+        var ToolUnit = '<div class="tool-unit '+ _proportion +' rel '+ _ifHasBorderRight +'" style="'+ _ifDisplayOnIndex +'">\
+                          <div class="tool-inner clearfix">\
+                            <div class="big-pic abs has-anim" style="'+ _ifShowPict +'">\
+                              <img src="'+ _pict + '" alt="'+ _name +'" />\
+                            </div>\
+                            <a class="app-icon has-trans has-anim CMCM_AutoWidthSibling" href="'+ _link +'" target="'+ _target +'">\
+                              <img src="'+ _icon +'" alt="'+ _name +'" />\
+                            </a>\
+                            <div class="tool-info CMCM_AutoWidth" data-padding="10">\
+                              <h3 class="app-name has-anim">\
+                                <a class="app-namelink has-trans" href="'+ _link +'" target="'+ _target +'">'+ _name +'</a>\
+                              </h3>\
+                              <p class="app-desc has-anim">'+ _descForIndex +'</p>\
+                              <div class="tool-rank clearfix has-anim CMCM_Rank" data="'+ _star +'"></div>\
+                              <div class="tool-tags clearfix has-anim">'+ _tagContent +'</div>\
+                            </div><!-- End of tool-info -->\
+                          </div><!-- End of tool-inner -->\
+                        </div><!-- End of tool-unit -->';
+        container.append( ToolUnit );
+      }
+      RenderStarsForAppRank();
+    }
+  };
+
+  /* Render games on index: */
+  function RenderGamesOnIndex() {
+    if (typeof ProductList != 'undefined') {
+      var prodListWithLang = ProductList[LANG];
+      var GamesData = prodListWithLang.category.mobileApps.categoryData.game.data;
+      var ptData = GamesData[0], rsData = GamesData[1],
+          dlData = GamesData[2], gjsData = GamesData[3];
+      var ptCont = $('#CMCM_GameOfPT'), rsCont = $('#CMCM_GameOfRS'),
+          dlCont = $('#CMCM_GameOfDL'), gjsCont = $('#CMCM_GameOfGJS');
+      var ptHtml = '<h4>'+ ptData.name +'</h4>' + arrayOutput(ptData.descForIndex, '<p>', '</p>');
+      var rsHtml = '<h4>'+ rsData.name +'</h4>' + arrayOutput(rsData.descForIndex, '<p>', '</p>');
+      var dlHtml = '<h4>'+ dlData.name +'</h4>' + arrayOutput(dlData.descForIndex, '<p>', '</p>');
+      var gjsHtml = '<h4>'+ gjsData.name +'</h4>' + arrayOutput(gjsData.descForIndex, '<p>', '</p>');
+      ptCont.html(ptHtml).parent().attr('href', ptData.link).attr('target', ptData.target);
+      rsCont.html(rsHtml).parent().attr('href', rsData.link).attr('target', rsData.target);
+      dlCont.html(dlHtml).parent().attr('href', dlData.link).attr('target', dlData.target);
+      gjsCont.html(gjsHtml).parent().attr('href', gjsData.link).attr('target', gjsData.target);
+      $('#GJSName').html( gjsData.name );
+    }
+  };
+
+  /* Render news republic on index: */
+  function RenderNROnIndex() {
+    if (typeof ProductList != 'undefined') {
+      var prodListWithLang = ProductList[LANG];
+      var nrContainer = $('#CMCM_NR');
+      var newsData = prodListWithLang.category.mobileApps.categoryData.news.data[0];
+      var newsHtml = '<a class="app-icon has-trans has-anim CMCM_AutoWidthSibling" href="'+ newsData.link +'" target="'+ newsData.target +'">\
+                        <img src="'+ newsData.icon +'" alt="'+ newsData.name +'" />\
+                      </a>\
+                      <div class="news-info CMCM_AutoWidth" data-padding="10">\
+                        <h3 class="app-name has-anim">\
+                          <a class="app-namelink has-trans has-anim" href="'+ newsData.link +'" target="'+ newsData.target +'">'+ newsData.name +'</a>\
+                        </h3>' + arrayOutput(newsData.descForIndex, '<p class="app-desc has-anim">', '</p>') +'\
+                      </div>';
+      nrContainer.html(newsHtml);
+    }
+  };
+
+
+  /* Render product category introductions on index: */
+  function RenderProductCategoryOnIndex() {
+    if (typeof ProductList != 'undefined') {
+      var prodListWithLang = ProductList[LANG];
+      var categoriesCollect = prodListWithLang.category.mobileApps.categoryData;
+      var cateForIndex_Tool = categoriesCollect.tool;
+      var cateForIndex_Socl = categoriesCollect.socl;
+      var cateForIndex_Game = categoriesCollect.game;
+      var cateForIndex_News = categoriesCollect.news;
+      var cateForIndex_all = [cateForIndex_Tool, cateForIndex_Socl, cateForIndex_Game, cateForIndex_News];
+      cateForIndex_all.map(function(Obj){
+        $('#CMCM_Section_' + Obj.hash).find('.CMCM_SecTitle').html(Obj.name);
+        $('#CMCM_Section_' + Obj.hash).find('.CMCM_SecDescr').html(arrayOutput(Obj.desc));
       });
     }
-  }
+  };
 
-  render() {
-    return (
-      <div className='form-field'>
-        <h2 className='form-title'>Sign in to get started!</h2>
-        <div className='inputs-wrap'>
-          <input type='text' onChange={e=>this.onChange(e)} onFocus={e=>this.removeErrorMsg(e)} autoFocus value={this.state.username} placeholder='Your username here please' />
-          <input type='password' onChange={this.onChange.bind(this)} onFocus={this.removeErrorMsg.bind(this)} value={this.state.password} placeholder='Password here' />
-        </div>
-        <div className='btns-wrap'>
-          <a className='btn-submit' onClick={this.handleSubmit.bind(this)}>Enter</a>
-          <a className='btn-req' onClick={this.reqForAccount.bind(this)}>Get an account!</a>
-        </div>
-        <div className='error-msgs'>{this.state.error}</div>
-      </div>
-    );
-  }
-
-};
-
-/* Module of Categories */
-class Categories extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: this.props.ck
+  /* Render general infos like slogan and section titles on index: */
+  function RenderSlogansOnIndex() {
+    if (typeof IntrosToIndex != 'undefined') {
+      var introsWithLang = IntrosToIndex[LANG];
+      var bigSlogan = arrayOutput( introsWithLang.slogan );
+      var subSlogan = introsWithLang.subslogan;
+      $('#CMCM_Slogan').html(bigSlogan);
+      $('#CMCM_SubSlogan').html(subSlogan);
     }
-  }
+  };
 
-  checkOutData() {
-    webTestPlayformEmails.all().one(function(email){
-      console.log( 'Get emails from db: ', email.value );
+  RenderSlogansOnIndex();
+  RenderToolsOnIndex();
+  RenderLiveMeOnIndex();
+  RenderGamesOnIndex();
+  RenderNROnIndex();
+  RenderProductCategoryOnIndex();
+
+  /* Render live.me on index, in a particular style: */
+  function RenderLiveMeOnIndex() {
+    if (typeof ProductList != 'undefined') {
+      var prodListWithLang = ProductList[LANG];
+      var livemeTextContainer = $('#CMCM_LiveMeTexts');
+      var livemeData = prodListWithLang.category.mobileApps.categoryData.socl.data[0];
+      var _name = livemeData.name,
+          _icon = livemeData.icon,
+          _descForIndex = livemeData.descForIndex[0],
+          _tags = livemeData.tags,
+          _link = livemeData.link,
+          _target = livemeData.target;
+      var _earth1 = _tags[0].split('|')[0],
+          _earth2 = _tags[0].split('|')[1],
+          _money1 = _tags[1].split('|')[0],
+          _money2 = _tags[1].split('|')[1],
+          _award1 = _tags[2].split('|')[0],
+          _award2 = _tags[2].split('|')[1],
+          _html = '<a class="app-icon has-trans has-anim CMCM_AutoWidthSibling" href="'+ _link +'" target="'+ _target +'">\
+                    <img src="'+ _icon +'" alt="'+ _name +'" />\
+                  </a>\
+                  <div class="live-info CMCM_AutoWidth" data-padding="10">\
+                    <h3 class="app-name has-anim">\
+                      <a class="app-namelink has-trans" href="'+ _link +'" target="'+ _target +'">'+ _name +'</a>\
+                    </h3>\
+                    <p class="app-desc has-anim">'+ _descForIndex +'</p>\
+                    <ul class="live-datas has-anim clearfix">\
+                      <li class="live-data">\
+                        <strong class="earth">'+ _earth1 +'</strong>\
+                        <b>'+ _earth2 +'</b>\
+                        <s class="line"></s>\
+                      </li>\
+                      <li class="live-data">\
+                        <strong class="money">'+ _money1 +'</strong>\
+                        <b>'+ _money2 +'</b>\
+                        <s class="line"></s>\
+                      </li>\
+                      <li class="live-data">\
+                        <strong class="award">'+ _award1 +'</strong>\
+                        <b>'+ _award2 +'</b>\
+                      </li>\
+                    </ul>\
+                  </div><!-- live info -->';
+      livemeTextContainer.html(_html);
+    }
+  };
+
+  /* Render stars for app ranks, must after tools being rendered: */
+  function RenderStarsForAppRank() {
+    var ranks = $('.CMCM_Rank');
+    ranks.each(function(index, ele){
+      var item = $(ele);
+      var rank = item.attr('data');
+      if (rank == 0 || rank == '0') return;
+      var text = '<b>' + rank + '</b>';
+      var fullStars = Math.floor(rank);
+      var fullStarHTML = '<s class="full-star"></s>';
+      var halfStarHTML = '<s class="half-star"></s>';
+      for (var i = 1; i <= fullStars; i++) {item.append(fullStarHTML);}
+      if (rank > fullStars) {item.append(halfStarHTML);}
+      item.append(text);
     });
-  }
+  };
 
-  render() {
-    if( this.state.name == 'alexandra@cmcm.com' ){
-      var adminBtn = <a className='cate-admin-btn' onClick={this.checkOutData.bind(this)}>Check out datas!</a>;
-    }else{
-      var adminBtn = '';
-    }
-    return (
-      <div className='cate-wrap'>
-        <h2 className='cate-title'>Our Current Project</h2>
-        {this.props.list.map(function(value,i){
-          return (
-            <a className='cate-item clearfix' key={i} href={value.linkTo}>
-              <span className='cate-name'>{value.projectName}</span>
-              <span className='cate-date'>{value.latestModified}</span>
-            </a>
-          );
-        })}
-        {adminBtn}
-      </div>
-    );
-  }
-
-};
-
-/* Module of Popup */
-class Popup extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: this.props.title,
-      desc: this.props.desc,
-      mask: this.props.mask,
-      hasInput: this.props.hasInput,
-      inputElement: null,
-      inputValue: ''
-    }
-  }
+  /* Hover game units to display descriptions: */
+  $('.CMCM_GameUnit').mouseenter(function(){
+    $(this).find('.CMCM_GameIntros').addClass('active');
+  });
+  $('.CMCM_GameUnit').mouseleave(function(){
+    $(this).find('.CMCM_GameIntros').removeClass('active');
+  });
   
-  showPopup() {
-    this.state.mask.style.display = 'block';
-  }
+  /* Initialize Swiper: */
+  var billboardSwiper = new Swiper('.billboard-swiper-container', {
+      pagination: '.billboard-swiper-pagination',
+      paginationClickable: true,
+      spaceBetween: 0,
+      centeredSlides: true,
+      autoplay:0,
+      autoplayDisableOnInteraction: false
+  });
+  var NewsSwiper = new Swiper('.news-swiper-container', {
+      pagination: '.news-swiper-pagination',
+      paginationClickable: true,
+      spaceBetween: 0,
+      centeredSlides: true,
+      autoplay:5000,
+      autoplayDisableOnInteraction: false
+  });
 
-  destroyPopup() {
-    console.log(166, ReactDOM.findDOMNode(this)); // Why null ?
-    ReactDOM.unmountComponentAtNode( ReactDOM.findDOMNode(this).parentNode );
-    this.state.mask.style.display = 'none';
-  }
 
-  onConfirm() {
-    var _this = this;
-    if( !_this.state.hasInput ){
-      _this.destroyPopup();
-    }else if( _this.validate(_this.state.inputValue) ){
-      _this.saveEmail( _this.state.inputValue, _this.destroyPopup );
-    }else if( _this.state.inputElement ) {
-      _this.state.inputElement.style.border = '1px solid #972624';
-      _this.state.inputElement.style.transform = 'translateY(4px)';
-    }else{
+  /* Unfold burger nav on mobiles: */
+  $('#CMCM_TopBurger').click(function(){
+    var nav = $('#CMCM_TopNav');
+    var cls = 'unfold';
+    if ( !nav.hasClass(cls) ) {
+      nav.addClass(cls);
+    } else {
+      nav.removeClass(cls);
+    }
+  });
+
+  /* Render left menu for sub pages: */
+  function RenderSubPageMenu() {
+    var currentPage = $('body').attr('data-subpage');
+    if (typeof CompanyInfoList != 'undefined' && (currentPage == 'company')) {
+      var dataList = CompanyInfoList;
+    } else if (typeof ProductList != 'undefined' && (currentPage == 'product')) {
+      var dataList = ProductList;
+    } else if (typeof ContactList != 'undefined' && (currentPage == 'contact')) {
+      var dataList = ContactList;
+    } else {
       return;
     }
-  }
-
-  saveEmail(email, callback) {
-    // Insert data to database:
-    var emailObj = new webTestPlayformEmails({
-      value: email,
-      date: new Date().getTime()
-    });
-    persistence.add( emailObj );
-    persistence.flush();
-    if(callback){
-      callback();
+    var dataListWithLang = dataList[LANG];
+    var menuItems = dataListWithLang.category;
+    var menuContainer = $('#CMCM_SubPageMenu_' + currentPage);
+    var _cateHtml = '';
+    for (var item in menuItems) {
+      var _cateName = menuItems[item].categoryName,
+          _cateHref = menuItems[item].categoryLink,
+          _cateData = menuItems[item].categoryData,
+          _subHtml = '',
+          _ifUnfold = '';
+      if (_cateData.onMenu) { /* If sub-menus displayed beneath this menu */
+        for (var __subCate in _cateData) {
+          if (_cateData[__subCate].name) {
+            var __name = _cateData[__subCate].name,
+                __hash = _cateData[__subCate].hash;
+            _subHtml += '<a class="category-detail-one has-trans CMCM_SMD_A" href="#'+ __hash +'">'+ __name +'</a>';
+          }
+        }
+        if (_cateData.unfold) {_ifUnfold = 'active';}
+        _subHtml = ('<div class="category-details has-trans CMCM_SubMenuDetails '+ _ifUnfold +'">' + _subHtml + '</div><!-- details -->');
+      }
+      _cateHtml += '<div class="category-unit">\
+                      <a class="category-name has-trans CMCM_SubMenuItem '+ _ifUnfold +'" href="#'+ _cateHref +'">'+ _cateName +'</a>\
+                      '+ _subHtml +'\
+                    </div><!-- category unit -->';
     }
-  }
+    menuContainer.append(_cateHtml);
+  };
+  RenderSubPageMenu();
 
-  onCancel() {
-    this.destroyPopup();
-  }
 
-  onChange(e) {
-    var _val = e.target.value;
-    this.setState({
-      inputElement: e.target,
-      inputValue: _val
-    });
-  }
-
-  validate( value ) {
-    var emailPattern = /\w+[\w.]*@[\w.]+\.\w+/;
-    return emailPattern.test(value);
-  }
-
-  componentWillMount() {
-    this.showPopup();
-  }
-
-  componentWillUnmount() {
-    this.destroyPopup();
-  }
-
-  render() {
-    if(this.state.hasInput){
-      var _input = <input type='text' className='popup-input' onChange={this.onChange.bind(this)} value={this.state.inputValue} />
-    }else{
-      var _input = '';
+  /* Render company mission & vision: */
+  function RenderCompanyMission() {
+    if (typeof CompanyInfoList != 'undefined') {
+      var companyInfosWithLang = CompanyInfoList[LANG];
+      var container = $('#CMCM_CompanyContents');
+      var mission = companyInfosWithLang.category.missionVisions;
+      var _name = mission.categoryName,
+          _hash = mission.categoryLink,
+          _data = mission.categoryData,
+          _csan = _data.classAnchor,
+          _slog = _data.slogan,
+          _desc = _data.descrp;
+      var _html = '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
+                    <h2 class="category-title">'+ _name +'</h2>\
+                    <div class="one-app-introduction clearfix">\
+                      <h1 class="cmcm-slogan">'+ _slog +'</h1>\
+                      <p class="under-slogan">'+ _desc +'</p>\
+                    </div><!-- one app introduction -->\
+                   </div><!-- category container of mission and visions -->';
+      container.append(_html);
     }
-    return (
-      <div className='popup-container'>
-        <h1>{this.state.title}</h1>
-        <p>{this.state.desc}</p>
-        <div className='popup-inp'>{_input}</div>
-        <div className='popup-btns clearfix'>
-          <a className='popup-btn-yes' onClick={this.onConfirm.bind(this)}>OK</a>
-          <a className='popup-btn-no' onClick={this.onCancel.bind(this)}>Cancel</a>
-        </div>
-      </div>
-    );
-  }
+  };
+  /* Render company introductions: */
+  function RenderCompanyIntros() {
+    if (typeof CompanyInfoList != 'undefined') {
+      var companyInfosWithLang = CompanyInfoList[LANG];
+      var container = $('#CMCM_CompanyContents');
+      var intro = companyInfosWithLang.category.introduction;
+      var _name = intro.categoryName,
+          _hash = intro.categoryLink,
+          _data = intro.categoryData,
+          _csan = _data.classAnchor,
+          _arry = _data.introTexts,
+          _imge = _data.introImage;
+      var _text = arrayOutput(_arry, '<p class="company-intros">', '</p>');
+      var _html = '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
+                     <h2 class="category-title">'+ _name +'</h2>\
+                     <div class="one-app-introduction clearfix">\
+                       <img class="company-view" src="'+ _imge +'" alt="'+ _name +'" />\
+                       '+ _text +'</div><!-- one app introduction -->\
+                   </div><!-- category container of company intro -->';
+      container.append(_html);
+    }
+  };
+  /* Render company history: */
+  function RenderCompanyHistory() {
+    if (typeof CompanyInfoList != 'undefined') {
+      var companyInfosWithLang = CompanyInfoList[LANG];
+      var container = $('#CMCM_CompanyContents');
+      var devHistory = companyInfosWithLang.category.devHistory;
+      var _name = devHistory.categoryName,
+          _hash = devHistory.categoryLink,
+          _data = devHistory.categoryData,
+          _csan = _data.classAnchor,
+          _historyArray = _data.companyHistory,
+          allHistories = '';
+      _historyArray.map(function(oneYearEvents){
+        var _year = oneYearEvents.year;
+        var _events = oneYearEvents.events;
+        var _evtHtm = '';
+        for (var month in _events) {
+          _evtHtm += '<div class="history-item clearfix">\
+                        <span>'+ month +'</span>\
+                        <b>'+ _events[month] +'</b>\
+                      </div><!-- item -->';
+        }
+        allHistories += '<div class="history-one-year clearfix">\
+                            <h3 class="year-number">'+ _year +'</h3>'+ _evtHtm +'<s>Dots</s>\
+                         </div><!-- history-one-year -->';
+      });
+      var _html = '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
+                     <h2 class="category-title">'+ _name +'</h2>\
+                     <div class="one-app-introduction clearfix">'+ allHistories +'</div>\
+                   </div><!-- category container of history -->';
+      container.append(_html);
+    }
+  };
+  /* Render company culture & values: */
+  function RenderCompanyCulture() {
+    if (typeof CompanyInfoList != 'undefined') {
+      var companyInfosWithLang = CompanyInfoList[LANG];
+      var container = $('#CMCM_CompanyContents');
+      var culture = companyInfosWithLang.category.corCulture;
+      var _name = culture.categoryName,
+          _hash = culture.categoryLink,
+          _data = culture.categoryData,
+          _csan = _data.classAnchor,
+          _cult = _data.cultureValues,
+          _vHtm = '',
+          _vDes = '';
+      _cult.map(function(value, i){
+        var _clsn = value.valueClassName,
+            _icon = value.valueIcon,
+            _text = value.valueText,
+            _cute = value.valueCute,
+            _desc = value.valueDesc;
+        _vHtm += '<li class="value-item '+ _clsn +' has-trans CMCM_ValueItem" data="'+ _clsn +'">\
+                    <div class="value-icon">\
+                      <img class="has-trans" src="'+ _icon +'" alt="'+ _text +'" />\
+                    </div>\
+                    <img class="value-cute has-trans" src="'+ _cute +'" alt="'+ _text +'" />\
+                    <span class="value-text has-trans">'+ _text +'</span>\
+                    <span class="v-des-in-mob has-trans CMCM_ValInMob">'+ _desc +'</span>\
+                  </li><!-- one value item -->';
+        _vDes += '<li class="value-descr has-trans CMCM_ValueDescr vd-'+ _clsn +'">\
+                    <span>'+ _desc +'</span>\
+                    <s class="dot1 has-trans">&nbsp;</s>\
+                    <s class="dot2 has-trans">&nbsp;</s>\
+                    <s class="dot3 has-trans">&nbsp;</s>\
+                  </li>';
+      });
+      /* render here */
+      var _html = '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
+                    <h2 class="category-title">'+ _name +'</h2>\
+                    <div class="one-app-introduction clearfix">\
+                      <div class="values-container rel">\
+                        <ul class="values-display clearfix">'+ _vHtm +'</ul>\
+                        <ul class="values-descrs">'+ _vDes +'</ul>\
+                      </div>\
+                    </div>\
+                  </div><!-- category container of culture -->';
+      container.append(_html);
+      /* Hover values:*/
+      $('.CMCM_ValueItem').mouseenter(function(){
+        var me = $(this), descrs = $('.CMCM_ValueDescr');
+        var token = me.attr('data');
+        var descr = $('.vd-'+ token);
+        me.addClass('active');
+        descrs.removeClass('active');
+        descr.addClass('active');
+      });
+      $('.CMCM_ValueItem').mouseleave(function(){
+        var me = $(this), descrs = $('.CMCM_ValueDescr');
+        me.removeClass('active');
+        descrs.removeClass('active');
+      });
+    }
+  };
+  /* Render company employers benefits: */
+  function RenderCompanyWelfare() {
+    if (typeof CompanyInfoList != 'undefined') {
+      var companyInfosWithLang = CompanyInfoList[LANG];
+      var container = $('#CMCM_CompanyContents');
+      var welfare = companyInfosWithLang.category.empWelfare;
+      var _name = welfare.categoryName,
+          _hash = welfare.categoryLink,
+          _data = welfare.categoryData,
+          _csan = _data.classAnchor,
+          _arry = _data.welfareIntros,
+          _imgs = _data.welfareImages,
+          _text = arrayOutput(_arry, '<p class="welfare-para">', '</p>'),
+          _pics = '';
+      _imgs.map(function(item, i){
+        var _src = item.image,
+            _des = item.descr,
+            _lay = '';
+        if (i%2 > 0) _lay = 'right';
+        _pics += '<div class="welfare-item '+ _lay +'">\
+                    <img src="'+ _src +'" alt="'+ _des +'" /><p>'+ _des +'</p>\
+                  </div>';
+      });
+      var _html = '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
+                    <h2 class="category-title">'+ _name +'</h2>\
+                    <div class="one-app-introduction clearfix">\
+                      '+ _text +'<div class="welfare-imgs clearfix">'+ _pics +'</div>\
+                    </div><!-- one app introduction -->\
+                   </div><!-- category container of welfare -->';
+      container.append(_html);
+    }
+  };
+  /* Render company executive team leaders: */
+  function RenderCompanyLeaders() {
+    if (typeof CompanyInfoList != 'undefined') {
+      var companyInfosWithLang = CompanyInfoList[LANG];
+      var container = $('#CMCM_CompanyContents');
+      var leaders = companyInfosWithLang.category.leaderTeam;
+      var _name = leaders.categoryName,
+          _hash = leaders.categoryLink,
+          _data = leaders.categoryData,
+          _csan = _data.classAnchor,
+          _detl = _data.leaderDetails,
+          _allLeaders = '';
+      _detl.map(function(leader, i){
+        var _leaderName = leader.name,
+            _leaderTitle = leader.title,
+            _leaderIntro = arrayOutput(leader.detail, '<p>', '</p>'),
+            _leaderAvatar = leader.avatar,
+            _isReverse = (i % 2 > 0) ? 'reverse' : '';
+        _allLeaders += '<div class="one-app-introduction clearfix '+ _isReverse +'">\
+                          <div class="leader-pic">\
+                            <img src="'+ _leaderAvatar +'" alt="'+ _leaderName +'" />\
+                            <div class="leader-inf-in-mobile-only">\
+                              <h2>'+ _leaderName +'</h2><h3>'+ _leaderTitle +'</h3>\
+                            </div>\
+                          </div>\
+                          <div class="leader-inf">\
+                            <h2>'+ _leaderName +'</h2><h3>'+ _leaderTitle +'</h3>'+ _leaderIntro +'\
+                          </div>\
+                        </div><!-- one app introduction -->';
+      });
+      var _html = '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
+                      <h2 class="category-title">'+ _name +'</h2>'+ _allLeaders +'\
+                   </div><!-- category container of executive team -->';
+      container.append(_html);
+    }
+  };
+  /* Company page must be rendered as the sequence of designs, like: */
+  RenderCompanyMission();
+  RenderCompanyIntros();
+  RenderCompanyHistory();
+  RenderCompanyLeaders();
+  RenderCompanyCulture();
+  RenderCompanyWelfare();
+  
 
-};
+  /* Render all products to the product list page: */
+  function RenderAllProductsToListPage() {
+    if (typeof ProductList != 'undefined') {
+      var prodListWithLang = ProductList[LANG];
+      var container = $('#CMCM_ProductsContents');
+      var categories = prodListWithLang.category;
+      var _html ='';
+      for (var cate in categories) {// Traverse big category like 'mobileApps'
+        var _oneCate = categories[cate],
+            // _cateName = _oneCate.categoryName,
+            // _cateHash = _oneCate.categoryLink,
+            _cateData = _oneCate.categoryData;
+        for (var sub in _cateData) { // Sub category like 'tool' or 'news'
+          var _oneSubCate = _cateData[sub];
+          if (_oneSubCate.name) {
+            var _name = _oneSubCate.name,
+                _hash = _oneSubCate.hash,
+                _csan = _oneSubCate.anch,
+                _apps = _oneSubCate.data,
+                _allAppsInThisSubCate = '';
+            _apps.map(function(app, i){
+              var _appName = app.name,
+                  _appIcon = app.icon,
+                  _appdescForProd = arrayOutput(app.descForProd, '<p>', '</p>'),
+                  _appLink = app.link,
+                  _appTarget = app.target;
+              _allAppsInThisSubCate += '<div class="one-app-introduction clearfix">\
+                                          <div class="sub-appicon">\
+                                            <img src="'+ _appIcon +'" alt="'+ _appName +'" />\
+                                          </div>\
+                                          <div class="sub-appinfo">\
+                                            <h3 class="clearfix">\
+                                              <a class="has-trans" href="'+ _appLink +'" target="'+ _appTarget +'">'+ _appName +'</a>\
+                                            </h3>\
+                                            '+ _appdescForProd +'\
+                                          </div><!-- appinfo -->\
+                                        </div><!-- one app introduction -->';
+            });
+            /* NOTE: One unit area in page is based on one sub cate, not big cate. */
+            _html += '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
+                        <h2 class="category-title">'+ _name +'</h2>\
+                        '+ _allAppsInThisSubCate +'\
+                      </div><!-- end of category container -->';
+          } // End if
+        }
+      }
+      container.html(_html);
+    }
+  };
+  /* Render product page: */
+  RenderAllProductsToListPage();
 
-var cateList = [
-
-  {
-    projectName: 'New official website',
-    linkTo: 'cm/zh-cn/',
-    latestModified: '2017-10-31 22:10'
-  },
-
-/*
-  {
-    projectName: 'Testing css',
-    linkTo: 'optimizing-v5-css/en-us/',
-    latestModified: '2017-08-10 14:34'
-  },
-  {
-    projectName: 'Cheetah Ads Programmatic',
-    linkTo: 'ads/programmatic/index.html?v=updated',
-    latestModified: '2017-08-21 16:21'
-  },
-  {
-    projectName: 'Cheetah Ads Platform',
-    linkTo: 'ads/index.html',
-    latestModified: '2017-06-30 17:33'
-  },
-  {
-    projectName: 'Cheetah for Publishers',
-    linkTo: 'publishers/',
-    latestModified: '2017-02-24 19:20'
-  },
-  {
-    projectName: 'WhatsCall',
-    linkTo: 'whatscall/',
-    latestModified: '2016-10-21 09:31'
-  },
-  {
-    projectName: 'Pegasi',
-    linkTo: 'pegasi/',
-    latestModified: '2016-10-12 17:28'
-  },
-  {
-    projectName: 'Piano Tiles 2',
-    linkTo: 'piano-tiles/',
-    latestModified: '2016-10-28 15:13'
-  }
-  */
-];
 
 
-function setUpDatabase() {
-  if(window.openDatabase){ // Browser supports Web SQL
-    persistence.store.websql.config(
-      persistence,
-      'webTestDB', // Name of DB, create if not existed.
-      'Database for webTestPlatform', // Description of DB.
-      5 * 1024 * 1024 //the maximum size of your database in bytes (5MB in this example).
-    );
-  }else{
-    persistence.store.memory.config(persistence);
-  }
-  window.webTestPlayformEmails = persistence.define('Emails', { // Create a table named 'Emails'
-    value: '',
-    date: ''
+  /* Render contact infos on contact page: */
+  function RenderContactInfosToContactPage() {
+    if (typeof ContactList != 'undefined') {
+      var contactInfosWithLang = ContactList[LANG];
+      var container = $('#CMCM_ContactContents');
+      var categories = contactInfosWithLang.category;
+      var _html ='';
+      for (var cate in categories) {
+        var _oneCate = categories[cate],
+            _name = _oneCate.categoryName,
+            _hash = _oneCate.categoryLink,
+            _data = _oneCate.categoryData,
+            _csan = _data.classAnchor,
+            _details = '';
+        _data.datas.map(function(detail, i){
+          var _detailTitle = detail.title,
+              _detailTexts = arrayOutput(detail.details, '<p>', '</p>');
+          _details += '<div class="contact-info"><p class="cont-top-para">'+ _detailTitle +'</p>'+ _detailTexts +'</div><!-- contact info -->';
+        });
+        _html += '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
+                          <h2 class="category-title">'+ _name +'</h2>\
+                          <div class="one-app-introduction clearfix">\
+                            '+ _details +'\
+                          </div><!-- one app introduction -->\
+                        </div><!-- category container -->';
+      }
+      container.html(_html);
+    }
+  };
+  RenderContactInfosToContactPage();
+
+
+
+  /* Click events on sub pages: */
+  $('.CMCM_SubMenuItem').click(function(){
+    var me = $(this);
+    var us = $('.CMCM_SubMenuItem');
+    var subMenuBtns = $('.CMCM_SMD_A');
+    var cls = 'active';
+    if ( !me.hasClass(cls) ) {
+      us.removeClass(cls);
+      me.addClass(cls);
+      subMenuBtns.removeClass(cls);
+    } else {
+      me.removeClass(cls);
+    }
+    var details = me.parent().find('.CMCM_SubMenuDetails');
+    if ( details && details.length >= 1 ) {
+      if ( !details.hasClass(cls) ) {
+        details.addClass(cls);
+      } else {
+        details.removeClass(cls);
+      }
+    }
   });
-  persistence.schemaSync();
-};
+  $('.CMCM_SMD_A').click(function(){
+    var cls = 'active';
+    var me = $(this);
+    var us = $('.CMCM_SMD_A');
+    var myFth = me.parent();
+    var myMenu = myFth.parent().find('.CMCM_SubMenuItem');
+    var menuBtns = $('.CMCM_SubMenuItem');
+    if ( !me.hasClass(cls) ) {
+      menuBtns.removeClass(cls);
+      us.removeClass(cls);
+      myMenu.addClass(cls);
+      me.addClass(cls);
+    }
+  });
 
 
 
-function init() {
-  var cookie = reactCookie.load('CMWebTester');
-  if( cookie ){
-    var divOfCategory = document.getElementById('categoryDiv');
-    ReactDOM.render( <Categories list={cateList} ck={cookie} />, divOfCategory );
-  }else{
-    var divOfLogin = document.getElementById('formDiv');
-    ReactDOM.render( <IndexLogin />, divOfLogin );
-  }
-  setUpDatabase();
-};
+  RenderPublicFooter();
 
-init();
+  /* Render public footer: */
+  function RenderPublicFooter() {
+    if (typeof PublicFooter != 'undefined') {
+      var ftDataWithLang = PublicFooter[LANG];
+      var outLinksArray = ftDataWithLang.data.outLinks;
+      var copyrightObj = ftDataWithLang.data.copyRight;
+      var footerContainer = $('#CMCM_Footer');
+      var ftRHtml = '<div class="footer-right clearfix rel">\
+                      <div id="CMCM_FooterRight"></div>\
+                      <div class="bottom-right abs clearfix" id="CMCM_FooterCopyright">\
+                        <ul class="clearfix" id="CMCM_FooterBottomUl">\
+                          <li><a class="has-trans" href="'+ copyrightObj.pvyLink +'">'+ copyrightObj.privacy +'</a></li>\
+                          <li><a class="has-trans" href="'+ copyrightObj.tosLink +'">'+ copyrightObj.tos +'</a></li>\
+                          <li class="copyright"><span>'+ copyrightObj.cptext +'</span></li>\
+                          <li class="switch-langs"><a class="has-trans">'+ copyrightObj.curLang +'</a></li>\
+                        </ul>\
+                      </div><!-- bottom right of copyright -->\
+                    </div><!-- footer right -->';
+      var ftLHtml = '<div class="footer-left">\
+                        <h4 class="footer-logo"><a class="has-trans" href="'+ copyrightObj.curHome +'">Cheetah Mobile</a></h4>\
+                        <div class="social-sharings clearfix">\
+                          <a class="social-icon fb has-trans" href="https://www.facebook.com/cmcmglobal/" target="_blank">Facebook</a>\
+                          <a class="social-icon tw has-trans" href="https://twitter.com/CheetahMobile" target="_blank">Twitter</a>\
+                          <a class="social-icon wb has-trans" href="http://weibo.com/u/5096795969?topnav=1&wvr=6&topsug=1" target="_blank">Weibo</a>\
+                          <a class="social-icon li has-trans" href="https://www.linkedin.com/company/3214653/" target="_blank">LinkIn</a>\
+                        </div>\
+                     </div><!-- footer left -->';
+      footerContainer.append(ftLHtml).append(ftRHtml);
+      RenderFooterLinks(outLinksArray);
+    }
+  };
 
+  /* Render footer links of basic infos, like company, product etc. */
+  function RenderFooterLinks( outlinks ) {
+    var footRightContainer = $('#CMCM_FooterRight');
+    var columnDataForFooter = function( jsonData ) {
+      if (typeof jsonData != 'undefined') {
+        var jsonWithLang = jsonData[LANG];
+        var footerColumnTitle = jsonWithLang.name,
+            footerColumnLink = jsonWithLang.link,
+            footerColumnItems = jsonWithLang.category,
+            colLinksHtml = '';
+        for (var p in footerColumnItems) {
+          var _linkName = footerColumnItems[p].categoryName,
+              _linkHash = footerColumnItems[p].categoryLink;
+          colLinksHtml += '<a href="'+ footerColumnLink + '#'+ _linkHash +'">'+ _linkName +'</a>';
+        }
+        var oneCol = '<div class="ft-column">\
+                        <h4 class="column-title clearfix">\
+                          <a href="'+ footerColumnLink +'">'+ footerColumnTitle +'</a>\
+                        </h4>\
+                        <div class="column-links clearfix">'+ colLinksHtml +'</div>\
+                      </div><!-- column -->';
+        return oneCol;
+      } else {
+        return '';
+      }
+    };
+    /* Fetch company, product, contact infos for footer: */
+    var col_company = columnDataForFooter(CompanyInfoList);
+    var col_product = columnDataForFooter(ProductList);
+    var col_contact = columnDataForFooter(ContactList);
+    footRightContainer.append(col_company).append(col_product);
+    /* Fetch other infos for footer, like ir and hr: */
+    var outLinksHtml = '';
+    outlinks.map(function(link, i){
+      var _name = link.linkName,
+          _url = link.linkUrl,
+          _subs = link.sublink,
+          _sublinkHtml = '';
+      _subs.map(function(lnk, i){
+        var _n = lnk.name, _u = lnk.url;
+        _sublinkHtml += '<a href="'+ _u +'" target="_blank">'+ _n +'</a>';
+      });
+      outLinksHtml += '<div class="ft-column">\
+                        <h4 class="column-title clearfix">\
+                          <a href="'+ _url +'" target="_blank">'+ _name +'</a>\
+                        </h4>\
+                        <div class="column-links clearfix">'+ _sublinkHtml +'</div>\
+                       </div><!-- column -->';
+    });
+    footRightContainer.append(outLinksHtml);
+    footRightContainer.append(col_contact);
+  };
+
+
+  /* ========== Scrolling: ========== */
+  $(window).scroll(function(){
+    var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+    var topBar = $('#CMCM_TopBar');
+    var scrlTopLmt = 300;
+    if( scrollTop >= scrlTopLmt ){
+      topBar.addClass('fixed');
+    }else{
+      topBar.removeClass('fixed');
+    }
+    AddAnimateToElement(scrollTop);
+  });
+
+  function AddAnimateToElement( _top ) {
+    var elements = $('.has-anim');
+    var animCls = 'animated';
+    elements.map(function(i, ele){
+      var _offsetTop = $(ele).offset().top;
+      if (_top >= _offsetTop - 500) {
+        $(ele).addClass(animCls);
+      }
+    });
+  };
+
+
+  /* Adjust widths automatically in mobiles: */
+  function autoWidth() {
+    if (window.innerWidth > 768) return;
+    var targetElement = $('.CMCM_AutoWidth');
+    for (var i = 0; i < targetElement.length; i++) {
+      var me = $(targetElement[i]);
+      var targetParents = me.parent();
+      var targetSibling = targetParents.find('.CMCM_AutoWidthSibling');
+      var parentWidth = targetParents.width();
+      var siblingWidth = targetSibling.width();
+      var paddings = me.attr('data-padding');
+      if (!paddings) { paddings = 0; }
+      var finalWidth = parentWidth - siblingWidth - paddings;
+      me.width( finalWidth );
+    }
+  };
+  autoWidth();
+
+  /* Adjust footer copyright's width in mobiles: */
+  function adjustFooterWidth() {
+    if (window.innerWidth > 768) return;
+    var contents = $('#CMCM_FooterBottomUl');
+    var con_width = contents.width();
+    var copyrightContainer = $('#CMCM_FooterCopyright');
+    copyrightContainer.width(con_width + 10);
+  };
+  adjustFooterWidth();
+  
+
+
+  /* ==== Make scrolling smooth ==== */
+  // Select all links with hashes
+  // And remove links that don't actually link to anything
+  $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
+    var target = $(this.hash);
+    var topValue = target.offset().top - 70;
+    if (target.length) {
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: topValue
+      }, 1000, function() { //Callback, must change focus!
+        var $target = $(target);
+        $target.focus();
+      });
+    }
+  });
+
+  
+})();

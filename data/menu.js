@@ -6,14 +6,14 @@ var PublicNav = {
       {
         displayName: '关于公司',
         target: '_self',
-        linkTo: '/cm/zh-cn/company/',
+        linkTo: '/company/',
         active: 'company',
         gaTag: 'brandnew.nav.company'
       },
       {
         displayName: '产品服务',
         target: '_self',
-        linkTo: '/cm/zh-cn/product/',
+        linkTo: '/product/',
         active: 'product',
         gaTag: 'brandnew.nav.product',
         sub: []
@@ -35,7 +35,7 @@ var PublicNav = {
       {
         displayName: '联系',
         target: '_self',
-        linkTo: '/cm/zh-cn/contact/',
+        linkTo: '/contact/',
         active: 'contact',
         gaTag: 'brandnew.nav.contact',
         sub: []
@@ -49,14 +49,14 @@ var PublicNav = {
       {
         displayName: 'About Us',
         target: '_self',
-        linkTo: '/cm/en-us/company/',
+        linkTo: '/en-us/company/',
         active: 'company',
         gaTag: 'brandnew.nav.company'
       },
       {
         displayName: 'Products',
         target: '_self',
-        linkTo: '/cm/en-us/product/',
+        linkTo: '/en-us/product/',
         active: 'product',
         gaTag: 'brandnew.nav.product',
         sub: []
@@ -78,7 +78,7 @@ var PublicNav = {
       {
         displayName: 'Contacts',
         target: '_self',
-        linkTo: '/cm/en-us/contact/',
+        linkTo: '/en-us/contact/',
         active: 'contact',
         gaTag: 'brandnew.nav.contact',
         sub: []

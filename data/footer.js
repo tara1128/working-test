@@ -40,7 +40,7 @@ var PublicFooter = {
         tosLink: 'http://www.cmcm.com/protocol/site/tos-cn.html',
         cptext: '猎豹移动 ©️ 2017',
         curLang: '简体中文',
-        curHome: '/cm/zh-cn/'
+        curHome: '/zh-cn/'
       }
     }
   },
@@ -85,7 +85,7 @@ var PublicFooter = {
         tosLink: 'http://www.cmcm.com/protocol/site/tos.html',
         cptext: 'Cheetah Mobile ©️ 2017',
         curLang: 'English',
-        curHome: '/cm/en-us/'
+        curHome: '/en-us/'
       }
     }
   },
