@@ -62,21 +62,21 @@ var PublicNav = {
         sub: []
       },
       {
-        displayName: 'IR',
+        displayName: 'Investors',
         target: '_blank',
         linkTo: 'http://ir.cmcm.com/',
         active: '',
         gaTag: 'brandnew.nav.ir'
       },
       {
-        displayName: 'Recruit',
+        displayName: 'Careers',
         target: '_blank',
         linkTo: 'http://hr.cmcm.com/',
         active: '',
         gaTag: 'brandnew.nav.hr'
       },
       {
-        displayName: 'Contacts',
+        displayName: 'Contact Us',
         target: '_self',
         linkTo: '/en-us/contact/',
         active: 'contact',

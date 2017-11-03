@@ -18,7 +18,7 @@ var CompanyInfoList = {
         categoryLink: 'Company_Intro',
         categoryData: {
           classAnchor: 'category-of-company',
-          introTexts: ['猎豹移动是一家全球领先的移动互联网公司，致力于为全球用户提供卓越的应用。公司于2010年10月，由金山安全和可牛影像合并而成，继承了金山18年的安全技术积累和可牛影像的互联网基因。', '2014年5月8日，猎豹移动在纽交所正式挂牌上市，交易代码CMCM。', '猎豹移动是中国移动互联网公司出海的领军者。截至2017年3月，公司产品在全球移动端月度活跃用户约为6亿，用户分布覆盖全球200多个国家及地区。其中，77%来自以欧美为主的海外市场。', '公司核心产品包括一系列工具及安全应用，如猎豹清理大师（Clean Master）、猎豹安全大师（Security Master）、猎豹3D桌面（CM Launcher）、金山毒霸（Duba Anti-virus）、Cheetah Keyboard等，为全球移动用户提供更快速、更易用、更安全的移动互联网体验。在工具应用之外，猎豹移动还拥有直播社交类应用Live.me、新闻聚合类应用News Republic，游戏应用钢琴块2（Piano Tiles 2）、弓箭手大作战（Arrow.io）等产品。', '2016年4月，正式进军人工智能领域，旗下人工智能公司猎户星空在远场语音交互系统、图像识别、视觉导航等领域，拥有完全自主开发并领先行业的技术。'],
+          introTexts: ['猎豹移动是一家全球领先的移动互联网公司，致力于为全球用户提供卓越的应用。公司于2010年10月，由金山安全和可牛影像合并而成，继承了金山18年的安全技术积累和可牛影像的互联网基因。2014年5月8日，猎豹移动在纽交所正式挂牌上市，交易代码CMCM。猎豹移动是中国移动互联网公司出海的领军者。截至2017年3月，公司产品在全球移动端月度活跃用户约为6亿，用户分布覆盖全球200多个国家及地区。其中，77%来自以欧美为主的海外市场。', '公司核心产品包括一系列工具及安全应用，如猎豹清理大师、猎豹安全大师、猎豹3D桌面、金山毒霸、Cheetah Keyboard等，为全球移动用户提供更快速、更易用、更安全的移动互联网体验。在工具应用之外，猎豹移动还拥有直播社交类应用Live.me、新闻聚合类应用News Republic，游戏应用钢琴块2、弓箭手大作战等产品。2016年4月，正式进军人工智能领域，旗下人工智能公司猎户星空在远场语音交互系统、图像识别、视觉导航等领域，拥有完全自主开发并领先行业的技术。'],
           introImage: '/dist/images/cmcm-overview.jpg'
         }
       },
@@ -100,25 +100,25 @@ var CompanyInfoList = {
             {
               name: '傅盛',
               title: '猎豹移动首席执行官',
-              detail: ['全面负责公司各项产品和人工智能业务的全球战略。短短五年，将猎豹移动打造成为全球和中国领先的工具及内容应用开发商；在他的领导下，猎豹移动成为第一批成功拓展海外市场的中国互联网公司。', '曾担任奇虎360软件事业部总经理，打造出核心产品360安全卫士。2008年加入经纬创投中国任副总裁；2009年创立可牛影像并任董事长兼CEO。'],
+              detail: ['全面负责公司各项产品和人工智能业务的全球战略。短短五年，将猎豹移动打造成为全球和中国领先的工具及内容应用开发商；在他的领导下，猎豹移动成为第一批成功拓展海外市场的中国互联网公司。曾担任奇虎360软件事业部总经理，打造出核心产品360安全卫士。2008年加入经纬创投中国任副总裁；2009年创立可牛影像并任董事长兼CEO。'],
               avatar: '/dist/images/leaders-fusheng.jpg'
             },
             {
               name: '徐鸣',
               title: '猎豹移动总裁',
-              detail: ['全面负责公司管理战略和全产品线业务。除了传统工具应用，他还带队落实人脸识别、语音OS等技术的研发。', '他拥有超过10年的互联网工具产品研发经验，是业界公认的顶尖程序员及专业研发管理人员。他带领团队开发出Clean Master、Security Master等旗舰产品，并将之打造成全球第一的工具类软件，开启了中国工具产品国际化的浪潮。'],
+              detail: ['全面负责公司管理战略和全产品线业务。除了传统工具应用，他还带队落实人脸识别、语音OS等技术的研发。他拥有超过10年的互联网工具产品研发经验，是业界公认的顶尖程序员及专业研发管理人员。他带领团队开发出Clean Master、Security Master等旗舰产品，并将之打造成全球第一的工具类软件，开启了中国工具产品国际化的浪潮。'],
               avatar: '/dist/images/leaders-xuming.jpg'
             },
             {
               name: '姜振宇',
               title: '猎豹移动首席财务官',
-              detail: ['他在企业财务管理、资本市场运作、兼并收购交易及合规性管理领域从业十余年，积累了丰富的实战经验。同时，在互联网、移动互联网行业有着资深的背景和经验。', '在加盟猎豹移动之前，姜振宇曾在北京创办过一家科技公司。2014年至2015年，他曾担任北京玖富时代投资顾问有限公司首席财务官。'],
+              detail: ['他在企业财务管理、资本市场运作、兼并收购交易及合规性管理领域从业十余年，积累了丰富的实战经验。同时，在互联网、移动互联网行业有着资深的背景和经验。在加盟猎豹移动之前，姜振宇曾在北京创办过一家科技公司。2014年至2015年，他曾担任北京玖富时代投资顾问有限公司首席财务官。'],
               avatar: '/dist/images/leaders-jiangzhenyu.jpg'
             },
             {
               name: '肖洁',
               title: '猎豹移动高级副总裁',
-              detail: ['拥有丰厚的品牌整合、传播以及市场公关经验，全面负责公司的市场公关工作，同时还负责海外商业产品及其他创新业务的开拓。', '她带领团队打造了中国首个面向全球的移动广告平台Cheetah Ads，依靠猎豹移动横跨安全、直播、新闻、游戏等各个领域的应用产品线，为全球广告主提供了沉浸式的直立视频广告解决方案。'],
+              detail: ['拥有丰厚的品牌整合、传播以及市场公关经验，全面负责公司的市场公关工作，同时还负责海外商业产品及其他创新业务的开拓。她带领团队打造了中国首个面向全球的移动广告平台Cheetah Ads，依靠猎豹移动横跨安全、直播、新闻、游戏等各个领域的应用产品线，为全球广告主提供了沉浸式的直立视频广告解决方案。'],
               avatar: '/dist/images/leaders-xiaojie.jpg'
             }
           ]
@@ -173,7 +173,7 @@ var CompanyInfoList = {
         categoryLink: 'Company_Welfare',
         categoryData: {
           classAnchor: 'category-of-welfare',
-          welfareIntros: ['在猎豹移动，有着丰富多彩的员工福利。', '创意无限的社团和节日活动：篮球社、羽毛球社、登山社、公益社……总有一款适合你；每年还有各类体育赛事，家庭日、中西方节日等文化主题派对，努力工作、快乐生活就是这么简单。', '层出不穷的学习和生活方式：猎豹学院、黑客马拉松、高管周例会，让大家可以随时给自己“充电”；图书馆、咖啡厅、健身房、电影院、KTV尽在“东半球最有硅谷范儿的中国公司。”', '除此之外，还有免费班车、加班打车报销、年度健康体检、生日礼物、海归落户、新婚礼金、节日关怀、消费贷款、补充商业保险等等福利制度。'],
+          welfareIntros: ['在猎豹移动，有着丰富多彩的员工福利。创意无限的社团和节日活动：篮球社、羽毛球社、登山社、公益社……总有一款适合你；每年还有各类体育赛事，家庭日、中西方节日等文化主题派对，努力工作、快乐生活就是这么简单。层出不穷的学习和生活方式：猎豹学院、黑客马拉松、高管周例会，让大家可以随时给自己“充电”；图书馆、咖啡厅、健身房、电影院、KTV尽在“东半球最有硅谷范儿的中国公司。”除此之外，还有免费班车、加班打车报销、年度健康体检、生日礼物、海归落户、新婚礼金、节日关怀、消费贷款、补充商业保险等等福利制度。'],
           welfareImages: [
             {
               image: '/dist/images/welfare-building.jpg',
@@ -203,7 +203,7 @@ var CompanyInfoList = {
     link: '/en-us/company/',
     category: {
       missionVisions: {
-        categoryName: 'Mission & Vision',
+        categoryName: 'Mission',
         categoryLink: 'Company_Vision',
         categoryData: {
           classAnchor: 'category-of-vision',
@@ -212,7 +212,7 @@ var CompanyInfoList = {
         }
       },
       introduction: {
-        categoryName: 'Company Profile',
+        categoryName: 'Company',
         categoryLink: 'Company_Intro',
         categoryData: {
           classAnchor: 'category-of-company',
@@ -221,7 +221,7 @@ var CompanyInfoList = {
         }
       },
       devHistory: {
-        categoryName: 'Development History',
+        categoryName: 'History',
         categoryLink: 'Company_History',
         categoryData: {
           classAnchor: 'category-of-history',
@@ -290,7 +290,7 @@ var CompanyInfoList = {
         }
       },
       leaderTeam: {
-        categoryName: 'Executive Team',
+        categoryName: 'Executive',
         categoryLink: 'Company_Leaders',
         categoryData: {
           classAnchor: 'category-of-leaders',
@@ -323,7 +323,7 @@ var CompanyInfoList = {
         }
       },
       corCulture: {
-        categoryName: 'Corporate Culture',
+        categoryName: 'Culture',
         categoryLink: 'Company_Culture',
         categoryData: {
           classAnchor: 'category-of-culture',
@@ -367,7 +367,7 @@ var CompanyInfoList = {
         }
       },
       empWelfare: {
-        categoryName: 'Employee Benefits',
+        categoryName: 'Benefits',
         categoryLink: 'Company_Welfare',
         categoryData: {
           classAnchor: 'category-of-welfare',

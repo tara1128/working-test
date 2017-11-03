@@ -57,23 +57,23 @@ var ContactList = {
           classAnchor: 'category-of-business',
           datas: [
             {
-              title: '国内移动广告合作请联系',
+              title: '国内移动广告合作',
               details: ['jiaolijiao@cmcm.com']
             },
             {
-              title: '国内PC广告合作请联系',
+              title: '国内PC广告合作',
               details: ['yuning@conew.com']
             },
             {
-              title: '中国企业出海及Facebook广告合作请联系',
+              title: '中国企业出海及Facebook广告合作',
               details: ['fangyining@cmcm.com']
             },
             {
-              title: '商业变现与Publisher合作请联系',
+              title: '商业变现与Publisher合作',
               details: ['CFP_contact@cmcm.com']
             },
             {
-              title: '商务合作请联系',
+              title: '商务合作',
               details: ['contact_ibd@cmcm.com']
             }
           ]
@@ -87,63 +87,63 @@ var ContactList = {
           datas: [
             {
               title: '北京（全球总部）',
-              details: ['联系地址：北京市朝阳区姚家园南路一号惠通时代广场8号', '联系电话：+86 400-610-7779， 010-62927779']
+              details: ['地址：北京市朝阳区姚家园南路一号惠通时代广场8号', '电话：+86 400-610-7779， 010-62927779']
             },
             {
               title: '香港',
-              details: ['联系地址：1309A Cable TV Tower, No.9 Hoi Shing Road, Tsuen Wan, N.T. Hong Kong', '联系电话：+852 2405 0088']
+              details: ['地址：1309A Cable TV Tower, No.9 Hoi Shing Road, Tsuen Wan, N.T. Hong Kong', '电话：+852 2405 0088']
             },
             {
               title: '台北',
-              details: ['联系地址：83F., No.7, Sec. 5, Xinyi Rd., Xinyi Dist., Taipei City 110, Taiwan', '联系电话：+886 2 8101 0288']
+              details: ['地址：83F., No.7, Sec. 5, Xinyi Rd., Xinyi Dist., Taipei City 110, Taiwan', '电话：+886 2 8101 0288']
             },
             {
               title: '硅谷（美国总部）',
-              details: ['联系地址：4151 Middlefield Road, Suite 100 Palo Alto, CA 94303', '联系电话：+1 650 300 6088']
+              details: ['地址：4151 Middlefield Road, Suite 100 Palo Alto, CA 94303', '电话：+1 650 300 6088']
             },
             {
               title: '洛杉矶',
-              details: ['联系地址：7998 Santa Monica Blvd, Unit A&B West Hollywood, CA 90046', '联系电话：+1 800 266 0379']
+              details: ['地址：7998 Santa Monica Blvd, Unit A&B West Hollywood, CA 90046', '电话：+1 800 266 0379']
             },
             {
               title: '纽约',
-              details: ['联系地址：1460 Broadway, Suite 4051 New York, New York 10036']
+              details: ['地址：1460 Broadway, Suite 4051 New York, New York 10036']
             },
             {
               title: '柏林',
-              details: ['联系地址：Mindspace Berlin - Mitte Friedrichstrasse 68, 10117 Berlin, Germany', '联系电话：＋49 800 646377223']
+              details: ['地址：Mindspace Berlin - Mitte Friedrichstrasse 68, 10117 Berlin, Germany', '电话：＋49 800 646377223']
             },
             {
               title: '巴黎',
-              details: ['联系地址：91 Avenue Ledru Rollin, Paris, France 75011', '联系电话：+33 1 58 39 34 00']
+              details: ['地址：91 Avenue Ledru Rollin, Paris, France 75011', '电话：+33 1 58 39 34 00']
             },
             {
               title: '波尔多',
-              details: ['联系地址：Imm. P, Bureaux du Lac Rue Robert Caumont 33049 Bordeaux CEDEX - France', '联系电话：+335 56 51 02 01']
+              details: ['地址：Imm. P, Bureaux du Lac Rue Robert Caumont 33049 Bordeaux CEDEX - France', '电话：+335 56 51 02 01']
             },
             {
               title: '越南',
-              details: ['联系地址：Room F, 9th floor, Miss Ao Dai building, 21 Nguyen Trung Ngan str., Ben Nghe Ward, Dis. 1, HCMC']
+              details: ['地址：Room F, 9th floor, Miss Ao Dai building, 21 Nguyen Trung Ngan str., Ben Nghe Ward, Dis. 1, HCMC']
             },
             {
               title: '印尼',
-              details: ['联系地址：AXA Tower, 45th Floor, Jl. Prof. Dr. Satrio Kav. 18, Kuningan, RT.14/RW.4, Karet Kuningan, South Jakarta City, Jakarta 12940, Cheetah Mobile Suite #76-77', '联系电话： +6221-3005-3751']
+              details: ['地址：AXA Tower, 45th Floor, Jl. Prof. Dr. Satrio Kav. 18, Kuningan, RT.14/RW.4, Karet Kuningan, South Jakarta City, Jakarta 12940, Cheetah Mobile Suite #76-77', '电话： +6221-3005-3751']
             },
             {
               title: '印度',
-              details: ['联系地址：1204, Regus Business Center, 12th floor, Building No. 8, Tower C, DLF Cyber City, Phase II, Gurgaon, Haryana, India, Pin code 122002', '联系电话： +91 124 469 6772']
+              details: ['地址：1204, Regus Business Center, 12th floor, Building No. 8, Tower C, DLF Cyber City, Phase II, Gurgaon, Haryana, India, Pin code 122002', '电话： +91 124 469 6772']
             },
             {
               title: '新加坡',
-              details: ['联系地址：8 Marina View Asia Square Tower 1 Level 7, Singapore 018960', '联系电话：+65 64071136']
+              details: ['地址：8 Marina View Asia Square Tower 1 Level 7, Singapore 018960', '电话：+65 64071136']
             },
             {
               title: '俄罗斯',
-              details: ['联系地址："Regus" Embankment Tower, Office 440, 10C Presnenskaya Naberezhnaya, 123112, Moscow, Russia', '联系电话：+74959677676']
+              details: ['地址："Regus" Embankment Tower, Office 440, 10C Presnenskaya Naberezhnaya, 123112, Moscow, Russia', '电话：+74959677676']
             },
             {
               title: '巴西',
-              details: ['联系地址：Top Center Building, #1027, Paulista Avenue, 854 Bela Vista, Sao Paulo, 01310-100, Brazil', '联系电话：+55 11 2186-0222']
+              details: ['地址：Top Center Building, #1027, Paulista Avenue, 854 Bela Vista, Sao Paulo, 01310-100, Brazil', '电话：+55 11 2186-0222']
             }
           ]
         }
@@ -155,7 +155,7 @@ var ContactList = {
           classAnchor: 'category-of-clients',
           datas: [
             {
-              title: '对产品有任何疑问或建议请联系我们',
+              title: '对产品有任何疑问或建议，请联系我们',
               details: [
                 '猎豹清理大师: support@cmcm.com',
                 '猎豹安全大师: cmsecurity@cmcm.com',
@@ -174,7 +174,7 @@ var ContactList = {
   },
   'en-us': {
     page: 'contact',
-    name: 'Contact',
+    name: 'Contact Us',
     link: '/en-us/contact/',
     category: {
       mediaContact: {
@@ -198,7 +198,6 @@ var ContactList = {
           ]
         }
       },
-      /*
       socialMedia: {
         categoryName: 'Social Media',
         categoryLink: 'Contact_Social',
@@ -224,7 +223,6 @@ var ContactList = {
           ]
         }
       },
-      */
       businessContact: {
         categoryName: 'Business Contacts',
         categoryLink: 'Contact_Business',

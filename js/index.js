@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-02 19:53
+  Latest modified: 2017-11-03 19:19
 */
 
 (function(){
@@ -11,7 +11,7 @@
   var defaultLang = 'en-us';
   if ( !LANG || LANG.length < 1 ) LANG = defaultLang;
 
-  console.log('19:53');
+  console.log('15:44');
 
   /* A global function: */
     var arrayOutput = function( array, htmlTag, htmlCloseTag ) {
@@ -268,6 +268,7 @@
       livemeTextContainer.html(_html);
     }
   };
+  
 
   /* Render stars for app ranks, must after tools being rendered: */
   function RenderStarsForAppRank() {
@@ -610,7 +611,9 @@
                   _appTarget = app.target;
               _allAppsInThisSubCate += '<div class="one-app-introduction clearfix">\
                                           <div class="sub-appicon">\
-                                            <img src="'+ _appIcon +'" alt="'+ _appName +'" />\
+                                            <a class="sub-prod-icon-a has-trans" href="'+ _appLink +'" target="'+ _appTarget +'">\
+                                              <img src="'+ _appIcon +'" alt="'+ _appName +'" />\
+                                            </a>\
                                           </div>\
                                           <div class="sub-appinfo">\
                                             <h3 class="clearfix">\
@@ -800,11 +803,17 @@
   $(window).scroll(function(){
     var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
     var topBar = $('#CMCM_TopBar');
-    var scrlTopLmt = 300;
-    if( scrollTop >= scrlTopLmt ){
+    var subMen = $('.CMCM_SubMenus');
+    var scrlTopLmt = 380;
+    if (scrollTop >= scrlTopLmt) {
       topBar.addClass('fixed');
-    }else{
+    } else {
       topBar.removeClass('fixed');
+    }
+    if (scrollTop >= 54) {
+      subMen.addClass('fixed');
+    } else {
+      subMen.removeClass('fixed');
     }
     AddAnimateToElement(scrollTop);
   });
@@ -814,7 +823,7 @@
     var animCls = 'animated';
     elements.map(function(i, ele){
       var _offsetTop = $(ele).offset().top;
-      if (_top >= _offsetTop - 680) {
+      if (_top >= _offsetTop - 700) {
         $(ele).addClass(animCls);
       }
     });

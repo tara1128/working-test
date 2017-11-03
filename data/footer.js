@@ -50,7 +50,7 @@ var PublicFooter = {
     data: {
       outLinks: [
         {
-          linkName: 'IR',
+          linkName: 'Investors',
           linkUrl: 'http://ir.cmcm.com/',
           sublink: [
             {
@@ -64,7 +64,7 @@ var PublicFooter = {
           ]
         },
         {
-          linkName: 'Recruit',
+          linkName: 'Careers',
           linkUrl: 'http://hr.cmcm.com/',
           sublink: [
             {
