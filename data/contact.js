@@ -178,7 +178,7 @@ var ContactList = {
     link: '/en-us/contact/',
     category: {
       mediaContact: {
-        categoryName: 'Press Contacts',
+        categoryName: 'Media',
         categoryLink: 'Contact_Media',
         categoryData: {
           classAnchor: 'category-of-media',
@@ -224,7 +224,7 @@ var ContactList = {
         }
       },
       businessContact: {
-        categoryName: 'Business Contacts',
+        categoryName: 'Business',
         categoryLink: 'Contact_Business',
         categoryData: {
           classAnchor: 'category-of-business',

@@ -425,7 +425,7 @@ var ProductList = {
     link: '/en-us/product/',
     category: {
       mobileApps: {
-        categoryName: 'Mobile Apps',
+        categoryName: 'Mobile',
         categoryLink: 'Product_MobileApps',
         categoryData: {
           onMenu: true, /* To show sub categories on menu, make it true. */
@@ -672,7 +672,7 @@ var ProductList = {
         }
       },
       pc: {
-        categoryName: 'PC Products',
+        categoryName: 'PC',
         categoryLink: 'Product_forPC',
         categoryData: {
           onMenu: false, /* NOT to show sub categories on menu, make it false. */
@@ -739,7 +739,7 @@ var ProductList = {
         }
       },
       ai: {
-        categoryName: 'AI Business',
+        categoryName: 'AI',
         categoryLink: 'Product_AI',
         categoryData: {
           onMenu: false, /* NOT to show sub categories on menu, make it false. */

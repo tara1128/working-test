@@ -1,14 +1,13 @@
 var IntrosToIndex = {
   'zh-cn': {
     page: 'index',
-    slogan: ['Make', 'The World Smarter'],
+    slogan: ['Make', 'the World Smarter'],
     subslogan: '用AI和大数据赋能移动应用'
   },
   'en-us': {
     page: 'index',
-    // slogan: ['World Leading', 'Mobile Application Developer'],
-    slogan: ['Make', 'The World Smarter'],
-    subslogan: 'Leader of Technologies and innovations'
+    slogan: ['Make', 'the World Smarter'],
+    subslogan: 'Using AI and big data to power mobile apps'
   },
   'es-es': {},
   'fr-fr': {},
