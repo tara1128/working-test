@@ -208,7 +208,7 @@ var CompanyInfoList = {
         categoryData: {
           classAnchor: 'category-of-vision',
           slogan: 'Make the world smarter',
-          descrp: 'Cheetah Mobile is dedicated to leveraging AI and big data to bring users the world\'s best apps.'
+          descrp: 'Cheetah Mobile is dedicated to leveraging AI and big data to bring users the world\'s best apps'
         }
       },
       introduction: {
@@ -289,7 +289,7 @@ var CompanyInfoList = {
         }
       },
       leaderTeam: {
-        categoryName: 'Executive',
+        categoryName: 'Executives',
         categoryLink: 'Company_Leaders',
         categoryData: {
           classAnchor: 'category-of-leaders',
