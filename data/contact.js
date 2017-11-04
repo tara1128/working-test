@@ -91,11 +91,11 @@ var ContactList = {
             },
             {
               title: '香港',
-              details: ['地址：1309A Cable TV Tower, No.9 Hoi Shing Road, Tsuen Wan, N.T. Hong Kong', '电话：+852 2405 0088']
+              details: ['地址：香港荃湾海盛路九号有线电视大楼13楼1309A室', '电话：+852 2405 0088']
             },
             {
               title: '台北',
-              details: ['地址：83F., No.7, Sec. 5, Xinyi Rd., Xinyi Dist., Taipei City 110, Taiwan', '电话：+886 2 8101 0288']
+              details: ['地址：台北市信义区信义路5段7号83楼（台北101大楼）', '电话：+886 2 8101 0288']
             },
             {
               title: '硅谷（美国总部）',

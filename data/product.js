@@ -381,7 +381,7 @@ var ProductList = {
                 descForProd: ['全新升级的商业品牌，基于全球近6亿月活用户，涵盖移动及PC端业务，凭借大数据及人工智能等先进技术，为广告主提供更加精准、智能、个性化的服务。让广告不再打扰、而是打动用户；让智趣未来，迎面而来。'],
                 star: 0,
                 tags: [],
-                link: 'http://ads.cmcm.com/',
+                link: 'http://ads.cmcm.com/cn/',
                 target: '_blank',
                 pict: ''
               },

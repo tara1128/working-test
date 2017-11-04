@@ -7,7 +7,7 @@ var IntrosToIndex = {
   'en-us': {
     page: 'index',
     slogan: ['Make', 'the world smarter'],
-    subslogan: 'Using AI and big data to power mobile apps'
+    subslogan: 'Powering mobile apps with AI and big data'
   },
   'es-es': {},
   'fr-fr': {},
