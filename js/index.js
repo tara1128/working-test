@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-03 19:19
+  Latest modified: 2017-11-04 21:42
 */
 
 (function(){
@@ -71,14 +71,28 @@
           _target = item.target,
           _linkTo = item.linkTo,
           _active = item.active,
-          _gaTag = item.gaTag;
+          _gaTags = item.gaTag,
+          _subNvs = item.subNavs;
       var current = $('body').attr('data-subpage');
       var activeCls = (_active == current)?('active'):('');
-      var _html = '<li class="top-nav-li has-trans">\
-                      <a class="top-nav-a has-trans '+ activeCls +'" href="'+ _linkTo +'" target="'+ _target +'" onclick="ga(\'send\', \'event\', \'' + _gaTag + '\', \'click\');">'+ _name +'<s class="has-trans">&nbsp;</s></a>\
-                      <div class="top-nav-sub"></div>\
+      var _subNavHtml = '';
+      _subNvs.map(function(subNav){
+        var _subNavName = subNav.subNavName,
+            _subNavHash = subNav.subNavLink;
+        var _subLinkTo = (subNav.outlink)?(subNav.subNavLink):(_linkTo + '#' + _subNavHash);
+        _subNavHtml += '<a class="one-sub has-trans" href="'+ _subLinkTo +'" target="'+ _target +'">'+ _subNavName +'</a>';
+      });
+      var _html = '<li class="top-nav-li has-trans CMCM_TopNavLi">\
+                      <a class="top-nav-a has-trans '+ activeCls +'" href="'+ _linkTo +'" target="'+ _target +'" onclick="ga(\'send\', \'event\', \'' + _gaTags + '\', \'click\');">'+ _name +'</a>\
+                      <div class="top-nav-sub">'+ _subNavHtml +'</div>\
                    </li>';
       $(_html).insertBefore('#CMCM_TopLangSwitch');
+    });
+    $('.CMCM_TopNavLi').mouseenter(function(){
+      $(this).find('.top-nav-sub').slideDown(200);
+    });
+    $('.CMCM_TopNavLi').mouseleave(function(){
+      $(this).find('.top-nav-sub').slideUp(200);
     });
   };
 
