@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-04 21:42
+  Latest modified: 2017-11-05 10:10
 */
 
 (function(){
@@ -667,22 +667,42 @@
             _data = _oneCate.categoryData,
             _csan = _data.classAnchor,
             _details = '';
-        _data.datas.map(function(detail, i){
-          var _detailTitle = detail.title,
-              _detailTexts = arrayOutput(detail.details, '<p>', '</p>');
-          _details += '<div class="contact-info"><p class="cont-top-para">'+ _detailTitle +'</p>'+ _detailTexts +'</div><!-- contact info -->';
-        });
+        if (_hash == 'Contact_Social') {/* Render this category specifically */
+          _details = '<div class="contact-info socl-media clearfix">\
+                        <div class="socl-media-left">\
+                          <h3 class="socl-media-tlt">'+ _data.wechatTitle +'</h3>\
+                          <img src="'+ _data.wechat2dUrl +'" alt="'+ _data.wechatTitle +'" />\
+                        </div>\
+                        <div class="socl-media-right">\
+                          <h3 class="socl-media-tlt">'+ _data.othersTitle +'</h3>\
+                          <div class="socl-media-group">\
+                            <a class="socl-media-item has-trans '+ _data.facebook.clsName +'" href="'+ _data.facebook.siteUrl +'" target="_blank">'+ _data.facebook.descTxt +'</a>\
+                            <a class="socl-media-item has-trans '+ _data.twitter.clsName +'" href="'+ _data.twitter.siteUrl +'" target="_blank">'+ _data.twitter.descTxt +'</a>\
+                            <a class="socl-media-item has-trans '+ _data.weibo.clsName +'" href="'+ _data.weibo.siteUrl +'" target="_blank">'+ _data.weibo.descTxt +'</a>\
+                            <a class="socl-media-item has-trans '+ _data.linkedin.clsName +'" href="'+ _data.linkedin.siteUrl +'" target="_blank">'+ _data.linkedin.descTxt +'</a>\
+                          </div>\
+                        </div>\
+                      </div><!-- contact info -->';
+        } else {
+          _data.datas.map(function(detail, i){
+            var _detailTitle = detail.title,
+                _detailTexts = arrayOutput(detail.details, '<p>', '</p>');
+            _details += '<div class="contact-info"><p class="cont-top-para">'+ _detailTitle +'</p>'+ _detailTexts +'</div><!-- contact info -->';
+          });
+        }
+
         _html += '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
-                          <h2 class="category-title">'+ _name +'</h2>\
-                          <div class="one-app-introduction clearfix">\
-                            '+ _details +'\
-                          </div><!-- one app introduction -->\
-                        </div><!-- category container -->';
+                    <h2 class="category-title">'+ _name +'</h2>\
+                    <div class="one-app-introduction clearfix">'+ _details +'</div>\
+                  </div><!-- category container -->';
       }
       container.html(_html);
     }
   };
   RenderContactInfosToContactPage();
+
+  function RenderSpecialLookForSocialMedia() {
+  };
 
 
 
