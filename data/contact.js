@@ -208,24 +208,29 @@ var ContactList = {
         categoryLink: 'Contact_Social',
         categoryData: {
           classAnchor: 'category-of-socialmedia',
-          datas: [
-            {
-              title: 'Facebook',
-              details: ['https://www.facebook.com/cmcmglobal/']
-            },
-            {
-              title: 'Twitter',
-              details: ['https://twitter.com/CheetahMobile']
-            },
-            {
-              title: 'Weibo',
-              details: ['http://weibo.com/u/5096795969?topnav=1&wvr=6&topsug=1']
-            },
-            {
-              title: 'LinkedIn',
-              details: ['https://www.linkedin.com/company/3214653/']
-            },
-          ]
+          wechatTitle: 'Scan to follow us',
+          wechat2dUrl: '/dist/images/cm-2d-code-grey.jpg',
+          othersTitle: 'Other social medias:',
+          facebook: {
+            siteUrl: 'https://www.facebook.com/cmcmglobal/',
+            clsName: 'socl-facebook',
+            descTxt: 'Facebook'
+          },
+          twitter: {
+            siteUrl: 'https://twitter.com/CheetahMobile',
+            clsName: 'socl-twitter',
+            descTxt: 'Twitter'
+          },
+          weibo: {
+            siteUrl: 'http://weibo.com/u/5096795969?topnav=1&wvr=6&topsug=1',
+            clsName: 'socl-weibo',
+            descTxt: 'Weibo'
+          },
+          linkedin: {
+            siteUrl: 'https://www.linkedin.com/company/3214653/',
+            clsName: 'socl-linkedin',
+            descTxt: 'LinkedIn'
+          }
         }
       },
       businessContact: {

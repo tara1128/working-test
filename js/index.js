@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-05 10:10
+  Latest modified: 2017-11-06 12:18
 */
 
 (function(){
@@ -684,6 +684,16 @@
                         </div>\
                       </div><!-- contact info -->';
         } else {
+          if (_hash == 'Contact_GlobalOffice') {/* Insert a map image for global offices: */
+            var _globalLocations = '', _globalLocNum = 14;
+            for (var g = 0; g < _globalLocNum; g++) {
+              _globalLocations += '<s class="global-loc has-trans has-anim loc-'+ g +'"></s>';
+            }
+            _details = '<div class="contact-info global-map">\
+                          <img src="/dist/images/global-offices.png" alt="Global Offices" />\
+                          '+ _globalLocations +'\
+                        </div><!-- contact info, global map -->';
+          }
           _data.datas.map(function(detail, i){
             var _detailTitle = detail.title,
                 _detailTexts = arrayOutput(detail.details, '<p>', '</p>');
@@ -700,10 +710,6 @@
     }
   };
   RenderContactInfosToContactPage();
-
-  function RenderSpecialLookForSocialMedia() {
-  };
-
 
 
   /* Click events on sub pages: */
