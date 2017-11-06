@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-06 12:18
+  Latest modified: 2017-11-06 17:58
 */
 
 (function(){
@@ -174,10 +174,17 @@
       var rsHtml = '<h4>'+ rsData.name +'</h4>' + arrayOutput(rsData.descForIndex, '<p>', '</p>');
       var dlHtml = '<h4>'+ dlData.name +'</h4>' + arrayOutput(dlData.descForIndex, '<p>', '</p>');
       var gjsHtml = '<h4>'+ gjsData.name +'</h4>' + arrayOutput(gjsData.descForIndex, '<p>', '</p>');
-      ptCont.html(ptHtml).parent().attr('href', ptData.link).attr('target', ptData.target);
-      rsCont.html(rsHtml).parent().attr('href', rsData.link).attr('target', rsData.target);
-      dlCont.html(dlHtml).parent().attr('href', dlData.link).attr('target', dlData.target);
-      gjsCont.html(gjsHtml).parent().attr('href', gjsData.link).attr('target', gjsData.target);
+      if (window.innerWidth > 768) {/* Full area being hotzone for desktop */
+        ptCont.html(ptHtml).parent().attr('href', ptData.link).attr('target', ptData.target);
+        rsCont.html(rsHtml).parent().attr('href', rsData.link).attr('target', rsData.target);
+        dlCont.html(dlHtml).parent().attr('href', dlData.link).attr('target', dlData.target);
+        gjsCont.html(gjsHtml).parent().attr('href', gjsData.link).attr('target', gjsData.target);
+      } else {/* Only slider area being hotzone for mobile */
+        ptCont.html(ptHtml).click(function(){window.open(ptData.link, ptData.target)});
+        rsCont.html(rsHtml).click(function(){window.open(rsData.link, rsData.target)});
+        dlCont.html(dlHtml).click(function(){window.open(dlData.link, dlData.target)});
+        gjsCont.html(gjsHtml).click(function(){window.open(gjsData.link, gjsData.target)});
+      }
       $('#GJSName').html( gjsData.name );
     }
   };
