@@ -230,6 +230,7 @@ var CompanyInfoList = {
               year: 2017,
               events: {
                 '07': 'Cheetah Mobile\' s AI-focused subsidiary OrionStar wins "MS-Celeb-1M" facial recognition challenge.',
+                '06': 'Cheetah Mobile\'s OrionStar and Ximalaya.com release voice-controlled speaker Xiaoya.',
                 '05': 'Live.me receives $60 million in funding.'
               }
             },
