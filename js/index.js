@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-07 12:25
+  Latest modified: 2017-11-07 15:16
 */
 
 (function(){
@@ -81,16 +81,16 @@
         _subNavHtml += '<a class="one-sub has-trans" href="'+ _subLinkTo +'" target="'+ _target +'">'+ _subNavName +'</a>';
       });
       var _html = '<li class="top-nav-li has-trans CMCM_TopNavLi">\
-                      <a class="top-nav-a has-trans '+ activeCls +'" href="'+ _linkTo +'" target="'+ _target +'" onclick="ga(\'send\', \'event\', \'' + _gaTags + '\', \'click\');">'+ _name +'</a>\
+                      <a class="top-nav-a has-trans '+ activeCls +'" href="'+ _linkTo +'" target="'+ _target +'" onclick="ga(\'send\', \'event\', \'' + _gaTags + '\', \'click\');">'+ _name +'<s class="has-trans"></s></a>\
                       <div class="top-nav-sub">'+ _subNavHtml +'</div>\
                    </li>';
       $(_html).insertBefore('#CMCM_TopLangSwitch');
     });
     $('.CMCM_TopNavLi').mouseenter(function(){
-      $(this).find('.top-nav-sub').slideDown(200);
+      $(this).find('.top-nav-sub').addClass('active');
     });
     $('.CMCM_TopNavLi').mouseleave(function(){
-      $(this).find('.top-nav-sub').slideUp(200);
+      $(this).find('.top-nav-sub').removeClass('active');
     });
   };
 
