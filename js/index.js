@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-06 17:58
+  Latest modified: 2017-11-07 12:25
 */
 
 (function(){
@@ -10,8 +10,6 @@
   var LANG = $('body').attr('data-lang');
   var defaultLang = 'en-us';
   if ( !LANG || LANG.length < 1 ) LANG = defaultLang;
-
-  console.log('15:44');
 
   /* A global function: */
     var arrayOutput = function( array, htmlTag, htmlCloseTag ) {
@@ -769,8 +767,8 @@
       var footerContainer = $('#CMCM_Footer');
       var ftRHtml = '<div class="footer-right clearfix rel">\
                       <div id="CMCM_FooterRight"></div>\
-                      <div class="bottom-right abs clearfix" id="CMCM_FooterCopyright">\
-                        <ul class="clearfix" id="CMCM_FooterBottomUl">\
+                      <div class="bottom-right abs clearfix">\
+                        <ul class="clearfix">\
                           <li><a class="has-trans" href="'+ copyrightObj.pvyLink +'">'+ copyrightObj.privacy +'</a></li>\
                           <li><a class="has-trans" href="'+ copyrightObj.tosLink +'">'+ copyrightObj.tos +'</a></li>\
                           <li class="copyright"><span>'+ copyrightObj.cptext +'</span></li>\
@@ -894,17 +892,6 @@
     }
   };
   autoWidth();
-
-  /* Adjust footer copyright's width in mobiles: */
-  function adjustFooterWidth() {
-    if (window.innerWidth > 768) return;
-    var contents = $('#CMCM_FooterBottomUl');
-    var con_width = contents.width();
-    var copyrightContainer = $('#CMCM_FooterCopyright');
-    copyrightContainer.width(con_width + 10);
-  };
-  adjustFooterWidth();
-  
 
 
   /* ==== Make scrolling smooth ==== */
