@@ -297,25 +297,25 @@ var CompanyInfoList = {
             {
               name: 'Fu Sheng',
               title: 'CEO',
-              detail: ['Fu Sheng is CEO of Cheetah Mobile, responsible for leading the company\'s overall product and artificial intelligence strategies. In just five years, Mr. Fu has built Cheetah Mobile into the world\'s leading utility and content app company. Under his leadership, Cheetah Mobile was also one of the first Chinese internet companies to successfully expand into overseas markets. On May 8, 2014, he led the successful listing of Cheetah Mobile on the NYSE. Mr. Fu previously worked at Qihoo 360 as General Manager of the software group for five years, leading the development of 360 Safe Guard, the company\'s flagship product. He previously served as VP of Matrix Partners China after joining in 2008. In 2009 he founded Conew Image, serving as chairman and CEO.  He has been named to Fortune China\'s "40 Under 40" list four consecutive years starting in 2014. He was also named as a "Young Global Leader" at Davos Forum 2016.'],
+              detail: ['Fu Sheng is responsible for leading Cheetah Mobile\'s overall product and artificial intelligence strategies. Under his leadership, Cheetah Mobile became one of the first Chinese internet companies to successfully expand overseas. Mr. Fu previously worked at Qihoo 360 as General Manager of the software group for five years. He also served as VP of Matrix Partners China. In 2009 he founded Conew Image, where he served as chairman and CEO.'],
               avatar: '/dist/images/leaders-fusheng.jpg'
             },
             {
               name: 'Xu Ming',
               title: 'President',
-              detail: ['Ming Xu is the president of Cheetah Mobile, responsible for management strategy, product development, technology and operations. In addition to world leading utility apps, Mr. Xu has been heavily involved in the development of Cheetah Mobile\'s emerging content and AI businesses, and has led the team in implementing deep learning, facial recognition, voice OS and other technology developments', 'He has over 10 years of product development experience and is commonly recognized in the industry as a gifted programmer and R&D manager. Mr. Xu previously worked at 3721 and Qihoo 360, where he served as CTO and developed 360 Security and other core products with current Cheetah Mobile CEO Sheng Fu.'],
+              detail: ['Xu Ming is the president of Cheetah Mobile, responsible for management strategy, product development, technology and operations. Mr. Xu previously worked at 3721 and Qihoo 360, where he served as CTO and developed core security products. Mr. Xu co-founded Conew Image with Mr. Fu, which merged with Kingsoft Security to form Cheetah Mobile. Mr. Xu graduated from Harbin Institute of Technology in 2002 with a master\'s degree in Engineering.'],
               avatar: '/dist/images/leaders-xuming.jpg'
             },
             {
               name: 'Vincent Jiang',
               title: 'Chief Financial Officer',
-              detail: ['Vincent Jiang was appointed CFO of Cheetah Mobile in April 2017.  Prior to joining Cheetah Mobile, Mr. Jiang served as CEO at a startup tech company which he founded himself. From 2014 to 2015, Mr. Jiang served as the CFO of 9F Inc., a leading internet finance company. From 2007 to 2014, Mr. Jiang was an attorney at Skadden, Arps, Slate, Meagher & Flom LLP.', 'Mr. Jiang has been a CFA charterholder since 2013. He received his juris doctor degree from Cornell Law School in 2008, his master\'s degree in mechanical engineering from the Pennsylvania State University in 1999, and his master\'s and bachelor\'s degrees in automotive engineering from Tsinghua University in 1998 and 1995, respectively.'],
+              detail: ['Vincent Jiang has serves as CFO of Cheetah Mobile since April 2017. Mr. Jiang previously served as CFO of 9F Inc., a leading internet finance company. From 2007 to 2014, Mr. Jiang was an attorney at Skadden, Arps, Slate, Meagher & Flom LLP. Mr. Jiang holds a law degree from Cornell Law School in 2008, an M.A. in mechanical engineering from the Pennsylvania State University, and an M.A. and B.A. in automotive engineering from Tsinghua University.'],
               avatar: '/dist/images/leaders-jiangzhenyu.jpg'
             },
             {
               name: 'Scarlett Xiao',
               title: 'Co-Founder and Senior Vice President',
-              detail: ['Scarlett Xiao is Senior Vice President of Cheetah Mobile, responsible for the company\'s marketing and public relations, as well as its overseas business products and other innovative business developments. Ms. Xiao brings a wealth of experience in brand integration, communications and public relations.', 'Ms. Xiao led Cheetah Mobile to build China\'s first global mobile advertising platform, Cheetah Ads, relying on Cheetah\'s full line of security, live-broadcasting, news, and gaming products to provide immersive vertical video advertising solutions for global advertisers ("Vertical Video in All Mobile Moments").'],
+              detail: ['Scarlett Xiao is responsible for Cheetah Mobile\'s marketing, public relations, and overseas commercial products. Prior to co-founding Cheetah Mobile, Ms. Xiao served as the public relations director for Qihoo 360, and communications manager for Yahoo China. From 2008 to 2010, she worked as a senior manager in Baidu\'s corporate marketing department with a focus on public relations. Ms. Xiao holds a B.A. degree from Renmin University of China.'],
               avatar: '/dist/images/leaders-xiaojie.jpg'
             }
           ]
