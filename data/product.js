@@ -126,7 +126,7 @@ var ProductList = {
                 name: 'Live.me',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-liveme-103.png',
-                descForIndex: ['一款风靡全球的直播类社交应用。将中国的直播打赏模式复制到海外，吸引了众多明星及大牌网红入驻，已经成为美国轻人最喜爱的社交产品之一。覆盖85个国家，8种语言，在全球42个国家Google Play社交畅销榜排行NO.1。'],
+                descForIndex: ['一款风靡全球的直播类社交应用。将中国的直播打赏模式复制到海外，吸引了众多明星及大牌网红入驻，已经成为美国轻人最喜爱的社交产品之一。覆盖85个国家，8种语言，在全球42个国家Google Play社交畅销榜排行NO.1。继工具产品之后，Live.me成为猎豹移动出海的新标杆。'],
                 descForProd: ['一款风靡全球的直播类社交应用。将中国的直播打赏模式复制到海外，吸引了众多明星及大牌网红入驻，已经成为美国轻人最喜爱的社交产品之一。覆盖85个国家，8种语言，在全球42个国家Google Play社交畅销榜排行NO.1。'],
                 star: 0,
                 tags: ['85个市场|覆盖多元文化', '8种语言|融合本地需求', '42个国家|登顶社交畅销榜'],
@@ -649,7 +649,7 @@ var ProductList = {
             ]
           },
           news: {
-            name: 'News Republic',
+            name: 'News',
             hash: 'Product_News',
             anch: 'category-of-news',
             desc: ['Precisely recommending news content', 'with artificial intelligence technology'],
