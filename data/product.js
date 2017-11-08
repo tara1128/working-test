@@ -119,14 +119,14 @@ var ProductList = {
             name: '社交',
             hash: 'Product_Social',
             anch: 'category-of-social',
-            desc: ['跨越文化壁垒，连接全球用户，布局海外直播市场，', '建立内容生态体系，打造了中国最成功的海外社交产品'],
+            desc: ['出海欧美最成功的社交产品，跨越文化壁垒，连接全球用户，', '布局海外直播市场，建立内容生态体系'],
             data: [
               {
                 priority: '',
                 name: 'Live.me',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-liveme-103.png',
-                descForIndex: ['一款风靡全球的直播类社交应用，继工具产品之后，Live.me成为猎豹移动出海的新标杆。内含礼物打赏、主播连线、游戏直播等功能，将人工智能技术引入到后台监测系统中，在多元化的直播和社交功能之外，也保证了平台的“绿色”与健康。将中国的直播打赏模式复制到海外，已经成为全球年轻人最喜爱的社交产品之一。目前已在85个国家和地区发行，覆盖7种不同语言。在全球42个国家Google Play社交畅销榜排行NO.1。'],
+                descForIndex: ['一款风靡全球的直播类社交应用，继工具产品之后，Live.me成为猎豹移动出海的新标杆。内含礼物打赏、主播连线、游戏直播等功能，并在后台监测系统中引入人工智能技术，不仅为用户提供个性化的直播和社交内容，也确保了平台的“绿色”与健康。将中国的直播打赏模式复制到海外，已经成为全球年轻人最喜爱的社交产品之一。目前已在85个国家和地区发行，覆盖8种不同语言。在全球42个国家Google Play社交畅销榜排行NO.1。'],
                 descForProd: ['一款风靡全球的直播类社交应用。将中国的直播打赏模式复制到海外，吸引了众多明星及大牌网红入驻，已经成为美国轻人最喜爱的社交产品之一。覆盖85个国家，8种语言，在全球42个国家Google Play社交畅销榜排行NO.1。'],
                 star: 0,
                 tags: ['85个市场|覆盖多元文化', '8种语言|融合本地需求', '42个国家|登顶社交畅销榜'],
@@ -677,7 +677,7 @@ var ProductList = {
         categoryData: {
           onMenu: false, /* NOT to show sub categories on menu, make it false. */
           pc: {/* When no sub category, using the same name & hash as its father!*/
-            name: 'PC端',
+            name: 'PC',
             hash: 'Product_forPC',
             anch: 'category-of-pc',
             desc: '',
