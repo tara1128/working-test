@@ -434,7 +434,7 @@ var ProductList = {
             name: 'Utility',
             hash: 'Product_Tools',
             anch: 'category-of-tool',
-            desc: ['As the #1 developer in Google Play\'s tool app category, Cheetah Mobile offers the world\'s leading security, cleaning, personalization and safe browser software.'],
+            desc: ['As the #1 developer in Google Play\'s tool app category, Cheetah Mobile offers ', 'the world\'s leading security, cleaning, personalization and safe browser software.'],
             data: [
               {
                 priority: '100',
@@ -539,7 +539,7 @@ var ProductList = {
             name: 'Social',
             hash: 'Product_Social',
             anch: 'category-of-social',
-            desc: ['Crossing cultural barriers, connecting global users', 'leading the global live broadcasting market'],
+            desc: ['Crossing cultural barriers, connecting global users ', 'leading the global live broadcasting market'],
             data: [
               {
                 priority: '',
@@ -560,7 +560,7 @@ var ProductList = {
             name: 'Games',
             hash: 'Product_Games',
             anch: 'category-of-game',
-            desc: ['With combined MAUs surpassing 1 billion globally', 'Cheetah Games is one of the largest casual game developers in the world'],
+            desc: ['With combined MAUs surpassing 1 billion globally ', 'Cheetah Games is one of the largest casual game developers in the world'],
             data: [          
               {
                 priority: '50-100',
@@ -652,7 +652,7 @@ var ProductList = {
             name: 'News',
             hash: 'Product_News',
             anch: 'category-of-news',
-            desc: ['Precisely recommending news content', 'with artificial intelligence technology'],
+            desc: ['Precisely recommending news content ', 'with artificial intelligence technology'],
             data: [          
               {
                 priority: '',
