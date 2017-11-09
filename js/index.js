@@ -880,7 +880,7 @@
       topBar.removeClass('fixed');
     }
     if (scrollTop >= 54) {
-      subMen.addClass('fixed');
+      subMen.addClass('fixed').css('top', scrollTop + 54);
     } else {
       subMen.removeClass('fixed');
     }
@@ -912,6 +912,7 @@
       console.log('Scrolling', scrollTop, subMenuAncHeadTop, subMenuAncBottTop);
       if (subMenuAncBottTop >= anchorCounterpartTop) {
         // subMen.addClass('sticky');
+        // subMen.css('top', scrollTop)
         if (scrollTop <= subMenuAncHeadTop) {
           // subMen.removeClass('sticky');
         }
