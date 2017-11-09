@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-09 18:39
+  Latest modified: 2017-11-09 19:54
 */
 
 (function(){
@@ -872,10 +872,8 @@
     var topBar = $('#CMCM_TopBar');
     var subMen = $('.CMCM_SubMenus');
     var cateContainers = $('.CMCM_CategoryContainer');
-    var subMenuAncHeadTop = $('#CMCM_SubMenuHeadAnchor').offset().top;
-    var subMenuAncBottTop = $('#CMCM_SubMenuBottomAnchor').offset().top;
-    var anchorCounterpartTop = $('#CMCM_AnchorCounterpart').offset().top - 3;
     var scrlTopLmt = 380;
+    AddAnimateToElement(scrollTop);
     if (scrollTop >= scrlTopLmt) {
       topBar.addClass('fixed');
     } else {
@@ -905,14 +903,21 @@
       }
     });
 
-    /*
-    console.log('anchorCounterpartTop: ', anchorCounterpartTop);
-    console.log('Scrolling', scrollTop, subMenuAncHeadTop, subMenuAncBottTop);
-    if (subMenuAncBottTop >= anchorCounterpartTop) {
-      subMen.addClass('sticky');
+    /* In sub pages, make left menu sticky when scrolling to the bottom: */
+    if ($('body').hasClass('subpage')) {
+      var anchorCounterpartTop = $('#CMCM_AnchorCounterpart').offset().top - 3;
+      var subMenuAncHeadTop = $('#CMCM_SubMenuHeadAnchor').offset().top;
+      var subMenuAncBottTop = $('#CMCM_SubMenuBottomAnchor').offset().top;
+      console.log('anchorCounterpartTop: ', anchorCounterpartTop);
+      console.log('Scrolling', scrollTop, subMenuAncHeadTop, subMenuAncBottTop);
+      if (subMenuAncBottTop >= anchorCounterpartTop) {
+        // subMen.addClass('sticky');
+        if (scrollTop <= subMenuAncHeadTop) {
+          // subMen.removeClass('sticky');
+        }
+      }
     }
-    */
-    AddAnimateToElement(scrollTop);
+
   });
 
   function AddAnimateToElement( _top ) {
@@ -956,9 +961,8 @@
       event.preventDefault();
       $('html, body').animate({
         scrollTop: topValue
-      }, 1000, function() { //Callback, must change focus!
-        var $target = $(target);
-        $target.focus();
+      }, 800, function() { //Callback, must change focus!
+        $(target).focus();
       });
     }
   });
