@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-08 16:25
+  Latest modified: 2017-11-09 18:39
 */
 
 (function(){
@@ -375,18 +375,20 @@
           if (_cateData[__subCate].name) {
             var __name = _cateData[__subCate].name,
                 __hash = _cateData[__subCate].hash;
-            _subHtml += '<a class="category-detail-one has-trans CMCM_SMD_A" href="#'+ __hash +'">'+ __name +'</a>';
+            _subHtml += '<a class="category-detail-one has-trans CMCM_SMD_A " href="#'+ __hash +'">'+ __name +'</a>';
           }
         }
-        if (_cateData.unfold) {_ifUnfold = 'active';}
-        _subHtml = ('<div class="category-details has-trans CMCM_SubMenuDetails '+ _ifUnfold +'">' + _subHtml + '</div><!-- details -->');
+        // if (_cateData.unfold) {_ifUnfold = 'active';}
+        _subHtml = ('<div class="category-details CMCM_SubMenuDetails '+ _ifUnfold +'">' + _subHtml + '</div><!-- details -->');
       }
       _cateHtml += '<div class="category-unit">\
                       <a class="category-name has-trans CMCM_SubMenuItem '+ _ifUnfold +'" href="#'+ _cateHref +'">'+ _cateName +'</a>\
                       '+ _subHtml +'\
                     </div><!-- category unit -->';
     }
-    menuContainer.append(_cateHtml);
+    var anchorHead = '<b id="CMCM_SubMenuHeadAnchor"></b>'
+    var anchorBott = '<b id="CMCM_SubMenuBottomAnchor"></b>'
+    menuContainer.append(anchorHead).append(_cateHtml).append(anchorBott);
   };
   RenderSubPageMenu();
 
@@ -403,7 +405,7 @@
           _csan = _data.classAnchor,
           _slog = _data.slogan,
           _desc = _data.descrp;
-      var _html = '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
+      var _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
                     <h2 class="category-title">'+ _name +'</h2>\
                     <div class="one-app-introduction clearfix">\
                       <h1 class="cmcm-slogan">'+ _slog +'</h1>\
@@ -426,7 +428,7 @@
           _arry = _data.introTexts,
           _imge = _data.introImage;
       var _text = arrayOutput(_arry, '<p class="company-intros">', '</p>');
-      var _html = '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
+      var _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
                      <h2 class="category-title">'+ _name +'</h2>\
                      <div class="one-app-introduction clearfix">\
                        <img class="company-view" src="'+ _imge +'" alt="'+ _name +'" />\
@@ -461,7 +463,7 @@
                             <h3 class="year-number">'+ _year +'</h3>'+ _evtHtm +'<s>Dots</s>\
                          </div><!-- history-one-year -->';
       });
-      var _html = '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
+      var _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
                      <h2 class="category-title">'+ _name +'</h2>\
                      <div class="one-app-introduction clearfix">'+ allHistories +'</div>\
                    </div><!-- category container of history -->';
@@ -503,7 +505,7 @@
                   </li>';
       });
       /* render here */
-      var _html = '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
+      var _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
                     <h2 class="category-title">'+ _name +'</h2>\
                     <div class="one-app-introduction clearfix">\
                       <div class="values-container rel">\
@@ -552,7 +554,7 @@
                     <img src="'+ _src +'" alt="'+ _des +'" /><p>'+ _des +'</p>\
                   </div>';
       });
-      var _html = '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
+      var _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
                     <h2 class="category-title">'+ _name +'</h2>\
                     <div class="one-app-introduction clearfix">\
                       '+ _text +'<div class="welfare-imgs clearfix">'+ _pics +'</div>\
@@ -591,7 +593,7 @@
                           </div>\
                         </div><!-- one app introduction -->';
       });
-      var _html = '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
+      var _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
                       <h2 class="category-title">'+ _name +'</h2>'+ _allLeaders +'\
                    </div><!-- category container of executive team -->';
       container.append(_html);
@@ -647,7 +649,7 @@
                                         </div><!-- one app introduction -->';
             });
             /* NOTE: One unit area in page is based on one sub cate, not big cate. */
-            _html += '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
+            _html += '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
                         <h2 class="category-title">'+ _name +'</h2>\
                         '+ _allAppsInThisSubCate +'\
                       </div><!-- end of category container -->';
@@ -710,7 +712,7 @@
           });
         }
 
-        _html += '<div class="category-container '+ _csan +'" id="'+ _hash +'">\
+        _html += '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
                     <h2 class="category-title">'+ _name +'</h2>\
                     <div class="one-app-introduction clearfix">'+ _details +'</div>\
                   </div><!-- category container -->';
@@ -721,28 +723,19 @@
   RenderContactInfosToContactPage();
 
 
-  /* Click events on sub pages: */
+
+  /* Click menus on the left of sub pages: */
   $('.CMCM_SubMenuItem').click(function(){
     var me = $(this);
     var us = $('.CMCM_SubMenuItem');
     var subMenuBtns = $('.CMCM_SMD_A');
     var cls = 'active';
-    if ( !me.hasClass(cls) ) {
-      us.removeClass(cls);
-      me.addClass(cls);
-      subMenuBtns.removeClass(cls);
-    } else {
-      me.removeClass(cls);
-    }
-    var details = me.parent().find('.CMCM_SubMenuDetails');
-    if ( details && details.length >= 1 ) {
-      if ( !details.hasClass(cls) ) {
-        details.addClass(cls);
-      } else {
-        details.removeClass(cls);
-      }
-    }
+    us.removeClass(cls);
+    me.addClass(cls);
+    subMenuBtns.removeClass(cls);
+    $(me.parent().find('.CMCM_SMD_A')[0]).addClass(cls);
   });
+  /* Click submenus on the left of sub pages: */
   $('.CMCM_SMD_A').click(function(){
     var cls = 'active';
     var me = $(this);
@@ -847,12 +840,41 @@
     footRightContainer.append(col_contact);
   };
 
+  
+
+
+  /* Adjust left menu's position for every time refreshing: */
+  function AdjustLeftMenuPositions() {
+    var _sclTop = document.body.scrollTop || document.documentElement.scrollTop;
+    var cateContainers = $('.CMCM_CategoryContainer');
+    for (var i = 0; i < cateContainers.length; i++) {
+      var item = $(cateContainers[i]);
+      var itemTop = item.offset().top;
+      var itemId = '#' + item.attr('id');
+      var targetA = $('a[href="'+ itemId +'"]');
+      if (_sclTop <= itemTop) {
+        $('.CMCM_SubMenus').find('a').removeClass('active');
+        targetA.addClass('active');
+        $('html, body').animate({
+          scrollTop: (_sclTop <= 100) ? (_sclTop) : (itemTop - 50)
+        }, 800);
+        break;
+      }
+    };
+  };
+  AdjustLeftMenuPositions();
+
+
 
   /* ========== Scrolling: ========== */
   $(window).scroll(function(){
     var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
     var topBar = $('#CMCM_TopBar');
     var subMen = $('.CMCM_SubMenus');
+    var cateContainers = $('.CMCM_CategoryContainer');
+    var subMenuAncHeadTop = $('#CMCM_SubMenuHeadAnchor').offset().top;
+    var subMenuAncBottTop = $('#CMCM_SubMenuBottomAnchor').offset().top;
+    var anchorCounterpartTop = $('#CMCM_AnchorCounterpart').offset().top - 3;
     var scrlTopLmt = 380;
     if (scrollTop >= scrlTopLmt) {
       topBar.addClass('fixed');
@@ -864,6 +886,32 @@
     } else {
       subMen.removeClass('fixed');
     }
+    /* Highlight the current content's menu: */
+    cateContainers.map(function(index, item){
+      if ( $(this).offset().top < (scrollTop + 100) ) {
+        var targetA = $('a[href="#'+ this.id +'"]');
+        subMen.find('a').removeClass('active');
+        targetA.addClass('active');
+        if (targetA.hasClass('CMCM_SMD_A')) {
+          targetA.parent().parent().find('.CMCM_SubMenuItem').addClass('active');
+        }
+      } else if (scrollTop < 100) {
+        $('a[href="#'+ this.id +'"]').removeClass('active');;
+        if (index == 0) {
+          $('a[href="#'+ item.id +'"]').addClass('active');
+        }
+      } else {
+        $('a[href="#'+ this.id +'"]').removeClass('active');;
+      }
+    });
+
+    /*
+    console.log('anchorCounterpartTop: ', anchorCounterpartTop);
+    console.log('Scrolling', scrollTop, subMenuAncHeadTop, subMenuAncBottTop);
+    if (subMenuAncBottTop >= anchorCounterpartTop) {
+      subMen.addClass('sticky');
+    }
+    */
     AddAnimateToElement(scrollTop);
   });
 
