@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-13 17:38
+  Latest modified: 2017-11-13 18:40
 */
 
 (function(win, doc, $) {
@@ -158,7 +158,10 @@
       }); //End map
       var _rightHtm = '<div class="ai-right-content">\
                         <div class="ai-chips abs ai-wave has-anim"></div>\
-                        <div class="ai-chips abs ai-voice-box has-anim">'+ threeBubbles +'</div>\
+                        <div class="ai-chips abs ai-voice-box has-anim">\
+                          '+ threeBubbles +'\
+                          <img class="ai-voicebox-on-mobile-only" src="/dist/images/ai-voice-box.png" alt="AI" />\
+                        </div>\
                       </div><!-- ai right -->';
       var _leftHtml = '<div class="ai-left-content">\
                         <h3 class="app-name has-anim">\
