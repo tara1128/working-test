@@ -6,7 +6,7 @@ var ProductList = {
     category: {
       mobileApps: {
         categoryName: '移动端',
-        categoryLink: 'Product_MobileApps',
+        categoryLink: 'Product_Tools',/* For target, make its hash the same as its first son. */
         categoryData: {
           onMenu: true, /* To show sub categories on menu, make it true. */
           unfold: true, /* To unfold sub categories by default, make it true. */
@@ -314,7 +314,7 @@ var ProductList = {
             name: '人工智能',
             hash: 'Product_AI',
             anch: 'category-of-ai',
-            desc: '',
+            desc: ['旗下人工智能公司猎户星空在远场语音交互系统、图像识别、视觉导航等领域，', '拥有完全自主开发、领先行业的技术'],
             data: [
               {
                 priority: '',
@@ -328,7 +328,24 @@ var ProductList = {
                 link: 'http://ainirobot.com/',
                 target: '_blank',
                 pict: ''
-              }
+              },
+              {
+                priority: '',
+                name: '智能语音OS',
+                slog: '',
+                icon: '',
+                descForIndex: ['由猎豹移动旗下人工智能公司猎户星空开发，拥有全自主知识产权的全链路远场智能语音交互系统，其麦克风阵列、语音唤醒、语音识别、语义等软硬件技术均领先于行业水平。深度打磨语音交互体验，首创多种自然拟人的交互方式，结合丰富的内容矩阵，为用户带来最人性化的语音交互体验'],
+                descForProd: [], // This product shows on index only!
+                star: 0,
+                tags: [
+                  {num: 5, adj: '大', noun: '语音技术', sentence: '全链路自主研发'},
+                  {num: 6, adj: '大', noun: '拟人技术', sentence: '最人性化的交互'},
+                  {num: 1, adj: '亿+', noun: '有声内容量', sentence: '为用户深度定制'}
+                ],
+                link: 'http://ainirobot.com/pc_liehu.html',
+                target: '_blank',
+                pict: ''
+              },
             ]
           }
         }
@@ -426,7 +443,7 @@ var ProductList = {
     category: {
       mobileApps: {
         categoryName: 'Mobile',
-        categoryLink: 'Product_MobileApps',
+        categoryLink: 'Product_Tools', /* For target, make its hash the same as its first son. */
         categoryData: {
           onMenu: true, /* To show sub categories on menu, make it true. */
           unfold: true, /* To unfold sub categories by default, make it true. */
@@ -744,10 +761,10 @@ var ProductList = {
         categoryData: {
           onMenu: false, /* NOT to show sub categories on menu, make it false. */
           ai: {/* When no sub category, using the same name & hash as its father!*/
-            name: 'Artificial Intelligence',
+            name: 'AI',
             hash: 'Product_AI',
             anch: 'category-of-ai',
-            desc: '',
+            desc: ['Cheetah Mobile-invested artificial technology company OrionStar possesses completely self-developed, ', 'industry-leading technology, including far-field voice interaction, image recognition, and visual navigation systems.'],
             data: [
               {
                 priority: '',
@@ -759,6 +776,23 @@ var ProductList = {
                 star: 0,
                 tags: [],
                 link: 'http://ainirobot.com/',
+                target: '_blank',
+                pict: ''
+              },
+              {
+                priority: '',
+                name: 'Smart Voice OS',
+                slog: '',
+                icon: '',
+                descForIndex: ['OrionStar\'s self-develop, fully-linked far-field voice interaction system possesses industry leading software and hardware, including microphone array, voice activation and semantic recognition technology. Its immersive voice controls and pioneering personification technology, combined with a rich content matrix brings users the most personalized voice interaction experience.'],
+                descForProd: [], // This product shows on index only!
+                star: 0,
+                tags: [
+                  {num: 5, adj: 'major', noun: 'voice technologies', sentence: 'fully-linked, self-developed'},
+                  {num: 6, adj: 'major', noun: 'personification technologies', sentence: 'highly personalized interactions'},
+                  {num: 1, adj: 'million+', noun: 'voice sample capacity', sentence: 'deep customization for users'}
+                ],
+                link: 'http://ainirobot.com/pc_liehu.html',
                 target: '_blank',
                 pict: ''
               }
