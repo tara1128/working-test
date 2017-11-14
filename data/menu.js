@@ -25,7 +25,7 @@ var PublicNav = {
         active: 'product',
         gaTag: 'brandnew.nav.product',
         subNavs: [
-          {subNavName: '移动端',      subNavLink: 'Product_MobileApps'},
+          {subNavName: '移动端',      subNavLink: 'Product_Tools'},
           {subNavName: 'PC端',        subNavLink: 'Product_forPC'     },
           {subNavName: '人工智能',    subNavLink: 'Product_AI'        },
           {subNavName: '大数据',      subNavLink: 'Product_bigData'   },
@@ -113,7 +113,7 @@ var PublicNav = {
         active: 'product',
         gaTag: 'brandnew.nav.product',
         subNavs: [
-          {subNavName: 'Mobile',      subNavLink: 'Product_MobileApps'},
+          {subNavName: 'Mobile',      subNavLink: 'Product_Tools'},
           {subNavName: 'PC',          subNavLink: 'Product_forPC'     },
           {subNavName: 'AI',          subNavLink: 'Product_AI'        },
           {subNavName: 'Big Data',    subNavLink: 'Product_bigData'   },
@@ -128,12 +128,12 @@ var PublicNav = {
         gaTag: 'brandnew.nav.ir',
         subNavs: [
           {
-            subNavName: 'Quarter performance',
+            subNavName: 'Quarter<br>performance',
             subNavLink: 'http://ir.cmcm.com/index.php?s=123',
             outlink: true
           },
           {
-            subNavName: 'Investors news',
+            subNavName: 'Investors<br>news',
             subNavLink: 'http://ir.cmcm.com/index.php?s=43',
             outlink: true
           }
@@ -147,12 +147,12 @@ var PublicNav = {
         gaTag: 'brandnew.nav.hr',
         subNavs: [
           {
-            subNavName: 'Social recruitment',
+            subNavName: 'Social<br>recruitment',
             subNavLink: 'http://hr.cmcm.com/social',
             outlink: true
           },
           {
-            subNavName: 'Campus recruitment',
+            subNavName: 'Campus<br>recruitment',
             subNavLink: 'http://hr.cmcm.com/campus',
             outlink: true
           }
