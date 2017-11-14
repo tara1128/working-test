@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-13 18:40
+  Latest modified: 2017-11-14 15:55
 */
 
 (function(win, doc, $) {
@@ -119,7 +119,6 @@
     /* Index first screen slider: */
     SwiperInit: function() {
       new Swiper('.billboard-swiper-container', {
-        pagination:'.billboard-swiper-pagination',
         paginationClickable:true,
         spaceBetween:0,
         centeredSlides:true,
@@ -434,6 +433,8 @@
       menuContainer.append(anchorHead).append(_cateHtml).append(anchorBott);
       me.page.subMenuItems = $('.CMCM_SubMenuItem');
       me.page.subMenuSubAs = $('.CMCM_SMD_A');
+      me.page.subPageMenuHead = $('#CMCM_SubMenuHeadAnchor');
+      me.page.subPageMenuFoot = $('#CMCM_SubMenuBottomAnchor');
     },
     
     /* Render company mission & vision: */
@@ -847,12 +848,14 @@
         } else {
           me.page.topBar.removeClass('fixed');
         }
+        /* Subpage left menu only displays on desktop: */
+        if (window.innerWidth <= 768) return;
         if (scrollTop >= 54) {
           me.page.subPageMenu.addClass('fixed').css('top', scrollTop + 54);
         } else {
           me.page.subPageMenu.removeClass('fixed');
         }
-        /* Highlight the current content's menu: */
+        /* Highlight the current content's menu, on desktop only: */
         cateContainers.map(function(index, item){
           if ( $(this).offset().top < (scrollTop + 100) ) {
             var targetA = $('a[href="#'+ this.id +'"]');
@@ -1010,8 +1013,6 @@
     subPageMenu: $('.CMCM_SubMenus'),
     footerContainer: $('#CMCM_Footer'),
     subPageCtBottom: $('#CMCM_SubPageContentBottom'),
-    subPageMenuHead: $('#CMCM_SubMenuHeadAnchor'),
-    subPageMenuFoot: $('#CMCM_SubMenuBottomAnchor'),
 
   };
   CMCMWebsite.init(realPage);
