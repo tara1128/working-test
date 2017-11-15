@@ -339,7 +339,7 @@ var ProductList = {
                 star: 0,
                 tags: [
                   {num: 5, adj: '大', noun: '语音技术', sentence: '全链路自主研发'},
-                  {num: 6, adj: '大', noun: '拟人技术', sentence: '最人性化的交互'},
+                  {num: 6, adj: '项', noun: '拟人技术', sentence: '最人性化的交互'},
                   {num: 1, adj: '亿+', noun: '有声内容量', sentence: '为用户深度定制'}
                 ],
                 link: 'http://ainirobot.com/pc_liehu.html',
@@ -764,7 +764,7 @@ var ProductList = {
             name: 'AI',
             hash: 'Product_AI',
             anch: 'category-of-ai',
-            desc: ['Cheetah Mobile-invested artificial technology company OrionStar possesses completely self-developed, ', 'industry-leading technology, including far-field voice interaction, image recognition, and visual navigation systems.'],
+            desc: ['Cheetah Mobile-invested artificial technology company OrionStar possesses completely self-developed, ', 'industry-leading technology, including far-field voice interaction, image recognition and visual navigation systems.'],
             data: [
               {
                 priority: '',
@@ -784,7 +784,7 @@ var ProductList = {
                 name: 'Smart Voice OS',
                 slog: '',
                 icon: '',
-                descForIndex: ['OrionStar\'s self-develop, fully-linked far-field voice interaction system possesses industry leading software and hardware, including microphone array, voice activation and semantic recognition technology. Its immersive voice controls and pioneering personification technology, combined with a rich content matrix brings users the most personalized voice interaction experience.'],
+                descForIndex: ['OrionStar\'s self-developed, fully-linked far-field voice interaction system possesses industry leading software and hardware, including microphone array, voice activation and semantic recognition technology. Its immersive voice controls and pioneering personification technology, combined with a rich content matrix brings users the most personalized voice interaction experience. <b>(Only available in China)</b>'],
                 descForProd: [], // This product shows on index only!
                 star: 0,
                 tags: [
@@ -806,7 +806,7 @@ var ProductList = {
         categoryData: {
           onMenu: false, /* NOT to show sub categories on menu, make it false. */
           bigData: {
-            name: 'Big Data Products',
+            name: 'Big Data',
             hash: 'Product_bigData',
             anch: 'category-of-bigdata',
             desc: '',
@@ -834,7 +834,7 @@ var ProductList = {
         categoryData: {
           onMenu: false, /* NOT to show sub categories on menu, make it false. */
           business: {/* When no sub category, using the same name & hash as its father!*/
-            name: 'Commercial Products',
+            name: 'Commercial',
             hash: 'Product_Business',
             anch: 'category-of-business',
             desc: '',

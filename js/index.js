@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-14 15:55
+  Latest modified: 2017-11-15 12:03
 */
 
 (function(win, doc, $) {
@@ -379,6 +379,8 @@
     /* Render sub page, including left menu and main contents: */
     RenderSubPages: function() {
       var me = this, dataList = null;
+      var winHeight = window.innerHeight;
+      me.page.subPageContent.css('min-height', winHeight);
       if (me.curr == 'company') {
         dataList = me.companyInfoList;
         me.RenderCompanyMission(dataList);
@@ -1007,13 +1009,13 @@
     inxGamesGJSCont: $('#CMCM_GameOfGJS'),
     inxGamesGJSName: $('#GJSName'),
     inxNRContainer: $('#CMCM_NR'),
+    subPageContent: $('.CMCM_SubpageContent'),
     companyContainer: $('#CMCM_CompanyContents'),
     productContainer: $('#CMCM_ProductsContents'),
     contactContainer: $('#CMCM_ContactContents'),
     subPageMenu: $('.CMCM_SubMenus'),
     footerContainer: $('#CMCM_Footer'),
     subPageCtBottom: $('#CMCM_SubPageContentBottom'),
-
   };
   CMCMWebsite.init(realPage);
 })(jQuery);

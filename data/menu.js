@@ -128,12 +128,12 @@ var PublicNav = {
         gaTag: 'brandnew.nav.ir',
         subNavs: [
           {
-            subNavName: 'Quarter<br>performance',
+            subNavName: 'Quarterly<br>Results',
             subNavLink: 'http://ir.cmcm.com/index.php?s=123',
             outlink: true
           },
           {
-            subNavName: 'Investors<br>news',
+            subNavName: 'Investor<br>News',
             subNavLink: 'http://ir.cmcm.com/index.php?s=43',
             outlink: true
           }
@@ -147,12 +147,12 @@ var PublicNav = {
         gaTag: 'brandnew.nav.hr',
         subNavs: [
           {
-            subNavName: 'Social<br>recruitment',
+            subNavName: 'Social<br>Recruitment',
             subNavLink: 'http://hr.cmcm.com/social',
             outlink: true
           },
           {
-            subNavName: 'Campus<br>recruitment',
+            subNavName: 'Campus<br>Recruitment',
             subNavLink: 'http://hr.cmcm.com/campus',
             outlink: true
           }
@@ -174,11 +174,4 @@ var PublicNav = {
       }
     ]
   },
-  'es-es': {},
-  'fr-fr': {},
-  'pt-pt': {},
-  'ru-ru': {},
-  'ja-jp': {},
-  'ko-kr': {},
-  'zh-tw': {}
 }

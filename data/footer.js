@@ -38,7 +38,7 @@ var PublicFooter = {
         pvyLink: 'http://www.cmcm.com/protocol/site/privacy-cn.html',
         tos: '用户协议',
         tosLink: 'http://www.cmcm.com/protocol/site/tos-cn.html',
-        cptext: '猎豹移动 &copy; 2017',
+        cptext: '猎豹移动 &copy; 2017 •',
         curLang: '简体中文',
         curHome: '/zh-cn/'
       }
@@ -54,11 +54,11 @@ var PublicFooter = {
           linkUrl: 'http://ir.cmcm.com/',
           sublink: [
             {
-              name: 'Quarter performance',
+              name: 'Quarterly<br>Results',
               url: 'http://ir.cmcm.com/index.php?s=123'
             },
             {
-              name: 'Investors news',
+              name: 'Investor<br>News',
               url: 'http://ir.cmcm.com/index.php?s=43'
             }
           ]
@@ -68,11 +68,11 @@ var PublicFooter = {
           linkUrl: 'http://hr.cmcm.com/',
           sublink: [
             {
-              name: 'Social recruitment',
+              name: 'Social<br>Recruitment',
               url: 'http://hr.cmcm.com/social'
             },
             {
-              name: 'Campus recruitment',
+              name: 'Campus<br>Recruitment',
               url: 'http://hr.cmcm.com/campus'
             }
           ]
@@ -83,17 +83,10 @@ var PublicFooter = {
         pvyLink: 'http://www.cmcm.com/protocol/site/privacy.html',
         tos: 'TOS',
         tosLink: 'http://www.cmcm.com/protocol/site/tos.html',
-        cptext: 'Cheetah Mobile &copy; 2017',
+        cptext: 'Cheetah Mobile &copy; 2017 •',
         curLang: 'English',
         curHome: '/en-us/'
       }
     }
   },
-  'es-es': {},
-  'fr-fr': {},
-  'pt-pt': {},
-  'ru-ru': {},
-  'ja-jp': {},
-  'ko-kr': {},
-  'zh-tw': {}
 }
