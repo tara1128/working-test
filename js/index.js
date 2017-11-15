@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-15 12:03
+  Latest modified: 2017-11-15 17:00
 */
 
 (function(win, doc, $) {
@@ -125,6 +125,7 @@
         autoplay:0,
         autoplayDisableOnInteraction:false
       });
+      /*
       new Swiper('.news-swiper-container', {
         pagination:'.news-swiper-pagination',
         paginationClickable:true,
@@ -133,6 +134,7 @@
         autoplay:5000,
         autoplayDisableOnInteraction:false
       });
+      */
     },
 
     /* Render AI content on index: */
@@ -262,9 +264,9 @@
           cateForIndex_Tool = categoriesCollect.tool,
           cateForIndex_Socl = categoriesCollect.socl,
           cateForIndex_Game = categoriesCollect.game,
-          cateForIndex_News = categoriesCollect.news,
+          // cateForIndex_News = categoriesCollect.news,
           cateForIndex_ai = proList.category.ai.categoryData.ai,
-          cateForIndex_all = [cateForIndex_ai, cateForIndex_Tool, cateForIndex_Socl, cateForIndex_Game, cateForIndex_News];
+          cateForIndex_all = [cateForIndex_ai, cateForIndex_Tool, cateForIndex_Socl, cateForIndex_Game];
       cateForIndex_all.map(function(Obj){
         $('#CMCM_Section_' + Obj.hash).find('.CMCM_SecTitle').html(Obj.name);
         $('#CMCM_Section_' + Obj.hash).find('.CMCM_SecDescr').html(me.ArrayOutput(Obj.desc));
@@ -373,7 +375,7 @@
       me.RenderCategoryIntrosOnIndex(me.productList);
       me.RenderLiveMeOnIndex(me.productList);
       me.RenderGamesOnIndex(me.productList);
-      me.RenderNROnIndex(me.productList);
+      // me.RenderNROnIndex(me.productList);
     },
 
     /* Render sub page, including left menu and main contents: */

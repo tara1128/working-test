@@ -228,6 +228,7 @@ var ProductList = {
 
             ]
           },
+          /*
           news: {
             name: '新闻',
             hash: 'Product_News',
@@ -249,6 +250,7 @@ var ProductList = {
               }
             ]
           }
+          */
         }
       },
       pc: {
@@ -665,6 +667,7 @@ var ProductList = {
 
             ]
           },
+          /*
           news: {
             name: 'News',
             hash: 'Product_News',
@@ -686,6 +689,7 @@ var ProductList = {
               }
             ]
           }
+          */
         }
       },
       pc: {
