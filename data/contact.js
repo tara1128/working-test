@@ -31,7 +31,7 @@ var ContactList = {
         categoryData: {
           classAnchor: 'category-of-socialmedia',
           wechatTitle: '扫一扫关注公众号',
-          wechat2dUrl: '/dist/images/cm-2d-code-grey.jpg',
+          wechat2dUrl: '/dist/images/wechat-2d-code-new.jpg',
           othersTitle: '其它社交媒体请点击',
           facebook: {
             siteUrl: 'https://www.facebook.com/cmcmglobal/',
@@ -209,8 +209,8 @@ var ContactList = {
         categoryData: {
           classAnchor: 'category-of-socialmedia',
           wechatTitle: 'Scan to follow us',
-          wechat2dUrl: '/dist/images/cm-2d-code-grey.jpg',
-          othersTitle: 'Other social medias:',
+          wechat2dUrl: '/dist/images/wechat-2d-code-new.jpg',
+          othersTitle: 'Social networks:',
           facebook: {
             siteUrl: 'https://www.facebook.com/cmcmglobal/',
             clsName: 'socl-facebook',

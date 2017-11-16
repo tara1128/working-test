@@ -18,7 +18,7 @@ var CompanyInfoList = {
         categoryLink: 'Company_Intro',
         categoryData: {
           classAnchor: 'category-of-company',
-          introTexts: ['猎豹移动是一家全球领先的移动互联网公司，致力于为全球用户提供卓越的应用。公司于2010年10月，由金山安全和可牛影像合并而成，继承了金山18年的安全技术积累和可牛影像的互联网基因。2014年5月8日，猎豹移动在纽交所正式挂牌上市，交易代码CMCM。猎豹移动是中国移动互联网公司出海的领军者。截至2017年3月，公司产品在全球移动端月度活跃用户约为6亿，用户分布覆盖全球200多个国家及地区。其中，77%来自以欧美为主的海外市场。', '公司核心产品包括一系列工具及安全应用，如猎豹清理大师、猎豹安全大师、猎豹3D桌面、金山毒霸、Cheetah Keyboard等，为全球移动用户提供更快速、更易用、更安全的移动互联网体验。在工具应用之外，猎豹移动还拥有直播社交类应用Live.me、新闻聚合类应用News Republic，游戏应用钢琴块2、弓箭手大作战等产品。2016年4月，正式进军人工智能领域，旗下人工智能公司猎户星空在远场语音交互系统、图像识别、视觉导航等领域，拥有完全自主开发并领先行业的技术。'],
+          introTexts: ['猎豹移动是一家全球领先的移动互联网公司，致力于为全球用户提供卓越的应用。公司于2010年10月，由金山安全和可牛影像合并而成，继承了金山18年的安全技术积累和可牛影像的互联网基因。2014年5月8日，猎豹移动在纽交所正式挂牌上市，交易代码CMCM。猎豹移动是中国移动互联网公司出海的领军者。截至2017年3月，公司产品在全球移动端月度活跃用户约为6亿，用户分布覆盖全球200多个国家及地区。其中，77%来自以欧美为主的海外市场。', '公司核心产品包括一系列工具及安全应用，如猎豹清理大师、猎豹安全大师、猎豹3D桌面、金山毒霸、Cheetah Keyboard等，为全球移动用户提供更快速、更易用、更安全的移动互联网体验。在工具应用之外，猎豹移动还拥有直播社交类应用Live.me、游戏应用钢琴块2、弓箭手大作战等产品。2016年4月，正式进军人工智能领域，旗下人工智能公司猎户星空在远场语音交互系统、图像识别、视觉导航等领域，拥有完全自主开发并领先行业的技术。'],
           introImage: '/dist/images/cmcm-overview.jpg'
         }
       },
@@ -39,7 +39,6 @@ var CompanyInfoList = {
             {
               year: 2016,
               events: {
-                '06': '收购全球移动新闻服务提供商News Republic',
                 '04': '推出直播社交产品Live.me，成为美国时尚年轻人最喜爱的社交产品之一',
                 '01': '正式宣布成立猎豹全球智库'
               }
@@ -118,7 +117,7 @@ var CompanyInfoList = {
             {
               name: '肖洁',
               title: '猎豹移动高级副总裁',
-              detail: ['拥有丰厚的品牌整合、传播以及市场公关经验，全面负责公司的市场公关工作，同时还负责海外商业产品及其他创新业务的开拓。她带领团队打造了中国首个面向全球的移动广告平台Cheetah Ads，依靠猎豹移动横跨安全、直播、新闻、游戏等各个领域的应用产品线，为全球广告主提供了沉浸式的直立视频广告解决方案。'],
+              detail: ['拥有丰厚的品牌整合、传播以及市场公关经验，全面负责公司的市场公关工作，同时还负责海外商业产品及其他创新业务的开拓。她带领团队打造了中国首个面向全球的移动广告平台Cheetah Ads，依靠猎豹移动横跨安全、直播、游戏等各个领域的应用产品线，为全球广告主提供了沉浸式的直立视频广告解决方案。'],
               avatar: '/dist/images/leaders-xiaojie.jpg'
             }
           ]
@@ -216,7 +215,7 @@ var CompanyInfoList = {
         categoryLink: 'Company_Intro',
         categoryData: {
           classAnchor: 'category-of-company',
-          introTexts: ['Cheetah Mobile is a leading mobile internet company dedicated to making the world smarter. It aims to provide leading apps for mobile users worldwide and connect users with personalized content powered by artificial intelligence. Cheetah Mobile was formed in October 2010 as a merger between Kingsoft Security and Conew Image, bringing together Kingsoft Security\'s 18 years of security technology experience and Conew\'s internet genes. The Company has attracted approximately 600 million global MAUs in more than 200 countries and regions, of which approximately 77% are located in Europe and the U.S. ', 'Cheetah Mobile\'s products, including its popular utility applications Clean Master, Security Master, CM Launcher, Duba Anti-Virus and Cheetah Keyboard help make users\' mobile internet experience smarter, speedier and safer. In addition to utility applications, Cheetah Mobile also has social live broadcasting app Live.me, news aggregation app News Republic and popular casual games such as Piano Tiles 2, Rolling Sky and Arrow.io. Cheetah Mobile is also an investor in OrionStar, an artificial intelligence company dedicated to developing the next generation of ground-breaking technology products.'],
+          introTexts: ['Cheetah Mobile is a leading mobile internet company dedicated to making the world smarter. It aims to provide leading apps for mobile users worldwide and connect users with personalized content powered by artificial intelligence. Cheetah Mobile was formed in October 2010 as a merger between Kingsoft Security and Conew Image, bringing together Kingsoft Security\'s 18 years of security technology experience and Conew\'s internet DNA. The Company has attracted approximately 600 million global MAUs in more than 200 countries and regions, of which approximately 77% are located in Europe and the U.S. ', 'Cheetah Mobile\'s products, including its popular utility applications Clean Master, Security Master, CM Launcher, Duba Anti-Virus and Cheetah Keyboard help make users\' mobile internet experience smarter, speedier and safer. In addition to utility applications, Cheetah Mobile also has social live broadcasting app Live.me and popular casual games such as Piano Tiles 2, Rolling Sky and Arrow.io. Cheetah Mobile is also an investor in OrionStar, an artificial intelligence company dedicated to developing the next generation of ground-breaking technology products.'],
           introImage: '/dist/images/cmcm-overview.jpg'
         }
       },
@@ -237,7 +236,6 @@ var CompanyInfoList = {
             {
               year: 2016,
               events: {
-                '06': 'Acquires global news aggregation app News Republic.',
                 '04': 'Launches popular social live broadcasting app Live.me.',
                 '01': 'Formally announces the launch of Cheetah Lab research institute.'
               }
@@ -315,7 +313,7 @@ var CompanyInfoList = {
             },
             {
               name: 'Scarlett Xiao',
-              title: 'Co-Founder and Senior Vice President',
+              title: 'Senior Vice-President',
               detail: ['Scarlett Xiao is responsible for Cheetah Mobile\'s marketing, public relations, and overseas commercial products. Prior to co-founding Cheetah Mobile, Ms. Xiao served as the public relations director for Qihoo 360, and communications manager for Yahoo China. From 2008 to 2010, she worked as a senior manager in Baidu\'s corporate marketing department with a focus on public relations. Ms. Xiao holds a B.A. degree from Renmin University of China.'],
               avatar: '/dist/images/leaders-xiaojie.jpg'
             }
@@ -345,7 +343,7 @@ var CompanyInfoList = {
             {
               valueClassName: 'value-start-from-me', 
               valueIcon: '/dist/images/cv-ci-start-from-me.png',
-              valueText: 'Starts from me',
+              valueText: 'Starts with me',
               valueCute: '/dist/images/value-icon-starts-from-me.png',
               valueDesc: 'Embrace challenges with clear targets and the overall growth of the company in mind.'
             },

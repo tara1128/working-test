@@ -67,7 +67,7 @@ var ProductList = {
                 descForProd: ['业界首款引入深度学习模型的第三方输入法。具有智能预测、自动更正、学习用户习惯等功能。融入自然语言处理（NLP）技术和机器学习算法，预测准确率更高。覆盖140多个国家和地区，为Google Play评分最高的第三方输入法。'],
                 star: 0,
                 tags: [],
-                link: 'https://play.google.com/store/apps/details?id=panda.keyboard.emoji.theme&hl=en',
+                link: 'http://www.cmcm.com/en-us/keyboard/',
                 target: '_blank',
                 pict: ''
               },
@@ -228,29 +228,6 @@ var ProductList = {
 
             ]
           },
-          /*
-          news: {
-            name: '新闻',
-            hash: 'Product_News',
-            anch: 'category-of-news',
-            desc: ['国内拥有最多海外新闻版权的新闻类产品，运用人工智能技术，', '为全球用户精准推送“千人千面”的新闻内容'],
-            data: [          
-              {
-                priority: '',
-                name: 'News Republic',
-                slog: '',
-                icon: '/dist/images/brandnew-logo-nr-103.png',
-                descForIndex: ['一款搭载个性化推荐技术的新闻聚合应用，通过人工智能技术的运用，为全球用户精准推送“千人千面”的新闻内容。覆盖43个国家，47种语言 ，拥有全球近3000家优质媒体版权，曾经在60个国家Google Play新闻杂志应用下载榜单中荣登第一'],
-                descForProd: ['一款搭载个性化推荐技术的新闻聚合应用，通过AI技术，为全球用户精准推送“千人千面”的新闻内容。覆盖43个国家，拥有全球近3000家优质媒体版权，曾经在60个国家Google Play新闻杂志应用下载榜单中荣登第一。'],
-                star: 0,
-                tags: [],
-                link: 'http://www.news-republic.com/',
-                target: '_blank',
-                pict: ''
-              }
-            ]
-          }
-          */
         }
       },
       pc: {
@@ -506,7 +483,7 @@ var ProductList = {
                 descForProd: ['Cheetah Keyboard is the industry\'s first third-party input app to incorporate deep learning technology, with features such as smart prediction, automatic correction and user modeling. Cheetah Keyboard integrates NLP technology and machine learning algorithms in order to provide stronger predictions and greater accuracy, Covers more than 140 countries and regions. Highest rated third-party input method on Google Play.'],
                 star: 0,
                 tags: [],
-                link: 'https://play.google.com/store/apps/details?id=panda.keyboard.emoji.theme&hl=en',
+                link: 'http://www.cmcm.com/en-us/keyboard/',
                 target: '_blank',
                 pict: ''
               },
@@ -517,7 +494,7 @@ var ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-photogrid-103.png',
                 descForIndex: ['A must-have photo editor and collage maker that has been downloaded a total of 550 million times for Android and iOS'],
-                descForProd: ['PhotoGrid is a must-have photo editor and picture & video collage maker. Its huge selection of editing tools, facial recognition technology, twinkle functions and machine learning capabilities allow users to elevate their photos with dynamic special effects, Downloaded a combined total of 550 million times on Android and iOS. Named one of Google Play’s Best Apps of 2016.'],
+                descForProd: ['PhotoGrid is a must-have photo editor and picture & video collage maker. Its huge selection of editing tools, facial recognition technology, twinkle functions and machine learning capabilities allow users to elevate their photos with dynamic special effects. Downloaded a combined total of 550 million times on Android and iOS. Named one of Google Play’s Best Apps of 2016.'],
                 star: 0,
                 tags: [],
                 link: 'http://www.cmcm.com/en-us/photo-grid/',
@@ -565,10 +542,10 @@ var ProductList = {
                 name: 'Live.me',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-liveme-103.png',
-                descForIndex: ['Global social live streaming phenomenon. One of the most popular social media apps among young people worldwide. After launching in April 2016, Live.me quickly rose to the top of the app rankings, becoming the fastest growing live broadcasting app ever in the U.S. Ranks #1 on Google Play\'s social bestseller rankings in 42 countries.'],
+                descForIndex: ['Global social live broadcasting phenomenon. One of the most popular social media apps among young people worldwide. After launching in April 2016, Live.me quickly rose to the top of the app rankings, becoming the fastest growing live broadcasting app ever in the U.S. Ranked #1 on Google Play\'s social bestseller rankings in 42 countries.'],
                 descForProd: ['After launching in April 2016, Cheetah\'s live broadcasting social app Live.me quickly rose to the top of the app rankings. It has attracted a large number of celebrities and influencers, and has become one of the most popular social apps among young U.S. users today. Available in 7 languages across 85 countries and regions. Ranked #1 on Google Play\'s best-selling social app rankings in 42 countries.'],
                 star: 0,
-                tags: ['85 Markets|Covers multiple cultures', '8 Language|Integrates local needs', '42 Countries|Tops social bestseller list'],
+                tags: ['85 Markets|Covers multiple cultures', '8 Languages|Integrates local needs', '42 Countries|Tops social bestseller list'],
                 link: 'http://www.liveme.com/',
                 target: '_blank',
                 pict: ''
@@ -587,7 +564,7 @@ var ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-pt2-103.png',
                 descForIndex: ['Music-based casual game with nearly 900 million downloads worldwide. Most downloaded music-based casual game in 2016.'],
-                descForProd: ['Piano Tiles 2 is a music-based casual game and global phenomenon downloaded nearly 900 million times. With newly launched swipe-tile gameplay and racing modes, Piano Tiles brings you the perfect dual audio-visual experience. Ranked in the Top 5 of the iOS free download game rankings in China. #1 on the free download game rankings in 158 countries. Most downloaded music-based casual game on App Store and Google Play in 2016.'],
+                descForProd: ['Piano Tiles 2 is a music-based casual game and global phenomenon downloaded nearly 900 million times. With newly launched swipe-tile gameplay and racing modes, Piano Tiles brings you the perfect dual audio-visual experience. Ranked in the Top 5 of the iOS free download game rankings in China. #1 on the free download game rankings in 158 countries. Most downloaded music-based casual game on the App Store and Google Play in 2016.'],
                 star: 0,
                 tags: [],
                 link: 'http://www.cmcm.com/en-us/piano-tiles/',
@@ -643,7 +620,7 @@ var ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-shszg.png',
                 descForIndex: [],
-                descForProd: ['Tap Tap fish is a relaxing yet addictive casual game in which players build an aquarium ecosystem and collect thousands of fish. Cheetah Mobile become the exclusive publisher of Tap Tap Fish in October 2016. Named as the Best Independent Game of 2016 on both the App Store and Google Play.'],
+                descForProd: ['Tap Tap fish is a relaxing yet addictive casual game in which players build an aquarium ecosystem and collect thousands of fish. Cheetah Mobile became the exclusive publisher of Tap Tap Fish in October 2016. Named as the Best Independent Game of 2016 on both the App Store and Google Play.'],
                 star: 0,
                 tags: [],
                 link: 'https://play.google.com/store/apps/details?id=com.idleif.abyssrium',
@@ -667,29 +644,6 @@ var ProductList = {
 
             ]
           },
-          /*
-          news: {
-            name: 'News',
-            hash: 'Product_News',
-            anch: 'category-of-news',
-            desc: ['Precisely recommending news content ', 'with artificial intelligence technology'],
-            data: [          
-              {
-                priority: '',
-                name: 'News Republic',
-                slog: '',
-                icon: '/dist/images/brandnew-logo-nr-103.png',
-                descForIndex: ['Leading news aggregation app featuring personalized recommendation technology powered by artificial intelligence. Covers 43 countries, with nearly 3,000 high-quality global media copyrights. Previously #1 on Google Play\'s news & magazine application download rankings in 60 countries.'],
-                descForProd: ['News Republic is a leading news aggregation app featuring personalized recommendation technology powered by artificial intelligence. Covers 43 countries, with nearly 3,000 high-quality global media copyrights. Previously #1 on Google Play\'s news & magazine application download rankings in 60 countries.'],
-                star: 0,
-                tags: [],
-                link: 'http://www.news-republic.com/',
-                target: '_blank',
-                pict: ''
-              }
-            ]
-          }
-          */
         }
       },
       pc: {
@@ -709,7 +663,7 @@ var ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-browser-103.png',
                 descForIndex: [],
-                descForProd: ['CM Browser is the first dual-core security browser in China. It features more than 100 improvements based on Chromium architecture, including 30% higher activation speed, HTML5 compatibility, and artistic visual solutions. With the first ever BIPS cloud security system, CM Browser intercepts malicious websites and protects users from online security threats.'],
+                descForProd: ['CM Browser is the first dual-core security browser in China. It features more than 100 improvements based on Chromium architecture, including 30% higher activation speed, HTML5 compatibility and artistic visual solutions. With the first ever BIPS cloud security system, CM Browser intercepts malicious websites and protects users from online security threats.'],
                 star: 0,
                 tags: [],
                 link: 'https://www.liebao.cn',
@@ -768,7 +722,7 @@ var ProductList = {
             name: 'AI',
             hash: 'Product_AI',
             anch: 'category-of-ai',
-            desc: ['Cheetah Mobile-invested artificial technology company OrionStar possesses completely self-developed, ', 'industry-leading technology, including far-field voice interaction, image recognition and visual navigation systems.'],
+            desc: ['Cheetah Mobile-invested artificial intelligence company OrionStar possesses completely self-developed, ', 'industry-leading technology, including far-field voice interaction, image recognition and visual navigation systems.'],
             data: [
               {
                 priority: '',
@@ -821,7 +775,7 @@ var ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-bigdata-138.png',
                 descForIndex: [],
-                descForProd: ['Cheetah Data is a global mobile big data analysis platform. Based on the huge amount of data accumulated through Cheetah Mobile\'s product matrix, Cheetah Data provides indices including active penetration rate, growth rate, retention rate, user intelligence and so on. It surveys every change in the Android market to help app developers, investors and marketers make decisions. Cheetah Data owns mobile internet-focused research institution Cheetah Lab. Cheetah Data also owns and operates Cheetah Lab, its mobile internet-focused research institute, which releases global internet research reports and analysis on a regular basis.'],
+                descForProd: ['Cheetah Data is a global mobile big data analysis platform. Based on the huge amount of data accumulated through Cheetah Mobile\'s product matrix, Cheetah Data provides indices including active penetration rate, growth rate, retention rate and user intelligence. It surveys every change in the Android market to help app developers, investors and marketers make decisions. Cheetah Data also owns and operates Cheetah Lab, its mobile internet-focused research institute, which releases global internet research reports and analysis on a regular basis.'],
                 star: 0,
                 tags: [],
                 link: 'http://cn.data.cmcm.com/',
@@ -849,7 +803,7 @@ var ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-a-d-s-500.png',
                 descForIndex: [],
-                descForProd: ['Cheetah Ads is Cheetah Mobile\'s self-operated ad platform offering a wide range of ad formats, from high-performing display and native ads, to beautiful, full-screen vertical video. Cheetah Ads offers diverse, global reach with over 600 million users from 200+ countries and regions across Cheetah Mobile\'s owned and operated inventory, including Clean Master, CM Security, Cheetah Keyboard, Live.me and News Republic. Enhanced by Cheetah Mobile\'s artificial intelligence and big data capabilities, Cheetah Ads helps brands reach the right audience, at the right time, in the right format throughout the entire purchase cycle.'],
+                descForProd: ['Cheetah Ads is Cheetah Mobile\'s self-operated ad platform offering a wide range of ad formats, from high-performing display and native ads, to beautiful, full-screen vertical video. Cheetah Ads offers diverse, global reach with over 600 million users from 200+ countries and regions across Cheetah Mobile\'s owned and operated inventory, including Clean Master, CM Security, Cheetah Keyboard and Live.me. Enhanced by Cheetah Mobile\'s artificial intelligence and big data capabilities, Cheetah Ads helps brands reach the right audience, at the right time, in the right format throughout the entire purchase cycle.'],
                 star: 0,
                 tags: [],
                 link: 'http://ads.cmcm.com/',
