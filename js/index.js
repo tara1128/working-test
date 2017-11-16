@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-16 15:22
+  Latest modified: 2017-11-16 20:03
 */
 
 (function(win, doc, $) {
@@ -453,7 +453,7 @@
           _slog = _data.slogan,
           _desc = _data.descrp,
           _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
-                    <h2 class="category-title">'+ _name +'</h2>\
+                    <h2 class="category-title font-book">'+ _name +'</h2>\
                     <div class="one-app-introduction clearfix">\
                       <h1 class="cmcm-slogan">'+ _slog +'</h1>\
                       <p class="under-slogan">'+ _desc +'</p>\
@@ -474,7 +474,7 @@
           _imge = _data.introImage,
           _text = me.ArrayOutput(_arry, '<p class="company-intros">', '</p>'),
           _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
-                     <h2 class="category-title">'+ _name +'</h2>\
+                     <h2 class="category-title font-book">'+ _name +'</h2>\
                      <div class="one-app-introduction clearfix">\
                        <img class="company-view" src="'+ _imge +'" alt="'+ _name +'" />\
                        '+ _text +'</div><!-- one app introduction -->\
@@ -506,7 +506,7 @@
                          </div><!-- history-one-year -->';
       }); // End map
       var _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
-                     <h2 class="category-title">'+ _name +'</h2>\
+                     <h2 class="category-title font-book">'+ _name +'</h2>\
                      <div class="one-app-introduction clearfix">'+ allHistories +'</div>\
                    </div><!-- category container of history -->';
       me.page.companyContainer.append(_html);
@@ -541,7 +541,7 @@
                         </div><!-- one app introduction -->';
       }); // End map
       var _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
-                      <h2 class="category-title">'+ _name +'</h2>'+ _allLeaders +'\
+                      <h2 class="category-title font-book">'+ _name +'</h2>'+ _allLeaders +'\
                    </div><!-- category container of executive team -->';
       me.page.companyContainer.append(_html);
     },
@@ -556,7 +556,11 @@
           _csan = _data.classAnchor,
           _cult = _data.cultureValues,
           _vHtm = '',
-          _vDes = '';
+          _vDes = '',
+          _firstThreeCute = '',
+          _firstThreeDescr = '',
+          _lastTwoCute = '',
+          _lastTwoDescr = '';
       _cult.map(function(value, i){
         var _clsn = value.valueClassName,
             _icon = value.valueIcon,
@@ -569,27 +573,47 @@
                     </div>\
                     <img class="value-cute has-trans" src="'+ _cute +'" alt="'+ _text +'" />\
                     <span class="value-text has-trans">'+ _text +'</span>\
-                    <span class="v-des-in-mob has-trans CMCM_ValInMob">'+ _desc +'</span>\
+                    <s class="dot1 has-trans"></s><s class="dot2 has-trans"></s><s class="dot3 has-trans"></s>\
                   </li><!-- one value item -->';
         _vDes += '<li class="value-descr has-trans CMCM_ValueDescr vd-'+ _clsn +'">\
                     <span>'+ _desc +'</span>\
-                    <s class="dot1 has-trans">&nbsp;</s>\
-                    <s class="dot2 has-trans">&nbsp;</s>\
-                    <s class="dot3 has-trans">&nbsp;</s>\
                   </li>';
+        if (i < 3) { /* First three items render on the first row, for mobile: */
+          _firstThreeCute += '<div class="val-mob-item '+ _clsn +' has-trans CMCM_ValueItemOnMobile" data="'+ _clsn +'">\
+                                <img class="vmob-icon has-trans" src="'+ _icon +'" alt="'+ _text +'" />\
+                                <img class="vmob-cute has-trans" src="'+ _cute +'" alt="'+ _text +'" />\
+                                <span class="vmob-txt has-trans">'+ _text +'</span>\
+                              </div><!-- val-mob-item -->';
+          _firstThreeDescr += '<div class="vmob-descr has-trans CMCM_ValueDescrOnMobile vmd-'+ _clsn +'">'+ _desc +'</div>';
+        } else {/* Last two items render on the second row, for mobile: */
+          _lastTwoCute += '<div class="val-mob-item '+ _clsn +' has-trans CMCM_ValueItemOnMobile" data="'+ _clsn +'">\
+                                <img class="vmob-icon has-trans" src="'+ _icon +'" alt="'+ _text +'" />\
+                                <img class="vmob-cute has-trans" src="'+ _cute +'" alt="'+ _text +'" />\
+                                <span class="vmob-txt has-trans">'+ _text +'</span>\
+                              </div><!-- val-mob-item -->';
+          _lastTwoDescr += '<div class="vmob-descr has-trans CMCM_ValueDescrOnMobile vmd-'+ _clsn +'">'+ _desc +'</div>';
+        }
       }); // End map
       var _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
-                    <h2 class="category-title">'+ _name +'</h2>\
+                    <h2 class="category-title font-book">'+ _name +'</h2>\
                     <div class="one-app-introduction clearfix">\
                       <div class="values-container rel">\
-                        <ul class="values-display clearfix">'+ _vHtm +'</ul>\
-                        <ul class="values-descrs">'+ _vDes +'</ul>\
+                        <ul class="values-display-on-pc clearfix">'+ _vHtm +'</ul>\
+                        <ul class="values-descrs-on-pc">'+ _vDes +'</ul>\
+                        <div class="values-on-mobile">\
+                          <div class="val-on-mob-row1 clearfix">'+ _firstThreeCute +'</div><!-- row1 -->\
+                          <div class="val-on-mob-descr1 clearfix">'+ _firstThreeDescr +'</div><!-- descr1 -->\
+                          <div class="val-on-mob-row2 clearfix">'+ _lastTwoCute +'</div><!-- row2 -->\
+                          <div class="val-on-mob-descr2 clearfix">'+ _lastTwoDescr +'</div><!-- descr2 -->\
+                        </div>\
                       </div>\
                     </div>\
                   </div><!-- category container of culture -->';
       me.page.companyContainer.append(_html);
       me.page.cultureValues = $('.CMCM_ValueItem');
       me.page.cultureValDescr = $('.CMCM_ValueDescr');
+      me.page.valItemOnMobile = $('.CMCM_ValueItemOnMobile');
+      me.page.valItemDescrOnMobile = $('.CMCM_ValueDescrOnMobile');
     },
     
     /* Render company employers benefits: */
@@ -614,7 +638,7 @@
                   </div>';
       }); // End map
       var _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
-                    <h2 class="category-title">'+ _name +'</h2>\
+                    <h2 class="category-title font-book">'+ _name +'</h2>\
                     <div class="one-app-introduction clearfix">\
                       '+ _text +'<div class="welfare-imgs clearfix">'+ _pics +'</div>\
                     </div><!-- one app introduction -->\
@@ -663,7 +687,7 @@
             }); // End map
             /* NOTE: One unit area in page is based on one sub cate, not big cate. */
             _html += '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
-                        <h2 class="category-title">'+ _name +'</h2>\
+                        <h2 class="category-title font-book">'+ _name +'</h2>\
                         '+ _allAppsInThisSubCate +'\
                       </div><!-- end of category container -->';
           } // End if
@@ -717,7 +741,7 @@
           });
         }
         _html += '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
-                    <h2 class="category-title">'+ _name +'</h2>\
+                    <h2 class="category-title font-book">'+ _name +'</h2>\
                     <div class="one-app-introduction clearfix">'+ _details +'</div>\
                   </div><!-- category container -->';
       }
@@ -952,6 +976,18 @@
         me.page.cultureValues.mouseleave(function(){
           $(this).removeClass(me.clsn);
           me.page.cultureValDescr.removeClass(me.clsn);
+        });
+        /* On mobiles, click each icon of culture&value: */
+        me.page.valItemOnMobile.click(function(){
+          var _i = $(this), token = _i.attr('data');
+          var _descr = $('.vmd-'+ token);
+          me.page.valItemOnMobile.removeClass(me.clsn);
+          me.page.valItemDescrOnMobile.removeClass(me.clsn);
+          if (!_i.hasClass(me.clsn)) {
+            _i.addClass(me.clsn);
+            _descr.addClass(me.clsn);
+          }
+          console.log(990);
         });
       }
       /* Click menus on the left of sub pages: */
