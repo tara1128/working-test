@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-15 17:00
+  Latest modified: 2017-11-16 15:22
 */
 
 (function(win, doc, $) {
@@ -163,6 +163,7 @@
                           '+ threeBubbles +'\
                           <img class="ai-voicebox-on-mobile-only" src="/dist/images/ai-voice-box.png" alt="AI" />\
                         </div>\
+                        <div class="ai-chips abs ai-voice-wakeup has-anim"></div>\
                       </div><!-- ai right -->';
       var _leftHtml = '<div class="ai-left-content">\
                         <h3 class="app-name has-anim">\
@@ -967,7 +968,6 @@
           var _i = $(this);
           var myFth = _i.parent();
           var myMenu = myFth.parent().find('.CMCM_SubMenuItem');
-          var menuBtns = $('.CMCM_SubMenuItem');
           if ( !_i.hasClass(me.clsn) ) {
             me.page.subMenuItems.removeClass(me.clsn);
             me.page.subMenuSubAs.removeClass(me.clsn);
