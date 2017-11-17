@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-17 15:47
+  Latest modified: 2017-11-17 16:05
 */
 
 (function(win, doc, $) {
@@ -49,7 +49,6 @@
     },
 
     LanguageCollection: function() {
-      var me = this;
       var collection = {
         'en-us': {name: 'English', homeLink: '/en-us/'},
         'zh-cn': {name: '简体中文', homeLink: '/zh-cn/'},
@@ -62,7 +61,7 @@
         'ja-jp': {name: '日本語', homeLink: '/ja-jp/'},
         'ko-kr': {name: '한국어', homeLink: '/ko-kr/'}
         */
-      }
+      };
       return collection;
     },
 
