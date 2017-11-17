@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-16 20:03
+  Latest modified: 2017-11-16 21:58
 */
 
 (function(win, doc, $) {
@@ -46,6 +46,24 @@
       if (typeof ProductList != 'undefined') me.productList = ProductList[me.lang];
       if (typeof ContactList != 'undefined') me.contactList = ContactList[me.lang];
       if (typeof PublicFooter != 'undefined') me.publicFooter = PublicFooter[me.lang];
+    },
+
+    LanguageCollection: function() {
+      var me = this;
+      var collection = {
+        'en-us': {name: 'English', homeLink: '/en-us/'},
+        'zh-cn': {name: '简体中文', homeLink: '/zh-cn/'},
+        /*
+        'zh-tw': {name: '繁體中文', homeLink: '/zh-tw/'},
+        'es-es': {name: 'Español', homeLink: '/es-es/'},
+        'fr-fr': {name: 'Français', homeLink: '/fr-fr/'},
+        'ru-ru': {name: 'Pусский', homeLink: '/ru-ru/'},
+        'pt-pt': {name: 'Português', homeLink: '/pt-pt/'},
+        'ja-jp': {name: '日本語', homeLink: '/ja-jp/'},
+        'ko-kr': {name: '한국어', homeLink: '/ko-kr/'}
+        */
+      }
+      return collection;
     },
 
     /* Output paragraph by paragraph from an array: */
@@ -750,9 +768,13 @@
     
     /* Render public footer for all pages: */
     RenderPublicFooter: function(pubFooter) {
-      var me = this,
+      var me = this, langsListHtml = '',
           outLinksArray = pubFooter.data.outLinks,
-          copyrightObj = pubFooter.data.copyRight;
+          copyrightObj = pubFooter.data.copyRight,
+          langsCol = me.LanguageCollection();
+      for (var _l in langsCol) {
+        if (_l != me.lang) langsListHtml += '<a class="one-lang has-trans" href="'+ langsCol[_l].homeLink +'">'+ langsCol[_l].name +'</a>';
+      }
       var ftRHtml = '<div class="footer-right clearfix rel">\
                       <div id="CMCM_FooterRight"></div>\
                       <div class="bottom-right abs clearfix">\
@@ -760,7 +782,10 @@
                           <li><a class="has-trans" href="'+ copyrightObj.pvyLink +'">'+ copyrightObj.privacy +'</a></li>\
                           <li><a class="has-trans" href="'+ copyrightObj.tosLink +'">'+ copyrightObj.tos +'</a></li>\
                           <li class="copyright"><span>'+ copyrightObj.cptext +'</span></li>\
-                          <li class="switch-langs"><a class="has-trans">'+ copyrightObj.curLang +'</a></li>\
+                          <li class="switch-langs" id="CMCM_ContainLangs">\
+                            <a class="langs-trigger has-trans" id="CMCM_FootLangsTrigger">'+ copyrightObj.curLang +'</a>\
+                            <div class="langs-list has-trans">'+ langsListHtml +'</div>\
+                          </li>\
                         </ul>\
                       </div><!-- bottom right of copyright -->\
                     </div><!-- footer right -->';
@@ -775,6 +800,8 @@
                      </div><!-- footer left -->';
       me.page.footerContainer.append(ftLHtml).append(ftRHtml);
       me.RenderFooterLinks(outLinksArray);
+      me.page.footerLangsTrigger = $('#CMCM_FootLangsTrigger');
+      me.page.footerLangsContain = $('#CMCM_ContainLangs');
     },
     
     /* Render footer links in footer area: */
@@ -955,6 +982,21 @@
           me.page.topNav.removeClass(cls);
         }
       });
+      /* Click to switch langs on footer area: */
+      me.page.footerLangsTrigger.click(function(e){
+        var _p = me.page.footerLangsContain;
+        //e.stopPropagation();
+        if (!_p.hasClass(me.clsn)) {
+          _p.addClass(me.clsn);
+          return false;
+        } else {
+          _p.removeClass(me.clsn);
+        }
+      });
+      me._body.click(function(){
+        var _p = me.page.footerLangsContain;
+        if (_p.hasClass(me.clsn)) _p.removeClass(me.clsn);
+      });
       /* Hover game units to display descriptions: */
       if (me.curr == 'index') {
         me.page.inxGameUnits.mouseenter(function(){
@@ -987,7 +1029,6 @@
             _i.addClass(me.clsn);
             _descr.addClass(me.clsn);
           }
-          console.log(990);
         });
       }
       /* Click menus on the left of sub pages: */
