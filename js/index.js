@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-16 21:58
+  Latest modified: 2017-11-16 13:50
 */
 
 (function(win, doc, $) {
@@ -864,7 +864,7 @@
       var animCls = 'animated';
       elements.map(function(i, ele){
         var _offsetTop = $(ele).offset().top;
-        if (_top >= _offsetTop - 700) {
+        if (_top >= _offsetTop - 1000) {
           $(ele).addClass(animCls);
         }
       });

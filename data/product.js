@@ -773,7 +773,7 @@ var ProductList = {
                 priority: '',
                 name: 'Cheetah Data',
                 slog: '',
-                icon: '/dist/images/brandnew-logo-bigdata-138.png',
+                icon: '/dist/images/cheetah-data-logo.png',
                 descForIndex: [],
                 descForProd: ['Cheetah Data is a global mobile big data analysis platform. Based on the huge amount of data accumulated through Cheetah Mobile\'s product matrix, Cheetah Data provides indices including active penetration rate, growth rate, retention rate and user intelligence. It surveys every change in the Android market to help app developers, investors and marketers make decisions. Cheetah Data also owns and operates Cheetah Lab, its mobile internet-focused research institute, which releases global internet research reports and analysis on a regular basis.'],
                 star: 0,
