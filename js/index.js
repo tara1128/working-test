@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-16 13:50
+  Latest modified: 2017-11-17 15:47
 */
 
 (function(win, doc, $) {
@@ -136,23 +136,24 @@
 
     /* Index first screen slider: */
     SwiperInit: function() {
-      new Swiper('.billboard-swiper-container', {
-        paginationClickable:true,
-        spaceBetween:0,
-        centeredSlides:true,
-        autoplay:0,
-        autoplayDisableOnInteraction:false
-      });
-      /*
-      new Swiper('.news-swiper-container', {
-        pagination:'.news-swiper-pagination',
-        paginationClickable:true,
-        spaceBetween:0,
-        centeredSlides:true,
-        autoplay:5000,
-        autoplayDisableOnInteraction:false
-      });
-      */
+      if (window.innerWidth > 768) {
+        new Swiper('.billboard-swiper-container', {
+          paginationClickable:true,
+          spaceBetween:0,
+          centeredSlides:true,
+          autoplay:0,
+          autoplayDisableOnInteraction:false
+        });
+      } else {
+        new Swiper('.billboard-swiper-for-mobile', {
+          paginationClickable:true,
+          spaceBetween:0,
+          centeredSlides:true,
+          autoplay:3000,
+          effect:'fade',
+          autoplayDisableOnInteraction:false
+        });
+      }
     },
 
     /* Render AI content on index: */
@@ -274,6 +275,8 @@
       var me = this;
       me.page.inxSloganEle.html(me.ArrayOutput(intros.slogan));
       me.page.inxSubSloganEle.html(intros.subslogan);
+      me.page.inxSloganEleForMb.html(me.ArrayOutput(intros.slogan));
+      me.page.inxSubSloganEleForMb.html(intros.subslogan);
     },
 
     /* Render product category introductions on index: */
@@ -1080,6 +1083,8 @@
     inxToolsContainer: $('#CMCM_ToolsContainer'),
     inxSloganEle: $('#CMCM_Slogan'),
     inxSubSloganEle: $('#CMCM_SubSlogan'),
+    inxSloganEleForMb: $('#CMCM_SloganForMobile'),
+    inxSubSloganEleForMb: $('#CMCM_SubSloganForMobile'),
     inxLivemeTextContainer: $('#CMCM_LiveMeTexts'),
     inxGameUnits: $('.CMCM_GameUnit'),
     inxGamesPTCont: $('#CMCM_GameOfPT'),

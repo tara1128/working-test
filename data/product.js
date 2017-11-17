@@ -454,7 +454,7 @@ var ProductList = {
                 descForIndex: ['World\'s leading mobile security app featuring intelligent threat detection, the world\'s highest rated antivirus system, app lock and intruder selfies. Its industry leading "cloud + AI" deep cleaning system removes 30% more junk than other apps.'],
                 descForProd: ['Security Master is the world\'s leading mobile security app. It offers comprehensive protection, including intelligent threat detection, the world\'s highest rated antivirus system by AV-TEST, app lock and intruder selfies. Over 500 million downloads on Google Play. #1 on the security app rankings in 30 countries, with an average score of 4.7 out of 5.'],
                 star: 0,
-                tags: ['Highest rated antivirus system by AV-TEST'],
+                tags: ['Highest rated antivirus system'],
                 link: 'http://www.cmcm.com/en-us/cm-security/',
                 target: '_blank',
                 pict: ''
@@ -468,7 +468,7 @@ var ProductList = {
                 descForIndex: ['The world\'s most popular smartphone personalization app for Android, CM Launcher offers a large number of themes, in-depth customization options and smart lock-screen functionality, providing comprehensive protection for privacy and safety.'],
                 descForProd: ['The world\'s most popular smartphone personalization app for Android, CM Launcher offers a large number of themes, in-depth customization options and smart lock-screen functionality, providing comprehensive protection for privacy and safety. Covering more than 200 countries and regions, it has been ranked first in the personalization category of the Google Play store in 94 countries with nearly 200 million total downloads'],
                 star: 0,
-                tags: ['#1 personalization app in 94 countries'],
+                tags: ['200 mln total downloads'],
                 link: 'http://www.cmcm.com/en-us/cm-launcher/',
                 target: '_blank',
                 pict: ''

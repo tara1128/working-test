@@ -198,7 +198,7 @@ var ContactList = {
             },
             {
               title: 'For all media inquiries within the Asia-Pacific region, please contact:',
-              details: ['Ella Chao: ella.chao@ileopard.com']
+              details: ['Patricia Lu: patricia.lu@ileopard.com']
             }
           ]
         }
