@@ -1,4 +1,4 @@
-var PublicNav = {
+window.CMCM_PublicNav = {
   'zh-cn': {
     page: 'all',
     name: '猎豹移动',
@@ -174,4 +174,4 @@ var PublicNav = {
       }
     ]
   },
-}
+};

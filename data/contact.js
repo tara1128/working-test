@@ -1,4 +1,4 @@
-var ContactList = {
+window.CMCM_ContactList = {
   'zh-cn': {
     page: 'contact',
     name: '联系',
@@ -343,4 +343,4 @@ var ContactList = {
       }
     } // category 
   }
-}
+};

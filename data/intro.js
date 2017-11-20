@@ -1,4 +1,4 @@
-var IntrosToIndex = {
+window.CMCM_IntrosToIndex = {
   'zh-cn': {
     page: 'index',
     slogan: ['Make', 'the world smarter'],
@@ -9,11 +9,4 @@ var IntrosToIndex = {
     slogan: ['Make', 'the world smarter'],
     subslogan: 'Powering mobile apps with AI and big data'
   },
-  'es-es': {},
-  'fr-fr': {},
-  'pt-pt': {},
-  'ru-ru': {},
-  'ja-jp': {},
-  'ko-kr': {},
-  'zh-tw': {}
-}
+};

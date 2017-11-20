@@ -1,4 +1,4 @@
-var CompanyInfoList = {
+window.CMCM_CompanyInfoList = {
   'zh-cn': {
     page: 'company',
     name: '关于公司',
@@ -392,11 +392,4 @@ var CompanyInfoList = {
       }
     }// category   
   },
-  'es-es': {},
-  'fr-fr': {},
-  'pt-pt': {},
-  'ru-ru': {},
-  'ja-jp': {},
-  'ko-kr': {},
-  'zh-tw': {}
-}
+};

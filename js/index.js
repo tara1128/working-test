@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-17 16:05
+  Latest modified: 2017-11-20 17:26
 */
 
 (function(win, doc, $) {
@@ -28,6 +28,16 @@
       me.BindScrolling();
     },
 
+    DetectGeolocation: function() {
+      navigator.geolocation.getCurrentPosition(function(pos){//Success callback
+      }, function(err){//Error callback
+      }, {//An optional PositionOptions object
+        enableHighAccuracy:true, //provide a more accurate position, needs more time and power to response.
+        timeout:15000,
+        maximumAge:0 //not use a cached position and must attempt to retrieve the real current position.
+      });
+    },
+
     DetectLanguage: function() {
       var me = this;
       var curLang = me._body.attr('data-lang');
@@ -40,12 +50,12 @@
     },
     DealWithDatas: function() {
       var me = this;
-      if (typeof PublicNav != 'undefined') me.publicNav = PublicNav[me.lang];
-      if (typeof IntrosToIndex != 'undefined') me.introsToIndex = IntrosToIndex[me.lang];
-      if (typeof CompanyInfoList != 'undefined') me.companyInfoList = CompanyInfoList[me.lang];
-      if (typeof ProductList != 'undefined') me.productList = ProductList[me.lang];
-      if (typeof ContactList != 'undefined') me.contactList = ContactList[me.lang];
-      if (typeof PublicFooter != 'undefined') me.publicFooter = PublicFooter[me.lang];
+      if (typeof window.CMCM_PublicNav != 'undefined') me.publicNav = window.CMCM_PublicNav[me.lang];
+      if (typeof window.CMCM_IntrosToIndex != 'undefined') me.introsToIndex = window.CMCM_IntrosToIndex[me.lang];
+      if (typeof window.CMCM_CompanyInfoList != 'undefined') me.companyInfoList = window.CMCM_CompanyInfoList[me.lang];
+      if (typeof window.CMCM_ProductList != 'undefined') me.productList = window.CMCM_ProductList[me.lang];
+      if (typeof window.CMCM_ContactList != 'undefined') me.contactList = window.CMCM_ContactList[me.lang];
+      if (typeof window.CMCM_PublicFooter != 'undefined') me.publicFooter = window.CMCM_PublicFooter[me.lang];
     },
 
     LanguageCollection: function() {
@@ -233,17 +243,17 @@
         if (_descForIndex && _descForIndex.length > 1) _ifDisplayOnIndex = 'display:block;';
         var _toolUnit = '<div class="tool-unit '+ _proportion +' rel '+ _ifHasBorderRight +'" style="'+ _ifDisplayOnIndex +'">\
                           <div class="tool-inner clearfix">\
-                            <div class="big-pic abs has-anim" style="'+ _ifShowPict +'">\
+                            <div class="big-pic abs" style="'+ _ifShowPict +'">\
                               <img src="'+ _pict + '" alt="'+ _name +'" />\
                             </div>\
                             <a class="app-icon has-trans CMCM_AutoWidthSibling" href="'+ _link +'" target="'+ _target +'">\
-                              <img class="has-anim" src="'+ _icon +'" alt="'+ _name +'" />\
+                              <img src="'+ _icon +'" alt="'+ _name +'" />\
                             </a>\
                             <div class="tool-info CMCM_AutoWidth" data-padding="10">\
-                              <h3 class="app-name has-anim">\
+                              <h3 class="app-name">\
                                 <a class="app-namelink has-trans" href="'+ _link +'" target="'+ _target +'">'+ _name +'</a>\
                               </h3>\
-                              <div class="app-desc has-anim">'+ _descForIndex +'</div>\
+                              <div class="app-desc">'+ _descForIndex +'</div>\
                               <div class="tool-rank clearfix has-anim CMCM_Rank" data="'+ _star +'"></div>\
                               <div class="tool-tags clearfix has-anim">'+ _tagContent +'</div>\
                             </div><!-- End of tool-info -->\
@@ -312,14 +322,14 @@
           _award1 = _tags[2].split('|')[0],
           _award2 = _tags[2].split('|')[1],
           _html = '<a class="app-icon has-trans CMCM_AutoWidthSibling" href="'+ _link +'" target="'+ _target +'">\
-                    <img class="has-anim" src="'+ _icon +'" alt="'+ _name +'" />\
+                    <img src="'+ _icon +'" alt="'+ _name +'" />\
                   </a>\
                   <div class="live-info CMCM_AutoWidth" data-padding="10">\
-                    <h3 class="app-name has-anim">\
+                    <h3 class="app-name">\
                       <a class="app-namelink has-trans" href="'+ _link +'" target="'+ _target +'">'+ _name +'</a>\
                     </h3>\
-                    <div class="app-desc has-anim">'+ _descForIndex +'</div>\
-                    <ul class="live-datas has-anim clearfix">\
+                    <div class="app-desc">'+ _descForIndex +'</div>\
+                    <ul class="live-datas clearfix">\
                       <li class="live-data">\
                         <strong class="earth">'+ _earth1 +'</strong>\
                         <b>'+ _earth2 +'</b><s class="line"></s>\
@@ -897,7 +907,8 @@
     BindScrolling: function() {
       var me = this,
           cateContainers = $('.CMCM_CategoryContainer'),
-          scrollLimit = 380;
+          scrollLimit = 380,
+          lastScrollTop = 0;
       me._win.scroll(function(){
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         me.AddAnimateToElement(scrollTop);
@@ -909,7 +920,8 @@
         /* Subpage left menu only displays on desktop: */
         if (window.innerWidth <= 768) return;
         if (scrollTop >= 54) {
-          me.page.subPageMenu.addClass('fixed').css('top', scrollTop + 54);
+          // me.page.subPageMenu.addClass('fixed').css('top', scrollTop + 54);
+          me.page.subPageMenu.addClass('fixed');
         } else {
           me.page.subPageMenu.removeClass('fixed');
         }
@@ -936,12 +948,13 @@
               subMenuAncFootTop = me.page.subPageMenuFoot.offset().top;
           if (subMenuAncFootTop >= subPageCtBottomTop) {
             me.page.subPageMenu.addClass('sticky');
-            me.page.subPageMenu.css('top', scrollTop)
-            if (scrollTop <= subMenuAncHeadTop) {
-              me.page.subPageMenu.removeClass('sticky');
-            }
+          } 
+          var _sumDis = scrollTop + me.page.subPageMenu.height();
+          if (scrollTop < lastScrollTop && _sumDis <= subMenuAncHeadTop) { // When scrolling up
+            me.page.subPageMenu.removeClass('sticky');
           }
         }
+        lastScrollTop = scrollTop;
       }); // End scroll
     },
     
@@ -1013,8 +1026,8 @@
         me.page.cultureValues.mouseenter(function(){
           var _i = $(this), token = _i.attr('data');
           var _descr = $('.vd-'+ token);
-          _i.addClass(me.clsn);
           me.page.cultureValDescr.removeClass(me.clsn);
+          _i.addClass(me.clsn);
           _descr.addClass(me.clsn);
         });
         me.page.cultureValues.mouseleave(function(){

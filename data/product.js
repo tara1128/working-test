@@ -1,4 +1,4 @@
-var ProductList = {
+window.CMCM_ProductList = {
   'zh-cn': {
     page: 'any',
     name: '产品服务',
@@ -313,13 +313,13 @@ var ProductList = {
                 name: '智能语音OS',
                 slog: '',
                 icon: '',
-                descForIndex: ['由猎豹移动旗下人工智能公司猎户星空开发，拥有全自主知识产权的全链路远场智能语音交互系统，其麦克风阵列、语音唤醒、语音识别、语义等软硬件技术均领先于行业水平。深度打磨语音交互体验，首创多种自然拟人的交互技术，结合丰富的内容矩阵，为用户带来最人性化的语音交互体验'],
+                descForIndex: ['旗下人工智能公司猎户星空自主开发的“全链路远场智能语音交互系统”。其麦克风阵列、语音唤醒、语音识别、语义理解、语音合成等软硬件技术均处于行业领先水平。所有技术均属自主知识产权，与产品体验设计深度融合，极致打磨。首创多种自然拟人的交互技术，打造出最人性化的语音交互体验'],
                 descForProd: [], // This product shows on index only!
                 star: 0,
                 tags: [
                   {num: 5, adj: '大', noun: '语音技术', sentence: '全链路自主研发'},
-                  {num: 6, adj: '项', noun: '拟人技术', sentence: '最人性化的交互'},
-                  {num: 1, adj: '亿+', noun: '有声内容量', sentence: '为用户深度定制'}
+                  {num: 6, adj: '项', noun: '创新技术', sentence: '最人性化的交流'},
+                  {num: 1, adj: '亿+', noun: '音频内容', sentence: '为用户深度定制'}
                 ],
                 link: 'http://ainirobot.com/pc_liehu.html',
                 target: '_blank',
@@ -659,6 +659,19 @@ var ProductList = {
             data: [
               {
                 priority: '',
+                name: 'Clean Master for PC',
+                slog: '',
+                icon: '/dist/images/brandnew-logo-clean-master-103.png',
+                descForIndex: [],
+                descForProd: ['Clean Master for PC takes the tried-and-true mobile cleaning utility software and brings it to the desktop so that Windows users can clean their system of junk files and improve the overall performance of their PCs. The Standard version, which is absolutely free, also offers privacy protection so that users can lock out intruders and easily remove browsing records. A low-cost Premium version is available as well, giving users peace of mind with the ability to recover accidentally deleted files or re-formatted hard drives and memory cards.'],
+                star: 0,
+                tags: [],
+                link: 'https://www.cleanmasterofficial.com/en-us/?f=cmnew',
+                target: '_blank',
+                pict: ''
+              },
+              {
+                priority: '',
                 name: 'CM Browser',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-browser-103.png',
@@ -696,19 +709,6 @@ var ProductList = {
                 target: '_blank',
                 pict: ''
               },
-              {
-                priority: '',
-                name: 'Clean Master for PC',
-                slog: '',
-                icon: '/dist/images/brandnew-logo-clean-master-103.png',
-                descForIndex: [],
-                descForProd: ['Clean Master for PC takes the tried-and-true mobile cleaning utility software and brings it to the desktop so that Windows users can clean their system of junk files and improve the overall performance of their PCs. The Standard version, which is absolutely free, also offers privacy protection so that users can lock out intruders and easily remove browsing records. A low-cost Premium version is available as well, giving users peace of mind with the ability to recover accidentally deleted files or re-formatted hard drives and memory cards.'],
-                star: 0,
-                tags: [],
-                link: '',
-                target: '_blank',
-                pict: ''
-              }
             ]
           }
         }
@@ -816,4 +816,4 @@ var ProductList = {
       }
     } // category
   },
-}
+};

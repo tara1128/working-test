@@ -1,4 +1,4 @@
-var PublicFooter = {
+window.CMCM_PublicFooter = {
   'zh-cn': {
     page: 'all',
     name: '猎豹移动',
@@ -89,4 +89,4 @@ var PublicFooter = {
       }
     }
   },
-}
+};
