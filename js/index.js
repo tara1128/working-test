@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-20 17:26
+  Latest modified: 2017-11-21 17:26
 */
 
 (function(win, doc, $) {
@@ -15,6 +15,7 @@
     clsn: 'active',
 		init: function(pageObj) {
       var me = this;
+      me._body.css('min-height', window.innerHeight);
       me.page = pageObj;
       me.DetectLanguage();
       me.DetectCurrentPage();
@@ -412,8 +413,6 @@
     /* Render sub page, including left menu and main contents: */
     RenderSubPages: function() {
       var me = this, dataList = null;
-      var winHeight = window.innerHeight;
-      me.page.subPageContent.css('min-height', winHeight);
       if (me.curr == 'company') {
         dataList = me.companyInfoList;
         me.RenderCompanyMission(dataList);
@@ -1046,16 +1045,16 @@
           }
         });
       }
-      /* Click menus on the left of sub pages: */
+      /* Click menus on the left of sub pages:
       if (me.curr != 'index') {
         me.page.subMenuItems.click(function(){
           var _i = $(this);
           me.page.subMenuItems.removeClass(me.clsn);
-          _i.addClass(me.clsn);
           me.page.subMenuSubAs.removeClass(me.clsn);
+          _i.addClass(me.clsn);
           $(_i.parent().find('.CMCM_SMD_A')[0]).addClass(me.clsn);
         });
-        /* Click submenus on the left of sub pages: */
+        /* Click submenus on the left of sub pages:
         me.page.subMenuSubAs.click(function(){
           var _i = $(this);
           var myFth = _i.parent();
@@ -1068,8 +1067,10 @@
           }
         });
       }
+      */
       /* ==== Make scrolling smooth ==== */
       // Select all links with hashes except those actually linking to nothing
+      /*
       $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
         var target = $(this.hash);
         var topValue = target.offset().top - 70;
@@ -1082,6 +1083,7 @@
           });
         }
       });
+      */
     },
 
   };
