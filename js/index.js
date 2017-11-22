@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-21 17:26
+  Latest modified: 2017-11-22 19:41
 */
 
 (function(win, doc, $) {
@@ -16,6 +16,7 @@
 		init: function(pageObj) {
       var me = this;
       me._body.css('min-height', window.innerHeight);
+      console.log(1941);
       me.page = pageObj;
       me.DetectLanguage();
       me.DetectCurrentPage();
@@ -76,7 +77,7 @@
       return collection;
     },
 
-    /* Output paragraph by paragraph from an array: */
+    /* Global function, output paragraph by paragraph from an array: */
     ArrayOutput: function(array, htmlTag, htmlCloseTag) {
       if (array.length < 1 || !array) return;
       var result = '';
@@ -86,6 +87,18 @@
         result += (htmlTag + text + htmlCloseTag);
       });
       return result;
+    },
+
+    /* Global function, for smooth scrolling: */
+    SmoothScrolling: function(target, topValue, e) {
+      if (target.length) {
+        if (e) e.preventDefault();
+        $('html, body').animate({
+          scrollTop:topValue
+        }, 800, function() { //Callback, must change focus!
+          $(target).focus();
+        });
+      }
     },
     
     /* Render top bar to the first screen for all pages: */
@@ -195,10 +208,10 @@
                         <div class="ai-chips abs ai-voice-wakeup has-anim"></div>\
                       </div><!-- ai right -->';
       var _leftHtml = '<div class="ai-left-content">\
-                        <h3 class="app-name has-anim">\
+                        <h3 class="app-name">\
                           <a class="app-namelink has-trans" href="'+ aiProLink +'" target="'+ aiProTarg +'">'+ aiProName +'</a>\
                         </h3>\
-                        <div class="app-desc has-anim">'+ aiProDesc +'</div>\
+                        <div class="app-desc">'+ aiProDesc +'</div>\
                       </div><!-- ai left -->';
       me.page.inxAIContainer.append(_leftHtml).append(_rightHtm);
     },
@@ -247,7 +260,7 @@
                             <div class="big-pic abs" style="'+ _ifShowPict +'">\
                               <img src="'+ _pict + '" alt="'+ _name +'" />\
                             </div>\
-                            <a class="app-icon has-trans CMCM_AutoWidthSibling" href="'+ _link +'" target="'+ _target +'">\
+                            <a class="app-icon CMCM_AutoWidthSibling" href="'+ _link +'" target="'+ _target +'">\
                               <img src="'+ _icon +'" alt="'+ _name +'" />\
                             </a>\
                             <div class="tool-info CMCM_AutoWidth" data-padding="10">\
@@ -330,21 +343,21 @@
                       <a class="app-namelink has-trans" href="'+ _link +'" target="'+ _target +'">'+ _name +'</a>\
                     </h3>\
                     <div class="app-desc">'+ _descForIndex +'</div>\
-                    <ul class="live-datas clearfix">\
-                      <li class="live-data">\
-                        <strong class="earth">'+ _earth1 +'</strong>\
-                        <b>'+ _earth2 +'</b><s class="line"></s>\
-                      </li>\
-                      <li class="live-data">\
-                        <strong class="tongue">'+ _tongu1 +'</strong>\
-                        <b>'+ _tongu2 +'</b><s class="line"></s>\
-                      </li>\
-                      <li class="live-data">\
-                        <strong class="award">'+ _award1 +'</strong>\
-                        <b>'+ _award2 +'</b>\
-                      </li>\
-                    </ul>\
-                  </div><!-- live info -->';
+                  </div><!-- live info -->\
+                  <ul class="live-datas clearfix">\
+                    <li class="live-data">\
+                      <strong class="earth">'+ _earth1 +'</strong>\
+                      <b>'+ _earth2 +'</b><s class="line"></s>\
+                    </li>\
+                    <li class="live-data">\
+                      <strong class="tongue">'+ _tongu1 +'</strong>\
+                      <b>'+ _tongu2 +'</b><s class="line"></s>\
+                    </li>\
+                    <li class="live-data">\
+                      <strong class="award">'+ _award1 +'</strong>\
+                      <b>'+ _award2 +'</b>\
+                    </li>\
+                  </ul>';
       me.page.inxLivemeTextContainer.html(_html);
     },
     
@@ -377,12 +390,12 @@
       var me = this;
       var newsData = proList.category.mobileApps.categoryData.news.data[0];
       var newsHtml = '<a class="app-icon has-trans CMCM_AutoWidthSibling" href="'+ newsData.link +'" target="'+ newsData.target +'">\
-                        <img class="has-anim" src="'+ newsData.icon +'" alt="'+ newsData.name +'" />\
+                        <img src="'+ newsData.icon +'" alt="'+ newsData.name +'" />\
                       </a>\
                       <div class="news-info CMCM_AutoWidth" data-padding="10">\
                         <h3 class="app-name has-anim">\
-                          <a class="app-namelink has-trans has-anim" href="'+ newsData.link +'" target="'+ newsData.target +'">'+ newsData.name +'</a>\
-                        </h3>' + me.ArrayOutput(newsData.descForIndex, '<div class="app-desc has-anim">', '</div>') +'\
+                          <a class="app-namelink has-trans" href="'+ newsData.link +'" target="'+ newsData.target +'">'+ newsData.name +'</a>\
+                        </h3>' + me.ArrayOutput(newsData.descForIndex, '<div class="app-desc">', '</div>') +'\
                       </div>';
       me.page.inxNRContainer.html(newsHtml);
     },
@@ -410,9 +423,18 @@
       // me.RenderNROnIndex(me.productList);
     },
 
+    /* Detect subpage url hash, scroll to the target position: */
+    DetectSubPageUrlHash: function() {
+      var hash = window.location.hash;
+      if (!hash || hash.length < 1) return;
+      // var target = $(hash);
+      // var targetTop = target.offset().top;
+    },
+
     /* Render sub page, including left menu and main contents: */
     RenderSubPages: function() {
       var me = this, dataList = null;
+      // me.DetectSubPageUrlHash();
       if (me.curr == 'company') {
         dataList = me.companyInfoList;
         me.RenderCompanyMission(dataList);
@@ -977,6 +999,7 @@
     /* After renderings, bind events to elements: */
     BindAllEvents: function() {
       var me = this;
+      /*
       me.page.topNavLi.mouseenter(function(){
         var _i = $(this);
         _i.find('.top-nav-sub').addClass(me.clsn);
@@ -987,6 +1010,7 @@
         _i.find('.top-nav-sub').removeClass(me.clsn);
         _i.find('b').removeClass(me.clsn);
       });
+      */
       /* Unfold burger nav on mobiles: */
       me.page.topBurger.click(function(){
         var cls = 'unfold';
@@ -1045,21 +1069,25 @@
           }
         });
       }
-      /* Click menus on the left of sub pages:
+      /* Click menus on the left of sub pages: */
       if (me.curr != 'index') {
-        me.page.subMenuItems.click(function(){
-          var _i = $(this);
+        me.page.subMenuItems.click(function(event){
+          var _i = $(this), target = $(this.hash);
+          var topValue = target.offset().top - 70;
+          me.SmoothScrolling(target, topValue, event);
           me.page.subMenuItems.removeClass(me.clsn);
           me.page.subMenuSubAs.removeClass(me.clsn);
           _i.addClass(me.clsn);
           $(_i.parent().find('.CMCM_SMD_A')[0]).addClass(me.clsn);
         });
-        /* Click submenus on the left of sub pages:
-        me.page.subMenuSubAs.click(function(){
-          var _i = $(this);
+        /* Click submenus on the left of sub pages: */
+        me.page.subMenuSubAs.click(function(event){
+          var _i = $(this), target = $(this.hash);
+          var topValue = target.offset().top - 70;
           var myFth = _i.parent();
           var myMenu = myFth.parent().find('.CMCM_SubMenuItem');
           if ( !_i.hasClass(me.clsn) ) {
+            me.SmoothScrolling(target, topValue, event);
             me.page.subMenuItems.removeClass(me.clsn);
             me.page.subMenuSubAs.removeClass(me.clsn);
             myMenu.addClass(me.clsn);
@@ -1067,23 +1095,6 @@
           }
         });
       }
-      */
-      /* ==== Make scrolling smooth ==== */
-      // Select all links with hashes except those actually linking to nothing
-      /*
-      $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
-        var target = $(this.hash);
-        var topValue = target.offset().top - 70;
-        if (target.length) {
-          event.preventDefault();
-          $('html, body').animate({
-            scrollTop: topValue
-          }, 800, function() { //Callback, must change focus!
-            $(target).focus();
-          });
-        }
-      });
-      */
     },
 
   };

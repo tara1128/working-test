@@ -545,7 +545,7 @@ window.CMCM_ProductList = {
                 descForIndex: ['Global social live broadcasting phenomenon. One of the most popular social media apps among young people worldwide. After launching in April 2016, Live.me quickly rose to the top of the app rankings, becoming the fastest growing live broadcasting app ever in the U.S. Ranked #1 on Google Play\'s social bestseller rankings in 42 countries.'],
                 descForProd: ['After launching in April 2016, Cheetah\'s live broadcasting social app Live.me quickly rose to the top of the app rankings. It has attracted a large number of celebrities and influencers, and has become one of the most popular social apps among young U.S. users today. Available in 7 languages across 85 countries and regions. Ranked #1 on Google Play\'s best-selling social app rankings in 42 countries.'],
                 star: 0,
-                tags: ['85 Markets|Covers multiple cultures', '8 Languages|Integrates local needs', '42 Countries|Tops social bestseller list'],
+                tags: ['85 Markets|Covers multiple<br>cultures', '8 Languages|Integrates<br>local needs', '42 Countries|Tops social<br>bestseller list'],
                 link: 'http://www.liveme.com/',
                 target: '_blank',
                 pict: ''
