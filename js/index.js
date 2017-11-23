@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-23 17:20
+  Latest modified: 2017-11-23 18:40
 */
 
 (function(win, doc, $) {
@@ -105,7 +105,6 @@
     ResetFirstScreenHeight: function() {
       var me = this;
       var devHeight = window.innerHeight;
-      alert( 'Device height is' + devHeight );
       me.page.firstScreen.height(devHeight);
       me.page.mobileSwiper.height(devHeight);
     },
@@ -436,7 +435,6 @@
 
     /* Detect subpage url hash, scroll to the target position: */
     DetectSubPageUrlHash: function() {
-      var me = this;
       var hash = window.location.hash;
       if (!hash || hash.length < 1) return;
       var target = $(hash);
@@ -521,7 +519,7 @@
           _slog = _data.slogan,
           _desc = _data.descrp,
           _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
-                    <h2 class="category-title font-book">'+ _name +'</h2>\
+                    <h2 class="category-title">'+ _name +'</h2>\
                     <div class="one-app-introduction clearfix">\
                       <h1 class="cmcm-slogan">'+ _slog +'</h1>\
                       <p class="under-slogan">'+ _desc +'</p>\
@@ -542,7 +540,7 @@
           _imge = _data.introImage,
           _text = me.ArrayOutput(_arry, '<p class="company-intros">', '</p>'),
           _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
-                     <h2 class="category-title font-book">'+ _name +'</h2>\
+                     <h2 class="category-title">'+ _name +'</h2>\
                      <div class="one-app-introduction clearfix">\
                        <img class="company-view" src="'+ _imge +'" alt="'+ _name +'" />\
                        '+ _text +'</div><!-- one app introduction -->\
@@ -566,15 +564,15 @@
         var _evtHtm = '';
         for (var month in _events) {
           _evtHtm += '<div class="history-item clearfix">\
-                        <span>'+ month +'</span><b>'+ _events[month] +'</b>\
+                        <span class="font-book">'+ month +'</span><b>'+ _events[month] +'</b>\
                       </div><!-- item -->';
         } // End for-in
         allHistories += '<div class="history-one-year clearfix">\
-                            <h3 class="year-number">'+ _year +'</h3>'+ _evtHtm +'<s>Dots</s>\
+                            <h3 class="year-number font-book">'+ _year +'</h3>'+ _evtHtm +'<s>Dots</s>\
                          </div><!-- history-one-year -->';
       }); // End map
       var _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
-                     <h2 class="category-title font-book">'+ _name +'</h2>\
+                     <h2 class="category-title">'+ _name +'</h2>\
                      <div class="one-app-introduction clearfix">'+ allHistories +'</div>\
                    </div><!-- category container of history -->';
       me.page.companyContainer.append(_html);
@@ -609,7 +607,7 @@
                         </div><!-- one app introduction -->';
       }); // End map
       var _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
-                      <h2 class="category-title font-book">'+ _name +'</h2>'+ _allLeaders +'\
+                      <h2 class="category-title">'+ _name +'</h2>'+ _allLeaders +'\
                    </div><!-- category container of executive team -->';
       me.page.companyContainer.append(_html);
     },
@@ -651,6 +649,7 @@
                                 <img class="vmob-icon has-trans" src="'+ _icon +'" alt="'+ _text +'" />\
                                 <img class="vmob-cute has-trans" src="'+ _cute +'" alt="'+ _text +'" />\
                                 <span class="vmob-txt has-trans">'+ _text +'</span>\
+                                <s class="dot1 has-trans"></s><s class="dot2 has-trans"></s><s class="dot3 has-trans"></s>\
                               </div><!-- val-mob-item -->';
           _firstThreeDescr += '<div class="vmob-descr has-trans CMCM_ValueDescrOnMobile vmd-'+ _clsn +'">'+ _desc +'</div>';
         } else {/* Last two items render on the second row, for mobile: */
@@ -658,12 +657,13 @@
                                 <img class="vmob-icon has-trans" src="'+ _icon +'" alt="'+ _text +'" />\
                                 <img class="vmob-cute has-trans" src="'+ _cute +'" alt="'+ _text +'" />\
                                 <span class="vmob-txt has-trans">'+ _text +'</span>\
+                                <s class="dot1 has-trans"></s><s class="dot2 has-trans"></s><s class="dot3 has-trans"></s>\
                               </div><!-- val-mob-item -->';
           _lastTwoDescr += '<div class="vmob-descr has-trans CMCM_ValueDescrOnMobile vmd-'+ _clsn +'">'+ _desc +'</div>';
         }
       }); // End map
       var _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
-                    <h2 class="category-title font-book">'+ _name +'</h2>\
+                    <h2 class="category-title">'+ _name +'</h2>\
                     <div class="one-app-introduction clearfix">\
                       <div class="values-container rel">\
                         <ul class="values-display-on-pc clearfix">'+ _vHtm +'</ul>\
@@ -706,7 +706,7 @@
                   </div>';
       }); // End map
       var _html = '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
-                    <h2 class="category-title font-book">'+ _name +'</h2>\
+                    <h2 class="category-title">'+ _name +'</h2>\
                     <div class="one-app-introduction clearfix">\
                       '+ _text +'<div class="welfare-imgs clearfix">'+ _pics +'</div>\
                     </div><!-- one app introduction -->\
@@ -755,7 +755,7 @@
             }); // End map
             /* NOTE: One unit area in page is based on one sub cate, not big cate. */
             _html += '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
-                        <h2 class="category-title font-book">'+ _name +'</h2>\
+                        <h2 class="category-title">'+ _name +'</h2>\
                         '+ _allAppsInThisSubCate +'\
                       </div><!-- end of category container -->';
           } // End if
@@ -809,7 +809,7 @@
           });
         }
         _html += '<div class="category-container CMCM_CategoryContainer '+ _csan +'" id="'+ _hash +'">\
-                    <h2 class="category-title font-book">'+ _name +'</h2>\
+                    <h2 class="category-title">'+ _name +'</h2>\
                     <div class="one-app-introduction clearfix">'+ _details +'</div>\
                   </div><!-- category container -->';
       }
