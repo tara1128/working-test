@@ -296,7 +296,7 @@ window.CMCM_CompanyInfoList = {
             {
               name: 'Fu Sheng',
               title: 'CEO',
-              detail: ['Fu Sheng is responsible for leading Cheetah Mobile\'s overall product and artificial intelligence strategies. Under his leadership, Cheetah Mobile became one of the first Chinese internet companies to successfully expand overseas. Mr. Fu previously worked at Qihoo 360 as General Manager of the software group for five years. He also served as VP of Matrix Partners China. In 2009 he founded Conew Image, where he served as chairman and CEO.'],
+              detail: ['Fu Sheng is responsible for leading Cheetah Mobile\'s overall product and artificial intelligence strategies. Under his leadership, Cheetah Mobile became one of the first Chinese internet companies to successfully expand overseas. Mr. Fu previously worked at Qihoo 360 as General Manager of the software group for five years. He also served as VP of Matrix Partners China. In 2009 he founded Conew Image, serving as chairman and CEO.'],
               avatar: '/dist/images/leaders-fusheng.jpg'
             },
             {

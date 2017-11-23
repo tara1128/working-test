@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-22 19:41
+  Latest modified: 2017-11-23 17:20
 */
 
 (function(win, doc, $) {
@@ -16,7 +16,7 @@
 		init: function(pageObj) {
       var me = this;
       me._body.css('min-height', window.innerHeight);
-      console.log(1941);
+      console.log(1123);
       me.page = pageObj;
       me.DetectLanguage();
       me.DetectCurrentPage();
@@ -100,6 +100,15 @@
         });
       }
     },
+
+    /* Reset first screen's height on mobiles to fit devices: */
+    ResetFirstScreenHeight: function() {
+      var me = this;
+      var devHeight = window.innerHeight;
+      alert( 'Device height is' + devHeight );
+      me.page.firstScreen.height(devHeight);
+      me.page.mobileSwiper.height(devHeight);
+    },
     
     /* Render top bar to the first screen for all pages: */
     RenderTopBar: function(pubNav) {
@@ -159,7 +168,8 @@
 
     /* Index first screen slider: */
     SwiperInit: function() {
-      if (window.innerWidth > 768) {
+      var me = this;
+      if (window.innerWidth > 768) { /* On PC */
         new Swiper('.billboard-swiper-container', {
           paginationClickable:true,
           spaceBetween:0,
@@ -167,7 +177,8 @@
           autoplay:0,
           autoplayDisableOnInteraction:false
         });
-      } else {
+      } else { /* On mobiles */
+        me.ResetFirstScreenHeight();
         new Swiper('.billboard-swiper-for-mobile', {
           paginationClickable:true,
           spaceBetween:0,
@@ -257,7 +268,7 @@
         if (_descForIndex && _descForIndex.length > 1) _ifDisplayOnIndex = 'display:block;';
         var _toolUnit = '<div class="tool-unit '+ _proportion +' rel '+ _ifHasBorderRight +'" style="'+ _ifDisplayOnIndex +'">\
                           <div class="tool-inner clearfix">\
-                            <div class="big-pic abs" style="'+ _ifShowPict +'">\
+                            <div class="big-pic abs has-anim" style="'+ _ifShowPict +'">\
                               <img src="'+ _pict + '" alt="'+ _name +'" />\
                             </div>\
                             <a class="app-icon CMCM_AutoWidthSibling" href="'+ _link +'" target="'+ _target +'">\
@@ -425,16 +436,21 @@
 
     /* Detect subpage url hash, scroll to the target position: */
     DetectSubPageUrlHash: function() {
+      var me = this;
       var hash = window.location.hash;
       if (!hash || hash.length < 1) return;
-      // var target = $(hash);
-      // var targetTop = target.offset().top;
+      var target = $(hash);
+      var targetTop = target.offset().top;
+      $('html, body').animate({
+        scrollTop:targetTop + 100
+      }, 200, function() { //Callback, must change focus!
+        $(target).focus();
+      });
     },
 
     /* Render sub page, including left menu and main contents: */
     RenderSubPages: function() {
       var me = this, dataList = null;
-      // me.DetectSubPageUrlHash();
       if (me.curr == 'company') {
         dataList = me.companyInfoList;
         me.RenderCompanyMission(dataList);
@@ -454,6 +470,7 @@
       }
       me.RenderSubPageMenu(dataList);
       me.AdjustLeftMenuPositions();
+      // me.DetectSubPageUrlHash();
     },
 
     /* Render left menu in sub pages: */
@@ -1104,6 +1121,7 @@
 (function($) {
   var realPage = {
     firstScreen: $('#CMCM_FirstScreen'),
+    mobileSwiper: $('#CMCM_SwiperInMobile'),
     inxAIContainer: $('#CMCM_AIContainer'),
     inxToolsContainer: $('#CMCM_ToolsContainer'),
     inxSloganEle: $('#CMCM_Slogan'),

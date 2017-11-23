@@ -443,7 +443,7 @@ window.CMCM_ProductList = {
                 tags: ['3 billion downloads globally', '#1 tool app in 100 countries'],
                 link: 'http://www.cmcm.com/en-us/clean-master/',
                 target: '_blank',
-                pict: '/dist/images/brandnew-tool-cm.png'
+                pict: '/dist/images/brandnew-tool-cm-en.png'
               },
             
               {
@@ -747,7 +747,7 @@ window.CMCM_ProductList = {
                 star: 0,
                 tags: [
                   {num: 5, adj: 'major', noun: 'voice technologies', sentence: 'fully-linked, self-developed'},
-                  {num: 6, adj: 'major', noun: 'personification technologies', sentence: 'highly personalized interactions'},
+                  {num: 6, adj: 'major', noun: 'innovative technologies', sentence: 'highly personalized interactions'},
                   {num: 1, adj: 'million+', noun: 'voice sample capacity', sentence: 'deep customization for users'}
                 ],
                 link: 'http://ainirobot.com/pc_liehu.html',

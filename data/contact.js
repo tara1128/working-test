@@ -326,7 +326,7 @@ window.CMCM_ContactList = {
           classAnchor: 'category-of-clients',
           datas: [
             {
-              title: 'Need help with our products? You can reach us through the following emails:',
+              title: 'Need help with our products?<br>You can reach us through the following emails:',
               details: [
                 '<b>Clean Master</b>: support@cmcm.com',
                 '<b>Security Master</b>: cmsecurity@cmcm.com',
