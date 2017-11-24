@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-23 18:40
+  Latest modified: 2017-11-24 16:05
 */
 
 (function(win, doc, $) {
@@ -16,7 +16,7 @@
 		init: function(pageObj) {
       var me = this;
       me._body.css('min-height', window.innerHeight);
-      console.log(1123);
+      console.log(1233);
       me.page = pageObj;
       me.DetectLanguage();
       me.DetectCurrentPage();
@@ -826,7 +826,7 @@
         if (_l != me.lang) langsListHtml += '<a class="one-lang has-trans" href="'+ langsCol[_l].homeLink +'">'+ langsCol[_l].name +'</a>';
       }
       var ftRHtml = '<div class="footer-right clearfix rel">\
-                      <div id="CMCM_FooterRight"></div>\
+                      <div class="clearfix" id="CMCM_FooterRight"></div>\
                       <div class="bottom-right abs clearfix">\
                         <ul class="clearfix">\
                           <li><a class="has-trans" href="'+ copyrightObj.pvyLink +'">'+ copyrightObj.privacy +'</a></li>\
@@ -965,7 +965,7 @@
         }
         /* Highlight the current content's menu, on desktop only: */
         cateContainers.map(function(index, item){
-          if ( $(this).offset().top < (scrollTop + 100) ) {
+          if ( $(this).offset().top < (scrollTop + 200) ) {
             var targetA = $('a[href="#'+ this.id +'"]');
             me.page.subPageMenu.find('a').removeClass(me.clsn);
             targetA.addClass(me.clsn);
@@ -976,7 +976,12 @@
             $('a[href="#'+ this.id +'"]').removeClass(me.clsn);
             if (index == 0) $('a[href="#'+ item.id +'"]').addClass(me.clsn);
           } else {
-            $('a[href="#'+ this.id +'"]').removeClass(me.clsn);;
+            $('a[href="#'+ this.id +'"]').removeClass(me.clsn);
+            /* For tall screens, highlight the last menu when scrolling to the bottom: */
+            if (me._win.height() + scrollTop >= document.body.scrollHeight - 200) {
+              $('a[href="#'+ cateContainers[cateContainers.length-2].id +'"]').removeClass(me.clsn);
+              $('a[href="#'+ cateContainers[cateContainers.length-1].id +'"]').addClass(me.clsn);
+            }
           }
         }); // End map
         /* In sub pages, make left menu sticky when scrolling to the bottom: */
