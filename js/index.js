@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-24 19:08
+  Latest modified: 2017-11-24 19:54
 */
 
 (function(win, doc, $) {
@@ -978,7 +978,8 @@
           } else {
             $('a[href="#'+ this.id +'"]').removeClass(me.clsn);
             /* For tall screens, highlight the last menu when scrolling to the bottom: */
-            if (me._win.height() + scrollTop >= document.body.scrollHeight - 200) {
+            if (me._win.height() + scrollTop >= document.body.scrollHeight - 100) {
+              $('a[href="#'+ cateContainers[cateContainers.length-3].id +'"]').removeClass(me.clsn);
               $('a[href="#'+ cateContainers[cateContainers.length-2].id +'"]').removeClass(me.clsn);
               $('a[href="#'+ cateContainers[cateContainers.length-1].id +'"]').addClass(me.clsn);
             }
