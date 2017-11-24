@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-24 16:05
+  Latest modified: 2017-11-24 19:08
 */
 
 (function(win, doc, $) {
@@ -16,7 +16,7 @@
 		init: function(pageObj) {
       var me = this;
       me._body.css('min-height', window.innerHeight);
-      console.log(1233);
+      console.log(1914);
       me.page = pageObj;
       me.DetectLanguage();
       me.DetectCurrentPage();
@@ -275,7 +275,7 @@
                             </a>\
                             <div class="tool-info CMCM_AutoWidth" data-padding="10">\
                               <h3 class="app-name">\
-                                <a class="app-namelink has-trans" href="'+ _link +'" target="'+ _target +'">'+ _name +'</a>\
+                                <a class="app-namelink tool-appname-'+ i +' has-trans" href="'+ _link +'" target="'+ _target +'">'+ _name +'</a>\
                               </h3>\
                               <div class="app-desc">'+ _descForIndex +'</div>\
                               <div class="tool-rank clearfix has-anim CMCM_Rank" data="'+ _star +'"></div>\
@@ -350,7 +350,7 @@
                   </a>\
                   <div class="live-info CMCM_AutoWidth" data-padding="10">\
                     <h3 class="app-name">\
-                      <a class="app-namelink has-trans" href="'+ _link +'" target="'+ _target +'">'+ _name +'</a>\
+                      <a class="app-namelink liveme-appname has-trans" href="'+ _link +'" target="'+ _target +'">'+ _name +'</a>\
                     </h3>\
                     <div class="app-desc">'+ _descForIndex +'</div>\
                   </div><!-- live info -->\
