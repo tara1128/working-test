@@ -165,7 +165,7 @@ window.CMCM_ProductList = {
                 descForProd: ['一款挑战速度和反应力极限的轻游戏；具有3D立体感的超炫视觉和丰富多样的游戏场景。现累计下载已超2.4亿，141个海外市场App Store游戏下载榜前十，65个国家的总榜前十，iOS中国游戏免费下载榜Top 5，Google Play2016最佳游戏。'],
                 star: 0,
                 tags: [],
-                link: 'https://play.google.com/store/apps/details?id=com.turbochilli.rollingsky',
+                link: 'http://www.cmcm.com/zh-cn/rolling-sky/',
                 target: '_blank',
                 pict: ''
               },
@@ -542,8 +542,8 @@ window.CMCM_ProductList = {
                 name: 'Live.me',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-liveme-103.png',
-                descForIndex: ['Global social live broadcasting phenomenon. One of the most popular social media apps among young people worldwide. After launching in April 2016, Live.me quickly rose to the top of the app rankings, becoming the fastest growing live broadcasting app ever in the U.S. Ranked #1 on Google Play\'s social bestseller rankings in 42 countries.'],
-                descForProd: ['After launching in April 2016, Cheetah\'s live broadcasting social app Live.me quickly rose to the top of the app rankings. It has attracted a large number of celebrities and influencers, and has become one of the most popular social apps among young U.S. users today. Available in 7 languages across 85 countries and regions. Ranked #1 on Google Play\'s best-selling social app rankings in 42 countries.'],
+                descForIndex: ['Global social live broadcasting phenomenon. One of the most popular social media apps among young people worldwide. After launching in April 2016, Live.me quickly rose to the top of the app rankings, becoming the fastest growing live broadcasting app ever in the U.S. Highest grossing social app on Google Play in 42 countries.'],
+                descForProd: ['After launching in April 2016, Cheetah\'s live broadcasting social app Live.me quickly rose to the top of the app rankings. It has attracted a large number of celebrities and influencers, and has become one of the most popular social apps among young U.S. users today. Available in 7 languages across 85 countries and regions. Highest grossing social app on Google Play in 42 countries.'],
                 star: 0,
                 tags: ['85 Markets|Covers multiple<br>cultures', '8 Languages|Integrates<br>local needs', '42 Countries|Tops social<br>bestseller list'],
                 link: 'http://www.liveme.com/',
@@ -581,7 +581,7 @@ window.CMCM_ProductList = {
                 descForProd: ['Rolling Sky is a fast-paced casual game that challenges the limits of your speed and reaction time with stunning 3D visuals. Over 240 million total downloads. Top 10 in game downloads in 141 countries. Top 10 in overall downloads in 65 countries. Top 5 on the App Store\'s free download game rankings in China. One of Google Play\'s Best Games of the Year in 2016.'],
                 star: 0,
                 tags: [],
-                link: 'https://play.google.com/store/apps/details?id=com.turbochilli.rollingsky',
+                link: 'http://www.cmcm.com/en-us/rolling-sky/',
                 target: '_blank',
                 pict: ''
               },

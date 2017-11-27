@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-27 14:40
+  Latest modified: 2017-11-24 19:54
 */
 
 (function(win, doc, $) {
@@ -16,7 +16,7 @@
 		init: function(pageObj) {
       var me = this;
       me._body.css('min-height', window.innerHeight);
-      console.log('2017, Nov 27th, 14:40');
+      console.log(1914);
       me.page = pageObj;
       me.DetectLanguage();
       me.DetectCurrentPage();
@@ -24,9 +24,20 @@
       me.RenderPublicModules();
       me.RenderIndexPage();
       me.RenderSubPages();
+      /* After rendering, bind events: */
       me.AutoWidth();
       me.BindAllEvents();
       me.BindScrolling();
+    },
+
+    DetectGeolocation: function() {
+      navigator.geolocation.getCurrentPosition(function(pos){//Success callback
+      }, function(err){//Error callback
+      }, {//An optional PositionOptions object
+        enableHighAccuracy:true, //provide a more accurate position, needs more time and power to response.
+        timeout:15000,
+        maximumAge:0 //not use a cached position and must attempt to retrieve the real current position.
+      });
     },
 
     DetectLanguage: function() {
@@ -50,10 +61,20 @@
     },
 
     LanguageCollection: function() {
-      return {
+      var collection = {
         'en-us': {name: 'English', homeLink: '/en-us/'},
-        'zh-cn': {name: '简体中文', homeLink: '/zh-cn/'}
+        'zh-cn': {name: '简体中文', homeLink: '/zh-cn/'},
+        /*
+        'zh-tw': {name: '繁體中文', homeLink: '/zh-tw/'},
+        'es-es': {name: 'Español', homeLink: '/es-es/'},
+        'fr-fr': {name: 'Français', homeLink: '/fr-fr/'},
+        'ru-ru': {name: 'Pусский', homeLink: '/ru-ru/'},
+        'pt-pt': {name: 'Português', homeLink: '/pt-pt/'},
+        'ja-jp': {name: '日本語', homeLink: '/ja-jp/'},
+        'ko-kr': {name: '한국어', homeLink: '/ko-kr/'}
+        */
       };
+      return collection;
     },
 
     /* Global function, output paragraph by paragraph from an array: */
@@ -62,7 +83,7 @@
       var result = '';
       if (!htmlTag) htmlTag = '<span>';
       if (!htmlCloseTag) htmlCloseTag = '</span>';
-      jQuery.map(array, function(text){
+      array.map(function(text){
         result += (htmlTag + text + htmlCloseTag);
       });
       return result;
@@ -74,7 +95,7 @@
         if (e) e.preventDefault();
         $('html, body').animate({
           scrollTop:topValue
-        }, 600, function() { //Callback, must change focus!
+        }, 800, function() { //Callback, must change focus!
           $(target).focus();
         });
       }
@@ -88,39 +109,12 @@
       me.page.mobileSwiper.height(devHeight);
     },
     
-    /* Get the public navigator for all pages: */
-    PublicNav: function(navData) {
-      var me = this, _html = '';
-      jQuery.map(navData, function(item, index){
-        var _name = item.displayName,
-            _target = item.target,
-            _linkTo = item.linkTo,
-            _active = item.active,
-            _gaTags = item.gaTag,
-            _subNvs = item.subNavs,
-            _actCls = (_active == me.curr)?(me.clsn):(''),
-            _subNavHtml = '';
-        jQuery.map(_subNvs, function(subNav){
-          var _subNavName = subNav.subNavName,
-              _subNavHash = subNav.subNavLink,
-              _subLinkTo = (subNav.outlink)?(subNav.subNavLink):(_linkTo + '#' + _subNavHash);
-          _subNavHtml += '<a class="one-sub has-trans" href="'+_subLinkTo+'" target="'+_target+'">'+_subNavName+'</a>';
-        });
-        _html += '<li class="top-nav-li has-trans CMCM_TopNavLi">\
-                      <a class="top-nav-a has-trans '+_actCls+'" href="'+_linkTo+'" target="'+_target+'" onclick="ga(\'send\', \'event\', \''+_gaTags+'\', \'click\');">'+_name+'<s class="has-trans"></s><b class="has-trans"></b></a>\
-                      <div class="top-nav-sub">'+_subNavHtml+'</div>\
-                     </li>';
-      });
-      return _html;
-    },
-
     /* Render top bar to the first screen for all pages: */
     RenderTopBar: function(pubNav) {
       var me = this;
       var name = pubNav.name;
       var cnCls = (me.lang == 'zh-cn')?(me.clsn):('');
       var enCls = (me.lang == 'en-us')?(me.clsn):('');
-      var pubNv = me.PublicNav(me.publicNav.data);
       var _html = '<div class="top-bar" id="CMCM_TopBar">\
                     <div class="manage-width clearfix">\
                       <h1 class="top-logo has-trans">\
@@ -128,7 +122,6 @@
                       </h1>\
                       <div class="top-burger" id="CMCM_TopBurger"></div>\
                       <ul class="top-nav" id="CMCM_TopNav">\
-                        '+ pubNv +'\
                         <li class="top-nav-li has-trans top-langs" id="CMCM_TopLangSwitch">\
                           <div class="langs clearfix">\
                             <a class="lang-a has-trans '+ cnCls +'" href="/zh-cn/">简<s class="has-trans">&nbsp;</s></a>\
@@ -145,11 +138,37 @@
       me.page.topBurger = $('#CMCM_TopBurger');
     },
 
+    /* Render public navigator in all pages: */
+    RenderPublicNav: function(navData) {
+      var me = this;
+      navData.map(function(item, index){
+        var _name = item.displayName,
+            _target = item.target,
+            _linkTo = item.linkTo,
+            _active = item.active,
+            _gaTags = item.gaTag,
+            _subNvs = item.subNavs,
+            _actCls = (_active == me.curr)?(me.clsn):(''),
+            _subNavHtml = '';
+        _subNvs.map(function(subNav){
+          var _subNavName = subNav.subNavName,
+              _subNavHash = subNav.subNavLink,
+              _subLinkTo = (subNav.outlink)?(subNav.subNavLink):(_linkTo + '#' + _subNavHash);
+          _subNavHtml += '<a class="one-sub has-trans" href="'+_subLinkTo+'" target="'+_target+'">'+_subNavName+'</a>';
+        });
+        var _html = '<li class="top-nav-li has-trans CMCM_TopNavLi">\
+                      <a class="top-nav-a has-trans '+_actCls+'" href="'+_linkTo+'" target="'+_target+'" onclick="ga(\'send\', \'event\', \''+_gaTags+'\', \'click\');">'+_name+'<s class="has-trans"></s><b class="has-trans"></b></a>\
+                      <div class="top-nav-sub">'+_subNavHtml+'</div>\
+                     </li>';
+        $(_html).insertBefore('#CMCM_TopLangSwitch');
+      });
+      me.page.topNavLi = $('.CMCM_TopNavLi');
+    },
+
     /* Index first screen slider: */
     SwiperInit: function() {
       var me = this;
       if (window.innerWidth > 768) { /* On PC */
-        if ($('.billboard-swiper-container').find('.swiper-slide').length < 2) return;
         new Swiper('.billboard-swiper-container', {
           paginationClickable:true,
           spaceBetween:0,
@@ -183,7 +202,7 @@
           aiProLink = aiProductShown.link,
           aiProTarg = aiProductShown.target;
       if (me.lang != 'zh-cn') ifHide = 'hide';
-      jQuery.map(aiProTags, function(tag, i){
+      aiProTags.map(function(tag, i){
         threeBubbles += '<div class="ai-chips abs ai-bubbles ai-bubble-'+ (i+1) +' has-trans has-anim">\
                           <span class="ai-bbl-top has-trans"><b>'+ tag.num +'</b>'+ tag.adj +'</span>\
                           <span class="ai-bbl-mid has-trans">'+ tag.noun +'</span>\
@@ -211,9 +230,10 @@
     RenderToolsOnIndex: function(proList) {
       var me = this;
       var ToolsData = proList.category.mobileApps.categoryData.tool.data;
-      jQuery.map(ToolsData, function(tData, i){
+      ToolsData.map(function(tData, i){
         var _priority = tData.priority,
             _descForIndex = me.ArrayOutput(tData.descForIndex),
+            // _descForIndex = tData.descForIndex[0],
             _target = tData.target,
             _name = tData.name,
             _icon = tData.icon,
@@ -299,9 +319,10 @@
           cateForIndex_Tool = categoriesCollect.tool,
           cateForIndex_Socl = categoriesCollect.socl,
           cateForIndex_Game = categoriesCollect.game,
+          // cateForIndex_News = categoriesCollect.news,
           cateForIndex_ai = proList.category.ai.categoryData.ai,
           cateForIndex_all = [cateForIndex_ai, cateForIndex_Tool, cateForIndex_Socl, cateForIndex_Game];
-      jQuery.map(cateForIndex_all, function(Obj){
+      cateForIndex_all.map(function(Obj){
         $('#CMCM_Section_' + Obj.hash).find('.CMCM_SecTitle').html(Obj.name);
         $('#CMCM_Section_' + Obj.hash).find('.CMCM_SecDescr').html(me.ArrayOutput(Obj.desc));
       });
@@ -314,6 +335,7 @@
       var _name = livemeData.name,
           _icon = livemeData.icon,
           _descForIndex = me.ArrayOutput(livemeData.descForIndex),
+          // _descForIndex = livemeData.descForIndex[0],
           _tags = livemeData.tags,
           _link = livemeData.link,
           _target = livemeData.target,
@@ -373,10 +395,26 @@
       pg.inxGamesGJSName.html(gjsData.name);
     },
     
+    /* Render news republic on index: */
+    RenderNROnIndex: function(proList) {
+      var me = this;
+      var newsData = proList.category.mobileApps.categoryData.news.data[0];
+      var newsHtml = '<a class="app-icon has-trans CMCM_AutoWidthSibling" href="'+ newsData.link +'" target="'+ newsData.target +'">\
+                        <img src="'+ newsData.icon +'" alt="'+ newsData.name +'" />\
+                      </a>\
+                      <div class="news-info CMCM_AutoWidth" data-padding="10">\
+                        <h3 class="app-name has-anim">\
+                          <a class="app-namelink has-trans" href="'+ newsData.link +'" target="'+ newsData.target +'">'+ newsData.name +'</a>\
+                        </h3>' + me.ArrayOutput(newsData.descForIndex, '<div class="app-desc">', '</div>') +'\
+                      </div>';
+      me.page.inxNRContainer.html(newsHtml);
+    },
+
     /* Render public modules like top nav and footer: */
     RenderPublicModules: function() {
       var me = this;
       me.RenderTopBar(me.publicNav);
+      me.RenderPublicNav(me.publicNav.data);
       me.RenderPublicFooter(me.publicFooter);
     },
 
@@ -392,6 +430,7 @@
       me.RenderCategoryIntrosOnIndex(me.productList);
       me.RenderLiveMeOnIndex(me.productList);
       me.RenderGamesOnIndex(me.productList);
+      // me.RenderNROnIndex(me.productList);
     },
 
     /* Detect subpage url hash, scroll to the target position: */
@@ -519,7 +558,7 @@
           _csan = _data.classAnchor,
           _historyArray = _data.companyHistory,
           allHistories = '';
-      jQuery.map(_historyArray, function(oneYearEvents){
+      _historyArray.map(function(oneYearEvents){
         var _year = oneYearEvents.year;
         var _events = oneYearEvents.events;
         var _evtHtm = '';
@@ -549,7 +588,7 @@
           _csan = _data.classAnchor,
           _detl = _data.leaderDetails,
           _allLeaders = '';
-      jQuery.map(_detl, function(leader, i){
+      _detl.map(function(leader, i){
         var _leaderName = leader.name,
             _leaderTitle = leader.title,
             _leaderIntro = me.ArrayOutput(leader.detail, '<p>', '</p>'),
@@ -588,7 +627,7 @@
           _firstThreeDescr = '',
           _lastTwoCute = '',
           _lastTwoDescr = '';
-      jQuery.map(_cult, function(value, i){
+      _cult.map(function(value, i){
         var _clsn = value.valueClassName,
             _icon = value.valueIcon,
             _text = value.valueText,
@@ -657,7 +696,7 @@
           _imgs = _data.welfareImages,
           _text = me.ArrayOutput(_arry, '<p class="welfare-para">', '</p>'),
           _pics = '';
-      jQuery.map(_imgs, function(item, i){
+      _imgs.map(function(item, i){
         var _src = item.image,
             _des = item.descr,
             _lay = '';
@@ -692,7 +731,7 @@
                 _csan = _oneSubCate.anch,
                 _apps = _oneSubCate.data,
                 _allAppsInThisSubCate = '';
-            jQuery.map(_apps, function(app, i){
+            _apps.map(function(app, i){
               var _appName = app.name,
                   _appIcon = app.icon,
                   _appdescForProd = me.ArrayOutput(app.descForProd, '<p>', '</p>'),
@@ -763,7 +802,7 @@
                           '+ _globalLocations +'\
                         </div><!-- contact info, global map -->';
           } // End if
-          jQuery.map(_data.datas, function(detail, i){
+          _data.datas.map(function(detail, i){
             var _detailTitle = detail.title,
                 _detailTexts = me.ArrayOutput(detail.details, '<p>', '</p>');
             _details += '<div class="contact-info"><p class="cont-top-para">'+ _detailTitle +'</p>'+ _detailTexts +'</div><!-- contact info -->';
@@ -846,12 +885,12 @@
       var col_product = columnDataForFooter(me.productList);
       var col_contact = columnDataForFooter(me.contactList);
       /* Fetch outer links for footer, like ir and hr: */
-      jQuery.map(outlinks, function(link, i){
+      outlinks.map(function(link, i){
         var _name = link.linkName,
             _url = link.linkUrl,
             _subs = link.sublink,
             _sublinkHtml = '';
-        jQuery.map(_subs, function(lnk, i){
+        _subs.map(function(lnk, i){
           var _n = lnk.name, _u = lnk.url;
           _sublinkHtml += '<a href="'+ _u +'" target="_blank">'+ _n +'</a>';
         });
@@ -873,7 +912,7 @@
     AddAnimateToElement: function(_top) {
       var elements = $('.has-anim');
       var animCls = 'animated';
-      jQuery.map(elements, function(ele, i){
+      elements.map(function(i, ele){
         var _offsetTop = $(ele).offset().top;
         if (_top >= _offsetTop - 1000) {
           $(ele).addClass(animCls);
@@ -925,19 +964,19 @@
           me.page.subPageMenu.removeClass('fixed');
         }
         /* Highlight the current content's menu, on desktop only: */
-        jQuery.map(cateContainers, function(item, index){
-          if ( $(item).offset().top < (scrollTop + 200) ) {
-            var targetA = $('a[href="#'+ item.id +'"]');
+        cateContainers.map(function(index, item){
+          if ( $(this).offset().top < (scrollTop + 200) ) {
+            var targetA = $('a[href="#'+ this.id +'"]');
             me.page.subPageMenu.find('a').removeClass(me.clsn);
             targetA.addClass(me.clsn);
             if (targetA.hasClass('CMCM_SMD_A')) {
               targetA.parent().parent().find('.CMCM_SubMenuItem').addClass(me.clsn);
             }
           } else if (scrollTop < 100) {
-            $('a[href="#'+ item.id +'"]').removeClass(me.clsn);
+            $('a[href="#'+ this.id +'"]').removeClass(me.clsn);
             if (index == 0) $('a[href="#'+ item.id +'"]').addClass(me.clsn);
           } else {
-            $('a[href="#'+ item.id +'"]').removeClass(me.clsn);
+            $('a[href="#'+ this.id +'"]').removeClass(me.clsn);
             /* For tall screens, highlight the last menu when scrolling to the bottom: */
             if (me._win.height() + scrollTop >= document.body.scrollHeight - 100) {
               $('a[href="#'+ cateContainers[cateContainers.length-3].id +'"]').removeClass(me.clsn);
@@ -983,6 +1022,18 @@
     /* After renderings, bind events to elements: */
     BindAllEvents: function() {
       var me = this;
+      /*
+      me.page.topNavLi.mouseenter(function(){
+        var _i = $(this);
+        _i.find('.top-nav-sub').addClass(me.clsn);
+        _i.find('b').addClass(me.clsn);
+      });
+      me.page.topNavLi.mouseleave(function(){
+        var _i = $(this);
+        _i.find('.top-nav-sub').removeClass(me.clsn);
+        _i.find('b').removeClass(me.clsn);
+      });
+      */
       /* Unfold burger nav on mobiles: */
       me.page.topBurger.click(function(){
         var cls = 'unfold';
@@ -1090,6 +1141,7 @@
     inxGamesDLCont: $('#CMCM_GameOfDL'),
     inxGamesGJSCont: $('#CMCM_GameOfGJS'),
     inxGamesGJSName: $('#GJSName'),
+    inxNRContainer: $('#CMCM_NR'),
     subPageContent: $('.CMCM_SubpageContent'),
     companyContainer: $('#CMCM_CompanyContents'),
     productContainer: $('#CMCM_ProductsContents'),
