@@ -8,5 +8,5 @@ window.CMCM_IntrosToIndex = {
     page: 'index',
     slogan: ['Make', 'the world smarter'],
     subslogan: 'Powering mobile apps with AI and big data'
-  },
+  }
 };

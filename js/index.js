@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-11-27 14:40
+  Latest modified: 2017-12-05 16:44
 */
 
 (function(win, doc, $) {
@@ -16,7 +16,6 @@
 		init: function(pageObj) {
       var me = this;
       me._body.css('min-height', window.innerHeight);
-      console.log('2017, Nov 27th, 14:40');
       me.page = pageObj;
       me.DetectLanguage();
       me.DetectCurrentPage();
@@ -27,6 +26,7 @@
       me.AutoWidth();
       me.BindAllEvents();
       me.BindScrolling();
+      console.log('2017, Dec 5th 16:44');
     },
 
     DetectLanguage: function() {
@@ -71,7 +71,7 @@
     /* Global function, for smooth scrolling: */
     SmoothScrolling: function(target, topValue, e) {
       if (target.length) {
-        if (e) e.preventDefault();
+        e.preventDefault ? e.preventDefault() : (e.returnValue = false);
         $('html, body').animate({
           scrollTop:topValue
         }, 600, function() { //Callback, must change focus!
@@ -1067,7 +1067,7 @@
           }
         });
       }
-    },
+    }
 
   };
 	win.CMCMWebsite = CMCMWebsite;
@@ -1096,9 +1096,8 @@
     contactContainer: $('#CMCM_ContactContents'),
     subPageMenu: $('.CMCM_SubMenus'),
     footerContainer: $('#CMCM_Footer'),
-    subPageCtBottom: $('#CMCM_SubPageContentBottom'),
+    subPageCtBottom: $('#CMCM_SubPageContentBottom')
   };
   CMCMWebsite.init(realPage);
 })(jQuery);
-/* ============================================================== */
 /* ============================================================== */

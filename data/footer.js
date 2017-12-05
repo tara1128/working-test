@@ -88,5 +88,5 @@ window.CMCM_PublicFooter = {
         curHome: '/en-us/'
       }
     }
-  },
+  }
 };

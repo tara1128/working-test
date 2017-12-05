@@ -14,17 +14,17 @@ window.CMCM_ProductList = {
             name: '工具',
             hash: 'Product_Tools',
             anch: 'category-of-tool',
-            desc: ['全球第一大工具应用开发商，覆盖PC、移动端，构建安全、清理、图片编辑等多元化的产品矩阵；', '高居Google Play同品类榜首，开创猎豹移动出海浪潮'],
+            desc: ['全球领先的工具应用开发商，覆盖PC、移动端，构建安全、清理、图片编辑等多元化的产品矩阵；', '高居Google Play同品类榜首，开创猎豹移动出海浪潮'],
             data: [
               {
                 priority: '100',
                 name: '猎豹清理大师',
                 slog: '清理所有不快',
                 icon: '/dist/images/brandnew-logo-clean-master-103.png',
-                descForIndex: ['全球第一大安卓优化软件。首创业界领先的“云端+人工智能”深度清理系统，清理量较同类产品高30%以上；率先支持清理微信小程序垃圾。云端防毒体系多次被安全权威机构AV-Test评测为全球第一，100个国家Google Play工具榜排名第一'],
-                descForProd: ['全球第一大安卓优化软件。首创业界领先的“云端+人工智能”深度清理系统，清理量较同类产品高于30%；率先支持清理微信小程序垃圾。云端防毒体系多次被权威机构AV-Test评为全球第一，100个国家Google Play工具榜NO.1。'],
+                descForIndex: ['全球领先的安卓优化软件。首创业界领先的“云端+人工智能”深度清理系统，清理量较同类产品高30%以上；率先支持清理微信小程序垃圾；云端防毒体系曾多次被安全权威机构AV-Test评测为满分；霸榜100个国家Google Play工具榜'],
+                descForProd: ['全球安卓优化明星软件。首创业界领先的“云端+人工智能”深度清理系统，清理量较同类产品高于30%；率先支持清理微信小程序垃圾。云端防毒体系多次被权威机构AV-Test评为满分，霸榜100个国家Google Play工具榜。'],
                 star: 4.7,
-                tags: ['全球下载量近30亿', '国内应用市场评分同类最高'],
+                tags: ['全球下载量近30亿', '国内应用市场评分同类领先'],
                 link: 'http://cn.cmcm.com/cleanmaster/?f=www',
                 target: '_blank',
                 pict: '/dist/images/brandnew-tool-cm.png'
@@ -36,9 +36,9 @@ window.CMCM_ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-security-103.png',
                 descForIndex: ['全球领先的手机安全应用，获红点设计大奖。具有智能检测、病毒查杀、应用锁、拍下入侵者等功能，全面保护用户的手机安全及隐私'],
-                descForProd: ['全球领先的手机安全应用。具有智能检测、病毒查杀、应用锁、拍下入侵者等功能，内建AV TEST评测最佳病毒引擎，全面保护手机安全。Google Play下载超过5亿次，30个国家安全工具类应用排行榜排名第一，评分高达4.7。'],
+                descForProd: ['全球领先的手机安全应用。具有智能检测、病毒查杀、应用锁、拍下入侵者等功能，内建AV TEST评测满分病毒引擎，全面保护手机安全。Google Play下载超过5亿次，霸榜30个国家安全工具类应用排行榜，评分高达4.7。'],
                 star: 0,
-                tags: ['Google Play全球下载超过5亿', 'AV TEST评测最佳病毒引擎'],
+                tags: ['Google Play全球下载超过5亿', 'AV TEST评测满分病毒引擎'],
                 link: 'http://cn.cmcm.com/cm-security/?f=cmcn',
                 target: '_blank',
                 pict: ''
@@ -49,10 +49,10 @@ window.CMCM_ProductList = {
                 name: '猎豹3D桌面',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-launcher-103.png',
-                descForIndex: ['全球安卓平台最受欢迎的个性化手机桌面产品，提供海量主题，深度个性化定制。覆盖200多个国家和地区，Google Play总下载量近2亿'],
-                descForProd: ['全球安卓平台最受欢迎的个性化手机桌面产品。提供海量主题、深度个性化定制，并搭载智能锁屏功能，全方位保障隐私与安全。覆盖全球200多个国家和地区， Google Play 94个国家个性化榜单排名第一，总下载量近2亿。'],
+                descForIndex: ['全球安卓平台极受欢迎的个性化手机桌面产品，提供海量主题，深度个性化定制。覆盖200多个国家和地区，Google Play总下载量近2亿'],
+                descForProd: ['全球安卓平台大受欢迎的个性化手机桌面产品。提供海量主题、深度个性化定制，并搭载智能锁屏功能，全方位保障隐私与安全。覆盖全球200多个国家和地区， 霸榜Google Play 94个国家个性化榜单，总下载量近2亿。'],
                 star: 0,
-                tags: ['94个国家排名第一'],
+                tags: ['霸榜94个国家榜单'],
                 link: 'http://www.cmcm.com/zh-cn/cm-launcher/?f=cmcn',
                 target: '_blank',
                 pict: ''
@@ -63,8 +63,8 @@ window.CMCM_ProductList = {
                 name: 'Cheetah Keyboard',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-kb-103.png',
-                descForIndex: ['业界首款引入深度学习模型的第三方输入法，Google Play50个国家个性化榜单排名第一'],
-                descForProd: ['业界首款引入深度学习模型的第三方输入法。具有智能预测、自动更正、学习用户习惯等功能。融入自然语言处理（NLP）技术和机器学习算法，预测准确率更高。覆盖140多个国家和地区，为Google Play评分最高的第三方输入法。'],
+                descForIndex: ['业界率先引入深度学习模型的第三方输入法，霸榜Google Play 50个国家个性化榜单'],
+                descForProd: ['业界率先引入深度学习模型的第三方输入法。具有智能预测、自动更正、学习用户习惯等功能。融入自然语言处理（NLP）技术和机器学习算法，预测准确率更高。覆盖140多个国家和地区，为Google Play评分最高的第三方输入法之一。'],
                 star: 0,
                 tags: [],
                 link: 'http://www.cmcm.com/en-us/keyboard/',
@@ -91,8 +91,8 @@ window.CMCM_ProductList = {
                 name: '猎豹浏览器',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-browser-103.png',
-                descForIndex: ['极致轻巧的安全浏览器。曾在8个国家App Store工具榜排名第一，Google Play总下载量近1亿'],
-                descForProd: ['更轻巧、更快速、更安全的新一代手机浏览器。同时，它还是国内最早做内容探索的浏览器。曾在8个国家App Store工具榜排名第一，Google Play总下载量近 1亿，是海外用户量最大的第三方浏览器。'],
+                descForIndex: ['极致轻巧的安全浏览器。曾登顶8个国家App Store工具榜，Google Play总下载量近1亿'],
+                descForProd: ['更轻巧、更快速、更安全的新一代手机浏览器。同时，它还是国内率先做内容探索的浏览器，为用户推送个性化、高质量的内容。曾登顶8个国家App Store工具榜，Google Play总下载量近1亿，在全球拥有海量用户。'],
                 star: 0,
                 tags: [],
                 link: 'http://m.liebao.cn/?f=cmcn',
@@ -106,49 +106,49 @@ window.CMCM_ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-bd-103.png',
                 descForIndex: [],
-                descForProd: ['全球最专业的电池保养和电量管理软件，能轻松延长手机续航时间；科学用电、延长电池寿命。覆盖全球200多个国家和地区，曾在Google Play 26个国家工具榜高居第一，在133个国家App Store工具榜排名第一，Google Play下载量超 1亿。'],
+                descForProd: ['全球专业的电池保养和电量管理软件，能轻松延长手机续航时间；科学用电、延长电池寿命。覆盖全球200多个国家和地区，曾霸榜Google Play 26个国家工具榜，在133个国家App Store工具榜登顶，Google Play下载量超1亿。'],
                 star: 0,
                 tags: [],
                 link: 'http://www.cmcm.com/zh-cn/battery-doctor/',
                 target: '_blank',
                 pict: ''
-              },
+              }
             ]
           },
           socl: {
             name: '社交',
             hash: 'Product_Social',
             anch: 'category-of-social',
-            desc: ['出海欧美最成功的社交产品，跨越文化壁垒，连接全球用户，', '布局海外直播市场，建立内容生态体系'],
+            desc: ['成功出海欧美的社交产品，跨越文化壁垒，连接全球用户，', '布局海外直播市场，建立内容生态体系'],
             data: [
               {
                 priority: '',
                 name: 'Live.me',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-liveme-103.png',
-                descForIndex: ['一款风靡全球的直播类社交应用，继工具产品之后，Live.me成为猎豹移动出海的新标杆。内含礼物打赏、主播连线、游戏直播等功能，并在后台监测系统中引入人工智能技术，不仅为用户提供个性化的直播和社交内容，也确保了平台的“绿色”与健康。将中国的直播打赏模式复制到海外，已经成为全球年轻人最喜爱的社交产品之一。目前已在85个国家和地区发行，覆盖8种不同语言。在全球42个国家Google Play社交畅销榜排行NO.1'],
-                descForProd: ['一款风靡全球的直播类社交应用。将中国的直播打赏模式复制到海外，吸引了众多明星及大牌网红入驻，已经成为美国轻人最喜爱的社交产品之一。覆盖85个国家，8种语言，在全球42个国家Google Play社交畅销榜排行NO.1。'],
+                descForIndex: ['一款风靡全球的直播类社交应用，继工具产品之后，Live.me成为猎豹移动出海的新标杆。内含礼物打赏、主播连线、游戏直播等功能，并在后台监测系统中引入人工智能技术，不仅为用户提供个性化的直播和社交内容，也确保了平台的“绿色”与健康。将中国的直播打赏模式复制到海外，已经成为全球年轻人最喜爱的社交产品之一。目前已在85个国家和地区发行，覆盖8种不同语言。登顶全球42个国家Google Play社交畅销榜'],
+                descForProd: ['一款风靡全球的直播类社交应用。将中国的直播打赏模式复制到海外，吸引了众多明星及大牌网红入驻，已经成为美国轻人最喜爱的社交产品之一。覆盖85个国家，8种语言，登顶全球42个国家Google Play社交畅销榜。'],
                 star: 0,
                 tags: ['85个市场|覆盖多元文化', '8种语言|融合本地需求', '42个国家|登顶社交畅销榜'],
                 link: 'http://www.liveme.com/',
                 target: '_blank',
                 pict: ''
-              },
+              }
             ]
           },
           game: {
             name: '游戏',
             hash: 'Product_Games',
             anch: 'category-of-game',
-            desc: ['猎豹移动手游产品在全球月活跃用户超过1亿，', '是iOS和Google Play月度手游下载榜Top10上榜最频繁的国内厂商'],
-            data: [          
+            desc: ['猎豹移动手游产品在全球月活跃用户超过1亿，', '是iOS和Google Play月度手游下载榜Top10频繁上榜的国内厂商'],
+            data: [
               {
                 priority: '50-100',
                 name: '钢琴块2',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-pt2-103.png',
-                descForIndex: ['风靡全球、坐拥9亿玩家的音乐类轻游戏；全新的滑块玩法、丰富的赛制模式。iOS中国游戏免费下载榜Top5，2016年iOS和Google Play音乐休闲游戏榜全球下载量Top1'],
-                descForProd: ['一款风靡全球、坐拥9亿玩家的音乐类轻游戏；推出全新滑块玩法、开启大师赛制，带给你绝佳的视听双体验。iOS中国区游戏免费下载榜Top 5，158个国家免费游戏榜TOP1，2016年iOS和Google Play双平台音乐休闲游戏类下载量Top1。'],
+                descForIndex: ['风靡全球、坐拥9亿玩家的音乐类轻游戏；全新的滑块玩法、丰富的赛制模式。2016年高居iOS和Google Play双平台音乐休闲游戏类全球下载量榜单前列'],
+                descForProd: ['一款风靡全球、坐拥9亿玩家的音乐类轻游戏，让人人都能弹钢琴。急速节奏，不断挑战手速极限；音乐风格多样、海量歌曲不断更新；完美音质，如同置身钢琴演奏会；参与排行，与全球玩家一较高低。2016年高居iOS和Google Play双平台音乐休闲游戏类全球下载量榜单前列。'],
                 star: 0,
                 tags: [],
                 link: 'http://www.cmcm.com/zh-cn/piano-tiles/',
@@ -161,8 +161,8 @@ window.CMCM_ProductList = {
                 name: '滚动的天空',
                 slog: '',
                 icon: '/dist/images/brandnew-logo-rolling-sky.png',
-                descForIndex: ['挑战速度和反应力极限的轻游戏；3D立体视觉，多样的游戏场景。141个市场App Store游戏下载榜前十，iOS中国游戏免费下载榜Top5，Google Play2016最佳游戏之一'],
-                descForProd: ['一款挑战速度和反应力极限的轻游戏；具有3D立体感的超炫视觉和丰富多样的游戏场景。现累计下载已超2.4亿，141个海外市场App Store游戏下载榜前十，65个国家的总榜前十，iOS中国游戏免费下载榜Top 5，Google Play2016最佳游戏。'],
+                descForIndex: ['挑战速度和反应力极限的轻游戏；3D立体视觉，多样的游戏场景，让你操控小球去征服世界。现累计下载已超2.4亿，被评为Google Play2016最佳游戏之一'],
+                descForProd: ['一款挑战速度和反应力极限的轻游戏，华丽的3D特效场景，在山丘、宇宙、森林等场景中，感受充满想象力的陷阱和障碍物，让你操控小球征服世界。现累计下载已超2.4亿，被评为Google Play2016最佳游戏之一。'],
                 star: 0,
                 tags: [],
                 link: 'http://www.cmcm.com/zh-cn/rolling-sky/',
@@ -175,8 +175,8 @@ window.CMCM_ProductList = {
                 name: '跳舞的线',
                 slog: '',
                 icon: '/dist/images/brandnew-game-bg-dl-icon.png',
-                descForIndex: ['音乐类轻游戏，特色原创音轨，伴你冲破重重关卡；Google Play2017最佳游戏，评分高达4.8'],
-                descForProd: ['原创音乐节奏类轻游戏。特色原创音轨，伴你冲破重重关卡，探索无限未知。Apple Store和Google Play双平台评分4.8（满分5分），权威游戏媒体及分发平台TapTap评分9.7分，iOS中国区游戏免费下载榜Top5，美国等115个国家音乐游戏榜排名第一。'],
+                descForIndex: ['音乐类轻游戏，特色原创音轨，伴你冲破重重关卡；长期霸榜美国等115个国家音乐游戏榜'],
+                descForProd: ['原创音乐节奏类轻游戏。独一无二的游戏场景，带你穿越沙漠、遍览四季、漫步田野；雷鬼、电音、古典等多种风格音乐，伴你冲破重重艰险阻碍；探索无限未知，打造与众不同的游戏体验。长期被Google Play、Apple Store编辑推荐，Apple Store和Google Play双平台评分4.8（满分5分），权威游戏媒体及分发平台TapTap评分9.7分，长期霸榜美国等115个国家音乐游戏榜。'],
                 star: 0,
                 tags: [],
                 link: 'http://board.cmcm.com/dl/transfer.html',
@@ -190,7 +190,7 @@ window.CMCM_ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-arrow-io.png',
                 descForIndex: ['真人对战io游戏，用弓箭征服世界；获2016阿里巴巴新晋热门游戏奖'],
-                descForProd: ['一款全新玩法的真人对战io游戏，丰富的像素人偶风格可供选择，带你用弓箭征服世界。位居18个国家App Store动作类游戏下载榜Top 5，2017年1月获台湾、波兰动作类游戏第一名，2017年6月获中国动作类游戏第二名。'],
+                descForProd: ['一款全新玩法的真人对战io游戏。通过虚拟摇杆控制走位，利用手中的弓箭击败对手；上百种技能组合，游戏永远充满变数；丰富的像素人偶风格选择，多人即时对战，让你的手指停不下来。'],
                 star: 0,
                 tags: [],
                 link: 'https://play.google.com/store/apps/details?id=com.cmcm.arrowio',
@@ -204,7 +204,7 @@ window.CMCM_ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-shszg.png',
                 descForIndex: [],
-                descForProd: ['一款风靡全球的养鱼游戏，在游戏中收集成百上千的鱼儿，让身心得到彻底放松与治愈。2016年10月由猎豹移动独家代理发行，获得iOS与Google Play双平台2016年最佳独立游戏荣誉。'],
+                descForProd: ['一款风靡全球的养鱼游戏，在游戏中收集成百上千的鱼儿，让你创造自己的水族馆。简单的操作、绝美的图片、美妙的背景音乐，更有虚拟现实模式，让你的身心得到彻底放松与治愈。'],
                 star: 0,
                 tags: [],
                 link: 'https://play.google.com/store/apps/details?id=com.idleif.abyssrium',
@@ -218,16 +218,15 @@ window.CMCM_ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-ddcc.png',
                 descForIndex: [],
-                descForProd: ['一款考验反应能力的奔跑类街机手游。画风极具简约风格，玩法操作简单，潜移默化的提升用户反应能力和手速。曾在多个国家获得Google Play游戏下载榜第一名，获得Google Play千次以上编辑推荐。'],
+                descForProd: ['一款考验反应能力的奔跑类街机手游。画风极具简约风格，玩法操作简单，潜移默化地提升用户反应能力和手速。曾霸榜多个国家Google Play游戏下载榜，获得Google Play千次以上编辑推荐。'],
                 star: 0,
                 tags: [],
                 link: 'https://play.google.com/store/apps/details?id=com.secondarm.taptapdash',
                 target: '_blank',
                 pict: ''
-              },
-
+              }
             ]
-          },
+          }
         }
       },
       pc: {
@@ -247,7 +246,7 @@ window.CMCM_ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-browser-103.png',
                 descForIndex: [],
-                descForProd: ['国内首款双核安全浏览器，基于Chromium内核超过100项改进，启动速度提升30%；智能防卡死，全面兼容HTML5，充满艺术气息的视觉方案；首创BIPS云安全体系，拦截恶意网址，全面拦截来自 Web 安全威胁。'],
+                descForProd: ['国内广受欢迎的双核安全浏览器，基于Chromium内核超过100项改进，启动速度提升30%；智能防卡死，全面兼容HTML5，充满艺术气息的视觉方案；首创BIPS云安全体系，拦截恶意网址，全面拦截来自Web的安全威胁。'],
                 star: 0,
                 tags: [],
                 link: 'https://www.liebao.cn',
@@ -260,7 +259,7 @@ window.CMCM_ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-duba.png',
                 descForIndex: [],
-                descForProd: ['集杀毒、系统管理为一体的安全软件。18年专业积累、20次通过VB100认证（国内安全软件中通过此认证次数最多）、多次通过AV-Comparatives、AV-Test认证，独创蓝芯引擎，与云安全无缝结合，使用微特征识别技术通杀未知木马。'],
+                descForProd: ['集杀毒、系统管理为一体的安全软件。18年专业积累、20次通过VB100认证、多次通过AV-Comparatives、AV-Test认证，具备蓝芯引擎，与云安全无缝结合，使用微特征识别技术通杀未知木马。'],
                 star: 0,
                 tags: [],
                 link: 'http://www.duba.net',
@@ -273,7 +272,7 @@ window.CMCM_ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-qdjl-103.png',
                 descForIndex: [],
-                descForProd: ['2012年收购，中国首创的、第一大电脑驱动程序管理软件，基于十余年的专业数据积累，硬件设备识别率高达98.3%，其中网卡的识别率高达99.9%，位列行业翘楚，为数亿用户解决各种电脑驱动问题、系统故障，实为装机必备。'],
+                descForProd: ['中国知名电脑驱动程序管理软件，基于十余年的专业数据积累，硬件设备识别率高达98.3%，其中网卡的识别率高达99.9%，为数亿用户解决各种电脑驱动问题、系统故障，实为装机必备。'],
                 star: 0,
                 tags: [],
                 link: 'http://www.drivergenius.com',
@@ -301,7 +300,7 @@ window.CMCM_ProductList = {
                 slog: '',
                 icon: '/dist/images/brandnew-logo-orion-200.png',
                 descForIndex: [],
-                descForProd: ['猎豹移动构建AI技术平台，为产品赋能，完善了工具产品矩阵，也为内容产品带来增长。旗下的猎户星空在智能语音交互系统、图像识别、视觉导航等技术上领跑行业。2017年在微软百万名人识别赛（LFW）中夺得第一。'],
+                descForProd: ['猎豹移动构建AI技术平台，为产品赋能，完善了工具产品矩阵，也为内容产品带来增长。旗下猎户星空在智能语音交互系统、图像识别、视觉导航等技术上领跑行业；2017年在微软百万名人识别竞赛（LFW）中，夺得子命题有限制类第一名。'],
                 star: 0,
                 tags: [],
                 link: 'http://ainirobot.com/',
@@ -313,18 +312,18 @@ window.CMCM_ProductList = {
                 name: '智能语音OS',
                 slog: '',
                 icon: '',
-                descForIndex: ['旗下人工智能公司猎户星空自主开发的“全链路远场智能语音交互系统”。其麦克风阵列、语音唤醒、语音识别、语义理解、语音合成等软硬件技术均处于行业领先水平。所有技术均属自主知识产权，与产品体验设计深度融合，极致打磨。首创多种自然拟人的交互技术，打造出最人性化的语音交互体验'],
+                descForIndex: ['旗下人工智能公司猎户星空自主开发的“全链路远场智能语音交互系统”。其麦克风阵列、语音唤醒、语音识别、语义理解、语音合成等软硬件技术均处于行业领先水平。所有技术均属自主知识产权，与产品体验设计深度融合，极致打磨。首创多种自然拟人的交互技术，打造出人性化的语音交互体验'],
                 descForProd: [], // This product shows on index only!
                 star: 0,
                 tags: [
                   {num: 5, adj: '大', noun: '语音技术', sentence: '全链路自主研发'},
-                  {num: 6, adj: '项', noun: '创新技术', sentence: '最人性化的交流'},
+                  {num: 6, adj: '项', noun: '创新技术', sentence: '人性化的交流'},
                   {num: 1, adj: '亿+', noun: '音频内容', sentence: '为用户深度定制'}
                 ],
                 link: 'http://ainirobot.com/pc_liehu.html',
                 target: '_blank',
                 pict: ''
-              },
+              }
             ]
           }
         }
@@ -380,8 +379,8 @@ window.CMCM_ProductList = {
                 link: 'http://ads.cmcm.com/cn/',
                 target: '_blank',
                 pict: ''
-              },
-            ] 
+              }
+            ]
           }
         }
       },
@@ -528,7 +527,7 @@ window.CMCM_ProductList = {
                 link: 'http://www.cmcm.com/en-us/battery-doctor/',
                 target: '_blank',
                 pict: ''
-              },
+              }
             ]
           },
           socl: {
@@ -549,7 +548,7 @@ window.CMCM_ProductList = {
                 link: 'http://www.liveme.com/',
                 target: '_blank',
                 pict: ''
-              },
+              }
             ]
           },
           game: {
@@ -557,7 +556,7 @@ window.CMCM_ProductList = {
             hash: 'Product_Games',
             anch: 'category-of-game',
             desc: ['With combined MAUs surpassing 1 billion globally ', 'Cheetah Games is one of the largest casual game developers in the world'],
-            data: [          
+            data: [
               {
                 priority: '50-100',
                 name: 'Piano Tiles 2',
@@ -640,10 +639,9 @@ window.CMCM_ProductList = {
                 link: 'https://play.google.com/store/apps/details?id=com.secondarm.taptapdash',
                 target: '_blank',
                 pict: ''
-              },
-
+              }
             ]
-          },
+          }
         }
       },
       pc: {
@@ -708,7 +706,7 @@ window.CMCM_ProductList = {
                 link: 'http://www.drivergenius.com',
                 target: '_blank',
                 pict: ''
-              },
+              }
             ]
           }
         }
@@ -778,7 +776,7 @@ window.CMCM_ProductList = {
                 descForProd: ['Cheetah Data is a global mobile big data analysis platform. Based on the huge amount of data accumulated through Cheetah Mobile\'s product matrix, Cheetah Data provides indices including active penetration rate, growth rate, retention rate and user intelligence. It surveys every change in the Android market to help app developers, investors and marketers make decisions. Cheetah Data also owns and operates Cheetah Lab, its mobile internet-focused research institute, which releases global internet research reports and analysis on a regular basis.'],
                 star: 0,
                 tags: [],
-                link: 'http://cn.data.cmcm.com/',
+                link: 'http://data.cmcm.com/',
                 target: '_blank',
                 pict: ''
               }
@@ -809,11 +807,11 @@ window.CMCM_ProductList = {
                 link: 'http://ads.cmcm.com/',
                 target: '_blank',
                 pict: ''
-              },
-            ] 
+              }
+            ]
           }
         }
       }
     } // category
-  },
+  }
 };

@@ -173,5 +173,5 @@ window.CMCM_PublicNav = {
         ]
       }
     ]
-  },
+  }
 };
