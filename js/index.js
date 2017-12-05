@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-12-05 16:44
+  Latest modified: 2017-12-05 19:29
 */
 
 (function(win, doc, $) {
@@ -26,7 +26,7 @@
       me.AutoWidth();
       me.BindAllEvents();
       me.BindScrolling();
-      console.log('2017, Dec 5th 16:44');
+      console.log('2017, Dec 5th 19:29');
     },
 
     DetectLanguage: function() {
@@ -121,26 +121,23 @@
       var cnCls = (me.lang == 'zh-cn')?(me.clsn):('');
       var enCls = (me.lang == 'en-us')?(me.clsn):('');
       var pubNv = me.PublicNav(me.publicNav.data);
-      var _html = '<div class="top-bar" id="CMCM_TopBar">\
-                    <div class="manage-width clearfix">\
-                      <h1 class="top-logo has-trans">\
-                        <a class="has-trans" href="/'+ me.lang +'/">'+ name +'</a>\
-                      </h1>\
-                      <div class="top-burger" id="CMCM_TopBurger"></div>\
-                      <ul class="top-nav" id="CMCM_TopNav">\
-                        '+ pubNv +'\
-                        <li class="top-nav-li has-trans top-langs" id="CMCM_TopLangSwitch">\
-                          <div class="langs clearfix">\
-                            <a class="lang-a has-trans '+ cnCls +'" href="/zh-cn/">简<s class="has-trans">&nbsp;</s></a>\
-                            <a class="lang-a strip"> | </a>\
-                            <a class="lang-a has-trans '+ enCls +'" href="/en-us/">EN<s class="has-trans">&nbsp;</s></a>\
-                          </div>\
-                        </li>\
-                      </ul>\
-                    </div><!-- End of manage-width -->\
-                  </div><!-- End of topbar -->';
-      me.page.firstScreen.prepend(_html);
-      me.page.topBar = $('#CMCM_TopBar');
+      var _html = '<div class="manage-width clearfix">\
+                    <h1 class="top-logo has-trans">\
+                      <a class="has-trans" href="/'+ me.lang +'/">'+ name +'</a>\
+                    </h1>\
+                    <div class="top-burger" id="CMCM_TopBurger"></div>\
+                    <ul class="top-nav" id="CMCM_TopNav">\
+                      '+ pubNv +'\
+                      <li class="top-nav-li has-trans top-langs" id="CMCM_TopLangSwitch">\
+                        <div class="langs clearfix">\
+                          <a class="lang-a has-trans '+ cnCls +'" href="/zh-cn/">简<s class="has-trans">&nbsp;</s></a>\
+                          <a class="lang-a strip"> | </a>\
+                          <a class="lang-a has-trans '+ enCls +'" href="/en-us/">EN<s class="has-trans">&nbsp;</s></a>\
+                        </div>\
+                      </li>\
+                    </ul>\
+                  </div><!-- End manage-width -->';
+      me.page.topBar.html(_html);
       me.page.topNav = $('#CMCM_TopNav');
       me.page.topBurger = $('#CMCM_TopBurger');
     },
@@ -159,6 +156,7 @@
         });
       } else { /* On mobiles */
         me.ResetFirstScreenHeight();
+        if (navigator.userAgent.indexOf('MSIE 8') > -1) return; /* For damn IE8 */
         new Swiper('.billboard-swiper-for-mobile', {
           paginationClickable:true,
           spaceBetween:0,
@@ -1076,6 +1074,7 @@
 (function($) {
   var realPage = {
     firstScreen: $('#CMCM_FirstScreen'),
+    topBar: $('#CMCM_TopBar'),
     mobileSwiper: $('#CMCM_SwiperInMobile'),
     inxAIContainer: $('#CMCM_AIContainer'),
     inxToolsContainer: $('#CMCM_ToolsContainer'),
