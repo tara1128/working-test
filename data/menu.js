@@ -6,7 +6,7 @@ window.CMCM_PublicNav = {
       {
         displayName: '关于公司',
         target: '_self',
-        linkTo: '/zh-cn/company/',
+        linkTo: '/zh-cn/about/',
         active: 'company',
         gaTag: 'brandnew.nav.company',
         subNavs: [
@@ -94,7 +94,7 @@ window.CMCM_PublicNav = {
       {
         displayName: 'About Us',
         target: '_self',
-        linkTo: '/en-us/company/',
+        linkTo: '/en-us/about/',
         active: 'company',
         gaTag: 'brandnew.nav.company',
         subNavs: [

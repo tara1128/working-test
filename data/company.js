@@ -2,7 +2,7 @@ window.CMCM_CompanyInfoList = {
   'zh-cn': {
     page: 'company',
     name: '关于公司',
-    link: '/zh-cn/company/',
+    link: '/zh-cn/about/',
     category: {
       missionVisions: {
         categoryName: '使命与愿景',
@@ -199,7 +199,7 @@ window.CMCM_CompanyInfoList = {
   'en-us': {
     page: 'company',
     name: 'About Us',
-    link: '/en-us/company/',
+    link: '/en-us/about/',
     category: {
       missionVisions: {
         categoryName: 'Mission',

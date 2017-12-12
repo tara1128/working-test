@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-12-05 19:29
+  Latest modified: 2017-12-12 16:57
 */
 
 (function(win, doc, $) {
@@ -26,7 +26,7 @@
       me.AutoWidth();
       me.BindAllEvents();
       me.BindScrolling();
-      console.log('2017, Dec 5th 19:29');
+      console.log('2017, Dec.12th 16:57');
     },
 
     DetectLanguage: function() {
@@ -71,12 +71,22 @@
     /* Global function, for smooth scrolling: */
     SmoothScrolling: function(target, topValue, e) {
       if (target.length) {
-        e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+        if (e) {e.preventDefault ? e.preventDefault() : (e.returnValue = false);}
         $('html, body').animate({
           scrollTop:topValue
-        }, 600, function() { //Callback, must change focus!
+        }, 450, function() { //Callback, must change focus!
           $(target).focus();
         });
+      }
+    },
+
+    /* Detect URL hash for a specific part of the page: */
+    DetectUrlHash: function() {
+      var me = this, target = $(location.hash);
+      if ( !(target.offset()) ) return;
+      if (location.hash && target.offset().top) {
+        var topValue = target.offset().top - 70;
+        me.SmoothScrolling(target, topValue);
       }
     },
 
@@ -392,19 +402,6 @@
       me.RenderGamesOnIndex(me.productList);
     },
 
-    /* Detect subpage url hash, scroll to the target position: */
-    DetectSubPageUrlHash: function() {
-      var hash = window.location.hash;
-      if (!hash || hash.length < 1) return;
-      var target = $(hash);
-      var targetTop = target.offset().top;
-      $('html, body').animate({
-        scrollTop:targetTop + 100
-      }, 200, function() { //Callback, must change focus!
-        $(target).focus();
-      });
-    },
-
     /* Render sub page, including left menu and main contents: */
     RenderSubPages: function() {
       var me = this, dataList = null;
@@ -416,18 +413,20 @@
         me.RenderCompanyLeaders(dataList);
         me.RenderCompanyCulture(dataList);
         me.RenderCompanyWelfare(dataList);
+        setTimeout(function(){me.DetectUrlHash();}, 150);
       } else if (me.curr == 'contact') {
         dataList = me.contactList;
         me.RenderContactInfosToContactPage(dataList);
+        setTimeout(function(){me.DetectUrlHash();}, 150);
       } else if (me.curr == 'product') {
         dataList = me.productList;
         me.RenderAllProductsToProductPage(dataList);
+        setTimeout(function(){me.DetectUrlHash();}, 150);
       } else {
         return;
       }
       me.RenderSubPageMenu(dataList);
       me.AdjustLeftMenuPositions();
-      // me.DetectSubPageUrlHash();
     },
 
     /* Render left menu in sub pages: */
@@ -1048,6 +1047,7 @@
           me.page.subMenuItems.removeClass(me.clsn);
           me.page.subMenuSubAs.removeClass(me.clsn);
           _i.addClass(me.clsn);
+          location.hash = this.hash;
           $(_i.parent().find('.CMCM_SMD_A')[0]).addClass(me.clsn);
         });
         /* Click submenus on the left of sub pages: */
@@ -1062,6 +1062,7 @@
             me.page.subMenuSubAs.removeClass(me.clsn);
             myMenu.addClass(me.clsn);
             _i.addClass(me.clsn);
+            location.hash = this.hash;
           }
         });
       }
