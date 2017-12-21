@@ -109,9 +109,9 @@ window.CMCM_CompanyInfoList = {
               avatar: '/dist/images/leaders-xuming.jpg'
             },
             {
-              name: '姜振宇',
+              name: '姜震宇',
               title: '猎豹移动<br>首席财务官',
-              detail: ['他在企业财务管理、资本市场运作、兼并收购交易及合规性管理领域从业十余年，积累了丰富的实战经验。同时，在互联网、移动互联网行业有着资深的背景和经验。在加盟猎豹移动之前，姜振宇曾在北京创办过一家科技公司。2014年至2015年，他曾担任北京玖富时代投资顾问有限公司首席财务官。'],
+              detail: ['他在企业财务管理、资本市场运作、兼并收购交易及合规性管理领域从业十余年，积累了丰富的实战经验。同时，在互联网、移动互联网行业有着资深的背景和经验。在加盟猎豹移动之前，姜震宇曾在北京创办过一家科技公司。2014年至2015年，他曾担任北京玖富时代投资顾问有限公司首席财务官。'],
               avatar: '/dist/images/leaders-jiangzhenyu.jpg'
             },
             {
@@ -281,7 +281,7 @@ window.CMCM_CompanyInfoList = {
             {
               year: 2010,
               events: {
-                '11': 'Kingsoft Security merges with Conew Image to create Kingsoft (later renamed Cheetah Mobile)'
+                '11': 'Kingsoft Security merges with Conew Image to create Kingsoft Network (later renamed Cheetah Mobile)'
               }
             }
           ]

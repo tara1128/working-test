@@ -12,7 +12,7 @@ window.CMCM_ContactList = {
           datas: [
             {
               title: '中国媒体联系方式',
-              details: ['wanggang@cmcm.com']
+              details: ['cmpr@cmcm.com']
             },
             {
               title: '欧美媒体联系方式',
@@ -190,7 +190,7 @@ window.CMCM_ContactList = {
           datas: [
             {
               title: 'For all media inquiries within China, please contact:',
-              details: ['Gang Wang: wanggang@cmcm.com']
+              details: ['Gang Wang: cmpr@cmcm.com']
             },
             {
               title: 'For all media inquiries within the US, please contact:',
