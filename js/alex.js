@@ -1,6 +1,6 @@
 /*
   alex.js, trying ES6
-  Latest modified: 2017-11-23 17:56
+  Latest modified: 2017-12-21 17:37
 */
 
 class IndexLogin extends React.Component {
@@ -241,50 +241,53 @@ class Popup extends React.Component {
 };
 
 var cateList = [
-
   {
-    projectName: 'New official website',
+    projectName: 'New official website for CN',
     linkTo: '/zh-cn/',
     latestModified: '2017-11-23 17:57'
   },
 
-/*
   {
-    projectName: 'Testing css',
-    linkTo: 'optimizing-v5-css/en-us/',
-    latestModified: '2017-08-10 14:34'
+    projectName: 'New official website for EN',
+    linkTo: '/en-us/',
+    latestModified: '2017-12-21 17:33'
   },
+
   {
-    projectName: 'Cheetah Ads Programmatic',
-    linkTo: 'ads/programmatic/index.html?v=updated',
-    latestModified: '2017-08-21 16:21'
+    projectName: 'Settings Memo',
+    linkTo: '/settings-memo/',
+    latestModified: '2017-12-21 17:38'
   },
+
   {
-    projectName: 'Cheetah Ads Platform',
-    linkTo: 'ads/index.html',
-    latestModified: '2017-06-30 17:33'
+    projectName: 'Swiper Test',
+    linkTo: 'swiper/',
+    latestModified: '2017-12-21 17:35'
   },
-  {
-    projectName: 'Cheetah for Publishers',
-    linkTo: 'publishers/',
-    latestModified: '2017-02-24 19:20'
-  },
+
   {
     projectName: 'WhatsCall',
     linkTo: 'whatscall/',
     latestModified: '2016-10-21 09:31'
   },
+
   {
     projectName: 'Pegasi',
     linkTo: 'pegasi/',
     latestModified: '2016-10-12 17:28'
   },
+
+  {
+    projectName: 'Photo Grid',
+    linkTo: 'photo-grid/',
+    latestModified: '2017-09-12 12:28'
+  },
+
   {
     projectName: 'Piano Tiles 2',
     linkTo: 'piano-tiles/',
     latestModified: '2016-10-28 15:13'
   }
-  */
 ];
 
 
