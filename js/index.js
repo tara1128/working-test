@@ -1,7 +1,7 @@
 /*
   Script of Cheetah official website.
   Author: Alexandra
-  Latest modified: 2017-12-21 15:20
+  Latest modified: 2017-12-28 17:01
 */
 
 (function(win, doc, $) {
@@ -26,7 +26,7 @@
       me.AutoWidth();
       me.BindAllEvents();
       me.BindScrolling();
-      console.log('2017, Dec.21st 15:20, update cmpr@cmcm.com');
+      console.log('2017, Dec.28th 17:01, added zh-tw for Test !');
     },
 
     DetectLanguage: function() {
@@ -129,6 +129,7 @@
       var me = this;
       var name = pubNav.name;
       var cnCls = (me.lang == 'zh-cn')?(me.clsn):('');
+      // var twCls = (me.lang == 'zh-tw')?(me.clsn):('');
       var enCls = (me.lang == 'en-us')?(me.clsn):('');
       var pubNv = me.PublicNav(me.publicNav.data);
       var _html = '<div class="manage-width clearfix">\
@@ -190,7 +191,7 @@
           aiProTags = aiProductShown.tags,
           aiProLink = aiProductShown.link,
           aiProTarg = aiProductShown.target;
-      if (me.lang != 'zh-cn') ifHide = 'hide';
+      if (me.lang == 'en-us') ifHide = 'hide';
       jQuery.map(aiProTags, function(tag, i){
         threeBubbles += '<div class="ai-chips abs ai-bubbles ai-bubble-'+ (i+1) +' has-trans has-anim">\
                           <span class="ai-bbl-top has-trans"><b>'+ tag.num +'</b>'+ tag.adj +'</span>\
