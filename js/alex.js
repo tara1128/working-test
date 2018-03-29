@@ -241,22 +241,30 @@ class Popup extends React.Component {
 };
 
 var cateList = [
+
+/*
   {
     projectName: 'New official website for CN',
     linkTo: '/zh-cn/',
     latestModified: '2017-11-23 17:57'
   },
-
   {
     projectName: 'New official website for EN',
     linkTo: '/en-us/',
     latestModified: '2017-12-21 17:33'
   },
+*/
 
   {
     projectName: 'Settings Memo',
     linkTo: '/settings-memo/',
     latestModified: '2017-12-21 17:38'
+  },
+
+  {
+    projectName: 'The web font kit',
+    linkTo: '/thefontkit/',
+    latestModified: '2018-03-29 14:39'
   },
 
   {
