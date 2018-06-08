@@ -274,6 +274,12 @@ var cateList = [
   },
 
   {
+    projectName: 'The Flex Demo',
+    linkTo: '/flex-demo/',
+    latestModified: '2018-06-08 18:26'
+  },
+
+  {
     projectName: 'WhatsCall',
     linkTo: 'whatscall/',
     latestModified: '2016-10-21 09:31'

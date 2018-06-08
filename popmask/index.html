@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
+<title>Pop with a mask</title>
+<link rel="shortcut icon" href="/lib/test.png" type="image/x-icon" />
+<link rel="stylesheet" href="/css/reset.css" type="text/css" />
+<style>
+.wrapper {
+  width:100%;
+}
+* {
+  -webkit-font-smoothing:antialiased;
+}
+.btn {
+  margin:100px auto 0;
+  width:120px;
+  height:48px;
+  line-height:48px;
+  border-radius:4px;
+  background:#008cff;
+  color:#fafafa;
+  font-size:18px;
+  text-align:center;
+  cursor:pointer;
+}
+/* Styles of popmask: */
+.pop-container {
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:999;
+  display:flex;
+  background-color:rgba(0, 0, 0, 0.75);
+  justify-content:center;
+  box-sizing:border-box;
+}
+.inner-container {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  width:900px;
+  height:100%;
+}
+.close-icon {
+  align-self:flex-end;
+  margin-bottom:16px;
+  cursor:pointer;
+}
+.close-icon svg {
+  width:14px;
+  height:14px;
+  fill:pink;
+}
+</style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="btn" id="btn">Click me</div>
+  </div>
+
+  <div class="pop-container" id="pop" style="display:none;">
+    <div class="inner-container">
+      <div class="close-icon" id="close">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.12 27.12">
+          <title>Asset 9</title>
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="Layer_1-2" data-name="Layer 1">
+              <rect x="12.06" y="-4.12" width="3" height="35.36" transform="translate(-5.62 13.56) rotate(-45)"></rect>
+              <rect x="-4.12" y="12.06" width="35.36" height="3" transform="translate(-5.62 13.56) rotate(-45)"></rect>
+            </g>
+          </g>
+        </svg>
+
+      </div>
+      <iframe id="youtube-player" src="https://www.youtube.com/embed/UvNIIJQo4mw?rel=0&autoplay=1&modestbranding=1&enablejsapi=1" allowfullscreen="true"></iframe>
+    </div>
+  </div><!-- pop container -->
+
+  <script>
+    document.getElementById('btn').onclick = function(){
+      document.getElementById('pop').setAttribute('style', 'display:block;');
+    };
+    document.getElementById('close').onclick = function(){
+      document.getElementById('pop').setAttribute('style', 'display:none;');
+    };
+  </script>
+</body>
+</html>
